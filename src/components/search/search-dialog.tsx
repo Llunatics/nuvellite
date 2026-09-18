@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Search, X, BookOpen, Layers, Sparkles } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { Search, X, BookOpen, Sparkles, ArrowRight } from 'lucide-react';
 import { searchCatalog } from '@/lib/catalog-service';
 import { Book } from '@/lib/types';
 import { formatRupiah } from '@/lib/formatters';
@@ -13,6 +14,7 @@ interface SearchDialogProps {
 }
 
 export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
+  const router = useRouter();
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Book[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -24,7 +26,6 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
         if (isOpen) {
           onClose();
         } else {
-          // Open
           const searchBtn = document.querySelector('button[aria-label="Cari manga atau light novel"]');
           if (searchBtn instanceof HTMLButtonElement) {
             searchBtn.click();
@@ -56,6 +57,14 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
     setResults(res);
   }, [query]);
 
+  const handleGoToSearch = () => {
+    const trimmed = query.trim();
+    if (trimmed) {
+      onClose();
+      router.push(`/search?q=${encodeURIComponent(trimmed)}`);
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -64,16 +73,22 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
       <div className="fixed inset-0 bg-black/70 backdrop-blur-sm animate-in fade-in duration-150" onClick={onClose} />
 
       {/* Modal Dialog */}
-      <div className="relative w-full max-w-xl bg-surface-overlay border border-border-medium rounded-2xl shadow-2xl overflow-hidden z-10 animate-in zoom-in-95 duration-150">
+      <div className="relative w-full max-w-xl bg-surface-overlay border border-border-medium rounded-2xl shadow-2xl overflow-hidden z-10 animate-in zoom-in-95 duration-150 flex flex-col max-h-[80vh]">
         {/* Search Input Bar */}
-        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-border-subtle bg-surface/50">
+        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-border-subtle bg-surface/50 shrink-0">
           <Search className="w-4 h-4 text-editorial-muted shrink-0" />
           <input
             ref={inputRef}
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Ketik judul komik, light novel, merchandise, atau pengarang..."
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                handleGoToSearch();
+              }
+            }}
+            placeholder="Ketik judul komik, light novel, merchandise, pengarang..."
             className="flex-1 bg-transparent text-sm text-editorial-title placeholder:text-editorial-faint focus:outline-none"
           />
           {query && (
@@ -81,25 +96,33 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
               type="button"
               onClick={() => setQuery('')}
               className="p-1 rounded-md text-editorial-faint hover:text-editorial-title"
+              aria-label="Hapus teks"
             >
               <X className="w-3.5 h-3.5" />
             </button>
           )}
-          <kbd className="text-[10px] font-mono text-editorial-faint px-1.5 py-0.5 rounded bg-surface-raised border border-border-subtle">
-            ESC
+          <kbd className="text-[10px] font-mono text-editorial-faint px-1.5 py-0.5 rounded bg-surface-raised border border-border-subtle hidden sm:inline-block">
+            ↵ ENTER
           </kbd>
         </div>
 
         {/* Results List */}
-        <div className="max-h-[60vh] overflow-y-auto p-2">
+        <div className="overflow-y-auto p-2 flex-1">
           {query.trim() === '' ? (
             <div className="py-8 text-center text-xs text-editorial-faint space-y-1">
               <p className="font-medium text-editorial-muted">Cari di 2.700+ katalog Manga, Light Novel, dan Merchandise resmi</p>
-              <p>Penerbit: Elex Media Komputindo, m&c!, Phoenix Gramedia Indonesia</p>
+              <p>Tekan Enter untuk melihat semua hasil di halaman pencarian penuh.</p>
             </div>
           ) : results.length === 0 ? (
-            <div className="py-8 text-center text-xs text-editorial-faint">
-              Tidak ditemukan buku untuk pencarian &quot;{query}&quot;
+            <div className="py-8 text-center text-xs text-editorial-faint space-y-2">
+              <p>Tidak ditemukan buku instan untuk &quot;{query}&quot;</p>
+              <button
+                type="button"
+                onClick={handleGoToSearch}
+                className="text-accent underline font-medium"
+              >
+                Buka halaman pencarian lengkap &rarr;
+              </button>
             </div>
           ) : (
             <div className="space-y-1">
@@ -159,6 +182,26 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
             </div>
           )}
         </div>
+
+        {/* Footer Action: View Full Search Page */}
+        {query.trim() !== '' && (
+          <div className="p-2.5 border-t border-border-subtle bg-surface/80 shrink-0">
+            <button
+              type="button"
+              onClick={handleGoToSearch}
+              className="w-full flex items-center justify-between px-3.5 py-2 rounded-xl bg-accent/15 hover:bg-accent/25 border border-accent/30 text-accent text-xs font-semibold transition-all group"
+            >
+              <div className="flex items-center gap-2">
+                <Search className="w-3.5 h-3.5" />
+                <span>Lihat semua hasil pencarian &quot;{query}&quot;</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="font-mono text-[10px] opacity-75 hidden sm:inline">Tekan Enter</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

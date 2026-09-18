@@ -95,23 +95,23 @@ export function getStats() {
   };
 }
 
-export function searchCatalog(query: string, limit = 20): Book[] {
+export function searchCatalog(query: string, limit?: number): Book[] {
   if (!query.trim()) return [];
   const q = query.toLowerCase().trim();
-  return data.books
-    .filter((b) => {
-      const titleMatch = b.title && b.title.toLowerCase().includes(q);
-      const seriesMatch = b.seriesName && b.seriesName.toLowerCase().includes(q);
-      const origTitleMatch = b.originalTitle && b.originalTitle.toLowerCase().includes(q);
-      const isbnMatch = b.isbn13 && b.isbn13.includes(q);
-      const categoryMatch = b.category && b.category.toLowerCase().includes(q);
-      const authorMatch = Array.isArray(b.authors) && b.authors.some((a) => {
-        if (typeof a === 'string') return a.toLowerCase().includes(q);
-        if (typeof a === 'object' && a && 'name' in a) return String((a as any).name).toLowerCase().includes(q);
-        return false;
-      });
+  const results = data.books.filter((b) => {
+    const titleMatch = b.title && b.title.toLowerCase().includes(q);
+    const seriesMatch = b.seriesName && b.seriesName.toLowerCase().includes(q);
+    const origTitleMatch = b.originalTitle && b.originalTitle.toLowerCase().includes(q);
+    const isbnMatch = b.isbn13 && b.isbn13.includes(q);
+    const categoryMatch = b.category && b.category.toLowerCase().includes(q);
+    const authorMatch = Array.isArray(b.authors) && b.authors.some((a) => {
+      if (typeof a === 'string') return a.toLowerCase().includes(q);
+      if (typeof a === 'object' && a && 'name' in a) return String((a as any).name).toLowerCase().includes(q);
+      return false;
+    });
 
-      return Boolean(titleMatch || seriesMatch || origTitleMatch || isbnMatch || categoryMatch || authorMatch);
-    })
-    .slice(0, limit);
+    return Boolean(titleMatch || seriesMatch || origTitleMatch || isbnMatch || categoryMatch || authorMatch);
+  });
+
+  return limit && limit > 0 ? results.slice(0, limit) : results;
 }

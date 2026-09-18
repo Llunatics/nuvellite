@@ -44,7 +44,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         {/* Floating Top Left: Format Capsule Badge (Clean matching gray outline) */}
         <div className="absolute top-2 left-2 z-10 pointer-events-none">
           <span
-            className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-sm border border-slate-700/60 ${
+            className={`px-2 py-0.5 rounded-full text-[8px] sm:text-[8.5px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-sm border border-slate-700/60 ${
               book.category === 'Light Novel'
                 ? 'bg-slate-900/85 text-amber-300'
                 : book.category === 'Merchandise'
@@ -59,7 +59,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         {/* Floating Top Right: Volume Capsule Badge (Clean matching gray outline, NEVER for Merchandise) */}
         {book.category !== 'Merchandise' && book.volume !== null && book.volume !== undefined && (
           <div className="absolute top-2 right-2 z-10 pointer-events-none">
-            <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm bg-slate-900/85 text-slate-300 border border-slate-700/60">
+            <span className="px-2 py-0.5 rounded-full text-[8.5px] sm:text-[9px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm bg-slate-900/85 text-slate-300 border border-slate-700/60">
               Vol. {book.volume}
             </span>
           </div>
@@ -68,7 +68,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         {/* Pre-order Capsule Tag Bottom Left of Cover */}
         {book.status === 'PREORDER' && (
           <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white shadow-md">
+            <span className="px-2 py-0.5 rounded-full text-[7.5px] sm:text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white shadow-md">
               PRE-ORDER
             </span>
           </div>
@@ -76,12 +76,12 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
       </Link>
 
       {/* Book Info */}
-      <div className="p-3.5 flex-1 flex flex-col justify-between space-y-2.5">
+      <div className="p-2.5 sm:p-3.5 flex-1 flex flex-col justify-between space-y-2">
         <div>
           {/* Publisher / Provider and Date */}
           <div className="flex items-center justify-between gap-1 text-[10px] text-editorial-muted font-mono mb-1">
             <span className={`font-semibold truncate ${book.category === 'Merchandise' ? 'text-purple-400' : 'group-hover:text-accent transition-colors'}`}>
-              {book.category === 'Merchandise' ? 'Gramedia Official' : book.publisherShortName}
+              {book.category === 'Merchandise' ? 'Gramedia' : book.publisherShortName}
             </span>
             {book.releaseDate && (
               <span className="text-[9px] text-editorial-faint font-mono shrink-0">
@@ -99,18 +99,18 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         </div>
 
         {/* Integrated Bottom Dock: Price & Action Controls with matching soft gray divider */}
-        <div className="mt-auto pt-2.5 border-t border-slate-800/90 flex items-center justify-between gap-2">
-          {/* Price with micro-label */}
-          <div className="flex flex-col min-w-0">
-            <span className="text-[8.5px] font-mono uppercase tracking-widest text-editorial-faint font-semibold leading-none">
+        <div className="mt-auto pt-2 border-t border-slate-800/90 flex items-center justify-between gap-1">
+          {/* Price with micro-label - Never truncated on mobile */}
+          <div className="flex flex-col min-w-0 pr-1">
+            <span className="text-[8px] font-mono uppercase tracking-widest text-editorial-faint font-semibold leading-none">
               Harga Resmi
             </span>
-            <span className="text-xs sm:text-[13px] font-mono font-bold text-editorial-title tracking-tight mt-1 truncate">
+            <span className="text-[11px] sm:text-[12.5px] font-mono font-bold text-editorial-title tracking-tight mt-0.5 whitespace-nowrap">
               {formatRupiah(book.currentPrice)}
             </span>
           </div>
 
-          {/* Action Micro-Dock */}
+          {/* Action Micro-Dock: Compact 28x28 icon buttons */}
           <div className="flex items-center gap-1 p-0.5 rounded-xl bg-slate-900/80 border border-slate-800 shrink-0">
             {/* Wishlist Button */}
             <button
@@ -127,11 +127,11 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
               <Bookmark className={`w-3.5 h-3.5 ${wishlisted ? 'fill-current' : ''}`} />
             </button>
 
-            {/* Owned / Collection Toggle Button */}
+            {/* Owned / Collection Toggle Button (Square Icon Only for perfect mobile fit) */}
             <button
               type="button"
               onClick={() => toggleOwned(book.id, book.seriesId)}
-              className={`h-7 px-2 sm:px-2.5 rounded-lg flex items-center gap-1 text-[11px] font-semibold border transition-all active:scale-95 ${
+              className={`w-7 h-7 rounded-lg flex items-center justify-center border transition-all active:scale-90 ${
                 owned
                   ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40 shadow-xs font-semibold'
                   : 'bg-slate-800/60 hover:bg-slate-800 text-slate-300 hover:text-white border-slate-700/50'
@@ -140,15 +140,9 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
               title={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
             >
               {owned ? (
-                <>
-                  <Check className="w-3.5 h-3.5 text-emerald-400" />
-                  <span className="text-[10px] hidden xs:inline">Milik</span>
-                </>
+                <Check className="w-3.5 h-3.5 text-emerald-400" />
               ) : (
-                <>
-                  <Plus className="w-3.5 h-3.5" />
-                  <span className="text-[10px] hidden xs:inline">Koleksi</span>
-                </>
+                <Plus className="w-3.5 h-3.5" />
               )}
             </button>
           </div>
