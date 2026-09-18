@@ -95,7 +95,7 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
                   className={`px-1.5 py-0.2 rounded text-[9px] font-mono uppercase font-bold ${
                     series.status === 'COMPLETED'
                       ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
-                      : 'bg-gold/15 text-gold border border-gold/30'
+                      : 'bg-accent/15 text-accent border border-accent/30'
                   }`}
                 >
                   {series.status === 'COMPLETED' ? 'Tamat / Complete' : 'Ongoing'}
@@ -126,7 +126,7 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                   <span>Progres Koleksi Seri</span>
                 </span>
-                <span className="font-mono text-xs text-gold font-bold">
+                <span className="font-mono text-xs text-accent font-bold">
                   {ownedBookIds.size} dari {sortedBooks.length} Volume ({progressPercent}%)
                 </span>
               </div>
@@ -134,7 +134,7 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
               {/* Progress Bar */}
               <div className="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-gold to-emerald-400 transition-all duration-300"
+                  className="h-full bg-gradient-to-r from-accent to-emerald-400 transition-all duration-300"
                   style={{ width: `${progressPercent}%` }}
                 />
               </div>

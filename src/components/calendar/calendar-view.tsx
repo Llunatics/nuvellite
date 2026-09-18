@@ -51,7 +51,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
     <div className="space-y-6">
       {/* Header Banner */}
       <div className="p-6 sm:p-8 rounded-3xl bg-surface border border-border-subtle shadow-xs space-y-2">
-        <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-mono font-semibold">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/25 text-accent text-xs font-mono font-semibold">
           <CalendarIcon className="w-3.5 h-3.5" />
           <span>Kalender Rilis Resmi</span>
         </div>
@@ -66,32 +66,38 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
       {/* Filter Controls */}
       <div className="p-4 rounded-2xl bg-surface border border-border-subtle flex flex-wrap items-center justify-between gap-3 text-xs">
         {/* Format Pills */}
-        <div className="flex items-center gap-1 bg-surface-raised p-1 rounded-xl border border-border-subtle">
+        <div className="flex items-center gap-1 bg-surface-raised p-1 rounded-xl border border-border-subtle overflow-x-auto">
           {(['ALL', 'Manga', 'Light Novel', 'Merchandise'] as const).map((fmt) => (
             <button
               key={fmt}
               type="button"
               onClick={() => setFormatFilter(fmt)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+              className={`px-3 sm:px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
                 formatFilter === fmt
                   ? 'bg-surface text-editorial-title font-semibold shadow-xs'
                   : 'text-editorial-muted hover:text-editorial-title'
               }`}
             >
-              {fmt === 'ALL' ? 'Semua Format' : fmt === 'Manga' ? 'Komik / Manga' : 'Light Novel'}
+              {fmt === 'ALL'
+                ? 'Semua Format'
+                : fmt === 'Manga'
+                ? 'Manga'
+                : fmt === 'Light Novel'
+                ? 'Light Novel'
+                : 'Merchandise'}
             </button>
           ))}
         </div>
 
         {/* Publisher Filter */}
         <div className="flex items-center gap-2">
-          <span className="text-editorial-faint text-[11px] font-mono">Penerbit:</span>
+          <span className="text-editorial-faint text-[11px] font-mono">Penerbit / Penyedia:</span>
           <select
             value={pubFilter}
             onChange={(e) => setPubFilter(e.target.value)}
             className="bg-surface-raised border border-border-subtle text-editorial-body text-xs rounded-xl px-3 py-1.5 focus:outline-none"
           >
-            <option value="ALL">Semua Penerbit</option>
+            <option value="ALL">Semua Penerbit &amp; Penyedia</option>
             {publishers.map((p) => (
               <option key={p.id} value={p.id}>
                 {p.shortName}

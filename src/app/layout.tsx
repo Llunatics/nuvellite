@@ -46,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${sansFont.variable} ${editorialFont.variable} ${monoFont.variable} dark`}>
-      <body className="min-h-screen bg-background text-editorial-body selection:bg-gold/20 selection:text-gold flex flex-col">
+      <body className="min-h-screen bg-background text-editorial-body selection:bg-accent/20 selection:text-accent flex flex-col">
         <Header />
         <main className="flex-1 pb-20 sm:pb-12">{children}</main>
         <Footer />

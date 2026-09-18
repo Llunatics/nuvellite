@@ -61,7 +61,7 @@ export default async function PublisherDetailPage({ params }: PageProps) {
         <div className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono font-semibold ${
           isMerchProvider
             ? 'bg-purple-500/15 border border-purple-500/30 text-purple-300'
-            : 'bg-gold/10 border border-gold/25 text-gold'
+            : 'bg-accent/10 border border-accent/25 text-accent'
         }`}>
           {isMerchProvider ? <Sparkles className="w-3.5 h-3.5" /> : <Compass className="w-3.5 h-3.5" />}
           <span>{isMerchProvider ? 'Penyedia Resmi Merchandise' : 'Penerbit Resmi Berlisensi'}</span>

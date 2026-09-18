@@ -26,14 +26,14 @@ export function Header() {
     <>
       <header className="sticky top-0 z-40 w-full bg-background/85 backdrop-blur-xl border-b border-border-subtle transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-3">
-          {/* Brand Logo with micro-badge */}
+          {/* Brand Logo with bookmark ribbon badge */}
           <div className="flex items-center gap-6 shrink-0">
-            <Link href="/" className="inline-flex items-center gap-1.5 focus:outline-none group">
-              <span className="font-editorial text-xl font-bold tracking-tight text-editorial-title group-hover:text-gold transition-colors">
+            <Link href="/" className="inline-flex items-center gap-2 focus:outline-none group">
+              <span className="font-editorial text-xl font-bold tracking-tight text-editorial-title group-hover:text-accent transition-colors">
                 nuvellite
               </span>
-              <span className="inline-flex items-center px-1.5 py-[1px] rounded-[3px] text-[7.5px] font-mono font-semibold tracking-wider uppercase border border-gold/30 bg-gold/10 text-gold leading-none">
-                MANGA & LN
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8px] font-mono font-bold tracking-wider uppercase border border-accent/30 bg-accent/10 text-accent leading-none">
+                MANGA &amp; LN
               </span>
             </Link>
 
@@ -43,9 +43,9 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${
                     link.active
-                      ? 'text-gold bg-gold/10 font-semibold'
+                      ? 'text-accent bg-accent/10 font-semibold'
                       : 'text-editorial-muted hover:text-editorial-title hover:bg-surface-raised'
                   }`}
                 >
@@ -79,7 +79,7 @@ export function Header() {
             >
               <BookMarked className="w-4 h-4" />
               {isLoaded && ownedItems.length > 0 && (
-                <span className="absolute -top-1 -right-1 min-w-4 h-4 px-1 rounded-full bg-gold text-background text-[9px] font-mono font-bold flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 min-w-4 h-4 px-1 rounded-full bg-accent text-white text-[9px] font-mono font-bold flex items-center justify-center shadow-xs">
                   {ownedItems.length}
                 </span>
               )}

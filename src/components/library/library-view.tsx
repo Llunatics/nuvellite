@@ -95,7 +95,7 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
       <div className="p-6 sm:p-8 rounded-3xl bg-surface border border-border-subtle shadow-xs space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-mono font-semibold">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-accent/10 border border-accent/25 text-accent text-xs font-mono font-semibold">
               <BookMarked className="w-3.5 h-3.5" />
               <span>Koleksi Pribadi Local-First</span>
             </div>
@@ -112,14 +112,14 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
             <button
               type="button"
               onClick={handleExport}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-raised border border-border-subtle hover:border-gold/40 text-editorial-muted hover:text-editorial-title text-xs transition-all"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-raised border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title text-xs transition-all"
               title="Cadangkan koleksi ke file JSON"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Ekspor</span>
             </button>
 
-            <label className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-raised border border-border-subtle hover:border-gold/40 text-editorial-muted hover:text-editorial-title text-xs transition-all cursor-pointer">
+            <label className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-raised border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title text-xs transition-all cursor-pointer">
               <Upload className="w-3.5 h-3.5" />
               <span>Impor</span>
               <input type="file" accept=".json" onChange={handleImportFile} className="hidden" />
@@ -143,7 +143,7 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
         </div>
 
         {importStatus && (
-          <div className="p-2.5 rounded-xl bg-gold/10 border border-gold/30 text-gold text-xs font-medium">
+          <div className="p-2.5 rounded-xl bg-accent/10 border border-accent/30 text-accent text-xs font-medium">
             {importStatus}
           </div>
         )}
@@ -172,7 +172,7 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
           onClick={() => setActiveTab('OWNED')}
           className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-semibold transition-all ${
             activeTab === 'OWNED'
-              ? 'bg-gold/15 text-gold border border-gold/30 shadow-xs'
+              ? 'bg-accent/15 text-accent border border-accent/30 shadow-xs'
               : 'text-editorial-muted hover:text-editorial-title'
           }`}
         >
@@ -185,7 +185,7 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
           onClick={() => setActiveTab('WISHLIST')}
           className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-semibold transition-all ${
             activeTab === 'WISHLIST'
-              ? 'bg-gold/15 text-gold border border-gold/30 shadow-xs'
+              ? 'bg-accent/15 text-accent border border-accent/30 shadow-xs'
               : 'text-editorial-muted hover:text-editorial-title'
           }`}
         >
@@ -198,7 +198,7 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
           onClick={() => setActiveTab('SERIES')}
           className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-semibold transition-all ${
             activeTab === 'SERIES'
-              ? 'bg-gold/15 text-gold border border-gold/30 shadow-xs'
+              ? 'bg-accent/15 text-accent border border-accent/30 shadow-xs'
               : 'text-editorial-muted hover:text-editorial-title'
           }`}
         >
@@ -220,7 +220,7 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
               <div className="pt-2">
                 <Link
                   href="/"
-                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gold text-background text-xs font-semibold"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-accent text-white text-xs font-semibold"
                 >
                   Jelajahi Katalog
                 </Link>
@@ -293,13 +293,13 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
                         </span>
                         <Link
                           href={`/series/${series.slug}`}
-                          className="text-sm font-bold font-editorial text-editorial-title hover:text-gold transition-colors"
+                          className="text-sm font-bold font-editorial text-editorial-title hover:text-accent transition-colors"
                         >
                           {series.name}
                         </Link>
                       </div>
 
-                      <span className="text-xs font-mono font-bold text-gold">
+                      <span className="text-xs font-mono font-bold text-accent">
                         {ownedInSeries.length} / {seriesBooks.length} Vol ({percent}%)
                       </span>
                     </div>
@@ -307,7 +307,7 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
                     {/* Progress Bar */}
                     <div className="w-full h-2 rounded-full bg-surface-sunken overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-gold to-emerald-400 transition-all duration-300"
+                        className="h-full bg-gradient-to-r from-accent to-emerald-400 transition-all duration-300"
                         style={{ width: `${percent}%` }}
                       />
                     </div>

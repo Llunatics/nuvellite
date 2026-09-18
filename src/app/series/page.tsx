@@ -15,7 +15,7 @@ export default function SeriesDirectoryPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
       {/* Header Banner */}
       <div className="p-6 sm:p-8 rounded-3xl bg-surface border border-border-subtle shadow-xs space-y-2">
-        <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-mono font-semibold">
+        <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-accent/10 border border-accent/25 text-accent text-xs font-mono font-semibold">
           <Layers className="w-3.5 h-3.5" />
           <span>Pelacak Seri Resmi</span>
         </div>
@@ -69,7 +69,7 @@ export default function SeriesDirectoryPage() {
             <div className="flex-1 flex flex-col justify-between space-y-1">
               <div>
                 <div className="text-[10px] font-mono text-editorial-faint truncate">{series.publisherName}</div>
-                <h3 className="text-xs sm:text-[13px] font-semibold text-editorial-title group-hover:text-gold transition-colors line-clamp-2 leading-tight">
+                <h3 className="text-xs sm:text-[13px] font-semibold text-editorial-title group-hover:text-accent transition-colors line-clamp-2 leading-tight">
                   {series.name}
                 </h3>
               </div>

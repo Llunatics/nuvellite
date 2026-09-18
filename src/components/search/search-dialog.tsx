@@ -126,7 +126,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
 
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-semibold text-editorial-title group-hover:text-gold transition-colors truncate">
+                        <span className="text-xs font-semibold text-editorial-title group-hover:text-accent transition-colors truncate">
                           {book.title}
                         </span>
                         {book.category !== 'Merchandise' && book.volume !== null && book.volume !== undefined && (

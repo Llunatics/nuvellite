@@ -109,7 +109,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             {/* Left Info Column */}
             <div className="lg:col-span-7 space-y-4">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold/15 border border-gold/30 text-gold text-xs font-mono font-bold tracking-wider uppercase shadow-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-xs font-mono font-bold tracking-wider uppercase shadow-xs">
                   <Flame className="w-3.5 h-3.5" />
                   <span>Sorotan Rilis Pilihan</span>
                 </span>
@@ -175,7 +175,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <Link
                   href={`/books/${activeSpotlight.slug}`}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gold text-background text-xs sm:text-sm font-semibold hover:bg-gold-400 transition-all shadow-md active:scale-95"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent text-white text-xs sm:text-sm font-semibold hover:bg-accent/90 transition-all shadow-md active:scale-95"
                 >
                   <span>Lihat Detail Buku</span>
                   <ArrowRight className="w-4 h-4" />
@@ -199,7 +199,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                   onClick={() => toggleWishlist(activeSpotlight.id, activeSpotlight.seriesId)}
                   className={`p-2.5 rounded-xl border transition-all active:scale-95 ${
                     spotlightWishlisted
-                      ? 'bg-gold/15 text-gold border-gold/40'
+                      ? 'bg-accent/15 text-accent border-accent/40'
                       : 'bg-surface hover:bg-surface-raised text-editorial-muted hover:text-editorial-title border-border-subtle'
                   }`}
                   aria-label="Wishlist"
@@ -213,7 +213,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             <div className="lg:col-span-5 flex flex-col items-center">
               <div className="relative group/cover">
                 {/* Glowing Drop Shadow */}
-                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-gold/30 via-sky-500/20 to-purple-500/20 blur-xl opacity-60 group-hover/cover:opacity-90 transition-opacity" />
+                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-accent/30 via-sky-500/20 to-purple-500/20 blur-xl opacity-60 group-hover/cover:opacity-90 transition-opacity" />
 
                 <div className="relative aspect-[3/4] w-48 sm:w-60 lg:w-64 rounded-2xl overflow-hidden bg-surface-sunken border border-border-medium shadow-2xl">
                   {activeSpotlight.coverImage ? (
@@ -239,7 +239,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                     onClick={() => setActiveSpotlightIdx(idx)}
                     className={`relative w-10 h-14 rounded-lg overflow-hidden border transition-all ${
                       activeSpotlightIdx === idx
-                        ? 'border-gold ring-2 ring-gold/40 scale-105'
+                        ? 'border-accent ring-2 ring-accent/40 scale-105'
                         : 'border-border-subtle opacity-50 hover:opacity-100'
                     }`}
                     title={b.title}
@@ -261,7 +261,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-gold" />
+            <Sparkles className="w-4 h-4 text-accent" />
             <h2 className="text-base sm:text-lg font-bold font-editorial text-editorial-title">
               Rilisan Terbaru &amp; Populer
             </h2>
@@ -289,7 +289,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Cari judul komik, light novel, merchandise, atau pengarang..."
-              className="w-full pl-9 pr-4 py-2 rounded-xl bg-surface-raised border border-border-subtle hover:border-border-medium focus:border-gold/50 focus:outline-none text-xs text-editorial-title placeholder:text-editorial-faint transition-colors"
+              className="w-full pl-9 pr-4 py-2 rounded-xl bg-surface-raised border border-border-subtle hover:border-border-medium focus:border-accent/50 focus:outline-none text-xs text-editorial-title placeholder:text-editorial-faint transition-colors"
             />
           </div>
 
@@ -322,7 +322,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               onClick={() => setPubFilter('ALL')}
               className={`px-3 py-1.5 rounded-xl text-xs font-medium border transition-all ${
                 pubFilter === 'ALL'
-                  ? 'bg-gold/15 border-gold/40 text-gold font-semibold shadow-xs'
+                  ? 'bg-accent/15 border-accent/40 text-accent font-semibold shadow-xs'
                   : 'bg-surface-raised border-border-subtle text-editorial-muted hover:text-editorial-title'
               }`}
             >
@@ -335,7 +335,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 onClick={() => setPubFilter(pub.id)}
                 className={`px-3 py-1.5 rounded-xl text-xs font-medium border transition-all ${
                   pubFilter === pub.id
-                    ? 'bg-gold/15 border-gold/40 text-gold font-semibold shadow-xs'
+                    ? 'bg-accent/15 border-accent/40 text-accent font-semibold shadow-xs'
                     : 'bg-surface-raised/60 border-border-subtle text-editorial-muted hover:text-editorial-title'
                 }`}
               >
@@ -382,7 +382,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
       <div className="flex items-center justify-between text-xs text-editorial-faint font-mono px-1">
         <span>Menampilkan {filteredBooks.length} item terkurasi</span>
         {searchQuery && (
-          <span className="text-gold font-medium">Hasil pencarian: &quot;{searchQuery}&quot;</span>
+          <span className="text-accent font-medium">Hasil pencarian: &quot;{searchQuery}&quot;</span>
         )}
       </div>
 

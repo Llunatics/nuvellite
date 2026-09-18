@@ -83,25 +83,25 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                 </div>
               )}
 
-              {/* Badges on Cover */}
+              {/* Floating Top Left: Format Capsule Badge */}
               <div className="absolute top-2 left-2 z-10">
                 <span
-                  className={`px-2 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase border backdrop-blur-md ${
+                  className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase border backdrop-blur-md shadow-sm ${
                     book.category === 'Light Novel'
-                      ? 'bg-amber-500/25 text-amber-300 border-amber-500/40'
+                      ? 'bg-amber-500/20 text-amber-200 border-amber-500/30'
                       : isMerch
-                      ? 'bg-purple-500/25 text-purple-300 border-purple-500/40'
-                      : 'bg-sky-500/25 text-sky-300 border-sky-500/40'
+                      ? 'bg-purple-500/20 text-purple-200 border-purple-500/30'
+                      : 'bg-sky-500/20 text-sky-200 border-sky-500/30'
                   }`}
                 >
                   {book.category}
                 </span>
               </div>
 
-              {/* Volume Badge: only for Manga and Light Novel, NEVER for Merchandise */}
+              {/* Floating Top Right: Volume Capsule Badge (NEVER for Merchandise) */}
               {!isMerch && book.volume !== null && book.volume !== undefined && (
                 <div className="absolute top-2 right-2 z-10">
-                  <span className="px-2 py-0.5 rounded text-[9px] font-mono font-bold bg-background/90 text-editorial-title border border-border-medium backdrop-blur-md">
+                  <span className="px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider bg-black/55 text-white/95 border border-white/20 backdrop-blur-md shadow-md">
                     Vol. {book.volume}
                   </span>
                 </div>
@@ -117,7 +117,7 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                   className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all ${
                     owned
                       ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
-                      : 'bg-gold text-background hover:bg-gold-400 border-transparent shadow-xs'
+                      : 'bg-accent text-white hover:bg-accent/90 border-transparent shadow-xs'
                   }`}
                 >
                   {owned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
@@ -129,7 +129,7 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                   onClick={() => toggleWishlist(book.id, book.seriesId)}
                   className={`p-2.5 rounded-xl border transition-all ${
                     wishlisted
-                      ? 'bg-gold/15 text-gold border-gold/40'
+                      ? 'bg-accent/15 text-accent border-accent/40'
                       : 'bg-surface-raised hover:bg-surface text-editorial-muted hover:text-editorial-title border-border-subtle'
                   }`}
                   aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
@@ -164,7 +164,7 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                 ) : (
                   <Link
                     href={`/publishers/${book.publisherId.replace('pub_', '')}`}
-                    className="hover:text-gold transition-colors font-semibold"
+                    className="hover:text-accent transition-colors font-semibold"
                   >
                     {book.publisherName}
                   </Link>
@@ -208,7 +208,7 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                       {isMerch ? 'Tanggal Tersedia:' : 'Jadwal Rilis:'}
                     </span>
                     <span className="text-xs sm:text-sm font-medium text-editorial-body flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-gold" />
+                      <Calendar className="w-3.5 h-3.5 text-accent" />
                       <span>{formatDateWIB(book.releaseDate)}</span>
                     </span>
                   </div>
@@ -275,7 +275,7 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
               <div className="pt-2">
                 <Link
                   href={`/series/${book.seriesId!.replace('ser_', '')}`}
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gold/10 border border-gold/25 text-gold hover:bg-gold/15 transition-all text-xs font-semibold"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-accent/10 border border-accent/25 text-accent hover:bg-accent/15 transition-all text-xs font-semibold"
                 >
                   <Layers className="w-4 h-4" />
                   <span>
@@ -302,7 +302,7 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
             {book.seriesId && (
               <Link
                 href={`/series/${book.seriesId.replace('ser_', '')}`}
-                className="text-xs text-gold hover:underline font-medium"
+                className="text-xs text-accent hover:underline font-medium"
               >
                 Buka Halaman Seri →
               </Link>
