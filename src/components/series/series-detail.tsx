@@ -74,10 +74,10 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
 
             <div className="absolute top-2 left-2">
               <span
-                className={`px-2 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase border backdrop-blur-md ${
+                className={`px-2 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase backdrop-blur-md ${
                   series.type === 'LIGHT_NOVEL'
-                    ? 'bg-amber-500/20 text-amber-300 border-amber-500/30'
-                    : 'bg-sky-500/20 text-sky-300 border-sky-500/30'
+                    ? 'bg-amber-500/25 text-amber-200'
+                    : 'bg-sky-500/25 text-sky-200'
                 }`}
               >
                 {series.type === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga'}
@@ -94,8 +94,8 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
                 <span
                   className={`px-1.5 py-0.2 rounded text-[9px] font-mono uppercase font-bold ${
                     series.status === 'COMPLETED'
-                      ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
-                      : 'bg-accent/15 text-accent border border-accent/30'
+                      ? 'bg-emerald-500/20 text-emerald-400'
+                      : 'bg-accent/20 text-accent'
                   }`}
                 >
                   {series.status === 'COMPLETED' ? 'Tamat / Complete' : 'Ongoing'}

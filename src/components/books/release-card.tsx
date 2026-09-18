@@ -41,29 +41,29 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         {/* Gradient overlay on bottom of cover for depth */}
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
 
-        {/* Floating Top Left: Format Capsule Badge */}
+        {/* Floating Top Left: Format Capsule Badge (Soft seamless pill, NO outline) */}
         <div className="absolute top-2 left-2 z-10 pointer-events-none">
           <span
-            className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-sm border ${
+            className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-sm ${
               book.category === 'Light Novel'
-                ? 'bg-amber-500/20 text-amber-200 border-amber-500/30'
+                ? 'bg-amber-500/25 text-amber-200'
                 : book.category === 'Merchandise'
-                ? 'bg-purple-500/20 text-purple-200 border-purple-500/30'
-                : 'bg-sky-500/20 text-sky-200 border-sky-500/30'
+                ? 'bg-purple-500/25 text-purple-200'
+                : 'bg-sky-500/25 text-sky-200'
             }`}
           >
             {book.category}
           </span>
         </div>
 
-        {/* Floating Top Right: Volume Capsule Badge (Matching soft tinted border, NO stark white outline, NEVER for Merchandise) */}
+        {/* Floating Top Right: Volume Capsule Badge (Soft seamless smoked glass, NO outline, NEVER for Merchandise) */}
         {book.category !== 'Merchandise' && book.volume !== null && book.volume !== undefined && (
           <div className="absolute top-2 right-2 z-10 pointer-events-none">
             <span
-              className={`px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm border ${
+              className={`px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm ${
                 book.category === 'Light Novel'
-                  ? 'bg-black/70 text-amber-100 border-amber-500/25'
-                  : 'bg-black/70 text-sky-100 border-sky-500/25'
+                  ? 'bg-black/60 text-amber-200/90'
+                  : 'bg-black/60 text-sky-200/90'
               }`}
             >
               Vol. {book.volume}
@@ -74,7 +74,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         {/* Pre-order Capsule Tag Bottom Left of Cover */}
         {book.status === 'PREORDER' && (
           <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white shadow-md border border-accent/40">
+            <span className="px-2 py-0.5 rounded-full text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white shadow-md">
               PRE-ORDER
             </span>
           </div>
@@ -105,7 +105,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         </div>
 
         {/* Integrated Bottom Dock: Price & Action Controls */}
-        <div className="mt-auto pt-2.5 border-t border-border-subtle/80 flex items-center justify-between gap-2">
+        <div className="mt-auto pt-2 flex items-center justify-between gap-2">
           {/* Price with micro-label */}
           <div className="flex flex-col min-w-0">
             <span className="text-[8.5px] font-mono uppercase tracking-widest text-editorial-faint font-semibold leading-none">
@@ -117,15 +117,15 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
           </div>
 
           {/* Action Micro-Dock */}
-          <div className="flex items-center gap-1 p-0.5 rounded-xl bg-surface-raised/90 border border-border-subtle/80 backdrop-blur-xs shadow-xs shrink-0">
+          <div className="flex items-center gap-1 p-0.5 rounded-xl bg-surface-sunken/80 shrink-0">
             {/* Wishlist Button */}
             <button
               type="button"
               onClick={() => toggleWishlist(book.id, book.seriesId)}
               className={`w-7 h-7 rounded-lg flex items-center justify-center transition-all active:scale-90 ${
                 wishlisted
-                  ? 'bg-accent/20 text-accent border border-accent/40 shadow-xs'
-                  : 'text-editorial-muted hover:text-editorial-title hover:bg-surface/80'
+                  ? 'bg-accent/20 text-accent'
+                  : 'text-editorial-muted hover:text-accent hover:bg-surface-raised/80'
               }`}
               aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
               title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
@@ -138,9 +138,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
               type="button"
               onClick={() => toggleOwned(book.id, book.seriesId)}
               className={`h-7 px-2 sm:px-2.5 rounded-lg flex items-center gap-1 text-[11px] font-semibold transition-all active:scale-95 ${
-                owned
-                  ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 shadow-xs font-semibold'
-                  : 'bg-surface hover:bg-surface-sunken text-editorial-body hover:text-editorial-title border border-border-subtle/60 hover:border-border-medium'
+                owned ? 'bg-emerald-500/20 text-emerald-400 font-semibold' : 'bg-surface-raised/70 hover:bg-surface-raised text-editorial-body hover:text-editorial-title'
               }`}
               aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
               title={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}

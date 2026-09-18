@@ -124,33 +124,33 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             {/* Left Info Column */}
             <div className="lg:col-span-7 space-y-4">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-xs font-mono font-bold tracking-wider uppercase shadow-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-mono font-bold tracking-wider uppercase">
                   <Flame className="w-3.5 h-3.5" />
                   <span>Sorotan Rilis Pilihan</span>
                 </span>
 
                 <span
-                  className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-bold tracking-wider uppercase border ${
+                  className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-bold tracking-wider uppercase ${
                     activeSpotlight.category === 'Light Novel'
-                      ? 'bg-amber-500/20 text-amber-300 border-amber-500/35'
+                      ? 'bg-amber-500/20 text-amber-300'
                       : activeSpotlight.category === 'Merchandise'
-                      ? 'bg-purple-500/20 text-purple-300 border-purple-500/35'
-                      : 'bg-sky-500/20 text-sky-300 border-sky-500/35'
+                      ? 'bg-purple-500/20 text-purple-300'
+                      : 'bg-sky-500/20 text-sky-300'
                   }`}
                 >
                   {activeSpotlight.category}
                 </span>
 
-                <span className="px-2.5 py-0.5 rounded-full text-xs font-mono text-editorial-body bg-surface-raised border border-border-subtle">
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-mono text-editorial-body bg-surface-raised">
                   {activeSpotlight.publisherShortName}
                 </span>
 
                 {activeSpotlight.category !== 'Merchandise' && activeSpotlight.volume !== null && activeSpotlight.volume !== undefined && (
                   <span
-                    className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm border ${
+                    className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm ${
                       activeSpotlight.category === 'Light Novel'
-                        ? 'bg-black/70 text-amber-100 border-amber-500/25'
-                        : 'bg-black/70 text-sky-100 border-sky-500/25'
+                        ? 'bg-black/60 text-amber-200/90'
+                        : 'bg-black/60 text-sky-200/90'
                     }`}
                   >
                     Vol. {activeSpotlight.volume}
@@ -205,10 +205,10 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <button
                   type="button"
                   onClick={() => toggleOwned(activeSpotlight.id, activeSpotlight.seriesId)}
-                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all active:scale-95 ${
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all active:scale-95 ${
                     spotlightOwned
-                      ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40 shadow-xs'
-                      : 'bg-surface hover:bg-surface-raised text-editorial-body hover:text-editorial-title border-border-subtle'
+                      ? 'bg-emerald-500/20 text-emerald-400 shadow-xs'
+                      : 'bg-surface hover:bg-surface-raised text-editorial-body hover:text-editorial-title'
                   }`}
                 >
                   {spotlightOwned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
@@ -218,10 +218,10 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <button
                   type="button"
                   onClick={() => toggleWishlist(activeSpotlight.id, activeSpotlight.seriesId)}
-                  className={`p-2.5 rounded-xl border transition-all active:scale-95 ${
+                  className={`p-2.5 rounded-xl transition-all active:scale-95 ${
                     spotlightWishlisted
-                      ? 'bg-accent/15 text-accent border-accent/40'
-                      : 'bg-surface hover:bg-surface-raised text-editorial-muted hover:text-editorial-title border-border-subtle'
+                      ? 'bg-accent/20 text-accent'
+                      : 'bg-surface hover:bg-surface-raised text-editorial-muted hover:text-editorial-title'
                   }`}
                   aria-label="Tambah ke Wishlist"
                 >

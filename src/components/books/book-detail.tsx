@@ -86,12 +86,12 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
               {/* Floating Top Left: Format Capsule Badge */}
               <div className="absolute top-2 left-2 z-10">
                 <span
-                  className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase border backdrop-blur-md shadow-sm ${
+                  className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-sm ${
                     book.category === 'Light Novel'
-                      ? 'bg-amber-500/20 text-amber-200 border-amber-500/30'
+                      ? 'bg-amber-500/25 text-amber-200'
                       : isMerch
-                      ? 'bg-purple-500/20 text-purple-200 border-purple-500/30'
-                      : 'bg-sky-500/20 text-sky-200 border-sky-500/30'
+                      ? 'bg-purple-500/25 text-purple-200'
+                      : 'bg-sky-500/25 text-sky-200'
                   }`}
                 >
                   {book.category}
@@ -102,10 +102,10 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
               {!isMerch && book.volume !== null && book.volume !== undefined && (
                 <div className="absolute top-2 right-2 z-10 pointer-events-none">
                   <span
-                    className={`px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm border ${
+                    className={`px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm ${
                       book.category === 'Light Novel'
-                        ? 'bg-black/70 text-amber-100 border-amber-500/25'
-                        : 'bg-black/70 text-sky-100 border-sky-500/25'
+                        ? 'bg-black/60 text-amber-200/90'
+                        : 'bg-black/60 text-sky-200/90'
                     }`}
                   >
                     Vol. {book.volume}
@@ -120,10 +120,10 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                 <button
                   type="button"
                   onClick={() => toggleOwned(book.id, book.seriesId)}
-                  className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all ${
+                  className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-semibold transition-all ${
                     owned
-                      ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
-                      : 'bg-accent text-white hover:bg-accent/90 border-transparent shadow-xs'
+                      ? 'bg-emerald-500/25 text-emerald-400 shadow-xs'
+                      : 'bg-accent text-white hover:bg-accent/90 shadow-xs'
                   }`}
                 >
                   {owned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
@@ -133,10 +133,10 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                 <button
                   type="button"
                   onClick={() => toggleWishlist(book.id, book.seriesId)}
-                  className={`p-2.5 rounded-xl border transition-all ${
+                  className={`p-2.5 rounded-xl transition-all ${
                     wishlisted
-                      ? 'bg-accent/15 text-accent border-accent/40'
-                      : 'bg-surface-raised hover:bg-surface text-editorial-muted hover:text-editorial-title border-border-subtle'
+                      ? 'bg-accent/20 text-accent'
+                      : 'bg-surface-raised hover:bg-surface text-editorial-muted hover:text-editorial-title'
                   }`}
                   aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
                 >
