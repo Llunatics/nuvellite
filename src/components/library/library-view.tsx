@@ -95,8 +95,8 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
       <div className="p-6 sm:p-8 rounded-3xl bg-surface border border-border-subtle shadow-xs space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-accent/10 border border-accent/25 text-accent text-xs font-mono font-semibold">
-              <BookMarked className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-slate-200 text-xs font-mono font-semibold tracking-wider shadow-xs">
+              <BookMarked className="w-3.5 h-3.5 text-accent" />
               <span>Koleksi Pribadi Local-First</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-bold font-editorial text-editorial-title">

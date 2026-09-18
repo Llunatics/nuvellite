@@ -58,12 +58,16 @@ export default async function PublisherDetailPage({ params }: PageProps) {
           ? 'bg-gradient-to-br from-surface via-surface-raised to-surface border-purple-500/25'
           : 'bg-surface border-border-subtle'
       }`}>
-        <div className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono font-semibold ${
+        <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold tracking-wider shadow-xs ${
           isMerchProvider
-            ? 'bg-purple-500/15 border border-purple-500/30 text-purple-300'
-            : 'bg-accent/10 border border-accent/25 text-accent'
+            ? 'bg-purple-900/30 border border-purple-500/30 text-purple-200'
+            : 'bg-slate-800/80 border border-slate-700/60 text-slate-200'
         }`}>
-          {isMerchProvider ? <Sparkles className="w-3.5 h-3.5" /> : <Compass className="w-3.5 h-3.5" />}
+          {isMerchProvider ? (
+            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+          ) : (
+            <Compass className="w-3.5 h-3.5 text-accent" />
+          )}
           <span>{isMerchProvider ? 'Penyedia Resmi Merchandise' : 'Penerbit Resmi Berlisensi'}</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-bold font-editorial text-editorial-title">
