@@ -32,7 +32,7 @@ export function Header() {
               <span className="font-editorial text-xl font-bold tracking-tight text-editorial-title group-hover:text-accent transition-colors">
                 nuvellite
               </span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8px] font-mono font-bold tracking-wider uppercase bg-accent/15 text-accent leading-none">
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-semibold tracking-wider uppercase bg-slate-800/80 text-slate-300 border border-slate-700/60 leading-none">
                 MANGA &amp; LN
               </span>
             </Link>

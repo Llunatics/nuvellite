@@ -17,7 +17,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
   const wishlisted = isLoaded && isWishlisted(book.id);
 
   return (
-    <div className="group relative flex flex-col bg-surface rounded-2xl border border-border-subtle hover:border-accent/35 transition-all duration-300 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1.5">
+    <div className="group relative flex flex-col bg-surface rounded-2xl border border-slate-800/90 hover:border-slate-700 transition-all duration-300 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1.5">
       {/* Top Cover Thumbnail with Floating Glass Badges */}
       <Link href={`/books/${book.slug}`} className="relative aspect-[3/4] w-full bg-surface-sunken overflow-hidden block">
         {book.coverImage ? (
@@ -41,31 +41,25 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         {/* Gradient overlay on bottom of cover for depth */}
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
 
-        {/* Floating Top Left: Format Capsule Badge (Soft seamless pill, NO outline) */}
+        {/* Floating Top Left: Format Capsule Badge (Clean matching gray outline) */}
         <div className="absolute top-2 left-2 z-10 pointer-events-none">
           <span
-            className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-sm ${
+            className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-sm border border-slate-700/60 ${
               book.category === 'Light Novel'
-                ? 'bg-amber-500/25 text-amber-200'
+                ? 'bg-slate-900/85 text-amber-300'
                 : book.category === 'Merchandise'
-                ? 'bg-purple-500/25 text-purple-200'
-                : 'bg-sky-500/25 text-sky-200'
+                ? 'bg-slate-900/85 text-purple-300'
+                : 'bg-slate-900/85 text-sky-300'
             }`}
           >
             {book.category}
           </span>
         </div>
 
-        {/* Floating Top Right: Volume Capsule Badge (Soft seamless smoked glass, NO outline, NEVER for Merchandise) */}
+        {/* Floating Top Right: Volume Capsule Badge (Clean matching gray outline, NEVER for Merchandise) */}
         {book.category !== 'Merchandise' && book.volume !== null && book.volume !== undefined && (
           <div className="absolute top-2 right-2 z-10 pointer-events-none">
-            <span
-              className={`px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm ${
-                book.category === 'Light Novel'
-                  ? 'bg-black/60 text-amber-200/90'
-                  : 'bg-black/60 text-sky-200/90'
-              }`}
-            >
+            <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm bg-slate-900/85 text-slate-300 border border-slate-700/60">
               Vol. {book.volume}
             </span>
           </div>
@@ -104,8 +98,8 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
           </Link>
         </div>
 
-        {/* Integrated Bottom Dock: Price & Action Controls */}
-        <div className="mt-auto pt-2 flex items-center justify-between gap-2">
+        {/* Integrated Bottom Dock: Price & Action Controls with matching soft gray divider */}
+        <div className="mt-auto pt-2.5 border-t border-slate-800/90 flex items-center justify-between gap-2">
           {/* Price with micro-label */}
           <div className="flex flex-col min-w-0">
             <span className="text-[8.5px] font-mono uppercase tracking-widest text-editorial-faint font-semibold leading-none">
@@ -117,15 +111,15 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
           </div>
 
           {/* Action Micro-Dock */}
-          <div className="flex items-center gap-1 p-0.5 rounded-xl bg-surface-sunken/80 shrink-0">
+          <div className="flex items-center gap-1 p-0.5 rounded-xl bg-slate-900/80 border border-slate-800 shrink-0">
             {/* Wishlist Button */}
             <button
               type="button"
               onClick={() => toggleWishlist(book.id, book.seriesId)}
-              className={`w-7 h-7 rounded-lg flex items-center justify-center transition-all active:scale-90 ${
+              className={`w-7 h-7 rounded-lg flex items-center justify-center border transition-all active:scale-90 ${
                 wishlisted
-                  ? 'bg-accent/20 text-accent'
-                  : 'text-editorial-muted hover:text-accent hover:bg-surface-raised/80'
+                  ? 'bg-accent/20 text-accent border-accent/40 shadow-xs'
+                  : 'bg-slate-800/60 hover:bg-slate-800 text-slate-400 hover:text-slate-200 border-slate-700/50'
               }`}
               aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
               title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
@@ -137,8 +131,10 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
             <button
               type="button"
               onClick={() => toggleOwned(book.id, book.seriesId)}
-              className={`h-7 px-2 sm:px-2.5 rounded-lg flex items-center gap-1 text-[11px] font-semibold transition-all active:scale-95 ${
-                owned ? 'bg-emerald-500/20 text-emerald-400 font-semibold' : 'bg-surface-raised/70 hover:bg-surface-raised text-editorial-body hover:text-editorial-title'
+              className={`h-7 px-2 sm:px-2.5 rounded-lg flex items-center gap-1 text-[11px] font-semibold border transition-all active:scale-95 ${
+                owned
+                  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40 shadow-xs font-semibold'
+                  : 'bg-slate-800/60 hover:bg-slate-800 text-slate-300 hover:text-white border-slate-700/50'
               }`}
               aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
               title={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}

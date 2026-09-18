@@ -83,31 +83,25 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                 </div>
               )}
 
-              {/* Floating Top Left: Format Capsule Badge */}
+              {/* Floating Top Left: Format Capsule Badge (Clean matching gray outline) */}
               <div className="absolute top-2 left-2 z-10">
                 <span
-                  className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-sm ${
+                  className={`px-2.5 py-0.5 rounded-full text-[8.5px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-sm border border-slate-700/60 ${
                     book.category === 'Light Novel'
-                      ? 'bg-amber-500/25 text-amber-200'
+                      ? 'bg-slate-900/85 text-amber-300'
                       : isMerch
-                      ? 'bg-purple-500/25 text-purple-200'
-                      : 'bg-sky-500/25 text-sky-200'
+                      ? 'bg-slate-900/85 text-purple-300'
+                      : 'bg-slate-900/85 text-sky-300'
                   }`}
                 >
                   {book.category}
                 </span>
               </div>
 
-              {/* Floating Top Right: Volume Capsule Badge (Matching soft tinted border, NO stark white outline, NEVER for Merchandise) */}
+              {/* Floating Top Right: Volume Capsule Badge (Clean matching gray outline, NEVER for Merchandise) */}
               {!isMerch && book.volume !== null && book.volume !== undefined && (
                 <div className="absolute top-2 right-2 z-10 pointer-events-none">
-                  <span
-                    className={`px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm ${
-                      book.category === 'Light Novel'
-                        ? 'bg-black/60 text-amber-200/90'
-                        : 'bg-black/60 text-sky-200/90'
-                    }`}
-                  >
+                  <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm bg-slate-900/85 text-slate-300 border border-slate-700/60">
                     Vol. {book.volume}
                   </span>
                 </div>
@@ -133,10 +127,10 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                 <button
                   type="button"
                   onClick={() => toggleWishlist(book.id, book.seriesId)}
-                  className={`p-2.5 rounded-xl transition-all ${
+                  className={`p-2.5 rounded-xl border transition-all ${
                     wishlisted
-                      ? 'bg-accent/20 text-accent'
-                      : 'bg-surface-raised hover:bg-surface text-editorial-muted hover:text-editorial-title'
+                      ? 'bg-accent/20 text-accent border-accent/40 shadow-xs'
+                      : 'bg-slate-800/70 hover:bg-slate-800 text-slate-300 hover:text-white border-slate-700/60'
                   }`}
                   aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
                 >

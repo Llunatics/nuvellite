@@ -124,35 +124,29 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             {/* Left Info Column */}
             <div className="lg:col-span-7 space-y-4">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-mono font-bold tracking-wider uppercase">
-                  <Flame className="w-3.5 h-3.5" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-slate-200 text-xs font-mono font-semibold tracking-wider uppercase shadow-xs">
+                  <Flame className="w-3.5 h-3.5 text-accent" />
                   <span>Sorotan Rilis Pilihan</span>
                 </span>
 
                 <span
-                  className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-bold tracking-wider uppercase ${
+                  className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold tracking-wider uppercase border border-slate-700/60 ${
                     activeSpotlight.category === 'Light Novel'
-                      ? 'bg-amber-500/20 text-amber-300'
+                      ? 'bg-slate-800/80 text-amber-300'
                       : activeSpotlight.category === 'Merchandise'
-                      ? 'bg-purple-500/20 text-purple-300'
-                      : 'bg-sky-500/20 text-sky-300'
+                      ? 'bg-slate-800/80 text-purple-300'
+                      : 'bg-slate-800/80 text-sky-300'
                   }`}
                 >
                   {activeSpotlight.category}
                 </span>
 
-                <span className="px-2.5 py-0.5 rounded-full text-xs font-mono text-editorial-body bg-surface-raised">
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-mono text-slate-300 bg-slate-800/80 border border-slate-700/60">
                   {activeSpotlight.publisherShortName}
                 </span>
 
                 {activeSpotlight.category !== 'Merchandise' && activeSpotlight.volume !== null && activeSpotlight.volume !== undefined && (
-                  <span
-                    className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm ${
-                      activeSpotlight.category === 'Light Novel'
-                        ? 'bg-black/60 text-amber-200/90'
-                        : 'bg-black/60 text-sky-200/90'
-                    }`}
-                  >
+                  <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold tracking-wider bg-slate-800/80 text-slate-300 border border-slate-700/60 shadow-sm">
                     Vol. {activeSpotlight.volume}
                   </span>
                 )}
@@ -205,10 +199,10 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <button
                   type="button"
                   onClick={() => toggleOwned(activeSpotlight.id, activeSpotlight.seriesId)}
-                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all active:scale-95 ${
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all active:scale-95 ${
                     spotlightOwned
-                      ? 'bg-emerald-500/20 text-emerald-400 shadow-xs'
-                      : 'bg-surface hover:bg-surface-raised text-editorial-body hover:text-editorial-title'
+                      ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40 shadow-xs'
+                      : 'bg-slate-800/70 hover:bg-slate-800 text-slate-200 hover:text-white border-slate-700/60'
                   }`}
                 >
                   {spotlightOwned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
@@ -218,10 +212,10 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <button
                   type="button"
                   onClick={() => toggleWishlist(activeSpotlight.id, activeSpotlight.seriesId)}
-                  className={`p-2.5 rounded-xl transition-all active:scale-95 ${
+                  className={`p-2.5 rounded-xl border transition-all active:scale-95 ${
                     spotlightWishlisted
-                      ? 'bg-accent/20 text-accent'
-                      : 'bg-surface hover:bg-surface-raised text-editorial-muted hover:text-editorial-title'
+                      ? 'bg-accent/20 text-accent border-accent/40 shadow-xs'
+                      : 'bg-slate-800/70 hover:bg-slate-800 text-slate-300 hover:text-white border-slate-700/60'
                   }`}
                   aria-label="Tambah ke Wishlist"
                 >
@@ -300,7 +294,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               <button
                 type="button"
                 onClick={() => scrollRail(mangaRailRef, 'left')}
-                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-surface border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title transition-all active:scale-95"
+                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-slate-800/70 border border-slate-700/50 hover:border-slate-600 text-slate-300 hover:text-white transition-all active:scale-95"
                 aria-label="Scroll kiri manga"
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -308,7 +302,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               <button
                 type="button"
                 onClick={() => scrollRail(mangaRailRef, 'right')}
-                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-surface border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title transition-all active:scale-95"
+                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-slate-800/70 border border-slate-700/50 hover:border-slate-600 text-slate-300 hover:text-white transition-all active:scale-95"
                 aria-label="Scroll kanan manga"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -354,7 +348,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               <button
                 type="button"
                 onClick={() => scrollRail(lnRailRef, 'left')}
-                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-surface border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title transition-all active:scale-95"
+                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-slate-800/70 border border-slate-700/50 hover:border-slate-600 text-slate-300 hover:text-white transition-all active:scale-95"
                 aria-label="Scroll kiri light novel"
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -362,7 +356,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               <button
                 type="button"
                 onClick={() => scrollRail(lnRailRef, 'right')}
-                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-surface border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title transition-all active:scale-95"
+                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-slate-800/70 border border-slate-700/50 hover:border-slate-600 text-slate-300 hover:text-white transition-all active:scale-95"
                 aria-label="Scroll kanan light novel"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -406,7 +400,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
           </div>
 
           {/* Format Segmented Tabs */}
-          <div className="inline-flex p-1 rounded-xl bg-surface-raised border border-border-subtle text-xs shrink-0 self-start md:self-auto overflow-x-auto">
+          <div className="inline-flex p-1 rounded-xl bg-slate-900/80 border border-slate-800 text-xs shrink-0 self-start md:self-auto overflow-x-auto">
             {(['ALL', 'Manga', 'Light Novel', 'Merchandise'] as const).map((fmt) => (
               <button
                 key={fmt}

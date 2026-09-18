@@ -74,10 +74,10 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
 
             <div className="absolute top-2 left-2">
               <span
-                className={`px-2 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase backdrop-blur-md ${
+                className={`px-2 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase backdrop-blur-md border border-slate-700/60 ${
                   series.type === 'LIGHT_NOVEL'
-                    ? 'bg-amber-500/25 text-amber-200'
-                    : 'bg-sky-500/25 text-sky-200'
+                    ? 'bg-slate-900/85 text-amber-300'
+                    : 'bg-slate-900/85 text-sky-300'
                 }`}
               >
                 {series.type === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga'}
