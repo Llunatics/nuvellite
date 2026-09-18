@@ -54,11 +54,19 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
   const mangaRailRef = useRef<HTMLDivElement>(null);
   const lnRailRef = useRef<HTMLDivElement>(null);
+  const catalogRef = useRef<HTMLDivElement>(null);
 
   const scrollRail = (ref: React.RefObject<HTMLDivElement | null>, direction: 'left' | 'right') => {
     if (ref.current) {
       const scrollAmount = direction === 'left' ? -380 : 380;
       ref.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const handleViewAll = (format: 'Manga' | 'Light Novel') => {
+    setFormatFilter(format);
+    if (catalogRef.current) {
+      catalogRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -283,8 +291,8 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <BookOpen className="w-4 h-4" />
               </div>
               <div>
-                <h2 className="text-base sm:text-lg font-bold font-editorial text-editorial-title">
-                  Komik &amp; Manga Terbaru
+                <h2 className="text-base sm:text-lg font-bold font-sans tracking-tight text-editorial-title">
+                  Rilisan Manga Terbaru
                 </h2>
               </div>
             </div>
@@ -309,10 +317,12 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               </button>
               <button
                 type="button"
-                onClick={() => setFormatFilter('Manga')}
-                className="ml-1 px-2.5 py-1 rounded-lg text-xs font-mono font-medium text-editorial-muted hover:text-accent hover:bg-surface transition-all"
+                onClick={() => handleViewAll('Manga')}
+                className="ml-1 px-2.5 py-1 rounded-lg text-xs font-mono font-medium text-slate-300 hover:text-accent hover:bg-slate-800/80 border border-transparent hover:border-slate-700/60 transition-all active:scale-95 flex items-center gap-1"
+                title="Lihat semua manga di katalog"
               >
-                Semua Manga →
+                <span>Lihat Semua Manga</span>
+                <span className="text-accent font-bold">→</span>
               </button>
             </div>
           </div>
@@ -337,8 +347,8 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <Sparkles className="w-4 h-4" />
               </div>
               <div>
-                <h2 className="text-base sm:text-lg font-bold font-editorial text-editorial-title">
-                  Light Novel Pilihan &amp; Terkurasi
+                <h2 className="text-base sm:text-lg font-bold font-sans tracking-tight text-editorial-title">
+                  Rilisan Light Novel Terbaru
                 </h2>
               </div>
             </div>
@@ -363,10 +373,12 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               </button>
               <button
                 type="button"
-                onClick={() => setFormatFilter('Light Novel')}
-                className="ml-1 px-2.5 py-1 rounded-lg text-xs font-mono font-medium text-editorial-muted hover:text-accent hover:bg-surface transition-all"
+                onClick={() => handleViewAll('Light Novel')}
+                className="ml-1 px-2.5 py-1 rounded-lg text-xs font-mono font-medium text-slate-300 hover:text-accent hover:bg-slate-800/80 border border-transparent hover:border-slate-700/60 transition-all active:scale-95 flex items-center gap-1"
+                title="Lihat semua light novel di katalog"
               >
-                Semua Light Novel →
+                <span>Lihat Semua Light Novel</span>
+                <span className="text-accent font-bold">→</span>
               </button>
             </div>
           </div>
@@ -385,7 +397,11 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
       </div>
 
       {/* 3. DESKTOP FILTER & TOOLBAR */}
-      <div className="p-4 sm:p-5 rounded-2xl bg-surface border border-border-subtle shadow-sm space-y-4">
+      <div
+        ref={catalogRef}
+        id="katalog"
+        className="scroll-mt-20 p-4 sm:p-5 rounded-2xl bg-surface border border-slate-800 shadow-sm space-y-4"
+      >
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           {/* Real-time Search Input on Desktop */}
           <div className="relative flex-1 max-w-md">
@@ -492,7 +508,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
       {/* 4. ACTIVE RESULTS SUMMARY */}
       <div className="flex items-center justify-between text-xs text-editorial-faint font-mono px-1">
-        <span>Menampilkan {filteredBooks.length} item terkurasi</span>
+        <span>Menampilkan {filteredBooks.length} judul rilis</span>
         {searchQuery && (
           <span className="text-accent font-medium">Hasil pencarian: &quot;{searchQuery}&quot;</span>
         )}

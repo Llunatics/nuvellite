@@ -30,7 +30,7 @@ export function Footer() {
         </div>
 
         <div className="text-[11px] font-mono text-editorial-faint">
-          Data resmi terkurasi • Elex Media, m&amp;c!, Phoenix Gramedia Indonesia
+          Data rilisan resmi • Elex Media, m&amp;c!, Phoenix Gramedia Indonesia
         </div>
       </div>
     </footer>
