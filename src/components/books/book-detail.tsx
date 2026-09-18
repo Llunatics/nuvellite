@@ -98,10 +98,16 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                 </span>
               </div>
 
-              {/* Floating Top Right: Volume Capsule Badge (NEVER for Merchandise) */}
+              {/* Floating Top Right: Volume Capsule Badge (Matching soft tinted border, NO stark white outline, NEVER for Merchandise) */}
               {!isMerch && book.volume !== null && book.volume !== undefined && (
-                <div className="absolute top-2 right-2 z-10">
-                  <span className="px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider bg-black/55 text-white/95 border border-white/20 backdrop-blur-md shadow-md">
+                <div className="absolute top-2 right-2 z-10 pointer-events-none">
+                  <span
+                    className={`px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm border ${
+                      book.category === 'Light Novel'
+                        ? 'bg-black/70 text-amber-100 border-amber-500/25'
+                        : 'bg-black/70 text-sky-100 border-sky-500/25'
+                    }`}
+                  >
                     Vol. {book.volume}
                   </span>
                 </div>

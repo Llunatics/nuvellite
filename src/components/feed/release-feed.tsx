@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import { Book, Publisher } from '@/lib/types';
 import { ReleaseCard } from '@/components/books/release-card';
@@ -17,6 +17,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Flame,
+  Layers,
 } from 'lucide-react';
 
 interface ReleaseFeedProps {
@@ -41,6 +42,25 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
   const [activeSpotlightIdx, setActiveSpotlightIdx] = useState(0);
   const activeSpotlight = spotlightBooks[activeSpotlightIdx] || spotlightBooks[0];
+
+  // Dedicated Horizontal Scroll Rails
+  const mangaHighlights = useMemo(() => {
+    return initialBooks.filter((b) => b.category === 'Manga' && b.coverImage).slice(0, 14);
+  }, [initialBooks]);
+
+  const lnHighlights = useMemo(() => {
+    return initialBooks.filter((b) => b.category === 'Light Novel' && b.coverImage).slice(0, 14);
+  }, [initialBooks]);
+
+  const mangaRailRef = useRef<HTMLDivElement>(null);
+  const lnRailRef = useRef<HTMLDivElement>(null);
+
+  const scrollRail = (ref: React.RefObject<HTMLDivElement | null>, direction: 'left' | 'right') => {
+    if (ref.current) {
+      const scrollAmount = direction === 'left' ? -380 : 380;
+      ref.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   // Filters
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel' | 'Merchandise'>('ALL');
@@ -85,11 +105,6 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
       });
   }, [initialBooks, formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
 
-  // Recent releases horizontal rail (top 10 latest)
-  const recentHighlights = useMemo(() => {
-    return initialBooks.filter((b) => b.coverImage).slice(0, 10);
-  }, [initialBooks]);
-
   const spotlightOwned = isLoaded && activeSpotlight && isOwned(activeSpotlight.id);
   const spotlightWishlisted = isLoaded && activeSpotlight && isWishlisted(activeSpotlight.id);
 
@@ -131,7 +146,13 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 </span>
 
                 {activeSpotlight.category !== 'Merchandise' && activeSpotlight.volume !== null && activeSpotlight.volume !== undefined && (
-                  <span className="px-2 py-0.5 rounded-md text-xs font-mono font-bold text-editorial-title bg-background/80 border border-border-medium">
+                  <span
+                    className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm border ${
+                      activeSpotlight.category === 'Light Novel'
+                        ? 'bg-black/70 text-amber-100 border-amber-500/25'
+                        : 'bg-black/70 text-sky-100 border-sky-500/25'
+                    }`}
+                  >
                     Vol. {activeSpotlight.volume}
                   </span>
                 )}
@@ -184,14 +205,14 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <button
                   type="button"
                   onClick={() => toggleOwned(activeSpotlight.id, activeSpotlight.seriesId)}
-                  className={`inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium border transition-all active:scale-95 ${
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all active:scale-95 ${
                     spotlightOwned
-                      ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40 font-semibold'
-                      : 'bg-surface hover:bg-surface-raised text-editorial-title border-border-subtle hover:border-border-medium'
+                      ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40 shadow-xs'
+                      : 'bg-surface hover:bg-surface-raised text-editorial-body hover:text-editorial-title border-border-subtle'
                   }`}
                 >
-                  {spotlightOwned ? <Check className="w-4 h-4 text-emerald-400" /> : <Plus className="w-4 h-4" />}
-                  <span>{spotlightOwned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}</span>
+                  {spotlightOwned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                  <span>{spotlightOwned ? 'Dimiliki' : 'Tambah ke Koleksi'}</span>
                 </button>
 
                 <button
@@ -202,20 +223,21 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                       ? 'bg-accent/15 text-accent border-accent/40'
                       : 'bg-surface hover:bg-surface-raised text-editorial-muted hover:text-editorial-title border-border-subtle'
                   }`}
-                  aria-label="Wishlist"
+                  aria-label="Tambah ke Wishlist"
                 >
-                  <Bookmark className="w-4 h-4" />
+                  <Bookmark className={`w-4 h-4 ${spotlightWishlisted ? 'fill-current' : ''}`} />
                 </button>
               </div>
             </div>
 
-            {/* Right Cover Art Column with Thumbnail Switcher */}
-            <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="relative group/cover">
-                {/* Glowing Drop Shadow */}
+            {/* Right Interactive Cover Carousel */}
+            <div className="lg:col-span-5 flex flex-col items-center gap-4">
+              <Link
+                href={`/books/${activeSpotlight.slug}`}
+                className="relative group/cover block aspect-[3/4] w-52 sm:w-64 rounded-2xl overflow-hidden shadow-2xl border border-border-medium hover:scale-[1.02] transition-transform duration-300"
+              >
                 <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-accent/30 via-sky-500/20 to-purple-500/20 blur-xl opacity-60 group-hover/cover:opacity-90 transition-opacity" />
-
-                <div className="relative aspect-[3/4] w-48 sm:w-60 lg:w-64 rounded-2xl overflow-hidden bg-surface-sunken border border-border-medium shadow-2xl">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-surface-sunken">
                   {activeSpotlight.coverImage ? (
                     <img
                       src={activeSpotlight.coverImage}
@@ -223,15 +245,15 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-full h-full flex items-center justify-center bg-surface-raised">
                       <BookOpen className="w-12 h-12 text-editorial-faint" />
                     </div>
                   )}
                 </div>
-              </div>
+              </Link>
 
-              {/* Clickable Spotlight Selector Thumbnails */}
-              <div className="flex items-center gap-2 mt-6 p-1.5 rounded-2xl bg-surface/80 border border-border-subtle backdrop-blur-md">
+              {/* Thumbnails to switch spotlight */}
+              <div className="flex items-center gap-2">
                 {spotlightBooks.map((b, idx) => (
                   <button
                     key={b.id}
@@ -257,24 +279,114 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
         </div>
       )}
 
-      {/* 2. RECENT HIGHLIGHTS HORIZONTAL RAIL */}
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <h2 className="text-base sm:text-lg font-bold font-editorial text-editorial-title">
-              Rilisan Terbaru &amp; Populer
-            </h2>
+      {/* 2. DEDICATED HORIZONTAL SCROLL RAILS: MANGA & LIGHT NOVEL */}
+      <div className="space-y-8">
+        {/* Rail 1: Komik & Manga */}
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2.5">
+              <div className="w-7 h-7 rounded-xl bg-sky-500/10 border border-sky-500/25 flex items-center justify-center text-sky-400">
+                <BookOpen className="w-4 h-4" />
+              </div>
+              <div>
+                <h2 className="text-base sm:text-lg font-bold font-editorial text-editorial-title">
+                  Komik &amp; Manga Terbaru
+                </h2>
+              </div>
+            </div>
+
+            {/* Controls: Scroll Buttons + View All */}
+            <div className="flex items-center gap-1.5">
+              <button
+                type="button"
+                onClick={() => scrollRail(mangaRailRef, 'left')}
+                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-surface border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title transition-all active:scale-95"
+                aria-label="Scroll kiri manga"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollRail(mangaRailRef, 'right')}
+                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-surface border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title transition-all active:scale-95"
+                aria-label="Scroll kanan manga"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setFormatFilter('Manga')}
+                className="ml-1 px-2.5 py-1 rounded-lg text-xs font-mono font-medium text-editorial-muted hover:text-accent hover:bg-surface transition-all"
+              >
+                Semua Manga →
+              </button>
+            </div>
           </div>
-          <span className="text-xs text-editorial-faint font-mono">10 rilis pilihan</span>
+
+          <div
+            ref={mangaRailRef}
+            className="flex items-center gap-3.5 overflow-x-auto pb-2 scrollbar-none snap-x scroll-smooth"
+          >
+            {mangaHighlights.map((book) => (
+              <div key={book.id} className="w-36 sm:w-44 shrink-0 snap-start">
+                <ReleaseCard book={book} />
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none snap-x">
-          {recentHighlights.map((book) => (
-            <div key={book.id} className="w-36 sm:w-44 shrink-0 snap-start">
-              <ReleaseCard book={book} />
+        {/* Rail 2: Light Novel */}
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2.5">
+              <div className="w-7 h-7 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-400">
+                <Sparkles className="w-4 h-4" />
+              </div>
+              <div>
+                <h2 className="text-base sm:text-lg font-bold font-editorial text-editorial-title">
+                  Light Novel Pilihan &amp; Terkurasi
+                </h2>
+              </div>
             </div>
-          ))}
+
+            {/* Controls: Scroll Buttons + View All */}
+            <div className="flex items-center gap-1.5">
+              <button
+                type="button"
+                onClick={() => scrollRail(lnRailRef, 'left')}
+                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-surface border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title transition-all active:scale-95"
+                aria-label="Scroll kiri light novel"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollRail(lnRailRef, 'right')}
+                className="hidden sm:flex w-7 h-7 rounded-xl items-center justify-center bg-surface border border-border-subtle hover:border-accent/40 text-editorial-muted hover:text-editorial-title transition-all active:scale-95"
+                aria-label="Scroll kanan light novel"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setFormatFilter('Light Novel')}
+                className="ml-1 px-2.5 py-1 rounded-lg text-xs font-mono font-medium text-editorial-muted hover:text-accent hover:bg-surface transition-all"
+              >
+                Semua Light Novel →
+              </button>
+            </div>
+          </div>
+
+          <div
+            ref={lnRailRef}
+            className="flex items-center gap-3.5 overflow-x-auto pb-2 scrollbar-none snap-x scroll-smooth"
+          >
+            {lnHighlights.map((book) => (
+              <div key={book.id} className="w-36 sm:w-44 shrink-0 snap-start">
+                <ReleaseCard book={book} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -294,19 +406,25 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
           </div>
 
           {/* Format Segmented Tabs */}
-          <div className="inline-flex p-1 rounded-xl bg-surface-raised border border-border-subtle text-xs shrink-0 self-start md:self-auto">
+          <div className="inline-flex p-1 rounded-xl bg-surface-raised border border-border-subtle text-xs shrink-0 self-start md:self-auto overflow-x-auto">
             {(['ALL', 'Manga', 'Light Novel', 'Merchandise'] as const).map((fmt) => (
               <button
                 key={fmt}
                 type="button"
                 onClick={() => setFormatFilter(fmt)}
-                className={`px-3.5 py-1.5 rounded-lg font-medium transition-all ${
+                className={`px-3.5 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
                   formatFilter === fmt
                     ? 'bg-surface text-editorial-title shadow-xs font-semibold'
                     : 'text-editorial-muted hover:text-editorial-title'
                 }`}
               >
-                {fmt === 'ALL' ? 'Semua Format' : fmt === 'Manga' ? 'Manga' : fmt === 'Light Novel' ? 'Light Novel' : 'Merchandise'}
+                {fmt === 'ALL'
+                  ? 'Semua Format'
+                  : fmt === 'Manga'
+                  ? 'Manga'
+                  : fmt === 'Light Novel'
+                  ? 'Light Novel'
+                  : 'Merchandise'}
               </button>
             ))}
           </div>

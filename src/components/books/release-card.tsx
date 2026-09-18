@@ -56,10 +56,16 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
           </span>
         </div>
 
-        {/* Floating Top Right: Volume Capsule Badge (Clean & Premium Frosted Glass, NEVER for Merchandise) */}
+        {/* Floating Top Right: Volume Capsule Badge (Matching soft tinted border, NO stark white outline, NEVER for Merchandise) */}
         {book.category !== 'Merchandise' && book.volume !== null && book.volume !== undefined && (
           <div className="absolute top-2 right-2 z-10 pointer-events-none">
-            <span className="px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider bg-black/55 text-white/95 border border-white/20 backdrop-blur-md shadow-md">
+            <span
+              className={`px-2.5 py-0.5 rounded-full text-[9.5px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm border ${
+                book.category === 'Light Novel'
+                  ? 'bg-black/70 text-amber-100 border-amber-500/25'
+                  : 'bg-black/70 text-sky-100 border-sky-500/25'
+              }`}
+            >
               Vol. {book.volume}
             </span>
           </div>
@@ -133,8 +139,8 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
               onClick={() => toggleOwned(book.id, book.seriesId)}
               className={`h-7 px-2 sm:px-2.5 rounded-lg flex items-center gap-1 text-[11px] font-semibold transition-all active:scale-95 ${
                 owned
-                  ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 shadow-xs'
-                  : 'bg-surface hover:bg-surface-sunken text-editorial-body hover:text-editorial-title border border-border-subtle hover:border-border-medium'
+                  ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 shadow-xs font-semibold'
+                  : 'bg-surface hover:bg-surface-sunken text-editorial-body hover:text-editorial-title border border-border-subtle/60 hover:border-border-medium'
               }`}
               aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
               title={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
