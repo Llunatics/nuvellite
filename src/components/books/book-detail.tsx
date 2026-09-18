@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Book } from '@/lib/types';
-import { formatRupiah, formatDateWIB, getDayNameWIB } from '@/lib/formatters';
+import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
 import {
   ArrowLeft,
@@ -12,9 +12,6 @@ import {
   Bookmark,
   BookOpen,
   Calendar,
-  Building,
-  Hash,
-  Sparkles,
   Layers,
 } from 'lucide-react';
 import { ReleaseCard } from './release-card';
@@ -28,8 +25,6 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const owned = isLoaded && isOwned(book.id);
   const wishlisted = isLoaded && isWishlisted(book.id);
-
-  const dayName = getDayNameWIB(book.releaseDate);
 
   return (
     <div className="space-y-8">
@@ -64,21 +59,16 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
               )}
 
               {/* Badges on Cover */}
-              <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
+              <div className="absolute top-2 left-2 z-10">
                 <span
                   className={`px-2 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase border backdrop-blur-md ${
                     book.category === 'Light Novel'
-                      ? 'bg-amber-500/20 text-amber-300 border-amber-500/30'
-                      : 'bg-sky-500/20 text-sky-300 border-sky-500/30'
+                      ? 'bg-amber-500/25 text-amber-300 border-amber-500/40'
+                      : 'bg-sky-500/25 text-sky-300 border-sky-500/40'
                   }`}
                 >
                   {book.category}
                 </span>
-                {book.isWednesdayRelease && (
-                  <span className="px-2 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase bg-gold/25 text-gold border border-gold/40 backdrop-blur-md">
-                    Rabu Drop
-                  </span>
-                )}
               </div>
 
               {book.volume !== null && book.volume !== undefined && (
@@ -166,7 +156,6 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                   <span className="text-xs sm:text-sm font-medium text-editorial-body flex items-center gap-1.5">
                     <Calendar className="w-3.5 h-3.5 text-gold" />
                     <span>{formatDateWIB(book.releaseDate)}</span>
-                    {dayName && <span className="text-editorial-faint">({dayName})</span>}
                   </span>
                 </div>
               )}

@@ -29,19 +29,9 @@ export default async function PublisherDetailPage({ params }: PageProps) {
   }
 
   const pubBooks = getBooksByPublisher(pub.id);
-  const mangaCount = pubBooks.filter((b) => b.category === 'Manga').length;
-  const lnCount = pubBooks.filter((b) => b.category === 'Light Novel').length;
-  const seriesCount = new Set(pubBooks.map((b) => b.seriesId).filter(Boolean)).size;
-
-  const stats = {
-    totalBooks: pubBooks.length,
-    totalSeries: seriesCount,
-    mangaCount,
-    lnCount,
-  };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6">
       {/* Back Link */}
       <div>
         <Link
@@ -68,7 +58,7 @@ export default async function PublisherDetailPage({ params }: PageProps) {
       </div>
 
       {/* Feed for this Publisher */}
-      <ReleaseFeed initialBooks={pubBooks} publishers={[pub]} stats={stats} />
+      <ReleaseFeed initialBooks={pubBooks} publishers={[pub]} />
     </div>
   );
 }

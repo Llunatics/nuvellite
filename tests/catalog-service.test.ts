@@ -3,7 +3,6 @@ import {
   getAllBooks,
   getAllSeries,
   getPublishers,
-  getWednesdayReleases,
   searchCatalog,
   getStats,
   getBookBySlug,
@@ -40,14 +39,6 @@ describe('Nuvellite Catalog Integrity', () => {
     expect(stats.mangaCount).toBeGreaterThan(1500);
     expect(stats.lnCount).toBeGreaterThan(200);
     expect(stats.totalSeries).toBeGreaterThan(300);
-  });
-
-  it('should filter Wednesday drops correctly', () => {
-    const wedDrops = getWednesdayReleases();
-    expect(wedDrops.length).toBeGreaterThan(0);
-    for (const b of wedDrops) {
-      expect(b.isWednesdayRelease).toBe(true);
-    }
   });
 
   it('should search books by title or author', () => {

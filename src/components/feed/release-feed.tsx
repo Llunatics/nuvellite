@@ -1,195 +1,398 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
 import { Book, Publisher } from '@/lib/types';
 import { ReleaseCard } from '@/components/books/release-card';
-import { Sparkles, Calendar, BookOpen, Layers, Filter } from 'lucide-react';
+import { formatRupiah, formatDateWIB } from '@/lib/formatters';
+import { useCollection } from '@/hooks/use-collection';
+import {
+  Sparkles,
+  BookOpen,
+  Search,
+  Check,
+  Plus,
+  Bookmark,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Flame,
+} from 'lucide-react';
 
 interface ReleaseFeedProps {
   initialBooks: Book[];
   publishers: Publisher[];
-  stats: {
-    totalBooks: number;
-    totalSeries: number;
-    mangaCount: number;
-    lnCount: number;
-  };
 }
 
-export function ReleaseFeed({ initialBooks, publishers, stats }: ReleaseFeedProps) {
+export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
+  const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
+
+  // Find 5 top spotlight books with covers for the interactive Hero Spotlight
+  const spotlightBooks = useMemo(() => {
+    const list = initialBooks.filter((b) => b.coverImage && b.synopsis);
+    // Prioritize high-profile series
+    const prioritized = list.filter((b) =>
+      ['alya', 'spy', 'bungo stray', 'shape of voice', 'one piece', 'akasha', 'frieren', 're-living'].some((k) =>
+        b.title.toLowerCase().includes(k)
+      )
+    );
+    return prioritized.slice(0, 5);
+  }, [initialBooks]);
+
+  const [activeSpotlightIdx, setActiveSpotlightIdx] = useState(0);
+  const activeSpotlight = spotlightBooks[activeSpotlightIdx] || spotlightBooks[0];
+
+  // Filters
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
-  const [wednesdayOnly, setWednesdayOnly] = useState(false);
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'AVAILABLE' | 'PREORDER'>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
 
+  // Filtered books
   const filteredBooks = useMemo(() => {
-    return initialBooks.filter((book) => {
-      if (formatFilter !== 'ALL' && book.category !== formatFilter) return false;
-      if (pubFilter !== 'ALL' && book.publisherId !== pubFilter) return false;
-      if (wednesdayOnly && !book.isWednesdayRelease) return false;
-      if (statusFilter !== 'ALL' && book.status !== statusFilter) return false;
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase().trim();
-        const matchTitle = book.title.toLowerCase().includes(q);
-        const matchSeries = book.seriesName?.toLowerCase().includes(q);
-        const matchAuthor = book.authors.some((a) => a.toLowerCase().includes(q));
-        if (!matchTitle && !matchSeries && !matchAuthor) return false;
-      }
-      return true;
-    }).sort((a, b) => {
-      if (sortBy === 'title') {
-        return a.title.localeCompare(b.title);
-      }
-      if (sortBy === 'price_low') {
-        return a.currentPrice - b.currentPrice;
-      }
-      if (sortBy === 'price_high') {
-        return b.currentPrice - a.currentPrice;
-      }
-      // 'latest' default: release date descending
-      const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-      const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-      return dateB - dateA;
-    });
-  }, [initialBooks, formatFilter, pubFilter, wednesdayOnly, statusFilter, searchQuery, sortBy]);
+    return initialBooks
+      .filter((book) => {
+        if (formatFilter !== 'ALL' && book.category !== formatFilter) return false;
+        if (pubFilter !== 'ALL' && book.publisherId !== pubFilter) return false;
+        if (statusFilter !== 'ALL' && book.status !== statusFilter) return false;
+        if (searchQuery.trim()) {
+          const q = searchQuery.toLowerCase().trim();
+          const matchTitle = book.title.toLowerCase().includes(q);
+          const matchSeries = book.seriesName?.toLowerCase().includes(q);
+          const matchAuthor = Array.isArray(book.authors) && book.authors.some((a) => {
+            if (typeof a === 'string') return a.toLowerCase().includes(q);
+            if (typeof a === 'object' && a && 'name' in a) return String((a as any).name).toLowerCase().includes(q);
+            return false;
+          });
+          if (!matchTitle && !matchSeries && !matchAuthor) return false;
+        }
+        return true;
+      })
+      .sort((a, b) => {
+        if (sortBy === 'title') {
+          return a.title.localeCompare(b.title);
+        }
+        if (sortBy === 'price_low') {
+          return a.currentPrice - b.currentPrice;
+        }
+        if (sortBy === 'price_high') {
+          return b.currentPrice - a.currentPrice;
+        }
+        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
+        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
+        return dateB - dateA;
+      });
+  }, [initialBooks, formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
+
+  // Recent releases horizontal rail (top 10 latest)
+  const recentHighlights = useMemo(() => {
+    return initialBooks.filter((b) => b.coverImage).slice(0, 10);
+  }, [initialBooks]);
+
+  const spotlightOwned = isLoaded && activeSpotlight && isOwned(activeSpotlight.id);
+  const spotlightWishlisted = isLoaded && activeSpotlight && isWishlisted(activeSpotlight.id);
 
   return (
-    <div className="space-y-6">
-      {/* Hero Banner with Stats */}
-      <div className="relative rounded-3xl bg-gradient-to-b from-surface-raised/80 to-surface/40 border border-border-subtle p-6 sm:p-8 overflow-hidden shadow-xs">
-        <div className="relative z-10 max-w-2xl space-y-2">
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-mono font-semibold">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Katalog Resmi Manga & Light Novel Indonesia</span>
+    <div className="space-y-10">
+      {/* 1. HERO SPOTLIGHT SHOWCASE (Rich Desktop Experience) */}
+      {activeSpotlight && (
+        <div className="relative rounded-3xl bg-gradient-to-br from-surface via-surface-raised/90 to-surface-sunken border border-border-medium overflow-hidden shadow-2xl p-6 sm:p-10 transition-all">
+          {/* Ambient Background Glow matching category */}
+          <div
+            className={`absolute top-0 right-1/4 w-96 h-96 rounded-full blur-[140px] pointer-events-none opacity-30 ${
+              activeSpotlight.category === 'Light Novel' ? 'bg-amber-500' : 'bg-sky-500'
+            }`}
+          />
+
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left Info Column */}
+            <div className="lg:col-span-7 space-y-4">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold/15 border border-gold/30 text-gold text-xs font-mono font-bold tracking-wider uppercase shadow-xs">
+                  <Flame className="w-3.5 h-3.5" />
+                  <span>Sorotan Rilis Pilihan</span>
+                </span>
+
+                <span
+                  className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-bold tracking-wider uppercase border ${
+                    activeSpotlight.category === 'Light Novel'
+                      ? 'bg-amber-500/20 text-amber-300 border-amber-500/35'
+                      : 'bg-sky-500/20 text-sky-300 border-sky-500/35'
+                  }`}
+                >
+                  {activeSpotlight.category}
+                </span>
+
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-mono text-editorial-body bg-surface-raised border border-border-subtle">
+                  {activeSpotlight.publisherShortName}
+                </span>
+
+                {activeSpotlight.volume !== null && activeSpotlight.volume !== undefined && (
+                  <span className="px-2 py-0.5 rounded-md text-xs font-mono font-bold text-editorial-title bg-background/80 border border-border-medium">
+                    Vol. {activeSpotlight.volume}
+                  </span>
+                )}
+              </div>
+
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-editorial text-editorial-title tracking-tight leading-[1.15]">
+                {activeSpotlight.title}
+              </h1>
+
+              {activeSpotlight.originalTitle && activeSpotlight.originalTitle !== activeSpotlight.title && (
+                <p className="text-xs sm:text-sm text-editorial-muted italic font-editorial">
+                  {activeSpotlight.originalTitle}
+                </p>
+              )}
+
+              <p className="text-xs sm:text-sm text-editorial-body line-clamp-3 leading-relaxed max-w-xl">
+                {activeSpotlight.synopsis}
+              </p>
+
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                <div>
+                  <span className="text-[10px] font-mono text-editorial-faint block uppercase">Harga Resmi</span>
+                  <span className="text-xl sm:text-2xl font-mono font-bold text-editorial-title">
+                    {formatRupiah(activeSpotlight.currentPrice)}
+                  </span>
+                </div>
+
+                <div className="h-8 w-px bg-border-subtle hidden sm:block" />
+
+                {activeSpotlight.releaseDate && (
+                  <div>
+                    <span className="text-[10px] font-mono text-editorial-faint block uppercase">Tanggal Terbit</span>
+                    <span className="text-xs sm:text-sm font-mono text-editorial-body">
+                      {formatDateWIB(activeSpotlight.releaseDate)}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <Link
+                  href={`/books/${activeSpotlight.slug}`}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gold text-background text-xs sm:text-sm font-semibold hover:bg-gold-400 transition-all shadow-md active:scale-95"
+                >
+                  <span>Lihat Detail Buku</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                <button
+                  type="button"
+                  onClick={() => toggleOwned(activeSpotlight.id, activeSpotlight.seriesId)}
+                  className={`inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium border transition-all active:scale-95 ${
+                    spotlightOwned
+                      ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40 font-semibold'
+                      : 'bg-surface hover:bg-surface-raised text-editorial-title border-border-subtle hover:border-border-medium'
+                  }`}
+                >
+                  {spotlightOwned ? <Check className="w-4 h-4 text-emerald-400" /> : <Plus className="w-4 h-4" />}
+                  <span>{spotlightOwned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => toggleWishlist(activeSpotlight.id, activeSpotlight.seriesId)}
+                  className={`p-2.5 rounded-xl border transition-all active:scale-95 ${
+                    spotlightWishlisted
+                      ? 'bg-gold/15 text-gold border-gold/40'
+                      : 'bg-surface hover:bg-surface-raised text-editorial-muted hover:text-editorial-title border-border-subtle'
+                  }`}
+                  aria-label="Wishlist"
+                >
+                  <Bookmark className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Right Cover Art Column with Thumbnail Switcher */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="relative group/cover">
+                {/* Glowing Drop Shadow */}
+                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-gold/30 via-sky-500/20 to-purple-500/20 blur-xl opacity-60 group-hover/cover:opacity-90 transition-opacity" />
+
+                <div className="relative aspect-[3/4] w-48 sm:w-60 lg:w-64 rounded-2xl overflow-hidden bg-surface-sunken border border-border-medium shadow-2xl">
+                  {activeSpotlight.coverImage ? (
+                    <img
+                      src={activeSpotlight.coverImage}
+                      alt={activeSpotlight.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <BookOpen className="w-12 h-12 text-editorial-faint" />
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Clickable Spotlight Selector Thumbnails */}
+              <div className="flex items-center gap-2 mt-6 p-1.5 rounded-2xl bg-surface/80 border border-border-subtle backdrop-blur-md">
+                {spotlightBooks.map((b, idx) => (
+                  <button
+                    key={b.id}
+                    type="button"
+                    onClick={() => setActiveSpotlightIdx(idx)}
+                    className={`relative w-10 h-14 rounded-lg overflow-hidden border transition-all ${
+                      activeSpotlightIdx === idx
+                        ? 'border-gold ring-2 ring-gold/40 scale-105'
+                        : 'border-border-subtle opacity-50 hover:opacity-100'
+                    }`}
+                    title={b.title}
+                  >
+                    {b.coverImage ? (
+                      <img src={b.coverImage} alt={b.title} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full bg-surface-raised" />
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold font-editorial text-editorial-title tracking-tight">
-            Edisi Bersih &amp; Terfokus Pelacak Rilis
-          </h1>
-          <p className="text-xs sm:text-sm text-editorial-muted leading-relaxed">
-            Menampilkan {stats.totalBooks.toLocaleString('id-ID')} judul komik ({stats.mangaCount}) dan light novel ({stats.lnCount}) berlisensi resmi dari Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia.
-          </p>
+        </div>
+      )}
+
+      {/* 2. RECENT HIGHLIGHTS HORIZONTAL RAIL */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-gold" />
+            <h2 className="text-base sm:text-lg font-bold font-editorial text-editorial-title">
+              Rilisan Terbaru &amp; Populer
+            </h2>
+          </div>
+          <span className="text-xs text-editorial-faint font-mono">10 rilis pilihan</span>
         </div>
 
-        {/* Quick stat counters */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-6 pt-6 border-t border-border-subtle max-w-lg">
-          <div>
-            <div className="text-lg sm:text-xl font-bold font-mono text-editorial-title">{stats.mangaCount}</div>
-            <div className="text-[11px] text-editorial-muted">Komik / Manga</div>
-          </div>
-          <div>
-            <div className="text-lg sm:text-xl font-bold font-mono text-editorial-title">{stats.lnCount}</div>
-            <div className="text-[11px] text-editorial-muted">Light Novel</div>
-          </div>
-          <div>
-            <div className="text-lg sm:text-xl font-bold font-mono text-editorial-title">{stats.totalSeries}</div>
-            <div className="text-[11px] text-editorial-muted">Total Seri</div>
-          </div>
+        <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none snap-x">
+          {recentHighlights.map((book) => (
+            <div key={book.id} className="w-36 sm:w-44 shrink-0 snap-start">
+              <ReleaseCard book={book} />
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Interactive Controls & Filters */}
-      <div className="space-y-3 bg-surface p-4 rounded-2xl border border-border-subtle shadow-xs">
-        {/* Row 1: Format & Rabu Rilis Toggle */}
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          {/* Format Tabs */}
-          <div className="inline-flex p-1 rounded-xl bg-surface-raised border border-border-subtle text-xs">
+      {/* 3. DESKTOP FILTER & TOOLBAR */}
+      <div className="p-4 sm:p-5 rounded-2xl bg-surface border border-border-subtle shadow-sm space-y-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          {/* Real-time Search Input on Desktop */}
+          <div className="relative flex-1 max-w-md">
+            <Search className="w-4 h-4 text-editorial-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Cari judul komik, light novel, atau pengarang..."
+              className="w-full pl-9 pr-4 py-2 rounded-xl bg-surface-raised border border-border-subtle hover:border-border-medium focus:border-gold/50 focus:outline-none text-xs text-editorial-title placeholder:text-editorial-faint transition-colors"
+            />
+          </div>
+
+          {/* Format Segmented Tabs */}
+          <div className="inline-flex p-1 rounded-xl bg-surface-raised border border-border-subtle text-xs shrink-0 self-start md:self-auto">
             {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
               <button
                 key={fmt}
                 type="button"
                 onClick={() => setFormatFilter(fmt)}
-                className={`px-3 py-1.5 rounded-lg font-medium transition-all ${
+                className={`px-3.5 py-1.5 rounded-lg font-medium transition-all ${
                   formatFilter === fmt
                     ? 'bg-surface text-editorial-title shadow-xs font-semibold'
                     : 'text-editorial-muted hover:text-editorial-title'
                 }`}
               >
-                {fmt === 'ALL' ? 'Semua Format' : fmt}
+                {fmt === 'ALL' ? 'Semua Format' : fmt === 'Manga' ? 'Komik / Manga' : 'Light Novel'}
               </button>
             ))}
           </div>
-
-          {/* Wednesday Drop Quick Toggle */}
-          <button
-            type="button"
-            onClick={() => setWednesdayOnly(!wednesdayOnly)}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium border transition-all ${
-              wednesdayOnly
-                ? 'bg-gold/15 text-gold border-gold/40 font-semibold shadow-xs'
-                : 'bg-surface-raised border-border-subtle text-editorial-muted hover:text-editorial-title'
-            }`}
-          >
-            <Calendar className="w-3.5 h-3.5" />
-            <span>⭐ Hanya Jadwal Rabu Rilis</span>
-          </button>
         </div>
 
-        {/* Row 2: Publisher Pills & Sorting */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-border-subtle text-xs">
+        {/* Row 2: Publisher Pills, Status Filter, and Sort */}
+        <div className="pt-3 border-t border-border-subtle flex flex-wrap items-center justify-between gap-3 text-xs">
           {/* Publishers */}
           <div className="flex flex-wrap items-center gap-1.5">
             <span className="text-editorial-faint text-[11px] font-mono mr-1">Penerbit:</span>
             <button
               type="button"
               onClick={() => setPubFilter('ALL')}
-              className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-all ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-medium border transition-all ${
                 pubFilter === 'ALL'
-                  ? 'bg-surface-raised border border-border-medium text-editorial-title font-semibold'
-                  : 'text-editorial-muted hover:text-editorial-title'
+                  ? 'bg-gold/15 border-gold/40 text-gold font-semibold shadow-xs'
+                  : 'bg-surface-raised border-border-subtle text-editorial-muted hover:text-editorial-title'
               }`}
             >
-              Semua
+              Semua Penerbit
             </button>
             {publishers.map((pub) => (
               <button
                 key={pub.id}
                 type="button"
                 onClick={() => setPubFilter(pub.id)}
-                className={`px-2.5 py-1 rounded-lg text-xs font-medium border transition-all ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-medium border transition-all ${
                   pubFilter === pub.id
-                    ? 'bg-gold/15 border-gold/40 text-gold font-semibold'
-                    : 'bg-surface-raised/40 border-border-subtle text-editorial-muted hover:text-editorial-title'
+                    ? 'bg-gold/15 border-gold/40 text-gold font-semibold shadow-xs'
+                    : 'bg-surface-raised/60 border-border-subtle text-editorial-muted hover:text-editorial-title'
                 }`}
               >
-                {pub.shortName}
+                {pub.name}
               </button>
             ))}
           </div>
 
-          {/* Sort Selector */}
-          <div className="flex items-center gap-2 text-xs">
-            <span className="text-editorial-faint text-[11px]">Urutkan:</span>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="bg-surface-raised border border-border-subtle text-editorial-body text-xs rounded-lg px-2.5 py-1 focus:outline-none focus:border-border-medium"
-            >
-              <option value="latest">Rilis Terbaru</option>
-              <option value="title">Judul (A-Z)</option>
-              <option value="price_low">Harga Terendah</option>
-              <option value="price_high">Harga Tertinggi</option>
-            </select>
+          {/* Right Controls: Status & Sort */}
+          <div className="flex items-center gap-3">
+            {/* Status Filter */}
+            <div className="flex items-center gap-1">
+              <span className="text-editorial-faint text-[11px] font-mono">Status:</span>
+              <select
+                value={statusFilter}
+                onChange={(e) => setStatusFilter(e.target.value as any)}
+                className="bg-surface-raised border border-border-subtle text-editorial-body text-xs rounded-xl px-2.5 py-1.5 focus:outline-none"
+              >
+                <option value="ALL">Semua</option>
+                <option value="AVAILABLE">Tersedia</option>
+                <option value="PREORDER">Pre-Order</option>
+              </select>
+            </div>
+
+            {/* Sort Selector */}
+            <div className="flex items-center gap-1">
+              <span className="text-editorial-faint text-[11px] font-mono">Urutkan:</span>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as any)}
+                className="bg-surface-raised border border-border-subtle text-editorial-body text-xs rounded-xl px-2.5 py-1.5 focus:outline-none"
+              >
+                <option value="latest">Rilis Terbaru</option>
+                <option value="title">Judul (A-Z)</option>
+                <option value="price_low">Harga Terendah</option>
+                <option value="price_high">Harga Tertinggi</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Active Results Summary */}
+      {/* 4. ACTIVE RESULTS SUMMARY */}
       <div className="flex items-center justify-between text-xs text-editorial-faint font-mono px-1">
         <span>Menampilkan {filteredBooks.length} buku terkurasi</span>
-        {wednesdayOnly && <span className="text-gold font-medium">Filter Aktif: Jadwal Rabu Rilis</span>}
+        {searchQuery && (
+          <span className="text-gold font-medium">Hasil pencarian: &quot;{searchQuery}&quot;</span>
+        )}
       </div>
 
-      {/* Books Grid */}
+      {/* 5. BOOKS GRID */}
       {filteredBooks.length === 0 ? (
-        <div className="py-16 text-center bg-surface/50 border border-border-subtle rounded-3xl space-y-2">
+        <div className="py-20 text-center bg-surface border border-border-subtle rounded-3xl space-y-2">
           <BookOpen className="w-10 h-10 text-editorial-faint mx-auto" />
-          <h3 className="text-sm font-semibold text-editorial-title">Tidak ada rilisan yang sesuai filter</h3>
-          <p className="text-xs text-editorial-muted">Coba reset filter format atau penerbit untuk melihat katalog lainnya.</p>
+          <h3 className="text-sm font-semibold text-editorial-title">Tidak ada buku yang sesuai dengan filter</h3>
+          <p className="text-xs text-editorial-muted">Coba ubah kata kunci pencarian atau reset filter format/penerbit.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
           {filteredBooks.map((book) => (
             <ReleaseCard key={book.id} book={book} />
           ))}

@@ -2,8 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { Bookmark, Check, Plus, Calendar, BookOpen } from 'lucide-react';
+import { Bookmark, Check, Plus, BookOpen } from 'lucide-react';
 import { Book } from '@/lib/types';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
@@ -18,7 +17,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
   const wishlisted = isLoaded && isWishlisted(book.id);
 
   return (
-    <div className="group relative flex flex-col bg-surface rounded-2xl border border-border-subtle hover:border-border-medium transition-all duration-200 overflow-hidden shadow-xs hover:shadow-md">
+    <div className="group relative flex flex-col bg-surface rounded-2xl border border-border-subtle hover:border-gold/30 transition-all duration-300 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1.5">
       {/* Top Cover Thumbnail with Badges */}
       <Link href={`/books/${book.slug}`} className="relative aspect-[3/4] w-full bg-surface-sunken overflow-hidden block">
         {book.coverImage ? (
@@ -26,7 +25,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
             src={book.coverImage}
             alt={book.title}
             loading="lazy"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-surface-raised/40">
@@ -35,45 +34,53 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
           </div>
         )}
 
-        {/* Floating Top Badges */}
-        <div className="absolute top-2 left-2 flex flex-col gap-1 items-start z-10 pointer-events-none">
-          {/* Format Badge */}
+        {/* Gradient overlay on bottom of cover for depth */}
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+
+        {/* Floating Top Left: Format Badge */}
+        <div className="absolute top-2 left-2 z-10 pointer-events-none">
           <span
-            className={`px-1.5 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-xs border ${
+            className={`px-2 py-0.5 rounded-[4px] text-[8px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-xs border ${
               book.category === 'Light Novel'
-                ? 'bg-amber-500/20 text-amber-300 border-amber-500/30'
-                : 'bg-sky-500/20 text-sky-300 border-sky-500/30'
+                ? 'bg-amber-500/25 text-amber-300 border-amber-500/40'
+                : 'bg-sky-500/25 text-sky-300 border-sky-500/40'
             }`}
           >
             {book.category}
           </span>
-
-          {/* Wednesday Drop Badge */}
-          {book.isWednesdayRelease && (
-            <span className="px-1.5 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase bg-gold/25 text-gold border border-gold/40 backdrop-blur-md shadow-xs">
-              RABU DROP
-            </span>
-          )}
         </div>
 
-        {/* Volume Badge (Top Right) */}
+        {/* Floating Top Right: Volume Badge */}
         {book.volume !== null && book.volume !== undefined && (
           <div className="absolute top-2 right-2 z-10 pointer-events-none">
-            <span className="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-background/90 text-editorial-title border border-border-medium backdrop-blur-md shadow-xs">
+            <span className="px-2 py-0.5 rounded-[4px] text-[9px] font-mono font-bold bg-background/90 text-editorial-title border border-border-medium backdrop-blur-md shadow-xs">
               Vol. {book.volume}
+            </span>
+          </div>
+        )}
+
+        {/* Pre-order Tag Bottom Left of Cover */}
+        {book.status === 'PREORDER' && (
+          <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
+            <span className="px-1.5 py-0.5 rounded text-[8px] font-mono font-bold uppercase bg-amber-500 text-black shadow-sm">
+              PRE-ORDER
             </span>
           </div>
         )}
       </Link>
 
       {/* Book Info */}
-      <div className="p-3 flex-1 flex flex-col justify-between space-y-2">
+      <div className="p-3.5 flex-1 flex flex-col justify-between space-y-2.5">
         <div>
           {/* Publisher and Author */}
           <div className="flex items-center justify-between gap-1 text-[10px] text-editorial-muted font-mono mb-1">
-            <span className="font-semibold text-editorial-body truncate">{book.publisherShortName}</span>
-            {book.status === 'PREORDER' && (
-              <span className="text-[9px] text-amber-400 font-bold uppercase tracking-wider">PREORDER</span>
+            <span className="font-semibold text-editorial-muted group-hover:text-gold transition-colors truncate">
+              {book.publisherShortName}
+            </span>
+            {book.releaseDate && (
+              <span className="text-[9px] text-editorial-faint font-mono truncate">
+                {formatDateWIB(book.releaseDate)}
+              </span>
             )}
           </div>
 
@@ -85,17 +92,12 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
           </Link>
         </div>
 
-        {/* Footer: Price & 1-tap Actions */}
+        {/* Footer: Price & Quick Action Buttons */}
         <div className="pt-2 border-t border-border-subtle flex items-center justify-between gap-2">
           <div>
-            <div className="text-[11px] sm:text-xs font-mono font-bold text-editorial-title">
+            <div className="text-xs sm:text-sm font-mono font-bold text-editorial-title">
               {formatRupiah(book.currentPrice)}
             </div>
-            {book.releaseDate && (
-              <div className="text-[9px] text-editorial-faint font-mono truncate">
-                {formatDateWIB(book.releaseDate)}
-              </div>
-            )}
           </div>
 
           {/* Action Buttons */}
@@ -104,10 +106,10 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
             <button
               type="button"
               onClick={() => toggleWishlist(book.id, book.seriesId)}
-              className={`p-1.5 rounded-lg border transition-all ${
+              className={`p-1.5 rounded-xl border transition-all active:scale-95 ${
                 wishlisted
-                  ? 'bg-gold/15 text-gold border-gold/40'
-                  : 'bg-surface hover:bg-surface-raised text-editorial-muted hover:text-editorial-title border-border-subtle'
+                  ? 'bg-gold/15 text-gold border-gold/40 shadow-xs'
+                  : 'bg-surface-raised hover:bg-surface text-editorial-muted hover:text-editorial-title border-border-subtle'
               }`}
               aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
             >
@@ -118,10 +120,10 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
             <button
               type="button"
               onClick={() => toggleOwned(book.id, book.seriesId)}
-              className={`flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+              className={`flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-medium border transition-all active:scale-95 ${
                 owned
-                  ? 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30 font-semibold'
-                  : 'bg-surface hover:bg-surface-raised text-editorial-body hover:text-editorial-title border-border-subtle'
+                  ? 'bg-emerald-500/15 text-emerald-400 border-emerald-500/35 font-semibold shadow-xs'
+                  : 'bg-surface-raised hover:bg-surface text-editorial-body hover:text-editorial-title border-border-subtle'
               }`}
               aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
             >
