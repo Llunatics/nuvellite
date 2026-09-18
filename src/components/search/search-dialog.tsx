@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Search, X, BookOpen, Layers } from 'lucide-react';
+import { Search, X, BookOpen, Layers, Sparkles } from 'lucide-react';
 import { searchCatalog } from '@/lib/catalog-service';
 import { Book } from '@/lib/types';
 import { formatRupiah } from '@/lib/formatters';
@@ -73,7 +73,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Ketik judul komik, light novel, pengarang, atau ISBN..."
+            placeholder="Ketik judul komik, light novel, merchandise, atau pengarang..."
             className="flex-1 bg-transparent text-sm text-editorial-title placeholder:text-editorial-faint focus:outline-none"
           />
           {query && (
@@ -94,7 +94,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
         <div className="max-h-[60vh] overflow-y-auto p-2">
           {query.trim() === '' ? (
             <div className="py-8 text-center text-xs text-editorial-faint space-y-1">
-              <p className="font-medium text-editorial-muted">Cari di 2.700+ katalog Manga & Light Novel resmi</p>
+              <p className="font-medium text-editorial-muted">Cari di 2.700+ katalog Manga, Light Novel, dan Merchandise resmi</p>
               <p>Penerbit: Elex Media Komputindo, m&c!, Phoenix Gramedia Indonesia</p>
             </div>
           ) : results.length === 0 ? (
@@ -116,10 +116,12 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                       className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border ${
                         book.category === 'Light Novel'
                           ? 'bg-amber-500/10 border-amber-500/25 text-amber-400'
+                          : book.category === 'Merchandise'
+                          ? 'bg-purple-500/10 border-purple-500/25 text-purple-400'
                           : 'bg-sky-500/10 border-sky-500/25 text-sky-400'
                       }`}
                     >
-                      <BookOpen className="w-4 h-4" />
+                      {book.category === 'Merchandise' ? <Sparkles className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
                     </div>
 
                     <div className="min-w-0 flex-1">
@@ -127,7 +129,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                         <span className="text-xs font-semibold text-editorial-title group-hover:text-gold transition-colors truncate">
                           {book.title}
                         </span>
-                        {book.volume !== null && book.volume !== undefined && (
+                        {book.category !== 'Merchandise' && book.volume !== null && book.volume !== undefined && (
                           <span className="shrink-0 px-1.5 py-0.2 rounded text-[9px] font-mono font-bold bg-surface border border-border-subtle text-editorial-muted">
                             Vol. {book.volume}
                           </span>

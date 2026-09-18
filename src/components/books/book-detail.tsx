@@ -13,6 +13,9 @@ import {
   BookOpen,
   Calendar,
   Layers,
+  ExternalLink,
+  Sparkles,
+  ShoppingBag,
 } from 'lucide-react';
 import { ReleaseCard } from './release-card';
 
@@ -25,6 +28,24 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const owned = isLoaded && isOwned(book.id);
   const wishlisted = isLoaded && isWishlisted(book.id);
+
+  // Safe formatting of author string to prevent [object Object]
+  const authorNames = Array.isArray(book.authors)
+    ? book.authors
+        .map((a) => (typeof a === 'string' ? a : (a as any)?.name || ''))
+        .filter(Boolean)
+    : [];
+  const authorDisplay = authorNames.join(', ');
+
+  const gramediaProductUrl = book.gramediaUrl || `https://www.gramedia.com/products/${book.slug}`;
+  const isMerch = book.category === 'Merchandise';
+
+  // Only show series link if series exists and isn't just identical to the item's title
+  const hasDistinctSeries = Boolean(
+    book.seriesId &&
+    book.seriesName &&
+    book.seriesName.trim().toLowerCase() !== book.title.trim().toLowerCase()
+  );
 
   return (
     <div className="space-y-8">
@@ -42,7 +63,7 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
       {/* Main Detail Header Card */}
       <div className="bg-surface rounded-3xl border border-border-subtle p-6 sm:p-8 shadow-xs">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          {/* Left Column: Cover Image & Quick Action */}
+          {/* Left Column: Cover Image & Actions */}
           <div className="md:col-span-4 lg:col-span-3 flex flex-col items-center">
             <div className="relative aspect-[3/4] w-full max-w-[260px] rounded-2xl overflow-hidden bg-surface-sunken border border-border-medium shadow-lg">
               {book.coverImage ? (
@@ -53,7 +74,11 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                 />
               ) : (
                 <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center">
-                  <BookOpen className="w-10 h-10 text-editorial-faint mb-2" />
+                  {isMerch ? (
+                    <Sparkles className="w-10 h-10 text-purple-400 mb-2" />
+                  ) : (
+                    <BookOpen className="w-10 h-10 text-editorial-faint mb-2" />
+                  )}
                   <span className="text-xs text-editorial-muted font-medium">{book.title}</span>
                 </div>
               )}
@@ -64,6 +89,8 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                   className={`px-2 py-0.5 rounded text-[8px] font-mono font-bold tracking-wider uppercase border backdrop-blur-md ${
                     book.category === 'Light Novel'
                       ? 'bg-amber-500/25 text-amber-300 border-amber-500/40'
+                      : isMerch
+                      ? 'bg-purple-500/25 text-purple-300 border-purple-500/40'
                       : 'bg-sky-500/25 text-sky-300 border-sky-500/40'
                   }`}
                 >
@@ -71,7 +98,8 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
                 </span>
               </div>
 
-              {book.volume !== null && book.volume !== undefined && (
+              {/* Volume Badge: only for Manga and Light Novel, NEVER for Merchandise */}
+              {!isMerch && book.volume !== null && book.volume !== undefined && (
                 <div className="absolute top-2 right-2 z-10">
                   <span className="px-2 py-0.5 rounded text-[9px] font-mono font-bold bg-background/90 text-editorial-title border border-border-medium backdrop-blur-md">
                     Vol. {book.volume}
@@ -81,32 +109,46 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
             </div>
 
             {/* Action Buttons Below Cover */}
-            <div className="w-full max-w-[260px] flex items-center gap-2 mt-4">
-              <button
-                type="button"
-                onClick={() => toggleOwned(book.id, book.seriesId)}
-                className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all ${
-                  owned
-                    ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
-                    : 'bg-gold text-background hover:bg-gold-400 border-transparent shadow-xs'
-                }`}
-              >
-                {owned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                <span>{owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}</span>
-              </button>
+            <div className="w-full max-w-[260px] space-y-2 mt-4">
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => toggleOwned(book.id, book.seriesId)}
+                  className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all ${
+                    owned
+                      ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
+                      : 'bg-gold text-background hover:bg-gold-400 border-transparent shadow-xs'
+                  }`}
+                >
+                  {owned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                  <span>{owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}</span>
+                </button>
 
-              <button
-                type="button"
-                onClick={() => toggleWishlist(book.id, book.seriesId)}
-                className={`p-2.5 rounded-xl border transition-all ${
-                  wishlisted
-                    ? 'bg-gold/15 text-gold border-gold/40'
-                    : 'bg-surface-raised hover:bg-surface text-editorial-muted hover:text-editorial-title border-border-subtle'
-                }`}
-                aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+                <button
+                  type="button"
+                  onClick={() => toggleWishlist(book.id, book.seriesId)}
+                  className={`p-2.5 rounded-xl border transition-all ${
+                    wishlisted
+                      ? 'bg-gold/15 text-gold border-gold/40'
+                      : 'bg-surface-raised hover:bg-surface text-editorial-muted hover:text-editorial-title border-border-subtle'
+                  }`}
+                  aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+                >
+                  <Bookmark className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Official Gramedia.com Product Button */}
+              <a
+                href={gramediaProductUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white shadow-sm hover:shadow-sky-500/20 transition-all group"
               >
-                <Bookmark className="w-4 h-4" />
-              </button>
+                <ShoppingBag className="w-4 h-4 shrink-0" />
+                <span>Beli di Gramedia.com</span>
+                <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
+              </a>
             </div>
           </div>
 
@@ -114,14 +156,21 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
           <div className="md:col-span-8 lg:col-span-9 space-y-6">
             <div className="space-y-2">
               <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-editorial-muted">
-                <Link
-                  href={`/publishers/${book.publisherId.replace('pub_', '')}`}
-                  className="hover:text-gold transition-colors font-semibold"
-                >
-                  {book.publisherName}
-                </Link>
+                {isMerch ? (
+                  <span className="font-semibold text-editorial-body flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-purple-400 inline-block" />
+                    <span>Disediakan oleh Gramedia</span>
+                  </span>
+                ) : (
+                  <Link
+                    href={`/publishers/${book.publisherId.replace('pub_', '')}`}
+                    className="hover:text-gold transition-colors font-semibold"
+                  >
+                    {book.publisherName}
+                  </Link>
+                )}
                 <span>•</span>
-                <span>{book.category}</span>
+                <span className={isMerch ? 'text-purple-400 font-bold' : ''}>{book.category}</span>
                 {book.status === 'PREORDER' && (
                   <>
                     <span>•</span>
@@ -141,63 +190,99 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
               )}
             </div>
 
-            {/* Price & Official Status Banner */}
-            <div className="p-4 rounded-2xl bg-surface-raised/60 border border-border-subtle flex flex-wrap items-center justify-between gap-4">
+            {/* Price & Official Status Banner with Gramedia Button */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-surface-raised/60 border border-border-subtle flex flex-wrap items-center justify-between gap-4">
               <div>
-                <span className="text-[11px] font-mono text-editorial-faint block">Harga Resmi (SRP):</span>
+                <span className="text-[11px] font-mono text-editorial-faint block">
+                  {isMerch ? 'Harga Resmi:' : 'Harga Resmi (SRP):'}
+                </span>
                 <span className="text-xl sm:text-2xl font-mono font-bold text-editorial-title">
                   {formatRupiah(book.currentPrice)}
                 </span>
               </div>
 
-              {book.releaseDate && (
-                <div>
-                  <span className="text-[11px] font-mono text-editorial-faint block">Jadwal Rilis:</span>
-                  <span className="text-xs sm:text-sm font-medium text-editorial-body flex items-center gap-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-gold" />
-                    <span>{formatDateWIB(book.releaseDate)}</span>
-                  </span>
-                </div>
-              )}
+              <div className="flex items-center gap-3 flex-wrap">
+                {book.releaseDate && (
+                  <div className="text-right">
+                    <span className="text-[11px] font-mono text-editorial-faint block">
+                      {isMerch ? 'Tanggal Tersedia:' : 'Jadwal Rilis:'}
+                    </span>
+                    <span className="text-xs sm:text-sm font-medium text-editorial-body flex items-center gap-1.5">
+                      <Calendar className="w-3.5 h-3.5 text-gold" />
+                      <span>{formatDateWIB(book.releaseDate)}</span>
+                    </span>
+                  </div>
+                )}
+
+                <a
+                  href={gramediaProductUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-500/15 hover:bg-sky-500/25 text-sky-400 border border-sky-500/30 text-xs font-semibold transition-all group"
+                  title="Buka halaman produk langsung di Gramedia.com"
+                >
+                  <span>Buka di Gramedia</span>
+                  <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </div>
             </div>
 
-            {/* Metadata Grid */}
+            {/* Metadata Grid (Tailored for Merch vs Manga/LN) */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+              {/* Field 1: Creator / License */}
               <div className="p-3 rounded-xl bg-surface-raised/40 border border-border-subtle">
-                <span className="text-[10px] font-mono text-editorial-faint block mb-1">Pengarang / Ilustrator</span>
-                <span className="font-medium text-editorial-title">{book.authors.join(', ') || '-'}</span>
+                <span className="text-[10px] font-mono text-editorial-faint block mb-1">
+                  {isMerch ? 'Produsen / Lisensi' : 'Pengarang / Ilustrator'}
+                </span>
+                <span className="font-medium text-editorial-title">
+                  {authorDisplay || (isMerch ? 'MUSE Communication / Gramedia' : '-')}
+                </span>
               </div>
 
+              {/* Field 2: Provider / Publisher */}
               <div className="p-3 rounded-xl bg-surface-raised/40 border border-border-subtle">
-                <span className="text-[10px] font-mono text-editorial-faint block mb-1">Penerbit Resmi</span>
-                <span className="font-medium text-editorial-title">{book.publisherShortName}</span>
+                <span className="text-[10px] font-mono text-editorial-faint block mb-1">
+                  {isMerch ? 'Disediakan Oleh' : 'Penerbit Resmi'}
+                </span>
+                <span className="font-medium text-editorial-title">
+                  {isMerch ? 'Gramedia' : book.publisherShortName}
+                </span>
               </div>
 
+              {/* Field 3: Format / ISBN */}
               <div className="p-3 rounded-xl bg-surface-raised/40 border border-border-subtle">
-                <span className="text-[10px] font-mono text-editorial-faint block mb-1">Nomor ISBN-13</span>
-                <span className="font-mono text-editorial-title">{book.isbn13 || 'Tersedia saat rilis'}</span>
+                <span className="text-[10px] font-mono text-editorial-faint block mb-1">
+                  {isMerch ? 'Format Produk' : 'Nomor ISBN-13'}
+                </span>
+                <span className="font-mono text-editorial-title">
+                  {isMerch ? 'Official Merchandise' : book.isbn13 || 'Tersedia saat rilis'}
+                </span>
               </div>
             </div>
 
             {/* Synopsis / Description */}
             <div className="space-y-2 pt-2 border-t border-border-subtle">
               <h3 className="text-xs font-mono uppercase tracking-wider text-editorial-faint font-bold">
-                Sinopsis &amp; Keterangan Rilis
+                {isMerch ? 'Keterangan Produk & Lisensi' : 'Sinopsis & Keterangan Rilis'}
               </h3>
               <p className="text-xs sm:text-sm text-editorial-body leading-relaxed whitespace-pre-line">
-                {book.synopsis || 'Belum ada deskripsi resmi untuk rilis ini.'}
+                {book.synopsis || (isMerch ? 'Official merchandise berlisensi resmi anime & manga, disediakan oleh Gramedia Official Store.' : 'Belum ada deskripsi resmi untuk rilis ini.')}
               </p>
             </div>
 
-            {/* Series Link if Available */}
-            {book.seriesId && (
+            {/* Series Link if Available and Distinct */}
+            {hasDistinctSeries && (
               <div className="pt-2">
                 <Link
-                  href={`/series/${book.seriesId.replace('ser_', '')}`}
-                  className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-gold/10 border border-gold/25 text-gold hover:bg-gold/15 transition-all text-xs font-semibold"
+                  href={`/series/${book.seriesId!.replace('ser_', '')}`}
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gold/10 border border-gold/25 text-gold hover:bg-gold/15 transition-all text-xs font-semibold"
                 >
                   <Layers className="w-4 h-4" />
-                  <span>Lihat Seluruh Volume Seri &quot;{book.seriesName}&quot;</span>
+                  <span>
+                    {isMerch
+                      ? `Lihat Koleksi Seri "${book.seriesName}"`
+                      : `Lihat Seluruh Volume Seri "${book.seriesName}"`}
+                  </span>
                 </Link>
               </div>
             )}
@@ -210,7 +295,9 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold font-editorial text-editorial-title">
-              Volume Lain dalam Seri Ini ({seriesSiblings.length} buku)
+              {isMerch
+                ? `Item & Koleksi Terkait (${seriesSiblings.length} item)`
+                : `Volume Lain dalam Seri Ini (${seriesSiblings.length} buku)`}
             </h2>
             {book.seriesId && (
               <Link

@@ -43,7 +43,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   const activeSpotlight = spotlightBooks[activeSpotlightIdx] || spotlightBooks[0];
 
   // Filters
-  const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel'>('ALL');
+  const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel' | 'Merchandise'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'AVAILABLE' | 'PREORDER'>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
@@ -101,7 +101,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
           {/* Ambient Background Glow matching category */}
           <div
             className={`absolute top-0 right-1/4 w-96 h-96 rounded-full blur-[140px] pointer-events-none opacity-30 ${
-              activeSpotlight.category === 'Light Novel' ? 'bg-amber-500' : 'bg-sky-500'
+              activeSpotlight.category === 'Light Novel' ? 'bg-amber-500' : activeSpotlight.category === 'Merchandise' ? 'bg-purple-500' : 'bg-sky-500'
             }`}
           />
 
@@ -118,6 +118,8 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                   className={`px-2.5 py-0.5 rounded-full text-xs font-mono font-bold tracking-wider uppercase border ${
                     activeSpotlight.category === 'Light Novel'
                       ? 'bg-amber-500/20 text-amber-300 border-amber-500/35'
+                      : activeSpotlight.category === 'Merchandise'
+                      ? 'bg-purple-500/20 text-purple-300 border-purple-500/35'
                       : 'bg-sky-500/20 text-sky-300 border-sky-500/35'
                   }`}
                 >
@@ -128,7 +130,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                   {activeSpotlight.publisherShortName}
                 </span>
 
-                {activeSpotlight.volume !== null && activeSpotlight.volume !== undefined && (
+                {activeSpotlight.category !== 'Merchandise' && activeSpotlight.volume !== null && activeSpotlight.volume !== undefined && (
                   <span className="px-2 py-0.5 rounded-md text-xs font-mono font-bold text-editorial-title bg-background/80 border border-border-medium">
                     Vol. {activeSpotlight.volume}
                   </span>
@@ -286,14 +288,14 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Cari judul komik, light novel, atau pengarang..."
+              placeholder="Cari judul komik, light novel, merchandise, atau pengarang..."
               className="w-full pl-9 pr-4 py-2 rounded-xl bg-surface-raised border border-border-subtle hover:border-border-medium focus:border-gold/50 focus:outline-none text-xs text-editorial-title placeholder:text-editorial-faint transition-colors"
             />
           </div>
 
           {/* Format Segmented Tabs */}
           <div className="inline-flex p-1 rounded-xl bg-surface-raised border border-border-subtle text-xs shrink-0 self-start md:self-auto">
-            {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
+            {(['ALL', 'Manga', 'Light Novel', 'Merchandise'] as const).map((fmt) => (
               <button
                 key={fmt}
                 type="button"
@@ -304,7 +306,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                     : 'text-editorial-muted hover:text-editorial-title'
                 }`}
               >
-                {fmt === 'ALL' ? 'Semua Format' : fmt === 'Manga' ? 'Komik / Manga' : 'Light Novel'}
+                {fmt === 'ALL' ? 'Semua Format' : fmt === 'Manga' ? 'Manga' : fmt === 'Light Novel' ? 'Light Novel' : 'Merchandise'}
               </button>
             ))}
           </div>
@@ -378,7 +380,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
       {/* 4. ACTIVE RESULTS SUMMARY */}
       <div className="flex items-center justify-between text-xs text-editorial-faint font-mono px-1">
-        <span>Menampilkan {filteredBooks.length} buku terkurasi</span>
+        <span>Menampilkan {filteredBooks.length} item terkurasi</span>
         {searchQuery && (
           <span className="text-gold font-medium">Hasil pencarian: &quot;{searchQuery}&quot;</span>
         )}
@@ -388,7 +390,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
       {filteredBooks.length === 0 ? (
         <div className="py-20 text-center bg-surface border border-border-subtle rounded-3xl space-y-2">
           <BookOpen className="w-10 h-10 text-editorial-faint mx-auto" />
-          <h3 className="text-sm font-semibold text-editorial-title">Tidak ada buku yang sesuai dengan filter</h3>
+          <h3 className="text-sm font-semibold text-editorial-title">Tidak ada item yang sesuai dengan filter</h3>
           <p className="text-xs text-editorial-muted">Coba ubah kata kunci pencarian atau reset filter format/penerbit.</p>
         </div>
       ) : (

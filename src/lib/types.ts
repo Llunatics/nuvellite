@@ -1,4 +1,4 @@
-export type BookCategory = 'Manga' | 'Light Novel';
+export type BookCategory = 'Manga' | 'Light Novel' | 'Merchandise';
 
 export interface Publisher {
   id: string;
@@ -30,6 +30,7 @@ export interface Book {
   genres: string[];
   isbn13?: string;
   synopsis?: string;
+  gramediaUrl?: string;
 }
 
 export interface Series {

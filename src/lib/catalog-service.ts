@@ -73,19 +73,23 @@ export function getUpcomingReleases(limit = 24): Book[] {
 export function getStats() {
   const mangaCount = data.books.filter((b) => b.category === 'Manga').length;
   const lnCount = data.books.filter((b) => b.category === 'Light Novel').length;
+  const merchCount = data.books.filter((b) => b.category === 'Merchandise').length;
   const elexCount = data.books.filter((b) => b.publisherId === 'pub_elex').length;
   const mncCount = data.books.filter((b) => b.publisherId === 'pub_mnc').length;
   const pgiCount = data.books.filter((b) => b.publisherId === 'pub_pgi').length;
+  const gramediaCount = data.books.filter((b) => b.publisherId === 'pub_gramedia').length;
 
   return {
     totalBooks: data.books.length,
     totalSeries: data.series.length,
     mangaCount,
     lnCount,
+    merchCount,
     publishers: {
       elex: elexCount,
       mnc: mncCount,
       pgi: pgiCount,
+      gramedia: gramediaCount,
     },
     lastUpdated: data.lastUpdated,
   };
@@ -100,13 +104,14 @@ export function searchCatalog(query: string, limit = 20): Book[] {
       const seriesMatch = b.seriesName && b.seriesName.toLowerCase().includes(q);
       const origTitleMatch = b.originalTitle && b.originalTitle.toLowerCase().includes(q);
       const isbnMatch = b.isbn13 && b.isbn13.includes(q);
+      const categoryMatch = b.category && b.category.toLowerCase().includes(q);
       const authorMatch = Array.isArray(b.authors) && b.authors.some((a) => {
         if (typeof a === 'string') return a.toLowerCase().includes(q);
         if (typeof a === 'object' && a && 'name' in a) return String((a as any).name).toLowerCase().includes(q);
         return false;
       });
 
-      return Boolean(titleMatch || seriesMatch || origTitleMatch || isbnMatch || authorMatch);
+      return Boolean(titleMatch || seriesMatch || origTitleMatch || isbnMatch || categoryMatch || authorMatch);
     })
     .slice(0, limit);
 }

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Bookmark, Check, Plus, BookOpen } from 'lucide-react';
+import { Bookmark, Check, Plus, BookOpen, Sparkles } from 'lucide-react';
 import { Book } from '@/lib/types';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
@@ -29,7 +29,11 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-surface-raised/40">
-            <BookOpen className="w-8 h-8 text-editorial-faint mb-2" />
+            {book.category === 'Merchandise' ? (
+              <Sparkles className="w-8 h-8 text-purple-400/60 mb-2" />
+            ) : (
+              <BookOpen className="w-8 h-8 text-editorial-faint mb-2" />
+            )}
             <span className="text-[11px] text-editorial-muted font-medium line-clamp-2">{book.title}</span>
           </div>
         )}
@@ -43,6 +47,8 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
             className={`px-2 py-0.5 rounded-[4px] text-[8px] font-mono font-bold tracking-wider uppercase backdrop-blur-md shadow-xs border ${
               book.category === 'Light Novel'
                 ? 'bg-amber-500/25 text-amber-300 border-amber-500/40'
+                : book.category === 'Merchandise'
+                ? 'bg-purple-500/25 text-purple-300 border-purple-500/40'
                 : 'bg-sky-500/25 text-sky-300 border-sky-500/40'
             }`}
           >
@@ -50,8 +56,8 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
           </span>
         </div>
 
-        {/* Floating Top Right: Volume Badge */}
-        {book.volume !== null && book.volume !== undefined && (
+        {/* Floating Top Right: Volume Badge (NEVER for Merchandise) */}
+        {book.category !== 'Merchandise' && book.volume !== null && book.volume !== undefined && (
           <div className="absolute top-2 right-2 z-10 pointer-events-none">
             <span className="px-2 py-0.5 rounded-[4px] text-[9px] font-mono font-bold bg-background/90 text-editorial-title border border-border-medium backdrop-blur-md shadow-xs">
               Vol. {book.volume}
@@ -72,10 +78,10 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
       {/* Book Info */}
       <div className="p-3.5 flex-1 flex flex-col justify-between space-y-2.5">
         <div>
-          {/* Publisher and Author */}
+          {/* Publisher / Provider and Date */}
           <div className="flex items-center justify-between gap-1 text-[10px] text-editorial-muted font-mono mb-1">
-            <span className="font-semibold text-editorial-muted group-hover:text-gold transition-colors truncate">
-              {book.publisherShortName}
+            <span className={`font-semibold truncate ${book.category === 'Merchandise' ? 'text-purple-400' : 'group-hover:text-gold transition-colors'}`}>
+              {book.category === 'Merchandise' ? 'Gramedia Official' : book.publisherShortName}
             </span>
             {book.releaseDate && (
               <span className="text-[9px] text-editorial-faint font-mono truncate">

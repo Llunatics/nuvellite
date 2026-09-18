@@ -13,7 +13,7 @@ interface CalendarViewProps {
 
 export function CalendarView({ books, publishers }: CalendarViewProps) {
   const [pubFilter, setPubFilter] = useState('ALL');
-  const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel'>('ALL');
+  const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel' | 'Merchandise'>('ALL');
 
   // Filter books with release dates
   const datedBooks = useMemo(() => {
@@ -56,10 +56,10 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
           <span>Kalender Rilis Resmi</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-bold font-editorial text-editorial-title">
-          Jadwal Terbit Manga &amp; Light Novel
+          Jadwal Terbit Manga, Light Novel &amp; Merchandise
         </h1>
         <p className="text-xs sm:text-sm text-editorial-muted">
-          Linimasa rilis resmi komik dan light novel di Indonesia dari Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia.
+          Linimasa rilis resmi komik, light novel, dan official merchandise di Indonesia.
         </p>
       </div>
 
@@ -67,7 +67,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
       <div className="p-4 rounded-2xl bg-surface border border-border-subtle flex flex-wrap items-center justify-between gap-3 text-xs">
         {/* Format Pills */}
         <div className="flex items-center gap-1 bg-surface-raised p-1 rounded-xl border border-border-subtle">
-          {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
+          {(['ALL', 'Manga', 'Light Novel', 'Merchandise'] as const).map((fmt) => (
             <button
               key={fmt}
               type="button"
