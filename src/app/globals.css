@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-rgb: 10 14 20;
+    --surface-rgb: 16 22 31;
+    --surface-raised-rgb: 24 33 46;
+    --surface-sunken-rgb: 7 10 15;
+    --surface-overlay-rgb: 18 25 36;
+
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-medium: rgba(255, 255, 255, 0.15);
+    --border-bold: rgba(255, 255, 255, 0.25);
+
+    --editorial-title: #f8fafc;
+    --editorial-body: #cbd5e1;
+    --editorial-muted: #94a3b8;
+    --editorial-faint: #64748b;
+
+    --gold-rgb: 212 175 55;
+  }
+
+  .light {
+    --bg-rgb: 248 249 251;
+    --surface-rgb: 255 255 255;
+    --surface-raised-rgb: 241 245 249;
+    --surface-sunken-rgb: 238 242 246;
+    --surface-overlay-rgb: 255 255 255;
+
+    --border-subtle: rgba(0, 0, 0, 0.08);
+    --border-medium: rgba(0, 0, 0, 0.14);
+    --border-bold: rgba(0, 0, 0, 0.22);
+
+    --editorial-title: #0f172a;
+    --editorial-body: #334155;
+    --editorial-muted: #64748b;
+    --editorial-faint: #94a3b8;
+
+    --gold-rgb: 180 130 15;
+  }
+
+  body {
+    background-color: rgb(var(--bg-rgb));
+    color: var(--editorial-body);
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-bold);
+}
