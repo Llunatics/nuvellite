@@ -260,6 +260,51 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
               </div>
             </div>
 
+            {/* Available Editions & Special Sets */}
+            {book.availableEditions && book.availableEditions.length > 1 && (
+              <div className="p-4 sm:p-5 rounded-2xl bg-amber-500/10 border border-amber-500/25 space-y-3">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold flex items-center gap-1.5">
+                    <Sparkles className="w-4 h-4 text-amber-400" />
+                    <span>Pilihan Edisi &amp; Paket Rilis Resmi</span>
+                  </h3>
+                  <span className="text-[10px] font-mono text-amber-300/80">
+                    {book.availableEditions.length} Opsi Tersedia
+                  </span>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {book.availableEditions.map((edition, idx) => (
+                    <div
+                      key={idx}
+                      className="p-3 rounded-xl bg-surface border border-border-subtle flex items-center justify-between gap-3 shadow-xs"
+                    >
+                      <div className="min-w-0">
+                        <span className="text-xs font-semibold text-editorial-title block truncate">
+                          {edition.name}
+                        </span>
+                        {edition.price ? (
+                          <span className="text-xs font-mono font-bold text-accent">
+                            {formatRupiah(edition.price)}
+                          </span>
+                        ) : null}
+                      </div>
+                      {edition.gramediaUrl && (
+                        <a
+                          href={edition.gramediaUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="shrink-0 px-2.5 py-1 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-sky-400 text-[11px] font-mono font-semibold flex items-center gap-1 transition-colors"
+                        >
+                          <span>Beli</span>
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Synopsis / Description */}
             <div className="space-y-2 pt-2 border-t border-border-subtle">
               <h3 className="text-xs font-mono uppercase tracking-wider text-editorial-faint font-bold">

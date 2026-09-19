@@ -95,4 +95,72 @@ describe('Series Deduplication & Merchandise Isolation', () => {
     expect(dnMatches).toHaveLength(1);
     expect(dnMatches[0].totalVolumes).toBeGreaterThanOrEqual(8);
   });
+
+  it('should correctly handle 5 Centimeters per Second as a 1-volume book without phantom vol 5', () => {
+    const seriesList = getAllSeries();
+    const fiveCmSeries = seriesList.find((s) => s.id === 'ser_5-centimeters-per-second');
+    expect(fiveCmSeries).toBeDefined();
+    expect(fiveCmSeries?.totalVolumes).toBe(1);
+    expect(fiveCmSeries?.type).toBe('LIGHT_NOVEL');
+
+    const books = getBooksBySeries(fiveCmSeries!.id);
+    expect(books).toHaveLength(1);
+    expect(books[0].volume).toBeNull();
+    expect(books[0].title).toContain('5 Centimeters per Second');
+  });
+
+  it('should separate Alya Sometimes Hides Her Feelings in Russian into distinct Manga and Light Novel series', () => {
+    const seriesList = getAllSeries();
+    const alyaManga = seriesList.find((s) => s.id === 'ser_alya-sometimes-hides-her-feelings-in-russian-manga');
+    const alyaLN = seriesList.find((s) => s.id === 'ser_alya-sometimes-hides-her-feelings-in-russian-ln');
+
+    expect(alyaManga).toBeDefined();
+    expect(alyaManga?.type).toBe('MANGA');
+    expect(alyaManga?.totalVolumes).toBeGreaterThanOrEqual(9);
+
+    expect(alyaLN).toBeDefined();
+    expect(alyaLN?.type).toBe('LIGHT_NOVEL');
+    expect(alyaLN?.totalVolumes).toBeGreaterThanOrEqual(8);
+
+    // Verify Manga volumes do not contain Light Novels
+    const mangaBooks = getBooksBySeries(alyaManga!.id);
+    for (const b of mangaBooks) {
+      expect(b.category).toBe('Manga');
+      expect(b.title.toLowerCase()).not.toContain('light novel');
+    }
+
+    // Verify Light Novel series does not have duplicate cards for same volume
+    const lnBooks = getBooksBySeries(alyaLN!.id);
+    const lnVolNums = lnBooks.map((b) => b.volume);
+    const uniqueVolNums = new Set(lnVolNums);
+    expect(uniqueVolNums.size).toBe(lnVolNums.length);
+
+    // Verify Vol 5 has consolidated editions
+    const vol5 = lnBooks.find((b) => b.volume === 5);
+    expect(vol5).toBeDefined();
+    expect(vol5?.availableEditions).toBeDefined();
+    expect(vol5!.availableEditions!.length).toBeGreaterThan(1);
+    expect(vol5?.synopsis).toContain('Pilihan Edisi & Set Resmi');
+  });
+
+  it('should separate Classroom of the Elite into distinct Manga and Light Novel series', () => {
+    const seriesList = getAllSeries();
+    const coteManga = seriesList.find((s) => s.id === 'ser_classroom-of-the-elite-manga');
+    const coteLN = seriesList.find((s) => s.id === 'ser_classroom-of-the-elite-ln');
+
+    expect(coteManga).toBeDefined();
+    expect(coteManga?.type).toBe('MANGA');
+    expect(coteManga?.totalVolumes).toBeGreaterThanOrEqual(12);
+
+    expect(coteLN).toBeDefined();
+    expect(coteLN?.type).toBe('LIGHT_NOVEL');
+    expect(coteLN?.totalVolumes).toBeGreaterThanOrEqual(5);
+
+    // Verify Manga has complete volumes 1-12 without gaps
+    const mangaBooks = getBooksBySeries(coteManga!.id);
+    const mangaVols = mangaBooks.map((b) => b.volume).filter(Boolean);
+    for (let v = 1; v <= 12; v++) {
+      expect(mangaVols).toContain(v);
+    }
+  });
 });

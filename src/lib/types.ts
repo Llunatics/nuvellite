@@ -1,3 +1,9 @@
+export interface BookEdition {
+  name: string;
+  price?: number;
+  gramediaUrl?: string;
+}
+
 export type BookCategory = 'Manga' | 'Light Novel' | 'Merchandise';
 
 export interface Publisher {
@@ -30,6 +36,8 @@ export interface Book {
   genres: string[];
   isbn13?: string;
   synopsis?: string;
+  availableEditions?: BookEdition[];
+  isSetVariant?: boolean;
   gramediaUrl?: string;
 }
 
