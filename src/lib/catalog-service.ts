@@ -12,9 +12,17 @@ export function getBookBySlug(slug: string): Book | undefined {
 }
 
 export function getBooksBySeries(seriesId: string): Book[] {
+  const cleanId = seriesId.startsWith('ser_') ? seriesId : `ser_${seriesId}`;
   return data.books
-    .filter((b) => b.seriesId === seriesId)
-    .sort((a, b) => (a.volume || 0) - (b.volume || 0));
+    .filter((b) => b.seriesId === seriesId || b.seriesId === cleanId)
+    .sort((a, b) => {
+      const volA = a.volume ?? 9999;
+      const volB = b.volume ?? 9999;
+      if (volA !== volB) return volA - volB;
+      const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
+      const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
+      return dateB - dateA;
+    });
 }
 
 export function getBooksByPublisher(pubSlugOrId: string): Book[] {
@@ -26,11 +34,20 @@ export function getBooksByPublisher(pubSlugOrId: string): Book[] {
 }
 
 export function getAllSeries(): Series[] {
-  return data.series.sort((a, b) => a.name.localeCompare(b.name));
+  return data.series
+    .filter((s) => s.type === 'MANGA' || s.type === 'LIGHT_NOVEL')
+    .filter((s) => s.publisherId !== 'pub_gramedia_catalog' && s.publisherName !== 'Penerbit Resmi')
+    .sort((a, b) => a.name.localeCompare(b.name));
 }
 
 export function getSeriesBySlug(slug: string): Series | undefined {
-  return data.series.find((s) => s.slug === slug || s.id === slug);
+  const cleanSlug = slug.toLowerCase().replace(/^ser_/, '');
+  return data.series.find(
+    (s) =>
+      s.slug.toLowerCase() === cleanSlug ||
+      s.id.toLowerCase() === slug.toLowerCase() ||
+      s.id.toLowerCase() === `ser_${cleanSlug}`
+  );
 }
 
 export function getPublishers(): Publisher[] {
