@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#070A10" />
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#334155" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#E54D3F" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Bookmark Ribbon Gradient -->
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B57" />
+      <stop offset="40%" stop-color="#E54D3F" />
+      <stop offset="100%" stop-color="#B91C1C" />
+    </linearGradient>
+
+    <!-- Left Page Gradient -->
+    <linearGradient id="leftPageGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CBD5E1" />
+      <stop offset="60%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Right Page Gradient -->
+    <linearGradient id="rightPageGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <!-- Page Shadow / Depth -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#E54D3F" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Base Canvas -->
+  <rect x="16" y="16" width="480" height="480" rx="120" fill="url(#bgGrad)" />
+  <rect x="16" y="16" width="480" height="480" rx="120" fill="none" stroke="url(#borderGrad)" stroke-width="8" />
+
+  <!-- Ambient Glow Behind Book -->
+  <circle cx="256" cy="260" r="140" fill="#E54D3F" opacity="0.12" filter="blur(30px)" />
+
+  <!-- The Open Book Graphic Group -->
+  <g filter="url(#dropShadow)">
+    <!-- Backing/Cover Spread (Shadow Layer) -->
+    <path d="M 256 376 C 220 360 144 348 88 356 C 82 357 76 352 76 346 L 76 170 C 76 164 82 159 88 158 C 144 150 220 162 256 178 C 292 162 368 150 424 158 C 430 159 436 164 436 170 L 436 346 C 436 352 430 357 424 356 C 368 348 292 360 256 376 Z"
+          fill="#1E293B" stroke="#334155" stroke-width="4" />
+
+    <!-- Pages Spread Underlayer (Depth Pages) -->
+    <path d="M 256 366 C 222 352 148 342 94 348 L 94 178 C 148 172 222 182 256 196 C 290 182 364 172 418 178 L 418 348 C 364 342 290 352 256 366 Z"
+          fill="#94A3B8" opacity="0.4" />
+
+    <!-- Main Left Page -->
+    <path d="M 256 358 C 224 344 152 334 102 340 L 102 184 C 152 178 224 188 256 202 Z"
+          fill="url(#leftPageGrad)" />
+
+    <!-- Main Right Page -->
+    <path d="M 256 358 C 288 344 360 334 410 340 L 410 184 C 360 178 288 188 256 202 Z"
+          fill="url(#rightPageGrad)" />
+
+    <!-- Spine Divider Line -->
+    <line x1="256" y1="202" x2="256" y2="358" stroke="#64748B" stroke-width="2.5" />
+  </g>
+
+  <!-- Editorial Vermilion Bookmark Ribbon -->
+  <g filter="url(#glow)">
+    <!-- Hanging Bookmark Ribbon with V-Cut swallowtail -->
+    <path d="M 238 128 L 274 128 L 274 382 L 256 366 L 238 382 Z"
+          fill="url(#ribbonGrad)" />
+    <!-- Ribbon Highlight Edge -->
+    <path d="M 238 128 L 244 128 L 244 376 L 238 382 Z"
+          fill="#FFFFFF" opacity="0.25" />
+  </g>
+
+  <!-- Celestial Sparkle Star (Denoting Light Novel / Elite / Discovery) -->
+  <g transform="translate(390, 115)">
+    <path d="M 0 -22 C 1 -8 8 -1 22 0 C 8 1 1 8 0 22 C -1 8 -8 1 -22 0 C -8 -1 -1 -8 0 -22 Z"
+          fill="#FDE047" />
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+  </g>
+</svg>
