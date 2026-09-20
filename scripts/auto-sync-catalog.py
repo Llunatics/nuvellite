@@ -7,7 +7,7 @@ for Nuvellite & Nuvelll (Indonesia Manga & Light Novel Release Tracker)
 - Zero hardcoded series titles or static target keyword lists.
 - Dynamic Volume Extraction: Multi-tier regex matching for explicit markers (Vol, Volume, Jilid, #, Edition),
   decimal volumes (.5), delimiter-separated volumes, and trailing numbers, with intelligent counter-word guards
-  (protecting titles like '5 Centimeters per Second', '3 Days of Happiness', '86', '100 Pacar').
+   (protecting titles that contain numeric measurements, counter words, or temporal units).
 - Dynamic Multi-Format Partitioning: Automatically groups franchises and partitions by medium
   (Manga vs Light Novel vs Movie) if and only if a franchise has multiple publication formats.
 - Dynamic Set & Edition Consolidation: Automatically collapses Special Sets, Birthday Sets, Complete Sets,

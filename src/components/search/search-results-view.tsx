@@ -4,24 +4,11 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Search, X, BookOpen, Sparkles, Filter, ArrowLeft } from 'lucide-react';
-import { searchCatalog, getAllBooks } from '@/lib/catalog-service';
+import { searchCatalog, getAllBooks, getAllSeries } from '@/lib/catalog-service';
 import { Book } from '@/lib/types';
 import { ReleaseCard } from '@/components/books/release-card';
 
-const POPULAR_SEARCH_TAGS = [
-  'Bungo Stray Dogs',
-  'Blue Lock',
-  'Alya',
-  'Detektif Conan',
-  'Kindaichi',
-  'Spy x Family',
-  'Wind Breaker',
-  'Frieren',
-  'Chainsaw Man',
-  'Kaiju No. 8',
-  'Mushoku Tensei',
-  'Re-Living My Life',
-];
+
 
 export function SearchResultsView() {
   const router = useRouter();
@@ -42,6 +29,14 @@ export function SearchResultsView() {
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel' | 'Merchandise'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
+
+  // Dynamically derive popular search suggestions from active catalog series
+  const popularSearchTags = useMemo(() => {
+    return getAllSeries()
+      .filter((s) => (s.totalVolumes || 0) >= 2)
+      .slice(0, 10)
+      .map((s) => s.name);
+  }, []);
 
   // Handle Search Submission
   const handleSubmit = (e: React.FormEvent) => {
@@ -175,7 +170,7 @@ export function SearchResultsView() {
           <span className="text-[11px] font-mono text-editorial-faint shrink-0 mr-1">
             Pencarian Populer:
           </span>
-          {POPULAR_SEARCH_TAGS.map((tag) => (
+          {popularSearchTags.map((tag) => (
             <button
               key={tag}
               type="button"

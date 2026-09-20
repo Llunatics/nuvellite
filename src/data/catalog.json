@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-09-20T05:35:30.000Z",
+  "lastUpdated": "2026-09-20T05:38:22.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -89,7 +89,7 @@
         "Romance"
       ],
       "isbn13": "512602056",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 365.000\n\u2022 Special Set: Rp 265.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 365.000\n• Special Set: Rp 265.000",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-alya-sometimes-hides-her-feeling-in-russian-8-birthday-set",
       "availableEditions": [
         {
@@ -330,7 +330,7 @@
         "Shoujo"
       ],
       "isbn13": "9786347811219",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 65.000\n\u2022 Special Set: Rp 265.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 65.000\n• Special Set: Rp 265.000",
       "gramediaUrl": "https://www.gramedia.com/products/tentang-kita-yang-bertolak-belakang-vol-8",
       "availableEditions": [
         {
@@ -1605,7 +1605,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230320880",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 28.800\n\u2022 Edisi Khusus: Rp 63.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 28.800\n• Edisi Khusus: Rp 63.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-38-reguler",
       "availableEditions": [
         {
@@ -1758,7 +1758,7 @@
         "Komik"
       ],
       "isbn13": "9786347574848",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Special Set: Rp 243.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Special Set: Rp 243.000",
       "gramediaUrl": "https://www.gramedia.com/products/phantom-busters-vol-5",
       "availableEditions": [
         {
@@ -3058,10 +3058,10 @@
     {
       "id": "pub_hope_youre_happy_lemon_01",
       "slug": "hope-youre-happy-lemon-01",
-      "title": "Hope You\u2019re Happy, Lemon 01",
-      "originalTitle": "Hope You\u2019re Happy, Lemon",
+      "title": "Hope You’re Happy, Lemon 01",
+      "originalTitle": "Hope You’re Happy, Lemon",
       "seriesId": "ser_hope-youre-happy-lemon",
-      "seriesName": "Hope You\u2019re Happy, Lemon",
+      "seriesName": "Hope You’re Happy, Lemon",
       "volume": 1,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -3584,7 +3584,7 @@
         "Fantasi"
       ],
       "isbn13": "9786230320521",
-      "synopsis": "Rilisan resmi Light Novel terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 94.400\n\u2022 Edisi Khusus: Rp 144.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 94.400\n• Edisi Khusus: Rp 144.000",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-apothecary-diaries-vol-02",
       "availableEditions": [
         {
@@ -3691,10 +3691,10 @@
     {
       "id": "pub_tamons_bside_1",
       "slug": "tamons-bside-1",
-      "title": "Tamon\u2019s B-Side 1",
-      "originalTitle": "Tamon\u2019s B-Side",
+      "title": "Tamon’s B-Side 1",
+      "originalTitle": "Tamon’s B-Side",
       "seriesId": "ser_tamons-b-side",
-      "seriesName": "Tamon\u2019s B-Side",
+      "seriesName": "Tamon’s B-Side",
       "volume": 1,
       "category": "Manga",
       "publisherId": "pub_mnc",
@@ -5447,7 +5447,7 @@
         "Komik"
       ],
       "isbn13": "9786347574732",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 65.000\n\u2022 Special Set: Rp 265.500",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 65.000\n• Special Set: Rp 265.500",
       "gramediaUrl": "https://www.gramedia.com/products/the-summer-hikaru-died-8",
       "availableEditions": [
         {
@@ -5556,7 +5556,7 @@
         "Shounen"
       ],
       "isbn13": "9786024287801",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-11-bookpaper",
       "availableEditions": [
         {
@@ -6282,7 +6282,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786230036422",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 10.000\n\u2022 Edisi Khusus: Rp 32.500\n\u2022 Edisi Khusus: Rp 49.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 10.000\n• Edisi Khusus: Rp 32.500\n• Edisi Khusus: Rp 49.000",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-bungo-stray-dogs-02",
       "availableEditions": [
         {
@@ -6948,7 +6948,7 @@
         "Shounen"
       ],
       "isbn13": "9786230034701",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 26.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 26.000",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-attack-on-titan-34",
       "availableEditions": [
         {
@@ -7130,7 +7130,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786020273778",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 45.000\n\u2022 Edisi Khusus: Rp 36.000\n\u2022 Edisi Khusus: Rp 20.800",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 45.000\n• Edisi Khusus: Rp 36.000\n• Edisi Khusus: Rp 20.800",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-12-2026-1",
       "availableEditions": [
         {
@@ -7232,7 +7232,7 @@
         "Shoujo"
       ],
       "isbn13": "9786230033537",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 26.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 26.000",
       "gramediaUrl": "https://www.gramedia.com/products/teasing-master-takagi-7",
       "availableEditions": [
         {
@@ -8178,7 +8178,7 @@
     {
       "id": "pub_light_novel_frieren_after_the_end_prelude",
       "slug": "light-novel-frieren-after-the-end-prelude",
-      "title": "Light Novel Frieren: After \u201cThe End\u201d -Prelude-",
+      "title": "Light Novel Frieren: After “The End” -Prelude-",
       "originalTitle": "Frieren: Beyond Journey's End",
       "seriesId": "ser_frieren-ln",
       "seriesName": "Frieren (Novel)",
@@ -8482,7 +8482,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347574831",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 103.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 103.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-eminence-in-shadow-6",
       "availableEditions": [
         {
@@ -9988,7 +9988,7 @@
         "Shounen"
       ],
       "isbn13": "9786024285104",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-10--bookpaper",
       "availableEditions": [
         {
@@ -12235,7 +12235,7 @@
         "Shoujo"
       ],
       "isbn13": "9786230046858",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 26.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 26.000",
       "gramediaUrl": "https://www.gramedia.com/products/teasing-master-takagi-11-1",
       "availableEditions": [
         {
@@ -12531,7 +12531,7 @@
         "Shoujo"
       ],
       "isbn13": "9786230035173",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 26.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 26.000",
       "gramediaUrl": "https://www.gramedia.com/products/teasing-master-takagi-09-1",
       "availableEditions": [
         {
@@ -12628,7 +12628,7 @@
         "Shoujo"
       ],
       "isbn13": "9786230034596",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 26.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 26.000",
       "gramediaUrl": "https://www.gramedia.com/products/teasing-master-takagi-08-1",
       "availableEditions": [
         {
@@ -12780,7 +12780,7 @@
         "Komik"
       ],
       "isbn13": "9786230036408",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 40.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 40.000",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-gokushufudo--the-way-of-house-husband-07",
       "availableEditions": [
         {
@@ -12933,7 +12933,7 @@
         "Shoujo"
       ],
       "isbn13": "9786230031427",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 26.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 26.000",
       "gramediaUrl": "https://www.gramedia.com/products/teasing-master-takagi-5",
       "availableEditions": [
         {
@@ -13141,7 +13141,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786230045875",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 50.000\n\u2022 Edisi Khusus: Rp 32.500\n\u2022 Edisi Khusus: Rp 49.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 50.000\n• Edisi Khusus: Rp 32.500\n• Edisi Khusus: Rp 49.000",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-bungo-stray-dogs-03",
       "availableEditions": [
         {
@@ -13220,8 +13220,8 @@
     {
       "id": "pub_star__dust__dont_worry_be_happy_3",
       "slug": "star--dust--dont-worry-be-happy-3",
-      "title": "Star & Dust - Don\u2019t Worry, Be Happy! 3",
-      "originalTitle": "Star & Dust - Don\u2019t Worry, Be Happy!",
+      "title": "Star & Dust - Don’t Worry, Be Happy! 3",
+      "originalTitle": "Star & Dust - Don’t Worry, Be Happy!",
       "seriesId": "ser_star-dust--dont-worry-be-happy",
       "seriesName": "STAR & DUST -Don`t Worry, Be Happy!",
       "volume": 3,
@@ -13507,7 +13507,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786230033780",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 50.000\n\u2022 Edisi Khusus: Rp 37.500",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 50.000\n• Edisi Khusus: Rp 37.500",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-bungo-stray-dogs-01-1",
       "availableEditions": [
         {
@@ -14166,7 +14166,7 @@
         "Shounen"
       ],
       "isbn13": "9786230317330",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 31.500\n\u2022 Edisi Khusus: Rp 36.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 31.500\n• Edisi Khusus: Rp 36.000",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-43--bookpaper",
       "availableEditions": [
         {
@@ -14267,7 +14267,7 @@
         "Romance"
       ],
       "isbn13": "9786347574275",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 97.200\n\u2022 Complete Set: Rp 346.500\n\u2022 Special Set: Rp 256.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 97.200\n• Complete Set: Rp 346.500\n• Special Set: Rp 256.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-alya-sometimes-hides-her-feeling-in-russian-7",
       "availableEditions": [
         {
@@ -14649,7 +14649,7 @@
         "Komik"
       ],
       "isbn13": "9786230034657",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 40.000\n\u2022 Edisi Khusus: Rp 26.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 40.000\n• Edisi Khusus: Rp 26.000",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-lc-gokushufudo--the-way-of-house-husband-06",
       "availableEditions": [
         {
@@ -15587,7 +15587,7 @@
         "Shounen"
       ],
       "isbn13": "9786230032172",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 10.000\n\u2022 Edisi Khusus: Rp 21.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 10.000\n• Edisi Khusus: Rp 21.000",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-attack-on-titan-33",
       "availableEditions": [
         {
@@ -15824,7 +15824,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230035944",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 10.000\n\u2022 Edisi Khusus: Rp 33.750",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 10.000\n• Edisi Khusus: Rp 33.750",
       "gramediaUrl": "https://www.gramedia.com/products/spy-x-family-07-1",
       "availableEditions": [
         {
@@ -15865,7 +15865,7 @@
         "Shounen"
       ],
       "isbn13": "9786230035883",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 10.000\n\u2022 Edisi Khusus: Rp 30.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 10.000\n• Edisi Khusus: Rp 30.000",
       "gramediaUrl": "https://www.gramedia.com/products/jujutsu-kaisen-07-1",
       "availableEditions": [
         {
@@ -15906,7 +15906,7 @@
         "Shounen"
       ],
       "isbn13": "9786230031274",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 10.000\n\u2022 Edisi Khusus: Rp 30.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 10.000\n• Edisi Khusus: Rp 30.000",
       "gramediaUrl": "https://www.gramedia.com/products/jujutsu-kaisen-06-1",
       "availableEditions": [
         {
@@ -16059,7 +16059,7 @@
         "Komik"
       ],
       "isbn13": "9786230028892",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 10.000\n\u2022 Edisi Khusus: Rp 10.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 10.000\n• Edisi Khusus: Rp 10.000",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-gokushufudo--the-way-of-house-husband-4",
       "availableEditions": [
         {
@@ -16408,7 +16408,7 @@
         "Shounen"
       ],
       "isbn13": "9786230034640",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 10.000\n\u2022 Edisi Khusus: Rp 40.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 10.000\n• Edisi Khusus: Rp 40.000",
       "gramediaUrl": "https://www.gramedia.com/products/jujutsu-kaisen-0-1",
       "availableEditions": [
         {
@@ -16650,7 +16650,7 @@
     {
       "id": "pub_frieren_after_the_end_anthology__the_magic_across_different_paths",
       "slug": "frieren-after-the-end-anthology--the-magic-across-different-paths",
-      "title": "Frieren: After \u201cThe End\u201d Anthology ~ The Magic Across Different Paths~",
+      "title": "Frieren: After “The End” Anthology ~ The Magic Across Different Paths~",
       "originalTitle": "Frieren: Beyond Journey's End",
       "seriesId": "ser_frieren-manga",
       "seriesName": "Frieren",
@@ -17260,7 +17260,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347574497",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Special Set: Rp 160.200",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Special Set: Rp 160.200",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-summer-hikaru-died-2-1",
       "availableEditions": [
         {
@@ -17384,7 +17384,7 @@
         "Psikologi & Thriller"
       ],
       "isbn13": "9786347574428",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/classroom-of-the-elite--2nd-year-vol-4",
       "availableEditions": [
         {
@@ -17452,7 +17452,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230314605",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 27.000\n\u2022 Edisi Khusus: Rp 54.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 27.000\n• Edisi Khusus: Rp 54.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-36--bookpaper",
       "availableEditions": [
         {
@@ -17582,7 +17582,7 @@
         "Shounen"
       ],
       "isbn13": "9786230320040",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 43.200\n\u2022 Edisi Khusus: Rp 38.400",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 43.200\n• Edisi Khusus: Rp 38.400",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--chainsaw-man-12",
       "availableEditions": [
         {
@@ -18633,7 +18633,7 @@
         "Psikologi & Thriller"
       ],
       "isbn13": "9786347574374",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Edisi Khusus: Rp 88.200",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Edisi Khusus: Rp 88.200",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-classroom-of-the-elite--2nd-year-02",
       "availableEditions": [
         {
@@ -18674,7 +18674,7 @@
         "Shounen"
       ],
       "isbn13": "9786230316548",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 31.500\n\u2022 Edisi Khusus: Rp 33.750",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 31.500\n• Edisi Khusus: Rp 33.750",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-41--bookpaper",
       "availableEditions": [
         {
@@ -18831,7 +18831,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786020277271",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 20.800",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 20.800",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-13-2026",
       "availableEditions": [
         {
@@ -19097,7 +19097,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230305245",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-vol-33--bookpaper",
       "availableEditions": [
         {
@@ -19221,7 +19221,7 @@
         "Komik"
       ],
       "isbn13": "9786230319532",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Edisi Khusus: Rp 78.400",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Edisi Khusus: Rp 78.400",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--ito-junji-compilation-10--frankenstein",
       "availableEditions": [
         {
@@ -19375,7 +19375,7 @@
         "Shounen"
       ],
       "isbn13": "9786230077401",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 106.200\n\u2022 Edisi Khusus: Rp 88.500",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 106.200\n• Edisi Khusus: Rp 88.500",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic--attack-on-titan-bind-up-10",
       "availableEditions": [
         {
@@ -19415,7 +19415,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786023398362",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-28--bookpaper",
       "availableEditions": [
         {
@@ -19512,7 +19512,7 @@
         "Shounen"
       ],
       "isbn13": "9786230319709",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 31.500\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 31.500\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-09--bookpaper",
       "availableEditions": [
         {
@@ -19840,7 +19840,7 @@
         "Shounen"
       ],
       "isbn13": "9786230315930",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 28.800\n\u2022 Edisi Khusus: Rp 33.750",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 28.800\n• Edisi Khusus: Rp 33.750",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-40--bookpaper",
       "availableEditions": [
         {
@@ -20004,8 +20004,8 @@
     {
       "id": "pub_sword_art_online_011_alicization_running__alicization_turning",
       "slug": "sword-art-online-011-alicization-running--alicization-turning",
-      "title": "Sword Art Online 011 Alicization Running \u2013 Alicization Turning",
-      "originalTitle": "Sword Art Online 011 Alicization Running \u2013 Alicization Turning",
+      "title": "Sword Art Online 011 Alicization Running – Alicization Turning",
+      "originalTitle": "Sword Art Online 011 Alicization Running – Alicization Turning",
       "seriesId": "ser_sword-art-online",
       "seriesName": "Sword Art Online",
       "volume": 11,
@@ -20088,10 +20088,10 @@
     {
       "id": "pub_bleach__cant_fear_your_own_world_3",
       "slug": "bleach--cant-fear-your-own-world-3",
-      "title": "BLEACH \u2013 Can\u2019t Fear Your Own World 3",
-      "originalTitle": "BLEACH \u2013 Can\u2019t Fear Your Own World",
+      "title": "BLEACH – Can’t Fear Your Own World 3",
+      "originalTitle": "BLEACH – Can’t Fear Your Own World",
       "seriesId": "ser_bleach-cant-fear-your-own-world",
-      "seriesName": "BLEACH \u2013 Can\u2019t Fear Your Own World",
+      "seriesName": "BLEACH – Can’t Fear Your Own World",
       "volume": 3,
       "category": "Manga",
       "publisherId": "pub_mnc",
@@ -20364,7 +20364,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786022663966",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-26--bookpaper",
       "availableEditions": [
         {
@@ -20985,7 +20985,7 @@
         "Isekai & Fantasi"
       ],
       "isbn13": "9786347574268",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 112.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 112.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-5--the-men-in-the-kingdom-part-i",
       "isSetVariant": true,
       "availableEditions": [
@@ -21054,7 +21054,7 @@
         "Psikologi & Thriller"
       ],
       "isbn13": "9786347574220",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/classroom-of-the-elite--2nd-year-vol-3",
       "availableEditions": [
         {
@@ -21487,7 +21487,7 @@
         "Psikologi & Thriller"
       ],
       "isbn13": "9786347574183",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/classroom-of-the-elite--2nd-year-vol-2",
       "availableEditions": [
         {
@@ -21562,10 +21562,10 @@
     {
       "id": "pub_light_novel_mushoku_tensei__jobless_reincarnation_05",
       "slug": "light-novel-mushoku-tensei--jobless-reincarnation-05",
-      "title": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation 05",
-      "originalTitle": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation",
+      "title": "Light Novel Mushoku Tensei – Jobless Reincarnation 05",
+      "originalTitle": "Light Novel Mushoku Tensei – Jobless Reincarnation",
       "seriesId": "ser_mushoku-tensei-jobless-reincarnation",
-      "seriesName": "Mushoku Tensei \u2013 Jobless Reincarnation",
+      "seriesName": "Mushoku Tensei – Jobless Reincarnation",
       "volume": 5,
       "category": "Light Novel",
       "publisherId": "pub_mnc",
@@ -21640,7 +21640,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347375858",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Edisi Khusus: Rp 88.200",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Edisi Khusus: Rp 88.200",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-gimai-seikatsu-03--harihariku-bersama-saki",
       "availableEditions": [
         {
@@ -21989,7 +21989,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786022109518",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-25--bookpaper",
       "availableEditions": [
         {
@@ -22662,7 +22662,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786020024929",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 45.000\n\u2022 Edisi Khusus: Rp 16.250",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 45.000\n• Edisi Khusus: Rp 16.250",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-15-2025-1",
       "availableEditions": [
         {
@@ -22787,7 +22787,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786020268705",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 45.000\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 25.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 45.000\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 25.000",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-09-2025-1",
       "availableEditions": [
         {
@@ -23040,7 +23040,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230022272",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 45.000\n\u2022 Edisi Khusus: Rp 36.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 45.000\n• Edisi Khusus: Rp 36.000",
       "gramediaUrl": "https://www.gramedia.com/products/spy-x-family-02-1",
       "availableEditions": [
         {
@@ -23080,7 +23080,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786020254821",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 45.000\n\u2022 Edisi Khusus: Rp 45.000\n\u2022 Edisi Khusus: Rp 33.750",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 45.000\n• Edisi Khusus: Rp 45.000\n• Edisi Khusus: Rp 33.750",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-02-2025-2",
       "availableEditions": [
         {
@@ -23743,7 +23743,7 @@
         "Shounen"
       ],
       "isbn13": "9786230069000",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 45.000\n\u2022 Edisi Khusus: Rp 33.750",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 45.000\n• Edisi Khusus: Rp 33.750",
       "gramediaUrl": "https://www.gramedia.com/products/sakamoto-days-14-1",
       "availableEditions": [
         {
@@ -23784,7 +23784,7 @@
         "Shounen"
       ],
       "isbn13": "9786230068164",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 45.000\n\u2022 Edisi Khusus: Rp 33.750",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 45.000\n• Edisi Khusus: Rp 33.750",
       "gramediaUrl": "https://www.gramedia.com/products/sakamoto-days-13-1",
       "availableEditions": [
         {
@@ -23853,7 +23853,7 @@
         "Shoujo"
       ],
       "isbn13": "9786230047541",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 26.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 26.000",
       "gramediaUrl": "https://www.gramedia.com/products/teasing-master-takagi-12-1",
       "availableEditions": [
         {
@@ -23950,7 +23950,7 @@
         "Shoujo"
       ],
       "isbn13": "9786230045332",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 26.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 26.000",
       "gramediaUrl": "https://www.gramedia.com/products/teasing-master-takagi-10-1",
       "availableEditions": [
         {
@@ -24215,7 +24215,7 @@
         "Shounen"
       ],
       "isbn13": "9786230319204",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-08--bookpaper",
       "availableEditions": [
         {
@@ -24374,7 +24374,7 @@
         "Shounen"
       ],
       "isbn13": "9786230029783",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 30.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 30.000",
       "gramediaUrl": "https://www.gramedia.com/products/jujutsu-kaisen-05-1",
       "availableEditions": [
         {
@@ -24443,7 +24443,7 @@
         "Shounen"
       ],
       "isbn13": "9786230311079",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 48.000\n\u2022 Edisi Khusus: Rp 48.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 48.000\n• Edisi Khusus: Rp 48.000",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--chainsaw-man-03",
       "availableEditions": [
         {
@@ -24540,7 +24540,7 @@
         "Shounen"
       ],
       "isbn13": "9786230024399",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.000\n\u2022 Edisi Khusus: Rp 32.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.000\n• Edisi Khusus: Rp 32.000",
       "gramediaUrl": "https://www.gramedia.com/products/jujutsu-kaisen-02-1",
       "availableEditions": [
         {
@@ -25541,7 +25541,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "FR0226017",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 50.000\n\u2022 Edisi Khusus: Rp 37.500",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 50.000\n• Edisi Khusus: Rp 37.500",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-bungo-stray-dogs-15-1",
       "availableEditions": [
         {
@@ -25581,7 +25581,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "FR0226018",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 50.000\n\u2022 Edisi Khusus: Rp 37.500",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 50.000\n• Edisi Khusus: Rp 37.500",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-bungo-stray-dogs-14-1",
       "availableEditions": [
         {
@@ -25649,7 +25649,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "FR0226016",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 50.000\n\u2022 Edisi Khusus: Rp 37.500",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 50.000\n• Edisi Khusus: Rp 37.500",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-bungo-stray-dogs-13-1",
       "availableEditions": [
         {
@@ -26161,7 +26161,7 @@
         "Psikologi & Thriller"
       ],
       "isbn13": "9786347574169",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Edisi Khusus: Rp 88.200",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Edisi Khusus: Rp 88.200",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-classroom-of-the-elite--2nd-year-01",
       "availableEditions": [
         {
@@ -26370,7 +26370,7 @@
         "Psikologi & Thriller"
       ],
       "isbn13": "9786347574060",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/classroom-of-the-elite--2nd-year-vol-1",
       "availableEditions": [
         {
@@ -26552,7 +26552,7 @@
         "Shounen"
       ],
       "isbn13": "9786347375490",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 54.000\n\u2022 Special Set: Rp 243.000",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 54.000\n• Special Set: Rp 243.000",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock-28",
       "availableEditions": [
         {
@@ -26906,7 +26906,7 @@
         "Shounen"
       ],
       "isbn13": "9786347375902",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 54.000\n\u2022 Edisi Khusus: Rp 29.250",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 54.000\n• Edisi Khusus: Rp 29.250",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock-17-1",
       "availableEditions": [
         {
@@ -26946,7 +26946,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786020272955",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 20.800",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 20.800",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-11-2026",
       "availableEditions": [
         {
@@ -27411,7 +27411,7 @@
         "Komik"
       ],
       "isbn13": "9786230074783",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 89.100",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 89.100",
       "gramediaUrl": "https://www.gramedia.com/products/komikus-shojo-nozaki-15-terbit-ulang",
       "availableEditions": [
         {
@@ -28240,7 +28240,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347375186",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 103.500\n\u2022 Special Set: Rp 225.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 103.500\n• Special Set: Rp 225.000",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-aku-dimanjakan-tetanggaku-yang-seperti-malaikat-3",
       "availableEditions": [
         {
@@ -28281,7 +28281,7 @@
         "Shounen"
       ],
       "isbn13": "9786230318672",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 36.000\n\u2022 Edisi Khusus: Rp 32.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 36.000\n• Edisi Khusus: Rp 32.000",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-45--tamat",
       "availableEditions": [
         {
@@ -28518,7 +28518,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347375780",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 103.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 103.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-eminence-in-shadow-5",
       "availableEditions": [
         {
@@ -28586,7 +28586,7 @@
         "Fantasi"
       ],
       "isbn13": "532680001",
-      "synopsis": "Rilisan resmi Light Novel terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 127.500\n\u2022 Edisi Khusus: Rp 86.400",
+      "synopsis": "Rilisan resmi Light Novel terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 127.500\n• Edisi Khusus: Rp 86.400",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-apothecary-diaries-vol-01--jishi-sama-premium-package",
       "availableEditions": [
         {
@@ -28915,7 +28915,7 @@
         "Komik"
       ],
       "isbn13": "9786347375551",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Special Set: Rp 207.000",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Special Set: Rp 207.000",
       "gramediaUrl": "https://www.gramedia.com/products/the-summer-hikaru-died-7",
       "availableEditions": [
         {
@@ -29069,7 +29069,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786020270593",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 16.250",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 16.250",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-10-2026",
       "availableEditions": [
         {
@@ -29420,7 +29420,7 @@
         "Komik"
       ],
       "isbn13": "9786347375346",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Special Set: Rp 243.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Special Set: Rp 243.000",
       "gramediaUrl": "https://www.gramedia.com/products/phantom-busters-vol-1",
       "availableEditions": [
         {
@@ -29657,7 +29657,7 @@
         "Shounen"
       ],
       "isbn13": "9786347375292",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 54.000\n\u2022 Special Set: Rp 243.000",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 54.000\n• Special Set: Rp 243.000",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock-27",
       "availableEditions": [
         {
@@ -29698,7 +29698,7 @@
         "Shounen"
       ],
       "isbn13": "9786347375094",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 54.000\n\u2022 Special Set: Rp 243.000",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 54.000\n• Special Set: Rp 243.000",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock-26",
       "availableEditions": [
         {
@@ -29766,7 +29766,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786230318665",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 63.750\n\u2022 Edisi Khusus: Rp 63.750\n\u2022 Edisi Khusus: Rp 45.000",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 63.750\n• Edisi Khusus: Rp 63.750\n• Edisi Khusus: Rp 45.000",
       "gramediaUrl": "https://www.gramedia.com/products/bungo-stray-dogs-6--dazai-chuuya-usia-15-tahun",
       "availableEditions": [
         {
@@ -29840,7 +29840,7 @@
         "Shounen"
       ],
       "isbn13": "9786230318849",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 29.250\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 29.250\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-07--bookpaper",
       "availableEditions": [
         {
@@ -30139,7 +30139,7 @@
         "Psikologi & Thriller"
       ],
       "isbn13": "9786347375568",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Edisi Khusus: Rp 88.200",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Edisi Khusus: Rp 88.200",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-classroom-of-the-elite-45",
       "availableEditions": [
         {
@@ -30207,7 +30207,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786022106173",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-24--bookpaper",
       "availableEditions": [
         {
@@ -30247,7 +30247,7 @@
         "Romance"
       ],
       "isbn13": "9786347375261",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Special Set: Rp 225.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Special Set: Rp 225.000",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-alya-sometimes-hides-her-feeling-in-russian-6",
       "availableEditions": [
         {
@@ -30439,7 +30439,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786347375414",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Special Set: Rp 225.000\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Special Set: Rp 225.000\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/bungo-stray-dogs--beast-4",
       "availableEditions": [
         {
@@ -31085,7 +31085,7 @@
         "Komik"
       ],
       "isbn13": "9786347375315",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Special Set: Rp 225.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Special Set: Rp 225.000",
       "gramediaUrl": "https://www.gramedia.com/products/gokurakugai-vol-4",
       "availableEditions": [
         {
@@ -31211,7 +31211,7 @@
         "Shounen"
       ],
       "isbn13": "9786230318603",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-06--bookpaper",
       "availableEditions": [
         {
@@ -31453,7 +31453,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786022100850",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-23--bookpaper",
       "availableEditions": [
         {
@@ -31529,10 +31529,10 @@
     {
       "id": "pub_light_novel_mushoku_tensei__jobless_reincarnation_04",
       "slug": "light-novel-mushoku-tensei--jobless-reincarnation-04",
-      "title": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation 04",
-      "originalTitle": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation",
+      "title": "Light Novel Mushoku Tensei – Jobless Reincarnation 04",
+      "originalTitle": "Light Novel Mushoku Tensei – Jobless Reincarnation",
       "seriesId": "ser_mushoku-tensei-jobless-reincarnation",
-      "seriesName": "Mushoku Tensei \u2013 Jobless Reincarnation",
+      "seriesName": "Mushoku Tensei – Jobless Reincarnation",
       "volume": 4,
       "category": "Light Novel",
       "publisherId": "pub_pgi",
@@ -31974,7 +31974,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786347375209",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/bungo-stray-dogs--beast-3",
       "availableEditions": [
         {
@@ -32129,7 +32129,7 @@
         "Shounen"
       ],
       "isbn13": "9786347375155",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 54.000\n\u2022 Edisi Khusus: Rp 45.000",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 54.000\n• Edisi Khusus: Rp 45.000",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock-07-1",
       "availableEditions": [
         {
@@ -32453,7 +32453,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230318238",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 27.000\n\u2022 Edisi Khusus: Rp 63.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 27.000\n• Edisi Khusus: Rp 63.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-37--reguler",
       "availableEditions": [
         {
@@ -33027,7 +33027,7 @@
         "Isekai & Fantasi"
       ],
       "isbn13": "9786347375131",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 121.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 121.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-4--the-lizard-man-heroes",
       "isSetVariant": true,
       "availableEditions": [
@@ -33293,7 +33293,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9789792344356",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-22--bookpaper",
       "availableEditions": [
         {
@@ -33475,7 +33475,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347375124",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Special Set: Rp 225.000\n\u2022 Edisi Khusus: Rp 88.200",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Special Set: Rp 225.000\n• Edisi Khusus: Rp 88.200",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-gimai-seikatsu-02--harihariku-bersama-saki",
       "availableEditions": [
         {
@@ -33629,7 +33629,7 @@
         "Shounen"
       ],
       "isbn13": "9786347128843",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 54.000\n\u2022 Special Set: Rp 243.000",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 54.000\n• Special Set: Rp 243.000",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock-25",
       "availableEditions": [
         {
@@ -33733,7 +33733,7 @@
         "Shounen"
       ],
       "isbn13": "9786347128973",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 54.000\n\u2022 Edisi Khusus: Rp 45.000",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 54.000\n• Edisi Khusus: Rp 45.000",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock-04-1",
       "availableEditions": [
         {
@@ -33917,7 +33917,7 @@
         "Shounen"
       ],
       "isbn13": "9786230317927",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-05--bookpaper",
       "availableEditions": [
         {
@@ -34166,10 +34166,10 @@
     {
       "id": "pub_bleach__cant_fear_your_own_world_2",
       "slug": "bleach--cant-fear-your-own-world-2",
-      "title": "BLEACH \u2013 Can\u2019t Fear Your Own World 2",
-      "originalTitle": "BLEACH \u2013 Can\u2019t Fear Your Own World",
+      "title": "BLEACH – Can’t Fear Your Own World 2",
+      "originalTitle": "BLEACH – Can’t Fear Your Own World",
       "seriesId": "ser_bleach-cant-fear-your-own-world",
-      "seriesName": "BLEACH \u2013 Can\u2019t Fear Your Own World",
+      "seriesName": "BLEACH – Can’t Fear Your Own World",
       "volume": 2,
       "category": "Manga",
       "publisherId": "pub_mnc",
@@ -34217,7 +34217,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786347128904",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/bungo-stray-dogs--beast-2",
       "availableEditions": [
         {
@@ -34880,7 +34880,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786347128812",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Special Set: Rp 198.000\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Special Set: Rp 198.000\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/bungo-stray-dogs--beast-1",
       "availableEditions": [
         {
@@ -34987,7 +34987,7 @@
         "Shounen"
       ],
       "isbn13": "9786230311666",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-35--bookpaper",
       "availableEditions": [
         {
@@ -35027,7 +35027,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786022106272",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-21--bookpaper",
       "availableEditions": [
         {
@@ -35519,7 +35519,7 @@
         "Shounen"
       ],
       "isbn13": "9786230310935",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-34--bookpaper",
       "availableEditions": [
         {
@@ -35648,7 +35648,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347128782",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 103.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 103.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-eminence-in-shadow-4",
       "availableEditions": [
         {
@@ -35942,7 +35942,7 @@
         "Komik"
       ],
       "isbn13": "9786347128553",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Special Set: Rp 225.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Special Set: Rp 225.000",
       "gramediaUrl": "https://www.gramedia.com/products/gokurakugai-vol-3",
       "availableEditions": [
         {
@@ -36067,7 +36067,7 @@
         "Komik"
       ],
       "isbn13": "9786347128577",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 58.500\n\u2022 Special Set: Rp 225.000",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 58.500\n• Special Set: Rp 225.000",
       "gramediaUrl": "https://www.gramedia.com/products/the-summer-hikaru-died-6",
       "availableEditions": [
         {
@@ -36107,7 +36107,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347128584",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 76.500\n\u2022 Special Set: Rp 225.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 76.500\n• Special Set: Rp 225.000",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-summer-hikaru-died-1",
       "availableEditions": [
         {
@@ -36516,7 +36516,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9789792335408",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-20--bookpaper",
       "availableEditions": [
         {
@@ -36613,7 +36613,7 @@
         "Shounen"
       ],
       "isbn13": "9786230317668",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-04--bookpaper",
       "availableEditions": [
         {
@@ -37715,7 +37715,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9789792332315",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-19--bookpaper",
       "availableEditions": [
         {
@@ -37924,7 +37924,7 @@
         "Shounen"
       ],
       "isbn13": "9786230316951",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-03--bookpaper",
       "availableEditions": [
         {
@@ -38367,7 +38367,7 @@
         "Shounen"
       ],
       "isbn13": "9786230070631",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock--episode-nagi-vol-04",
       "availableEditions": [
         {
@@ -38492,7 +38492,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347128300",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Special Set: Rp 225.000\n\u2022 Edisi Khusus: Rp 88.200",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Special Set: Rp 225.000\n• Edisi Khusus: Rp 88.200",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-gimai-seikatsu-01--harihariku-bersama-saki",
       "availableEditions": [
         {
@@ -38646,7 +38646,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230316722",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-18--bookpaper",
       "availableEditions": [
         {
@@ -38939,7 +38939,7 @@
         "Komik"
       ],
       "isbn13": "9786230316166",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 85.500\n\u2022 Edisi Khusus: Rp 71.250",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 85.500\n• Edisi Khusus: Rp 71.250",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--ito-junji-compilation-09--town-of-tombstones",
       "availableEditions": [
         {
@@ -39064,7 +39064,7 @@
         "Shounen"
       ],
       "isbn13": "9786230316739",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 43.200\n\u2022 Edisi Khusus: Rp 38.400",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 43.200\n• Edisi Khusus: Rp 38.400",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--tatsuki-fujimoto-before-chainsaw-man-17--21",
       "availableEditions": [
         {
@@ -39302,7 +39302,7 @@
         "Isekai & Fantasi"
       ],
       "isbn13": "9786347128218",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 121.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 121.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-3--the-bloody-valkyrie",
       "isSetVariant": true,
       "availableEditions": [
@@ -39595,7 +39595,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230316524",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-17--bookpaper",
       "availableEditions": [
         {
@@ -39663,7 +39663,7 @@
         "Romance"
       ],
       "isbn13": "9786347128263",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 97.200\n\u2022 Edisi Khusus: Rp 97.200",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 97.200\n• Edisi Khusus: Rp 97.200",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-alya-sometimes-hides-her-feeling-in-russian-45",
       "availableEditions": [
         {
@@ -39704,7 +39704,7 @@
         "Shounen"
       ],
       "isbn13": "9786230316777",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-02--bookpaper",
       "availableEditions": [
         {
@@ -39806,7 +39806,7 @@
         "Fantasi"
       ],
       "isbn13": "9786347128065",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 88.200\n\u2022 Special Set: Rp 225.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 88.200\n• Special Set: Rp 225.000",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-konosuba-gods-blessing-on-this-wonderful-world-3",
       "availableEditions": [
         {
@@ -39880,10 +39880,10 @@
     {
       "id": "pub_bleach__cant_fear_your_own_world_1",
       "slug": "bleach--cant-fear-your-own-world-1",
-      "title": "BLEACH \u2013 Can\u2019t Fear Your Own World 1",
-      "originalTitle": "BLEACH \u2013 Can\u2019t Fear Your Own World",
+      "title": "BLEACH – Can’t Fear Your Own World 1",
+      "originalTitle": "BLEACH – Can’t Fear Your Own World",
       "seriesId": "ser_bleach-cant-fear-your-own-world",
-      "seriesName": "BLEACH \u2013 Can\u2019t Fear Your Own World",
+      "seriesName": "BLEACH – Can’t Fear Your Own World",
       "volume": 1,
       "category": "Manga",
       "publisherId": "pub_mnc",
@@ -40107,10 +40107,10 @@
     {
       "id": "pub_light_novel_mushoku_tensei__jobless_reincarnation_03",
       "slug": "light-novel-mushoku-tensei--jobless-reincarnation-03",
-      "title": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation 03",
-      "originalTitle": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation",
+      "title": "Light Novel Mushoku Tensei – Jobless Reincarnation 03",
+      "originalTitle": "Light Novel Mushoku Tensei – Jobless Reincarnation",
       "seriesId": "ser_mushoku-tensei-jobless-reincarnation",
-      "seriesName": "Mushoku Tensei \u2013 Jobless Reincarnation",
+      "seriesName": "Mushoku Tensei – Jobless Reincarnation",
       "volume": 3,
       "category": "Light Novel",
       "publisherId": "pub_pgi",
@@ -40384,7 +40384,7 @@
         "Komik"
       ],
       "isbn13": "532571029",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 85.500\n\u2022 Edisi Khusus: Rp 71.250",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 85.500\n• Edisi Khusus: Rp 71.250",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--ito-junji-compilation-08--the-groaning-drain",
       "availableEditions": [
         {
@@ -40649,7 +40649,7 @@
         "Fantasi"
       ],
       "isbn13": "512502018",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 225.000\n\u2022 Edisi Khusus: Rp 103.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 225.000\n• Edisi Khusus: Rp 103.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-eminence-in-shadow-3--special--set",
       "availableEditions": [
         {
@@ -41146,7 +41146,7 @@
         "Shounen"
       ],
       "isbn13": "9786230316388",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-01--bookpaper",
       "availableEditions": [
         {
@@ -42037,7 +42037,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230315916",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-15--bookpaper",
       "availableEditions": [
         {
@@ -42526,7 +42526,7 @@
         "Shounen"
       ],
       "isbn13": "9786230060779",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 33.750",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 33.750",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock--episode-nagi-vol-02",
       "availableEditions": [
         {
@@ -42820,7 +42820,7 @@
         "Isekai & Fantasi"
       ],
       "isbn13": "9786238961283",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 121.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 121.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-2--the-dark-warrior",
       "isSetVariant": true,
       "availableEditions": [
@@ -42890,7 +42890,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230315886",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-14--bookpaper",
       "availableEditions": [
         {
@@ -43369,7 +43369,7 @@
         "Manga"
       ],
       "isbn13": "726010551",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 45.000\n\u2022 Edisi Khusus: Rp 28.800",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 45.000\n• Edisi Khusus: Rp 28.800",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-15-2026",
       "volume": 15,
       "isSetVariant": true,
@@ -43409,7 +43409,7 @@
         "Manga"
       ],
       "isbn13": "724010720",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 26.000\n\u2022 Edisi Khusus: Rp 36.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 26.000\n• Edisi Khusus: Rp 36.000",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-gokushufudo--the-way-of-househusband-12",
       "volume": 12,
       "isSetVariant": true,
@@ -43503,7 +43503,7 @@
         "Manga"
       ],
       "isbn13": "204781949",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 20.800\n\u2022 Edisi Khusus: Rp 40.500",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 20.800\n• Edisi Khusus: Rp 40.500",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-07-terbit-ulang",
       "volume": 7,
       "isSetVariant": true,
@@ -43597,7 +43597,7 @@
         "Manga"
       ],
       "isbn13": "204755648",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 20.800\n\u2022 Edisi Khusus: Rp 40.500",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 20.800\n• Edisi Khusus: Rp 40.500",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-06-terbit-ulang",
       "volume": 6,
       "isSetVariant": true,
@@ -43718,7 +43718,7 @@
         "Manga"
       ],
       "isbn13": "204659951",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 20.800\n\u2022 Edisi Khusus: Rp 40.500",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 20.800\n• Edisi Khusus: Rp 40.500",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-05-terbit-ulang",
       "volume": 5,
       "isSetVariant": true,
@@ -43758,7 +43758,7 @@
         "Manga"
       ],
       "isbn13": "723010321",
-      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 35.000\n\u2022 Edisi Khusus: Rp 73.500",
+      "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 35.000\n• Edisi Khusus: Rp 73.500",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-bungo-stray-dogs-04",
       "volume": 4,
       "isSetVariant": true,
@@ -43825,7 +43825,7 @@
         "Manga"
       ],
       "isbn13": "204622247",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 20.800\n\u2022 Edisi Khusus: Rp 40.500",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 20.800\n• Edisi Khusus: Rp 40.500",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-04-terbit-ulang",
       "volume": 4,
       "isSetVariant": true,
@@ -44000,7 +44000,7 @@
         "Manga"
       ],
       "isbn13": "721010356",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 19.500\n\u2022 Edisi Khusus: Rp 18.000",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 19.500\n• Edisi Khusus: Rp 18.000",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-attack-on-titan-02",
       "volume": 2,
       "isSetVariant": true,
@@ -44067,7 +44067,7 @@
         "Manga"
       ],
       "isbn13": "532571001",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 43.500\n\u2022 Edisi Khusus: Rp 52.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 43.500\n• Edisi Khusus: Rp 52.200",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--5-cm-per-second-02--tamat",
       "volume": 2,
       "isSetVariant": true,
@@ -44161,7 +44161,7 @@
         "Manga"
       ],
       "isbn13": "208129465",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 136.800\n\u2022 Edisi Khusus: Rp 41.250",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 136.800\n• Edisi Khusus: Rp 41.250",
       "gramediaUrl": "https://www.gramedia.com/products/kaiju-no-8-vol-1",
       "volume": 1,
       "availableEditions": [
@@ -44227,7 +44227,7 @@
         "Manga"
       ],
       "isbn13": "724010773",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 33.750\n\u2022 Edisi Khusus: Rp 40.500",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 33.750\n• Edisi Khusus: Rp 40.500",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock--episode-nagi-vol-01",
       "volume": 1,
       "isSetVariant": true,
@@ -44267,7 +44267,7 @@
         "Manga"
       ],
       "isbn13": "532471069",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 43.500\n\u2022 Edisi Khusus: Rp 52.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 43.500\n• Edisi Khusus: Rp 52.200",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--5-cm-per-second-01",
       "volume": 1,
       "isSetVariant": true,
@@ -44334,7 +44334,7 @@
         "Light Novel"
       ],
       "isbn13": "208444997",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 89.000\n\u2022 Edisi Khusus: Rp 89.000",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 89.000\n• Edisi Khusus: Rp 89.000",
       "gramediaUrl": "https://www.gramedia.com/products/estudee-canvas-paint-by-number-20-cm-x-20-cm-the-girl-p",
       "volume": null,
       "seriesId": "ser_estudee-canvas-paint-by-number",
@@ -44653,8 +44653,8 @@
     {
       "id": "pub_ito_junji_compilation_tomie_part_2",
       "slug": "ito-junji-compilation-tomie-part-2",
-      "title": "Ito Junji Compilation \u2013 Tomie Part 2",
-      "originalTitle": "Ito Junji Compilation \u2013 Tomie Part 2",
+      "title": "Ito Junji Compilation – Tomie Part 2",
+      "originalTitle": "Ito Junji Compilation – Tomie Part 2",
       "category": "Manga",
       "publisherId": "pub_mnc",
       "publisherName": "m&c! Publishing",
@@ -44675,7 +44675,7 @@
       "gramediaUrl": "https://www.gramedia.com/products/ito-junji-compilation-tomie-part-2",
       "volume": 2,
       "seriesId": "ser_ito-junji-compilation-tomie-part",
-      "seriesName": "Ito Junji Compilation \u2013 Tomie Part"
+      "seriesName": "Ito Junji Compilation – Tomie Part"
     },
     {
       "id": "pub_goodbye_eri",
@@ -47172,10 +47172,10 @@
     {
       "id": "pub_light_novel_mushoku_tensei__jobless_reincarnation_02",
       "slug": "light-novel-mushoku-tensei--jobless-reincarnation-02",
-      "title": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation 02",
-      "originalTitle": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation",
+      "title": "Light Novel Mushoku Tensei – Jobless Reincarnation 02",
+      "originalTitle": "Light Novel Mushoku Tensei – Jobless Reincarnation",
       "seriesId": "ser_mushoku-tensei-jobless-reincarnation",
-      "seriesName": "Mushoku Tensei \u2013 Jobless Reincarnation",
+      "seriesName": "Mushoku Tensei – Jobless Reincarnation",
       "volume": 2,
       "category": "Light Novel",
       "publisherId": "pub_pgi",
@@ -48036,7 +48036,7 @@
         "Fantasi"
       ],
       "isbn13": "512402028",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 103.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 103.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-eminence-in-shadow-2",
       "availableEditions": [
         {
@@ -48216,7 +48216,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230315411",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-13--bookpaper",
       "availableEditions": [
         {
@@ -48735,7 +48735,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230315329",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-12--bookpaper",
       "availableEditions": [
         {
@@ -49374,10 +49374,10 @@
     {
       "id": "pub_light_novel_mushoku_tensei__jobless_reincarnation_01",
       "slug": "light-novel-mushoku-tensei--jobless-reincarnation-01",
-      "title": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation 01",
-      "originalTitle": "Light Novel Mushoku Tensei \u2013 Jobless Reincarnation",
+      "title": "Light Novel Mushoku Tensei – Jobless Reincarnation 01",
+      "originalTitle": "Light Novel Mushoku Tensei – Jobless Reincarnation",
       "seriesId": "ser_mushoku-tensei-jobless-reincarnation",
-      "seriesName": "Mushoku Tensei \u2013 Jobless Reincarnation",
+      "seriesName": "Mushoku Tensei – Jobless Reincarnation",
       "volume": 1,
       "category": "Light Novel",
       "publisherId": "pub_pgi",
@@ -49592,7 +49592,7 @@
         "Isekai & Fantasi"
       ],
       "isbn13": "9786231034342",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 121.500\n\u2022 Edisi Khusus: Rp 52.200",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 121.500\n• Edisi Khusus: Rp 52.200",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-1--the-undead-king",
       "isSetVariant": true,
       "availableEditions": [
@@ -50056,7 +50056,7 @@
         "Fantasi"
       ],
       "isbn13": "9786231028600",
-      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 103.500\n\u2022 Edisi Khusus: Rp 58.500",
+      "synopsis": "Rilisan resmi Light Novel terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 103.500\n• Edisi Khusus: Rp 58.500",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-the-eminence-in-shadow-1",
       "availableEditions": [
         {
@@ -50152,7 +50152,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230314384",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-11-bookpaper",
       "availableEditions": [
         {
@@ -50679,8 +50679,8 @@
     {
       "id": "pub_sword_art_online_007_mother_s_rosario",
       "slug": "sword-art-online-007-mother-s-rosario",
-      "title": "Sword Art Online 007 Mother\u2019s Rosario",
-      "originalTitle": "Sword Art Online 007 Mother\u2019s Rosario",
+      "title": "Sword Art Online 007 Mother’s Rosario",
+      "originalTitle": "Sword Art Online 007 Mother’s Rosario",
       "seriesId": "ser_sword-art-online",
       "seriesName": "Sword Art Online",
       "volume": 7,
@@ -51123,7 +51123,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230314735",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 28.800\n\u2022 Edisi Khusus: Rp 54.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 28.800\n• Edisi Khusus: Rp 54.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-34-bookpaper",
       "availableEditions": [
         {
@@ -51618,7 +51618,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230313387",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-10-bookpaper",
       "availableEditions": [
         {
@@ -52506,7 +52506,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230314094",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 27.000\n\u2022 Edisi Khusus: Rp 54.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 27.000\n• Edisi Khusus: Rp 54.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-35-bookpaper",
       "availableEditions": [
         {
@@ -52806,7 +52806,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230313127",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-09-bookpaper",
       "availableEditions": [
         {
@@ -53718,7 +53718,7 @@
         "Komik"
       ],
       "isbn13": "9786230313462",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 40.500",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 40.500",
       "gramediaUrl": "https://www.gramedia.com/products/akasha-re-zero-starting-life-in-another-world-chapter-1--a-day-in-the-capital-02",
       "availableEditions": [
         {
@@ -54743,7 +54743,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786230313158",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 73.500\n\u2022 Edisi Khusus: Rp 45.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 73.500\n• Edisi Khusus: Rp 45.000",
       "gramediaUrl": "https://www.gramedia.com/products/bungo-stray-dogs-5-beast",
       "availableEditions": [
         {
@@ -54812,7 +54812,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230313189",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 28.800\n\u2022 Edisi Khusus: Rp 49.500",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 28.800\n• Edisi Khusus: Rp 49.500",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-32-bookpaper",
       "availableEditions": [
         {
@@ -55252,7 +55252,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230312854",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-31-bookpaper",
       "availableEditions": [
         {
@@ -55574,7 +55574,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230311949",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-07-bookpaper",
       "availableEditions": [
         {
@@ -55894,7 +55894,7 @@
         "Komik"
       ],
       "isbn13": "9786230056765",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 40.500",
+      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 40.500",
       "gramediaUrl": "https://www.gramedia.com/products/samurai-8-the-tale-of-hachimaru-05",
       "availableEditions": [
         {
@@ -58330,7 +58330,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230311819",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.000",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.000",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-06-bookpaper",
       "availableEditions": [
         {
@@ -59131,7 +59131,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230311482",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-05-bookpaper",
       "availableEditions": [
         {
@@ -60356,7 +60356,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230309625",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 3.500",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 3.500",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-04-bookpaper",
       "availableEditions": [
         {
@@ -62200,7 +62200,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230309601",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-03-bookpaper",
       "availableEditions": [
         {
@@ -63144,7 +63144,7 @@
         "Slice of Life & Komedi"
       ],
       "isbn13": "9786230309397",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 25.200",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 25.200",
       "gramediaUrl": "https://www.gramedia.com/products/hai-miiko-02-edisi-khusus",
       "availableEditions": [
         {
@@ -66430,7 +66430,7 @@
         "Komik"
       ],
       "isbn13": "9786230306334",
-      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n\ud83d\udccc **Pilihan Edisi & Set Resmi:**\n\u2022 Edisi Standar: Rp 40.500\n\u2022 Edisi Khusus: Rp 40.500",
+      "synopsis": "Rilisan resmi Manga terbitan m&c! Publishing.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 40.500\n• Edisi Khusus: Rp 40.500",
       "gramediaUrl": "https://www.gramedia.com/products/akasha-re-zero-starting-life-in-another-world-chapter-2--a-week-at-the-mansion-5",
       "availableEditions": [
         {
@@ -75114,7 +75114,7 @@
       "isWednesdayRelease": true,
       "currentPrice": 157500,
       "authors": [
-        "R\u00e9tna Kencana Colliq Puji\u00e9 Arung Pancana Toa"
+        "Rétna Kencana Colliq Pujié Arung Pancana Toa"
       ],
       "genres": [
         "Manga",
@@ -77493,7 +77493,7 @@
     {
       "id": "pub_the_prince_series_gemerlap_festival_aneka_perayaan_seru_dunia",
       "slug": "the-prince-series-gemerlap-festival-aneka-perayaan-seru-dunia",
-      "title": "The Prince Series: Gemerlap Festival \u2013 Aneka Perayaan Seru Dunia",
+      "title": "The Prince Series: Gemerlap Festival – Aneka Perayaan Seru Dunia",
       "originalTitle": "The Prince Series",
       "seriesId": "ser_the-prince-series",
       "seriesName": "The Prince Series",
@@ -77520,7 +77520,7 @@
     {
       "id": "pub_the_prince_series_arena_para_juara_jiwa_juara_sejati",
       "slug": "the-prince-series-arena-para-juara-jiwa-juara-sejati",
-      "title": "The Prince Series: Arena Para Juara \u2013 Jiwa Juara Sejati",
+      "title": "The Prince Series: Arena Para Juara – Jiwa Juara Sejati",
       "originalTitle": "The Prince Series",
       "seriesId": "ser_the-prince-series",
       "seriesName": "The Prince Series",
@@ -77790,7 +77790,7 @@
     {
       "id": "pub_bungo_stray_dogs_beast_4__special_set",
       "slug": "bungo-stray-dogs-beast-4--special-set",
-      "title": "Bungo Stray Dogs BEAST 4 \u2013 Special Set",
+      "title": "Bungo Stray Dogs BEAST 4 – Special Set",
       "originalTitle": "Bungo Stray Dogs BEAST",
       "seriesId": "ser_bungo-stray-dogs-beast",
       "seriesName": "Bungo Stray Dogs BEAST",
@@ -78739,8 +78739,8 @@
     {
       "id": "pub_gaming_mouse_padspyfamilyc",
       "slug": "gaming-mouse-padspyfamilyc",
-      "title": "Gaming Mouse Pad-Spy\u00d7Familyc",
-      "originalTitle": "Gaming Mouse Pad-Spy\u00d7Familyc",
+      "title": "Gaming Mouse Pad-Spy×Familyc",
+      "originalTitle": "Gaming Mouse Pad-Spy×Familyc",
       "seriesId": null,
       "seriesName": null,
       "volume": null,
@@ -81639,8 +81639,8 @@
     {
       "id": "ser_bleach-cant-fear-your-own-world",
       "slug": "bleach-cant-fear-your-own-world",
-      "name": "BLEACH \u2013 Can\u2019t Fear Your Own World",
-      "originalTitle": "BLEACH \u2013 Can\u2019t Fear Your Own World",
+      "name": "BLEACH – Can’t Fear Your Own World",
+      "originalTitle": "BLEACH – Can’t Fear Your Own World",
       "publisherId": "pub_mnc",
       "publisherName": "m&c! Publishing",
       "author": "Narita Ryohgo",
@@ -84881,8 +84881,8 @@
     {
       "id": "ser_hope-youre-happy-lemon",
       "slug": "hope-youre-happy-lemon",
-      "name": "Hope You\u2019re Happy, Lemon",
-      "originalTitle": "Hope You\u2019re Happy, Lemon",
+      "name": "Hope You’re Happy, Lemon",
+      "originalTitle": "Hope You’re Happy, Lemon",
       "publisherId": "pub_elex",
       "publisherName": "Elex Media Komputindo",
       "author": "Kishikawa Mizuki",
@@ -85312,8 +85312,8 @@
     {
       "id": "ser_ito-junji-compilation-tomie-part",
       "slug": "ito-junji-compilation-tomie-part",
-      "name": "Ito Junji Compilation \u2013 Tomie Part",
-      "originalTitle": "Ito Junji Compilation \u2013 Tomie Part",
+      "name": "Ito Junji Compilation – Tomie Part",
+      "originalTitle": "Ito Junji Compilation – Tomie Part",
       "publisherId": "pub_mnc",
       "publisherName": "m&c! Publishing",
       "author": "Ito Junji",
@@ -86596,7 +86596,7 @@
       "originalTitle": "La Galigo",
       "publisherId": "pub_elex",
       "publisherName": "Elex Media Komputindo",
-      "author": "R\u00e9tna Kencana Colliq Puji\u00e9 Arung Pancana Toa",
+      "author": "Rétna Kencana Colliq Pujié Arung Pancana Toa",
       "type": "MANGA",
       "status": "ONGOING",
       "totalVolumes": 3,
@@ -87308,8 +87308,8 @@
     {
       "id": "ser_mushoku-tensei-jobless-reincarnation",
       "slug": "mushoku-tensei-jobless-reincarnation",
-      "name": "Mushoku Tensei \u2013 Jobless Reincarnation",
-      "originalTitle": "Mushoku Tensei \u2013 Jobless Reincarnation",
+      "name": "Mushoku Tensei – Jobless Reincarnation",
+      "originalTitle": "Mushoku Tensei – Jobless Reincarnation",
       "publisherId": "pub_mnc",
       "publisherName": "m&c! Publishing",
       "author": "Rifujin Na Magonote",
@@ -89823,8 +89823,8 @@
     {
       "id": "ser_tamons-b-side",
       "slug": "tamons-b-side",
-      "name": "Tamon\u2019s B-Side",
-      "originalTitle": "Tamon\u2019s B-Side",
+      "name": "Tamon’s B-Side",
+      "originalTitle": "Tamon’s B-Side",
       "publisherId": "pub_mnc",
       "publisherName": "m&c! Publishing",
       "author": "Yuki Shiwasu",
