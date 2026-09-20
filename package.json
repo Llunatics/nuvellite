@@ -2,14 +2,16 @@
   "name": "nuvellite",
   "version": "1.0.0",
   "private": true,
-  "description": "Nuvellite — Clean, focused official Manga & Light Novel release tracker for Elex Media Komputindo, m&c!, and Phoenix Gramedia Indonesia",
+  "description": "Nuvellite \u2014 Clean, focused official Manga & Light Novel release tracker for Elex Media Komputindo, m&c!, and Phoenix Gramedia Indonesia",
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start -p 3001",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:catalog": "python3 scripts/auto-sync-catalog.py",
+    "sync:daemon": "python3 scripts/auto-sync-catalog.py --daemon"
   },
   "dependencies": {
     "clsx": "^2.1.1",
