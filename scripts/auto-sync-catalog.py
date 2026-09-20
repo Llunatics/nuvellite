@@ -470,8 +470,9 @@ def run_sync(catalog_path, scraped_data_path=None):
                 title = it.get('title', '').strip()
                 if not slug or not title or is_non_book(title):
                     continue
-                if any(pat in title.lower() for pat in DISALLOWED_PATTERNS):
-                    continue
+                if not any(e in title.lower() for e in VALID_EXCEPTIONS):
+                    if MERCHANDISE_REGEX.search(title) or NON_MANGA_LN_REGEX.search(title):
+                        continue
                 if slug not in discovered_products:
                     discovered_products[slug] = (it, None, None, None)
                     cat_count += 1
@@ -519,8 +520,9 @@ def run_sync(catalog_path, scraped_data_path=None):
                 title = it.get('title', '').strip()
                 if not slug or not title or is_non_book(title):
                     continue
-                if any(pat in title.lower() for pat in DISALLOWED_PATTERNS):
-                    continue
+                if not any(e in title.lower() for e in VALID_EXCEPTIONS):
+                    if MERCHANDISE_REGEX.search(title) or NON_MANGA_LN_REGEX.search(title):
+                        continue
                 found_items.append(it)
             total_p = data.get('meta', {}).get('total_page', 1)
             if p >= total_p:
@@ -577,8 +579,9 @@ def run_sync(catalog_path, scraped_data_path=None):
 
     for slug, (it, d_pid, d_pname, d_pshort) in discovered_products.items():
         title = it.get('title', '').strip()
-        if any(pat in title.lower() for pat in DISALLOWED_PATTERNS):
-            continue
+        if not any(e in title.lower() for e in VALID_EXCEPTIONS):
+            if MERCHANDISE_REGEX.search(title) or NON_MANGA_LN_REGEX.search(title):
+                continue
 
         specs = fetched_specs.get(slug) or {}
 
