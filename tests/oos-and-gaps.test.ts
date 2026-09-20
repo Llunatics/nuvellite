@@ -228,4 +228,62 @@ describe('Out of Stock, Gap Recovery & Catalog Reconciliation', () => {
     expect(specialOpt?.isAvailable).toBe(true);
     expect(specialOpt?.price).toBe(125000);
   });
+
+  it('should cleanly split Manga and Light Novel from the same franchise into separate series', () => {
+    const books: Book[] = [
+      {
+        ...baseBook,
+        id: 'b_ln1',
+        slug: 'light-novel-the-eminence-in-shadow-1',
+        title: 'Light Novel The Eminence in Shadow 1',
+        seriesName: 'The Eminence in Shadow',
+        volume: 1,
+        category: 'Light Novel',
+        format: 'LIGHT_NOVEL',
+        publisherId: 'pub_pgi',
+        currentPrice: 103500,
+        originalPrice: 103500,
+        availability: 'AVAILABLE',
+      },
+      {
+        ...baseBook,
+        id: 'b_manga14',
+        slug: 'the-eminence-in-shadow-14',
+        title: 'The Eminence in Shadow 14',
+        seriesName: 'The Eminence in Shadow',
+        volume: 14,
+        category: 'Manga',
+        format: 'MANGA',
+        publisherId: 'pub_pgi',
+        currentPrice: 58500,
+        originalPrice: 58500,
+        availability: 'AVAILABLE',
+      },
+    ];
+
+    const { canonicalBooks, seriesList } = consolidateCatalog({ books });
+    expect(seriesList.length).toBe(2);
+
+    const mangaSeries = seriesList.find((s) => s.id === 'ser_the-eminence-in-shadow-manga');
+    const lnSeries = seriesList.find((s) => s.id === 'ser_the-eminence-in-shadow-ln');
+
+    expect(mangaSeries).toBeDefined();
+    expect(mangaSeries?.type).toBe('MANGA');
+    expect(mangaSeries?.name).toBe('The Eminence in Shadow');
+
+    expect(lnSeries).toBeDefined();
+    expect(lnSeries?.type).toBe('LIGHT_NOVEL');
+    expect(lnSeries?.name).toBe('The Eminence in Shadow (Novel)');
+
+    const mangaBook = canonicalBooks.find((b) => b.id === 'b_manga14');
+    const lnBook = canonicalBooks.find((b) => b.id === 'b_ln1');
+
+    expect(mangaBook?.seriesId).toBe('ser_the-eminence-in-shadow-manga');
+    expect(mangaBook?.category).toBe('Manga');
+    expect(mangaBook?.format).toBe('MANGA');
+
+    expect(lnBook?.seriesId).toBe('ser_the-eminence-in-shadow-ln');
+    expect(lnBook?.category).toBe('Light Novel');
+    expect(lnBook?.format).toBe('LIGHT_NOVEL');
+  });
 });

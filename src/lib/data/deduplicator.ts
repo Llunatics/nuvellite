@@ -35,6 +35,36 @@ export interface ConsolidationResult {
 export function consolidateCatalog(options: ConsolidateOptions): ConsolidationResult {
   const { books, existingSeriesMap = {} } = options;
 
+  function determineBookMedium(b: Book): 'LIGHT_NOVEL' | 'MOVIE' | 'MANGA' {
+    const tLower = (b.title || '').toLowerCase();
+    if (tLower.includes('movie') || tLower.includes('movie story')) {
+      return 'MOVIE';
+    }
+
+    const hasLNToken = /\b(?:light\s*novel|\(novel\))\b/i.test(b.title) ||
+      b.genres?.some(g => g.toLowerCase().includes('light novel') || g.toLowerCase() === 'novel');
+    const isCloverNovel = b.publisherId === 'pub_mnc' && (
+      tLower.includes('clover') ||
+      b.genres?.some(g => g.toLowerCase().includes('novel') || g.toLowerCase().includes('fiksi ilmiah'))
+    );
+
+    // For PGI (Phoenix Gramedia): Light Novels always explicitly include "Light Novel" or "(Novel)" in the title.
+    // PGI Manga releases do NOT contain "Light Novel" in title (e.g. "The Eminence in Shadow 14").
+    if (b.publisherId === 'pub_pgi') {
+      return hasLNToken ? 'LIGHT_NOVEL' : 'MANGA';
+    }
+
+    if (hasLNToken || isCloverNovel) {
+      return 'LIGHT_NOVEL';
+    }
+
+    if (b.category === 'Light Novel' && !/\b(?:komik|manga|level comic|lc:)\b/i.test(tLower)) {
+      return 'LIGHT_NOVEL';
+    }
+
+    return 'MANGA';
+  }
+
   // 1. Identify all mediums per base franchise
   const franchiseMediums: Record<string, Set<string>> = {};
   const franchiseCanonicalNames: Record<string, string> = {};
@@ -49,13 +79,7 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
       franchiseCanonicalNames[slug] = canonicalName;
     }
 
-    const tLower = b.title.toLowerCase();
-    let medium = 'MANGA';
-    if (b.category === 'Light Novel' || tLower.includes('light novel') || tLower.includes('(novel)')) {
-      medium = 'LIGHT_NOVEL';
-    } else if (tLower.includes('movie') || tLower.includes('movie story')) {
-      medium = 'MOVIE';
-    }
+    const medium = determineBookMedium(b);
     franchiseMediums[slug].add(medium);
   }
 
@@ -65,19 +89,12 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     const { slug: baseSlug } = cleanBaseFranchise(sname);
     const baseName = franchiseCanonicalNames[baseSlug] || sname;
 
-    const tLower = b.title.toLowerCase();
-    let medium = 'MANGA';
-    if (b.category === 'Light Novel' || tLower.includes('light novel') || tLower.includes('(novel)')) {
-      medium = 'LIGHT_NOVEL';
-    } else if (tLower.includes('movie') || tLower.includes('movie story')) {
-      medium = 'MOVIE';
-    }
-
+    const medium = determineBookMedium(b);
     const hasMultipleMediums = (franchiseMediums[baseSlug]?.size || 0) > 1;
 
     let sid = `ser_${baseSlug}`;
     let sDisplay = baseName;
-    let category = b.category;
+    let category: Book['category'] = b.category;
 
     if (hasMultipleMediums) {
       if (medium === 'LIGHT_NOVEL') {
@@ -102,7 +119,7 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
       seriesId: sid,
       seriesName: sDisplay,
       category,
-      format: category === 'Light Novel' ? 'LIGHT_NOVEL' : 'MANGA',
+      format: (category === 'Light Novel' ? 'LIGHT_NOVEL' : 'MANGA') as BookFormat,
     };
   });
 

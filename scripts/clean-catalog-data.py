@@ -187,21 +187,12 @@ def run_cleanup():
         if s and (not b.get('seriesName') or len(b.get('seriesName', '')) < 3):
             b['seriesName'] = s
 
-        # Keep original category if it was already valid Manga / Light Novel
-        if 'light novel' in t_lower or '(novel)' in t_lower or b.get('category') == 'Light Novel':
-            b['category'] = 'Light Novel'
-            b['format'] = 'LIGHT_NOVEL'
-        else:
-            b['category'] = 'Manga'
-            b['format'] = 'MANGA'
-
         # Ensure gramediaUrl is always valid
         if not b.get('gramediaUrl') or not b['gramediaUrl'].startswith('https://www.gramedia.com/products/'):
             b['gramediaUrl'] = f"https://www.gramedia.com/products/{b['slug']}"
 
         b['classificationStatus'] = 'ACCEPTED'
         b['classificationConfidence'] = 0.95
-        b['classificationReason'] = f"Official {b['category']} release verified"
 
         valid_books.append(b)
 
@@ -211,6 +202,32 @@ def run_cleanup():
         print(f"  - {s[0]} ({s[1]}, was: {s[2]})")
 
     print(f"\nRemaining valid books: {len(valid_books)}")
+
+    def determine_book_medium(b):
+        title = (b.get('title') or '').strip()
+        t_lower = title.lower()
+        if 'movie' in t_lower or 'movie story' in t_lower:
+            return 'MOVIE'
+
+        has_ln_token = 'light novel' in t_lower or '(novel)' in t_lower
+        genres = [str(g).lower() for g in b.get('genres', [])]
+        pub_id = b.get('publisherId', '')
+
+        if pub_id == 'pub_pgi':
+            return 'LIGHT_NOVEL' if has_ln_token else 'MANGA'
+
+        is_clover_novel = pub_id == 'pub_mnc' and (
+            'clover' in t_lower or
+            any('novel' in g or 'fiksi ilmiah' in g for g in genres) or
+            t_lower.startswith('eighty six')
+        )
+        if has_ln_token or is_clover_novel:
+            return 'LIGHT_NOVEL'
+
+        if b.get('category') == 'Light Novel' and not any(k in t_lower for k in ['komik', 'manga', 'level comic', 'lc:']):
+            return 'LIGHT_NOVEL'
+
+        return 'MANGA'
 
     # Dynamic Franchise Separation (Manga vs LN vs Movie)
     franchise_mediums = defaultdict(set)
@@ -222,39 +239,25 @@ def run_cleanup():
         if base_slug:
             if base_slug not in franchise_canonical_names:
                 franchise_canonical_names[base_slug] = base_name
-
-            t_lower = b['title'].lower()
-            if b.get('category') == 'Light Novel' or '(novel)' in t_lower or 'light novel' in t_lower:
-                medium = 'LIGHT_NOVEL'
-            elif 'movie' in t_lower or 'movie story' in t_lower:
-                medium = 'MOVIE'
-            else:
-                medium = 'MANGA'
-            franchise_mediums[base_slug].add(medium)
+            med = determine_book_medium(b)
+            franchise_mediums[base_slug].add(med)
 
     # Assign medium-separated seriesId and seriesName
     for b in valid_books:
         sname = b.get('seriesName') or b.get('title')
         base_slug, _ = clean_base_franchise(sname)
         base_name = franchise_canonical_names.get(base_slug, sname)
-
-        t_lower = b['title'].lower()
-        if b.get('category') == 'Light Novel' or '(novel)' in t_lower or 'light novel' in t_lower:
-            medium = 'LIGHT_NOVEL'
-        elif 'movie' in t_lower or 'movie story' in t_lower:
-            medium = 'MOVIE'
-        else:
-            medium = 'MANGA'
+        med = determine_book_medium(b)
 
         has_multiple = len(franchise_mediums[base_slug]) > 1
 
         if has_multiple:
-            if medium == 'LIGHT_NOVEL':
+            if med == 'LIGHT_NOVEL':
                 sid = f"ser_{base_slug}-ln"
                 s_display = f"{base_name} (Novel)"
                 b['category'] = 'Light Novel'
                 b['format'] = 'LIGHT_NOVEL'
-            elif medium == 'MOVIE':
+            elif med == 'MOVIE':
                 sid = f"ser_{base_slug}-movie"
                 s_display = f"{base_name} Movie"
                 b['category'] = 'Manga'
@@ -267,11 +270,16 @@ def run_cleanup():
         else:
             sid = f"ser_{base_slug}"
             s_display = base_name
-            b['category'] = 'Light Novel' if medium == 'LIGHT_NOVEL' else 'Manga'
-            b['format'] = 'LIGHT_NOVEL' if medium == 'LIGHT_NOVEL' else 'MANGA'
+            b['category'] = 'Light Novel' if med == 'LIGHT_NOVEL' else 'Manga'
+            b['format'] = 'LIGHT_NOVEL' if med == 'LIGHT_NOVEL' else 'MANGA'
 
         b['seriesId'] = sid
         b['seriesName'] = s_display
+        b['classificationReason'] = f"Official {b['category']} release verified"
+        b['availability'] = b.get('availability') or ('OUT_OF_STOCK' if b.get('is_oos') else 'AVAILABLE')
+        b['status'] = b.get('status') or 'PUBLISHED'
+        b['currentPrice'] = b.get('currentPrice') or 0
+        b['originalPrice'] = b.get('originalPrice') or b['currentPrice']
 
     # Dynamic Set & Edition Consolidation
     series_vol_map = defaultdict(list)

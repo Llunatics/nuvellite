@@ -124,18 +124,85 @@ def is_wednesday(date_str):
     except Exception:
         return False
 
-def classify_book(title, pub_id, cat_slugs='', existing_cat=None):
+def determine_book_medium(b):
+    title = (b.get('title') or '').strip()
+    t_lower = title.lower()
+    if 'movie' in t_lower or 'movie story' in t_lower:
+        return 'MOVIE'
+
+    has_ln_token = 'light novel' in t_lower or '(novel)' in t_lower
+    genres = [str(g).lower() for g in b.get('genres', [])]
+    pub_id = b.get('publisherId', '')
+
+    # PGI: Phoenix Gramedia Indonesia explicitly includes "Light Novel" or "(Novel)" in LN releases.
+    # PGI Manga releases do NOT have "Light Novel" in the title (e.g. "The Eminence in Shadow 14").
+    if pub_id == 'pub_pgi':
+        return 'LIGHT_NOVEL' if has_ln_token else 'MANGA'
+
+    # m&c! Clover imprint / Light Novel
+    is_clover_novel = pub_id == 'pub_mnc' and (
+        'clover' in t_lower or
+        any('novel' in g or 'fiksi ilmiah' in g for g in genres) or
+        title.lower().startswith('eighty six')
+    )
+    if has_ln_token or is_clover_novel:
+        return 'LIGHT_NOVEL'
+
+    if b.get('category') == 'Light Novel' and not any(k in t_lower for k in ['komik', 'manga', 'level comic', 'lc:']):
+        return 'LIGHT_NOVEL'
+
+    return 'MANGA'
+
+def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None):
     t_lower = title.lower()
 
     if MERCHANDISE_REGEX.search(title) or NON_MANGA_LN_REGEX.search(title):
         return 'REJECT', None, 'Matched non-manga / merchandise pattern'
 
-    is_ln = 'light novel' in t_lower or '(novel)' in t_lower or 'light-novel' in cat_slugs
-    if not is_ln and existing_cat == 'Light Novel':
-        is_ln = True
+    specs = specs or {}
+    imprint = (specs.get('Imprint') or specs.get('Penerbit') or '').lower()
+
+    has_ln_token = 'light novel' in t_lower or '(novel)' in t_lower or 'light-novel' in cat_slugs
+    is_clover = pub_id == 'pub_mnc' and ('clover' in t_lower or 'clover' in imprint or 'novel-6' in cat_slugs)
+
+    if pub_id == 'pub_pgi':
+        is_ln = has_ln_token
+    else:
+        is_ln = has_ln_token or is_clover
 
     category = 'Light Novel' if is_ln else 'Manga'
     return 'ACCEPT', category, f"Official {category} verified"
+
+def discover_sequence_gaps(existing_books, adapter):
+    series_books = defaultdict(list)
+    for b in existing_books:
+        sname = b.get('seriesName')
+        if sname and len(sname) >= 3:
+            series_books[sname].append(b)
+
+    gap_series = []
+    for sname, b_list in series_books.items():
+        vols = [b['volume'] for b in b_list if b.get('volume') is not None]
+        if not vols:
+            continue
+        max_v = max(vols)
+        # If series has at least 3 volumes and some volumes are missing
+        if max_v >= 3 and len(set(vols)) < max_v:
+            gap_series.append((sname, max_v - len(set(vols))))
+
+    gap_series.sort(key=lambda x: x[1], reverse=True)
+    print(f"  -> [GAP_DISCOVERY] Found {len(gap_series)} series with missing sequence volumes.")
+
+    gap_products = []
+    for sname, missing_count in gap_series[:15]: # Search top series with gaps
+        print(f"     Searching backlist/OOS for '{sname}' ({missing_count} missing volumes)...")
+        try:
+            prods = adapter.search_products(sname, is_available_only=False, max_pages=3)
+            gap_products.extend(prods)
+        except Exception as e:
+            print(f"     [GAP_QUERY_ERROR] {sname}: {e}")
+
+    return gap_products
 
 def run_sync(catalog_path):
     start_time = time.time()
@@ -163,20 +230,21 @@ def run_sync(catalog_path):
     ]
 
     total_products_fetched = 0
-    accepted_products = {} # slug -> (item_data, adapter)
+    accepted_products = {} # slug -> (item_data, adapter, cat)
     rejected_count = 0
     errors = []
 
+    # 1. Vendor feed discovery
     for adapter in adapters:
         print(f"  -> [SOURCE_FETCH] Querying vendor feed for {adapter.publisher_name} ({adapter.publisher_short})...")
         try:
-            products = adapter.fetch_vendor_products(max_pages=8)
+            products = adapter.fetch_vendor_products(max_pages=20)
             total_products_fetched += len(products)
             print(f"     Discovered {len(products)} products from {adapter.publisher_short}.")
 
             for item in products:
                 slug = item.get('slug')
-                title = item.get('title', '').strip()
+                title = (item.get('title') or item.get('name') or '').strip()
                 if not slug or not title:
                     continue
 
@@ -192,6 +260,34 @@ def run_sync(catalog_path):
             print(f"     [ERROR] {err_msg}")
             errors.append(err_msg)
 
+    # 2. Sequence gap discovery for missing/OOS volumes
+    try:
+        gap_products = discover_sequence_gaps(existing_books_map.values(), adapters[0])
+        print(f"     Discovered {len(gap_products)} candidate products from gap search.")
+        for item in gap_products:
+            slug = item.get('slug')
+            title = (item.get('title') or item.get('name') or '').strip()
+            if not slug or not title or slug in accepted_products:
+                continue
+
+            # Determine publisher adapter
+            pub_name = (item.get('author') or '').lower()
+            adapter = adapters[0] # default Elex
+            if 'phoenix' in pub_name or 'pgi' in pub_name:
+                adapter = adapters[2]
+            elif 'm&c' in pub_name or 'clover' in pub_name or 'akasha' in pub_name:
+                adapter = adapters[1]
+
+            status, cat, reason = classify_book(title, adapter.publisher_id)
+            if status == 'REJECT':
+                rejected_count += 1
+                continue
+
+            accepted_products[slug] = (item, adapter, cat)
+            total_products_fetched += 1
+    except Exception as e:
+        print(f"     [ERROR in gap discovery]: {e}")
+
     # Empty Catalog Safety Check:
     if total_products_fetched == 0 and len(existing_books_map) > 0:
         print(f"[WARNING] [EMPTY_CATALOG_SAFETY] 0 products fetched from sources. Preserving last-known-good catalog.")
@@ -199,11 +295,11 @@ def run_sync(catalog_path):
 
     print(f"  -> [CLASSIFICATION_COMPLETE] Accepted: {len(accepted_products)}, Rejected: {rejected_count}")
 
-    # Fetch live specs for new or updated products concurrently
+    # 3. Concurrently fetch specs for new or updated products
     to_fetch_specs = []
     for slug, (item, adapter, cat) in accepted_products.items():
         ex = existing_books_map.get(slug)
-        if not ex or not ex.get('isbn13') or not ex.get('releaseDate'):
+        if not ex or not ex.get('isbn13') or not ex.get('releaseDate') or ex.get('availability') == 'OUT_OF_STOCK':
             to_fetch_specs.append((slug, adapter))
 
     print(f"  -> Concurrently fetching specs for {len(to_fetch_specs)} products...")
@@ -221,13 +317,13 @@ def run_sync(catalog_path):
                 sp['synopsis'] = syn
                 fetched_specs[slug] = sp
 
-    # Integrate into canonical catalog
+    # 4. Ingest and update books
     inserted_count = 0
     updated_count = 0
     new_snapshots = []
 
     for slug, (item, adapter, cat) in accepted_products.items():
-        title = item.get('title', '').strip()
+        title = (item.get('title') or item.get('name') or '').strip()
         sp = fetched_specs.get(slug) or {}
         slice_price = sp.get('original_price') or item.get('slice_price') or 0
         final_price = sp.get('price') or item.get('final_price') or slice_price or 0
@@ -242,12 +338,20 @@ def run_sync(catalog_path):
         isbn = sp.get('isbn13') or ''
         synopsis = sp.get('synopsis') or ''
 
+        # Extract publisher if provided in specs
+        spec_pub = (sp.get('publisher') or '').lower()
+        if 'phoenix' in spec_pub or 'pgi' in spec_pub:
+            adapter = adapters[2]
+        elif 'm&c' in spec_pub or 'clover' in spec_pub:
+            adapter = adapters[1]
+        elif 'elex' in spec_pub:
+            adapter = adapters[0]
+
         vol, sname = parse_title_smart(title)
         book_id = f"pub_{slug.replace('-', '_')}"
 
         if slug in existing_books_map:
             b = existing_books_map[slug]
-            # Check price change for snapshot
             if b.get('currentPrice') and current_price and b['currentPrice'] != current_price:
                 snap = {
                     'id': f"snap_{b['id']}_{int(time.time())}",
@@ -262,7 +366,6 @@ def run_sync(catalog_path):
                 }
                 new_snapshots.append(snap)
                 b['currentPrice'] = current_price
-                print(f"     [PRICE_CHANGED] {b['title']}: {b['currentPrice']} -> {current_price}")
 
             b['originalPrice'] = original_price
             b['availability'] = availability
@@ -309,7 +412,6 @@ def run_sync(catalog_path):
             existing_books_map[slug] = new_book
             inserted_count += 1
 
-            # Initial price snapshot
             new_snapshots.append({
                 'id': f"snap_{book_id}_init",
                 'bookId': book_id,
@@ -321,9 +423,120 @@ def run_sync(catalog_path):
                 'source': 'gramedia_api'
             })
 
-    # Save catalog
+    # 5. Dynamic Franchise Medium Separation (Manga vs Light Novel vs Movie)
+    all_books = list(existing_books_map.values())
+    franchise_mediums = defaultdict(set)
+    franchise_canonical_names = {}
+
+    for b in all_books:
+        sname = b.get('seriesName') or b.get('title')
+        base_slug, base_name = clean_base_franchise(sname)
+        if base_slug:
+            if base_slug not in franchise_canonical_names:
+                franchise_canonical_names[base_slug] = base_name
+            med = determine_book_medium(b)
+            franchise_mediums[base_slug].add(med)
+
+    for b in all_books:
+        sname = b.get('seriesName') or b.get('title')
+        base_slug, _ = clean_base_franchise(sname)
+        base_name = franchise_canonical_names.get(base_slug, sname)
+        med = determine_book_medium(b)
+
+        has_multiple = len(franchise_mediums[base_slug]) > 1
+
+        if has_multiple:
+            if med == 'LIGHT_NOVEL':
+                sid = f"ser_{base_slug}-ln"
+                s_display = f"{base_name} (Novel)"
+                b['category'] = 'Light Novel'
+                b['format'] = 'LIGHT_NOVEL'
+            elif med == 'MOVIE':
+                sid = f"ser_{base_slug}-movie"
+                s_display = f"{base_name} Movie"
+                b['category'] = 'Manga'
+                b['format'] = 'MANGA'
+            else:
+                sid = f"ser_{base_slug}-manga"
+                s_display = base_name
+                b['category'] = 'Manga'
+                b['format'] = 'MANGA'
+        else:
+            sid = f"ser_{base_slug}"
+            s_display = base_name
+            b['category'] = 'Light Novel' if med == 'LIGHT_NOVEL' else 'Manga'
+            b['format'] = 'LIGHT_NOVEL' if med == 'LIGHT_NOVEL' else 'MANGA'
+
+        b['seriesId'] = sid
+        b['seriesName'] = s_display
+
+    # 6. Reconstruct Series metadata
+    series_groups = defaultdict(list)
+    for b in all_books:
+        if b.get('seriesId'):
+            series_groups[b['seriesId']].append(b)
+
+    new_series_list = []
+    for sid, b_list in series_groups.items():
+        sample = b_list[0]
+        cat = sample['category']
+        pub_id = sample['publisherId']
+        pub_name = sample['publisherName']
+
+        vols = [b['volume'] for b in b_list if b.get('volume') is not None]
+        avail_vols = sorted(list(set(vols))) if vols else []
+        latest_vol = max(avail_vols) if avail_vols else 1
+
+        ex = existing_series_map.get(sid)
+        if ex and ex.get('totalVolumes'):
+            total_vols = max(ex['totalVolumes'], latest_vol, len(b_list))
+            latest_vol = max(ex.get('latestVolume', 0), latest_vol)
+            avail_vols = sorted(list(set(ex.get('availableVolumes', []) + avail_vols)))
+        else:
+            total_vols = max(len(avail_vols), latest_vol, len(b_list))
+
+        s_name = sample.get('seriesName') or sample.get('title')
+        cover = next((b['coverImage'] for b in b_list if b.get('coverImage')), '')
+        if not cover and ex:
+            cover = ex.get('coverImage', '')
+
+        author = sample.get('authors', ['Various Authors'])[0]
+        if (not author or author == 'Various Authors') and ex:
+            author = ex.get('author', author)
+
+        first_vol = next((b for b in b_list if b.get('volume') == 1 and len(b.get('synopsis', '')) > 50), None)
+        if not first_vol:
+            first_vol = next((b for b in b_list if len(b.get('synopsis', '')) > 50), b_list[0])
+        s_desc = first_vol.get('synopsis') or f"Diterbitkan resmi oleh {pub_name}."
+
+        series_obj = {
+            'id': sid,
+            'slug': sid.replace('ser_', ''),
+            'name': s_name,
+            'originalTitle': s_name,
+            'publisherId': pub_id,
+            'publisherName': pub_name,
+            'author': author,
+            'type': 'LIGHT_NOVEL' if cat == 'Light Novel' or sid.endswith('-ln') else 'MANGA',
+            'status': 'ONGOING',
+            'totalVolumes': total_vols,
+            'latestVolume': latest_vol,
+            'availableVolumes': avail_vols,
+            'coverImage': cover,
+            'description': s_desc
+        }
+        new_series_list.append(series_obj)
+
+    new_series_list.sort(key=lambda s: s['name'].lower())
+
+    # 7. Finalize and save
     finished_at = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
     duration_ms = int((time.time() - start_time) * 1000)
+
+    catalog['lastUpdated'] = finished_at
+    catalog['books'] = all_books
+    catalog['series'] = new_series_list
+    catalog['priceSnapshots'] = existing_price_snapshots + new_snapshots
 
     sync_run = {
         'id': f"sync_{int(time.time())}",

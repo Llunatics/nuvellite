@@ -185,5 +185,52 @@ describe('Multi-Signal Classification Engine', () => {
     expect(futurePgiManga.status).toBe('ACCEPTED');
     expect(futurePgiManga.category).toBe('Manga');
   });
+
+  it('should accurately differentiate Manga vs Light Novel for the same franchise (e.g. The Eminence in Shadow)', () => {
+    const pgiManga = classifyProduct({
+      title: 'The Eminence in Shadow 14',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+      price: 58500,
+    });
+    expect(pgiManga.status).toBe('ACCEPTED');
+    expect(pgiManga.category).toBe('Manga');
+    expect(pgiManga.format).toBe('MANGA');
+
+    const pgiLN = classifyProduct({
+      title: 'Light Novel The Eminence in Shadow 6',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+      price: 103500,
+    });
+    expect(pgiLN.status).toBe('ACCEPTED');
+    expect(pgiLN.category).toBe('Light Novel');
+    expect(pgiLN.format).toBe('LIGHT_NOVEL');
+  });
+
+  it('should correctly classify Clover (m&c!) releases as Light Novels', () => {
+    const eightySix1 = classifyProduct({
+      title: 'Eighty Six Ep. 1: Eighty Six',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      categorySlugs: 'novel-6',
+      specs: { Imprint: 'Clover', Penerbit: 'm&c!' },
+      price: 81000,
+    });
+    expect(eightySix1.status).toBe('ACCEPTED');
+    expect(eightySix1.category).toBe('Light Novel');
+    expect(eightySix1.format).toBe('LIGHT_NOVEL');
+
+    const eightySix2 = classifyProduct({
+      title: 'Eighty Six Ep. 2 : Run Trough the Battlefront',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      specs: { Imprint: 'Clover', Penerbit: 'm&c!' },
+      price: 73500,
+    });
+    expect(eightySix2.status).toBe('ACCEPTED');
+    expect(eightySix2.category).toBe('Light Novel');
+    expect(eightySix2.format).toBe('LIGHT_NOVEL');
+  });
 });
 

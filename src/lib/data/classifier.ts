@@ -77,6 +77,9 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
   let isLN = false;
   let isManga = false;
 
+  const specs = input.specs || {};
+  const imprint = (specs['Imprint'] || specs['Penerbit'] || '').toLowerCase();
+
   // Imprint and publisher signals
   if (pubId === 'pub_elex' || pubName.includes('elex')) {
     if (tLower.includes('level comic') || tLower.includes('lc:') || tLower.includes('lc :')) {
@@ -98,7 +101,7 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
       positiveSignals.push('Imprint resmi Koloni (m&c!)');
       isManga = true;
     }
-    if (tLower.includes('clover')) {
+    if (tLower.includes('clover') || imprint.includes('clover') || catSlugs.includes('novel-6')) {
       positiveSignals.push('Imprint resmi Clover (m&c!)');
       isLN = true;
     }
@@ -108,6 +111,8 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     }
   }
 
+  const hasVolumeNumbering = /\b(?:vol\.?|volume|jilid|ep\.?|episode|#)\s*\d+/i.test(title) || /\s+\d{1,3}$/.test(title);
+
   if (pubId === 'pub_pgi' || pubName.includes('phoenix gramedia') || pubName.includes('pgi')) {
     if (tLower.includes('light novel') || tLower.includes('light-novel') || catSlugs.includes('light-novel') || tLower.includes('(novel)')) {
       positiveSignals.push('Rilisan resmi Light Novel PGI / KADOKAWA');
@@ -115,15 +120,15 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     } else if (tLower.includes('manga') || tLower.includes('komik') || catSlugs.includes('manga') || catSlugs.includes('komik')) {
       positiveSignals.push('Rilisan resmi Manga PGI / KADOKAWA');
       isManga = true;
-    } else if (/\b(?:vol\.?|volume|jilid)\s*\d+/i.test(title)) {
-      // PGI release with volume structure is Manga
+    } else if (hasVolumeNumbering) {
+      // PGI release with volume structure is Manga if no Light Novel token is present
       positiveSignals.push('Rilisan resmi berlisensi PGI / KADOKAWA');
       isManga = true;
     }
   }
 
   // Format tokens
-  if (tLower.includes('light novel') || tLower.includes('(novel)') || catSlugs.includes('light-novel')) {
+  if (tLower.includes('light novel') || tLower.includes('(novel)') || catSlugs.includes('light-novel') || (isLN && !isManga)) {
     positiveSignals.push('Token format Light Novel dalam judul/kategori');
     isLN = true;
     isManga = false;
@@ -137,7 +142,7 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
   }
 
   // Volume or series structure
-  if (/\b(?:vol\.?|volume|jilid)\s*\d+/i.test(title)) {
+  if (hasVolumeNumbering) {
     positiveSignals.push('Struktur penomoran volume resmi terdeteksi');
   }
 

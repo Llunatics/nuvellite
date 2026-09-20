@@ -7,8 +7,9 @@ from datetime import datetime, timezone
 from abc import ABC, abstractmethod
 
 HEADERS = {
-    'User-Agent': 'nuvellite-engine/2.0 (Official Manga & Light Novel Tracker; https://nuvelll.id)',
-    'Accept': 'application/json'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 nuvellite-engine/2.0',
+    'Accept': 'application/vnd.gramedia.v3+json, application/json, */*;',
+    'X-Grmd-Device-Type': 'desktop'
 }
 
 MONTH_MAP = {
@@ -44,6 +45,30 @@ class BaseAdapter(ABC):
                 backoff = 0.2 * (attempt + 1)
                 time.sleep(backoff)
         return None
+
+    def search_products(self, keyword, is_available_only=False, max_pages=3):
+        products = []
+        page = 1
+        while page <= max_pages:
+            params = urllib.parse.urlencode({
+                'keyword': keyword,
+                'is_available_only': 'true' if is_available_only else 'false',
+                'page': page,
+                'size': 20
+            })
+            url = f'{self.base_api_url}/search-result-product?{params}'
+            data = self.fetch_json(url)
+            items = data.get('data', []) if data else []
+            if not items:
+                break
+            for it in items:
+                products.append(it)
+            total_page = (data.get('meta') or {}).get('total_page') or max_pages
+            if page >= total_page:
+                break
+            page += 1
+            time.sleep(0.05)
+        return products
 
     def parse_indonesian_date(self, date_str):
         if not date_str or not isinstance(date_str, str):
