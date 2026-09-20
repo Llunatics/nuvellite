@@ -57,7 +57,7 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         </div>
 
         {/* Floating Top Right: Volume Capsule Badge (Clean matching gray outline, NEVER for Merchandise) */}
-        {book.category !== 'Merchandise' && book.volume !== null && book.volume !== undefined && (
+        {book.volume !== null && book.volume !== undefined && (
           <div className="absolute top-2 right-2 z-10 pointer-events-none">
             <span className="px-2 py-0.5 rounded-full text-[8.5px] sm:text-[9px] font-mono font-semibold tracking-wider backdrop-blur-md shadow-sm bg-slate-900/85 text-slate-300 border border-slate-700/60">
               Vol. {book.volume}
@@ -80,8 +80,8 @@ export function ReleaseCard({ book }: ReleaseCardProps) {
         <div>
           {/* Publisher / Provider and Date */}
           <div className="flex items-center justify-between gap-1 text-[10px] text-editorial-muted font-mono mb-1">
-            <span className={`font-semibold truncate ${book.category === 'Merchandise' ? 'text-purple-400' : 'group-hover:text-accent transition-colors'}`}>
-              {book.category === 'Merchandise' ? 'Gramedia' : book.publisherShortName}
+            <span className={`font-semibold truncate group-hover:text-accent transition-colors`}>
+              {book.publisherShortName}
             </span>
             {book.releaseDate && (
               <span className="text-[9px] text-editorial-faint font-mono shrink-0">

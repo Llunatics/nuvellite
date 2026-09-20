@@ -26,7 +26,7 @@ export function SearchResultsView() {
   }, [searchParams]);
 
   // Formats & Filters
-  const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel' | 'Merchandise'>('ALL');
+  const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
 
@@ -66,7 +66,7 @@ export function SearchResultsView() {
       ALL: rawResults.length,
       Manga: rawResults.filter((b) => b.category === 'Manga').length,
       'Light Novel': rawResults.filter((b) => b.category === 'Light Novel').length,
-      Merchandise: rawResults.filter((b) => b.category === 'Merchandise').length,
+      
     };
   }, [rawResults]);
 
@@ -140,7 +140,7 @@ export function SearchResultsView() {
               type="text"
               value={inputVal}
               onChange={(e) => setInputVal(e.target.value)}
-              placeholder="Ketik judul komik, light novel, merchandise, pengarang..."
+              placeholder="Ketik judul komik, light novel, pengarang..."
               className="w-full pl-10 pr-10 py-3 rounded-2xl bg-surface-raised border border-slate-700/60 focus:border-accent focus:outline-none text-xs sm:text-sm text-editorial-title placeholder:text-editorial-faint transition-all shadow-inner"
               autoFocus={!activeQuery}
             />
@@ -194,7 +194,7 @@ export function SearchResultsView() {
           <div className="p-3 sm:p-4 rounded-2xl bg-surface border border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-3">
             {/* Format Segmented Buttons */}
             <div className="inline-flex p-1 rounded-xl bg-slate-900/80 border border-slate-800 text-xs overflow-x-auto scrollbar-none w-full sm:w-auto">
-              {(['ALL', 'Manga', 'Light Novel', 'Merchandise'] as const).map((fmt) => (
+              {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
                 <button
                   key={fmt}
                   type="button"
@@ -237,7 +237,7 @@ export function SearchResultsView() {
                 <option value="pub_elex">Elex Media</option>
                 <option value="pub_mnc">m&c! Publishing</option>
                 <option value="pub_pgi">Phoenix Gramedia (PGI)</option>
-                <option value="pub_gramedia">Gramedia Official</option>
+                
               </select>
 
               {/* Sort Selector */}

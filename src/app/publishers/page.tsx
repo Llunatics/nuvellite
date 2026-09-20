@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Penerbit & Penyedia Resmi — nuvellite',
-  description: 'Profil penerbit manga dan light novel resmi di Indonesia (Elex Media, m&c!, PGI) serta merchandise resmi oleh Gramedia.',
+  description: 'Profil penerbit manga dan light novel resmi di Indonesia (Elex Media, m&c!, PGI).',
 };
 
 export default function PublishersDirectoryPage() {
@@ -28,7 +28,7 @@ export default function PublishersDirectoryPage() {
           Tiga Penerbit Utama &amp; Penyedia Resmi di Indonesia
         </h1>
         <p className="text-xs sm:text-sm text-editorial-muted max-w-2xl">
-          Nuvellite secara eksklusif berfokus pada rilisan komik dan light novel berlisensi resmi dari tiga penerbit terkemuka, serta official merchandise anime &amp; manga yang disediakan oleh Gramedia.
+          Nuvellite secara eksklusif berfokus pada rilisan komik dan light novel berlisensi resmi dari tiga penerbit terkemuka.
         </p>
       </div>
 
@@ -88,42 +88,8 @@ export default function PublishersDirectoryPage() {
         </div>
       </div>
 
-      {/* Official Merchandise Provider (Gramedia) */}
-      {gramediaProvider && (
-        <div className="space-y-4">
-          <h2 className="text-sm font-mono uppercase tracking-wider text-editorial-faint font-bold px-1">
-            Penyedia Resmi Merchandise
-          </h2>
-          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-surface via-surface-raised/70 to-surface border border-purple-500/20 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="space-y-2 max-w-2xl">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-500/15 border border-purple-500/30 text-xs font-mono font-bold text-purple-300">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Disediakan oleh Gramedia</span>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold font-editorial text-editorial-title">
-                Gramedia Official Store — Anime &amp; Manga Merchandise
-              </h3>
-              <p className="text-xs sm:text-sm text-editorial-muted leading-relaxed">
-                Koleksi pernak-pernik resmi berlisensi langsung dari Muse Communication dan mitra resmi, meliputi postcard, poker card, gantungan kunci, pelindung mata, hingga aksesoris eksklusif.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full md:w-auto">
-              <div className="p-3.5 px-5 rounded-2xl bg-surface-sunken border border-border-subtle text-center">
-                <span className="text-[10px] font-mono text-editorial-faint block uppercase">Total Item</span>
-                <span className="text-xl font-mono font-bold text-purple-300">{merchBooks.length} merch</span>
-              </div>
-
-              <Link
-                href="/publishers/gramedia"
-                className="flex items-center justify-center gap-2 py-3 px-6 rounded-2xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold shadow-md transition-all"
-              >
-                <ShoppingBag className="w-4 h-4" />
-                <span>Lihat Semua Merchandise</span>
-              </Link>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
       )}
     </div>
   );

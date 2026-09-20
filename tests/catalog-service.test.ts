@@ -11,24 +11,24 @@ import {
 import { formatRupiah, formatDateWIB } from '../src/lib/formatters';
 
 describe('Nuvellite Catalog Integrity', () => {
-  it('should contain official publishers and Gramedia as merchandise provider', () => {
+  it('should contain official Indonesian manga and light novel publishers', () => {
     const publishers = getPublishers();
-    expect(publishers).toHaveLength(4);
+    expect(publishers).toHaveLength(3);
 
     const ids = publishers.map((p) => p.id);
     expect(ids).toContain('pub_elex');
     expect(ids).toContain('pub_mnc');
     expect(ids).toContain('pub_pgi');
-    expect(ids).toContain('pub_gramedia');
+    expect(ids).not.toContain('pub_gramedia');
   });
 
-  it('should only contain books with category Manga, Light Novel, or Merchandise', () => {
+  it('should only contain books with category Manga or Light Novel', () => {
     const books = getAllBooks();
     expect(books.length).toBeGreaterThan(2000);
 
     for (const book of books) {
-      expect(['Manga', 'Light Novel', 'Merchandise']).toContain(book.category);
-      expect(['pub_elex', 'pub_mnc', 'pub_pgi', 'pub_gramedia']).toContain(book.publisherId);
+      expect(['Manga', 'Light Novel']).toContain(book.category);
+      expect(['pub_elex', 'pub_mnc', 'pub_pgi']).toContain(book.publisherId);
       expect(book.title).toBeTruthy();
       expect(book.slug).toBeTruthy();
       // Verify gramediaUrl is always present for external store button
@@ -42,37 +42,25 @@ describe('Nuvellite Catalog Integrity', () => {
     }
   });
 
-  it('should strictly isolate Merchandise with Gramedia provider and null volume', () => {
+  it('should strictly exclude Merchandise to focus 100% on Manga and Light Novel', () => {
     const books = getAllBooks();
-    const merchItems = books.filter((b) => b.category === 'Merchandise');
-    expect(merchItems.length).toBeGreaterThan(15);
-
-    for (const item of merchItems) {
-      expect(item.category).toBe('Merchandise');
-      expect(item.publisherId).toBe('pub_gramedia');
-      expect(item.publisherShortName).toBe('Gramedia');
-      expect(item.volume).toBeNull();
-      expect(item.gramediaUrl).toBeTruthy();
-    }
+    const merchItems = books.filter((b) => (b.category as string) === 'Merchandise');
+    expect(merchItems).toHaveLength(0);
   });
 
-  it('should correctly calculate catalog stats including merchandise', () => {
+  it('should correctly calculate catalog stats', () => {
     const stats = getStats();
     expect(stats.totalBooks).toBeGreaterThan(2000);
     expect(stats.mangaCount).toBeGreaterThan(1500);
     expect(stats.lnCount).toBeGreaterThan(200);
-    expect(stats.merchCount).toBeGreaterThan(15);
+    expect(stats.merchCount).toBe(0);
     expect(stats.totalSeries).toBeGreaterThan(300);
-    expect(stats.publishers.gramedia).toBe(stats.merchCount);
   });
 
-  it('should search books and merchandise by title, author, or category', () => {
+  it('should search books by title, author, or category', () => {
     const frierenRes = searchCatalog('frieren');
     expect(frierenRes.length).toBeGreaterThan(0);
     expect(frierenRes[0].title.toLowerCase()).toContain('frieren');
-
-    const merchRes = searchCatalog('merchandise');
-    expect(merchRes.length).toBeGreaterThan(0);
   });
 
   it('should find book and series by slug', () => {

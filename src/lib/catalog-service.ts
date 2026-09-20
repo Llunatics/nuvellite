@@ -51,7 +51,7 @@ export function getSeriesBySlug(slug: string): Series | undefined {
 }
 
 export function getPublishers(): Publisher[] {
-  return data.publishers;
+  return data.publishers.filter((p) => p.id !== 'pub_gramedia');
 }
 
 export function getPublisherBySlug(slug: string): Publisher | undefined {
@@ -90,23 +90,20 @@ export function getUpcomingReleases(limit = 24): Book[] {
 export function getStats() {
   const mangaCount = data.books.filter((b) => b.category === 'Manga').length;
   const lnCount = data.books.filter((b) => b.category === 'Light Novel').length;
-  const merchCount = data.books.filter((b) => b.category === 'Merchandise').length;
   const elexCount = data.books.filter((b) => b.publisherId === 'pub_elex').length;
   const mncCount = data.books.filter((b) => b.publisherId === 'pub_mnc').length;
   const pgiCount = data.books.filter((b) => b.publisherId === 'pub_pgi').length;
-  const gramediaCount = data.books.filter((b) => b.publisherId === 'pub_gramedia').length;
 
   return {
     totalBooks: data.books.length,
     totalSeries: data.series.length,
     mangaCount,
     lnCount,
-    merchCount,
+    merchCount: 0,
     publishers: {
       elex: elexCount,
       mnc: mncCount,
       pgi: pgiCount,
-      gramedia: gramediaCount,
     },
     lastUpdated: data.lastUpdated,
   };

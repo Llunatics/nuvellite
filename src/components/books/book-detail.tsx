@@ -38,7 +38,7 @@ export function BookDetail({ book, seriesSiblings }: BookDetailProps) {
   const authorDisplay = authorNames.join(', ');
 
   const gramediaProductUrl = book.gramediaUrl || `https://www.gramedia.com/products/${book.slug}`;
-  const isMerch = book.category === 'Merchandise';
+  const isMerch = false;
 
   // Only show series link if series exists and isn't just identical to the item's title
   const hasDistinctSeries = Boolean(

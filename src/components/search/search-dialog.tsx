@@ -88,7 +88,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                 handleGoToSearch();
               }
             }}
-            placeholder="Ketik judul komik, light novel, merchandise, pengarang..."
+            placeholder="Ketik judul komik, light novel, pengarang..."
             className="flex-1 bg-transparent text-sm text-editorial-title placeholder:text-editorial-faint focus:outline-none"
           />
           {query && (
@@ -110,7 +110,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
         <div className="overflow-y-auto p-2 flex-1">
           {query.trim() === '' ? (
             <div className="py-8 text-center text-xs text-editorial-faint space-y-1">
-              <p className="font-medium text-editorial-muted">Cari di 2.700+ katalog Manga, Light Novel, dan Merchandise resmi</p>
+              <p className="font-medium text-editorial-muted">Cari di 2.700+ katalog Manga dan Light Novel resmi</p>
               <p>Tekan Enter untuk melihat semua hasil di halaman pencarian penuh.</p>
             </div>
           ) : results.length === 0 ? (
@@ -144,7 +144,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                           : 'bg-sky-500/10 border-sky-500/25 text-sky-400'
                       }`}
                     >
-                      {book.category === 'Merchandise' ? <Sparkles className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
+                      <BookOpen className="w-4 h-4" />
                     </div>
 
                     <div className="min-w-0 flex-1">
@@ -152,7 +152,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                         <span className="text-xs font-semibold text-editorial-title group-hover:text-accent transition-colors truncate">
                           {book.title}
                         </span>
-                        {book.category !== 'Merchandise' && book.volume !== null && book.volume !== undefined && (
+                        {book.volume !== null && book.volume !== undefined && (
                           <span className="shrink-0 px-1.5 py-0.2 rounded text-[9px] font-mono font-bold bg-surface border border-border-subtle text-editorial-muted">
                             Vol. {book.volume}
                           </span>

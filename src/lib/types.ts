@@ -4,7 +4,7 @@ export interface BookEdition {
   gramediaUrl?: string;
 }
 
-export type BookCategory = 'Manga' | 'Light Novel' | 'Merchandise';
+export type BookCategory = 'Manga' | 'Light Novel';
 
 export interface Publisher {
   id: string;

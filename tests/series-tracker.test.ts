@@ -50,7 +50,7 @@ describe('Series Deduplication & Merchandise Isolation', () => {
   it('should ensure all books with category Merchandise have null seriesId and null seriesName', () => {
     const books = getAllBooks();
     const merch = books.filter((b) => b.category === 'Merchandise');
-    expect(merch.length).toBeGreaterThan(15);
+    expect(merch.length).toBe(0);
 
     for (const item of merch) {
       expect(item.seriesId).toBeNull();

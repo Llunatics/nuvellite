@@ -85,7 +85,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   };
 
   // Filters
-  const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel' | 'Merchandise'>('ALL');
+  const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'AVAILABLE' | 'PREORDER'>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
@@ -591,7 +591,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
           {/* Format Segmented Tabs */}
           <div className="w-full sm:w-auto flex items-center p-1 rounded-xl bg-slate-900/80 border border-slate-800 text-xs overflow-x-auto scrollbar-none shrink-0">
-            {(['ALL', 'Manga', 'Light Novel', 'Merchandise'] as const).map((fmt) => (
+            {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
               <button
                 key={fmt}
                 type="button"
