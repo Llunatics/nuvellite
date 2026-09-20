@@ -3,20 +3,53 @@
 import { useState, useEffect, useCallback } from 'react';
 import { CollectionItem } from '@/lib/types';
 
-const STORAGE_KEY = 'nuvellite_collection_v1';
+const STORAGE_KEY_V2 = 'nuvellite_collection_v2';
+const STORAGE_KEY_V1 = 'nuvellite_collection_v1';
+const CURRENT_SCHEMA_VERSION = 2;
+
+export interface ExportPayload {
+  version: number;
+  exportedAt: string;
+  items: CollectionItem[];
+}
 
 export function useCollection() {
   const [items, setItems] = useState<CollectionItem[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
+  // Load and migrate
   useEffect(() => {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        setItems(JSON.parse(raw));
+      // 1. Try loading V2
+      const rawV2 = localStorage.getItem(STORAGE_KEY_V2);
+      if (rawV2) {
+        const parsed = JSON.parse(rawV2);
+        if (Array.isArray(parsed)) {
+          setItems(parsed);
+          setIsLoaded(true);
+          return;
+        }
+      }
+
+      // 2. Migration from V1 if V2 does not exist
+      const rawV1 = localStorage.getItem(STORAGE_KEY_V1);
+      if (rawV1) {
+        const parsedV1 = JSON.parse(rawV1);
+        if (Array.isArray(parsedV1)) {
+          const migrated: CollectionItem[] = parsedV1.map((item: any) => ({
+            bookId: String(item.bookId),
+            seriesId: item.seriesId ? String(item.seriesId) : undefined,
+            status: item.status === 'WISHLIST' ? 'WISHLIST' : 'OWNED',
+            addedAt: item.addedAt || new Date().toISOString(),
+          }));
+          setItems(migrated);
+          localStorage.setItem(STORAGE_KEY_V2, JSON.stringify(migrated));
+          setIsLoaded(true);
+          return;
+        }
       }
     } catch {
-      // Fallback
+      // Fallback on parse failure
     } finally {
       setIsLoaded(true);
     }
@@ -25,7 +58,7 @@ export function useCollection() {
   const save = useCallback((newItems: CollectionItem[]) => {
     setItems(newItems);
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(newItems));
+      localStorage.setItem(STORAGE_KEY_V2, JSON.stringify(newItems));
     } catch {
       // Storage full or quota exceeded
     }
@@ -57,7 +90,7 @@ export function useCollection() {
           next = [...prev, { bookId, seriesId, status: 'OWNED', addedAt: new Date().toISOString() }];
         }
         try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+          localStorage.setItem(STORAGE_KEY_V2, JSON.stringify(next));
         } catch {}
         return next;
       });
@@ -81,7 +114,7 @@ export function useCollection() {
           next = [...prev, { bookId, seriesId, status: 'WISHLIST', addedAt: new Date().toISOString() }];
         }
         try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+          localStorage.setItem(STORAGE_KEY_V2, JSON.stringify(next));
         } catch {}
         return next;
       });
@@ -96,33 +129,35 @@ export function useCollection() {
     [items]
   );
 
-  const getSeriesProgress = useCallback(
-    (seriesId: string, availableVols: number[]) => {
-      const ownedVols = new Set(
-        items.filter((i) => i.seriesId === seriesId && i.status === 'OWNED').map((i) => i.bookId)
-      );
-      const totalAvailable = availableVols.length || 1;
-      const ownedCount = items.filter((i) => i.seriesId === seriesId && i.status === 'OWNED').length;
-      const percentage = Math.min(100, Math.round((ownedCount / totalAvailable) * 100));
-
-      return {
-        ownedCount,
-        totalAvailable,
-        percentage,
-      };
-    },
-    [items]
-  );
-
-  const exportJSON = () => {
-    return JSON.stringify({ version: 1, exportedAt: new Date().toISOString(), items }, null, 2);
+  const exportJSON = (): string => {
+    const payload: ExportPayload = {
+      version: CURRENT_SCHEMA_VERSION,
+      exportedAt: new Date().toISOString(),
+      items,
+    };
+    return JSON.stringify(payload, null, 2);
   };
 
   const importJSON = (jsonStr: string): boolean => {
     try {
       const parsed = JSON.parse(jsonStr);
-      if (Array.isArray(parsed.items)) {
-        save(parsed.items);
+      let candidateItems: any[] = [];
+      if (Array.isArray(parsed)) {
+        candidateItems = parsed;
+      } else if (parsed && Array.isArray(parsed.items)) {
+        candidateItems = parsed.items;
+      }
+
+      if (candidateItems.length >= 0) {
+        const validated: CollectionItem[] = candidateItems
+          .filter((i) => i && typeof i.bookId === 'string')
+          .map((i) => ({
+            bookId: String(i.bookId),
+            seriesId: i.seriesId ? String(i.seriesId) : undefined,
+            status: i.status === 'WISHLIST' ? 'WISHLIST' : 'OWNED',
+            addedAt: i.addedAt || new Date().toISOString(),
+          }));
+        save(validated);
         return true;
       }
     } catch {}
@@ -146,7 +181,6 @@ export function useCollection() {
     toggleOwned,
     toggleWishlist,
     getSeriesOwnedCount,
-    getSeriesProgress,
     exportJSON,
     importJSON,
     clearAll,

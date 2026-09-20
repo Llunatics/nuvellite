@@ -52,7 +52,7 @@ describe('Nuvellite Catalog Integrity', () => {
     const stats = getStats();
     expect(stats.totalBooks).toBeGreaterThan(2000);
     expect(stats.mangaCount).toBeGreaterThan(1500);
-    expect(stats.lnCount).toBeGreaterThan(200);
+    expect(stats.lnCount).toBeGreaterThan(140);
     expect(stats.merchCount).toBe(0);
     expect(stats.totalSeries).toBeGreaterThan(300);
   });

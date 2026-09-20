@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getBookBySlug, getBooksBySeries } from '@/lib/catalog-service';
+import { getBookBySlug, getBooksBySeries, getPriceSummary, getYouMayAlsoLike } from '@/lib/catalog-service';
 import { BookDetail } from '@/components/books/book-detail';
 import type { Metadata } from 'next';
 
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${book.title} — nuvellite`,
-    description: `Rilisan resmi ${book.category} terbitan ${book.publisherName}. Cek harga resmi, tanggal rilis, dan volume buku.`,
+    description: `Rilisan resmi ${book.category} terbitan ${book.publisherName}. Cek harga resmi, tanggal rilis, sinopsis, dan volume buku.`,
   };
 }
 
@@ -27,10 +27,17 @@ export default async function BookDetailPage({ params }: PageProps) {
   }
 
   const seriesSiblings = book.seriesId ? getBooksBySeries(book.seriesId) : [];
+  const recommendations = getYouMayAlsoLike(book, 6);
+  const priceSummary = getPriceSummary(book);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <BookDetail book={book} seriesSiblings={seriesSiblings} />
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <BookDetail
+        book={book}
+        seriesSiblings={seriesSiblings}
+        recommendations={recommendations}
+        priceSummary={priceSummary}
+      />
     </div>
   );
 }

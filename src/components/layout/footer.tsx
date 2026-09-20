@@ -12,13 +12,13 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-4 text-[11px] text-editorial-faint">
-          <Link href="/publishers/elex" className="hover:text-editorial-title transition-colors">
+          <Link href="/?publisher=pub_elex" className="hover:text-editorial-title transition-colors">
             Elex Media
           </Link>
-          <Link href="/publishers/mnc" className="hover:text-editorial-title transition-colors">
+          <Link href="/?publisher=pub_mnc" className="hover:text-editorial-title transition-colors">
             m&amp;c!
           </Link>
-          <Link href="/publishers/pgi" className="hover:text-editorial-title transition-colors">
+          <Link href="/?publisher=pub_pgi" className="hover:text-editorial-title transition-colors">
             Phoenix Gramedia
           </Link>
           <Link href="/calendar" className="hover:text-editorial-title transition-colors">

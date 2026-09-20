@@ -1,89 +1,110 @@
-# nuvellite — Official Manga & Light Novel Release Tracker
+# nuvellite
 
-**nuvellite** adalah aplikasi web modern, berkecepatan tinggi, dan terfokus **100% eksklusif** untuk melacak seluruh rilisan resmi **Manga (Komik)** dan **Light Novel** di Indonesia dari tiga penerbit resmi terkemuka:
-1. **Elex Media Komputindo** (Elex Manga, Level Comics)
-2. **m&c! Publishing** (m&c! Comics, Akasha, Koloni)
-3. **Phoenix Gramedia Indonesia (PGI)** (Kadokawa Official Joint Venture)
+Pelacak rilisan resmi Manga dan Light Novel berlisensi di Indonesia untuk tiga penerbit utama: **Elex Media Komputindo** (termasuk Level Comics), **m&c! Publishing** (termasuk Akasha dan Koloni), serta **Phoenix Gramedia Indonesia (PGI / Kadokawa)**.
 
----
-
-## ✨ Fitur Unggulan
-
-- **Fokus Murni Manga & Light Novel**:
-  - **Zero Merchandise**: Seluruh merchandise (gantungan kunci, poster, standing acryl, bookmark, tas, dsb.) diisolasi dan disingkirkan dari katalog.
-  - **Zero Non-Manga/LN**: Buku umum, novel sastra barat, buku medis, agama, ensiklopedia anak, dan buku non-fiksi yang diterbitkan grup Gramedia disaring secara dinamis tanpa mencemari katalog.
-- **Sinopsis Cerita Otentik & Bersih**:
-  - Sinopsis cerita diambil langsung secara dinamis dari endpoint metadata resmi Gramedia.
-  - Diproses otomatis menggunakan filter pembersih untuk membuang teks disclaimer (*"Disclaimer: Cerita dalam komik ini..."*), rincian spesifikasi fisik, dan teks ajakan promosi belanja (*"Yuk segera dapatkan..."*), menyisakan murni sinopsis naratif cerita.
-- **Pemisahan Cerdas Multi-Format (Manga vs Light Novel)**:
-  - Judul dengan franchise yang sama namun berbeda medium (seperti *Alya Sometimes Hides Her Feelings in Russian*, *Classroom of the Elite*, dan *Detektif Conan*) otomatis dipisahkan menjadi seri Manga dan seri Light Novel yang independen.
-- **Konsolidasi Set & Edisi Khusus**:
-  - Edisi bundling (*Special Set*, *Birthday Set*, *Limited Edition*) otomatis dikonsolidasikan ke dalam kartu volume reguler yang bersangkutan sebagai pilihan edisi, mencegah duplikasi judul yang membingungkan.
-- **Dynamic Sequence Gap & Out-of-Stock Recovery**:
-  - Algoritma pemulihan backlog dinamis yang secara otomatis mencari volume-volume awal yang hilang atau berstatus *out-of-stock* (stok kosong) di Gramedia.com agar kelengkapan nomor volume seri tidak terputus/bolong.
-- **Rabu Rilis Radar**:
-  - Deteksi otomatis untuk jadwal rilis komik rutin hari Rabu (ciri khas rilis mingguan Elex Media & m&c!).
-- **Pelacak Seri & Missing Volume Detector**:
-  - Cek instan kelengkapan volume: lacak persentase kelengkapan koleksi Anda dan temukan nomor volume berapa saja yang belum Anda miliki.
-- **Pencarian Kilat & Halaman Hasil Pencarian (Cmd/Ctrl + K)**:
-  - Pencarian fleksibel berbasis judul romaji, judul Indonesia, nomor volume, pengarang, penerbit, dan ISBN-13. Tekan Enter untuk membuka halaman hasil pencarian lengkap.
-- **Local-First Collection & Wishlist**:
-  - Tandai buku yang sudah dimiliki (*Owned*) atau masuk daftar keinginan (*Wishlist*) secara instan menggunakan `localStorage` tanpa perlu registrasi/login, lengkap dengan fitur ekspor dan impor file cadangan JSON.
-- **Modern Obsidian Dark Luxury UI**:
-  - Estetika gelap elegan dengan aksen emas halus, tipografi berkelas (*Plus Jakarta Sans*, *Newsreader*, *JetBrains Mono*), dan tata letak responsif ramah perangkat seluler (*mobile-first*).
+Nuvellite dirancang sebagai katalog editorial yang berfokus pada kelengkapan data kolektor, keakuratan riwayat harga, dan pengalaman membaca informasi yang rapi tanpa gangguan barang non-buku.
 
 ---
 
-## 🔄 Mesin Sinkronisasi Otomatis (Standalone)
+## Karakteristik & Arsitektur Sistem
 
-`nuvellite` dilengkapi dengan daemon sinkronisasi mandiri yang berjalan di background tanpa dependensi eksternal:
+### 1. Katalog Utuh, Bukan Sekadar Stok Toko
+Tracker rilis harus memetakan seluruh semesta rilis resmi, bukan hanya produk yang sedang bisa dibeli saat ini.
+- Produk berstatus habis (*out of stock*) tetap tercatat di katalog dengan status ketersediaan yang jelas.
+- Buku tidak dihapus sepihak dari sistem hanya karena sedang tidak muncul di pencarian inventaris aktif.
+- Menjaga data rilisan historis, reguler, pre-order, dan volume terdahulu.
 
-```bash
-# Menjalankan sinkronisasi katalog satu kali
-python3 scripts/auto-sync-catalog.py
+### 2. Deteksi Volume Seri & Pemulihan Celah (*Gap Recovery*)
+- Algoritma deret volume mengenali nomor rilis secara otomatis (misalnya Vol. 1, 2, 4, 5 mendeteksi bahwa Vol. 3 belum tercatat atau belum dimiliki).
+- Jika volume yang hilang ditemukan dari sumber resmi—meskipun stoknya kosong—sistem langsung merekonsiliasinya ke dalam seri.
+- Dashboard koleksi menampilkan progres kelengkapan volume per seri dan menyorot nomor yang terlewat.
 
-# Menjalankan daemon polling berkala (default: per 1 jam)
-python3 scripts/auto-sync-catalog.py --daemon --interval 3600
+### 3. Semantik Harga Riil vs Harga Diskon
+- Membedakan antara **harga normal resmi (SRP / list price)** dan **harga promo/diskon saat ini**.
+- Harga coret hanya muncul jika produk memang sedang dipotong dari harga normalnya.
+- Riwayat fluktuasi mencatat momen diskon tanpa mengubah data harga resmi dasar.
+
+### 4. Prioritas Edisi Kanonikal
+- Edisi Reguler selalu menjadi representasi utama dari sebuah volume.
+- Varian bundling (*Special Set*, *Limited Edition*, *Box Set*) disematkan sebagai opsi edisi dalam kartu yang sama, sehingga tidak mengacaukan nomor volume seri.
+
+### 5. 100% Data-Driven (Tanpa Judul Hardcoded)
+- Seluruh logika klasifikasi, pemisahan format (Manga vs Light Novel), dan resolusi entitas berjalan berdasarkan aturan data: imprint penerbit, token format, slug kategori, dan metadata ISBN.
+- Tidak ada daftar judul anime/manga statis di dalam kode aplikasi. Rilisan baru di masa depan akan langsung dikenali dan diproses otomatis.
+
+### 6. Desain Editorial & Liquid Glass
+- **Header Adaptif**: Menyatu tanpa batas (*integrated*) di bagian atas halaman, lalu bertransisi mulus menjadi bilah kaca mengapung (*liquid-glass pill*) saat halaman digulir.
+- **Palet Tema**: Pilihan aksen warna dinamis (Vermilion, Gold, Indigo, Emerald, Azure, Rose) yang tersimpan di penyimpanan lokal.
+- **Tipografi Terkurasi**: Perpaduan serif editorial untuk judul dan sans modern untuk keterbacaan data teknis.
+- **Sinopsis Bersih**: Pembersih teks otomatis membuang disclaimer toko, spesifikasi fisik, dan kalimat promosi belanja dari sinopsis resmi.
+
+---
+
+## Struktur Folder
+
+```
+nuvellite/
+├── scripts/               # Pipeline sinkronisasi & adapter sumber resmi
+│   ├── adapters/          # Adapter vendor Gramedia (Elex, m&c!, PGI)
+│   └── auto-sync-catalog.py
+├── src/
+│   ├── app/               # Next.js App Router (katalog, seri, kalender, koleksi)
+│   ├── components/        # Komponen UI, navigasi, kartu rilis, dialog cari
+│   ├── data/              # Snapshot basis data katalog JSON
+│   ├── hooks/             # State tema & koleksi lokal
+│   └── lib/               # Layanan katalog, normalisasi harga, pembersih sinopsis
+└── tests/                 # Rangkaian pengujian unit & regresi (Vitest)
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Framework**: Next.js 15 (App Router) + React 19
-- **Bahasa**: TypeScript
-- **Styling**: Tailwind CSS (Custom Editorial Design System)
+- **Frontend**: Next.js 15 (App Router), React 19, TypeScript
+- **Styling**: Tailwind CSS dengan custom design tokens (editorial surfaces, soft glass, liquid glass)
 - **Icons**: Lucide React
-- **Testing**: Vitest (22/22 automated test suites passing)
+- **Engine Data**: Python 3 (Urllib, ThreadPoolExecutor, Regex Normalization)
+- **Testing**: Vitest (51 unit & regression tests)
 
 ---
 
-## 🚀 Menjalankan Project
+## Menjalankan Proyek
 
+### Kebutuhan Sistem
+- Node.js 18+
+- Python 3.9+ (untuk sinkronisasi scraper)
+
+### Instalasi & Mode Dev
 ```bash
-# Install dependencies
+# Pasang dependensi Node.js
 npm install
 
-# Menjalankan dev server di port 3001
+# Jalankan server pengembangan (port 3001)
 npm run dev
+```
 
-# Menjalankan unit test
+Buka `http://localhost:3001` di peramban.
+
+### Menjalankan Pengujian
+```bash
+# Menjalankan seluruh test suite Vitest
 npm test
 
-# Membuat build produksi
-npm run build
+# Pengecekan tipe TypeScript
+npx tsc --noEmit
+```
 
-# Menjalankan server produksi
+### Build Produksi
+```bash
+npm run build
 npm start
 ```
 
----
-
-## 🧪 Validasi & Pengujian Otomatis
-
-Seluruh logika kritis (mulai dari pencegahan duplikasi seri, isolasi merchandise, pemisahan format Manga/LN, hingga konsolidasi edisi dan pelacak volume hilang) diuji secara otomatis melalui Vitest:
-
+### Menjalankan Sinkronisasi Data (Opsional)
 ```bash
-npm test
+# Sinkronisasi satu kali dari sumber resmi
+python3 scripts/auto-sync-catalog.py
+
+# Menjalankan daemon berkala di background (contoh: tiap 1 jam)
+python3 scripts/auto-sync-catalog.py --daemon --interval 3600
 ```
-*Hasil: 22 passed (100% passing).*\n

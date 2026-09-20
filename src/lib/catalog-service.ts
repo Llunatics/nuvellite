@@ -1,19 +1,37 @@
 import catalogData from '@/data/catalog.json';
 import { Book, Series, Publisher, CatalogData } from './types';
+import { getPriceSummary as getPriceSummaryInternal } from './data/price-service';
+import { getRelatedReleases as getRelatedReleasesInternal, getYouMayAlsoLike as getYouMayAlsoLikeInternal } from './data/recommendation-service';
 
 const data = catalogData as unknown as CatalogData;
 
+// Filter out any quarantined or non-manga/non-LN items from public catalog
+const publicBooks: Book[] = (data.books || []).filter((b) => {
+  const cat = b.category;
+  if (cat !== 'Manga' && cat !== 'Light Novel') return false;
+  if (!['pub_elex', 'pub_mnc', 'pub_pgi'].includes(b.publisherId)) return false;
+  if (b.classificationStatus === 'REJECTED' || b.classificationStatus === 'REVIEW_REQUIRED') return false;
+  return true;
+});
+
+const publicSeries: Series[] = (data.series || []).filter((s) => {
+  if (s.type !== 'MANGA' && s.type !== 'LIGHT_NOVEL') return false;
+  if (s.publisherId === 'pub_gramedia_catalog' || s.publisherName === 'Penerbit Resmi') return false;
+  return true;
+});
+
 export function getAllBooks(): Book[] {
-  return data.books;
+  return publicBooks;
 }
 
 export function getBookBySlug(slug: string): Book | undefined {
-  return data.books.find((b) => b.slug === slug || b.id === slug);
+  const clean = slug.toLowerCase();
+  return publicBooks.find((b) => b.slug.toLowerCase() === clean || b.id.toLowerCase() === clean);
 }
 
 export function getBooksBySeries(seriesId: string): Book[] {
   const cleanId = seriesId.startsWith('ser_') ? seriesId : `ser_${seriesId}`;
-  return data.books
+  return publicBooks
     .filter((b) => b.seriesId === seriesId || b.seriesId === cleanId)
     .sort((a, b) => {
       const volA = a.volume ?? 9999;
@@ -26,23 +44,22 @@ export function getBooksBySeries(seriesId: string): Book[] {
 }
 
 export function getBooksByPublisher(pubSlugOrId: string): Book[] {
-  return data.books.filter(
+  const clean = pubSlugOrId.toLowerCase();
+  return publicBooks.filter(
     (b) =>
-      b.publisherId === pubSlugOrId ||
-      b.publisherShortName.toLowerCase() === pubSlugOrId.toLowerCase()
+      b.publisherId.toLowerCase() === clean ||
+      b.publisherShortName.toLowerCase() === clean ||
+      b.publisherName.toLowerCase().includes(clean)
   );
 }
 
 export function getAllSeries(): Series[] {
-  return data.series
-    .filter((s) => s.type === 'MANGA' || s.type === 'LIGHT_NOVEL')
-    .filter((s) => s.publisherId !== 'pub_gramedia_catalog' && s.publisherName !== 'Penerbit Resmi')
-    .sort((a, b) => a.name.localeCompare(b.name));
+  return publicSeries.sort((a, b) => a.name.localeCompare(b.name));
 }
 
 export function getSeriesBySlug(slug: string): Series | undefined {
   const cleanSlug = slug.toLowerCase().replace(/^ser_/, '');
-  return data.series.find(
+  return publicSeries.find(
     (s) =>
       s.slug.toLowerCase() === cleanSlug ||
       s.id.toLowerCase() === slug.toLowerCase() ||
@@ -51,17 +68,20 @@ export function getSeriesBySlug(slug: string): Series | undefined {
 }
 
 export function getPublishers(): Publisher[] {
-  return data.publishers.filter((p) => p.id !== 'pub_gramedia');
+  return (data.publishers || []).filter(
+    (p) => p.id !== 'pub_gramedia' && ['pub_elex', 'pub_mnc', 'pub_pgi'].includes(p.id)
+  );
 }
 
 export function getPublisherBySlug(slug: string): Publisher | undefined {
-  return data.publishers.find(
-    (p) => p.slug === slug || p.id === slug || p.shortName.toLowerCase() === slug.toLowerCase()
+  const clean = slug.toLowerCase();
+  return getPublishers().find(
+    (p) => p.slug.toLowerCase() === clean || p.id.toLowerCase() === clean || p.shortName.toLowerCase() === clean
   );
 }
 
 export function getWednesdayReleases(limit = 24): Book[] {
-  return data.books
+  return publicBooks
     .filter((b) => b.isWednesdayRelease)
     .sort((a, b) => {
       const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
@@ -72,7 +92,7 @@ export function getWednesdayReleases(limit = 24): Book[] {
 }
 
 export function getRecentReleases(limit = 36): Book[] {
-  return [...data.books]
+  return [...publicBooks]
     .sort((a, b) => {
       const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
       const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
@@ -82,21 +102,21 @@ export function getRecentReleases(limit = 36): Book[] {
 }
 
 export function getUpcomingReleases(limit = 24): Book[] {
-  return data.books
+  return publicBooks
     .filter((b) => b.status === 'PREORDER' || b.status === 'UPCOMING')
     .slice(0, limit);
 }
 
 export function getStats() {
-  const mangaCount = data.books.filter((b) => b.category === 'Manga').length;
-  const lnCount = data.books.filter((b) => b.category === 'Light Novel').length;
-  const elexCount = data.books.filter((b) => b.publisherId === 'pub_elex').length;
-  const mncCount = data.books.filter((b) => b.publisherId === 'pub_mnc').length;
-  const pgiCount = data.books.filter((b) => b.publisherId === 'pub_pgi').length;
+  const mangaCount = publicBooks.filter((b) => b.category === 'Manga').length;
+  const lnCount = publicBooks.filter((b) => b.category === 'Light Novel').length;
+  const elexCount = publicBooks.filter((b) => b.publisherId === 'pub_elex').length;
+  const mncCount = publicBooks.filter((b) => b.publisherId === 'pub_mnc').length;
+  const pgiCount = publicBooks.filter((b) => b.publisherId === 'pub_pgi').length;
 
   return {
-    totalBooks: data.books.length,
-    totalSeries: data.series.length,
+    totalBooks: publicBooks.length,
+    totalSeries: publicSeries.length,
     mangaCount,
     lnCount,
     merchCount: 0,
@@ -112,7 +132,7 @@ export function getStats() {
 export function searchCatalog(query: string, limit?: number): Book[] {
   if (!query.trim()) return [];
   const q = query.toLowerCase().trim();
-  const results = data.books.filter((b) => {
+  const results = publicBooks.filter((b) => {
     const titleMatch = b.title && b.title.toLowerCase().includes(q);
     const seriesMatch = b.seriesName && b.seriesName.toLowerCase().includes(q);
     const origTitleMatch = b.originalTitle && b.originalTitle.toLowerCase().includes(q);
@@ -128,4 +148,16 @@ export function searchCatalog(query: string, limit?: number): Book[] {
   });
 
   return limit && limit > 0 ? results.slice(0, limit) : results;
+}
+
+export function getPriceSummary(book: Book) {
+  return getPriceSummaryInternal(book.id, book.currentPrice, book.releaseDate, book.originalPrice);
+}
+
+export function getRelatedReleases(book: Book, limit = 6) {
+  return getRelatedReleasesInternal(book, publicBooks, limit);
+}
+
+export function getYouMayAlsoLike(book: Book, limit = 6) {
+  return getYouMayAlsoLikeInternal(book, publicBooks, limit);
 }
