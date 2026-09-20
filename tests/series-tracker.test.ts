@@ -163,4 +163,48 @@ describe('Series Deduplication & Merchandise Isolation', () => {
       expect(mangaVols).toContain(v);
     }
   });
+
+  it('should strictly exclude Comic Frontier and Merchandise from series entries', () => {
+    const seriesList = getAllSeries();
+    for (const s of seriesList) {
+      const name = s.name.toLowerCase();
+      expect(name).not.toContain('comic frontier');
+      expect(name).not.toContain('comifuro');
+      expect(name).not.toContain('5-layer folder');
+      expect(name).not.toContain('badge set');
+      expect(name).not.toContain('clear file');
+      expect(name).not.toMatch(/^\s*(?:komik\s+)?\d+\s*-\s*[a-z0-9]{2,4}/i);
+    }
+  });
+
+  it('should consolidate Attack on Titan Bind Up into a single 11-volume series', () => {
+    const seriesList = getAllSeries();
+    const aotBindUp = seriesList.find((s) => s.id === 'ser_attack-on-titan-bind-up');
+    expect(aotBindUp).toBeDefined();
+    expect(aotBindUp?.totalVolumes).toBe(11);
+
+    const books = getBooksBySeries(aotBindUp!.id);
+    expect(books).toHaveLength(11);
+  });
+
+  it('should correctly distinguish Conan Manga, Novel, and Movie series without duplicate names', () => {
+    const seriesList = getAllSeries();
+    const conanManga = seriesList.find((s) => s.id === 'ser_detektif-conan-manga');
+    const conanNovel = seriesList.find((s) => s.id === 'ser_detektif-conan-ln');
+    const conanMovie = seriesList.find((s) => s.id === 'ser_detektif-conan-movie');
+
+    expect(conanManga).toBeDefined();
+    expect(conanManga?.name).toBe('Detektif Conan');
+    expect(conanManga?.type).toBe('MANGA');
+    expect(conanManga?.totalVolumes).toBe(107);
+
+    expect(conanNovel).toBeDefined();
+    expect(conanNovel?.name).toBe('Detektif Conan (Novel)');
+    expect(conanNovel?.type).toBe('LIGHT_NOVEL');
+    expect(conanNovel?.totalVolumes).toBe(19);
+
+    expect(conanMovie).toBeDefined();
+    expect(conanMovie?.type).toBe('MANGA');
+    expect(conanMovie?.totalVolumes).toBe(10);
+  });
 });

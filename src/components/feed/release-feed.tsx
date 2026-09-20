@@ -41,13 +41,29 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   const spotlightOwned = isLoaded && activeSpotlight && isOwned(activeSpotlight.id);
   const spotlightWishlisted = isLoaded && activeSpotlight && isWishlisted(activeSpotlight.id);
 
-  // Dedicated Highlight Rails
+  // Dedicated Highlight Rails - Strictly sorted from newest to oldest (left to right)
   const mangaHighlights = useMemo(() => {
-    return initialBooks.filter((b) => b.category === 'Manga' && b.coverImage).slice(0, 14);
+    return [...initialBooks]
+      .filter((b) => b.category === 'Manga' && b.coverImage && !b.isSetVariant)
+      .sort((a, b) => {
+        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
+        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
+        if (dateB !== dateA) return dateB - dateA; // Newest first (left to right)
+        return (b.volume ?? 0) - (a.volume ?? 0);
+      })
+      .slice(0, 18);
   }, [initialBooks]);
 
   const lnHighlights = useMemo(() => {
-    return initialBooks.filter((b) => b.category === 'Light Novel' && b.coverImage).slice(0, 14);
+    return [...initialBooks]
+      .filter((b) => b.category === 'Light Novel' && b.coverImage && !b.isSetVariant)
+      .sort((a, b) => {
+        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
+        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
+        if (dateB !== dateA) return dateB - dateA; // Newest first (left to right)
+        return (b.volume ?? 0) - (a.volume ?? 0);
+      })
+      .slice(0, 18);
   }, [initialBooks]);
 
   const mangaRailRef = useRef<HTMLDivElement>(null);
