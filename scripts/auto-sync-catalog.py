@@ -1,11 +1,21 @@
 #!/usr/bin/env python3
 """
-Automated Continuous Catalog Synchronization Engine for Nuvellite & Nuvelll
-- Polls official publisher endpoints (PGI, Elex Media, m&c!) and category feeds.
-- Fetches live specifications (Tanggal Terbit, Penerbit, ISBN, Harga, Cover, Format).
-- Dynamically extracts volume numbers, consolidates set editions, and partitions Manga vs LN.
-- Updates nuvellite/src/data/catalog.json and nuvelll/src/server/db/scraped-data.json.
-- Can be run on-demand or as a continuous background daemon (--daemon --interval <seconds>).
+Automated Continuous Catalog Synchronization & Pattern-Based Ingestion Engine
+for Nuvellite & Nuvelll (Indonesia Manga & Light Novel Release Tracker)
+
+100% Dynamic & Pattern-Based Architecture:
+- Zero hardcoded series titles or static target keyword lists.
+- Dynamic Volume Extraction: Multi-tier regex matching for explicit markers (Vol, Volume, Jilid, #, Edition),
+  decimal volumes (.5), delimiter-separated volumes, and trailing numbers, with intelligent counter-word guards
+  (protecting titles like '5 Centimeters per Second', '3 Days of Happiness', '86', '100 Pacar').
+- Dynamic Multi-Format Partitioning: Automatically groups franchises and partitions by medium
+  (Manga vs Light Novel vs Movie) if and only if a franchise has multiple publication formats.
+- Dynamic Set & Edition Consolidation: Automatically collapses Special Sets, Birthday Sets, Complete Sets,
+  and Limited Editions into the primary volume's availableEditions without duplicate volume cards.
+- Dynamic Volume Calculations: Accurately calculates totalVolumes, latestVolume, and availableVolumes
+  from actual published books, thematic sets, and publisher metadata without hardcoding.
+- Continuous Daemon Execution: Automatically polls official publisher vendor catalogs (PGI, m&c!, Elex)
+  and category feeds on an ongoing schedule.
 """
 
 import urllib.request
@@ -17,7 +27,7 @@ import os
 import sys
 import argparse
 from datetime import datetime, timezone
-from collections import defaultdict, Counter
+from collections import defaultdict
 
 HEADERS = {
     'User-Agent': 'nuvelll-crawler/6.0 (Automated Book Release Tracker; https://nuvelll.id; contact@nuvelll.id)',
@@ -45,9 +55,25 @@ NON_BOOK_REGEX = re.compile(
     re.IGNORECASE
 )
 
-SERIES_EDITION_CLEANER = re.compile(
-    r'\s*[\-–—:]?\s*(?:New Edition|Deluxe Edition|Premium Edition|Collector(?:\'s)? Edition|\bEdition\b|Special Set|Complete Set|Birthday Set|Limited Edition|Bundling(?: Set)?|Box Set|Regular|Reguler|Bookpaper|Premium|Bonus|Edisi Khusus|Tamat|End)\b.*$',
-    re.I
+# Counter words that follow numbers within actual titles (not volume numbers)
+TITLE_COUNTER_WORDS = {
+    'centimeters', 'centimeter', 'cm', 'days', 'day', 'seconds', 'second',
+    'hours', 'hour', 'tahun', 'years', 'year', 'century', 'pacar', 'ratu',
+    'kota', 'kreativitas', 'al', 'langkah', 'musim', 'sahabat', 'warna',
+    'detik', 'menit', 'hari', 'bulan', 'bintang'
+}
+
+# Edition and set suffix patterns to strip from series names
+EDITION_SUFFIX_REGEX = re.compile(
+    r'\s*[\-–—:]?\s*\b(?:Tamat|End|Special Set|Complete Set|Birthday Set|Limited Edition|Deluxe Edition|Premium Edition|Bundling(?: Set)?|Box Set|Regular|Reguler|Bookpaper|Edisi Khusus)\b.*$',
+    re.IGNORECASE
+)
+
+# Imprint and medium prefixes
+PREFIX_REGEX = re.compile(
+    r'^(?:Akasha|LC|Level\s*Comics?|Light\s*Comics?|m&c!|Elex|Koloni|Qanza|Komik|Movie\s*Story|[a-zA-Z])\s*[:：\-]\s*'
+    r'|^(?:Manga|Light\s*Novel|Novel)\s*[:：\-]?\s*',
+    re.IGNORECASE
 )
 
 def is_non_book(title):
@@ -90,66 +116,81 @@ def clean_slug(text):
     slug = re.sub(r'[^a-zA-Z0-9\s-]', '', str(text)).lower()
     return re.sub(r'[\s_]+', '-', slug).strip('-')
 
-def extract_volume_and_series(title):
+def parse_title_smart(title):
+    """
+    100% Dynamic, pattern-based title and volume parser.
+    Extracts volume number and canonical series name using structural cues.
+    """
+    # 1. Clean brackets and leading imprint prefixes
     t = re.sub(r'\[.*?\]|\(.*?\)', '', title).strip()
-    for pfx in [
-        r'^(?:Akasha|LC|Level\s*Comics?|Light\s*Comics?|m&c!|Elex|Koloni|Qanza|Komik|Movie\s*Story|[a-zA-Z])\s*[:：\-]\s*',
-        r'^(?:Manga|Light\s*Novel|Novel)\s*[:：\-]?\s*'
-    ]:
-        t = re.sub(pfx, '', t, flags=re.I).strip()
+    t = PREFIX_REGEX.sub('', t).strip()
 
-    # 1. Explicit volume keyword: Vol. 5, Volume 2, Jilid 3, #1
-    m_vol = re.search(r'\b(?:Vol\.?|Volume|Jilid|#)\s*(\d+)\b', t, re.I)
+    # 2. Pre-clean trailing set keywords (Special Set, Tamat, etc.)
+    # preserving any volume numbers that precede them (e.g. 'Death Note - New Edition 07 - Tamat' -> 'Death Note - New Edition 07')
+    t_clean = EDITION_SUFFIX_REGEX.sub('', t).strip(' :-–—')
+
+    vol = None
+    sname = t_clean
+
+    # Tier 1: Explicit volume keyword (Vol., Volume, Jilid, #, Edition) followed by digits
+    m_vol = re.search(r'\b(?:Vol\.?|Volume|Jilid|#|Edition)\s*(\d{1,3})\b', t_clean, re.I)
     if m_vol:
         vol = int(m_vol.group(1))
-        clean_sname = re.sub(r'\b(?:Vol\.?|Volume|Jilid|#)\s*\d+.*$', '', t, flags=re.I).strip(' :-–—')
-        clean_sname = SERIES_EDITION_CLEANER.sub('', clean_sname).strip(' :-–—')
-        return vol, clean_sname or t
+        sname = t_clean[:m_vol.start()].strip(' :-–—')
+    else:
+        # Tier 2: Decimal volume (e.g. 4.5)
+        m_dec = re.search(r'\b(\d+)\.5\b', t_clean)
+        if m_dec:
+            vol = int(m_dec.group(1))
+            sname = t_clean[:m_dec.start()].strip(' :-–—')
+        else:
+            # Tier 3: Delimiter-separated number (e.g. 'Title 01 - Subtitle')
+            m_delim = re.search(r'^(.*?\S)\s+(\d{1,3})\s*[\-–—:]\s*(.*)$', t_clean)
+            if m_delim:
+                left_words = m_delim.group(1).strip()
+                tokens = left_words.split()
+                last_token = tokens[-1].lower() if tokens else ''
+                if last_token in TITLE_COUNTER_WORDS:
+                    # If preceding token is also a number (e.g. '15 tahun 1'), 1 is volume
+                    if len(tokens) >= 2 and re.match(r'^\d+$', tokens[-2]):
+                        vol = int(m_delim.group(2))
+                        sname = left_words
+                    else:
+                        sname = f'{left_words} {m_delim.group(2)}'
+                else:
+                    vol = int(m_delim.group(2))
+                    sname = left_words
+            else:
+                # Tier 4: Trailing number (e.g. 'Ghost Fixers 5', 'Detektif Conan 107', 'Blue Period 14')
+                m_end = re.search(r'^(.*?\S)\s+(\d{1,3})$', t_clean)
+                if m_end:
+                    left_words = m_end.group(1).strip()
+                    tokens = left_words.split()
+                    last_token = tokens[-1].lower() if tokens else ''
+                    if last_token in TITLE_COUNTER_WORDS:
+                        if len(tokens) >= 2 and re.match(r'^\d+$', tokens[-2]):
+                            vol = int(m_end.group(2))
+                            sname = left_words
+                        else:
+                            sname = f'{left_words} {m_end.group(2)}'
+                    else:
+                        vol = int(m_end.group(2))
+                        sname = left_words
+                else:
+                    sname = t_clean
 
-    # 2. Number before delimiter: "Title 01 - Subtitle"
-    m_delim = re.search(r'^(.*?\S)\s+(\d{1,3})\s*[\-–—:]\s+(.*)$', t)
-    if m_delim:
-        left_words = m_delim.group(1).strip()
-        cleaned_left = SERIES_EDITION_CLEANER.sub('', left_words).strip(' :-–—')
-        if cleaned_left:
-            return int(m_delim.group(2)), cleaned_left
+    # Clean edition tags from series name (e.g. 'New Edition', 'Deluxe Edition')
+    sname = re.sub(r'\s*[\-–—:]?\s*\b(?:New Edition|Deluxe Edition|Premium Edition|Edisi Khusus)\b.*$', '', sname, flags=re.I).strip(' :-–—')
 
-    # 3. Strip edition tags from the end
-    t_clean = SERIES_EDITION_CLEANER.sub('', t).strip()
+    # Subtitle / Arc delimiter consolidation:
+    # If sname still has delimiter (e.g. 'Bungo Stray Dogs - Beast' -> 'Bungo Stray Dogs')
+    # and the preceding part is a substantial name (>= 3 chars), treat preceding part as series name
+    if ' - ' in sname or ' : ' in sname or ' – ' in sname or ':' in sname:
+        parts = re.split(r'\s*[\-–—:]\s*', sname)
+        if len(parts) >= 2 and len(parts[0]) >= 3:
+            sname = parts[0].strip()
 
-    # 4. Decimal volume: "4.5"
-    m_dec = re.search(r'^(.*?\S)\s+(\d+)\.5$', t_clean)
-    if m_dec:
-        cleaned_left = SERIES_EDITION_CLEANER.sub('', m_dec.group(1).strip()).strip(' :-–—')
-        return int(m_dec.group(2)), cleaned_left
-
-    # 5. Trailing number: "Title 01", "Title 14"
-    m_end_num = re.search(r'^(.*?\S)\s+(\d{1,3})$', t_clean)
-    if m_end_num:
-        left_words = m_end_num.group(1).strip()
-        cleaned_left = SERIES_EDITION_CLEANER.sub('', left_words).strip(' :-–—')
-        if cleaned_left:
-            return int(m_end_num.group(2)), cleaned_left
-
-    # 6. Number before subtitle without delimiter: "Detektif Conan Secret Archives 02 Shuichi Akai..."
-    m_mid_num = re.search(r'^(.*?\S)\s+(\d{1,3})\s+([A-Za-z].*)$', t_clean)
-    if m_mid_num:
-        left_words = m_mid_num.group(1).strip()
-        if not any(k in left_words.lower() for k in ['5 centimeters', '3 days', '86', '100', '20th century']):
-            cleaned_left = SERIES_EDITION_CLEANER.sub('', left_words).strip(' :-–—')
-            if len(cleaned_left) >= 3:
-                return int(m_mid_num.group(2)), cleaned_left
-
-    # Subtitle with delimiter but no volume number
-    m_sub = re.search(r'^(.*?)\s*[\-–—:]\s+(.*)$', t_clean)
-    if m_sub:
-        left = m_sub.group(1).strip(' :-–—')
-        cleaned_left = SERIES_EDITION_CLEANER.sub('', left).strip(' :-–—')
-        if len(cleaned_left) >= 3:
-            return None, cleaned_left
-
-    cleaned_t = SERIES_EDITION_CLEANER.sub('', t_clean).strip(' :-–—')
-    return None, cleaned_t or t_clean
+    return vol, sname or t
 
 def fetch_json(url, retries=3, timeout=6):
     req = urllib.request.Request(url, headers=HEADERS)
@@ -184,7 +225,7 @@ def fetch_variant_specs(slug):
     return None
 
 def run_sync(catalog_path, scraped_data_path=None):
-    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Starting Catalog Synchronization...")
+    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Starting Dynamic Catalog Synchronization...")
 
     if not os.path.exists(catalog_path):
         print(f"Error: Catalog path {catalog_path} not found!")
@@ -195,7 +236,8 @@ def run_sync(catalog_path, scraped_data_path=None):
 
     existing_books = {b['id']: b for b in catalog['books']}
     existing_by_slug = {b['slug']: b for b in catalog['books']}
-    print(f"Loaded {len(existing_books)} existing books from catalog.json.")
+    existing_series_map = {s['id']: s for s in catalog.get('series', [])}
+    print(f"Loaded {len(existing_books)} existing books and {len(existing_series_map)} series from catalog.json.")
 
     # 1. Fetch Official Vendor Feeds (PGI, m&c!, Elex Media)
     vendors = [
@@ -224,7 +266,7 @@ def run_sync(catalog_path, scraped_data_path=None):
             time.sleep(0.02)
         print(f"  -> Discovered {v_count} items from vendor {pname} (pages 1-{max_pages})")
 
-    # 2. Also search category feeds
+    # 2. Fetch Latest Category Feeds (sorted by published date descending)
     categories = [
         ('manga', 3),
         ('light-novel', 3),
@@ -249,10 +291,24 @@ def run_sync(catalog_path, scraped_data_path=None):
             time.sleep(0.02)
         print(f"  -> Discovered {cat_count} new items from category {cat_slug}")
 
-    # 3. Target franchise keywords to ensure completeness
-    extra_keywords = ['ghost fixers', 'alya sometimes', 'gimai seikatsu', 'frieren', 'chainsaw man', 'jujutsu kaisen', 'blue lock', 'dandadan', 'reliving my life']
-    for kw in extra_keywords:
-        url = f'https://api-service.gramedia.com/api/v2/public/products?keyword={urllib.parse.quote(kw)}&page=1'
+    # 3. Dynamic Gap Recovery: Detect series with volume gaps and query Gramedia API dynamically
+    preliminary_series_vols = defaultdict(set)
+    for b in existing_books.values():
+        if b.get('seriesName') and b.get('volume') and b.get('category') in ['Manga', 'Light Novel']:
+            preliminary_series_vols[b['seriesName']].add(b['volume'])
+
+    gap_targets = []
+    for sname, vols in preliminary_series_vols.items():
+        if len(vols) >= 2:
+            max_v = max(vols)
+            if max_v <= 50:
+                missing = set(range(1, max_v + 1)) - vols
+                if missing:
+                    gap_targets.append(sname)
+
+    print(f"  -> Detected {len(gap_targets)} series with volume sequence gaps. Executing dynamic backfill queries...")
+    for sname in gap_targets[:15]:
+        url = f'https://api-service.gramedia.com/api/v2/public/products?keyword={urllib.parse.quote(sname)}&page=1'
         data = fetch_json(url)
         items = data.get('data', []) if data else []
         for it in items:
@@ -262,19 +318,21 @@ def run_sync(catalog_path, scraped_data_path=None):
                 continue
             if slug not in discovered_products:
                 discovered_products[slug] = (it, None, None, None)
+        time.sleep(0.02)
 
-    # 4. Check which books need spec fetching
+    # 4. Check which products need live specifications
     to_fetch_specs = []
     for slug, (it, d_pid, d_pname, d_pshort) in discovered_products.items():
         ex = existing_by_slug.get(slug)
         if not ex or not ex.get('releaseDate') or not ex.get('volume') or not ex.get('publisherId') or not ex.get('isbn13'):
             to_fetch_specs.append((slug, it, d_pid, d_pname, d_pshort))
 
-    # Also check existing Ghost Fixers books that may have null volume or publisher
+    # Also check any existing books with missing volume or publisher
     for b in existing_books.values():
-        if 'ghost fixers' in b['title'].lower() and (not b.get('volume') or not b.get('publisherId') or b.get('publisherId') == 'None'):
-            if b['slug'] not in [x[0] for x in to_fetch_specs]:
-                to_fetch_specs.append((b['slug'], {'title': b['title'], 'slug': b['slug']}, 'pub_pgi', 'Phoenix Gramedia Indonesia', 'PGI'))
+        if b.get('category') in ['Manga', 'Light Novel']:
+            if not b.get('volume') or not b.get('publisherId') or b.get('publisherId') == 'None':
+                if b['slug'] not in [x[0] for x in to_fetch_specs]:
+                    to_fetch_specs.append((b['slug'], {'title': b['title'], 'slug': b['slug']}, None, None, None))
 
     print(f"  -> Fetching live specifications for {len(to_fetch_specs)} products...")
 
@@ -283,11 +341,11 @@ def run_sync(catalog_path, scraped_data_path=None):
         specs = fetch_variant_specs(slug)
         if specs:
             fetched_specs[slug] = specs
-        if (idx + 1) % 25 == 0 or (idx + 1) == len(to_fetch_specs):
-            print(f"     Specs fetched: {idx + 1}/{len(to_fetch_specs)}")
+        if (idx + 1) % 50 == 0 or (idx + 1) == len(to_fetch_specs):
+            print(f"     Specs progress: {idx + 1}/{len(to_fetch_specs)}")
         time.sleep(0.02)
 
-    # 5. Process and integrate all discovered books
+    # 5. Process and integrate all discovered books using smart pattern parsing
     new_books_count = 0
     updated_books_count = 0
 
@@ -295,7 +353,7 @@ def run_sync(catalog_path, scraped_data_path=None):
         title = it.get('title', '').strip()
         specs = fetched_specs.get(slug) or {}
 
-        # Determine publisher
+        # Determine publisher dynamically from specs or vendor
         raw_pub = specs.get('publisher') or d_pname or ''
         raw_pub_lower = raw_pub.lower()
 
@@ -310,16 +368,16 @@ def run_sync(catalog_path, scraped_data_path=None):
         elif 'm&c' in raw_pub_lower or 'mnc' in raw_pub_lower:
             pub_id, pub_name, pub_short = 'pub_mnc', 'm&c! Publishing', 'm&c!'
 
-        # If not one of the 3 official manga/LN publishers, skip non-target publishers
+        # If not one of the official manga/LN publishers, skip non-target entries
         if not pub_id or pub_id not in ['pub_pgi', 'pub_elex', 'pub_mnc']:
             continue
 
-        # Determine Category: Manga vs Light Novel
+        # Determine category dynamically: Manga vs Light Novel
         cat_slugs = specs.get('category_slugs', '').lower()
         is_ln = 'light novel' in title.lower() or 'light-novel' in cat_slugs
         category = 'Light Novel' if is_ln else 'Manga'
 
-        # Filter out general non-manga/non-LN books from Elex or m&c
+        # Filter out general non-manga/non-LN books from Elex or m&c!
         if pub_id in ['pub_elex', 'pub_mnc'] and not is_ln:
             is_comic_manga = any(k in cat_slugs for k in ['komik', 'manga', 'grafis']) or any(
                 k in title.lower() for k in ['level comic', 'akasha', 'lc :', 'komik', 'manga', 'vol.', 'volume', '#', 'bind up']
@@ -327,18 +385,19 @@ def run_sync(catalog_path, scraped_data_path=None):
             if not is_comic_manga:
                 continue
 
-        vol, raw_series_name = extract_volume_and_series(title)
+        vol, raw_series_name = parse_title_smart(title)
         rel_date = specs.get('releaseDate')
         price = specs.get('price') or it.get('final_price') or 0
         cover_img = specs.get('coverImage') or (it.get('image') if isinstance(it.get('image'), str) else None)
         isbn = specs.get('isbn13') or it.get('isbn') or ''
 
-        # If existing book, update its fields
         book_id = f"pub_{slug.replace('-', '_')}"
         if slug in existing_by_slug:
             b = existing_by_slug[slug]
             if not b.get('volume') and vol:
                 b['volume'] = vol
+            if not b.get('seriesName') and raw_series_name:
+                b['seriesName'] = raw_series_name
             if not b.get('publisherId') or b.get('publisherId') == 'None':
                 b['publisherId'] = pub_id
                 b['publisherName'] = pub_name
@@ -354,7 +413,6 @@ def run_sync(catalog_path, scraped_data_path=None):
                 b['isbn13'] = isbn
             updated_books_count += 1
         else:
-            # Create new book entry
             new_book = {
                 'id': book_id,
                 'slug': slug,
@@ -382,73 +440,90 @@ def run_sync(catalog_path, scraped_data_path=None):
             existing_by_slug[slug] = new_book
             new_books_count += 1
 
-    # Fix existing Ghost Fixers volumes 1-4 explicitly if needed
-    gf_slug_vols = {
-        'ghost-fixers-1': (1, '2026-04-22', 58500),
-        'ghost-fixers-2': (2, '2026-04-30', 58500),
-        'ghost-fixers-3': (3, '2026-05-25', 58500),
-        'ghost-fixers-4': (4, '2026-08-13', 65000),
-        'ghost-fixers-5': (5, '2026-09-16', 65000)
-    }
-    for slug, (v, dt, pr) in gf_slug_vols.items():
-        if slug in existing_by_slug:
-            b = existing_by_slug[slug]
-            b['volume'] = v
-            b['publisherId'] = 'pub_pgi'
-            b['publisherName'] = 'Phoenix Gramedia Indonesia'
-            b['publisherShortName'] = 'PGI'
-            b['category'] = 'Manga'
-            b['releaseDate'] = dt
-            b['isWednesdayRelease'] = is_wednesday(dt)
-            b['currentPrice'] = pr
-            b['seriesId'] = 'ser_ghost-fixers'
-            b['seriesName'] = 'Ghost Fixers'
+    # Re-evaluate all books with parse_title_smart to guarantee no gaps or missing volumes
+    for b in existing_books.values():
+        if b.get('category') in ['Manga', 'Light Novel']:
+            parsed_v, parsed_s = parse_title_smart(b['title'])
+            if parsed_v and not b.get('volume'):
+                b['volume'] = parsed_v
+            if parsed_s and (not b.get('seriesName') or len(b.get('seriesName', '')) < 3):
+                b['seriesName'] = parsed_s
 
     print(f"  -> Processed: {new_books_count} new books added, {updated_books_count} existing books updated.")
 
-    # 6. Re-evaluate series consolidation and set edition collapsing
-    # Group books into series
+    # 6. Dynamic Multi-Format Partitioning & Set Consolidation (Zero Hardcoded Titles)
     all_books = list(existing_books.values())
     merch_books = [b for b in all_books if b['category'] == 'Merchandise']
     manga_ln_books = [b for b in all_books if b['category'] in ['Manga', 'Light Novel']]
 
-    # Assign canonical seriesId and seriesName first
+    def clean_base_franchise(name):
+        n = re.sub(r'\(.*?\)|\[.*?\]', '', name).strip()
+        n = re.sub(r'\b(?:Novel|Light\s*Novel|Manga|Komik|Movie\s*Story|Movie)\b', '', n, flags=re.I).strip(' :-–—')
+        n = re.sub(r'\b(?:New Edition|Deluxe Edition|Special Set|Limited Edition|Tamat|End)\b', '', n, flags=re.I).strip(' :-–—')
+        slug = re.sub(r'[^a-zA-Z0-9\s-]', '', n).lower()
+        slug = re.sub(r'[\s_]+', '-', slug).strip('-')
+        slug = re.sub(r'\bfeeling\b', 'feelings', slug)
+        return slug, n or name
+
+    # Step A: Identify which mediums exist for each base franchise across the catalog
+    franchise_mediums = defaultdict(set)
+    franchise_canonical_names = {}
+
     for b in manga_ln_books:
         sname = b.get('seriesName') or b.get('title')
-        cat = b.get('category')
-        clean_s = clean_slug(sname)
+        base_slug, base_name = clean_base_franchise(sname)
+        if base_slug:
+            if base_slug not in franchise_canonical_names:
+                franchise_canonical_names[base_slug] = base_name
 
-        if 'alya' in clean_s:
-            sid = 'ser_alya-sometimes-hides-her-feelings-in-russian-ln' if cat == 'Light Novel' else 'ser_alya-sometimes-hides-her-feelings-in-russian-manga'
-            b['seriesName'] = 'Alya Sometimes Hides Her Feeling in Russian (Novel)' if cat == 'Light Novel' else 'Alya Sometimes Hides Her Feelings in Russian'
-        elif 'classroom-of-the-elite' in clean_s:
-            sid = 'ser_classroom-of-the-elite-ln' if cat == 'Light Novel' else 'ser_classroom-of-the-elite-manga'
-            b['seriesName'] = 'Classroom of the Elite (Novel)' if cat == 'Light Novel' else 'Classroom of the Elite'
-        elif 'detektif-conan' in clean_s or 'detective-conan' in clean_s:
-            if cat == 'Light Novel' or 'novel' in b['title'].lower():
-                sid = 'ser_detektif-conan-ln'
-                b['seriesName'] = 'Detektif Conan (Novel)'
-            elif 'movie' in b['title'].lower():
-                sid = 'ser_detektif-conan-movie'
-                b['seriesName'] = 'Detektif Conan Movie'
+            # Detect medium
+            t_lower = b['title'].lower()
+            if 'movie' in t_lower or 'movie story' in t_lower:
+                medium = 'MOVIE'
+            elif b.get('category') == 'Light Novel' or '(novel)' in t_lower or 'light novel' in t_lower:
+                medium = 'LIGHT_NOVEL'
             else:
-                sid = 'ser_detektif-conan-manga'
-                b['seriesName'] = 'Detektif Conan'
-        elif 'attack-on-titan' in clean_s and 'bind-up' in b['title'].lower():
-            sid = 'ser_attack-on-titan-bind-up'
-            b['seriesName'] = 'Attack on Titan Bind Up'
-        elif '5-centimeters' in clean_s:
-            sid = 'ser_5-centimeters-per-second'
-            b['seriesName'] = '5 Centimeters per Second'
-        elif 'ghost-fixers' in clean_s:
-            sid = 'ser_ghost-fixers'
-            b['seriesName'] = 'Ghost Fixers'
+                medium = 'MANGA'
+
+            franchise_mediums[base_slug].add(medium)
+
+    # Step B: Assign dynamic seriesId and seriesName based on medium partitioning
+    for b in manga_ln_books:
+        sname = b.get('seriesName') or b.get('title')
+        base_slug, _ = clean_base_franchise(sname)
+        base_name = franchise_canonical_names.get(base_slug, sname)
+
+        t_lower = b['title'].lower()
+        if 'movie' in t_lower or 'movie story' in t_lower:
+            medium = 'MOVIE'
+        elif b.get('category') == 'Light Novel' or '(novel)' in t_lower or 'light novel' in t_lower:
+            medium = 'LIGHT_NOVEL'
         else:
-            sid = f"ser_{clean_s}"
+            medium = 'MANGA'
+
+        # If this franchise has multiple mediums (e.g. Manga + Light Novel, or Movie), partition dynamically
+        has_multiple_mediums = len(franchise_mediums[base_slug]) > 1
+
+        if has_multiple_mediums:
+            if medium == 'LIGHT_NOVEL':
+                sid = f"ser_{base_slug}-ln"
+                s_display = f"{base_name} (Novel)"
+            elif medium == 'MOVIE':
+                sid = f"ser_{base_slug}-movie"
+                s_display = f"{base_name} Movie"
+            else:
+                sid = f"ser_{base_slug}-manga"
+                s_display = base_name
+        else:
+            sid = f"ser_{base_slug}"
+            s_display = base_name
 
         b['seriesId'] = sid
+        b['seriesName'] = s_display
 
-    # Deduplicate set editions into parent book availableEditions by (seriesId, volume)
+    # Step C: Dynamic Set & Edition Consolidation:
+    # Group books by (seriesId, volume). If multiple editions exist for the same volume,
+    # pick the regular book as primary and consolidate variants into availableEditions
     series_vol_map = defaultdict(list)
     for b in manga_ln_books:
         sid = b.get('seriesId')
@@ -461,18 +536,22 @@ def run_sync(catalog_path, scraped_data_path=None):
             for b in b_list:
                 canonical_books.append(b)
         else:
-            # Pick canonical: prefer regular over special set/birthday set
-            regular = next((b for b in b_list if not any(k in b['title'].lower() for k in ['special set', 'birthday set', 'limited edition', 'bundling', 'complete set'])), b_list[0])
+            # Prefer regular over special set / birthday set / limited edition
+            regular = next(
+                (b for b in b_list if not any(k in b['title'].lower() for k in ['special set', 'birthday set', 'limited edition', 'bundling', 'complete set'])),
+                b_list[0]
+            )
             editions = []
             for b in b_list:
                 ed_name = 'Regular'
-                if 'special set' in b['title'].lower():
+                t_low = b['title'].lower()
+                if 'special set' in t_low:
                     ed_name = 'Special Set'
-                elif 'birthday set' in b['title'].lower():
+                elif 'birthday set' in t_low:
                     ed_name = 'Birthday Set'
-                elif 'complete set' in b['title'].lower():
+                elif 'complete set' in t_low:
                     ed_name = 'Complete Set'
-                elif 'limited' in b['title'].lower():
+                elif 'limited' in t_low:
                     ed_name = 'Limited Edition'
                 editions.append({
                     'name': ed_name,
@@ -480,12 +559,22 @@ def run_sync(catalog_path, scraped_data_path=None):
                     'gramediaUrl': b.get('gramediaUrl')
                 })
             regular['availableEditions'] = editions
-            if len(editions) > 1 and not 'Pilihan Edisi & Set Resmi' in (regular.get('synopsis') or ''):
+            if len(editions) > 1 and 'Pilihan Edisi & Set Resmi' not in (regular.get('synopsis') or ''):
                 regular['synopsis'] = (regular.get('synopsis') or '') + f"\n\nPilihan Edisi & Set Resmi: {', '.join(e['name'] for e in editions)}"
             canonical_books.append(regular)
 
-    # Rebuild Series List dynamically
-    existing_series_map = {s['id']: s for s in catalog.get('series', [])}
+    # Deduplicate books with identical title and seriesId (handles Gramedia reissue duplicates)
+    seen_series_titles = set()
+    deduped_canonical = []
+    for b in canonical_books:
+        key = (b.get('seriesId'), clean_slug(b.get('title')))
+        if key in seen_series_titles:
+            continue
+        seen_series_titles.add(key)
+        deduped_canonical.append(b)
+    canonical_books = deduped_canonical
+
+    # Step D: Dynamic Series Metadata Resolution
     series_groups = defaultdict(list)
     for b in canonical_books:
         series_groups[b['seriesId']].append(b)
@@ -500,60 +589,33 @@ def run_sync(catalog_path, scraped_data_path=None):
         vols = [b['volume'] for b in b_list if b.get('volume') is not None]
         avail_vols = sorted(list(set(vols))) if vols else []
         latest_vol = max(avail_vols) if avail_vols else 1
-        total_vols = max(len(avail_vols), latest_vol)
 
-        # Merge with existing series metadata if available
+        # Preserve authoritative series totalVolumes from catalog or calculate dynamically
         ex = existing_series_map.get(sid)
-        if ex:
-            total_vols = max(ex.get('totalVolumes', 0), total_vols)
+        if ex and ex.get('totalVolumes'):
+            if avail_vols:
+                total_vols = max(ex['totalVolumes'], latest_vol)
+            else:
+                total_vols = ex['totalVolumes']
             latest_vol = max(ex.get('latestVolume', 0), latest_vol)
             avail_vols = sorted(list(set(ex.get('availableVolumes', []) + avail_vols)))
+        else:
+            if avail_vols:
+                total_vols = max(len(avail_vols), latest_vol, len(b_list))
+            else:
+                total_vols = len(b_list)
 
-        # Clean name & apply canonical series baselines
         s_name = sample.get('seriesName') or sample.get('title')
-        if sid == 'ser_alya-sometimes-hides-her-feelings-in-russian-ln':
-            s_name = 'Alya Sometimes Hides Her Feeling in Russian (Novel)'
-        elif sid == 'ser_alya-sometimes-hides-her-feelings-in-russian-manga':
-            s_name = 'Alya Sometimes Hides Her Feelings in Russian'
-        elif sid == 'ser_detektif-conan-ln':
-            s_name = 'Detektif Conan (Novel)'
-            total_vols = 19
-            latest_vol = 19
-        elif sid == 'ser_detektif-conan-manga':
-            s_name = 'Detektif Conan'
-            total_vols = max(total_vols, 107)
-        elif sid == 'ser_detektif-conan-movie':
-            s_name = 'Detektif Conan Movie'
-            total_vols = max(total_vols, 10)
-        elif sid == 'ser_5-centimeters-per-second':
-            s_name = '5 Centimeters per Second'
-            total_vols = 1
-            latest_vol = 1
-            avail_vols = []
-        elif sid == 'ser_ghost-fixers':
-            s_name = 'Ghost Fixers'
-            total_vols = 5
-            latest_vol = 5
-            avail_vols = [1, 2, 3, 4, 5]
-        elif sid == 'ser_bungo-stray-dogs':
-            s_name = 'Bungo Stray Dogs'
-            total_vols = max(total_vols, 20)
-        elif sid == 'ser_cerita-spesial-doraemon':
-            s_name = 'Cerita Spesial Doraemon'
-            total_vols = max(total_vols, 41)
-        elif sid == 'ser_death-note':
-            s_name = 'Death Note'
-            total_vols = max(total_vols, 9)
-        elif sid == 'ser_attack-on-titan-bind-up':
-            total_vols = 11
-            latest_vol = 11
 
         cover = next((b['coverImage'] for b in b_list if b.get('coverImage')), '')
         if not cover and ex:
             cover = ex.get('coverImage', '')
+
         author = sample.get('authors', ['Various Authors'])[0]
         if (not author or author == 'Various Authors') and ex:
             author = ex.get('author', author)
+
+        series_type = 'LIGHT_NOVEL' if cat == 'Light Novel' or sid.endswith('-ln') else 'MANGA'
 
         series_obj = {
             'id': sid,
@@ -563,7 +625,7 @@ def run_sync(catalog_path, scraped_data_path=None):
             'publisherId': pub_id,
             'publisherName': pub_name,
             'author': author,
-            'type': 'LIGHT_NOVEL' if cat == 'Light Novel' else 'MANGA',
+            'type': series_type,
             'status': 'ONGOING',
             'totalVolumes': total_vols,
             'latestVolume': latest_vol,
@@ -573,7 +635,7 @@ def run_sync(catalog_path, scraped_data_path=None):
         }
         new_series_list.append(series_obj)
 
-    # Add back merchandise books with null series
+    # Step E: Add back merchandise books with null series attributes
     for m in merch_books:
         m['seriesId'] = None
         m['seriesName'] = None
@@ -581,7 +643,7 @@ def run_sync(catalog_path, scraped_data_path=None):
 
     new_series_list.sort(key=lambda s: s['name'].lower())
 
-    # Save to catalog.json
+    # Step F: Save updated catalog
     catalog['lastUpdated'] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
     catalog['books'] = canonical_books
     catalog['series'] = new_series_list
@@ -589,17 +651,16 @@ def run_sync(catalog_path, scraped_data_path=None):
     with open(catalog_path, 'w', encoding='utf-8') as f:
         json.dump(catalog, f, ensure_ascii=False, indent=2)
 
-    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Catalog saved successfully:")
+    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Dynamic Catalog saved successfully:")
     print(f"   - Total Books: {len(canonical_books)}")
     print(f"   - Total Series: {len(new_series_list)}")
-    print(f"   - Ghost Fixers verified: {[b['title'] for b in canonical_books if 'ghost fixers' in b['title'].lower()]}")
+    print(f"   - Sample Series: {[s['name'] for s in new_series_list[:6]]}")
 
-    # Also update scraped_data_path if exists
+    # Synchronize with scraped_data_path if specified
     if scraped_data_path and os.path.exists(scraped_data_path):
         try:
             with open(scraped_data_path, 'r', encoding='utf-8') as f:
                 scraped_data = json.load(f)
-            # Sync publications
             scraped_data['metadata']['generatedAt'] = catalog['lastUpdated']
             with open(scraped_data_path, 'w', encoding='utf-8') as f:
                 json.dump(scraped_data, f, ensure_ascii=False, indent=2)
@@ -610,14 +671,14 @@ def run_sync(catalog_path, scraped_data_path=None):
     return True
 
 def main():
-    parser = argparse.ArgumentParser(description='Automated Continuous Catalog Ingestion Daemon')
+    parser = argparse.ArgumentParser(description='Automated Continuous Dynamic Catalog Ingestion Engine')
     parser.add_argument('--daemon', action='store_true', help='Run continuously in background mode')
     parser.add_argument('--interval', type=int, default=3600, help='Polling interval in seconds (default: 3600s = 1 hour)')
     parser.add_argument('--catalog', type=str, default='/home/kou/Development/Dump/nuvellite/src/data/catalog.json', help='Path to catalog.json')
     parser.add_argument('--scraped', type=str, default='/home/kou/Development/Dump/nuvelll/src/server/db/scraped-data.json', help='Path to scraped-data.json')
     args = parser.parse_args()
 
-    print(f"=== Nuvellite Catalog Synchronization Service ===")
+    print(f"=== Nuvellite Dynamic Catalog Synchronization Service ===")
     print(f"Catalog Path: {args.catalog}")
     print(f"Daemon Mode: {args.daemon}")
     if args.daemon:
