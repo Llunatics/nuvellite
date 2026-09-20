@@ -76,19 +76,58 @@ PREFIX_REGEX = re.compile(
     re.IGNORECASE
 )
 
-DISALLOWED_PATTERNS = [
-    'qanza:', 'cocomelon', 'teenlit:', 'metropop:', 'amore:', 'heal your gut',
-    'sembuhkan ususmu', 'hijrah kayra', 'novel islami', 'kesehatan reproduksi',
-    'panduan keluarga untuk memahami penyakit', 'aktivitas anak cerdas',
-    'parenting you must think', 'filsafat kontemplatif', 'hukum dan keadilan:',
-    'fondasi, konsep, hukum', 'anak cerdas finansial', 'biografi singkat',
-    'poster hijaiyah', 'resep masakan', 'kamus lengkap', 'four agreements'
+MERCHANDISE_REGEX = re.compile(
+    r'\b(?:'
+    r'bookmark|pencil case|keychain|gantungan kunci|acrylic stand|standee|akrilik|'
+    r'tote bag|pouch|tas|kaos|t-shirt|desk mat|mousepad|folder|clear file|'
+    r'poster|postcard|art print|sticker|stiker|badge|pin badge|washi tape|'
+    r'binder|notebook|buku tulis|memo pad|stationery|tumbler|mug|cangkir|'
+    r'card pack|booster pack|kartu koleksi|figurine|figure|plush|boneka|'
+    r'lanyard|gantungan|merchandise|merch'
+    r')\b',
+    re.IGNORECASE
+)
+
+NON_MANGA_LN_REGEX = re.compile(
+    r'\b(?:'
+    r'ensiklopedia|encyclopedia|atlas|kamus|dictionary|buku besar\b.*?(?:hiu|luar angkasa|predator|hewan|dunia)|'
+    r'lift the flap|funtastic|saintis cilik|seek & find|board book|buku interaktif|'
+    r'aktivitas|mewarnai|buku pintar|aku jadi pintar|siap sekolah|top paud|paud|'
+    r'my first book|pinkfong|bebefinn|uwa and friends|cocomelon|dr\. robot teo|'
+    r'alphabet writing|menulis alfabet|cepat membaca|metode bapatja|pandai membaca|'
+    r'seri buku anak rimba|cerita sains|pandai mengatur uang|'
+    r'hack the human|chip war|kebijakan publik|para perasuk|the art and craft of filmmaking|'
+    r'reflection card|flash card|tarot|kartu|koding pertamaku|'
+    r'parenting|fiqih|hadits|sholat|khotbah|doa harian|hijrah|'
+    r'resep|kuliner|diet|kesehatan|kedokteran|medis|hukum pidana|hukum perdata|'
+    r'investasi|saham|reksadana|crypto|keuangan|akuntansi|perpajakan|'
+    r'bisnis|manajemen|marketing|leadership|kepemimpinan|psikologi|'
+    r'self improvement|self-help|filsafat|filosofi|sejarah indonesia|'
+    r'soal utbk|cpns|toefl|ielts|matematika|fisika|kimia|biologi|'
+    r'why you.re not married yet|tetap waspada, selalu siaga|'
+    r'fourth wing|quicksilver|between shades of gray|silent child|carmilla|'
+    r'kho ping hoo|pedang pusaka|dewi sungai kuning|the mountains sing|'
+    r'a serial killer|letters from gaza|we are displaced|rasuna said|'
+    r'merengkuh kenangan|alam semesta rahasia|'
+    r'chirping town|margo dan rahasia|malik for sale|not a bed of roses|'
+    r'hunter with a scalpel|lintas sejarah|the korean fairy tale|gerbong perempuan|'
+    r'sebuah kota, sebuah umpama|wedding undercover|contemporary romance|'
+    r'dear mr\. euler|cassettes rewind|massage|memahami jepang|the japanese fairy book|'
+    r'rumah sakit yang tak pernah sunyi|karma yang tak pernah lupa|'
+    r'international classics|the prince series: gemerlap festival'
+    r')\b',
+    re.IGNORECASE
+)
+
+VALID_EXCEPTIONS = [
+    'juru masak para maiko', 'dr. stone', 'cells at work'
 ]
 
 DISALLOWED_CATEGORIES = {
     'self-improvement', 'pengembangan-diri', 'bisnis', 'manajemen', 'agama',
     'masak', 'parenting', 'kesehatan', 'international-books', 'kamus',
-    'buku-anak', 'arsitektur', 'desain', 'hukum', 'medis', 'novel-15'
+    'buku-anak', 'arsitektur', 'desain', 'hukum', 'medis', 'novel-15',
+    'komputer-teknologi', 'nonfiksi-anak-remaja', 'fiksi-sastra', 'pengembangan-diri-karir'
 }
 
 DISALLOWED_PUBLISHERS = {
@@ -281,10 +320,19 @@ def determine_book_category(title, specs, pub_id, price, existing_cat=None):
     t_lower = title.lower()
     cat_slugs = (specs.get('category_slugs') if specs else '').lower()
 
+    if any(e in t_lower for e in VALID_EXCEPTIONS):
+        return 'Manga'
+
+    if MERCHANDISE_REGEX.search(title) or NON_MANGA_LN_REGEX.search(title):
+        return None
+
+    if any(dc in cat_slugs for dc in DISALLOWED_CATEGORIES) and not any(mc in cat_slugs for mc in ['komik', 'manga', 'light-novel', 'grafis']):
+        return None
+
     if 'light novel' in t_lower or '(novel)' in t_lower or 'light-novel' in cat_slugs:
         return 'Light Novel'
 
-    if any(k in t_lower for k in ['level comic', 'akasha']):
+    if any(k in t_lower for k in ['level comic', 'akasha', 'koloni']):
         return 'Manga'
 
     if pub_id == 'pub_pgi':
@@ -354,13 +402,10 @@ def run_sync(catalog_path, scraped_data_path=None):
             purged_books += 1
             continue
 
-        if is_non_book(title):
-            purged_books += 1
-            continue
-
-        if any(pat in t_lower for pat in DISALLOWED_PATTERNS):
-            purged_books += 1
-            continue
+        if not any(e in t_lower for e in VALID_EXCEPTIONS):
+            if MERCHANDISE_REGEX.search(title) or NON_MANGA_LN_REGEX.search(title):
+                purged_books += 1
+                continue
 
         existing_books[b['id']] = b
         existing_by_slug[b['slug']] = b
@@ -394,10 +439,9 @@ def run_sync(catalog_path, scraped_data_path=None):
             for it in items:
                 slug = it.get('slug')
                 title = it.get('title', '').strip()
-                if not slug or not title or is_non_book(title):
-                    continue
-                if any(pat in title.lower() for pat in DISALLOWED_PATTERNS):
-                    continue
+                if not any(e in title.lower() for e in VALID_EXCEPTIONS):
+                    if MERCHANDISE_REGEX.search(title) or NON_MANGA_LN_REGEX.search(title):
+                        continue
                 discovered_products[slug] = (it, pid, pname, pshort)
                 v_count += 1
 
