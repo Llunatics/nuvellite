@@ -364,7 +364,7 @@ def clean_base_franchise(name):
     slug = re.sub(r'\bfeeling\b', 'feelings', slug)
     return slug, n or name
 
-def run_sync(catalog_path, scraped_data_path=None):
+def run_sync(catalog_path):
     print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Starting Dynamic Catalog Synchronization...")
 
     if not os.path.exists(catalog_path):
@@ -874,17 +874,7 @@ def run_sync(catalog_path, scraped_data_path=None):
     print(f"   - Total Series: {len(new_series_list)}")
     print(f"   - Publishers: {[p['name'] for p in catalog['publishers']]}")
 
-    # Synchronize with scraped_data_path if specified
-    if scraped_data_path and os.path.exists(scraped_data_path):
-        try:
-            with open(scraped_data_path, 'r', encoding='utf-8') as f:
-                scraped_data = json.load(f)
-            scraped_data['metadata']['generatedAt'] = catalog['lastUpdated']
-            with open(scraped_data_path, 'w', encoding='utf-8') as f:
-                json.dump(scraped_data, f, ensure_ascii=False, indent=2)
-            print(f"   - Synchronized {scraped_data_path}")
-        except Exception as e:
-            print(f"   - Notice on scraped-data sync: {e}")
+
 
     return True
 
@@ -893,7 +883,6 @@ def main():
     parser.add_argument('--daemon', action='store_true', help='Run continuously in background mode')
     parser.add_argument('--interval', type=int, default=3600, help='Polling interval in seconds (default: 3600s = 1 hour)')
     parser.add_argument('--catalog', type=str, default='/home/kou/Development/Dump/nuvellite/src/data/catalog.json', help='Path to catalog.json')
-    parser.add_argument('--scraped', type=str, default='/home/kou/Development/Dump/nuvelll/src/server/db/scraped-data.json', help='Path to scraped-data.json')
     args = parser.parse_args()
 
     print(f"=== Nuvellite Dynamic Catalog Synchronization Service ===")
@@ -903,20 +892,20 @@ def main():
         print(f"Interval: {args.interval} seconds ({args.interval / 60:.1f} minutes)")
 
     # Execute initial sync
-    run_sync(args.catalog, args.scraped)
+    run_sync(args.catalog)
 
     if args.daemon:
-        print("\n[nuvelll:Daemon] Entering continuous polling loop...")
+        print("\n[nuvellite:Daemon] Entering continuous polling loop...")
         while True:
             try:
-                print(f"[nuvelll:Daemon] Sleeping for {args.interval}s until next sync cycle...")
+                print(f"[nuvellite:Daemon] Sleeping for {args.interval}s until next sync cycle...")
                 time.sleep(args.interval)
-                run_sync(args.catalog, args.scraped)
+                run_sync(args.catalog)
             except KeyboardInterrupt:
-                print("\n[nuvelll:Daemon] Gracefully shutting down...")
+                print("\n[nuvellite:Daemon] Gracefully shutting down...")
                 break
             except Exception as e:
-                print(f"[nuvelll:Daemon] Error in sync cycle: {e}")
+                print(f"[nuvellite:Daemon] Error in sync cycle: {e}")
                 time.sleep(60)
 
 if __name__ == '__main__':
