@@ -1,12 +1,17 @@
-import catalogData from '@/data/catalog.json';
+import listingData from '@/data/catalog-listing.json';
+import fullCatalogData from '@/data/catalog.json';
 import { Book, Series, Publisher, CatalogData } from './types';
 import { getPriceSummary as getPriceSummaryInternal } from './data/price-service';
 import { getRelatedReleases as getRelatedReleasesInternal, getYouMayAlsoLike as getYouMayAlsoLikeInternal } from './data/recommendation-service';
 
-const data = catalogData as unknown as CatalogData;
+// Listing data (lightweight, no synopsis/heavy fields) — used for grids, cards, search
+const listing = listingData as unknown as CatalogData;
+
+// Full data — used only for single book detail pages (server-side)
+const full = fullCatalogData as unknown as CatalogData;
 
 // Filter out any quarantined or non-manga/non-LN items from public catalog
-const publicBooks: Book[] = (data.books || []).filter((b) => {
+const publicBooks: Book[] = (listing.books || []).filter((b) => {
   const cat = b.category;
   if (cat !== 'Manga' && cat !== 'Light Novel') return false;
   if (!['pub_elex', 'pub_mnc', 'pub_pgi'].includes(b.publisherId)) return false;
@@ -14,7 +19,7 @@ const publicBooks: Book[] = (data.books || []).filter((b) => {
   return true;
 });
 
-const publicSeries: Series[] = (data.series || []).filter((s) => {
+const publicSeries: Series[] = (listing.series || []).filter((s) => {
   if (s.type !== 'MANGA' && s.type !== 'LIGHT_NOVEL') return false;
   if (s.publisherId === 'pub_gramedia_catalog' || s.publisherName === 'Penerbit Resmi') return false;
   return true;
@@ -24,6 +29,25 @@ export function getAllBooks(): Book[] {
   return publicBooks;
 }
 
+/**
+ * Get full book detail by slug — reads from the FULL catalog (with synopsis, editions, etc.)
+ * Only use this for single book detail pages, not for listings.
+ */
+export function getBookDetailBySlug(slug: string): Book | undefined {
+  const clean = slug.toLowerCase();
+  const fullBooks = (full.books || []).filter((b) => {
+    const cat = b.category;
+    if (cat !== 'Manga' && cat !== 'Light Novel') return false;
+    if (!['pub_elex', 'pub_mnc', 'pub_pgi'].includes(b.publisherId)) return false;
+    if (b.classificationStatus === 'REJECTED' || b.classificationStatus === 'REVIEW_REQUIRED') return false;
+    return true;
+  });
+  return fullBooks.find((b) => b.slug.toLowerCase() === clean || b.id.toLowerCase() === clean);
+}
+
+/**
+ * Get book by slug from listing data — used for metadata generation and lightweight lookups.
+ */
 export function getBookBySlug(slug: string): Book | undefined {
   const clean = slug.toLowerCase();
   return publicBooks.find((b) => b.slug.toLowerCase() === clean || b.id.toLowerCase() === clean);
@@ -68,7 +92,7 @@ export function getSeriesBySlug(slug: string): Series | undefined {
 }
 
 export function getPublishers(): Publisher[] {
-  return (data.publishers || []).filter(
+  return (listing.publishers || []).filter(
     (p) => p.id !== 'pub_gramedia' && ['pub_elex', 'pub_mnc', 'pub_pgi'].includes(p.id)
   );
 }
@@ -125,7 +149,7 @@ export function getStats() {
       mnc: mncCount,
       pgi: pgiCount,
     },
-    lastUpdated: data.lastUpdated,
+    lastUpdated: listing.lastUpdated,
   };
 }
 

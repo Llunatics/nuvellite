@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useRef } from 'react';
+import React, { useState, useMemo, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import {
   BookOpen,
@@ -21,6 +21,8 @@ import { ReleaseCard } from '@/components/books/release-card';
 import { FeaturedReleaseCard } from '@/components/books/card-variants';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
+
+const PAGE_SIZE = 36;
 
 interface ReleaseFeedProps {
   initialBooks: Book[];
@@ -81,6 +83,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const handleViewAll = (format: 'Manga' | 'Light Novel') => {
     setFormatFilter(format);
@@ -125,6 +128,23 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
         return dateB - dateA;
       });
   }, [initialBooks, formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
+
+  // Reset visible count when filters change
+  const prevFilterKey = useRef('');
+  const filterKey = `${formatFilter}-${pubFilter}-${statusFilter}-${searchQuery}-${sortBy}`;
+  if (filterKey !== prevFilterKey.current) {
+    prevFilterKey.current = filterKey;
+    if (visibleCount !== PAGE_SIZE) {
+      setVisibleCount(PAGE_SIZE);
+    }
+  }
+
+  const visibleBooks = useMemo(() => filteredBooks.slice(0, visibleCount), [filteredBooks, visibleCount]);
+  const hasMore = visibleCount < filteredBooks.length;
+
+  const loadMore = useCallback(() => {
+    setVisibleCount((prev) => Math.min(prev + PAGE_SIZE, filteredBooks.length));
+  }, [filteredBooks.length]);
 
   return (
     <div className="space-y-12">
@@ -339,9 +359,22 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
-            {filteredBooks.map((book) => (
+            {visibleBooks.map((book) => (
               <ReleaseCard key={book.id} book={book} />
             ))}
+          </div>
+        )}
+
+        {/* Load More Button */}
+        {hasMore && (
+          <div className="flex justify-center pt-4">
+            <button
+              type="button"
+              onClick={loadMore}
+              className="px-8 py-3 rounded-2xl liquid-glass text-sm font-semibold text-editorial-title hover:text-accent border border-border-subtle hover:border-accent/30 transition-all shadow-sm hover:shadow-md active:scale-95"
+            >
+              Muat Lagi ({filteredBooks.length - visibleCount} tersisa)
+            </button>
           </div>
         )}
       </div>

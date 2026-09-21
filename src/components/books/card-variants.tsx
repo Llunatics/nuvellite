@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Book, Series } from '@/lib/types';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
@@ -37,9 +38,12 @@ export function FeaturedReleaseCard({ book }: FeaturedReleaseCardProps) {
           className="relative aspect-[3/4] w-40 sm:w-52 rounded-2xl overflow-hidden shrink-0 bg-surface-sunken group cover-depth"
         >
           {book.coverImage ? (
-            <img
+            <Image
               src={book.coverImage}
               alt={book.title}
+              width={208}
+              height={277}
+              sizes="(max-width: 640px) 160px, 208px"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
             />
           ) : (
@@ -180,7 +184,7 @@ export function SeriesProgressionCard({ series, ownedCount }: SeriesProgressionC
       <div className="flex items-center gap-3">
         <div className="relative aspect-[3/4] w-12 rounded-xl overflow-hidden bg-surface-sunken shrink-0">
           {series.coverImage ? (
-            <img src={series.coverImage} alt={series.name} className="w-full h-full object-cover" />
+            <Image src={series.coverImage} alt={series.name} width={48} height={64} className="w-full h-full object-cover" />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
               <Layers className="w-5 h-5 text-editorial-faint" />

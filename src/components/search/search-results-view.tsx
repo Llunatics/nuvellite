@@ -1,14 +1,20 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Search, X, BookOpen, ArrowLeft } from 'lucide-react';
-import { searchCatalog, getAllBooks, getAllSeries } from '@/lib/catalog-service';
-import { Book } from '@/lib/types';
+import { Book, Series } from '@/lib/types';
 import { ReleaseCard } from '@/components/books/release-card';
 
-export function SearchResultsView() {
+const PAGE_SIZE = 36;
+
+interface SearchResultsViewProps {
+  allBooks: Book[];
+  popularTags: string[];
+}
+
+export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get('q') || '';
@@ -38,14 +44,6 @@ export function SearchResultsView() {
     }
   }, [searchParams]);
 
-  // Derive popular search suggestions from active catalog series
-  const popularSearchTags = useMemo(() => {
-    return getAllSeries()
-      .filter((s) => (s.totalVolumes || 0) >= 2)
-      .slice(0, 8)
-      .map((s) => s.name);
-  }, []);
-
   const updateUrlParams = (q: string, fmt: string, pub: string, srt: string) => {
     const params = new URLSearchParams();
     if (q) params.set('q', q);
@@ -67,11 +65,24 @@ export function SearchResultsView() {
     updateUrlParams(tag, formatFilter, pubFilter, sortBy);
   };
 
-  // Base matches from catalog
+  // Client-side search against the books passed from server
   const rawResults = useMemo(() => {
     if (!activeQuery.trim()) return [];
-    return searchCatalog(activeQuery, 0);
-  }, [activeQuery]);
+    const q = activeQuery.toLowerCase().trim();
+    return allBooks.filter((b) => {
+      const titleMatch = b.title && b.title.toLowerCase().includes(q);
+      const seriesMatch = b.seriesName && b.seriesName.toLowerCase().includes(q);
+      const origTitleMatch = b.originalTitle && b.originalTitle.toLowerCase().includes(q);
+      const isbnMatch = b.isbn13 && b.isbn13.includes(q);
+      const categoryMatch = b.category && b.category.toLowerCase().includes(q);
+      const authorMatch = Array.isArray(b.authors) && b.authors.some((a) => {
+        if (typeof a === 'string') return a.toLowerCase().includes(q);
+        if (typeof a === 'object' && a && 'name' in a) return String((a as any).name).toLowerCase().includes(q);
+        return false;
+      });
+      return Boolean(titleMatch || seriesMatch || origTitleMatch || isbnMatch || categoryMatch || authorMatch);
+    });
+  }, [activeQuery, allBooks]);
 
   // Filtered & Sorted
   const finalResults = useMemo(() => {
@@ -96,6 +107,21 @@ export function SearchResultsView() {
         return dateB - dateA;
       });
   }, [rawResults, formatFilter, pubFilter, sortBy]);
+
+  // Pagination
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+
+  // Reset pagination when query or filters change
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [activeQuery, formatFilter, pubFilter, sortBy]);
+
+  const visibleResults = useMemo(() => finalResults.slice(0, visibleCount), [finalResults, visibleCount]);
+  const hasMore = visibleCount < finalResults.length;
+
+  const loadMore = useCallback(() => {
+    setVisibleCount((prev) => Math.min(prev + PAGE_SIZE, finalResults.length));
+  }, [finalResults.length]);
 
   return (
     <div className="space-y-6">
@@ -165,7 +191,7 @@ export function SearchResultsView() {
         {/* Popular Tags */}
         <div className="flex flex-wrap items-center gap-1.5 pt-1">
           <span className="text-[11px] font-mono text-editorial-faint mr-1">Rekomendasi:</span>
-          {popularSearchTags.map((tag) => (
+          {popularTags.map((tag) => (
             <button
               key={tag}
               type="button"
@@ -247,10 +273,23 @@ export function SearchResultsView() {
               Ditemukan {finalResults.length} buku yang cocok
             </span>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
-              {finalResults.map((book) => (
+              {visibleResults.map((book) => (
                 <ReleaseCard key={book.id} book={book} />
               ))}
             </div>
+
+            {/* Load More Button */}
+            {hasMore && (
+              <div className="flex justify-center pt-4">
+                <button
+                  type="button"
+                  onClick={loadMore}
+                  className="px-8 py-3 rounded-2xl liquid-glass text-sm font-semibold text-editorial-title hover:text-accent border border-border-subtle hover:border-accent/30 transition-all shadow-sm hover:shadow-md active:scale-95"
+                >
+                  Muat Lagi ({finalResults.length - visibleCount} tersisa)
+                </button>
+              </div>
+            )}
           </div>
         )
       ) : (

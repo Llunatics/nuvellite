@@ -570,6 +570,14 @@ def run_sync(catalog_path):
     print(f"   - Products Accepted: {len(accepted_products)}")
     print(f"   - Products Inserted: {inserted_count}, Updated: {updated_count}")
     print(f"   - New Price Snapshots: {len(new_snapshots)}")
+
+    # Auto-regenerate lightweight listing catalog for frontend performance
+    try:
+        from split_catalog import split_catalog
+        split_catalog()
+    except Exception as e:
+        print(f"   [WARN] Could not regenerate catalog-listing.json: {e}")
+
     return True
 
 def main():

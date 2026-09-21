@@ -4,6 +4,7 @@ import {
   getSeriesBySlug,
   getBooksBySeries,
   getAllBooks,
+  getBookDetailBySlug,
 } from '../src/lib/catalog-service';
 
 describe('Missing Volume Detector Logic', () => {
@@ -135,12 +136,13 @@ describe('Series Deduplication & Merchandise Isolation', () => {
     const uniqueVolNums = new Set(lnVolNums);
     expect(uniqueVolNums.size).toBe(lnVolNums.length);
 
-    // Verify Vol 5 has consolidated editions
+    // Verify Vol 5 has consolidated editions (requires full detail data)
     const vol5 = lnBooks.find((b) => b.volume === 5);
     expect(vol5).toBeDefined();
-    expect(vol5?.availableEditions).toBeDefined();
-    expect(vol5!.availableEditions!.length).toBeGreaterThan(1);
-    expect(vol5?.synopsis).toContain('Pilihan Edisi & Set Resmi');
+    const vol5Detail = getBookDetailBySlug(vol5!.slug);
+    expect(vol5Detail?.availableEditions).toBeDefined();
+    expect(vol5Detail!.availableEditions!.length).toBeGreaterThan(1);
+    expect(vol5Detail?.synopsis).toContain('Pilihan Edisi & Set Resmi');
   });
 
   it('should separate Classroom of the Elite into distinct Manga and Light Novel series', () => {

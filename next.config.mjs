@@ -5,9 +5,11 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200],
+    imageSizes: [48, 96, 144, 176, 208, 280],
     remotePatterns: [
-      { protocol: 'https', hostname: '**' },
-      { protocol: 'http', hostname: '**' }
+      { protocol: 'https', hostname: 'cdn.gramedia.com' },
     ],
   },
 };

@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getBookBySlug, getBooksBySeries, getPriceSummary, getYouMayAlsoLike } from '@/lib/catalog-service';
+import { getBookBySlug, getBookDetailBySlug, getBooksBySeries, getPriceSummary, getYouMayAlsoLike } from '@/lib/catalog-service';
 import { BookDetail } from '@/components/books/book-detail';
 import type { Metadata } from 'next';
 
@@ -20,7 +20,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BookDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const book = getBookBySlug(slug);
+  // Use full detail data (with synopsis, editions, etc.) for the detail page
+  const book = getBookDetailBySlug(slug);
 
   if (!book) {
     notFound();

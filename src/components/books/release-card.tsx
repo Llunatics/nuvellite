@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Bookmark, Check, Plus, BookOpen } from 'lucide-react';
 import { Book } from '@/lib/types';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
@@ -22,7 +23,7 @@ export function ReleaseCard({ book, variant = 'standard' }: ReleaseCardProps) {
       <div className="group flex items-center gap-3 p-2.5 rounded-2xl bg-surface/70 hover:bg-surface-elevated/70 border border-border-subtle hover:border-border-medium transition-all duration-200">
         <Link href={`/books/${book.slug}`} className="relative aspect-[3/4] w-12 rounded-xl overflow-hidden shrink-0 bg-surface-sunken">
           {book.coverImage ? (
-            <img src={book.coverImage} alt={book.title} loading="lazy" className="w-full h-full object-cover" />
+            <Image src={book.coverImage} alt={book.title} width={48} height={64} loading="lazy" className="w-full h-full object-cover" />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
               <BookOpen className="w-4 h-4 text-editorial-faint" />
@@ -91,12 +92,15 @@ export function ReleaseCard({ book, variant = 'standard' }: ReleaseCardProps) {
       {/* Top Cover Thumbnail with Floating Glass Badges */}
       <Link href={`/books/${book.slug}`} className="relative aspect-[3/4] w-full bg-surface-sunken overflow-hidden block cover-depth">
         {book.coverImage ? (
-          <img
-            src={book.coverImage}
-            alt={book.title}
-            loading="lazy"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-          />
+            <Image
+              src={book.coverImage}
+              alt={book.title}
+              width={176}
+              height={235}
+              loading="lazy"
+              sizes="(max-width: 640px) 144px, 176px"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+            />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-surface-elevated/40">
             <BookOpen className="w-8 h-8 text-editorial-faint mb-2" />

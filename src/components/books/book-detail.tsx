@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Book, RecommendationItem } from '@/lib/types';
 import { PriceSummary } from '@/lib/data/price-service';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
@@ -80,9 +81,12 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
           <div className="w-full md:col-span-5 lg:col-span-4 flex flex-col items-center">
             <div className="relative aspect-[3/4] w-full max-w-[280px] rounded-2xl overflow-hidden bg-surface-sunken shadow-2xl group border border-border-subtle cover-depth">
               {book.coverImage ? (
-                <img
+                <Image
                   src={book.coverImage}
                   alt={book.title}
+                  width={280}
+                  height={373}
+                  priority
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                 />
               ) : (
