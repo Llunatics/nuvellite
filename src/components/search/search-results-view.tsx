@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { Search, X, BookOpen, ArrowLeft } from 'lucide-react';
+import { Search, X, BookOpen, ArrowLeft, ChevronDown } from 'lucide-react';
 import { Book } from '@/lib/types';
 import { ReleaseCard } from '@/components/books/release-card';
 
@@ -145,7 +145,7 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
           <span>Kembali ke Katalog</span>
         </Link>
         <span className="text-[11px] font-mono text-editorial-faint">
-          {allBooks.length.toLocaleString('id-ID')} Katalog Terdaftar
+          Katalog Terverifikasi
         </span>
       </div>
 
@@ -216,10 +216,10 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
         )}
       </div>
 
-      {/* 3. Filter Bar */}
+      {/* 3. Symmetrical Filter Bar */}
       {activeQuery && (
-        <div className="flex flex-wrap items-center justify-between gap-3 text-xs border-b border-white/[0.04] pb-4">
-          <div className="flex items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
+        <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 text-xs border-b border-white/[0.04] pb-4">
+          <div className="sm:col-span-6 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
             {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
               <button
                 key={fmt}
@@ -228,47 +228,53 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
                   setFormatFilter(fmt);
                   updateUrlParams(activeQuery, fmt, pubFilter, sortBy);
                 }}
-                className={`px-3 py-1 rounded-full font-medium transition-all ${
+                className={`py-1.5 text-center rounded-full font-medium transition-all text-xs truncate ${
                   formatFilter === fmt
                     ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                     : 'text-editorial-muted hover:text-editorial-title'
                 }`}
               >
-                {fmt === 'ALL' ? 'Semua Format' : fmt}
+                {fmt === 'ALL' ? 'Semua' : fmt}
               </button>
             ))}
           </div>
 
-          <div className="flex items-center gap-2">
-            <select
-              value={pubFilter}
-              onChange={(e) => {
-                setPubFilter(e.target.value);
-                updateUrlParams(activeQuery, formatFilter, e.target.value, sortBy);
-              }}
-              className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title text-xs focus:outline-none cursor-pointer"
-            >
-              <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
-              {publishers.map((p) => (
-                <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
-                  {p.name}
-                </option>
-              ))}
-            </select>
+          <div className="sm:col-span-6 grid grid-cols-2 gap-2">
+            <div className="relative">
+              <select
+                value={pubFilter}
+                onChange={(e) => {
+                  setPubFilter(e.target.value);
+                  updateUrlParams(activeQuery, formatFilter, e.target.value, sortBy);
+                }}
+                className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title text-xs focus:outline-none cursor-pointer appearance-none truncate"
+              >
+                <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
+                {publishers.map((p) => (
+                  <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
+                    {p.name}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            </div>
 
-            <select
-              value={sortBy}
-              onChange={(e) => {
-                setSortBy(e.target.value as any);
-                updateUrlParams(activeQuery, formatFilter, pubFilter, e.target.value);
-              }}
-              className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title text-xs focus:outline-none cursor-pointer"
-            >
-              <option value="latest" className="bg-surface text-editorial-title">Rilisan Terbaru</option>
-              <option value="title" className="bg-surface text-editorial-title">Judul (A-Z)</option>
-              <option value="price_low" className="bg-surface text-editorial-title">Harga Terendah</option>
-              <option value="price_high" className="bg-surface text-editorial-title">Harga Tertinggi</option>
-            </select>
+            <div className="relative">
+              <select
+                value={sortBy}
+                onChange={(e) => {
+                  setSortBy(e.target.value as any);
+                  updateUrlParams(activeQuery, formatFilter, pubFilter, e.target.value);
+                }}
+                className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title text-xs focus:outline-none cursor-pointer appearance-none truncate"
+              >
+                <option value="latest" className="bg-surface text-editorial-title">Rilisan Terbaru</option>
+                <option value="title" className="bg-surface text-editorial-title">Judul (A-Z)</option>
+                <option value="price_low" className="bg-surface text-editorial-title">Harga Terendah</option>
+                <option value="price_high" className="bg-surface text-editorial-title">Harga Tertinggi</option>
+              </select>
+              <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            </div>
           </div>
         </div>
       )}

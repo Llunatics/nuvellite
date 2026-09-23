@@ -124,10 +124,8 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
-              <BookMarked className="w-3.5 h-3.5 text-accent" />
-              <span>Rak Buku Local-First</span>
-              <span className="text-white/20">•</span>
-              <span>Privasi Penuh di Peramban Anda</span>
+              <BookMarked className="w-3 h-3 text-accent shrink-0" />
+              <span>Rak Buku Lokal</span>
             </div>
 
             <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">

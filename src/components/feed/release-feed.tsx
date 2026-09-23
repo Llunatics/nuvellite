@@ -7,6 +7,7 @@ import {
   Sparkles,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   Search,
   X,
   SlidersHorizontal,
@@ -156,10 +157,8 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
       <section className="space-y-4 pt-2 sm:pt-4">
         <div className="max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-xs" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-xs shrink-0" />
             <span>Katalog Resmi Indonesia</span>
-            <span className="text-white/20">•</span>
-            <span>{initialBooks.length.toLocaleString('id-ID')} Rilisan Terverifikasi</span>
           </div>
 
           <h1 className="font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.08]">
@@ -334,23 +333,23 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
           )}
         </div>
 
-        {/* Cohesive Control System (Velora/Linear Minimal Bar) */}
-        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 text-xs">
+        {/* Symmetrical Search & Filter Control Console */}
+        <div className="space-y-2.5">
           {/* Integrated Search Input */}
-          <div className="relative flex-1 max-w-lg">
-            <Search className="w-3.5 h-3.5 text-editorial-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <div className="relative w-full">
+            <Search className="w-4 h-4 text-editorial-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Saring judul, seri, pengarang..."
-              className="w-full pl-9 pr-8 py-2 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.06] border border-white/[0.06] focus:border-white/[0.15] text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all text-xs"
+              className="w-full h-10 pl-10 pr-9 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.06] border border-white/[0.06] focus:border-white/[0.15] text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all text-xs"
             />
             {searchQuery && (
               <button
                 type="button"
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-editorial-faint hover:text-editorial-title p-0.5"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-editorial-faint hover:text-editorial-title p-1"
                 aria-label="Hapus kata kunci"
               >
                 <X className="w-3.5 h-3.5" />
@@ -358,63 +357,60 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             )}
           </div>
 
-          {/* Desktop Filter Pills & Dropdowns */}
-          <div className="hidden lg:flex items-center gap-2.5">
-            {/* Format Segmented Pill */}
-            <div className="flex items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
+          {/* Symmetrical Filter Controls Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 text-xs">
+            {/* Format Segmented Tab */}
+            <div className="sm:col-span-6 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
               {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
                 <button
                   key={fmt}
                   type="button"
                   onClick={() => setFormatFilter(fmt)}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+                  className={`py-1.5 text-center rounded-full font-medium transition-all text-xs truncate ${
                     formatFilter === fmt
                       ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                       : 'text-editorial-muted hover:text-editorial-title'
                   }`}
                 >
-                  {fmt === 'ALL' ? 'Semua Format' : fmt}
+                  {fmt === 'ALL' ? 'Semua' : fmt}
                 </button>
               ))}
             </div>
 
-            {/* Publisher Dropdown */}
-            <select
-              value={pubFilter}
-              onChange={(e) => setPubFilter(e.target.value)}
-              className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
-            >
-              <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
-              {publishers.map((p) => (
-                <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
-                  {p.shortName}
-                </option>
-              ))}
-            </select>
+            {/* Symmetrical Dropdowns */}
+            <div className="sm:col-span-6 grid grid-cols-2 gap-2">
+              {/* Publisher Dropdown */}
+              <div className="relative">
+                <select
+                  value={pubFilter}
+                  onChange={(e) => setPubFilter(e.target.value)}
+                  className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
+                >
+                  <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
+                  {publishers.map((p) => (
+                    <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
+                      {p.shortName}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
 
-            {/* Sort Dropdown */}
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
-            >
-              <option value="latest" className="bg-surface text-editorial-title">Rilisan Terbaru</option>
-              <option value="title" className="bg-surface text-editorial-title">Judul (A-Z)</option>
-              <option value="price_low" className="bg-surface text-editorial-title">Harga Terendah</option>
-              <option value="price_high" className="bg-surface text-editorial-title">Harga Tertinggi</option>
-            </select>
-          </div>
-
-          {/* Mobile Filter Toggle Button */}
-          <div className="lg:hidden flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setIsMobileFilterOpen(true)}
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-medium text-editorial-title active:scale-95 transition-all"
-            >
-              <SlidersHorizontal className="w-3.5 h-3.5 text-accent" />
-              <span>Filter &amp; Urutkan ({filteredBooks.length})</span>
-            </button>
+              {/* Sort Dropdown */}
+              <div className="relative">
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
+                >
+                  <option value="latest" className="bg-surface text-editorial-title">Rilisan Terbaru</option>
+                  <option value="title" className="bg-surface text-editorial-title">Judul (A-Z)</option>
+                  <option value="price_low" className="bg-surface text-editorial-title">Harga Terendah</option>
+                  <option value="price_high" className="bg-surface text-editorial-title">Harga Tertinggi</option>
+                </select>
+                <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
+            </div>
           </div>
         </div>
 

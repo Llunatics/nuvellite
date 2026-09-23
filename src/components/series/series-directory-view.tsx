@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Series, Book } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
-import { Layers, Search, BookOpen, X, ArrowRight } from 'lucide-react';
+import { Layers, Search, BookOpen, X, ArrowRight, ChevronDown } from 'lucide-react';
 
 interface SeriesDirectoryViewProps {
   allSeries: Series[];
@@ -36,37 +36,24 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
     return map;
   }, [ownedItems, isLoaded]);
 
-  // Map seriesId -> List of published books sorted by volume
-  const seriesBooksMap = useMemo(() => {
-    const map = new Map<string, Book[]>();
-    for (const b of allBooks) {
-      if (b.seriesId) {
-        if (!map.has(b.seriesId)) {
-          map.set(b.seriesId, []);
-        }
-        map.get(b.seriesId)!.push(b);
-      }
-    }
-    for (const books of map.values()) {
-      books.sort((a, b) => (a.volume ?? 0) - (b.volume ?? 0));
-    }
-    return map;
-  }, [allBooks]);
-
-  // Filtered and Sorted Series
+  // Filtered & Sorted Series
   const filteredSeries = useMemo(() => {
+    const q = searchQuery.toLowerCase().trim();
+
     return allSeries
       .filter((s) => {
+        // Format
         if (formatFilter !== 'ALL' && s.type !== formatFilter) return false;
+        // Publisher
         if (pubFilter !== 'ALL' && s.publisherId !== pubFilter) return false;
+        // Status
         if (statusFilter !== 'ALL' && s.status !== statusFilter) return false;
-        if (searchQuery.trim()) {
-          const q = searchQuery.toLowerCase().trim();
+        // Search Query (name, author, publisher)
+        if (q) {
           const matchName = s.name.toLowerCase().includes(q);
-          const matchOrig = s.originalTitle?.toLowerCase().includes(q);
           const matchAuthor = s.author?.toLowerCase().includes(q);
           const matchPub = s.publisherName.toLowerCase().includes(q);
-          if (!matchName && !matchOrig && !matchAuthor && !matchPub) return false;
+          if (!matchName && !matchAuthor && !matchPub) return false;
         }
         return true;
       })
@@ -94,10 +81,8 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
       {/* 1. Header Banner */}
       <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
-          <Layers className="w-3.5 h-3.5 text-accent" />
+          <Layers className="w-3 h-3 text-accent shrink-0" />
           <span>Direktori Seri Resmi</span>
-          <span className="text-white/20">•</span>
-          <span>{allSeries.length.toLocaleString('id-ID')} Seri Terdaftar</span>
         </div>
 
         <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
@@ -110,39 +95,40 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         </p>
       </section>
 
-      {/* 2. Cohesive Search & Filter Toolbar */}
-      <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 text-xs">
-        {/* Search Input */}
-        <div className="relative flex-1 max-w-md">
-          <Search className="w-3.5 h-3.5 text-editorial-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+      {/* 2. Symmetrical Search & Filter Command Bar */}
+      <div className="space-y-2.5">
+        {/* Search Bar */}
+        <div className="relative w-full">
+          <Search className="w-4 h-4 text-editorial-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Cari judul seri, pengarang, penerbit..."
-            className="w-full pl-9 pr-8 py-2 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.06] border border-white/[0.06] focus:border-white/[0.15] text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all text-xs"
+            className="w-full h-10 pl-10 pr-9 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.06] border border-white/[0.06] focus:border-white/[0.15] text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all text-xs"
           />
           {searchQuery && (
             <button
               type="button"
               onClick={() => setSearchQuery('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-editorial-faint hover:text-editorial-title p-0.5"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-editorial-faint hover:text-editorial-title p-1"
+              aria-label="Hapus kata kunci"
             >
               <X className="w-3.5 h-3.5" />
             </button>
           )}
         </div>
 
-        {/* Filters Controls */}
-        <div className="flex flex-wrap items-center gap-2">
-          {/* Format Pills */}
-          <div className="flex items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
+        {/* Filter Controls: Symmetrical Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 text-xs">
+          {/* Format Segmented Tab */}
+          <div className="sm:col-span-5 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
             {(['ALL', 'MANGA', 'LIGHT_NOVEL'] as const).map((fmt) => (
               <button
                 key={fmt}
                 type="button"
                 onClick={() => setFormatFilter(fmt)}
-                className={`px-3 py-1 rounded-full font-medium transition-all text-xs ${
+                className={`py-1.5 text-center rounded-full font-medium transition-all text-xs truncate ${
                   formatFilter === fmt
                     ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                     : 'text-editorial-muted hover:text-editorial-title'
@@ -153,41 +139,53 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
             ))}
           </div>
 
-          {/* Status Filter */}
-          <select
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value as any)}
-            className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
-          >
-            <option value="ALL" className="bg-surface text-editorial-title">Semua Status</option>
-            <option value="COMPLETED" className="bg-surface text-editorial-title">Tamat</option>
-            <option value="ONGOING" className="bg-surface text-editorial-title">Berjalan</option>
-          </select>
+          {/* Symmetrical Dropdowns */}
+          <div className="sm:col-span-7 grid grid-cols-3 gap-2">
+            {/* Status Select */}
+            <div className="relative">
+              <select
+                value={statusFilter}
+                onChange={(e) => setStatusFilter(e.target.value as any)}
+                className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
+              >
+                <option value="ALL" className="bg-surface text-editorial-title">Semua Status</option>
+                <option value="COMPLETED" className="bg-surface text-editorial-title">Tamat</option>
+                <option value="ONGOING" className="bg-surface text-editorial-title">Berjalan</option>
+              </select>
+              <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            </div>
 
-          {/* Publisher Select */}
-          <select
-            value={pubFilter}
-            onChange={(e) => setPubFilter(e.target.value)}
-            className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
-          >
-            <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
-            {publishers.map((p) => (
-              <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
-                {p.name}
-              </option>
-            ))}
-          </select>
+            {/* Publisher Select */}
+            <div className="relative">
+              <select
+                value={pubFilter}
+                onChange={(e) => setPubFilter(e.target.value)}
+                className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
+              >
+                <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
+                {publishers.map((p) => (
+                  <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
+                    {p.name}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            </div>
 
-          {/* Sort Select */}
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as any)}
-            className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
-          >
-            <option value="name" className="bg-surface text-editorial-title">Judul (A-Z)</option>
-            <option value="volumes_high" className="bg-surface text-editorial-title">Volume Terbanyak</option>
-            <option value="volumes_low" className="bg-surface text-editorial-title">Volume Tersedikit</option>
-          </select>
+            {/* Sort Select */}
+            <div className="relative">
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as any)}
+                className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
+              >
+                <option value="name" className="bg-surface text-editorial-title">Judul (A-Z)</option>
+                <option value="volumes_high" className="bg-surface text-editorial-title">Vol. Terbanyak</option>
+                <option value="volumes_low" className="bg-surface text-editorial-title">Vol. Sedikit</option>
+              </select>
+              <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            </div>
+          </div>
         </div>
       </div>
 

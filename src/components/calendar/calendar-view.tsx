@@ -4,7 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { Book, Publisher } from '@/lib/types';
 import { ReleaseCard } from '@/components/books/release-card';
 import { formatDateWIB, getDayNameWIB } from '@/lib/formatters';
-import { Calendar as CalendarIcon, Sparkles } from 'lucide-react';
+import { Calendar as CalendarIcon, Sparkles, ChevronDown } from 'lucide-react';
 
 interface CalendarViewProps {
   books: Book[];
@@ -74,10 +74,8 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
       {/* 1. Header Banner */}
       <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
-          <CalendarIcon className="w-3.5 h-3.5 text-accent" />
+          <CalendarIcon className="w-3 h-3 text-accent shrink-0" />
           <span>Radar Rilis Resmi</span>
-          <span className="text-white/20">•</span>
-          <span>{datedBooks.length.toLocaleString('id-ID')} Rilisan Terjadwal</span>
         </div>
 
         <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
@@ -90,12 +88,12 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
         </p>
       </section>
 
-      {/* 2. Timeline Filter Toolbar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 text-xs">
-        {/* Time Horizon Segmented Pills */}
-        <div className="flex flex-wrap items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
+      {/* 2. Symmetrical Timeline Filter Toolbar */}
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 text-xs">
+        {/* Time Horizon Segmented Tabs */}
+        <div className="sm:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
           {[
-            { id: 'ALL', label: 'Semua Linimasa' },
+            { id: 'ALL', label: 'Semua' },
             { id: 'WEDNESDAY', label: '★ Rabu Rilis' },
             { id: 'THIS_WEEK', label: 'Minggu Ini' },
             { id: 'THIS_MONTH', label: 'Bulan Ini' },
@@ -104,7 +102,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
               key={t.id}
               type="button"
               onClick={() => setTimeHorizon(t.id as any)}
-              className={`px-3.5 py-1 rounded-full font-medium transition-all text-xs ${
+              className={`py-1.5 text-center rounded-full font-medium transition-all text-xs truncate ${
                 timeHorizon === t.id
                   ? t.id === 'WEDNESDAY'
                     ? 'bg-amber-400/20 text-amber-300 font-semibold shadow-xs'
@@ -118,29 +116,35 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
         </div>
 
         {/* Format & Publisher Filters */}
-        <div className="flex items-center gap-2">
-          <select
-            value={formatFilter}
-            onChange={(e) => setFormatFilter(e.target.value as any)}
-            className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
-          >
-            <option value="ALL" className="bg-surface text-editorial-title">Semua Format</option>
-            <option value="Manga" className="bg-surface text-editorial-title">Manga</option>
-            <option value="Light Novel" className="bg-surface text-editorial-title">Light Novel</option>
-          </select>
+        <div className="sm:col-span-5 grid grid-cols-2 gap-2">
+          <div className="relative">
+            <select
+              value={formatFilter}
+              onChange={(e) => setFormatFilter(e.target.value as any)}
+              className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
+            >
+              <option value="ALL" className="bg-surface text-editorial-title">Semua Format</option>
+              <option value="Manga" className="bg-surface text-editorial-title">Manga</option>
+              <option value="Light Novel" className="bg-surface text-editorial-title">Light Novel</option>
+            </select>
+            <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+          </div>
 
-          <select
-            value={pubFilter}
-            onChange={(e) => setPubFilter(e.target.value)}
-            className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
-          >
-            <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
-            {publishers.map((p) => (
-              <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
-                {p.shortName}
-              </option>
-            ))}
-          </select>
+          <div className="relative">
+            <select
+              value={pubFilter}
+              onChange={(e) => setPubFilter(e.target.value)}
+              className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
+            >
+              <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
+              {publishers.map((p) => (
+                <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
+                  {p.shortName}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+          </div>
         </div>
       </div>
 
