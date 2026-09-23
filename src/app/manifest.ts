@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'nuvellite — Official Manga & Light Novel Tracker',
     short_name: 'nuvellite',
-    description: 'Pelacak resmi rilisan Manga dan Light Novel di Indonesia.',
+    description: 'Pelacak rilisan Manga dan Light Novel di Indonesia.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0B0F17',

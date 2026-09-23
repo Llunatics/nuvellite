@@ -27,7 +27,7 @@ const monoFont = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'nuvellite — Official Manga & Light Novel Tracker',
   description:
-    'Pelacak resmi rilisan Manga dan Light Novel di Indonesia dari penerbit Elex Media Komputindo, m&c!, dan Phoenix Gramedia Indonesia.',
+    'Pelacak rilisan Manga dan Light Novel di Indonesia dari penerbit Elex Media Komputindo, m&c!, dan Phoenix Gramedia Indonesia.',
   keywords: [
     'manga indonesia',
     'light novel indonesia',

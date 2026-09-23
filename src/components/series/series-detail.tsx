@@ -297,9 +297,9 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
                         }`}
                       >
                         {selectedSlot.state === 'OWNED' && 'Sudah Dimiliki'}
-                        {selectedSlot.state === 'RELEASED' && 'Rilis Resmi (Belum Dimiliki)'}
+                        {selectedSlot.state === 'RELEASED' && 'Sudah Rilis (Belum Dimiliki)'}
                         {selectedSlot.state === 'UPCOMING' && 'Pra-Pesan / Segera Terbit'}
-                        {selectedSlot.state === 'UNKNOWN_GAP' && 'Nomor Terlewati di Data Sumber Resmi'}
+                        {selectedSlot.state === 'UNKNOWN_GAP' && 'Nomor Terlewati di Data Sumber'}
                       </span>
                     </div>
 
@@ -320,7 +320,7 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
                       </div>
                     ) : (
                       <p className="text-xs text-editorial-muted">
-                        Nomor volume ini belum ditemukan pada database resmi Gramedia Indonesia.
+                        Nomor volume ini belum ditemukan pada database Gramedia Indonesia.
                       </p>
                     )}
                   </div>

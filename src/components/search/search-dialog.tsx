@@ -150,7 +150,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                   Pencarian Cepat Katalog Nuvellite
                 </p>
                 <p className="text-xs text-editorial-muted">
-                  Cari berdasarkan judul resmi, seri kanonikal, nomor ISBN-13, pengarang, atau nomor volume.
+                  Cari berdasarkan judul, seri kanonikal, nomor ISBN-13, pengarang, atau nomor volume.
                 </p>
               </div>
 

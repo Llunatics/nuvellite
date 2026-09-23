@@ -387,7 +387,7 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
               <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300 font-sans">
                 <span className="font-semibold">Daftar Volume Terlewat: </span>
                 <span>
-                  Berikut adalah nomor volume resmi yang telah terbit namun belum Anda miliki pada seri yang sedang Anda ikuti.
+                  Berikut adalah nomor volume yang telah terbit namun belum Anda miliki pada seri yang sedang Anda ikuti.
                 </span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">

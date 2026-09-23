@@ -122,7 +122,7 @@ export function FeaturedReleaseCard({ book }: FeaturedReleaseCardProps) {
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <div>
               <span className="text-[9px] font-mono uppercase tracking-widest text-editorial-faint font-medium block">
-                {book.originalPrice && book.originalPrice > book.currentPrice ? 'Harga Diskon' : 'Harga Resmi'}
+                {book.originalPrice && book.originalPrice > book.currentPrice ? 'Harga Promo' : 'Harga Normal'}
               </span>
               <div className="flex items-baseline gap-2 mt-0.5">
                 <span className="text-2xl sm:text-3xl font-mono font-bold text-editorial-title tracking-tight">

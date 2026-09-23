@@ -5,7 +5,7 @@ import { SearchResultsView } from '@/components/search/search-results-view';
 
 export const metadata: Metadata = {
   title: 'Pencarian Katalog — nuvellite',
-  description: 'Hasil pencarian manga, light novel, dan official merchandise resmi di Indonesia.',
+  description: 'Hasil pencarian manga, light novel, dan rilisan komik di Indonesia.',
 };
 
 export default function SearchPage() {

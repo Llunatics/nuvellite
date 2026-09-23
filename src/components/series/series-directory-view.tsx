@@ -82,7 +82,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
       <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
           <Layers className="w-3 h-3 text-accent shrink-0" />
-          <span>Direktori Seri Resmi</span>
+          <span>Direktori Seri</span>
         </div>
 
         <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
@@ -91,7 +91,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
 
         <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
           Arsip kanonikal seri terbitan Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia.
-          Lacak kelengkapan volume, temukan nomor yang terlewat, dan monitor status rilis resmi.
+          Lacak kelengkapan volume, temukan nomor yang terlewat, dan monitor status rilis.
         </p>
       </section>
 

@@ -184,7 +184,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
                 {book.status === 'PREORDER' && (
                   <>
                     <span className="text-editorial-faint/60">•</span>
-                    <span className="text-accent font-semibold uppercase tracking-wider">PREORDER RESMI</span>
+                    <span className="text-accent font-semibold uppercase tracking-wider">PRE-ORDER</span>
                   </>
                 )}
               </div>
@@ -204,7 +204,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
             <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
-                  {book.originalPrice && book.originalPrice > book.currentPrice ? 'Harga Promo / Terkini' : 'Harga Resmi (SRP)'}
+                  {book.originalPrice && book.originalPrice > book.currentPrice ? 'Harga Promo' : 'Harga Normal (SRP)'}
                 </span>
                 <div className="flex items-baseline gap-2.5 mt-1">
                   <span className="text-2xl sm:text-3xl font-mono font-bold text-editorial-title tracking-tight">
@@ -226,7 +226,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
               {book.releaseDate && (
                 <div className="text-right">
                   <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
-                    Jadwal Rilis Resmi
+                    Jadwal Rilis
                   </span>
                   <span className="text-xs sm:text-sm font-medium text-editorial-title flex items-center gap-1.5 mt-1">
                     <Calendar className="w-3.5 h-3.5 text-accent" />
@@ -247,7 +247,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
 
               <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block mb-1">
-                  Penerbit Resmi
+                  Penerbit
                 </span>
                 <span className="font-medium text-editorial-title block truncate">{book.publisherShortName}</span>
               </div>
@@ -268,7 +268,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
                 <div className="flex items-center justify-between">
                   <h3 className="text-xs font-mono uppercase tracking-wider text-amber-300 font-semibold flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Pilihan Edisi &amp; Varian Resmi</span>
+                    <span>Pilihan Edisi &amp; Varian</span>
                   </h3>
                   <span className="text-[10px] font-mono text-amber-300/70">
                     {book.availableEditions.length} Pilihan
@@ -329,7 +329,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
                 </div>
               ) : (
                 <p className="text-xs sm:text-sm text-editorial-faint italic font-sans">
-                  Belum ada sinopsis resmi yang tercatat untuk rilis ini.
+                  Belum ada sinopsis yang tercatat untuk rilis ini.
                 </p>
               )}
             </div>
@@ -354,7 +354,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
       <div className="space-y-4">
         <div className="flex items-center justify-between border-b border-white/[0.04] pb-3">
           <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title">
-            Riwayat &amp; Fluktuasi Harga Resmi
+            Riwayat &amp; Fluktuasi Harga
           </h2>
           <span className="text-[11px] font-mono text-editorial-faint">Data Historis Terverifikasi</span>
         </div>

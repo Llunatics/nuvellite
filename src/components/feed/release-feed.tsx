@@ -158,11 +158,11 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
         <div className="max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-xs shrink-0" />
-            <span>Katalog Resmi Indonesia</span>
+            <span>Katalog Indonesia</span>
           </div>
 
           <h1 className="font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.08]">
-            Pelacak Resmi Manga &amp; Light Novel.
+            Pelacak Manga &amp; Light Novel.
           </h1>
 
           <p className="text-sm sm:text-base text-editorial-body leading-relaxed max-w-2xl font-sans">
@@ -314,10 +314,10 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/[0.04] pb-4">
           <div>
             <h2 className="text-2xl sm:text-3xl font-editorial font-normal text-editorial-title tracking-tight">
-              Seluruh Katalog Resmi
+              Seluruh Katalog
             </h2>
             <p className="text-xs text-editorial-muted mt-1 font-mono">
-              Menampilkan {filteredBooks.length.toLocaleString('id-ID')} judul resmi terdaftar
+              Menampilkan {filteredBooks.length.toLocaleString('id-ID')} judul terdaftar
             </p>
           </div>
 

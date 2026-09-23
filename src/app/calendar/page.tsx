@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Kalender Rilis Manga & Light Novel — nuvellite',
-  description: 'Jadwal terbit komik dan light novel resmi di Indonesia dari Elex Media Komputindo, m&c!, dan Phoenix Gramedia Indonesia.',
+  description: 'Jadwal terbit komik dan light novel di Indonesia dari Elex Media Komputindo, m&c!, dan Phoenix Gramedia Indonesia.',
 };
 
 export default function CalendarPage() {

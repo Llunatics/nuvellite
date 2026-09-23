@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Direktori Seri Manga & Light Novel — nuvellite',
-  description: 'Daftar lengkap seri komik dan light novel resmi dari Elex Media Komputindo, m&c!, dan Phoenix Gramedia Indonesia.',
+  description: 'Daftar lengkap seri komik dan light novel dari Elex Media Komputindo, m&c!, dan Phoenix Gramedia Indonesia.',
 };
 
 export default function SeriesDirectoryPage() {

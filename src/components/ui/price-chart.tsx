@@ -45,7 +45,7 @@ export function PriceChart({ summary }: PriceChartProps) {
                 </span>
               </div>
               <span className="text-[11px] text-editorial-muted">
-                Harga diskon promo aktif. Harga resmi dasar (SRP) tetap {formatRupiah(originalPrice)}.
+                Harga diskon promo aktif. Harga dasar (SRP) tetap {formatRupiah(originalPrice)}.
               </span>
             </div>
           </div>
@@ -65,7 +65,7 @@ export function PriceChart({ summary }: PriceChartProps) {
 
         <div className="p-3.5 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
           <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
-            {isDiscounted && originalPrice ? 'Harga Normal Resmi' : 'Harga Terendah'}
+            {isDiscounted && originalPrice ? 'Harga Normal' : 'Harga Terendah'}
           </span>
           <span className="text-base font-mono font-bold text-editorial-muted mt-1 block">
             {isDiscounted && originalPrice ? formatRupiah(originalPrice) : formatRupiah(lowestObservedPrice)}
@@ -114,7 +114,7 @@ export function PriceChart({ summary }: PriceChartProps) {
       {hasHistoricalFluctuation && snapshots.length >= 2 ? (
         <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.04] space-y-3">
           <div className="flex items-center justify-between text-xs text-editorial-muted">
-            <span className="font-mono text-[11px]">Riwayat Fluktuasi Harga Resmi</span>
+            <span className="font-mono text-[11px]">Riwayat Fluktuasi Harga</span>
             <span className="font-mono text-[10px] text-editorial-faint">
               {snapshots.length} pencatatan harga
             </span>
@@ -184,7 +184,7 @@ export function PriceChart({ summary }: PriceChartProps) {
         <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04] flex items-center gap-3 text-editorial-muted text-xs">
           <Info className="w-4 h-4 text-editorial-faint shrink-0" />
           <span>
-            Harga saat ini ({formatRupiah(currentPrice)}) adalah harga resmi yang tercatat. Belum terjadi perubahan harga pada data historis buku ini.
+            Harga saat ini ({formatRupiah(currentPrice)}) adalah harga yang tercatat. Belum terjadi perubahan harga pada data historis buku ini.
           </span>
         </div>
       )}

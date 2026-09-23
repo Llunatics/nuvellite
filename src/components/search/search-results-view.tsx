@@ -160,7 +160,7 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
             )}
           </h1>
           <p className="text-xs sm:text-sm text-editorial-muted font-sans">
-            Cari berdasarkan judul, nama seri, nomor ISBN-13 resmi, atau nama pengarang.
+            Cari berdasarkan judul, nama seri, nomor ISBN-13, atau nama pengarang.
           </p>
         </div>
 

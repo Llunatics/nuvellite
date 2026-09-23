@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${book.title} — nuvellite`,
-    description: `Rilisan resmi ${book.category} terbitan ${book.publisherName}. Cek harga resmi, tanggal rilis, sinopsis, dan volume buku.`,
+    description: `Rilisan ${book.category} terbitan ${book.publisherName}. Cek harga, tanggal rilis, sinopsis, dan volume buku.`,
   };
 }
 

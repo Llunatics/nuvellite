@@ -75,7 +75,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
       <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
           <CalendarIcon className="w-3 h-3 text-accent shrink-0" />
-          <span>Radar Rilis Resmi</span>
+          <span>Radar Rilis</span>
         </div>
 
         <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
@@ -83,7 +83,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
         </h1>
 
         <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
-          Pantau jadwal resmi komik dan light novel mingguan di Indonesia. Ikuti tradisi Rabu Rilis Resmi
+          Pantau jadwal komik dan light novel mingguan di Indonesia. Ikuti tradisi Rabu Rilis
           dari Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia.
         </p>
       </section>

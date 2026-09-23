@@ -11,7 +11,7 @@ export function Footer() {
           </span>
           <span className="hidden sm:inline text-editorial-faint/60">•</span>
           <span className="text-editorial-muted text-xs">
-            Arsip &amp; Pelacak Rilis Resmi Manga &amp; Light Novel Indonesia
+            Arsip &amp; Pelacak Rilis Manga &amp; Light Novel Indonesia
           </span>
         </div>
 
@@ -37,7 +37,7 @@ export function Footer() {
         </div>
 
         <div className="text-[11px] font-mono text-editorial-faint text-center md:text-right">
-          Data sinkronisasi resmi Gramedia Indonesia
+          Data sinkronisasi Gramedia Indonesia
         </div>
       </div>
     </footer>
