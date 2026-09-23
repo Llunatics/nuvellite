@@ -7,19 +7,15 @@ import {
   Sparkles,
   ChevronLeft,
   ChevronRight,
-  Flame,
   Search,
   X,
-  Plus,
-  Check,
-  Bookmark,
-  ArrowRight,
   SlidersHorizontal,
+  ArrowRight,
+  FilterX,
 } from 'lucide-react';
 import { Book, Publisher } from '@/lib/types';
 import { ReleaseCard } from '@/components/books/release-card';
 import { FeaturedReleaseCard } from '@/components/books/card-variants';
-import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
 
 const PAGE_SIZE = 36;
@@ -30,9 +26,7 @@ interface ReleaseFeedProps {
 }
 
 export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
-  const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
-
-  // Curated spotlight items
+  // Curated spotlight items (top items with verified synopsis and cover image)
   const spotlightBooks = useMemo(() => {
     return initialBooks.filter((b) => b.coverImage && b.synopsis && b.currentPrice > 0).slice(0, 5);
   }, [initialBooks]);
@@ -40,7 +34,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   const [activeSpotlightIdx, setActiveSpotlightIdx] = useState(0);
   const activeSpotlight = spotlightBooks[activeSpotlightIdx] || initialBooks[0];
 
-  // Dedicated Highlight Rails - Newest to oldest (left to right)
+  // Dedicated Highlight Rails - Newest to oldest
   const mangaHighlights = useMemo(() => {
     return [...initialBooks]
       .filter((b) => b.category === 'Manga' && b.coverImage && !b.isSetVariant)
@@ -71,7 +65,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
   const scrollRail = (ref: React.RefObject<HTMLDivElement | null>, direction: 'left' | 'right') => {
     if (ref.current) {
-      const scrollAmount = direction === 'left' ? -320 : 320;
+      const scrollAmount = direction === 'left' ? -340 : 340;
       ref.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
@@ -90,6 +84,16 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
     if (catalogRef.current) {
       catalogRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const hasActiveFilters = formatFilter !== 'ALL' || pubFilter !== 'ALL' || statusFilter !== 'ALL' || searchQuery.trim() !== '' || sortBy !== 'latest';
+
+  const resetFilters = () => {
+    setFormatFilter('ALL');
+    setPubFilter('ALL');
+    setStatusFilter('ALL');
+    setSearchQuery('');
+    setSortBy('latest');
   };
 
   // Filtered books
@@ -147,55 +151,79 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   }, [filteredBooks.length]);
 
   return (
-    <div className="space-y-12">
-      {/* 1. HERO SPOTLIGHT SHOWCASE */}
+    <div className="space-y-16 sm:space-y-20">
+      {/* 1. HERO EDITORIAL INTRODUCTION */}
+      <section className="space-y-4 pt-2 sm:pt-4">
+        <div className="max-w-3xl space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-xs" />
+            <span>Katalog Resmi Indonesia</span>
+            <span className="text-white/20">•</span>
+            <span>{initialBooks.length.toLocaleString('id-ID')} Rilisan Terverifikasi</span>
+          </div>
+
+          <h1 className="font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.08]">
+            Pelacak Resmi Manga &amp; Light Novel.
+          </h1>
+
+          <p className="text-sm sm:text-base text-editorial-body leading-relaxed max-w-2xl font-sans">
+            Arsip lengkap terbitan Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia.
+            Pantau rilis mingguan, varian kanonikal, riwayat harga, dan kelengkapan koleksi Anda.
+          </p>
+        </div>
+      </section>
+
+      {/* 2. CURATED SPOTLIGHT SHOWCASE */}
       {activeSpotlight && (
-        <div className="relative">
+        <section className="space-y-3">
           <FeaturedReleaseCard book={activeSpotlight} />
 
-          {/* Spotlight Pagination Pills */}
+          {/* Minimal Spotlight Pagination */}
           {spotlightBooks.length > 1 && (
-            <div className="flex items-center justify-center gap-1.5 mt-3">
+            <div className="flex items-center justify-center gap-1.5 pt-1">
               {spotlightBooks.map((_, idx) => (
                 <button
                   key={idx}
                   type="button"
                   onClick={() => setActiveSpotlightIdx(idx)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    activeSpotlightIdx === idx ? 'w-6 bg-accent' : 'w-1.5 bg-white/20 hover:bg-white/40'
+                  className={`h-1 rounded-full transition-all duration-300 ${
+                    activeSpotlightIdx === idx ? 'w-6 bg-white' : 'w-2 bg-white/20 hover:bg-white/40'
                   }`}
                   aria-label={`Pilih sorotan ${idx + 1}`}
                 />
               ))}
             </div>
           )}
-        </div>
+        </section>
       )}
 
-      {/* 2. MANGA HIGHLIGHT RAIL */}
+      {/* 3. MANGA HIGHLIGHT RAIL */}
       {mangaHighlights.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-sky-400" />
-              <h2 className="text-lg sm:text-xl font-bold font-editorial text-editorial-title">
+        <section className="space-y-5">
+          <div className="flex items-center justify-between border-b border-white/[0.04] pb-3">
+            <div className="flex items-baseline gap-3">
+              <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight">
                 Rilisan Manga Terbaru
               </h2>
+              <span className="text-[11px] font-mono text-editorial-faint hidden sm:inline">
+                {mangaHighlights.length} rilisan terkini
+              </span>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <button
                 type="button"
                 onClick={() => handleViewAll('Manga')}
-                className="text-xs font-semibold text-accent hover:underline hidden sm:inline-block"
+                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors hidden sm:inline-flex items-center gap-1"
               >
-                Semua Manga →
+                <span>Semua Manga</span>
+                <ArrowRight className="w-3 h-3" />
               </button>
               <div className="flex items-center gap-1">
                 <button
                   type="button"
                   onClick={() => scrollRail(mangaRailRef, 'left')}
-                  className="w-7 h-7 rounded-lg liquid-glass flex items-center justify-center text-editorial-muted hover:text-editorial-title transition-all"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title hover:bg-white/[0.06] transition-all"
                   aria-label="Geser ke kiri"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -203,7 +231,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <button
                   type="button"
                   onClick={() => scrollRail(mangaRailRef, 'right')}
-                  className="w-7 h-7 rounded-lg liquid-glass flex items-center justify-center text-editorial-muted hover:text-editorial-title transition-all"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title hover:bg-white/[0.06] transition-all"
                   aria-label="Geser ke kanan"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -214,41 +242,44 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
           <div
             ref={mangaRailRef}
-            className="flex items-stretch gap-3.5 sm:gap-4 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory"
+            className="flex items-stretch gap-4 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory pt-1"
           >
             {mangaHighlights.map((book) => (
-              <div key={book.id} className="w-36 sm:w-44 shrink-0 snap-start">
+              <div key={book.id} className="w-36 sm:w-44 lg:w-48 shrink-0 snap-start">
                 <ReleaseCard book={book} />
               </div>
             ))}
           </div>
-        </div>
+        </section>
       )}
 
-      {/* 3. LIGHT NOVEL HIGHLIGHT RAIL */}
+      {/* 4. LIGHT NOVEL HIGHLIGHT RAIL */}
       {lnHighlights.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-amber-400" />
-              <h2 className="text-lg sm:text-xl font-bold font-editorial text-editorial-title">
+        <section className="space-y-5">
+          <div className="flex items-center justify-between border-b border-white/[0.04] pb-3">
+            <div className="flex items-baseline gap-3">
+              <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight">
                 Rilisan Light Novel Terbaru
               </h2>
+              <span className="text-[11px] font-mono text-editorial-faint hidden sm:inline">
+                {lnHighlights.length} rilisan terkini
+              </span>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <button
                 type="button"
                 onClick={() => handleViewAll('Light Novel')}
-                className="text-xs font-semibold text-accent hover:underline hidden sm:inline-block"
+                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors hidden sm:inline-flex items-center gap-1"
               >
-                Semua Light Novel →
+                <span>Semua Light Novel</span>
+                <ArrowRight className="w-3 h-3" />
               </button>
               <div className="flex items-center gap-1">
                 <button
                   type="button"
                   onClick={() => scrollRail(lnRailRef, 'left')}
-                  className="w-7 h-7 rounded-lg liquid-glass flex items-center justify-center text-editorial-muted hover:text-editorial-title transition-all"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title hover:bg-white/[0.06] transition-all"
                   aria-label="Geser ke kiri"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -256,7 +287,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <button
                   type="button"
                   onClick={() => scrollRail(lnRailRef, 'right')}
-                  className="w-7 h-7 rounded-lg liquid-glass flex items-center justify-center text-editorial-muted hover:text-editorial-title transition-all"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title hover:bg-white/[0.06] transition-all"
                   aria-label="Geser ke kanan"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -267,41 +298,78 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
           <div
             ref={lnRailRef}
-            className="flex items-stretch gap-3.5 sm:gap-4 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory"
+            className="flex items-stretch gap-4 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory pt-1"
           >
             {lnHighlights.map((book) => (
-              <div key={book.id} className="w-36 sm:w-44 shrink-0 snap-start">
+              <div key={book.id} className="w-36 sm:w-44 lg:w-48 shrink-0 snap-start">
                 <ReleaseCard book={book} />
               </div>
             ))}
           </div>
-        </div>
+        </section>
       )}
 
-      {/* 4. MAIN CATALOG SECTION & CONTROLS */}
-      <div ref={catalogRef} className="space-y-6 pt-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      {/* 5. MAIN CATALOG ARCHIVE & COHESIVE CONTROLS */}
+      <section ref={catalogRef} className="space-y-8 pt-4">
+        {/* Section Heading & Result Counter */}
+        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/[0.04] pb-4">
           <div>
-            <h2 className="text-xl sm:text-2xl font-bold font-editorial text-editorial-title">
-              Jelajahi Seluruh Katalog
+            <h2 className="text-2xl sm:text-3xl font-editorial font-normal text-editorial-title tracking-tight">
+              Seluruh Katalog Resmi
             </h2>
-            <p className="text-xs text-editorial-muted mt-0.5">
-              Menampilkan {filteredBooks.length} judul resmi
+            <p className="text-xs text-editorial-muted mt-1 font-mono">
+              Menampilkan {filteredBooks.length.toLocaleString('id-ID')} judul resmi terdaftar
             </p>
           </div>
 
-          {/* Desktop Filter Controls */}
-          <div className="hidden lg:flex items-center gap-2 text-xs">
-            {/* Format Pills */}
-            <div className="flex items-center gap-1 p-1 rounded-2xl liquid-glass">
+          {hasActiveFilters && (
+            <button
+              type="button"
+              onClick={resetFilters}
+              className="text-xs font-mono text-accent hover:underline flex items-center gap-1.5 self-start sm:self-auto"
+            >
+              <FilterX className="w-3.5 h-3.5" />
+              <span>Bersihkan Filter</span>
+            </button>
+          )}
+        </div>
+
+        {/* Cohesive Control System (Velora/Linear Minimal Bar) */}
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 text-xs">
+          {/* Integrated Search Input */}
+          <div className="relative flex-1 max-w-lg">
+            <Search className="w-3.5 h-3.5 text-editorial-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Saring judul, seri, pengarang..."
+              className="w-full pl-9 pr-8 py-2 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.06] border border-white/[0.06] focus:border-white/[0.15] text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all text-xs"
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-editorial-faint hover:text-editorial-title p-0.5"
+                aria-label="Hapus kata kunci"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
+
+          {/* Desktop Filter Pills & Dropdowns */}
+          <div className="hidden lg:flex items-center gap-2.5">
+            {/* Format Segmented Pill */}
+            <div className="flex items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
               {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
                 <button
                   key={fmt}
                   type="button"
                   onClick={() => setFormatFilter(fmt)}
-                  className={`px-3 py-1.5 rounded-xl font-medium transition-all ${
+                  className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
                     formatFilter === fmt
-                      ? 'bg-accent text-white font-semibold shadow-xs'
+                      ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                       : 'text-editorial-muted hover:text-editorial-title'
                   }`}
                 >
@@ -310,30 +378,30 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               ))}
             </div>
 
-            {/* Publisher Select */}
+            {/* Publisher Dropdown */}
             <select
               value={pubFilter}
               onChange={(e) => setPubFilter(e.target.value)}
-              className="px-3 py-2 rounded-2xl liquid-glass text-editorial-title focus:outline-none text-xs"
+              className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
             >
-              <option value="ALL">Semua Penerbit</option>
+              <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
               {publishers.map((p) => (
-                <option key={p.id} value={p.id}>
+                <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
                   {p.shortName}
                 </option>
               ))}
             </select>
 
-            {/* Sort Select */}
+            {/* Sort Dropdown */}
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
-              className="px-3 py-2 rounded-2xl liquid-glass text-editorial-title focus:outline-none text-xs"
+              className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
             >
-              <option value="latest">Rilisan Terbaru</option>
-              <option value="title">Judul (A-Z)</option>
-              <option value="price_low">Harga: Terendah</option>
-              <option value="price_high">Harga: Tertinggi</option>
+              <option value="latest" className="bg-surface text-editorial-title">Rilisan Terbaru</option>
+              <option value="title" className="bg-surface text-editorial-title">Judul (A-Z)</option>
+              <option value="price_low" className="bg-surface text-editorial-title">Harga Terendah</option>
+              <option value="price_high" className="bg-surface text-editorial-title">Harga Tertinggi</option>
             </select>
           </div>
 
@@ -342,23 +410,32 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             <button
               type="button"
               onClick={() => setIsMobileFilterOpen(true)}
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl liquid-glass text-xs font-semibold text-editorial-title shadow-sm"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-medium text-editorial-title active:scale-95 transition-all"
             >
-              <SlidersHorizontal className="w-4 h-4 text-accent" />
+              <SlidersHorizontal className="w-3.5 h-3.5 text-accent" />
               <span>Filter &amp; Urutkan ({filteredBooks.length})</span>
             </button>
           </div>
         </div>
 
-        {/* Catalog Grid */}
+        {/* Catalog Bookshelf Grid */}
         {filteredBooks.length === 0 ? (
-          <div className="py-20 text-center rounded-3xl liquid-glass space-y-3">
-            <BookOpen className="w-10 h-10 text-editorial-faint mx-auto" />
-            <h3 className="text-sm font-semibold text-editorial-title">Tidak ada buku yang cocok</h3>
-            <p className="text-xs text-editorial-muted">Coba ubah kata kunci atau bersihkan filter pencarian.</p>
+          <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
+            <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
+            <h3 className="text-sm font-medium text-editorial-title">Tidak ada buku yang sesuai kriteria</h3>
+            <p className="text-xs text-editorial-muted max-w-sm mx-auto">
+              Coba gunakan kata kunci berbeda atau bersihkan filter yang sedang aktif.
+            </p>
+            <button
+              type="button"
+              onClick={resetFilters}
+              className="mt-2 px-4 py-2 rounded-full bg-white/[0.06] hover:bg-white/[0.1] text-xs font-medium text-editorial-title border border-white/[0.08] transition-all"
+            >
+              Reset Semua Filter
+            </button>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
             {visibleBooks.map((book) => (
               <ReleaseCard key={book.id} book={book} />
             ))}
@@ -367,28 +444,30 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
         {/* Load More Button */}
         {hasMore && (
-          <div className="flex justify-center pt-4">
+          <div className="flex justify-center pt-8 pb-4">
             <button
               type="button"
               onClick={loadMore}
-              className="px-8 py-3 rounded-2xl liquid-glass text-sm font-semibold text-editorial-title hover:text-accent border border-border-subtle hover:border-accent/30 transition-all shadow-sm hover:shadow-md active:scale-95"
+              className="px-8 py-3 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-white/[0.16] text-xs font-mono font-medium text-editorial-title transition-all shadow-sm active:scale-95"
             >
-              Muat Lagi ({filteredBooks.length - visibleCount} tersisa)
+              Muat Lebih Banyak ({filteredBooks.length - visibleCount} tersisa)
             </button>
           </div>
         )}
-      </div>
+      </section>
 
-      {/* Mobile Filter Drawer / Bottom-Sheet */}
+      {/* Mobile Filter Bottom-Sheet */}
       {isMobileFilterOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col justify-end bg-black/60 backdrop-blur-sm">
-          <div className="w-full rounded-t-3xl bg-surface p-5 space-y-5 border-t border-white/10 shadow-2xl max-h-[85vh] overflow-y-auto">
-            <div className="flex items-center justify-between pb-2 border-b border-white/5">
-              <span className="font-editorial text-base font-bold text-editorial-title">Filter &amp; Urutkan</span>
+        <div className="fixed inset-0 z-50 flex flex-col justify-end bg-black/70 backdrop-blur-md animate-in fade-in duration-150">
+          <div className="w-full rounded-t-3xl bg-surface p-6 space-y-6 border-t border-white/10 shadow-2xl max-h-[85vh] overflow-y-auto">
+            <div className="flex items-center justify-between pb-3 border-b border-white/[0.06]">
+              <span className="font-editorial text-lg font-normal text-editorial-title">
+                Filter &amp; Pengurutan
+              </span>
               <button
                 type="button"
                 onClick={() => setIsMobileFilterOpen(false)}
-                className="p-1 rounded-lg text-editorial-muted hover:text-editorial-title"
+                className="p-1 rounded-full text-editorial-muted hover:text-editorial-title"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -396,15 +475,17 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
             {/* Format Filter */}
             <div className="space-y-2">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">Format</span>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
+                Format
+              </span>
               <div className="grid grid-cols-3 gap-2">
                 {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
                   <button
                     key={fmt}
                     type="button"
                     onClick={() => setFormatFilter(fmt)}
-                    className={`py-2 px-3 rounded-xl text-xs font-semibold transition-all ${
-                      formatFilter === fmt ? 'bg-accent text-white shadow-sm' : 'bg-white/5 text-editorial-muted'
+                    className={`py-2 px-3 rounded-xl text-xs font-medium transition-all ${
+                      formatFilter === fmt ? 'bg-white text-black font-semibold shadow-sm' : 'bg-white/[0.04] text-editorial-muted'
                     }`}
                   >
                     {fmt === 'ALL' ? 'Semua' : fmt}
@@ -415,13 +496,15 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
             {/* Publisher Filter */}
             <div className="space-y-2">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">Penerbit</span>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
+                Penerbit
+              </span>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   type="button"
                   onClick={() => setPubFilter('ALL')}
-                  className={`py-2 px-3 rounded-xl text-xs font-semibold transition-all ${
-                    pubFilter === 'ALL' ? 'bg-accent text-white shadow-sm' : 'bg-white/5 text-editorial-muted'
+                  className={`py-2 px-3 rounded-xl text-xs font-medium transition-all ${
+                    pubFilter === 'ALL' ? 'bg-white text-black font-semibold shadow-sm' : 'bg-white/[0.04] text-editorial-muted'
                   }`}
                 >
                   Semua Penerbit
@@ -431,8 +514,8 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                     key={p.id}
                     type="button"
                     onClick={() => setPubFilter(p.id)}
-                    className={`py-2 px-3 rounded-xl text-xs font-semibold transition-all ${
-                      pubFilter === p.id ? 'bg-accent text-white shadow-sm' : 'bg-white/5 text-editorial-muted'
+                    className={`py-2 px-3 rounded-xl text-xs font-medium transition-all ${
+                      pubFilter === p.id ? 'bg-white text-black font-semibold shadow-sm' : 'bg-white/[0.04] text-editorial-muted'
                     }`}
                   >
                     {p.shortName}
@@ -443,7 +526,9 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
             {/* Sort Filter */}
             <div className="space-y-2">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">Urutkan</span>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
+                Urutkan Berdasarkan
+              </span>
               <div className="grid grid-cols-2 gap-2">
                 {[
                   { id: 'latest', label: 'Rilisan Terbaru' },
@@ -455,8 +540,8 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                     key={s.id}
                     type="button"
                     onClick={() => setSortBy(s.id as any)}
-                    className={`py-2 px-3 rounded-xl text-xs font-semibold transition-all ${
-                      sortBy === s.id ? 'bg-accent text-white shadow-sm' : 'bg-white/5 text-editorial-muted'
+                    className={`py-2 px-3 rounded-xl text-xs font-medium transition-all ${
+                      sortBy === s.id ? 'bg-white text-black font-semibold shadow-sm' : 'bg-white/[0.04] text-editorial-muted'
                     }`}
                   >
                     {s.label}
@@ -468,7 +553,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             <button
               type="button"
               onClick={() => setIsMobileFilterOpen(false)}
-              className="w-full py-3 rounded-2xl bg-accent text-white font-semibold text-xs shadow-md"
+              className="w-full py-3 rounded-full bg-white text-black font-semibold text-xs shadow-md"
             >
               Terapkan Filter ({filteredBooks.length} Buku)
             </button>

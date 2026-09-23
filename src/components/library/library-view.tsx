@@ -15,6 +15,7 @@ import {
   Trash2,
   Sparkles,
   BookOpen,
+  ArrowRight,
 } from 'lucide-react';
 
 interface LibraryViewProps {
@@ -106,10 +107,10 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
     reader.onload = (event) => {
       const content = event.target?.result as string;
       if (content && importJSON(content)) {
-        setImportStatus('Koleksi berhasil diimpor!');
+        setImportStatus('Koleksi berhasil dipulihkan!');
         setTimeout(() => setImportStatus(null), 3000);
       } else {
-        setImportStatus('Gagal mengimpor: format file tidak valid.');
+        setImportStatus('Gagal mengimpor: format file JSON tidak valid.');
         setTimeout(() => setImportStatus(null), 3000);
       }
     };
@@ -117,36 +118,41 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
   };
 
   return (
-    <div className="space-y-8 pb-12">
-      {/* Header Banner */}
-      <div className="p-6 sm:p-8 rounded-3xl liquid-glass shadow-xl border border-white/5 space-y-4">
+    <div className="space-y-12 pb-16">
+      {/* 1. Header Banner */}
+      <section className="space-y-4 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="space-y-1.5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-chip text-slate-200 text-xs font-mono font-semibold tracking-wider">
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
               <BookMarked className="w-3.5 h-3.5 text-accent" />
-              <span>KOLEKSI LOCAL-FIRST</span>
+              <span>Rak Buku Local-First</span>
+              <span className="text-white/20">•</span>
+              <span>Privasi Penuh di Peramban Anda</span>
             </div>
-            <h1 className="text-2xl sm:text-4xl font-bold font-editorial text-editorial-title tracking-tight">
-              Perpustakaan &amp; Pelacak Koleksi Saya
+
+            <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
+              Perpustakaan &amp; Koleksi Saya.
             </h1>
-            <p className="text-xs sm:text-sm text-editorial-muted max-w-2xl leading-relaxed">
-              Tersimpan aman langsung di peramban Anda tanpa perlu registrasi atau akun. Cadangkan dan pulihkan data Anda kapan saja.
+
+            <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
+              Koleksi Anda tersimpan aman secara lokal di perangkat ini tanpa login akun.
+              Cadangkan data ke format JSON dan pulihkan kapan saja.
             </p>
           </div>
 
           {/* Backup & Restore Controls */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0 self-start sm:self-auto">
             <button
               type="button"
               onClick={handleExport}
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl liquid-glass hover:bg-white/10 text-editorial-muted hover:text-editorial-title text-xs transition-all active:scale-95 border border-white/5"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-editorial-muted hover:text-editorial-title text-xs font-mono transition-all active:scale-95 border border-white/[0.06]"
               title="Cadangkan koleksi ke file JSON"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Ekspor JSON</span>
             </button>
 
-            <label className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl liquid-glass hover:bg-white/10 text-editorial-muted hover:text-editorial-title text-xs transition-all cursor-pointer active:scale-95 border border-white/5">
+            <label className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-editorial-muted hover:text-editorial-title text-xs font-mono transition-all cursor-pointer active:scale-95 border border-white/[0.06]">
               <Upload className="w-3.5 h-3.5" />
               <span>Impor</span>
               <input type="file" accept=".json" onChange={handleImportFile} className="hidden" />
@@ -156,11 +162,11 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
               <button
                 type="button"
                 onClick={() => {
-                  if (confirm('Yakin ingin mengosongkan seluruh koleksi?')) {
+                  if (confirm('Yakin ingin mengosongkan seluruh koleksi perpustakaan?')) {
                     clearAll();
                   }
                 }}
-                className="p-2 rounded-xl liquid-glass hover:bg-rose-500/20 text-editorial-muted hover:text-rose-400 transition-all text-xs border border-white/5"
+                className="w-8 h-8 rounded-full flex items-center justify-center bg-white/[0.02] hover:bg-rose-500/20 text-editorial-faint hover:text-rose-400 transition-all border border-white/[0.04]"
                 title="Kosongkan data koleksi"
               >
                 <Trash2 className="w-3.5 h-3.5" />
@@ -170,60 +176,61 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
         </div>
 
         {importStatus && (
-          <div className="p-3 rounded-xl bg-accent/15 border border-accent/30 text-accent text-xs font-medium">
+          <div className="p-3 rounded-2xl bg-accent/15 border border-accent/25 text-accent text-xs font-mono">
             {importStatus}
           </div>
         )}
 
-        {/* Stats Grid: 4 Metrics */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-          <div className="p-3.5 rounded-2xl bg-surface-elevated/40 border border-white/5">
-            <span className="text-[9px] font-mono uppercase tracking-widest text-editorial-faint block">
+        {/* 4 Stats Metrics */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3">
+          <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
               Buku Dimiliki
             </span>
-            <span className="text-xl sm:text-2xl font-mono font-bold text-editorial-title">
+            <span className="text-xl sm:text-2xl font-mono font-bold text-editorial-title mt-1 block">
               {ownedBooks.length}
             </span>
           </div>
 
-          <div className="p-3.5 rounded-2xl bg-surface-elevated/40 border border-white/5">
-            <span className="text-[9px] font-mono uppercase tracking-widest text-editorial-faint block">
+          <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
               Wishlist
             </span>
-            <span className="text-xl sm:text-2xl font-mono font-bold text-accent">
+            <span className="text-xl sm:text-2xl font-mono font-bold text-accent mt-1 block">
               {wishlistBooks.length}
             </span>
           </div>
 
-          <div className="p-3.5 rounded-2xl bg-surface-elevated/40 border border-white/5">
-            <span className="text-[9px] font-mono uppercase tracking-widest text-editorial-faint block">
+          <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
               Seri Diikuti
             </span>
-            <span className="text-xl sm:text-2xl font-mono font-bold text-sky-400">
+            <span className="text-xl sm:text-2xl font-mono font-bold text-sky-400 mt-1 block">
               {trackedSeries.length}
             </span>
           </div>
 
-          <div className="p-3.5 rounded-2xl bg-surface-elevated/40 border border-white/5">
-            <span className="text-[9px] font-mono uppercase tracking-widest text-editorial-faint block">
-              Volume Belum Lengkap
+          <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
+              Volume Terlewat
             </span>
-            <span className="text-xl sm:text-2xl font-mono font-bold text-amber-400">
+            <span className="text-xl sm:text-2xl font-mono font-bold text-amber-400 mt-1 block">
               {missingBooks.length}
             </span>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Tabs & Format Filter Toolbar */}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-1 p-1 rounded-2xl liquid-glass text-xs">
+      {/* 2. Tabs & Format Filter Toolbar */}
+      <div className="flex flex-wrap items-center justify-between gap-3 text-xs">
+        {/* Navigation Pills */}
+        <div className="flex flex-wrap items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
           <button
             type="button"
             onClick={() => setActiveTab('OWNED')}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-xl font-medium transition-all ${
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-medium transition-all ${
               activeTab === 'OWNED'
-                ? 'bg-accent text-white font-semibold shadow-xs'
+                ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                 : 'text-editorial-muted hover:text-editorial-title'
             }`}
           >
@@ -234,9 +241,9 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
           <button
             type="button"
             onClick={() => setActiveTab('WISHLIST')}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-xl font-medium transition-all ${
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-medium transition-all ${
               activeTab === 'WISHLIST'
-                ? 'bg-accent text-white font-semibold shadow-xs'
+                ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                 : 'text-editorial-muted hover:text-editorial-title'
             }`}
           >
@@ -247,9 +254,9 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
           <button
             type="button"
             onClick={() => setActiveTab('SERIES')}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-xl font-medium transition-all ${
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-medium transition-all ${
               activeTab === 'SERIES'
-                ? 'bg-accent text-white font-semibold shadow-xs'
+                ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                 : 'text-editorial-muted hover:text-editorial-title'
             }`}
           >
@@ -261,9 +268,9 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
             <button
               type="button"
               onClick={() => setActiveTab('MISSING')}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-xl font-medium transition-all ${
+              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-medium transition-all ${
                 activeTab === 'MISSING'
-                  ? 'bg-accent text-white font-semibold shadow-xs'
+                  ? 'bg-amber-400/20 text-amber-300 font-semibold shadow-xs'
                   : 'text-editorial-muted hover:text-editorial-title'
               }`}
             >
@@ -274,15 +281,15 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
         </div>
 
         {/* Format Filter */}
-        <div className="flex items-center gap-1 p-0.5 rounded-xl liquid-glass text-xs">
+        <div className="flex items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
           {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
             <button
               key={fmt}
               type="button"
               onClick={() => setFormatFilter(fmt)}
-              className={`px-3 py-1.5 rounded-lg font-medium transition-all ${
+              className={`px-3 py-1 rounded-full font-medium transition-all ${
                 formatFilter === fmt
-                  ? 'bg-white/10 text-editorial-title font-semibold shadow-xs'
+                  ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                   : 'text-editorial-muted hover:text-editorial-title'
               }`}
             >
@@ -292,25 +299,26 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
         </div>
       </div>
 
-      {/* Tab Content */}
+      {/* 3. Tab Views */}
       {activeTab === 'OWNED' && (
         <div>
           {ownedBooks.length === 0 ? (
-            <div className="py-20 text-center rounded-3xl liquid-glass space-y-3">
-              <BookOpen className="w-10 h-10 text-editorial-faint mx-auto" />
-              <h3 className="text-sm font-semibold text-editorial-title">Koleksi Anda masih kosong</h3>
-              <p className="text-xs text-editorial-muted">
-                Tambahkan buku dari katalog dengan menekan tombol &quot;+&quot; pada kartu buku.
+            <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
+              <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
+              <h3 className="text-sm font-medium text-editorial-title">Koleksi Anda masih kosong</h3>
+              <p className="text-xs text-editorial-muted max-w-sm mx-auto">
+                Tambahkan buku yang sudah Anda miliki dari katalog dengan menekan tombol tanda plus pada kartu buku.
               </p>
               <Link
                 href="/"
-                className="inline-block px-4 py-2.5 rounded-xl bg-accent text-white text-xs font-semibold shadow-sm mt-2"
+                className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-white text-black text-xs font-medium hover:bg-slate-100 transition-all mt-2"
               >
-                Jelajahi Katalog
+                <span>Jelajahi Katalog</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
               {ownedBooks.map((book) => (
                 <ReleaseCard key={book.id} book={book} />
               ))}
@@ -322,15 +330,15 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
       {activeTab === 'WISHLIST' && (
         <div>
           {wishlistBooks.length === 0 ? (
-            <div className="py-20 text-center rounded-3xl liquid-glass space-y-3">
-              <Bookmark className="w-10 h-10 text-editorial-faint mx-auto" />
-              <h3 className="text-sm font-semibold text-editorial-title">Wishlist Anda masih kosong</h3>
-              <p className="text-xs text-editorial-muted">
+            <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
+              <Bookmark className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
+              <h3 className="text-sm font-medium text-editorial-title">Wishlist Anda masih kosong</h3>
+              <p className="text-xs text-editorial-muted max-w-sm mx-auto">
                 Simpan komik atau light novel impian Anda dengan menekan ikon bookmark pada kartu buku.
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
               {wishlistBooks.map((book) => (
                 <ReleaseCard key={book.id} book={book} />
               ))}
@@ -342,15 +350,15 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
       {activeTab === 'SERIES' && (
         <div>
           {trackedSeries.length === 0 ? (
-            <div className="py-20 text-center rounded-3xl liquid-glass space-y-3">
-              <Layers className="w-10 h-10 text-editorial-faint mx-auto" />
-              <h3 className="text-sm font-semibold text-editorial-title">Belum ada seri yang terlacak</h3>
-              <p className="text-xs text-editorial-muted">
-                Saat Anda menandai kepemilikan volume, seri terkait akan otomatis terlacak di sini.
+            <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
+              <Layers className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
+              <h3 className="text-sm font-medium text-editorial-title">Belum ada seri yang terlacak</h3>
+              <p className="text-xs text-editorial-muted max-w-sm mx-auto">
+                Saat Anda menandai kepemilikan volume, seri buku tersebut akan otomatis terlacak di sini.
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {trackedSeries.map((series) => {
                 const ownedInSeries = ownedItems.filter((i) => i.seriesId === series.id).length;
                 return (
@@ -369,22 +377,22 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
       {activeTab === 'MISSING' && (
         <div>
           {missingBooks.length === 0 ? (
-            <div className="py-20 text-center rounded-3xl liquid-glass space-y-3">
-              <Sparkles className="w-10 h-10 text-emerald-400 mx-auto" />
-              <h3 className="text-sm font-semibold text-editorial-title">Koleksi seri Anda lengkap!</h3>
-              <p className="text-xs text-editorial-muted">
-                Tidak ada volume terlewat dari seri yang sedang Anda ikuti saat ini.
+            <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
+              <Sparkles className="w-10 h-10 text-emerald-400 mx-auto stroke-1" />
+              <h3 className="text-sm font-medium text-editorial-title">Koleksi seri Anda lengkap!</h3>
+              <p className="text-xs text-editorial-muted max-w-sm mx-auto">
+                Tidak ada nomor volume yang terlewat dari seri yang sedang Anda ikuti.
               </p>
             </div>
           ) : (
-            <div className="space-y-4">
-              <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300">
+            <div className="space-y-6">
+              <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300 font-sans">
                 <span className="font-semibold">Daftar Volume Terlewat: </span>
                 <span>
-                  Berikut adalah volume resmi yang telah terbit namun belum Anda miliki pada seri-seri yang Anda ikuti.
+                  Berikut adalah nomor volume resmi yang telah terbit namun belum Anda miliki pada seri yang sedang Anda ikuti.
                 </span>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
                 {missingBooks.map((book) => (
                   <ReleaseCard key={book.id} book={book} />
                 ))}

@@ -54,7 +54,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
   );
 
   return (
-    <div className="space-y-10 pb-20 sm:pb-12">
+    <div className="space-y-14 pb-24 sm:pb-16">
       {/* 1. Back Navigation Breadcrumb */}
       <div>
         <Link
@@ -62,32 +62,33 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
           className="inline-flex items-center gap-1.5 text-xs text-editorial-muted hover:text-editorial-title transition-colors group"
         >
           <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
-          <span>Katalog</span>
+          <span>Katalog Utama</span>
         </Link>
       </div>
 
       {/* 2. Main Editorial Book Hero */}
-      <div className="relative overflow-hidden rounded-3xl liquid-glass p-6 sm:p-10 shadow-2xl border border-border-subtle">
+      <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl">
         {/* Subtle Ambient Radial Highlight */}
-        <div
-          className={`absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-15 pointer-events-none ${
-            book.category === 'Light Novel' ? 'bg-amber-500' : 'bg-sky-500'
-          }`}
-        />
+        {book.coverImage && (
+          <div
+            className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none"
+            style={{ backgroundImage: `url(${book.coverImage})` }}
+          />
+        )}
 
-        {/* Responsive Grid: Mobile-First Flex / Desktop 12-Cols */}
-        <div className="relative z-10 flex flex-col md:grid md:grid-cols-12 gap-8 items-start">
+        {/* Responsive Grid */}
+        <div className="relative z-10 flex flex-col md:grid md:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Cover & Actions Column */}
           <div className="w-full md:col-span-5 lg:col-span-4 flex flex-col items-center">
-            <div className="relative aspect-[3/4] w-full max-w-[280px] rounded-2xl overflow-hidden bg-surface-sunken shadow-2xl group border border-border-subtle cover-depth">
+            <div className="relative aspect-[3/4.2] w-full max-w-[280px] rounded-2xl overflow-hidden bg-surface-sunken book-cover-elevated">
               {book.coverImage ? (
                 <Image
                   src={book.coverImage}
                   alt={book.title}
                   width={280}
-                  height={373}
+                  height={392}
                   priority
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out"
                 />
               ) : (
                 <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center">
@@ -99,7 +100,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
               {/* Floating Top Left: Format Capsule Badge */}
               <div className="absolute top-3 left-3 z-10 pointer-events-none">
                 <span
-                  className={`px-3 py-1 rounded-full text-[9px] font-mono font-bold tracking-wider uppercase liquid-chip ${
+                  className={`px-3 py-1 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase bg-black/60 backdrop-blur-md border border-white/10 ${
                     book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
                   }`}
                 >
@@ -110,20 +111,28 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
               {/* Floating Top Right: Volume Capsule Badge */}
               {book.volume !== null && book.volume !== undefined && (
                 <div className="absolute top-3 right-3 z-10 pointer-events-none">
-                  <span className="px-3 py-1 rounded-full text-[9.5px] font-mono font-semibold tracking-wider liquid-chip text-slate-200">
+                  <span className="px-3 py-1 rounded-full text-[9.5px] font-mono font-medium tracking-wider bg-black/60 backdrop-blur-md border border-white/10 text-white/90">
                     Vol. {book.volume}
+                  </span>
+                </div>
+              )}
+
+              {book.status === 'PREORDER' && (
+                <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
+                  <span className="px-2.5 py-0.5 rounded-full text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white shadow-md">
+                    PRE-ORDER
                   </span>
                 </div>
               )}
             </div>
 
-            {/* Desktop Quick Actions Below Cover */}
-            <div className="hidden sm:flex w-full max-w-[280px] flex-col gap-2.5 mt-5">
+            {/* Desktop Actions Below Cover */}
+            <div className="hidden sm:flex w-full max-w-[280px] flex-col gap-2.5 mt-6">
               <a
                 href={gramediaProductUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white shadow-md hover:shadow-sky-500/20 transition-all group"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full text-xs font-medium bg-white text-black hover:bg-slate-100 shadow-md transition-all group active:scale-95"
               >
                 <ShoppingBag className="w-4 h-4 shrink-0" />
                 <span>Beli di Gramedia.com</span>
@@ -134,23 +143,23 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
                 <button
                   type="button"
                   onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
-                  className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-semibold transition-all ${
+                  className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-full text-xs font-medium transition-all active:scale-95 ${
                     owned
                       ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                      : 'bg-surface-elevated hover:bg-surface text-editorial-body border border-border-subtle'
+                      : 'bg-white/[0.04] hover:bg-white/[0.08] text-editorial-muted hover:text-editorial-title border border-white/[0.06]'
                   }`}
                 >
-                  {owned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                  {owned ? <Check className="w-4 h-4 text-emerald-400" /> : <Plus className="w-4 h-4" />}
                   <span>{owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => toggleWishlist(book.id, book.seriesId || undefined)}
-                  className={`p-2.5 rounded-xl border transition-all ${
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all active:scale-95 ${
                     wishlisted
                       ? 'bg-accent/20 text-accent border-accent/40 shadow-xs'
-                      : 'bg-surface-elevated hover:bg-surface text-editorial-muted hover:text-editorial-title border-border-subtle'
+                      : 'bg-white/[0.04] hover:bg-white/[0.08] text-editorial-muted hover:text-editorial-title border border-white/[0.06]'
                   }`}
                   aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
                   title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
@@ -165,23 +174,22 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
           <div className="w-full md:col-span-7 lg:col-span-8 space-y-6">
             <div className="space-y-2">
               <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-editorial-muted">
-                {/* Publisher as Clean Editorial Metadata */}
                 <span className="font-semibold text-editorial-title">
                   {book.publisherName}
                 </span>
-                <span>•</span>
-                <span className={book.category === 'Light Novel' ? 'text-amber-400 font-bold' : 'text-sky-400 font-bold'}>
+                <span className="text-editorial-faint/60">•</span>
+                <span className={book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'}>
                   {book.category}
                 </span>
                 {book.status === 'PREORDER' && (
                   <>
-                    <span>•</span>
-                    <span className="text-accent font-bold uppercase tracking-wider">PREORDER RESMI</span>
+                    <span className="text-editorial-faint/60">•</span>
+                    <span className="text-accent font-semibold uppercase tracking-wider">PREORDER RESMI</span>
                   </>
                 )}
               </div>
 
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-editorial text-editorial-title tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-editorial font-normal text-editorial-title tracking-tight leading-[1.15]">
                 {book.title}
               </h1>
 
@@ -193,21 +201,21 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
             </div>
 
             {/* Price & Official Status Banner */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-surface-elevated/40 border border-border-subtle flex flex-wrap items-center justify-between gap-4">
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
-                  {book.originalPrice && book.originalPrice > book.currentPrice ? 'Harga Diskon / Saat Ini' : 'Harga Resmi (SRP)'}
+                  {book.originalPrice && book.originalPrice > book.currentPrice ? 'Harga Promo / Terkini' : 'Harga Resmi (SRP)'}
                 </span>
-                <div className="flex items-baseline gap-2.5 mt-0.5">
-                  <span className="text-xl sm:text-2xl font-mono font-bold text-editorial-title">
+                <div className="flex items-baseline gap-2.5 mt-1">
+                  <span className="text-2xl sm:text-3xl font-mono font-bold text-editorial-title tracking-tight">
                     {formatRupiah(book.currentPrice)}
                   </span>
                   {book.originalPrice && book.originalPrice > book.currentPrice && (
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-2">
                       <span className="text-sm sm:text-base font-mono text-editorial-faint line-through">
                         {formatRupiah(book.originalPrice)}
                       </span>
-                      <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-accent/20 text-accent">
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-accent/20 text-accent border border-accent/30">
                         Hemat {Math.round(((book.originalPrice - book.currentPrice) / book.originalPrice) * 100)}%
                       </span>
                     </div>
@@ -218,9 +226,9 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
               {book.releaseDate && (
                 <div className="text-right">
                   <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
-                    Jadwal Rilis
+                    Jadwal Rilis Resmi
                   </span>
-                  <span className="text-xs sm:text-sm font-medium text-editorial-body flex items-center gap-1.5">
+                  <span className="text-xs sm:text-sm font-medium text-editorial-title flex items-center gap-1.5 mt-1">
                     <Calendar className="w-3.5 h-3.5 text-accent" />
                     <span>{formatDateWIB(book.releaseDate)}</span>
                   </span>
@@ -230,21 +238,21 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
 
             {/* Metadata Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
-              <div className="p-3.5 rounded-2xl bg-surface-elevated/30 border border-border-subtle">
+              <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block mb-1">
                   Pengarang / Ilustrator
                 </span>
                 <span className="font-medium text-editorial-title block truncate">{authorDisplay}</span>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-surface-elevated/30 border border-border-subtle">
+              <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block mb-1">
                   Penerbit Resmi
                 </span>
                 <span className="font-medium text-editorial-title block truncate">{book.publisherShortName}</span>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-surface-elevated/30 border border-border-subtle">
+              <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block mb-1">
                   Nomor ISBN-13
                 </span>
@@ -256,28 +264,28 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
 
             {/* Available Editions & Special Sets */}
             {book.availableEditions && book.availableEditions.length > 1 && (
-              <div className="p-4 sm:p-5 rounded-2xl bg-amber-500/10 border border-amber-500/20 space-y-3">
+              <div className="p-5 rounded-2xl bg-amber-500/[0.07] border border-amber-500/20 space-y-3">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold flex items-center gap-1.5">
-                    <Sparkles className="w-4 h-4 text-amber-400" />
-                    <span>Pilihan Edisi &amp; Paket Rilis Resmi</span>
+                  <h3 className="text-xs font-mono uppercase tracking-wider text-amber-300 font-semibold flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Pilihan Edisi &amp; Varian Resmi</span>
                   </h3>
-                  <span className="text-[10px] font-mono text-amber-300/80">
-                    {book.availableEditions.length} Opsi Tersedia
+                  <span className="text-[10px] font-mono text-amber-300/70">
+                    {book.availableEditions.length} Pilihan
                   </span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {book.availableEditions.map((edition, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-surface/80 border border-border-subtle flex items-center justify-between gap-3 shadow-xs"
+                      className="p-3 rounded-xl bg-surface/80 border border-white/[0.06] flex items-center justify-between gap-3 shadow-xs"
                     >
                       <div className="min-w-0">
-                        <span className="text-xs font-semibold text-editorial-title block truncate">
+                        <span className="text-xs font-medium text-editorial-title block truncate">
                           {edition.name}
                         </span>
                         {edition.price ? (
-                          <span className="text-xs font-mono font-bold text-accent">
+                          <span className="text-xs font-mono font-semibold text-accent">
                             {formatRupiah(edition.price)}
                           </span>
                         ) : null}
@@ -287,7 +295,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
                           href={edition.gramediaUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="shrink-0 px-2.5 py-1 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-sky-400 text-[11px] font-mono font-semibold flex items-center gap-1 transition-colors"
+                          className="shrink-0 px-2.5 py-1 rounded-full bg-white/[0.08] hover:bg-white/[0.14] text-editorial-title text-[11px] font-mono flex items-center gap-1 transition-colors"
                         >
                           <span>Beli</span>
                           <ExternalLink className="w-3 h-3" />
@@ -299,10 +307,10 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
               </div>
             )}
 
-            {/* Clean Narrative Story Synopsis (Short + Expandable) */}
-            <div className="space-y-2 pt-4 border-t border-border-subtle">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-editorial-faint font-bold">
-                Sinopsis
+            {/* Clean Narrative Story Synopsis */}
+            <div className="space-y-2 pt-4 border-t border-white/[0.04]">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-editorial-faint font-semibold">
+                Sinopsis Cerita
               </h3>
               {cleanedSynopsis ? (
                 <div className="space-y-2">
@@ -313,28 +321,28 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
                     <button
                       type="button"
                       onClick={() => setIsSynopsisExpanded((prev) => !prev)}
-                      className="text-xs font-mono text-accent hover:underline font-semibold flex items-center gap-1 transition-colors"
+                      className="text-xs font-mono text-accent hover:underline font-medium flex items-center gap-1 transition-colors"
                     >
-                      <span>{isSynopsisExpanded ? 'Sembunyikan ↑' : 'Lihat selengkapnya ↓'}</span>
+                      <span>{isSynopsisExpanded ? 'Sembunyikan ↑' : 'Baca selengkapnya ↓'}</span>
                     </button>
                   )}
                 </div>
               ) : (
                 <p className="text-xs sm:text-sm text-editorial-faint italic font-sans">
-                  Belum ada sinopsis resmi untuk rilis ini.
+                  Belum ada sinopsis resmi yang tercatat untuk rilis ini.
                 </p>
               )}
             </div>
 
-            {/* Series Link if Distinct */}
+            {/* Distinct Series Link */}
             {hasDistinctSeries && (
               <div className="pt-2">
                 <Link
                   href={`/series/${book.seriesId!.replace('ser_', '')}`}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-elevated hover:bg-surface border border-border-subtle hover:border-accent/30 text-accent transition-all text-xs font-semibold"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] text-editorial-title hover:text-accent transition-all text-xs font-medium"
                 >
-                  <Layers className="w-4 h-4" />
-                  <span>Semua Volume &quot;{book.seriesName}&quot;</span>
+                  <Layers className="w-3.5 h-3.5 text-accent" />
+                  <span>Lihat Seluruh Volume Seri &quot;{book.seriesName}&quot;</span>
                 </Link>
               </div>
             )}
@@ -344,11 +352,11 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
 
       {/* 3. Real Price History Section */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-lg sm:text-xl font-bold font-editorial text-editorial-title flex items-center gap-2">
-            <span>Riwayat &amp; Fluktuasi Harga Resmi</span>
+        <div className="flex items-center justify-between border-b border-white/[0.04] pb-3">
+          <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title">
+            Riwayat &amp; Fluktuasi Harga Resmi
           </h2>
-          <span className="text-[11px] font-mono text-editorial-faint">Data Historis Tercatat</span>
+          <span className="text-[11px] font-mono text-editorial-faint">Data Historis Terverifikasi</span>
         </div>
 
         <PriceChart summary={priceSummary} />
@@ -356,22 +364,22 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
 
       {/* 4. Related Releases (Neighboring volumes in same series) */}
       {seriesSiblings.length > 1 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-lg sm:text-xl font-bold font-editorial text-editorial-title">
-              Volume Terkait dalam Seri Ini ({seriesSiblings.length} buku)
+        <div className="space-y-6">
+          <div className="flex items-center justify-between border-b border-white/[0.04] pb-3">
+            <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title">
+              Volume Lain dalam Seri Ini ({seriesSiblings.length} buku)
             </h2>
             {book.seriesId && (
               <Link
                 href={`/series/${book.seriesId.replace('ser_', '')}`}
-                className="text-xs text-accent hover:underline font-medium"
+                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors"
               >
                 Halaman Seri →
               </Link>
             )}
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
             {seriesSiblings.map((sibling) => (
               <ReleaseCard key={sibling.id} book={sibling} />
             ))}
@@ -379,20 +387,20 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
         </div>
       )}
 
-      {/* 5. Explainable Recommendations ("Mungkin Anda Sukai") */}
+      {/* 5. Explainable Recommendations */}
       {recommendations.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-lg sm:text-xl font-bold font-editorial text-editorial-title flex items-center gap-2">
+        <div className="space-y-6">
+          <div className="flex items-center justify-between border-b border-white/[0.04] pb-3">
+            <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-accent" />
-              <span>Mungkin Anda Sukai</span>
+              <span>Rekomendasi Terkait</span>
             </h2>
             <span className="text-[11px] font-mono text-editorial-faint">
-              Rekomendasi Berdasarkan Metadata
+              Korelasi Genre &amp; Penerbit
             </span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
             {recommendations.map(({ book: recBook, explanation }) => (
               <div key={recBook.id} className="flex flex-col space-y-1.5">
                 <ReleaseCard book={recBook} />
@@ -405,38 +413,38 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
         </div>
       )}
 
-      {/* Mobile Sticky Action Bar */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-surface/95 backdrop-blur-xl border-t border-border-subtle p-3 flex items-center gap-2 shadow-2xl">
+      {/* Mobile Sticky Floating Action Pill */}
+      <div className="sm:hidden fixed bottom-4 inset-x-4 max-w-sm mx-auto z-40 liquid-glass-pill rounded-full p-2 flex items-center gap-2 shadow-2xl border border-white/[0.08]">
         <a
           href={gramediaProductUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-semibold bg-sky-600 text-white shadow-md active:scale-95 transition-all"
+          className="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-full text-xs font-medium bg-white text-black shadow-md active:scale-95 transition-all"
         >
-          <ShoppingBag className="w-4 h-4" />
-          <span>Beli di Gramedia</span>
+          <ShoppingBag className="w-3.5 h-3.5" />
+          <span>Beli Gramedia</span>
         </a>
 
         <button
           type="button"
           onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
-          className={`p-2.5 rounded-xl border transition-all active:scale-95 ${
+          className={`w-9 h-9 rounded-full flex items-center justify-center border transition-all active:scale-95 ${
             owned
               ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
-              : 'bg-surface-elevated text-editorial-body border-border-subtle'
+              : 'bg-white/[0.06] text-editorial-muted hover:text-editorial-title border-white/[0.08]'
           }`}
           aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
         >
-          {owned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+          {owned ? <Check className="w-4 h-4 text-emerald-400" /> : <Plus className="w-4 h-4" />}
         </button>
 
         <button
           type="button"
           onClick={() => toggleWishlist(book.id, book.seriesId || undefined)}
-          className={`p-2.5 rounded-xl border transition-all active:scale-95 ${
+          className={`w-9 h-9 rounded-full flex items-center justify-center border transition-all active:scale-95 ${
             wishlisted
               ? 'bg-accent/20 text-accent border-accent/40'
-              : 'bg-surface-elevated text-editorial-muted border-border-subtle'
+              : 'bg-white/[0.06] text-editorial-muted hover:text-editorial-title border-white/[0.08]'
           }`}
           aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
         >

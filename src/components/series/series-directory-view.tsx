@@ -2,9 +2,10 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Series, Book } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
-import { Layers, Search, BookOpen } from 'lucide-react';
+import { Layers, Search, BookOpen, X, ArrowRight } from 'lucide-react';
 
 interface SeriesDirectoryViewProps {
   allSeries: Series[];
@@ -89,97 +90,117 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
   }, [allSeries]);
 
   return (
-    <div className="space-y-8 pb-12">
-      {/* Header Banner */}
-      <div className="p-6 sm:p-8 rounded-3xl liquid-glass shadow-xl border border-border-subtle space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="space-y-1.5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-chip text-editorial-muted text-xs font-mono font-semibold tracking-wider">
-              <Layers className="w-3.5 h-3.5 text-accent" />
-              <span>PELACAK SERI RESMI</span>
-            </div>
-            <h1 className="text-2xl sm:text-4xl font-bold font-editorial text-editorial-title tracking-tight">
-              Direktori Seri Manga &amp; Light Novel
-            </h1>
-            <p className="text-xs sm:text-sm text-editorial-muted max-w-2xl leading-relaxed">
-              Direktori seri resmi terbitan Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia. Track kelengkapan volume dan temukan judul yang belum Anda miliki.
-            </p>
-          </div>
+    <div className="space-y-12 pb-16">
+      {/* 1. Header Banner */}
+      <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
+          <Layers className="w-3.5 h-3.5 text-accent" />
+          <span>Direktori Seri Resmi</span>
+          <span className="text-white/20">•</span>
+          <span>{allSeries.length.toLocaleString('id-ID')} Seri Terdaftar</span>
         </div>
 
-        {/* Search & Filter Toolbar */}
-        <div className="pt-3 border-t border-border-subtle flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 text-xs">
-          {/* Search Input */}
-          <div className="relative flex-1 max-w-md">
-            <Search className="w-3.5 h-3.5 text-editorial-faint absolute left-3 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Cari judul seri, pengarang, penerbit..."
-              className="w-full pl-9 pr-3 py-2 rounded-xl bg-surface-elevated/60 border border-border-subtle text-editorial-title placeholder:text-editorial-faint focus:outline-none focus:border-accent/40 text-xs transition-all"
-            />
+        <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
+          Direktori Seri Manga &amp; Light Novel.
+        </h1>
+
+        <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
+          Arsip kanonikal seri terbitan Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia.
+          Lacak kelengkapan volume, temukan nomor yang terlewat, dan monitor status rilis resmi.
+        </p>
+      </section>
+
+      {/* 2. Cohesive Search & Filter Toolbar */}
+      <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 text-xs">
+        {/* Search Input */}
+        <div className="relative flex-1 max-w-md">
+          <Search className="w-3.5 h-3.5 text-editorial-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Cari judul seri, pengarang, penerbit..."
+            className="w-full pl-9 pr-8 py-2 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.06] border border-white/[0.06] focus:border-white/[0.15] text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all text-xs"
+          />
+          {searchQuery && (
+            <button
+              type="button"
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-editorial-faint hover:text-editorial-title p-0.5"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          )}
+        </div>
+
+        {/* Filters Controls */}
+        <div className="flex flex-wrap items-center gap-2">
+          {/* Format Pills */}
+          <div className="flex items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
+            {(['ALL', 'MANGA', 'LIGHT_NOVEL'] as const).map((fmt) => (
+              <button
+                key={fmt}
+                type="button"
+                onClick={() => setFormatFilter(fmt)}
+                className={`px-3 py-1 rounded-full font-medium transition-all text-xs ${
+                  formatFilter === fmt
+                    ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
+                    : 'text-editorial-muted hover:text-editorial-title'
+                }`}
+              >
+                {fmt === 'ALL' ? 'Semua' : fmt === 'MANGA' ? 'Manga' : 'Light Novel'}
+              </button>
+            ))}
           </div>
 
-          {/* Filters Row */}
-          <div className="flex flex-wrap items-center gap-2">
-            {/* Format Pills */}
-            <div className="flex items-center gap-1 p-0.5 rounded-xl liquid-glass border border-border-subtle">
-              {(['ALL', 'MANGA', 'LIGHT_NOVEL'] as const).map((fmt) => (
-                <button
-                  key={fmt}
-                  type="button"
-                  onClick={() => setFormatFilter(fmt)}
-                  className={`px-3 py-1.5 rounded-lg font-medium transition-all text-xs ${
-                    formatFilter === fmt
-                      ? 'bg-accent text-white font-semibold shadow-xs'
-                      : 'text-editorial-muted hover:text-editorial-title'
-                  }`}
-                >
-                  {fmt === 'ALL' ? 'Semua' : fmt === 'MANGA' ? 'Manga' : 'Light Novel'}
-                </button>
-              ))}
-            </div>
+          {/* Status Filter */}
+          <select
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value as any)}
+            className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
+          >
+            <option value="ALL" className="bg-surface text-editorial-title">Semua Status</option>
+            <option value="COMPLETED" className="bg-surface text-editorial-title">Tamat</option>
+            <option value="ONGOING" className="bg-surface text-editorial-title">Berjalan</option>
+          </select>
 
-            {/* Publisher Select */}
-            <select
-              value={pubFilter}
-              onChange={(e) => setPubFilter(e.target.value)}
-              className="px-3 py-2 rounded-xl liquid-glass border border-border-subtle text-editorial-title focus:outline-none text-xs"
-            >
-              <option value="ALL">Semua Penerbit</option>
-              {publishers.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.name}
-                </option>
-              ))}
-            </select>
+          {/* Publisher Select */}
+          <select
+            value={pubFilter}
+            onChange={(e) => setPubFilter(e.target.value)}
+            className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
+          >
+            <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
+            {publishers.map((p) => (
+              <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
+                {p.name}
+              </option>
+            ))}
+          </select>
 
-            {/* Sort Select */}
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="px-3 py-2 rounded-xl liquid-glass border border-border-subtle text-editorial-title focus:outline-none text-xs"
-            >
-              <option value="name">Urutan: Judul (A-Z)</option>
-              <option value="volumes_high">Volume: Terbanyak</option>
-              <option value="volumes_low">Volume: Tersedikit</option>
-            </select>
-          </div>
+          {/* Sort Select */}
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value as any)}
+            className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer"
+          >
+            <option value="name" className="bg-surface text-editorial-title">Judul (A-Z)</option>
+            <option value="volumes_high" className="bg-surface text-editorial-title">Volume Terbanyak</option>
+            <option value="volumes_low" className="bg-surface text-editorial-title">Volume Tersedikit</option>
+          </select>
         </div>
       </div>
 
-      {/* Series Grid */}
+      {/* 3. Series Cards Grid */}
       {filteredSeries.length === 0 ? (
-        <div className="py-20 text-center rounded-3xl liquid-glass border border-border-subtle space-y-3">
-          <BookOpen className="w-10 h-10 text-editorial-faint mx-auto" />
-          <h3 className="text-sm font-semibold text-editorial-title">Tidak ada seri yang cocok</h3>
+        <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
+          <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
+          <h3 className="text-sm font-medium text-editorial-title">Tidak ada seri yang sesuai kriteria</h3>
           <p className="text-xs text-editorial-muted">Coba ubah kata kunci atau bersihkan filter pencarian.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {filteredSeries.map((series) => {
-            const books = seriesBooksMap.get(series.id) || [];
             const ownedBookIds = ownedSeriesMap.get(series.id) || new Set();
             const ownedCount = ownedBookIds.size;
             const percent =
@@ -191,17 +212,17 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
               <Link
                 key={series.id}
                 href={`/series/${series.slug}`}
-                className="group flex flex-col liquid-glass-card rounded-2xl p-4 shadow-sm hover:shadow-xl border border-border-subtle transition-all duration-300"
+                className="group flex flex-col p-4 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] hover:border-white/[0.08] transition-all duration-200 space-y-3"
               >
-                <div className="flex gap-3.5 items-start">
-                  {/* Series Cover Thumbnail with depth */}
-                  <div className="relative aspect-[3/4] w-20 sm:w-24 shrink-0 rounded-xl overflow-hidden bg-surface-sunken cover-depth">
+                <div className="flex gap-4 items-start">
+                  {/* Series Cover */}
+                  <div className="relative aspect-[3/4.2] w-20 sm:w-22 shrink-0 rounded-xl overflow-hidden bg-surface-sunken cover-depth">
                     {series.coverImage ? (
                       <img
                         src={series.coverImage}
                         alt={series.name}
                         loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
                       />
                     ) : (
                       <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-surface-elevated/40">
@@ -213,7 +234,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
                     {/* Format Badge */}
                     <div className="absolute top-1.5 left-1.5">
                       <span
-                        className={`px-1.5 py-0.5 rounded text-[8px] font-mono font-bold uppercase tracking-wider liquid-chip ${
+                        className={`px-1.5 py-0.5 rounded text-[8px] font-mono font-medium uppercase bg-black/60 backdrop-blur-sm border border-white/10 ${
                           series.type === 'LIGHT_NOVEL' ? 'text-amber-300' : 'text-sky-300'
                         }`}
                       >
@@ -222,79 +243,42 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
                     </div>
                   </div>
 
-                  {/* Series Identity */}
+                  {/* Metadata */}
                   <div className="flex-1 min-w-0 space-y-1">
                     <div className="flex items-center gap-1.5 text-[9px] font-mono text-editorial-faint">
                       <span className="font-semibold text-editorial-muted truncate">{series.publisherName}</span>
                       <span>•</span>
-                      <span className={series.status === 'COMPLETED' ? 'text-emerald-400 font-semibold' : 'text-accent'}>
-                        {series.status === 'COMPLETED' ? 'Tamat' : 'Ongoing'}
-                      </span>
+                      <span>{series.status === 'COMPLETED' ? 'Tamat' : 'Ongoing'}</span>
                     </div>
 
-                    <h3 className="text-xs sm:text-sm font-semibold text-editorial-title group-hover:text-accent transition-colors line-clamp-2 leading-tight">
+                    <h3 className="text-xs sm:text-[13px] font-medium text-editorial-title group-hover:text-accent transition-colors line-clamp-2 leading-snug tracking-tight">
                       {series.name}
                     </h3>
 
                     {series.author && (
-                      <p className="text-[10px] text-editorial-muted truncate">
-                        Oleh <span className="text-editorial-body">{series.author}</span>
+                      <p className="text-[11px] text-editorial-faint truncate font-sans">
+                        {series.author}
                       </p>
                     )}
 
-                    <div className="pt-1 flex items-center justify-between text-[10px] font-mono text-editorial-muted">
-                      <span>Total:</span>
-                      <span className="font-bold text-editorial-title">{series.totalVolumes} volume</span>
+                    <div className="pt-1 flex items-baseline justify-between text-[11px] font-mono text-editorial-muted">
+                      <span>{series.totalVolumes} Volume</span>
+                      {ownedCount > 0 && (
+                        <span className="text-emerald-400 font-medium">
+                          {ownedCount} Milik ({percent}%)
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
 
-                {/* Visual Volume Progression Timeline */}
-                {books.length > 0 && (
-                  <div className="mt-3 pt-2.5 border-t border-border-subtle space-y-2">
-                    <div className="flex items-center justify-between text-[9px] font-mono text-editorial-faint">
-                      <span>Linimasa Volume ({books.length} terbit):</span>
-                      {ownedCount > 0 && (
-                        <span className="text-accent font-bold">
-                          {ownedCount}/{series.totalVolumes} ({percent}%)
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Timeline Pills */}
-                    <div className="flex flex-wrap gap-1 max-h-12 overflow-hidden">
-                      {books.slice(0, 16).map((b) => {
-                        const isOwned = ownedBookIds.has(b.id);
-                        return (
-                          <span
-                            key={b.id}
-                            className={`px-1.5 py-0.2 rounded text-[8.5px] font-mono font-semibold transition-all ${
-                              isOwned
-                                ? 'bg-emerald-500/25 text-emerald-300 border border-emerald-500/40'
-                                : 'bg-surface-sunken text-editorial-faint border border-border-subtle'
-                            }`}
-                            title={`Volume ${b.volume ?? '?'}: ${isOwned ? 'Sudah Dimiliki' : 'Belum Dimiliki'}`}
-                          >
-                            {b.volume !== null && b.volume !== undefined ? b.volume : '•'}
-                          </span>
-                        );
-                      })}
-                      {books.length > 16 && (
-                        <span className="px-1 text-[8.5px] font-mono text-editorial-faint self-center">
-                          +{books.length - 16} lagi
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Collection Completion Progress Bar */}
-                    {ownedCount > 0 && (
-                      <div className="w-full h-1 rounded-full bg-surface-sunken overflow-hidden mt-1">
-                        <div
-                          className="h-full bg-gradient-to-r from-accent to-emerald-400 transition-all duration-300"
-                          style={{ width: `${percent}%` }}
-                        />
-                      </div>
-                    )}
+                {/* Progress bar if user owns items */}
+                {ownedCount > 0 && (
+                  <div className="w-full h-1 rounded-full bg-surface-sunken overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-accent to-emerald-400 transition-all duration-300 rounded-full"
+                      style={{ width: `${percent}%` }}
+                    />
                   </div>
                 )}
               </Link>

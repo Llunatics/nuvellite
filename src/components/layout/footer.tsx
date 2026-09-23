@@ -3,15 +3,19 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-subtle bg-surface-sunken/60 text-editorial-muted py-8 px-4 sm:px-6 lg:px-8 transition-colors">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-        <div className="flex items-center gap-2">
-          <span className="font-editorial text-sm font-bold text-editorial-title">nuvellite</span>
-          <span className="text-editorial-faint">•</span>
-          <span>Pelacak Resmi Manga &amp; Light Novel Indonesia</span>
+    <footer className="border-t border-white/[0.04] bg-background/50 text-editorial-muted py-12 px-4 sm:px-6 lg:px-8 transition-colors mt-auto">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+          <span className="font-editorial text-base font-semibold tracking-tight text-editorial-title">
+            nuvellite
+          </span>
+          <span className="hidden sm:inline text-editorial-faint/60">•</span>
+          <span className="text-editorial-muted text-xs">
+            Arsip &amp; Pelacak Rilis Resmi Manga &amp; Light Novel Indonesia
+          </span>
         </div>
 
-        <div className="flex items-center gap-4 text-[11px] text-editorial-faint">
+        <div className="flex flex-wrap items-center justify-center gap-5 text-xs text-editorial-muted">
           <Link href="/?publisher=pub_elex" className="hover:text-editorial-title transition-colors">
             Elex Media
           </Link>
@@ -22,15 +26,18 @@ export function Footer() {
             Phoenix Gramedia
           </Link>
           <Link href="/calendar" className="hover:text-editorial-title transition-colors">
-            Kalender Rilis
+            Kalender
           </Link>
           <Link href="/series" className="hover:text-editorial-title transition-colors">
-            Daftar Seri
+            Seri
+          </Link>
+          <Link href="/library" className="hover:text-editorial-title transition-colors">
+            Koleksi
           </Link>
         </div>
 
-        <div className="text-[11px] font-mono text-editorial-faint">
-          Data rilisan resmi • Elex Media, m&amp;c!, Phoenix Gramedia Indonesia
+        <div className="text-[11px] font-mono text-editorial-faint text-center md:text-right">
+          Data sinkronisasi resmi Gramedia Indonesia
         </div>
       </div>
     </footer>

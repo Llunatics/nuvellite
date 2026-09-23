@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Search, X, BookOpen, ArrowLeft } from 'lucide-react';
-import { Book, Series } from '@/lib/types';
+import { Book } from '@/lib/types';
 import { ReleaseCard } from '@/components/books/release-card';
 
 const PAGE_SIZE = 36;
@@ -84,6 +84,17 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
     });
   }, [activeQuery, allBooks]);
 
+  // Distinct publishers in the dataset
+  const publishers = useMemo(() => {
+    const map = new Map<string, string>();
+    for (const b of allBooks) {
+      if (b.publisherId && b.publisherShortName) {
+        map.set(b.publisherId, b.publisherShortName);
+      }
+    }
+    return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
+  }, [allBooks]);
+
   // Filtered & Sorted
   const finalResults = useMemo(() => {
     return rawResults
@@ -111,7 +122,6 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
   // Pagination
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
-  // Reset pagination when query or filters change
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
   }, [activeQuery, formatFilter, pubFilter, sortBy]);
@@ -124,46 +134,46 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
   }, [finalResults.length]);
 
   return (
-    <div className="space-y-6">
-      {/* Breadcrumb Navigation */}
+    <div className="space-y-10 pb-16">
+      {/* 1. Breadcrumb Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/"
           className="inline-flex items-center gap-1.5 text-xs text-editorial-muted hover:text-editorial-title transition-colors group"
         >
           <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
-          <span>Kembali ke Beranda</span>
+          <span>Kembali ke Katalog</span>
         </Link>
         <span className="text-[11px] font-mono text-editorial-faint">
-          2.400+ Katalog Resmi
+          {allBooks.length.toLocaleString('id-ID')} Katalog Terdaftar
         </span>
       </div>
 
-      {/* Main Search Input Card */}
-      <div className="p-5 sm:p-7 rounded-3xl liquid-glass shadow-lg space-y-4">
+      {/* 2. Main Search Input Card */}
+      <div className="p-6 sm:p-8 rounded-3xl bg-surface-elevated/40 border border-white/[0.06] shadow-xl space-y-4">
         <div className="space-y-1">
-          <h1 className="text-xl sm:text-2xl font-bold font-editorial text-editorial-title tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-editorial font-normal text-editorial-title tracking-tight">
             {activeQuery ? (
               <span>Hasil Pencarian: &quot;{activeQuery}&quot;</span>
             ) : (
               <span>Pencarian Katalog Manga &amp; Light Novel</span>
             )}
           </h1>
-          <p className="text-xs sm:text-sm text-editorial-muted">
-            Cari berdasarkan judul komik, light novel, nama pengarang, atau nomor ISBN resmi.
+          <p className="text-xs sm:text-sm text-editorial-muted font-sans">
+            Cari berdasarkan judul, nama seri, nomor ISBN-13 resmi, atau nama pengarang.
           </p>
         </div>
 
-        {/* Interactive Search Bar Form */}
+        {/* Search Bar Form */}
         <form onSubmit={handleSubmit} className="relative flex items-center gap-2">
           <div className="relative flex-1">
-            <Search className="w-4 h-4 text-editorial-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <Search className="w-4 h-4 text-editorial-muted absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
               value={inputVal}
               onChange={(e) => setInputVal(e.target.value)}
-              placeholder="Ketik judul komik, light novel, pengarang..."
-              className="w-full pl-10 pr-10 py-3 rounded-2xl bg-surface-sunken border border-white/5 focus:border-accent focus:outline-none text-xs sm:text-sm text-editorial-title placeholder:text-editorial-faint transition-all shadow-inner"
+              placeholder="Ketik judul komik, light novel, pengarang, ISBN..."
+              className="w-full pl-11 pr-10 py-3 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.07] border border-white/[0.08] focus:border-white/[0.18] text-xs sm:text-sm text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all shadow-inner font-sans"
               autoFocus={!activeQuery}
             />
             {inputVal && (
@@ -173,7 +183,7 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
                   setInputVal('');
                   updateUrlParams('', formatFilter, pubFilter, sortBy);
                 }}
-                className="p-1 rounded-md text-editorial-faint hover:text-editorial-title absolute right-3 top-1/2 -translate-y-1/2"
+                className="p-1 rounded-full text-editorial-faint hover:text-editorial-title absolute right-3.5 top-1/2 -translate-y-1/2"
                 aria-label="Bersihkan pencarian"
               >
                 <X className="w-4 h-4" />
@@ -182,32 +192,34 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
           </div>
           <button
             type="submit"
-            className="px-5 py-3 rounded-2xl bg-accent text-white font-semibold text-xs shadow-sm hover:bg-accent/90 transition-all shrink-0"
+            className="px-6 py-3 rounded-full bg-white text-black font-medium text-xs shadow-sm hover:bg-slate-100 transition-all shrink-0 active:scale-95"
           >
             Cari
           </button>
         </form>
 
         {/* Popular Tags */}
-        <div className="flex flex-wrap items-center gap-1.5 pt-1">
-          <span className="text-[11px] font-mono text-editorial-faint mr-1">Rekomendasi:</span>
-          {popularTags.map((tag) => (
-            <button
-              key={tag}
-              type="button"
-              onClick={() => handleTagClick(tag)}
-              className="px-2.5 py-1 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 text-[11px] text-editorial-muted hover:text-editorial-title transition-all"
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
+        {popularTags.length > 0 && (
+          <div className="flex flex-wrap items-center gap-1.5 pt-1">
+            <span className="text-[11px] font-mono text-editorial-faint mr-1">Rekomendasi Seri:</span>
+            {popularTags.map((tag) => (
+              <button
+                key={tag}
+                type="button"
+                onClick={() => handleTagClick(tag)}
+                className="px-3 py-1 rounded-full bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] text-[11px] text-editorial-muted hover:text-editorial-title transition-all font-mono"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Filter Bar */}
+      {/* 3. Filter Bar */}
       {activeQuery && (
-        <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-2xl liquid-glass text-xs">
-          <div className="flex items-center gap-1">
+        <div className="flex flex-wrap items-center justify-between gap-3 text-xs border-b border-white/[0.04] pb-4">
+          <div className="flex items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
             {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
               <button
                 key={fmt}
@@ -216,9 +228,9 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
                   setFormatFilter(fmt);
                   updateUrlParams(activeQuery, fmt, pubFilter, sortBy);
                 }}
-                className={`px-3 py-1.5 rounded-xl font-medium transition-all ${
+                className={`px-3 py-1 rounded-full font-medium transition-all ${
                   formatFilter === fmt
-                    ? 'bg-accent text-white font-semibold shadow-xs'
+                    ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                     : 'text-editorial-muted hover:text-editorial-title'
                 }`}
               >
@@ -234,12 +246,14 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
                 setPubFilter(e.target.value);
                 updateUrlParams(activeQuery, formatFilter, e.target.value, sortBy);
               }}
-              className="px-3 py-1.5 rounded-xl bg-surface-sunken border border-white/5 text-editorial-title text-xs focus:outline-none"
+              className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title text-xs focus:outline-none cursor-pointer"
             >
-              <option value="ALL">Semua Penerbit</option>
-              <option value="pub_elex">Elex Media</option>
-              <option value="pub_mnc">m&c!</option>
-              <option value="pub_pgi">PGI</option>
+              <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
+              {publishers.map((p) => (
+                <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
+                  {p.name}
+                </option>
+              ))}
             </select>
 
             <select
@@ -248,53 +262,53 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
                 setSortBy(e.target.value as any);
                 updateUrlParams(activeQuery, formatFilter, pubFilter, e.target.value);
               }}
-              className="px-3 py-1.5 rounded-xl bg-surface-sunken border border-white/5 text-editorial-title text-xs focus:outline-none"
+              className="px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title text-xs focus:outline-none cursor-pointer"
             >
-              <option value="latest">Terbaru</option>
-              <option value="title">Judul (A-Z)</option>
-              <option value="price_low">Harga Terendah</option>
-              <option value="price_high">Harga Tertinggi</option>
+              <option value="latest" className="bg-surface text-editorial-title">Rilisan Terbaru</option>
+              <option value="title" className="bg-surface text-editorial-title">Judul (A-Z)</option>
+              <option value="price_low" className="bg-surface text-editorial-title">Harga Terendah</option>
+              <option value="price_high" className="bg-surface text-editorial-title">Harga Tertinggi</option>
             </select>
           </div>
         </div>
       )}
 
-      {/* Results Grid */}
-      {activeQuery ? (
-        finalResults.length === 0 ? (
-          <div className="py-20 text-center rounded-3xl liquid-glass space-y-3">
-            <BookOpen className="w-10 h-10 text-editorial-faint mx-auto" />
-            <h3 className="text-sm font-semibold text-editorial-title">Tidak ada hasil untuk &quot;{activeQuery}&quot;</h3>
-            <p className="text-xs text-editorial-muted">Coba periksa ejaan atau gunakan nama penulis/judul Jepang.</p>
+      {/* 4. Results Section */}
+      {activeQuery && (
+        <div className="space-y-6">
+          <div className="flex items-baseline justify-between">
+            <p className="text-xs font-mono text-editorial-muted">
+              Ditemukan <strong className="text-editorial-title font-semibold">{finalResults.length}</strong> judul untuk &quot;{activeQuery}&quot;
+            </p>
           </div>
-        ) : (
-          <div className="space-y-4">
-            <span className="text-xs font-mono text-editorial-muted block px-1">
-              Ditemukan {finalResults.length} buku yang cocok
-            </span>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
+
+          {finalResults.length === 0 ? (
+            <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
+              <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
+              <h3 className="text-sm font-medium text-editorial-title">Tidak ada hasil pencarian</h3>
+              <p className="text-xs text-editorial-muted max-w-sm mx-auto">
+                Periksa kembali ejaan kata kunci atau coba gunakan istilah pencarian yang lebih umum.
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
               {visibleResults.map((book) => (
                 <ReleaseCard key={book.id} book={book} />
               ))}
             </div>
+          )}
 
-            {/* Load More Button */}
-            {hasMore && (
-              <div className="flex justify-center pt-4">
-                <button
-                  type="button"
-                  onClick={loadMore}
-                  className="px-8 py-3 rounded-2xl liquid-glass text-sm font-semibold text-editorial-title hover:text-accent border border-border-subtle hover:border-accent/30 transition-all shadow-sm hover:shadow-md active:scale-95"
-                >
-                  Muat Lagi ({finalResults.length - visibleCount} tersisa)
-                </button>
-              </div>
-            )}
-          </div>
-        )
-      ) : (
-        <div className="py-16 text-center text-xs text-editorial-faint">
-          Ketik judul di atas untuk memulai pencarian katalog.
+          {hasMore && (
+            <div className="flex justify-center pt-8 pb-4">
+              <button
+                type="button"
+                onClick={loadMore}
+                className="px-8 py-3 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] text-xs font-mono font-medium text-editorial-title transition-all shadow-sm active:scale-95"
+              >
+                Muat Lebih Banyak ({finalResults.length - visibleCount} tersisa)
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>
