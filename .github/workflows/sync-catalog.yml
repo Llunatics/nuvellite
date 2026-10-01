@@ -36,8 +36,9 @@ jobs:
 
       - name: Commit & push kalau ada perubahan
         run: |
-          git config user.name "nuvellite-bot"
-          git config user.email "nuvellite-bot@users.noreply.github.com"
+          git config user.name "Llunatics"
+          git config user.email "57332128+Llunatics@users.noreply.github.com"
+
           git add src/data/catalog.json src/data/catalog-listing.json
           if git diff --staged --quiet; then
             echo "Tidak ada perubahan katalog — skip commit."
