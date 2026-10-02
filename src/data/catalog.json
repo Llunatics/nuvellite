@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-02T17:49:42.000Z",
+  "lastUpdated": "2026-10-02T21:55:48.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -104760,7 +104760,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0v-7922j60.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 60000,
@@ -160194,6 +160194,26 @@
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1790978148",
+      "startedAt": "2026-10-02T21:52:34.000Z",
+      "finishedAt": "2026-10-02T21:55:48.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1462,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 193900,
+      "success": true
+    },
     {
       "id": "sync_1790963382",
       "startedAt": "2026-10-02T17:45:37.000Z",
