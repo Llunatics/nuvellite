@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-02T04:22:04.000Z",
+  "lastUpdated": "2026-10-02T12:01:24.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -21969,7 +21969,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-15",
       "isWednesdayRelease": true,
-      "currentPrice": 105000,
+      "currentPrice": 84000,
       "authors": [
         "Reiki Kawahara/Abec"
       ],
@@ -32650,7 +32650,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-01-09",
       "isWednesdayRelease": false,
-      "currentPrice": 170000,
+      "currentPrice": 127500,
       "authors": [
         "Hyuganatsu / Touko Shino"
       ],
@@ -100668,7 +100668,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/c-vad9-nzl.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 40500,
@@ -100767,7 +100767,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/l9vv6ecx--.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-28",
       "isWednesdayRelease": false,
       "currentPrice": 45000,
@@ -100833,7 +100833,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/944-8igzml.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-28",
       "isWednesdayRelease": false,
       "currentPrice": 50000,
@@ -102189,7 +102189,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-31",
       "isWednesdayRelease": false,
-      "currentPrice": 125000,
+      "currentPrice": 100000,
       "originalPrice": 125000,
       "authors": [
         "Indah Shafira"
@@ -102783,7 +102783,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-16",
       "isWednesdayRelease": false,
-      "currentPrice": 115000,
+      "currentPrice": 92000,
       "originalPrice": 115000,
       "authors": [
         "Bambang A.W. & Dika Sri Pandanari"
@@ -102816,7 +102816,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-16",
       "isWednesdayRelease": false,
-      "currentPrice": 155000,
+      "currentPrice": 124000,
       "originalPrice": 155000,
       "authors": [
         "Asia Mackay"
@@ -102849,7 +102849,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-07",
       "isWednesdayRelease": false,
-      "currentPrice": 85000,
+      "currentPrice": 68000,
       "originalPrice": 85000,
       "authors": [
         "William Elliot Griffis"
@@ -102882,7 +102882,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-07",
       "isWednesdayRelease": false,
-      "currentPrice": 90000,
+      "currentPrice": 72000,
       "originalPrice": 90000,
       "authors": [
         "Bunga Mega"
@@ -102981,7 +102981,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-07",
       "isWednesdayRelease": false,
-      "currentPrice": 110000,
+      "currentPrice": 88000,
       "originalPrice": 110000,
       "authors": [
         "Charlotte Henry"
@@ -103014,7 +103014,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-01",
       "isWednesdayRelease": true,
-      "currentPrice": 148000,
+      "currentPrice": 118400,
       "originalPrice": 148000,
       "authors": [
         "Drs. Kirana Rahardja"
@@ -103080,7 +103080,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-01",
       "isWednesdayRelease": true,
-      "currentPrice": 99000,
+      "currentPrice": 79200,
       "originalPrice": 99000,
       "authors": [
         "Ariawan Rahmat"
@@ -103113,7 +103113,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-01",
       "isWednesdayRelease": true,
-      "currentPrice": 78000,
+      "currentPrice": 62400,
       "originalPrice": 78000,
       "authors": [
         "Ubai Dillah Al Anshori"
@@ -103212,7 +103212,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-24",
       "isWednesdayRelease": true,
-      "currentPrice": 108000,
+      "currentPrice": 86400,
       "originalPrice": 108000,
       "authors": [
         "Mohammad Al-Zaqzooq, Mahmoud Alshaer"
@@ -103278,7 +103278,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-24",
       "isWednesdayRelease": true,
-      "currentPrice": 338000,
+      "currentPrice": 270400,
       "originalPrice": 338000,
       "authors": [
         "Alexander Osterwalder"
@@ -103311,7 +103311,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-24",
       "isWednesdayRelease": true,
-      "currentPrice": 145000,
+      "currentPrice": 116000,
       "originalPrice": 145000,
       "authors": [
         "Dominic Frisby"
@@ -103476,7 +103476,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-17",
       "isWednesdayRelease": true,
-      "currentPrice": 155000,
+      "currentPrice": 124000,
       "originalPrice": 155000,
       "authors": [
         "James da Costa"
@@ -104202,7 +104202,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 190000,
+      "currentPrice": 152000,
       "originalPrice": 190000,
       "authors": [
         "Chris Miller"
@@ -104334,7 +104334,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 65000,
+      "currentPrice": 52000,
       "originalPrice": 65000,
       "authors": [
         "Thibaut Meurisse"
@@ -104367,7 +104367,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 60000,
+      "currentPrice": 48000,
       "originalPrice": 60000,
       "authors": [
         "Thibaut Meurisse"
@@ -104400,7 +104400,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 65000,
+      "currentPrice": 52000,
       "originalPrice": 65000,
       "authors": [
         "Thibaut Meurisse"
@@ -104466,7 +104466,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 188000,
+      "currentPrice": 150400,
       "originalPrice": 188000,
       "authors": [
         "David Yeager, Ph.D."
@@ -104499,7 +104499,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 108000,
+      "currentPrice": 86400,
       "originalPrice": 108000,
       "authors": [
         "Yei Theodora Ozaki"
@@ -104760,7 +104760,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0v-7922j60.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 60000,
@@ -106149,7 +106149,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-07-22",
       "isWednesdayRelease": true,
-      "currentPrice": 118000,
+      "currentPrice": 94400,
       "originalPrice": 118000,
       "authors": [
         "Hyuganatsu / Touko Shino"
@@ -106248,7 +106248,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-25",
       "isWednesdayRelease": false,
-      "currentPrice": 98000,
+      "currentPrice": 78400,
       "originalPrice": 98000,
       "authors": [
         "Agung Setiyo Wibowo"
@@ -106512,7 +106512,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-12",
       "isWednesdayRelease": false,
-      "currentPrice": 118000,
+      "currentPrice": 94400,
       "originalPrice": 118000,
       "authors": [
         "Shireishou "
@@ -106710,7 +106710,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-04-29",
       "isWednesdayRelease": true,
-      "currentPrice": 105000,
+      "currentPrice": 84000,
       "originalPrice": 105000,
       "authors": [
         "Laura Hang"
@@ -106743,7 +106743,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-04-22",
       "isWednesdayRelease": true,
-      "currentPrice": 110000,
+      "currentPrice": 88000,
       "originalPrice": 110000,
       "authors": [
         "Safira Hapsari"
@@ -106776,7 +106776,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-04-10",
       "isWednesdayRelease": false,
-      "currentPrice": 140000,
+      "currentPrice": 112000,
       "originalPrice": 140000,
       "authors": [
         "Rahmat Kurniawan"
@@ -106809,7 +106809,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-04-08",
       "isWednesdayRelease": true,
-      "currentPrice": 120000,
+      "currentPrice": 96000,
       "originalPrice": 120000,
       "authors": [
         "Dr. Sunita Sah"
@@ -106974,7 +106974,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-02-25",
       "isWednesdayRelease": true,
-      "currentPrice": 105000,
+      "currentPrice": 84000,
       "originalPrice": 105000,
       "authors": [
         "Sheila Andini"
@@ -107007,7 +107007,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-02-25",
       "isWednesdayRelease": true,
-      "currentPrice": 75000,
+      "currentPrice": 60000,
       "originalPrice": 75000,
       "authors": [
         "Sheila Andini"
@@ -107139,7 +107139,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-02-19",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 40000,
       "originalPrice": 50000,
       "authors": [
         "Tim Miracle - M&C"
@@ -107238,7 +107238,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-02-19",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 40000,
       "originalPrice": 50000,
       "authors": [
         "Tim Miracle - M&C"
@@ -107304,7 +107304,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-02-19",
       "isWednesdayRelease": false,
-      "currentPrice": 138000,
+      "currentPrice": 110400,
       "originalPrice": 138000,
       "authors": [
         "Michael Chad Hoeppner"
@@ -107370,7 +107370,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-02-13",
       "isWednesdayRelease": false,
-      "currentPrice": 194000,
+      "currentPrice": 145500,
       "originalPrice": 194000,
       "authors": [
         "Asato Asato/ Shirabii"
@@ -107634,7 +107634,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-01-27",
       "isWednesdayRelease": false,
-      "currentPrice": 124000,
+      "currentPrice": 93000,
       "originalPrice": 124000,
       "authors": [
         "Stephanie Naomi"
@@ -159736,9 +159736,414 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-02",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_perkara_nyari_kerja_tentang_karier_diri_dan_kesempatan_1790942484",
+      "bookId": "pub_perkara_nyari_kerja_tentang_karier_diri_dan_kesempatan",
+      "price": 100000,
+      "currentPrice": 100000,
+      "originalPrice": 125000,
+      "previousPrice": 125000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lintas_sejarah_etnis_tionghoa_di_malang_dari_singhasari_sampai_reformasi_1790942484",
+      "bookId": "pub_lintas_sejarah_etnis_tionghoa_di_malang_dari_singhasari_sampai_reformasi",
+      "price": 92000,
+      "currentPrice": 92000,
+      "originalPrice": 115000,
+      "previousPrice": 115000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_a_serial_killers_guide_to_marriage_1790942484",
+      "bookId": "pub_a_serial_killers_guide_to_marriage",
+      "price": 124000,
+      "currentPrice": 124000,
+      "originalPrice": 155000,
+      "previousPrice": 155000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_korean_fairy_tale_1790942484",
+      "bookId": "pub_the_korean_fairy_tale",
+      "price": 68000,
+      "currentPrice": 68000,
+      "originalPrice": 85000,
+      "previousPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gerbong_perempuan_1790942484",
+      "bookId": "pub_gerbong_perempuan",
+      "price": 72000,
+      "currentPrice": 72000,
+      "originalPrice": 90000,
+      "previousPrice": 90000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_streaming_wars_pertarungan_teknologi_dan_strategi_di_balik_era_streaming_yang_mengubah_segalanya_1790942484",
+      "bookId": "pub_streaming_wars_pertarungan_teknologi_dan_strategi_di_balik_era_streaming_yang_mengubah_segalanya",
+      "price": 88000,
+      "currentPrice": 88000,
+      "originalPrice": 110000,
+      "previousPrice": 110000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_capita_selecta_panduan_keluarga_untuk_memahami_penyakit_dan_obat_secara_umum_1790942484",
+      "bookId": "pub_capita_selecta_panduan_keluarga_untuk_memahami_penyakit_dan_obat_secara_umum",
+      "price": 118400,
+      "currentPrice": 118400,
+      "originalPrice": 148000,
+      "previousPrice": 148000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kreator_cerdas_taat_pajak_membangun_literasi_pajak_di_era_ekonomi_digital_1790942484",
+      "bookId": "pub_kreator_cerdas_taat_pajak_membangun_literasi_pajak_di_era_ekonomi_digital",
+      "price": 79200,
+      "currentPrice": 79200,
+      "originalPrice": 99000,
+      "previousPrice": 99000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sebuah_kota_sebuah_umpama_1790942484",
+      "bookId": "pub_sebuah_kota_sebuah_umpama",
+      "price": 62400,
+      "currentPrice": 62400,
+      "originalPrice": 78000,
+      "previousPrice": 78000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_letters_from_gaza_suara_mereka_dari_masamasa_yang_luar_biasa_1790942484",
+      "bookId": "pub_letters_from_gaza_suara_mereka_dari_masamasa_yang_luar_biasa",
+      "price": 86400,
+      "currentPrice": 86400,
+      "originalPrice": 108000,
+      "previousPrice": 108000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_highimpact_tools_for_teams_1790942484",
+      "bookId": "pub_highimpact_tools_for_teams",
+      "price": 270400,
+      "currentPrice": 270400,
+      "originalPrice": 338000,
+      "previousPrice": 338000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_secret_history_of_gold_mitos_uang_politik_dan_kekuasaan_1790942484",
+      "bookId": "pub_the_secret_history_of_gold_mitos_uang_politik_dan_kekuasaan",
+      "price": 116000,
+      "currentPrice": 116000,
+      "originalPrice": 145000,
+      "previousPrice": 145000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_fintech_wars_pertarungan_raksasa_teknologi_memperebutkan_masa_depan_uang_1790942484",
+      "bookId": "pub_fintech_wars_pertarungan_raksasa_teknologi_memperebutkan_masa_depan_uang",
+      "price": 124000,
+      "currentPrice": 124000,
+      "originalPrice": 155000,
+      "previousPrice": 155000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_chip_war_pertarungan_untuk_teknologi_paling_krusial_di_dunia_1790942484",
+      "bookId": "pub_chip_war_pertarungan_untuk_teknologi_paling_krusial_di_dunia",
+      "price": 152000,
+      "currentPrice": 152000,
+      "originalPrice": 190000,
+      "previousPrice": 190000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_strategic_mindset__rencana_7_hari_menentukan_prioritas_dan_menyusun_strategi_efektif_1790942484",
+      "bookId": "pub_strategic_mindset__rencana_7_hari_menentukan_prioritas_dan_menyusun_strategi_efektif",
+      "price": 52000,
+      "currentPrice": 52000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_immediate_action__rencana_7_hari_mengatasi_prokrastinasi_dan_memulihkan_motivasi_1790942484",
+      "bookId": "pub_immediate_action__rencana_7_hari_mengatasi_prokrastinasi_dan_memulihkan_motivasi",
+      "price": 48000,
+      "currentPrice": 48000,
+      "originalPrice": 60000,
+      "previousPrice": 60000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_powerful_focus__rencana_7_hari_membangun_kejelasan_pikiran_dan_memperkuat_fokus_1790942484",
+      "bookId": "pub_powerful_focus__rencana_7_hari_membangun_kejelasan_pikiran_dan_memperkuat_fokus",
+      "price": 52000,
+      "currentPrice": 52000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_10_to_25_seni_memotivasi_generasi_muda_1790942484",
+      "bookId": "pub_10_to_25_seni_memotivasi_generasi_muda",
+      "price": 150400,
+      "currentPrice": 150400,
+      "originalPrice": 188000,
+      "previousPrice": 188000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_japanese_fairy_book_1790942484",
+      "bookId": "pub_the_japanese_fairy_book",
+      "price": 86400,
+      "currentPrice": 86400,
+      "originalPrice": 108000,
+      "previousPrice": 108000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_apothecary_diaries_vol_02__maomao_special_package_1790942484",
+      "bookId": "pub_light_novel_the_apothecary_diaries_vol_02__maomao_special_package",
+      "price": 94400,
+      "currentPrice": 94400,
+      "originalPrice": 118000,
+      "previousPrice": 118000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_wealth_you_cant_lose_1790942484",
+      "bookId": "pub_the_wealth_you_cant_lose",
+      "price": 78400,
+      "currentPrice": 78400,
+      "originalPrice": 98000,
+      "previousPrice": 98000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_together_love_1_1790942484",
+      "bookId": "pub_together_love_1",
+      "price": 94400,
+      "currentPrice": 94400,
+      "originalPrice": 118000,
+      "previousPrice": 118000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_you_already_know_seni_menajamkan_intuisi_1790942484",
+      "bookId": "pub_you_already_know_seni_menajamkan_intuisi",
+      "price": 84000,
+      "currentPrice": 84000,
+      "originalPrice": 105000,
+      "previousPrice": 105000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_drive_or_die_1790942484",
+      "bookId": "pub_drive_or_die",
+      "price": 88000,
+      "currentPrice": 88000,
+      "originalPrice": 110000,
+      "previousPrice": 110000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sword_art_online_011_alicization_running__alicization_turning_1790942484",
+      "bookId": "pub_sword_art_online_011_alicization_running__alicization_turning",
+      "price": 84000,
+      "currentPrice": 84000,
+      "originalPrice": 105000,
+      "previousPrice": 105000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kultivator_dewa_xiao_wang_1790942484",
+      "bookId": "pub_kultivator_dewa_xiao_wang",
+      "price": 112000,
+      "currentPrice": 112000,
+      "originalPrice": 140000,
+      "previousPrice": 140000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_defy_berani_bersuara_saat_situasi_menekan_anda_1790942484",
+      "bookId": "pub_defy_berani_bersuara_saat_situasi_menekan_anda",
+      "price": 96000,
+      "currentPrice": 96000,
+      "originalPrice": 120000,
+      "previousPrice": 120000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_borderline_of_lovemerchandise_1790942484",
+      "bookId": "pub_borderline_of_lovemerchandise",
+      "price": 84000,
+      "currentPrice": 84000,
+      "originalPrice": 105000,
+      "previousPrice": 105000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_borderline_of_love_1790942484",
+      "bookId": "pub_borderline_of_love",
+      "price": 60000,
+      "currentPrice": 60000,
+      "originalPrice": 75000,
+      "previousPrice": 75000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_coloring__journaling_therapy_cozy__warm_1790942484",
+      "bookId": "pub_coloring__journaling_therapy_cozy__warm",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_coloring__journaling_therapy_furry_friends_1790942484",
+      "bookId": "pub_coloring__journaling_therapy_furry_friends",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_dont_say_um_bukan_isinya_tapi_cara_mengatakannya_1790942484",
+      "bookId": "pub_dont_say_um_bukan_isinya_tapi_cara_mengatakannya",
+      "price": 110400,
+      "currentPrice": 110400,
+      "originalPrice": 138000,
+      "previousPrice": 138000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_eighty_six_ep_5__wahai_maut_janganlah_congkak__merchandise_1790942484",
+      "bookId": "pub_eighty_six_ep_5__wahai_maut_janganlah_congkak__merchandise",
+      "price": 145500,
+      "currentPrice": 145500,
+      "originalPrice": 194000,
+      "previousPrice": 194000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_unchained_love_paket_arya_1790942484",
+      "bookId": "pub_unchained_love_paket_arya",
+      "price": 93000,
+      "currentPrice": 93000,
+      "originalPrice": 124000,
+      "previousPrice": 124000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_apothecary_diaries_vol_01__jishi_sama_premium_package_1790942484",
+      "bookId": "pub_light_novel_the_apothecary_diaries_vol_01__jishi_sama_premium_package",
+      "price": 127500,
+      "currentPrice": 127500,
+      "originalPrice": 170000,
+      "previousPrice": 170000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1790942484",
+      "startedAt": "2026-10-02T11:57:45.000Z",
+      "finishedAt": "2026-10-02T12:01:24.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1462,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 219277,
+      "success": true
+    },
     {
       "id": "sync_1790914924",
       "startedAt": "2026-10-02T04:18:34.000Z",
