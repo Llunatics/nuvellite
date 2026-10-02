@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-02T12:01:24.000Z",
+  "lastUpdated": "2026-10-02T17:49:42.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -100668,10 +100668,10 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/c-vad9-nzl.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
-      "currentPrice": 40500,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "authors": [
         "Muneyuki Kaneshiro"
@@ -104760,7 +104760,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0v-7922j60.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 60000,
@@ -104793,7 +104793,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/cm2nlznlt0.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 129000,
@@ -115469,6 +115469,39 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_cerita_spesial_doraemon_edisi_musik_yang_bergema_dungtek",
+      "slug": "cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek",
+      "title": "Cerita Spesial Doraemon Edisi Musik yang Bergema Dungtek",
+      "originalTitle": "Cerita Spesial Doraemon Edisi Musik yang Bergema Dungtek",
+      "seriesId": "ser_cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek",
+      "seriesName": "Cerita Spesial Doraemon Edisi Musik yang Bergema Dungtek",
+      "volume": null,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/6nsesuserr.jpg",
+      "status": "PREORDER",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-21",
+      "isWednesdayRelease": true,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "authors": [
+        "Fujiko F. Fujio"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080159",
+      "synopsis": "Jilid ini memuat aneka cerita terbaik Doraemon yang berkaitan dengan suara dan musik. Hanya membacanya, suara-suara yang meriah akan melingkupimu dan pasti akan membuatmu bersemangat!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media"
     }
   ],
   "series": [
@@ -117406,6 +117439,22 @@
       "availableVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ait9ua-d--.jpg",
       "description": "Jilid ini sarat cerita yang sangat emosional dan menyentuh hati. Selain itu juga memuat karya-karya mengharukan yang menginspirasi film \"STAND BY ME Doraemon\" dan \"STAND BY ME Doraemon 2.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nPilihan Edisi & Set Resmi: Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular, Regular"
+    },
+    {
+      "id": "ser_cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek",
+      "slug": "cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek",
+      "name": "Cerita Spesial Doraemon Edisi Musik yang Bergema Dungtek",
+      "originalTitle": "Cerita Spesial Doraemon Edisi Musik yang Bergema Dungtek",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "author": "Fujiko F. Fujio",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/6nsesuserr.jpg",
+      "description": "Jilid ini memuat aneka cerita terbaik Doraemon yang berkaitan dengan suara dan musik. Hanya membacanya, suara-suara yang meriah akan melingkupimu dan pasti akan membuatmu bersemangat!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_chainsaw-man",
@@ -160121,9 +160170,50 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-02",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_cerita_spesial_doraemon_edisi_musik_yang_bergema_dungtek_init",
+      "bookId": "pub_cerita_spesial_doraemon_edisi_musik_yang_bergema_dungtek",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_episode_nagi_vol_05_1790963382",
+      "bookId": "pub_blue_lock_episode_nagi_vol_05",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1790963382",
+      "startedAt": "2026-10-02T17:45:37.000Z",
+      "finishedAt": "2026-10-02T17:49:42.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1461,
+      "productsInserted": 1,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 245554,
+      "success": true
+    },
     {
       "id": "sync_1790942484",
       "startedAt": "2026-10-02T11:57:45.000Z",
