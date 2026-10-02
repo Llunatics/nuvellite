@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-01T20:12:31.000Z",
+  "lastUpdated": "2026-10-02T04:22:04.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -14246,7 +14246,7 @@
         "Misteri & Detektif"
       ],
       "isbn13": "9786230033780",
-      "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n\n• Edisi Standar: Rp 50.000\n\n• Edisi Khusus: Rp 37.500",
+      "synopsis": "Komik BUNGO STRAY DOGS 01 karya Kafka Asagiri bercerita tentang kisah action supernatural menarik yang terinspirasi dari sastrawan Jepang dan dunia. Para tokohnya diberi nama yang sama dengan sastrawan terkenal dan memiliki kemampuan yang berhubungan dengan karya mereka. ini telah terbit sebanyak 22 jilid. Serial populer yang telah dicetak sebanyak 8,5 juta eksemplar dan telah diadaptasi menjadi serial animasi sebanyak 3 musim di Jepang. Komik ini juga telah diadaptasi menjadi novel, komik spin off, film animasi layar lebar, drama panggung, game, dan live action. Komik ini bercerita tentang Atsushi Nakajima yang menolong seorang laki-laki yang gagal bunuh diri dan terhanyut di sungai di Yokohama. Inilah pembukaan kisah aksi pertarungan antar tokoh sastra berkemampuan khusus dengan Yokohama sebagai panggungnya. Sebelumnya Atsushi diusir dari panti asuhan dan tiba di Yokohama. Lelaki yang ingin mengakhiri hidupnya tersebut adalah Osamu Dazai dan dia tergabung dalam Agensi Detektif Bersenjata. Kelompok tersebut adalah sebuah kelompok pemilik kemampuan khusus yang bekerja membereskan kasus berat yang berbahaya dan brutal. Kelompok tersebut kini sedang melakukan penyelidikan untuk membereskan masalah “harimau pemangsa manusia” yang menggemparkan masyarakat. Nakajima yang pernah berurusan dengan si harimau itu dipaksa oleh Dazai untuk ikut dalam penyelidikan. Sinopsis Setelah diusir dari panti asuhan dan tiba di Yokohama, Atsushi Nakajima menolong seorang lelaki yang gagal bunuh diri dan terhanyut di sungai. Nama lelaki itu adalah Osamu Dazai... dan dia tergabung dalam Agensi Detektif Bersenjata, sebuah kelompok pemilik kemampuan khusus yang bekerja membereskan kasus berat yang berbahaya dan brutal, dan kini sedang melakukan penyelidikan untuk membereskan masalah “harimau pemangsa manusia” yang menggemparkan masyarakat. Nakajima yang pernah berurusan dengan si harimau itu diajak paksa Dazai untuk ikut dalam penyelidikan! Inilah pembukaan kisah aksi pertarungan antar tokoh sastra berkemampuan khusus dengan Yokohama sebagai panggungnya. komik ini direkomendasikan untuk pembaca yang menyukai genre Informasi lain : Judul: Level Comic (LC): Bungo Stray Dogs 01 Rating: yang diperuntukan untuk pembaca berusia tahun ke atas. Cerita & Ilustrasi: Kafka Asagiri Production: Elex Media Komputindo Tebal: 204 halaman Format: Soft Cover Tanggal Terbit: 31 Agustus 2022 ISBN : 9786230033780 Berat : 0.2 kg Dimensi : 18 x 12 cm",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-bungo-stray-dogs-01-1",
       "availableEditions": [
         {
@@ -42456,7 +42456,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-07-15",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 33750,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -42491,7 +42491,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 40500
+      "originalPrice": 45000
     },
     {
       "id": "pub_akasha__tatsuki_fujimoto_before_chainsaw_man_2226",
@@ -43543,7 +43543,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-06-13",
       "isWednesdayRelease": false,
-      "currentPrice": 31500,
+      "currentPrice": 26250,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -43560,8 +43560,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 31500
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 35000
     },
     {
       "id": "pub_hiroshi_noharas_lunch_style_10",
@@ -43977,7 +43977,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-06-03",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 33750,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -44012,7 +44012,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 40500
+      "originalPrice": 45000
     },
     {
       "id": "pub_akasha__nyankees_03",
@@ -44814,7 +44814,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Light Novel release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 66750
+      "originalPrice": 89000
     },
     {
       "id": "pub_yona_the_girl_standing_in_the_blush_of_dawn_44",
@@ -46135,7 +46135,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-04-24",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 33750,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -46170,7 +46170,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 40500
+      "originalPrice": 45000
     },
     {
       "id": "pub_gokurakugai_vol_2",
@@ -47939,7 +47939,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-03-10",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 33750,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -47974,7 +47974,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 40500
+      "originalPrice": 45000
     },
     {
       "id": "pub_i_sold_my_life_for_ten_thousand_yen_per_year_01__bookpaper",
@@ -52254,7 +52254,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-01-14",
       "isWednesdayRelease": false,
-      "currentPrice": 28800,
+      "currentPrice": 20800,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -52271,8 +52271,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 32000
     },
     {
       "id": "pub_bocchi_the_rock_04",
@@ -54419,7 +54419,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-11-09",
       "isWednesdayRelease": false,
-      "currentPrice": 28800,
+      "currentPrice": 24000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -54436,8 +54436,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 32000
     },
     {
       "id": "pub_hai_miiko_12__bookpaper",
@@ -56449,7 +56449,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-09-18",
       "isWednesdayRelease": true,
-      "currentPrice": 28800,
+      "currentPrice": 32000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -56467,7 +56467,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "originalPrice": 32000
     },
     {
       "id": "pub_my_hero_academia_29",
@@ -58463,7 +58463,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-07-15",
       "isWednesdayRelease": false,
-      "currentPrice": 28800,
+      "currentPrice": 24000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -58480,8 +58480,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 32000
     },
     {
       "id": "pub_kaguya_sama_love_is_war_17",
@@ -69799,7 +69799,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-05-17",
       "isWednesdayRelease": true,
-      "currentPrice": 28800,
+      "currentPrice": 24000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -69816,8 +69816,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 32000
     },
     {
       "id": "pub_my_hero_academia_24",
@@ -71140,7 +71140,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-02-24",
       "isWednesdayRelease": false,
-      "currentPrice": 28800,
+      "currentPrice": 24000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -71157,8 +71157,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 32000
     },
     {
       "id": "pub_koloni_jawara_sejati",
@@ -72385,7 +72385,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-12-29",
       "isWednesdayRelease": false,
-      "currentPrice": 28800,
+      "currentPrice": 32000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -72403,7 +72403,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "originalPrice": 32000
     },
     {
       "id": "pub_akasha__futo_detective_05",
@@ -73803,7 +73803,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-08-31",
       "isWednesdayRelease": true,
-      "currentPrice": 28800,
+      "currentPrice": 32000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -73821,7 +73821,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "originalPrice": 32000
     },
     {
       "id": "pub_akasha__dead_mount_death_play_05",
@@ -74789,7 +74789,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-06-05",
       "isWednesdayRelease": false,
-      "currentPrice": 25200,
+      "currentPrice": 21000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -74806,8 +74806,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000
     },
     {
       "id": "pub_akasha_wotakoi_love_is_hard_for_otaku_07",
@@ -75671,7 +75671,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-04-08",
       "isWednesdayRelease": false,
-      "currentPrice": 28800,
+      "currentPrice": 32000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -75688,8 +75688,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 32000
     },
     {
       "id": "pub_akasha__record_of_ragnarok_07",
@@ -76482,7 +76482,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-02-09",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -76499,8 +76499,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000
     },
     {
       "id": "pub_akasha_wotakoi_love_is_hard_for_otaku_04",
@@ -77529,7 +77529,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-12-15",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 32000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -77547,7 +77547,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 28000
+      "originalPrice": 32000
     },
     {
       "id": "pub_black_clover_17",
@@ -79694,7 +79694,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-06-02",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -79711,8 +79711,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000
     },
     {
       "id": "pub_kindaichi_37_tahun_05_edisi_revisi",
@@ -81338,7 +81338,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-01-27",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -81355,8 +81355,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000
     },
     {
       "id": "pub_boruto_naruto_next_generation_vol_8",
@@ -82080,7 +82080,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-10-21",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 24000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -82097,8 +82097,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 32000
     },
     {
       "id": "pub_kindaichi_37_tahun_04",
@@ -82682,7 +82682,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-08-12",
       "isWednesdayRelease": true,
-      "currentPrice": 28800,
+      "currentPrice": 32000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -82700,7 +82700,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "originalPrice": 32000
     },
     {
       "id": "pub_new_crayon_shinchan_07",
@@ -83070,7 +83070,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-06-15",
       "isWednesdayRelease": false,
-      "currentPrice": 25200,
+      "currentPrice": 32000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -83088,7 +83088,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "originalPrice": 32000
     },
     {
       "id": "pub_level_comic_bakemonogatari_02",
@@ -84973,7 +84973,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-09-11",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -84990,8 +84990,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000
     },
     {
       "id": "pub_dragon_ball_super_vol_6",
@@ -85256,7 +85256,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-07-15",
       "isWednesdayRelease": false,
-      "currentPrice": 28800,
+      "currentPrice": 32000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -85274,7 +85274,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 28800
+      "originalPrice": 32000
     },
     {
       "id": "pub_lc_attack_on_titan_26",
@@ -85507,7 +85507,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-05-01",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -85525,7 +85525,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "originalPrice": 28000
     },
     {
       "id": "pub_my_hero_academia_10",
@@ -85754,7 +85754,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-03-27",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -85771,8 +85771,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000
     },
     {
       "id": "pub_boruto_naruto_next_generation_vol_2",
@@ -86003,7 +86003,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-01-30",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -86020,8 +86020,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000
     },
     {
       "id": "pub_black_clover_01",
@@ -86392,7 +86392,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-11-07",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -86410,7 +86410,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "originalPrice": 28000
     },
     {
       "id": "pub_my_hero_academia_07",
@@ -86534,7 +86534,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-09-12",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -86552,7 +86552,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "originalPrice": 28000
     },
     {
       "id": "pub_detektif_conan_94",
@@ -86712,7 +86712,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-07-04",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -86730,7 +86730,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "originalPrice": 28000
     },
     {
       "id": "pub_my_hero_academia_05",
@@ -86888,7 +86888,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-05-09",
       "isWednesdayRelease": true,
-      "currentPrice": 25200,
+      "currentPrice": 28000,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -86905,8 +86905,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 25200
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000
     },
     {
       "id": "pub_horimiya_11",
@@ -100414,7 +100414,7 @@
         "Manga"
       ],
       "isbn13": "9786230022555",
-      "synopsis": "Rilisan resmi Mob Psycho 100 3 terbitan Elex Media Komputindo.",
+      "synopsis": "Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang. Komik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nKomik Mob Psycho 100 3 karya One menjadi salah satu komik yang wajib untuk diikuti. Apakah sesuatu yang bangkit dengan melampaui emosi Mob itu. Dalam pertarungan melawan Teru, ketua bayangan SMP Kurozu, Mob memegang teguh prinsip tidak melakukan kekerasan dan tidak menggunakan kekuatan supernatural. Dia dihajar sampai pingsan. Saat pertarungan seakan telah usai, ‘sesuatu’ bangkit dalam diri Mob yang melampaui kehendaknya sendiri! Kemudian, dimulailah kisah baru yang berfokus pada Ritsu, adik Mob yang ingin jadi seperti sang kakak.\n\nInformasi lain:\n\nJudul Buku: Mob Psycho 100 3\n\nPenulis: One\n\nJumlah Halaman: 200\n\nTanggal Terbit: 27 Januari 2021\n\nISBN: 9786230022555\n\nBahasa: Indonesia\n\nPenerbit: Elex Media Komputindo\n\nBerat: 0.15 kg\n\nLebar: 12 cm\n\nPanjang: 18 cm",
       "gramediaUrl": "https://www.gramedia.com/products/mob-psycho-100-03",
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
@@ -100447,7 +100447,7 @@
         "Manga"
       ],
       "isbn13": "9786230057762",
-      "synopsis": "Rilisan resmi Mob Psycho 100 - Reigen terbitan Elex Media Komputindo.",
+      "synopsis": "Arataka Reigen akan menerima permohonan itu! Permohonan kerja baru berdatangan ke Arataka Reigen, sang pria yang mengaku cenayang dan menjalankan bisnis kantor konsultasi masalah roh!! Penyucian bangunan angker, pembasmian roh jahat di spot berhantu, dan lainnya! Bersama seorang siswi SMA maniak hal mistis yang bekerja sambilan di sana, mereka melakukan “pembasmian” dengan tingkat tipu-tipu dan bahaya 100%!! Inilah kisah komedi seputar roh dan semacamnya, kelanjutan dari Mob Psycho 100!\n\nSelling Point:\n\nSpin-off komik Mob Psycho 100. Salah satu komik terpopuler di Jepang saat ini yang menjadi pemenang Shogakukan Manga Award. Anime-nya sudah ditayangkan di berbagai negara.\n\n****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nMob Psycho 100 adalah serial manga Jepang yang ditulis dan diilustrasikan oleh One. Itu diserialkan di situs web Ura Sunday Shogakukan dari April 2012 hingga Desember 2017. Itu juga tersedia online di aplikasi seluler Manga ONE Shogakukan sejak Desember 2014. Shogakukan menyusun bab-babnya menjadi enam belas volume tankōbon. Ceritanya mengikuti Shigeo Kageyama yang dijuluki Mob, seorang anak laki-laki yang memiliki kekuatan psikis yang kuat, dan perjuangannya untuk menemukan kebahagiaan sederhana yang dia cari.",
       "gramediaUrl": "https://www.gramedia.com/products/mob-psycho-100-reigen",
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
@@ -100701,7 +100701,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/u12oo5ll72.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-28",
       "isWednesdayRelease": false,
       "currentPrice": 129000,
@@ -102090,7 +102090,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-08-06",
       "isWednesdayRelease": false,
-      "currentPrice": 128000,
+      "currentPrice": 102400,
       "originalPrice": 128000,
       "authors": [
         "Jalaluddin Rumi"
@@ -102420,7 +102420,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-23",
       "isWednesdayRelease": false,
-      "currentPrice": 88000,
+      "currentPrice": 70400,
       "originalPrice": 88000,
       "authors": [
         "Nunung Julita & M. Rafi"
@@ -102453,7 +102453,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-23",
       "isWednesdayRelease": false,
-      "currentPrice": 98000,
+      "currentPrice": 78400,
       "originalPrice": 98000,
       "authors": [
         "Desti Annor"
@@ -102486,7 +102486,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-23",
       "isWednesdayRelease": false,
-      "currentPrice": 138000,
+      "currentPrice": 110400,
       "originalPrice": 138000,
       "authors": [
         "Ahmad Rifai Rifan"
@@ -102948,7 +102948,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-07",
       "isWednesdayRelease": false,
-      "currentPrice": 128000,
+      "currentPrice": 102400,
       "originalPrice": 128000,
       "authors": [
         "Moh. Sholeh MD"
@@ -103410,7 +103410,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-17",
       "isWednesdayRelease": true,
-      "currentPrice": 168000,
+      "currentPrice": 134400,
       "originalPrice": 168000,
       "authors": [
         "A. Helwa"
@@ -103773,7 +103773,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-09",
       "isWednesdayRelease": false,
-      "currentPrice": 155000,
+      "currentPrice": 124000,
       "originalPrice": 155000,
       "authors": [
         "Khairul Jasmi"
@@ -103806,7 +103806,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-09",
       "isWednesdayRelease": false,
-      "currentPrice": 98000,
+      "currentPrice": 78400,
       "originalPrice": 98000,
       "authors": [
         "Akhmad Najibul Khairi Sya'ie & Achmad Budiyanto"
@@ -103872,7 +103872,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-02",
       "isWednesdayRelease": false,
-      "currentPrice": 98000,
+      "currentPrice": 78400,
       "originalPrice": 98000,
       "authors": [
         "Malala Yousafzai"
@@ -104268,7 +104268,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 140000,
+      "currentPrice": 112000,
       "originalPrice": 140000,
       "authors": [
         "Ummu Balqis"
@@ -104301,7 +104301,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 83300,
+      "currentPrice": 78400,
       "originalPrice": 98000,
       "authors": [
         "Syafiq Bin Riza Bin Hasan Basalamah"
@@ -104826,7 +104826,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/9ke9aeckm-.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-29",
       "isWednesdayRelease": false,
       "currentPrice": 90000,
@@ -111756,7 +111756,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/--umpngegn.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-30",
       "isWednesdayRelease": true,
       "currentPrice": 115000,
@@ -111789,7 +111789,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/tav8-v5-2e.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-30",
       "isWednesdayRelease": true,
       "currentPrice": 65000,
@@ -111822,7 +111822,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/4satuayg-s.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-30",
       "isWednesdayRelease": true,
       "currentPrice": 65000,
@@ -111855,7 +111855,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/88vo5h94ta.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-30",
       "isWednesdayRelease": true,
       "currentPrice": 65000,
@@ -111888,7 +111888,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/4l82cxovo9.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-30",
       "isWednesdayRelease": true,
       "currentPrice": 65000,
@@ -115007,6 +115007,468 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_08",
+      "slug": "haikyu-fly-high-volleyball-08",
+      "title": "Haikyu!!: Fly High! Volleyball! 08",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 8,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024284244_haikyu_-fly-high_-volleyball_-08.jpg",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "releaseDate": "2017-09-20",
+      "isWednesdayRelease": true,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024284244",
+      "synopsis": "Demi mengubah alur pertandingan, Karasuno sampai menurunkan pemain cadangan kelas 1, Yamaguchi! Berkat rencana rahasia yang melahirkan hasil tak terduga ini, Karasuno pun bangkit kembali. Pikiran bahwa bola di depan mata adalah 1 poin yang berharga, menjadi kekuatan bagi Hinata, dkk untuk saling terhubung. Apakah mereka akan berhasil menguasai pertandingan dan merebut kemenangan?!",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-08",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_04_1",
+      "slug": "haikyu-fly-high-volleyball-04-1",
+      "title": "Haikyu!!: Fly High! Volleyball! 04",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 4,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024281397_haikyu_-fly-high_-valleyball_-04.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2017-01-18",
+      "isWednesdayRelease": true,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024281397",
+      "synopsis": "Di hari terakhir kamp pelatihan klub voli SMA Karasuno, akhirnya latih tanding melawan SMA Nekoma pun dimulai! Serangan cepat Hinata dan Kageyama berhasil terbaca oleh kemampuan analisa Kozume, setter Nekoma, serta teknik receive yang solid dari tim Nekoma! Apakah serangan duo super akan berhasil dihentikan?!",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-04-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_03_1",
+      "slug": "haikyu-fly-high-volleyball-03-1",
+      "title": "Haikyu!!: Fly High! Volleyball! 03",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 3,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024280543_haikyu_-fly-high_-valleyball_-03.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2016-11-16",
+      "isWednesdayRelease": true,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024280543",
+      "synopsis": "Haikyu!! Fly High! Volleyball! merupakan manga dibuat oleh Haruichi Furudate dan diterbitkan pertama kali di majalah Weekly Shōnen Jump pada Februari 2012. Manga Haikyu!! Fly High! Volleyball! akhirnya diadaptasi menjadi anime dan tayang sejak April 2014. Manga ini telah memenangkan penghargaan Shogakukan Manga Award ke-61 tahun 2016 untuk untuk kategori manga shōnen.  Haikyu!! Fly High! Volleyball! Sudah terjual 38 juta kopi bahkan fans setia Haikyu!! Sudah menunggu anime ini tayang season 5. Cerita Haikyu!! Fly High! Volleyball! berkisah tentang Shoyo Hinata, siswa yang terobsesi dengan voli setelah melihat SMA Karasuno menjadi pemenang pertandingan dan lolos ke Kejuaraan Nasional.\n\nMasa hukuman untuk Nishinoya, spesialis pertahanan klub voli SMA Karasuno yang dijuluki “Dewa Pelindung”, sudah berakhir!\n\nAkan tetapi, Nishinoya bertekad tidak akan kembali ke klub kalau sang ace Karasuno, Asahi, tidak kembali ke klub juga. Hinata yang mengagumi sosok seorang ace pun mengajak Kageyama pergi untuk menemui dan membujuk Asahi. Di tengah semua permasalahan itu, mereka mendapat jadwal latih tanding dengan sekolah yang menjadi rival abadi Karasuno...!\n\nKelanjutan dari Haikyu!! Fly High! Valleyball! 02\n\nJudul: Komik Haikyu!! Fly High! Valleyball! 03\n\nRating: Direkomendasikan untuk pembaca berusia 14 tahun ke atas\n\nCerita & Ilustrasi: Haruichi Furudate\n\nTebal: 200 halaman\n\nFormat: Soft Cover\n\nISBN : 9786024280543\n\nTanggal Terbit: 16 Nov 2016\n\nBerat : 0.1200 kg\n\nDimensi : 11.4 cm x 17.2 cm",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-03-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_01",
+      "slug": "haikyu-fly-high-volleyball-01",
+      "title": "Haikyu!!: Fly High! Volleyball! 01",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 1,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786023399628_haikyu_-fly-high_-volleyball-01.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2016-07-20",
+      "isWednesdayRelease": true,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786023399628",
+      "synopsis": "\"Aku bisa terbang!”\n\nPada pertandingan voli yang pertama sekaligus terakhir di masa SMP, Shoyo Hinata yang terpesona pada olahraga voli dikalahkan secara telak oleh Kageyama, pemain jenius yang dijuluki “Raja Lapangan” karena kemampuan bermainnya yang tidak bisa diragukan. Hinata bersumpah untuk membalas dendam, dan memutuskan untuk melanjutkan sekolah ke SMA Karasuno. Akan tetapi, Hinata malah bertemu sosok tak terduga di klub voli SMA Karasuno.\n\nKomik Haikyu!! sebelumnya dimuat dalam sebuah majalah sejak Februari 2012 oleh penulis dan ilustrator Haruichi Furudate. Awalnya manga ini ditulis sebagai cerita one shot sebelum kemudian dirilis berseri. Berhasil mendapatkan respon yang positif dan antusiasme yang besar, manga ini kemudian diadaptasi menjadi serial anime dan ditayangkan mulai April 2014.\n\nBercerita tentang siswa SMA bernama Shoyo Hinata yang menyaksikan SMA Karasuno memenangkan pertandingan voli di tingkat kejuaraan nasional, ia kemudian menjadi terobsesi dengan bola voli setelah menyaksikan pertandingan tersebut. Sempat bergabung dengan klub voli sekolahnya, ia terpaksa menghabiskan dua tahunnya untuk meyakinkan siswa lain membantunya berlatih. Setelah belajar dengan giat, ia kemudian diterima di Karasuno, SMA yang menjadikan dirinya terobsesi dengan bola voli. Hal-hal terjadi selama perjalanan mereka memperbaiki reputasi Karasuno dan tim volinya untuk lolos ke Kejuaraan Nasional.\n\nJudul: Haikyuu! Fly High! Volleyball 01\n\nCerita : Haruichi Furudate\n\nTebal: 194 Halaman\n\nFormat: Soft Cover\n\nTanggal Terbit:",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-01",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_05_1",
+      "slug": "haikyu-fly-high-volleyball-05-1",
+      "title": "Haikyu!!: Fly High! Volleyball! 05",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 5,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024282035_haikyu_-fly-high_-valleyball_-05.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2017-03-15",
+      "isWednesdayRelease": true,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024282035",
+      "synopsis": "\"Hinata dan kawan-kawan berlatih semakin keras untuk menghadapi kualifikasi Interhigh tingkat prefektur.\n\nTapi ternyata, Aoba Josai dan SMK Date sudah menghadang jalan Kaeasuno di blok yang sama! Tapi siapa pun lawannya, Karasuno bertekad untuk memenangkan pertandingan yang ada di depan mata.\n\nAkhirnya, klub voli Karasuno yang sudah terlahir kembali pun bergerak maju ke garis depan!\n\n\"",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-05-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_02",
+      "slug": "haikyu-fly-high-volleyball-02",
+      "title": "Haikyu!!: Fly High! Volleyball! 02",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 2,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024280055_haikyu_-fly-high_-volleyball_-02.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2016-09-21",
+      "isWednesdayRelease": true,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024280055",
+      "synopsis": "Haikyuu!! Fly High! Volleyball!, adalah sebuah seri manga shōnen asal Jepang yang ditulis dan diilustrasikan oleh Haruichi Furudate. Manga ini bercerita tentang seorang siswa SMA bernama Shōyō Hinata, menjadi terobsesi dengan bola voli setelah menyaksikan SMA Karasuno memenangkan pertandingan mereka untuk lolos ke Kejuaraan Nasional di TV.\n\nMeskipun memiliki tubuh yang pendek, Hinata terinspirasi oleh seorang pemain yang dijuluki \"Raksasa Kecil\", pemain spiker sayap Karasuno bertubuh pendek, tetapi berbakat. Walaupun  tidak berpengalaman, Hinata memiliki tubuh atletis dan memiliki lompatan vertikal yang mengesankan.\n\nIa sempat bergabung dengan klub voli di sekolahnya, tetapi dia adalah satu-satunya anggota di klub tersebut, memaksanya menghabiskan dua tahun ke depan untuk mencoba meyakinkan siswa lain untuk membantunya berlatih. Berikut ini sinopsis komik Haikyuu!! Fly High! Volleyball! 02.\n\nSinopsis Buku\n\nDemi mengatasi faktor tinggi badan Tsukishima, keduanya mencari cara untuk menang dengan kombinasi serangan cepat. Tapi, berkali-kali toss dari Kageyama gagal dipukul oleh Hinata. Mampukah Kageyama yang dijuluki “Raja Lapangan” menyatukan kekuatan dengan Hinata yang masih amatir?\n\nDapatkan seri komik Haikyu!! Fly High! Volleyball! Lainnya hanya di Gramedia.\n\nDaftar Isi\n\nBonus dalam paket :\n\n-\n\nInformasi lain :\n\nJudul: Haikyu!! Fly High! Volleyball! 2\n\nRating: Remaja\n\nCerita & Ilustrasi: Haruichi Furudate\n\nTebal: 200 halaman\n\nFormat: Soft cover\n\nTanggal Terbit: 20 September 2016\n\nDimensi :11,4 x 17,2",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-02",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_06",
+      "slug": "haikyu-fly-high-volleyball-06",
+      "title": "Haikyu!!: Fly High! Volleyball! 06",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 6,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024283421_haikyu_-fly-high_-volleyball_-06.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2017-05-17",
+      "isWednesdayRelease": true,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024283421",
+      "synopsis": "Karasuno berhasil merebut set pertama di pertandingan melawan Dateko!\n\n“Serangan cepat orang gila” Hinata efektif melawan blockingan tembok beis yang menjadi senjata andalan Dateko.\n\nTapi, kegigihan si blocker hebat Alone berhasil menambah ketajaman pertahanan Dateko! Lalu di tengah itu semua, Karasuno pun berhasil mencapai match point!\n\nHaikyuu!! Fly High! Volleyball! Merupakan sebuah seri manga shōnen atau manga khusus remaja laki-laki yang ditulis dan diilustrasikan oleh Haruichi Furudate. Awalnya, manga ini dirilis sebagai cerita oneshot sebelum akhirnya menjadi seri manga dan kemudian diadaptasi lagi menjadi seri anime. Menceritakan kisah  Shōyō Hinata, seorang siswa SMA bertubuh pendek yang memiliki obsesi pada dunia voli setelah menyaksikan SMA Karasuno memenangkan pertandingan dan lolos ke kejuaraan nasional di TV.\n\nPada volume ini, Furudate menyajikan cerita lanjutan dari Turnamen Antar SMA – khususnya pertandingan SMA Karasuno vs. SMA Datekougyou. Cerita pada volume ini diawali dengan bagaimana mereka melakukan kerjasama sebagai tim, saling mengerti dan menjadi tim support satu sama lain. Highlight pada cerita ini terletak pada pertemanan antara Oikawa dan Kageyama, bagaimana Oikawa mengetahui Kageyama dengan sangat baik bahkan sisi kelemahan Kageyama dan bagaimana memanfaatkan kelemahan tersebut untuk melawannya.  Setelah membaca volume ini, anda mungkin akan menjadi tidak sabar untuk menunggu volume selanjutnya, karena sebagian besar tim di SMA Karasuno sudah menginjak tahun ketiga mereka di SMA\n\nInformasi Lain\n\nHalaman : 192\n\nPenerbit: m&c!\n\nLebar : 11.4 cm\n\nTanggal terbit : 17 Mei 2017\n\nBahasa : Indonesia\n\nIsbn: 9786024283421\n\nBerat: 0.1300  kg",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-06",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_07",
+      "slug": "haikyu-fly-high-volleyball-07",
+      "title": "Haikyu!!: Fly High! Volleyball! 07",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 7,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024284268_haikyu_-fly-high_-volleyball_-07.jpg",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "releaseDate": "2017-07-19",
+      "isWednesdayRelease": true,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024284268",
+      "synopsis": "Di pertandingan ke-3, Tim Karasuno melawan Tim Aoba Josai!\n\nKarasuno yang kewalahan, akhirnya menurunkan Sugawara untuk menggantikan Kageyama. Setelah tongkat komando sudah berpindah ke orang yang selalu memperhatikan tim dari luar lapangan, secara perlahan-lahan, Karasuno mulai menguasai jalannya pertandingan! Tapi, Karasuno sendiri masih belum berhasil menemukan petunjuk untuk menghadang servis dari ace tim lawan, Oikawa!\n\nKomik Haikyu!! Fly High! Volleyball! merupakan salah satu komik Jepang yang terkenal. Ditulis dan diilustrasikan oleh Haruichi Furudate, komik yang satu ini bergenre olahraga dan komedi, mengisahkan tentang kompetisi voli yang dilakukan antar sekolah. Karena mengambil genre dan bertam olahraga, komik ini langsung diminati oleh banyak orang karena jalan ceritanya yang segar dan berbeda dengan komik kebanyakan.\n\nMengisahkan tentang seorang siswa SMP dengan tubuh yang pendek tetapi sangat menyukai permainan bola voli bernama Hinata Shoyo. Ia sudah menyukai voli sejak dirinya masih kecil, dan begitu masuk SMP, ia langsung ingin bergabung dengan klub voli, yang sayangnya tidak memiliki anggota sama sekali.\n\nDengan ceritanya yang menarik perhatian, komik ini sukses populer dan diangkat menjadi anime.\n\nTentang Buku:\n\nJudul: Haikyu!! Fly High! Volleyball! 7\n\nPenulis: Haruichi Furudate\n\nPenerbit: m&c!\n\nISBN: 9786024284268\n\nJumlah Halaman: 192 halaman\n\nBerat: 0,13 kg\n\nLebar: 11,4 cm\n\nPanjang: 17,2 cm",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-07",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_09",
+      "slug": "haikyu-fly-high-volleyball-09",
+      "title": "Haikyu!!: Fly High! Volleyball! 09",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 9,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024284664_Haikyu-Fly-High-Volleyball-09.jpg",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "releaseDate": "2017-11-08",
+      "isWednesdayRelease": true,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024284664",
+      "synopsis": "Manga Jepang secara harfiah memiliki pengertian lukisan bebas atau lukisan yang digambar semaunya tanpa tujuan. Sama seperti cerita bergambar lainnya, manga Jepang ini bisa disebut juga sebagai komik yang berarti cerita bergambar dalam majalah, surat kabar, atau berbentuk buku yang umumnya cerita yang ditampilkan mudah dipahami, lucu, dan menjadi media hiburan para penikmatnya.\n\nHaikyu! Fly High! Volleyball! Adalah sebuah seri manga Jepang yang ditulis dan diilustrasikan oleh Haruichi Furudate. Manga ini memiliki genre olahraga dan komedi yang menceritakan tentang sekelompok murid SMA yang menjadi atlet voli di sekolah mereka, SMU Karasuno. Hinata, dengan tubuh kecilnya berhasil mengalihkan perhatian orang lain karena keahliannya dalam bermain voli. Ia mampu melompat tinggi melebihi net voli. Ikuti keseruan kisah geng atlet voli ini dalam manga Haikyu! Fly High! Volleyball!\n\nSINOPSIS\n\nLET'S GO TOKYO!!!\n\nMeski kecewa atas kekalahan dari Aoba Johsai, Karasuno mulai bangkit kembali dengan target baru: Turnamen Musim Semi. Ditengah kegembiraan karena mendapat kesempatan untuk latihan di Tokyo bersama tim-tim kuat, tiba-tiba Hinata dan kawan-kawan dihadapkan pada Ujian Akhir Semester! Kalau dapat nilai jelek, mereka tak akan bisa ikut latihan di Tokyo. Bagaimana nasib Hinata, Kageyama, Tanaka, dan Nishinoya yang terancam dapat nilai jelek?\n\nDETAIL\n\nFormat \t\t: Soft Cover\n\nPenulis\t \t: Haruichi Furudate\n\nJumlah Halaman \t: 192\n\nPenerbit \t\t: m&c\n\nTanggal Terbit\t \t: 8 November 2017\n\nISBN \t\t\t: 9786024284664\n\nBerat \t\t\t: 0.13 kg\n\nPanjang \t\t: 17.2 cm\n\nLebar \t\t\t: 11.4 cm\n\nBahasa \t\t: Indonesia",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-09",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_10",
+      "slug": "haikyu-fly-high-volleyball-10",
+      "title": "Haikyu!!: Fly High! Volleyball! 10",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 10,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024285104_Haikyu-Fly-High-Volleyball-10.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2018-01-08",
+      "isWednesdayRelease": false,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024285104",
+      "synopsis": "Haikyu!! Fly High! Volleyball! 10 ini adalah sebuah komik seri manga shōnen asal Jepang yang ditulis dan diilustrasikan oleh Haruichi Furudate. Manga ini diadaptasi menjadi seri anime yang diproduksi oleh Production I.G, dan ditayangkan sejak bulan April hingga September 2014. Manga ini telah dilisensi di Amerika Utara oleh Viz Media dan seri anime-nya telah dilisensi untuk dirilis secara digital dan dalam format video rumahan di Amerika Utara oleh Sentai Filmworks.\n\nSinopsis Buku\n\nSeorang siswa SMA bernama Shōyō Hinata, menjadi terobsesi dengan bola voli setelah menyaksikan SMA Karasuno memenangkan pertandingan mereka untuk lolos ke Kejuaraan Nasional di TV. Meskipun memiliki tubuh yang pendek, Hinata terinspirasi oleh seorang pemain yang dijuluki \"Raksasa Kecil\", pemain spiker sayap Karasuno bertubuh pendek, tetapi berbakat. Meskipun tidak berpengalaman, Hinata memiliki tubuh atletis dan memiliki lompatan vertikal yang mengesankan.\n\nDi volume ke 10 ini menceritakan Hinata yang tidak mau lagi menutup mata saat serangan cepat! Meski begitu, Kageyama langsung menolak keinginan Hinata yang ingin berkembang itu. Hubungan mereka berdua pun retak. Lalu saat melihat kemampuan hebat tim-tim lain saat latihan inap di Tokyo, apakah Karasuno akan bisa berkembang?\n\nKomik ini juga memiliki bahasa yang ringan dan alur cerita yang seru. Penasaran akan cerita selanjutnya? Yuk simak komik ini dan temukan berbagai pengalaman menarik lainnya!\n\nInformasi Lain:\n\nJudul Buku: Haikyu!! Fly High! Volleyball! 10\n\nFormat: Soft Cover\n\nTebal: 192 halaman\n\nTanggal Terbit: 8 Januari 2018\n\nPenerbit: m&c!\n\nBerat: 0.130 kg\n\nLebar: 11.4 cm\n\nISBN:  9786024285104",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-10",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_11",
+      "slug": "haikyu-fly-high-volleyball-11",
+      "title": "Haikyu!!: Fly High! Volleyball! 11",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 11,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786024287801_Haikyu-Fly-high-Volleyball-11.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2018-03-14",
+      "isWednesdayRelease": true,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786024287801",
+      "synopsis": "“Haikyu! Fly High! Volleyball! 11” merupakan volume ke-11 dari seri komik “Haikyu! Fly high! Volleyball! Yang ditulis dan diilustrasikan oleh mangaka Haruichi Furudate. Seri komik ini diterbitkan pertama kali di Jepang pada tahun 2012. Seri komik yang terdiri dari 45 volume ini juga sudah diadaptasi menjadi serial anime.\n\nKomik “Haikyu! Fly High! Volleyball!” mengikuti kisah Shoyo Hinata, remaja yang memiliki impian menjadi pemain voli hebat. Ketika menginjak SMA, ia bergabung dalam klub bola voli Karasuno, tempat pemain legendaris idolanya, “Rasa Kecil” bermain. Namun, setelah bergabung dengan klub bola voli tersebut, dia mengetahui bahwa Kageyama, pemain yang mengalahkannya dalam pertandingan resmi pertamanya, juga ada di sana.\n\nKomik ini menjadi pilihan yang tepat jika Anda penggemar maupun sedang mencari komik dengan genre olahraga, khususnya bola voli.\n\nSementara itu, volume ke-11 “Haikyu! Fly High! Volleyball!” melanjutkan kisah Hinata dan tim bola voli Karasuno.\n\n\"HE!! HE!!! HE!!!!\"\n\nDitengah rangkaian latihan inap Tokyo, latihan tim Karasuno, mulai membuahkan hasil sedikit demi sedikit! Tapi, Hinata masih kesal karena serangan cepat barunya dengan Kageyama masih belum lancar. Hinata yang menginginkan kekuatan untuk bisa bertarung di udara pun bergabung dengan latihan tambahan yang dilakukan bersama ace terkuat, Bokuto! Perkembangan apakah yang akan didapat Hinata dari sana?\n\nIkuti terus kisah serunya dalam komik “Haikyu! Fly high! Volleyball! 11”.\n\nJudul: Haikyu! Fly high! Volleyball! 11\n\nCerita & Ilustrasi: Haruichi Furudate\n\nTebal: 192 halaman\n\nFormat: Soft Cover\n\nTanggal Terbit: Maret 2018\n\nDimensi : 11,4 x 17,2 cm",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-11",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_34",
+      "slug": "haikyu-fly-high-volleyball-34",
+      "title": "Haikyu!!: Fly High! Volleyball! 34",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 34,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/6/27/lwavw7cxoa6uqqtvmv2pfq.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2023-06-27",
+      "isWednesdayRelease": false,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230310935",
+      "synopsis": "Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nM&C! Publishing adalah penerbit di bawah Divisi Ritel dan Penerbitan Grup Kompas Gramedia, perusahaan penerbitan terbesar di Indonesia. Grup Kompas Gramedia memulai usaha dengan fokus di media cetak. Dalam perkembangannya, perusahaan telah berkembang menjadi kelompok usaha dengan berbagai divisi. Di bidang informasi, grup ini juga merambah ke media elektronik dan multimedia. M&C! Penerbitan telah menerbitkan berbagai judul dan jenis buku: komik, komik pendidikan, buku anak-anak, novel, buku nonfiksi. Salah Satunya seperti Komik: \"Haikyu!!: Fly High! Volleyball! 34\"\n\nSinopsis Buku:\n\nNekoma, tim yang terkenal dengan pertahanannya, mengejutkan semua orang dengan serangan tersinkronisasi yang agresif! Sementara itu, Tsukishima mengawasi Kuroo melumpuhkan serangan Karasuno dan mengaku kalau dia tak bisa mengalahkannya seorang diri…\n\nCerita Sebelumnya:\n\nAkhirnya pertarungan Karasuno vs Inarizaki memasuki titik akhir. Di hari putaran ketiga, Kenma Kozume sudah menunggu sang pemenang, berlaga menuju putaran berikutnya!",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-34",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_40",
+      "slug": "haikyu-fly-high-volleyball-40",
+      "title": "Haikyu!!: Fly High! Volleyball! 40",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 40,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/lylyk-l3lo.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2025-02-25",
+      "isWednesdayRelease": false,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230315930",
+      "synopsis": "Di tengah pertandingan yang sengit, Azumane tidak bisa meloloskan diri dari incaran Kamomedai, dan terbebani oleh perasaan bersalah karena gagal mencetak poin. Apa yang harus dilakukannya untuk melewati tekanan dan menerobos pertahanan Kamomedai? Ace Karasuno mulai bangkit dalam diam\n\nKeunggulan:\n\nIlustrasi dan cerita menarik.\n\nKomik olahraga yang realistis.\n\nAda anime dan live actionnya.\n\nJudul yang ditunggu pembaca.\n\nLong running di Jepang.\n\nDeskripsi buku:\n\nTentang perjuangan seorang pecinta voli bertubuh pendek bernama Shoyo Hinata. Dia berjuang untuk masuk ke klub voli dan akhirnya bergabung dengan tim voli SMA Karasuno. Dengan mengikuti berbagai kompetisi nasional, Shoyo berkembang pesat bersama rekan-rekan satu timnya.\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nM&C! Publishing adalah penerbit di bawah Divisi Ritel dan Penerbitan Grup Kompas Gramedia, perusahaan penerbitan terbesar di Indonesia. Grup Kompas Gramedia memulai usaha dengan fokus di media cetak. Dalam perkembangannya, perusahaan telah berkembang menjadi kelompok usaha dengan berbagai divisi. Di bidang informasi, grup ini juga merambah ke media elektronik dan multimedia. M&C! Penerbitan telah menerbitkan berbagai judul dan jenis buku: komik, komik pendidikan, buku anak-anak, novel, buku nonfiksi. Salah Satunya seperti Komik: \"Haikyu!!: Fly High! Volleyball! 40\"",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-40",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_fly_high_volleyball_41",
+      "slug": "haikyu-fly-high-volleyball-41",
+      "title": "Haikyu!!: Fly High! Volleyball! 41",
+      "originalTitle": "Haikyu!!",
+      "seriesId": "ser_haikyu",
+      "seriesName": "Haikyu!!",
+      "volume": 41,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/fah-99gcbl.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2025-04-30",
+      "isWednesdayRelease": true,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "authors": [
+        "Haruichi Furudate"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230316548",
+      "synopsis": "Pertandingan ke-2 di hari ketiga yang semakin berat. Set terakhir penentuan!! Sekalipun Karasuno berhasil merebut set kedua, tapi bloking Kamomedai tetap tak tergoyahkan! Dengan tubuh kecilnya, Hinata terus berjuang dan menantang, mencari cara untuk bisa melewati tembok itu!\n\nKeunggulan:\n\nIlustrasi dan cerita menarik.\n\nKomik olahraga yang realistis.\n\nAda anime dan live actionnya.\n\nJudul yang ditunggu pembaca.\n\nLong running di Jepang.\n\nDeskripsi buku:\n\nTentang perjuangan seorang pecinta voli bertubuh pendek bernama Shoyo Hinata. Dia berjuang untuk masuk ke klub voli dan akhirnya bergabung dengan tim voli SMA Karasuno. Dengan mengikuti berbagai kompetisi nasional, Shoyo berkembang pesat bersama rekan-rekan satu timnya.\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nM&C! Publishing adalah penerbit di bawah Divisi Ritel dan Penerbitan Grup Kompas Gramedia, perusahaan penerbitan terbesar di Indonesia. Grup Kompas Gramedia memulai usaha dengan fokus di media cetak. Dalam perkembangannya, perusahaan telah berkembang menjadi kelompok usaha dengan berbagai divisi. Di bidang informasi, grup ini juga merambah ke media elektronik dan multimedia. M&C! Penerbitan telah menerbitkan berbagai judul dan jenis buku: komik, komik pendidikan, buku anak-anak, novel, buku nonfiksi. Salah Satunya seperti Komik: \"Haikyu!!: Fly High! Volleyball! 41\"",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-fly-high-volleyball-41",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
     }
   ],
   "series": [
@@ -116753,7 +117215,7 @@
         19
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/9yrg1t4ngi.jpg",
-      "description": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n\n• Edisi Standar: Rp 50.000\n\n• Edisi Khusus: Rp 37.500"
+      "description": "Komik BUNGO STRAY DOGS 01 karya Kafka Asagiri bercerita tentang kisah action supernatural menarik yang terinspirasi dari sastrawan Jepang dan dunia. Para tokohnya diberi nama yang sama dengan sastrawan terkenal dan memiliki kemampuan yang berhubungan dengan karya mereka. ini telah terbit sebanyak 22 jilid. Serial populer yang telah dicetak sebanyak 8,5 juta eksemplar dan telah diadaptasi menjadi serial animasi sebanyak 3 musim di Jepang. Komik ini juga telah diadaptasi menjadi novel, komik spin off, film animasi layar lebar, drama panggung, game, dan live action. Komik ini bercerita tentang Atsushi Nakajima yang menolong seorang laki-laki yang gagal bunuh diri dan terhanyut di sungai di Yokohama. Inilah pembukaan kisah aksi pertarungan antar tokoh sastra berkemampuan khusus dengan Yokohama sebagai panggungnya. Sebelumnya Atsushi diusir dari panti asuhan dan tiba di Yokohama. Lelaki yang ingin mengakhiri hidupnya tersebut adalah Osamu Dazai dan dia tergabung dalam Agensi Detektif Bersenjata. Kelompok tersebut adalah sebuah kelompok pemilik kemampuan khusus yang bekerja membereskan kasus berat yang berbahaya dan brutal. Kelompok tersebut kini sedang melakukan penyelidikan untuk membereskan masalah “harimau pemangsa manusia” yang menggemparkan masyarakat. Nakajima yang pernah berurusan dengan si harimau itu dipaksa oleh Dazai untuk ikut dalam penyelidikan. Sinopsis Setelah diusir dari panti asuhan dan tiba di Yokohama, Atsushi Nakajima menolong seorang lelaki yang gagal bunuh diri dan terhanyut di sungai. Nama lelaki itu adalah Osamu Dazai... dan dia tergabung dalam Agensi Detektif Bersenjata, sebuah kelompok pemilik kemampuan khusus yang bekerja membereskan kasus berat yang berbahaya dan brutal, dan kini sedang melakukan penyelidikan untuk membereskan masalah “harimau pemangsa manusia” yang menggemparkan masyarakat. Nakajima yang pernah berurusan dengan si harimau itu diajak paksa Dazai untuk ikut dalam penyelidikan! Inilah pembukaan kisah aksi pertarungan antar tokoh sastra berkemampuan khusus dengan Yokohama sebagai panggungnya. komik ini direkomendasikan untuk pembaca yang menyukai genre Informasi lain : Judul: Level Comic (LC): Bungo Stray Dogs 01 Rating: yang diperuntukan untuk pembaca berusia tahun ke atas. Cerita & Ilustrasi: Kafka Asagiri Production: Elex Media Komputindo Tebal: 204 halaman Format: Soft Cover Tanggal Terbit: 31 Agustus 2022 ISBN : 9786230033780 Berat : 0.2 kg Dimensi : 18 x 12 cm"
     },
     {
       "id": "ser_bungo-stray-dogs---beast",
@@ -120883,10 +121345,24 @@
       "totalVolumes": 43,
       "latestVolume": 43,
       "availableVolumes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        34,
+        40,
+        41,
         43
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/yk4yy4via3.jpg",
-      "description": "Siswa SMA bernama Shōyō Hinata, yang terobsesi dengan bola voli setelah menyaksikan SMA Karasuno memenangkan pertandingan mereka untuk lolos ke Kejuaraan Nasional di TV. Meskipun memiliki tubuh yang pendek, Hinata terinspirasi oleh seorang pemain yang dijuluki \"Raksasa Kecil\", pemain spiker sayap Karasuno bertubuh pendek, tetapi berbakat. Walaupun tidak berpengalaman, Hinata memiliki tubuh atletis dan memiliki lompatan vertikal yang mengesankan.\n\nKeunggulan:\n\n- Ilustrasi dan cerita menarik.\n\n- Komik olahraga yang realistis.\n\n- Ada anime dan live actionnya.\n\n- Judul yang ditunggu pembaca.\n\n- Long running di Jepang.\n\nDeskripsi buku:\n\nTentang perjuangan seorang pecinta voli bertubuh pendek bernama Shoyo Hinata. Dia berjuang untuk masuk ke klub voli dan akhirnya bergabung dengan tim voli SMA Karasuno. Dengan mengikuti berbagai kompetisi nasional, Shoyo berkembang pesat bersama rekan-rekan satu timnya.\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nM&C! Publishing adalah penerbit di bawah Divisi Ritel dan Penerbitan Grup Kompas Gramedia, perusahaan penerbitan terbesar di Indonesia. Grup Kompas Gramedia memulai usaha dengan fokus di media cetak. Dalam perkembangannya, perusahaan telah berkembang menjadi kelompok usaha dengan berbagai divisi. Di bidang informasi, grup ini juga merambah ke media elektronik dan multimedia. M&C! Penerbitan telah menerbitkan berbagai judul dan jenis buku: komik, komik pendidikan, buku anak-anak, novel, buku nonfiksi. Salah Satunya seperti Komik: \"Haikyu!!: Fly High! Volleyball! 43\""
+      "description": "\"Aku bisa terbang!”\n\nPada pertandingan voli yang pertama sekaligus terakhir di masa SMP, Shoyo Hinata yang terpesona pada olahraga voli dikalahkan secara telak oleh Kageyama, pemain jenius yang dijuluki “Raja Lapangan” karena kemampuan bermainnya yang tidak bisa diragukan. Hinata bersumpah untuk membalas dendam, dan memutuskan untuk melanjutkan sekolah ke SMA Karasuno. Akan tetapi, Hinata malah bertemu sosok tak terduga di klub voli SMA Karasuno.\n\nKomik Haikyu!! sebelumnya dimuat dalam sebuah majalah sejak Februari 2012 oleh penulis dan ilustrator Haruichi Furudate. Awalnya manga ini ditulis sebagai cerita one shot sebelum kemudian dirilis berseri. Berhasil mendapatkan respon yang positif dan antusiasme yang besar, manga ini kemudian diadaptasi menjadi serial anime dan ditayangkan mulai April 2014.\n\nBercerita tentang siswa SMA bernama Shoyo Hinata yang menyaksikan SMA Karasuno memenangkan pertandingan voli di tingkat kejuaraan nasional, ia kemudian menjadi terobsesi dengan bola voli setelah menyaksikan pertandingan tersebut. Sempat bergabung dengan klub voli sekolahnya, ia terpaksa menghabiskan dua tahunnya untuk meyakinkan siswa lain membantunya berlatih. Setelah belajar dengan giat, ia kemudian diterima di Karasuno, SMA yang menjadikan dirinya terobsesi dengan bola voli. Hal-hal terjadi selama perjalanan mereka memperbaiki reputasi Karasuno dan tim volinya untuk lolos ke Kejuaraan Nasional.\n\nJudul: Haikyuu! Fly High! Volleyball 01\n\nCerita : Haruichi Furudate\n\nTebal: 194 Halaman\n\nFormat: Soft Cover\n\nTanggal Terbit:"
     },
     {
       "id": "ser_haikyu-the",
@@ -124129,7 +124605,7 @@
         100
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2024/5/20/yhikvp77prsfvfjaeqdokm.jpg",
-      "description": "Rilisan resmi Mob Psycho 100 - Reigen terbitan Elex Media Komputindo."
+      "description": "Arataka Reigen akan menerima permohonan itu! Permohonan kerja baru berdatangan ke Arataka Reigen, sang pria yang mengaku cenayang dan menjalankan bisnis kantor konsultasi masalah roh!! Penyucian bangunan angker, pembasmian roh jahat di spot berhantu, dan lainnya! Bersama seorang siswi SMA maniak hal mistis yang bekerja sambilan di sana, mereka melakukan “pembasmian” dengan tingkat tipu-tipu dan bahaya 100%!! Inilah kisah komedi seputar roh dan semacamnya, kelanjutan dari Mob Psycho 100!\n\nSelling Point:\n\nSpin-off komik Mob Psycho 100. Salah satu komik terpopuler di Jepang saat ini yang menjadi pemenang Shogakukan Manga Award. Anime-nya sudah ditayangkan di berbagai negara.\n\n****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nMob Psycho 100 adalah serial manga Jepang yang ditulis dan diilustrasikan oleh One. Itu diserialkan di situs web Ura Sunday Shogakukan dari April 2012 hingga Desember 2017. Itu juga tersedia online di aplikasi seluler Manga ONE Shogakukan sejak Desember 2014. Shogakukan menyusun bab-babnya menjadi enam belas volume tankōbon. Ceritanya mengikuti Shigeo Kageyama yang dijuluki Mob, seorang anak laki-laki yang memiliki kekuatan psikis yang kuat, dan perjuangannya untuk menemukan kebahagiaan sederhana yang dia cari."
     },
     {
       "id": "ser_mob-psycho-100",
@@ -158658,9 +159134,631 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-01",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_fihi_ma_fihi_percakapan_rumi_tentang_cinta_jiwa_dan_jalan_pulang_kepada_tuhan_1790914924",
+      "bookId": "pub_fihi_ma_fihi_percakapan_rumi_tentang_cinta_jiwa_dan_jalan_pulang_kepada_tuhan",
+      "price": 102400,
+      "currentPrice": 102400,
+      "originalPrice": 128000,
+      "previousPrice": 128000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_hidup_tak_selalu_ramah_tapi_aku_tak_ingin_menyerah_1790914924",
+      "bookId": "pub_hidup_tak_selalu_ramah_tapi_aku_tak_ingin_menyerah",
+      "price": 70400,
+      "currentPrice": 70400,
+      "originalPrice": 88000,
+      "previousPrice": 88000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_orangorang_yang_terjebak_hujan_1790914924",
+      "bookId": "pub_orangorang_yang_terjebak_hujan",
+      "price": 78400,
+      "currentPrice": 78400,
+      "originalPrice": 98000,
+      "previousPrice": 98000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_selesai_dengan_diri_sendiri_new_edition_1790914924",
+      "bookId": "pub_selesai_dengan_diri_sendiri_new_edition",
+      "price": 110400,
+      "currentPrice": 110400,
+      "originalPrice": 138000,
+      "previousPrice": 138000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_al_quran_selalu_punya_jawaban_tafsir_al_quran_ringan_tentang_masa_depan_pekerjaan_sampai_pasangan_1790914924",
+      "bookId": "pub_al_quran_selalu_punya_jawaban_tafsir_al_quran_ringan_tentang_masa_depan_pekerjaan_sampai_pasangan",
+      "price": 102400,
+      "currentPrice": 102400,
+      "originalPrice": 128000,
+      "previousPrice": 128000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_secrets_of_divine_love_semesta_cinta_ilahi_perjalanan_rohani_menuju_jantung_hati_islam_1790914924",
+      "bookId": "pub_secrets_of_divine_love_semesta_cinta_ilahi_perjalanan_rohani_menuju_jantung_hati_islam",
+      "price": 134400,
+      "currentPrice": 134400,
+      "originalPrice": 168000,
+      "previousPrice": 168000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_rasuna_said_jejak_perempuan_dalam_perjuangan_bangsa_1790914924",
+      "bookId": "pub_rasuna_said_jejak_perempuan_dalam_perjuangan_bangsa",
+      "price": 124000,
+      "currentPrice": 124000,
+      "originalPrice": 155000,
+      "previousPrice": 155000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_doadoa_meraih_kesuksesan_dunia_dan_akhirat_1790914924",
+      "bookId": "pub_doadoa_meraih_kesuksesan_dunia_dan_akhirat",
+      "price": 78400,
+      "currentPrice": 78400,
+      "originalPrice": 98000,
+      "previousPrice": 98000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_we_are_displaced_kisahkisah_perempuan_yang_terusir_oleh_perang_kekerasan_dan_ketidakadilan_1790914924",
+      "bookId": "pub_we_are_displaced_kisahkisah_perempuan_yang_terusir_oleh_perang_kekerasan_dan_ketidakadilan",
+      "price": 78400,
+      "currentPrice": 78400,
+      "originalPrice": 98000,
+      "previousPrice": 98000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ambang_runtuh_pertolongan_pertama_pada_jiwa_yang_hampir_menyerah_1790914924",
+      "bookId": "pub_ambang_runtuh_pertolongan_pertama_pada_jiwa_yang_hampir_menyerah",
+      "price": 112000,
+      "currentPrice": 112000,
+      "originalPrice": 140000,
+      "previousPrice": 140000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_memandang_setengah_isi_setengah_kosong_1790914924",
+      "bookId": "pub_memandang_setengah_isi_setengah_kosong",
+      "price": 78400,
+      "currentPrice": 78400,
+      "originalPrice": 98000,
+      "previousPrice": 83300,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_08_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_08",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2017-09-20",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_04_1_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_04_1",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2017-01-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_03_1_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_03_1",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2016-11-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_01_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_01",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2016-07-20",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_05_1_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_05_1",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2017-03-15",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_02_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_02",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2016-09-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_06_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_06",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2017-05-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_07_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_07",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2017-07-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_09_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_09",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2017-11-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_10_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_10",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-01-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_11_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_11",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-03-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_12_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_12",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_13_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_13",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_14_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_14",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_15_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_15",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_16_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_16",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_17_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_17",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_18_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_18",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_19_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_19",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_20_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_20",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_21_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_21",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 25200,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_22_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_22",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_23_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_23",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "previousPrice": 25200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_24_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_24",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_25_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_25",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_26_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_26",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 28000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_27_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_27",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_28_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_28",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_29_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_29",
+      "price": 21000,
+      "currentPrice": 21000,
+      "originalPrice": 28000,
+      "previousPrice": 25200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_30_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_30",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_31_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_31",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_32_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_32",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_33_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_33",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_34_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_34",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-06-27",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_36_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_36",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_37_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_37",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_38_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_38",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_39_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_39",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_40_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_40",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-02-25",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_01__bookpaper_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_01__bookpaper",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_02__bookpaper_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_02__bookpaper",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_41_init",
+      "bookId": "pub_haikyu_fly_high_volleyball_41",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-04-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_03__bookpaper_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_03__bookpaper",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_42_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_42",
+      "price": 26250,
+      "currentPrice": 26250,
+      "originalPrice": 35000,
+      "previousPrice": 31500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_04__bookpaper_1790914924",
+      "bookId": "pub_haikyu_fly_high_volleyball_04__bookpaper",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-02",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1790914924",
+      "startedAt": "2026-10-02T04:18:34.000Z",
+      "finishedAt": "2026-10-02T04:22:04.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1448,
+      "productsInserted": 14,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 210631,
+      "success": true
+    },
     {
       "id": "sync_1790885551",
       "startedAt": "2026-10-01T20:08:55.000Z",
