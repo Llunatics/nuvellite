@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-02T21:55:48.000Z",
+  "lastUpdated": "2026-10-03T04:04:13.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -44490,7 +44490,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-05-20",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Syougo Kinugasa"
       ],
@@ -45761,7 +45761,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-04-30",
       "isWednesdayRelease": true,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Katarina"
       ],
@@ -50327,7 +50327,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-01-22",
       "isWednesdayRelease": true,
-      "currentPrice": 58500,
+      "currentPrice": 19500,
       "authors": [
         "Okina Baba"
       ],
@@ -82414,7 +82414,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 32000
     },
     {
@@ -100734,7 +100734,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/03o3n9rvno.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-28",
       "isWednesdayRelease": false,
       "currentPrice": 45000,
@@ -100800,7 +100800,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ym8-1xryy0.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-28",
       "isWednesdayRelease": false,
       "currentPrice": 45000,
@@ -100866,7 +100866,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/zasc2snaua.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-28",
       "isWednesdayRelease": false,
       "currentPrice": 108000,
@@ -100899,7 +100899,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/emdi9ip-iu.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-28",
       "isWednesdayRelease": false,
       "currentPrice": 148000,
@@ -100932,7 +100932,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ecit-ti8a0.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-09-28",
       "isWednesdayRelease": false,
       "currentPrice": 108000,
@@ -104760,7 +104760,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0v-7922j60.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 60000,
@@ -108855,7 +108855,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2025-08-12",
       "isWednesdayRelease": false,
-      "currentPrice": 135000,
+      "currentPrice": 40500,
       "originalPrice": 135000,
       "authors": [
         "Luthfi Maiza Kusuma"
@@ -160191,9 +160191,73 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-02",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_merengkuh_kenangan__sebuah_memoar_dari_atas_sadel_sepeda_1791000253",
+      "bookId": "pub_merengkuh_kenangan__sebuah_memoar_dari_atas_sadel_sepeda",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 135000,
+      "previousPrice": 135000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_classroom_of_the_elite_vol_7_1791000253",
+      "bookId": "pub_classroom_of_the_elite_vol_7",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_shangrila_frontier_4_1791000253",
+      "bookId": "pub_shangrila_frontier_4",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_so_im_a_spider_so_what_4_1791000253",
+      "bookId": "pub_so_im_a_spider_so_what_4",
+      "price": 19500,
+      "currentPrice": 19500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-03",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791000253",
+      "startedAt": "2026-10-03T04:00:43.000Z",
+      "finishedAt": "2026-10-03T04:04:13.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1462,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 210480,
+      "success": true
+    },
     {
       "id": "sync_1790978148",
       "startedAt": "2026-10-02T21:52:34.000Z",
