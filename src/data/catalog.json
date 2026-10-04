@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-04T16:33:58.000Z",
+  "lastUpdated": "2026-10-04T20:59:02.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -100968,7 +100968,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-09-25",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "authors": [
         "Miyoshi Hikaru"
@@ -160356,9 +160356,40 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-04",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_moriarty_the_patriot_01_cetak_ulang_1791147542",
+      "bookId": "pub_moriarty_the_patriot_01_cetak_ulang",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791147542",
+      "startedAt": "2026-10-04T20:54:58.000Z",
+      "finishedAt": "2026-10-04T20:59:02.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1462,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 244205,
+      "success": true
+    },
     {
       "id": "sync_1791131638",
       "startedAt": "2026-10-04T16:30:31.000Z",
