@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-04T04:37:49.000Z",
+  "lastUpdated": "2026-10-04T11:54:52.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -41012,7 +41012,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-08-11",
       "isWednesdayRelease": false,
-      "currentPrice": 32500,
+      "currentPrice": 58500,
       "authors": [
         "Kugane Maruyama"
       ],
@@ -42627,7 +42627,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-07-07",
       "isWednesdayRelease": false,
-      "currentPrice": 32500,
+      "currentPrice": 58500,
       "authors": [
         "Kugane Maruyama"
       ],
@@ -43050,7 +43050,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-06-26",
       "isWednesdayRelease": false,
-      "currentPrice": 32500,
+      "currentPrice": 58500,
       "authors": [
         "Fujino Omori"
       ],
@@ -160323,9 +160323,62 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-04",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_overlord_vol_9_1791114892",
+      "bookId": "pub_overlord_vol_9",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 32500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_overlord_vol_8_1791114892",
+      "bookId": "pub_overlord_vol_8",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 32500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_wistoria_wand_and_sword_vol_03_1791114892",
+      "bookId": "pub_wistoria_wand_and_sword_vol_03",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 32500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791114892",
+      "startedAt": "2026-10-04T11:50:50.000Z",
+      "finishedAt": "2026-10-04T11:54:52.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1462,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 242056,
+      "success": true
+    },
     {
       "id": "sync_1791088669",
       "startedAt": "2026-10-04T04:33:54.000Z",
