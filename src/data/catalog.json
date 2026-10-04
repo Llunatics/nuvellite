@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-03T20:42:55.000Z",
+  "lastUpdated": "2026-10-04T04:37:49.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -31699,7 +31699,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-01-15",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Syougo Kinugasa"
       ],
@@ -32533,7 +32533,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-01-09",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Rifujin Na Magonote"
       ],
@@ -42127,7 +42127,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-07-21",
       "isWednesdayRelease": false,
-      "currentPrice": 37500,
+      "currentPrice": 112500,
       "authors": [
         "Saekisan"
       ],
@@ -42627,7 +42627,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-07-07",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Kugane Maruyama"
       ],
@@ -43050,7 +43050,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-06-26",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Fujino Omori"
       ],
@@ -43872,7 +43872,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-06-09",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Daisuke Aizawa"
       ],
@@ -46601,7 +46601,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-04-17",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Syougo Kinugasa"
       ],
@@ -53097,7 +53097,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-12-13",
       "isWednesdayRelease": false,
-      "currentPrice": 19500,
+      "currentPrice": 58500,
       "authors": [
         "Natsuya Semikawa"
       ],
@@ -114759,7 +114759,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230028786_Cov_Conan_Fist_of_Blue_02_1.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-11-10",
       "isWednesdayRelease": true,
       "currentPrice": 80000,
@@ -115353,7 +115353,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786024287801_Haikyu-Fly-high-Volleyball-11.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2018-03-14",
       "isWednesdayRelease": true,
       "currentPrice": 32000,
@@ -160235,9 +160235,117 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-03",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_classroom_of_the_elite_vol_12_1791088669",
+      "bookId": "pub_classroom_of_the_elite_vol_12",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mushoku_tensei__jobless_reincarnation_12_1791088669",
+      "bookId": "pub_mushoku_tensei__jobless_reincarnation_12",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_apa_salahnya_mencari_cinta_di_dungeon_2_1791088669",
+      "bookId": "pub_light_novel_apa_salahnya_mencari_cinta_di_dungeon_2",
+      "price": 112500,
+      "currentPrice": 112500,
+      "originalPrice": 125000,
+      "previousPrice": 37500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_overlord_vol_8_1791088669",
+      "bookId": "pub_overlord_vol_8",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_wistoria_wand_and_sword_vol_03_1791088669",
+      "bookId": "pub_wistoria_wand_and_sword_vol_03",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_eminence_in_shadow_8_1791088669",
+      "bookId": "pub_the_eminence_in_shadow_8",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_classroom_of_the_elite_vol_6_1791088669",
+      "bookId": "pub_classroom_of_the_elite_vol_6",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_otherworldly_izakaya_nobu_5_1791088669",
+      "bookId": "pub_otherworldly_izakaya_nobu_5",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 19500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-04",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791088669",
+      "startedAt": "2026-10-04T04:33:54.000Z",
+      "finishedAt": "2026-10-04T04:37:49.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1462,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 235664,
+      "success": true
+    },
     {
       "id": "sync_1791060175",
       "startedAt": "2026-10-03T20:38:50.000Z",
