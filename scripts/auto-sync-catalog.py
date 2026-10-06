@@ -24,9 +24,54 @@ MERCHANDISE_REGEX = re.compile(
 )
 
 NON_MANGA_LN_REGEX = re.compile(
-    r'\b(ensiklopedia|encyclopedia|atlas|kamus|dictionary|puzzle|teka-teki|paint\s*by\s*number|coloring\s*book|mewarnai|buku\s*aktivitas|board\s*book|pop-up|lift\s*the\s*flap|funtastic|saintis\s*cilik|seek\s*&\s*find|buku\s*interaktif|buku\s*pintar|aku\s*jadi\s*pintar|siap\s*sekolah|top\s*paud|paud|my\s*first\s*book|pinkfong|bebefinn|uwa\s*and\s*friends|cocomelon|dr\.\s*robot\s*teo|alphabet\s*writing|menulis\s*alfabet|cepat\s*membaca|metode\s*bapatja|pandai\s*membaca|buku\s*anak|cerita\s*sains|koding\s*pertamaku|parenting|fiqih|hadits|sholat|khotbah|doa\s*harian|hijrah|buku\s*resep|resep\s+masakan?|resep\s+kue|buku\s*masak|diet|kesehatan|kedokteran|medis|hukum\s*pidana|hukum\s*perdata|hukum\s*dan\s*keadilan|kuhp|kuhap|investasi|saham|reksadana|crypto|keuangan|akuntansi|perpajakan|bisnis|manajemen|marketing|leadership|kepemimpinan|psikologi|self\s*improvement|self-help|filsafat|filosofi|sejarah\s*indonesia|soal\s*utbk|cpns|toefl|ielts|matematika|fisika|kimia|biologi|geronimo\s*stilton|thea\s*stilton|catstronauts|story\s*orchestra|start\s*with\s*why|ego\s*is\s*the\s*enemy|daring\s*greatly|dare\s*to\s*lead|burnout|the\s*idiot|the\s*four\s*agreements|the\s*patriarchs|principles:\s*your\s*guided\s*journal|memoirs\s*from\s*the\s*women|teenlit|romance\s*novel|international\s*classics?|penguin\s*books?|treasure\s*pack|games\s*&\s*puzzles?)\b',
+    r'\b(ensiklopedia|encyclopedia|atlas|kamus|dictionary|puzzle|teka-teki|paint\s*by\s*number|coloring\s*book|coloring|mewarnai|ilustrasi|buku\s*aktivitas|board\s*book|pop-up|lift\s*the\s*flap|funtastic|saintis\s*cilik|seek\s*&\s*find|buku\s*interaktif|buku\s*pintar|aku\s*jadi\s*pintar|siap\s*sekolah|top\s*paud|paud|my\s*first\s*book|pinkfong|bebefinn|uwa\s*and\s*friends|cocomelon|dr\.\s*robot\s*teo|alphabet\s*writing|menulis\s*alfabet|cepat\s*membaca|metode\s*bapatja|pandai\s*membaca|buku\s*anak|cerita\s*sains|koding\s*pertamaku|parenting|fiqih|hadits|sholat|khotbah|doa\s*harian|doa\b|hijrah|buku\s*resep|resep\b|resep\s+masakan?|resep\s+kue|buku\s*masak|diet|kesehatan|kedokteran|medis|hukum\s*pidana|hukum\s*perdata|hukum\s*dan\s*keadilan|kuhp|kuhap|investasi|saham|reksadana|crypto|keuangan|finansial|akuntansi|perpajakan|bisnis|manajemen|marketing|leadership|kepemimpinan|barakah|mindset|strategi|strategic|psikologi|psikolog|self\s*improvement|self-help|self[-\s]?healing|self[-\s]?love|therapy|terapi|journaling|motivasi|motivation|sukses|kesuksesan|filsafat|filosofi|sejarah\s*indonesia|soal\s*utbk|cpns|toefl|ielts|matematika|fisika|kimia|biologi|biografi|memoar|autobiografi|geronimo\s*stilton|thea\s*stilton|catstronauts|story\s*orchestra|start\s*with\s*why|ego\s*is\s*the\s*enemy|daring\s*greatly|dare\s*to\s*lead|burnout|the\s*idiot|the\s*four\s*agreements|the\s*patriarchs|principles:\s*your\s*guided\s*journal|memoirs\s*from\s*the\s*women|teenlit|romance\s*novel|international\s*classics?|penguin\s*books?|treasure\s*pack|games\s*&\s*puzzles?)\b',
     re.IGNORECASE
 )
+
+# Category-slug segments (Gramedia `category_slugs`, e.g. "buku/agama/islam/...")
+# that prove a product is NOT manga / light novel. Checked per "/" segment.
+DISALLOWED_CATEGORY_SEGMENTS = {
+    'pengembangan-diri', 'pengembangan-diri-1', 'self-improvement',
+    'bisnis', 'bisnis-ekonomi', 'manajemen', 'marketing',
+    'kepemimpinan', 'kepemimpinan-1',
+    'keuangan', 'investasi', 'saham', 'akuntansi', 'perbankan',
+    'agama', 'islam', 'kristen', 'katolik', 'hindu', 'buddha', 'ritual--praktik',
+    'parenting', 'keluarga',
+    'kesehatan', 'kedokteran', 'medis', 'diet', 'kebugaran',
+    'hukum', 'politik', 'sejarah',
+    'resep', 'masakan', 'kuliner', 'kue',
+    'kamus', 'ensiklopedia', 'atlas',
+    'psikologi', 'filsafat',
+    'pendidikan', 'pelajaran', 'utbk', 'cpns',
+    'novel-15', 'teenlit', 'fiksi-remaja',
+    'jurnal-diari', 'mewarnai', 'permainan-aktivitas',
+    'kepercayaan-diri', 'motivasi',
+    'cerita-anak', 'dongeng',
+    'novel-terjemahan', 'sastra', 'nonfiksi-anak-remaja',
+    'hobi',
+    'desain', 'arsitektur',
+    'travel', 'perjalanan',
+    'biografi', 'memoar',
+}
+
+# Explicit format tokens in the TITLE that prove manga/LN even when the
+# store category is odd/missing (e.g. LN wrongly filed under "buku-anak").
+EXPLICIT_FORMAT_TOKENS = (
+    'light novel', 'light-novel', '(novel)', 'the novel',
+    'komik', 'manga', 'manhwa', 'manhua',
+    'level comic', 'lc:', 'lc :',
+    'akasha', 'koloni', 'movie story',
+)
+
+def _category_segments(cat_slugs):
+    return [s for s in (cat_slugs or '').lower().replace('_', '-').split('/') if s]
+
+
+def _has_comic_category(cat_slugs):
+    for s in _category_segments(cat_slugs):
+        if s in ('komik', 'manga', 'light-novel') or s.startswith(('komik-', 'manga-', 'light-novel')):
+            return True
+    return False
 
 TITLE_COUNTER_WORDS = {
     'centimeters', 'centimeter', 'cm', 'days', 'day', 'seconds', 'second',
@@ -154,16 +199,56 @@ def determine_book_medium(b):
     return 'MANGA'
 
 def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None):
-    t_lower = title.lower()
+    """Two-signal classification: title patterns + store category slugs.
 
-    if MERCHANDISE_REGEX.search(title) or NON_MANGA_LN_REGEX.search(title):
-        return 'REJECT', None, 'Matched non-manga / merchandise pattern'
+    REJECT happens only on positive junk evidence (never on "no signal"),
+    so legit manga with generic store categories are never dropped.
+    """
+    t = (title or '').strip()
+    t_lower = t.lower()
+    cat = (cat_slugs or '').lower()
+    segs = _category_segments(cat)
 
+    # 1. Merchandise: absolute reject, regardless of category.
+    if MERCHANDISE_REGEX.search(t):
+        return 'REJECT', None, 'Matched merchandise title pattern'
+
+    # Qanza is m&c!'s Islamic children-book imprint (never manga / light novel).
+    # Titles carry the imprint as a prefix, e.g. "Qanza: ...".
+    if t_lower.startswith('qanza'):
+        return 'REJECT', None, 'Qanza imprint (non-manga children imprint)'
+
+    has_comic_cat = _has_comic_category(cat)
+    has_explicit_token = any(tok in t_lower for tok in EXPLICIT_FORMAT_TOKENS)
+
+    # 2. Non-manga/non-LN title patterns. Skipped when the store category
+    #    proves comic (the store files real manga under odd titles, e.g.
+    #    "Teka-Teki Rumah Aneh - Hen Na Ie" -> buku/komik/manga/misteri),
+    #    or when the category is unknown (deferred to the spec-based audit).
+    if segs and not has_comic_cat and not has_explicit_token:
+        if NON_MANGA_LN_REGEX.search(t):
+            return 'REJECT', None, 'Matched non-manga/non-LN title pattern'
+
+    # 3. Disallowed store category (skipped when the title itself proves
+    #    manga/LN format — the store miscategorizes real releases sometimes)
+    if not has_explicit_token:
+        for s in segs:
+            if s in DISALLOWED_CATEGORY_SEGMENTS:
+                return 'REJECT', None, f'Matched disallowed store category: {s}'
+
+    # 3. Type determination (manga vs light novel)
     specs = specs or {}
     imprint = (specs.get('Imprint') or specs.get('Penerbit') or '').lower()
 
-    has_ln_token = 'light novel' in t_lower or '(novel)' in t_lower or 'light-novel' in cat_slugs
-    is_clover = pub_id == 'pub_mnc' and ('clover' in t_lower or 'clover' in imprint or 'novel-6' in cat_slugs)
+    has_ln_token = (
+        'light novel' in t_lower or '(novel)' in t_lower or 'the novel' in t_lower
+        or 'light-novel' in cat
+    )
+    # Clover = m&c! novel imprint. Require prefix/category — a bare substring
+    # mislabels manga like "You are a Four Leaf Clover" (Akasha) as LN.
+    is_clover = pub_id == 'pub_mnc' and (
+        t_lower.startswith('clover') or 'clover' in imprint or 'novel-6' in cat
+    )
 
     if pub_id == 'pub_pgi':
         is_ln = has_ln_token
@@ -248,7 +333,10 @@ def run_sync(catalog_path):
                 if not slug or not title:
                     continue
 
-                status, cat, reason = classify_book(title, adapter.publisher_id)
+                status, cat, reason = classify_book(
+                    title, adapter.publisher_id,
+                    cat_slugs=item.get('category_slugs') or ''
+                )
                 if status == 'REJECT':
                     rejected_count += 1
                     continue
@@ -278,7 +366,10 @@ def run_sync(catalog_path):
             elif 'm&c' in pub_name or 'clover' in pub_name or 'akasha' in pub_name:
                 adapter = adapters[1]
 
-            status, cat, reason = classify_book(title, adapter.publisher_id)
+            status, cat, reason = classify_book(
+                title, adapter.publisher_id,
+                cat_slugs=item.get('category_slugs') or ''
+            )
             if status == 'REJECT':
                 rejected_count += 1
                 continue
@@ -346,6 +437,25 @@ def run_sync(catalog_path):
             adapter = adapters[1]
         elif 'elex' in spec_pub:
             adapter = adapters[0]
+
+        # Stage-2 audit: re-classify with the rich spec data (store category
+        # slugs). This is the real gate — vendor-feed categories are often
+        # empty, specs carry the authoritative "buku/..." path.
+        audit_status, audit_cat, audit_reason = classify_book(
+            title, adapter.publisher_id,
+            cat_slugs=sp.get('category_slugs') or item.get('category_slugs') or '',
+            specs=sp,
+        )
+        if audit_status == 'REJECT':
+            rejected_count += 1
+            if slug in existing_books_map:
+                # Legacy pollution: drop it from the catalog entirely.
+                del existing_books_map[slug]
+                print(f"     [AUDIT_PURGE] Removed legacy non-manga item: {title} ({audit_reason})")
+            else:
+                print(f"     [AUDIT_REJECT] {title} ({audit_reason})")
+            continue
+        cat = audit_cat or cat
 
         vol, sname = parse_title_smart(title)
         book_id = f"pub_{slug.replace('-', '_')}"

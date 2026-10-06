@@ -232,5 +232,131 @@ describe('Multi-Signal Classification Engine', () => {
     expect(eightySix2.category).toBe('Light Novel');
     expect(eightySix2.format).toBe('LIGHT_NOVEL');
   });
+
+  it('should reject non-manga books from general vendor feeds even without obvious title signals', () => {
+    // Regression: these slipped into the catalog because the old gate only
+    // looked at title patterns. The store category now convicts them.
+    const barakah = classifyProduct({
+      title: 'The Barakah Effect: Keberlimpahan dalam Kecukupan',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'buku/agama/islam/ritual--praktik',
+    });
+    expect(barakah.status).toBe('REJECTED');
+
+    const unleadership = classifyProduct({
+      title: 'Unleadership: Memimpin Melalui Relasi',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'buku/bisnis-ekonomi/kepemimpinan-1',
+    });
+    expect(unleadership.status).toBe('REJECTED');
+
+    const coloring = classifyProduct({
+      title: 'Coloring & Journaling Therapy: Self-Love',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      categorySlugs: 'buku/pengembangan-diri-1/jurnal-diari',
+    });
+    expect(coloring.status).toBe('REJECTED');
+
+    const mindset = classifyProduct({
+      title: 'Strategic Mindset - Rencana 7 Hari Menentukan Prioritas',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'buku/pengembangan-diri-1/motivasi',
+    });
+    expect(mindset.status).toBe('REJECTED');
+  });
+
+  it('should not treat the buku-anak store shelf as a reject signal (real manga live there)', () => {
+    // Gramedia files real manga/LN under "buku-anak" — category alone
+    // must never convict them.
+    for (const title of [
+      'One Piece 98',
+      'Doraemon 34 (Terbit Ulang)',
+      'The Promised Neverland 10',
+      'Shaman King Complete Edition 08',
+    ]) {
+      const r = classifyProduct({
+        title,
+        publisherId: 'pub_elex',
+        publisherName: 'Elex Media Komputindo',
+        categorySlugs: 'buku/buku-anak/novel-pemula',
+      });
+      // Must never be hard-REJECTED (quarantine for review is the
+      // engine's fail-safe for ambiguous items, rejection is not).
+      expect(r.status).not.toBe('REJECTED');
+    }
+
+    const rezero = classifyProduct({
+      title: 'Re:Zero : Starting Life in Another World 04',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+      categorySlugs: 'buku/buku-anak/novel-pemula',
+    });
+    expect(rezero.status).toBe('ACCEPTED');
+
+    // ...but genuinely non-comic kids shelves still reject.
+    const robocar = classifyProduct({
+      title: 'Robocar Poli - Belajar Membaca, Yuk!',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      categorySlugs: 'buku/buku-anak/permainan-aktivitas',
+    });
+    expect(robocar.status).toBe('REJECTED');
+
+    // Qanza = m&c! Islamic children imprint, never manga/LN.
+    const qanza = classifyProduct({
+      title: "Qanza: Kisah Teladan Nabi Nuh a.s.",
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      categorySlugs: 'buku/buku-anak/agama/islam-1',
+    });
+    expect(qanza.status).toBe('REJECTED');
+  });
+
+  it('should keep real releases filed under odd store categories when the title proves the format', () => {
+    // The store files this LN under "buku-anak" — the title token overrides.
+    const apothecary = classifyProduct({
+      title: 'Light Novel: The Apothecary Diaries Vol. 02',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      categorySlugs: 'buku/buku-anak/novel-pemula',
+    });
+    expect(apothecary.status).toBe('ACCEPTED');
+    expect(apothecary.category).toBe('Light Novel');
+
+    // "Clover" as a bare substring must not flip an Akasha manga into LN.
+    const fourLeaf = classifyProduct({
+      title: 'Akasha : You are a Four Leaf Clover 01',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      categorySlugs: 'buku/komik/manga/romance-2',
+    });
+    expect(fourLeaf.status).toBe('ACCEPTED');
+    expect(fourLeaf.category).toBe('Manga');
+
+    // "The Novel" without parentheses is still a light-novel signal.
+    const haikyuNovel = classifyProduct({
+      title: 'Haikyu!! The Novel 4',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      categorySlugs: 'buku/komik/manga/olahraga-1',
+    });
+    expect(haikyuNovel.status).toBe('ACCEPTED');
+    expect(haikyuNovel.category).toBe('Light Novel');
+
+    // A comic store category overrides a suspicious-looking title:
+    // "Teka-Teki Rumah Aneh - Hen Na Ie" is a real manga (misteri).
+    const henNaIe = classifyProduct({
+      title: 'Teka-Teki Rumah Aneh - Hen Na Ie 01',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'buku/komik/manga/misteri',
+    });
+    expect(henNaIe.status).toBe('ACCEPTED');
+    expect(henNaIe.category).toBe('Manga');
+  });
 });
 
