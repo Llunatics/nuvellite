@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { Bookmark, Check, Plus, BookOpen } from 'lucide-react';
+import { Bookmark, Check, Plus } from 'lucide-react';
+import { CoverImage } from './cover-image';
 import { Book } from '@/lib/types';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
@@ -25,20 +25,14 @@ export function ReleaseCard({ book, variant = 'standard' }: ReleaseCardProps) {
           href={`/books/${book.slug}`}
           className="relative aspect-[3/4] w-11 rounded-lg overflow-hidden shrink-0 bg-surface-sunken cover-depth"
         >
-          {book.coverImage ? (
-            <Image
-              src={book.coverImage}
-              alt={book.title}
-              width={44}
-              height={59}
-              loading="lazy"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <BookOpen className="w-3.5 h-3.5 text-editorial-faint" />
-            </div>
-          )}
+          <CoverImage
+            src={book.coverImage}
+            alt={book.title}
+            width={44}
+            height={59}
+            imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            fallbackIconClassName="w-3.5 h-3.5 text-editorial-faint"
+          />
         </Link>
 
         <div className="flex-1 min-w-0">
@@ -107,22 +101,14 @@ export function ReleaseCard({ book, variant = 'standard' }: ReleaseCardProps) {
       {/* 1. Physical Book Cover Frame with specular lighting and hover lift */}
       <div className="relative aspect-[3/4.2] w-full rounded-2xl overflow-hidden bg-surface-sunken book-cover-elevated">
         <Link href={`/books/${book.slug}`} className="block w-full h-full" tabIndex={-1} aria-hidden="true">
-          {book.coverImage ? (
-            <Image
-              src={book.coverImage}
-              alt={book.title}
-              width={184}
-              height={258}
-              loading="lazy"
-              sizes="(max-width: 640px) 160px, (max-width: 1024px) 190px, 220px"
-              className="w-full h-full object-cover transition-transform duration-300 ease-out"
-            />
-          ) : (
-            <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-surface-elevated/40">
-              <BookOpen className="w-8 h-8 text-editorial-faint mb-2" />
-              <span className="text-[11px] text-editorial-muted font-medium line-clamp-2">{book.title}</span>
-            </div>
-          )}
+          <CoverImage
+            src={book.coverImage}
+            alt={book.title}
+            width={184}
+            height={258}
+            sizes="(max-width: 640px) 160px, (max-width: 1024px) 190px, 220px"
+            imgClassName="w-full h-full object-cover transition-transform duration-300 ease-out"
+          />
 
           {/* Subtle Ambient Vignette on Cover for Depth */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10 pointer-events-none" />

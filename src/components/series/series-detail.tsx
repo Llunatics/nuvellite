@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { CoverImage } from '../books/cover-image';
 import { Series, Book } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
 import { ReleaseCard } from '@/components/books/release-card';
@@ -137,7 +137,14 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
           {/* Series Cover */}
           <div className="relative aspect-[3/4.2] w-40 sm:w-48 shrink-0 book-cover-elevated overflow-hidden bg-surface-sunken">
             {series.coverImage ? (
-              <img src={series.coverImage} alt={series.name} className="w-full h-full object-cover" />
+              <CoverImage
+                src={series.coverImage}
+                alt={series.name}
+                width={192}
+                height={256}
+                imgClassName="w-full h-full object-cover"
+                fallbackIconClassName="w-8 h-8 text-editorial-faint"
+              />
             ) : (
               <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center">
                 <Layers className="w-8 h-8 text-editorial-faint mb-2" />

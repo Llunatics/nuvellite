@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { CoverImage } from '../books/cover-image';
 import { Series, Book } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
 import { Layers, Search, BookOpen, X, ArrowRight, ChevronDown } from 'lucide-react';
@@ -216,11 +216,13 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
                   {/* Series Cover */}
                   <div className="relative aspect-[3/4.2] w-20 sm:w-22 shrink-0 rounded-xl overflow-hidden bg-surface-sunken cover-depth">
                     {series.coverImage ? (
-                      <img
+                      <CoverImage
                         src={series.coverImage}
                         alt={series.name}
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
+                        width={88}
+                        height={117}
+                        imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
+                        fallbackIconClassName="w-6 h-6 text-editorial-faint"
                       />
                     ) : (
                       <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-surface-elevated/40">

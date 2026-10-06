@@ -19,7 +19,7 @@ from adapters import ElexAdapter, MCAdapter, PGIAdapter
 
 # Positive and Negative classification signals
 MERCHANDISE_REGEX = re.compile(
-    r'\b(acrylic|akrilik|standee|keychain|key\s*ring|gantungan\s*kunci|tote\s*bag|totebag|sling\s*bag|backpack|tas|pouch|dompet|tumbler|mug|gelas|cushion|bantal|mousepad|desk\s*mat|tapestry|stickers?|stikers?|poker-|amulet|eye\s*mask|figures?|figurine|plush|boneka|monopoly|pin\s*badge|badge|lanyard|washi\s*tape|postcards?|poster|art\s*print|clear\s*file|clear\s*folder|5-layer\s*folder|folder|card\s*pack|booster\s*pack|kartu\s*koleksi|tarot|flash\s*card|reflection\s*card|t-?shirt|kaos|stationary|stationery|binder|notebook|buku\s*tulis|memo\s*pad|pencil\s*case|kotak\s*pensil)\b',
+    r'\b(acrylic|akrilik|standee|keychain|key\s*ring|gantungan\s*kunci|tote\s*bag|totebag|sling\s*bag|backpack|tas|pouch|dompet|tumbler|mug|gelas|cushion|bantal|mousepad|desk\s*mat|tapestry|stickers?|stikers?|poker-|amulet|eye\s*mask|figures?|figurine|plush|boneka|monopoly|pin\s*badge|badge|lanyard|washi\s*tape|postcards?|poster|art\s*print|clear\s*file|clear\s*folder|5-layer\s*folder|folder|card\s*pack|booster\s*pack|kartu\s*koleksi|tarot|flash\s*card|reflection\s*card|t-?shirt|kaos|stationary|stationery|binder|notebook|buku\s*tulis|memo\s*pad|pencil\s*case|kotak\s*pensil|merchandise|merch|origami)\b',
     re.IGNORECASE
 )
 
@@ -48,6 +48,8 @@ DISALLOWED_CATEGORY_SEGMENTS = {
     'kepercayaan-diri', 'motivasi',
     'cerita-anak', 'dongeng',
     'novel-terjemahan', 'sastra', 'nonfiksi-anak-remaja',
+    'fiksi-teenlit',
+    'stationery', 'stationery-sekolah-kantor', 'alat-tulis',
     'hobi',
     'desain', 'arsitektur',
     'travel', 'perjalanan',
@@ -65,6 +67,14 @@ EXPLICIT_FORMAT_TOKENS = (
 
 def _category_segments(cat_slugs):
     return [s for s in (cat_slugs or '').lower().replace('_', '-').split('/') if s]
+
+
+# Verified non-manga / non-LN series that the store miscategorizes as comic.
+# Each entry was individually verified (web research); the store category
+# alone cannot be trusted for these.
+KNOWN_NON_MANGA_SERIES = (
+    'ther melian',  # Indonesian fantasy NOVEL tetralogy by Shienny M.S. (Elex)
+)
 
 
 def _has_comic_category(cat_slugs):
@@ -217,6 +227,11 @@ def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None):
     # Titles carry the imprint as a prefix, e.g. "Qanza: ...".
     if t_lower.startswith('qanza'):
         return 'REJECT', None, 'Qanza imprint (non-manga children imprint)'
+
+    # Known miscategorized series (verified non-manga / non-LN).
+    for known in KNOWN_NON_MANGA_SERIES:
+        if known in t_lower:
+            return 'REJECT', None, f'Known non-manga/non-LN series: {known}'
 
     has_comic_cat = _has_comic_category(cat)
     has_explicit_token = any(tok in t_lower for tok in EXPLICIT_FORMAT_TOKENS)

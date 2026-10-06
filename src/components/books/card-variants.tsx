@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { CoverImage } from './cover-image';
 import { Book, Series } from '@/lib/types';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
@@ -36,14 +36,15 @@ export function FeaturedReleaseCard({ book }: FeaturedReleaseCardProps) {
           tabIndex={-1}
         >
           {book.coverImage ? (
-            <Image
+            <CoverImage
               src={book.coverImage}
               alt={book.title}
               width={224}
               height={313}
               sizes="(max-width: 640px) 176px, 224px"
               priority
-              className="w-full h-full object-cover transition-transform duration-500 ease-out"
+              imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
+              fallbackIconClassName="w-12 h-12 text-editorial-faint"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-surface-sunken">
@@ -195,7 +196,14 @@ export function SeriesProgressionCard({ series, ownedCount }: SeriesProgressionC
       <div className="flex items-center gap-3">
         <div className="relative aspect-[3/4] w-12 rounded-xl overflow-hidden bg-surface-sunken shrink-0 cover-depth">
           {series.coverImage ? (
-            <Image src={series.coverImage} alt={series.name} width={48} height={64} className="w-full h-full object-cover" />
+            <CoverImage
+              src={series.coverImage}
+              alt={series.name}
+              width={48}
+              height={64}
+              imgClassName="w-full h-full object-cover"
+              fallbackIconClassName="w-5 h-5 text-editorial-faint"
+            />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
               <Layers className="w-5 h-5 text-editorial-faint" />

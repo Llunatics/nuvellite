@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { CoverImage } from './cover-image';
 import { Book, RecommendationItem } from '@/lib/types';
 import { PriceSummary } from '@/lib/data/price-service';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
@@ -82,13 +82,14 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
           <div className="w-full md:col-span-5 lg:col-span-4 flex flex-col items-center">
             <div className="relative aspect-[3/4.2] w-full max-w-[280px] rounded-2xl overflow-hidden bg-surface-sunken book-cover-elevated">
               {book.coverImage ? (
-                <Image
+                <CoverImage
                   src={book.coverImage}
                   alt={book.title}
                   width={280}
                   height={392}
                   priority
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out"
+                  imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
+                  fallbackIconClassName="w-12 h-12 text-editorial-faint"
                 />
               ) : (
                 <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center">

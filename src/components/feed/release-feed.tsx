@@ -1,16 +1,14 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useCallback } from 'react';
+import React, { useState, useMemo, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import {
   BookOpen,
-  Sparkles,
   ChevronLeft,
   ChevronRight,
   ChevronDown,
   Search,
   X,
-  SlidersHorizontal,
   ArrowRight,
   FilterX,
 } from 'lucide-react';
@@ -74,11 +72,20 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   // Filter States
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
-  const [statusFilter, setStatusFilter] = useState<'ALL' | 'AVAILABLE' | 'PREORDER'>('ALL');
+  const [statusFilter, setStatusFilter] = useState<'ALL' | 'RELEASED' | 'PREORDER'>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [spotlightPaused, setSpotlightPaused] = useState(false);
+
+  // Auto-advance the spotlight showcase; pauses while the user hovers it.
+  useEffect(() => {
+    if (spotlightBooks.length <= 1 || spotlightPaused) return;
+    const timer = setInterval(() => {
+      setActiveSpotlightIdx((idx) => (idx + 1) % spotlightBooks.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [spotlightBooks.length, spotlightPaused]);
 
   const handleViewAll = (format: 'Manga' | 'Light Novel') => {
     setFormatFilter(format);
@@ -103,7 +110,8 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
       .filter((book) => {
         if (formatFilter !== 'ALL' && book.category !== formatFilter) return false;
         if (pubFilter !== 'ALL' && book.publisherId !== pubFilter) return false;
-        if (statusFilter !== 'ALL' && book.status !== statusFilter) return false;
+        if (statusFilter === 'RELEASED' && !(book.status === 'RELEASED' || book.status === 'PUBLISHED')) return false;
+        if (statusFilter === 'PREORDER' && !(book.status === 'PREORDER' || book.status === 'ANNOUNCED')) return false;
         if (searchQuery.trim()) {
           const q = searchQuery.toLowerCase().trim();
           const matchTitle = book.title.toLowerCase().includes(q);
@@ -174,7 +182,11 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
 
       {/* 2. CURATED SPOTLIGHT SHOWCASE */}
       {activeSpotlight && (
-        <section className="space-y-3">
+        <section
+          className="space-y-3"
+          onMouseEnter={() => setSpotlightPaused(true)}
+          onMouseLeave={() => setSpotlightPaused(false)}
+        >
           <FeaturedReleaseCard book={activeSpotlight} />
 
           {/* Minimal Spotlight Pagination */}
@@ -184,7 +196,12 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                 <button
                   key={idx}
                   type="button"
-                  onClick={() => setActiveSpotlightIdx(idx)}
+                  onClick={() => {
+                    setActiveSpotlightIdx(idx);
+                    // Let the user linger on their pick before auto-advance resumes.
+                    setSpotlightPaused(true);
+                    setTimeout(() => setSpotlightPaused(false), 12000);
+                  }}
                   className={`h-1 rounded-full transition-all duration-300 ${
                     activeSpotlightIdx === idx ? 'w-6 bg-white' : 'w-2 bg-white/20 hover:bg-white/40'
                   }`}
@@ -213,7 +230,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               <button
                 type="button"
                 onClick={() => handleViewAll('Manga')}
-                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors hidden sm:inline-flex items-center gap-1"
+                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors inline-flex items-center gap-1"
               >
                 <span>Semua Manga</span>
                 <ArrowRight className="w-3 h-3" />
@@ -269,7 +286,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
               <button
                 type="button"
                 onClick={() => handleViewAll('Light Novel')}
-                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors hidden sm:inline-flex items-center gap-1"
+                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors inline-flex items-center gap-1"
               >
                 <span>Semua Light Novel</span>
                 <ArrowRight className="w-3 h-3" />
@@ -360,7 +377,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
           {/* Symmetrical Filter Controls Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 text-xs">
             {/* Format Segmented Tab */}
-            <div className="sm:col-span-6 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
+            <div className="sm:col-span-5 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
               {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
                 <button
                   key={fmt}
@@ -378,7 +395,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             </div>
 
             {/* Symmetrical Dropdowns */}
-            <div className="sm:col-span-6 grid grid-cols-2 gap-2">
+            <div className="sm:col-span-7 grid grid-cols-3 gap-2">
               {/* Publisher Dropdown */}
               <div className="relative">
                 <select
@@ -392,6 +409,20 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
                       {p.shortName}
                     </option>
                   ))}
+                </select>
+                <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
+
+              {/* Availability Dropdown */}
+              <div className="relative">
+                <select
+                  value={statusFilter}
+                  onChange={(e) => setStatusFilter(e.target.value as any)}
+                  className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
+                >
+                  <option value="ALL" className="bg-surface text-editorial-title">Semua Status</option>
+                  <option value="RELEASED" className="bg-surface text-editorial-title">Sudah Rilis</option>
+                  <option value="PREORDER" className="bg-surface text-editorial-title">Pre-order</option>
                 </select>
                 <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>

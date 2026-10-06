@@ -316,6 +316,41 @@ describe('Multi-Signal Classification Engine', () => {
     expect(qanza.status).toBe('REJECTED');
   });
 
+  it('should reject merchandise/stationery/teenlit and known miscategorized novel series', () => {
+    const jordyMerch = classifyProduct({
+      title: 'Jordy Kano + Merchandise',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'buku/fiksi-teenlit',
+    });
+    expect(jordyMerch.status).toBe('REJECTED');
+
+    const jordy = classifyProduct({
+      title: 'Jordy Kano',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'buku/fiksi-teenlit',
+    });
+    expect(jordy.status).toBe('REJECTED');
+
+    const origami = classifyProduct({
+      title: 'Clover Origami Polos 2 Sisi 12X12 Cm',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      categorySlugs: 'stationery-sekolah-kantor',
+    });
+    expect(origami.status).toBe('REJECTED');
+
+    // Verified Indonesian fantasy NOVEL series (store files it as komik).
+    const therMelian = classifyProduct({
+      title: 'Ther Melian: Derelict',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'buku/komik/fantasi-fiksi-ilmiah',
+    });
+    expect(therMelian.status).toBe('REJECTED');
+  });
+
   it('should keep real releases filed under odd store categories when the title proves the format', () => {
     // The store files this LN under "buku-anak" — the title token overrides.
     const apothecary = classifyProduct({
