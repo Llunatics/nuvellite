@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-06T05:11:10.000Z",
+  "lastUpdated": "2026-10-06T12:54:28.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -160381,6 +160381,26 @@
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791291268",
+      "startedAt": "2026-10-06T12:50:39.000Z",
+      "finishedAt": "2026-10-06T12:54:28.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1462,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 229241,
+      "success": true
+    },
     {
       "id": "sync_1791263470",
       "startedAt": "2026-10-06T05:07:34.000Z",
