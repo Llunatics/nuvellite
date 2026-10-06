@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-05T23:51:01.000Z",
+  "lastUpdated": "2026-10-06T05:11:10.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -68524,7 +68524,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-07-06",
       "isWednesdayRelease": false,
-      "currentPrice": 30000,
+      "currentPrice": 40000,
       "authors": [
         "Elex Media Komputindo"
       ],
@@ -68540,7 +68540,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 40000
     },
     {
@@ -160367,9 +160367,40 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-04",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_15_1791263469",
+      "bookId": "pub_mob_psycho_100_15",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-06",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791263470",
+      "startedAt": "2026-10-06T05:07:34.000Z",
+      "finishedAt": "2026-10-06T05:11:10.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1462,
+      "productsRejected": 92,
+      "productsUpdated": 1462,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 215378,
+      "success": true
+    },
     {
       "id": "sync_1791244261",
       "startedAt": "2026-10-05T23:47:32.000Z",
