@@ -3,6 +3,9 @@ import { BookCategory, BookFormat, ClassificationResult, ClassificationStatus } 
 // Negative signals: Items that MUST BE REJECTED unconditionally
 const MERCHANDISE_REGEX = /\b(acrylic|akrilik|standee|keychain|key\s*ring|gantungan\s*kunci|tote\s*bag|totebag|sling\s*bag|backpack|tas|pouch|dompet|tumbler|mug|gelas|cushion|bantal|mousepad|desk\s*mat|tapestry|stickers?|stikers?|poker-|amulet|eye\s*mask|figures?|figurine|plush|boneka|monopoly|pin\s*badge|badge|lanyard|washi\s*tape|postcards?|poster|art\s*print|clear\s*file|clear\s*folder|5-layer\s*folder|folder|card\s*pack|booster\s*pack|kartu\s*koleksi|tarot|flash\s*card|reflection\s*card|t-?shirt|kaos|stationary|stationery|binder|notebook|buku\s*tulis|memo\s*pad|pencil\s*case|kotak\s*pensil|canvas|kanvas|merchandise|merch|origami)\b/i;
 
+// Craft supplies (not books). Absolute when the title starts with the "Clover" craft brand; otherwise only on non-comic store category.
+const CRAFT_SUPPLY_REGEX = /\b(balon|balloon|confetti|benang|rajut|hakpen|kawat|foil|payet|manik|flanel|jarum|artificial|lilin|tali|goni|rami|krep|karton|paperbag|washi|terompet|kancing|kokot|peniti|pinset|gunting|rantai|mote|serbuk|miniatur|polaroid|scrapbook|newspaper|masking|flower\s*tape|sticky|snow\s*spray|wood|jump\s*ring|fancy\s*banner|memo|deco\s*paper|putik|pita|bunga|daun|wol)\b/i;
+
 const NON_BOOK_NON_MANGA_REGEX = /\b(ensiklopedia|encyclopedia|atlas|kamus|dictionary|puzzles?|games?|teka-teki|paint\s*by\s*number|coloring\s*book|coloring|mewarnai|ilustrasi|buku\s*aktivitas|board\s*book|pop-up|lift\s*the\s*flap|funtastic|saintis\s*cilik|seek\s*&\s*find|buku\s*interaktif|buku\s*pintar|aku\s*jadi\s*pintar|siap\s*sekolah|top\s*paud|paud|my\s*first\s*book|pinkfong|bebefinn|uwa\s*and\s*friends|cocomelon|dr\.\s*robot\s*teo|alphabet\s*writing|menulis\s*alfabet|cepat\s*membaca|metode\s*bapatja|pandai\s*membaca|buku\s*anak|cerita\s*sains|koding\s*pertamaku|parenting|fiqih|hadits|sholat|khotbah|doa\s*harian|doa\b|hijrah|buku\s*resep|resep\b|resep\s+masakan?|resep\s+kue|buku\s*masak|diet|kesehatan|kedokteran|medis|hukum\s*pidana|hukum\s*perdata|hukum\s*dan\s*keadilan|kuhp|kuhap|investasi|saham|reksadana|crypto|keuangan|finansial|akuntansi|perpajakan|bisnis|manajemen|marketing|leadership|kepemimpinan|barakah|mindset|strategi|strategic|psikologi|psikolog|self\s*improvement|self-help|self[-\s]?healing|self[-\s]?love|therapy|terapi|journaling|motivasi|motivation|sukses|kesuksesan|filsafat|filosofi|sejarah\s*indonesia|soal\s*utbk|cpns|toefl|ielts|matematika|fisika|kimia|biologi|biografi|memoar|autobiografi|geronimo\s*stilton|thea\s*stilton|catstronauts|story\s*orchestra|start\s*with\s*why|ego\s*is\s*the\s*enemy|daring\s*greatly|dare\s*to\s*lead|burnout|the\s*idiot|the\s*four\s*agreements|the\s*patriarchs|principles:\s*your\s*guided\s*journal|memoirs\s*from\s*the\s*women|teenlit|romance\s*novel|international\s*classics?|penguin\s*books?)\b/i;
 
 const DISALLOWED_PUBLISHERS = [
@@ -30,7 +33,7 @@ const DISALLOWED_CATEGORIES = [
   'kepercayaan-diri', 'motivasi',
   'cerita-anak', 'dongeng',
   'novel-terjemahan', 'sastra',
-  'fiksi-teenlit',
+  'fiksi-teenlit', 'fiksi-sastra',
   'stationery', 'stationery-sekolah-kantor', 'alat-tulis',
   'hobi', 'desain', 'arsitektur',
   'travel', 'perjalanan',
@@ -113,6 +116,11 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
       negativeSignals.push(`Seri terverifikasi non-manga/non-LN: ${known}`);
       break;
     }
+  }
+  if (tLower.startsWith('clover ') && CRAFT_SUPPLY_REGEX.test(title)) {
+    negativeSignals.push('Produk kerajinan Clover (bukan buku)');
+  } else if (CRAFT_SUPPLY_REGEX.test(title) && catSlugs && !hasComicCategory) {
+    negativeSignals.push('Produk kerajinan (kategori toko non-komik)');
   }
 
   for (const dp of DISALLOWED_PUBLISHERS) {

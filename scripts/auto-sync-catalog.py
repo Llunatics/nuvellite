@@ -23,6 +23,19 @@ MERCHANDISE_REGEX = re.compile(
     re.IGNORECASE
 )
 
+# Craft supplies (not books). Absolute when the title starts with the
+# "Clover" craft brand; otherwise only rejected on a non-comic category
+# (words like "wood" legitimately appear in manga titles).
+CRAFT_SUPPLY_REGEX = re.compile(
+    r'\b(balon|balloon|confetti|benang|rajut|hakpen|kawat|foil|payet|manik|'
+    r'flanel|jarum|artificial|lilin|tali|goni|rami|krep|karton|paperbag|'
+    r'washi|terompet|kancing|kokot|peniti|pinset|gunting|rantai|mote|'
+    r'serbuk|miniatur|polaroid|scrapbook|newspaper|masking|flower\s*tape|'
+    r'sticky|sticky\s*notes|snow\s*spray|wood|jump\s*ring|fancy\s*banner|'
+    r'memo|deco\s*paper|putik|pita|bunga|daun|wol)\b',
+    re.IGNORECASE
+)
+
 NON_MANGA_LN_REGEX = re.compile(
     r'\b(ensiklopedia|encyclopedia|atlas|kamus|dictionary|puzzle|teka-teki|paint\s*by\s*number|coloring\s*book|coloring|mewarnai|ilustrasi|buku\s*aktivitas|board\s*book|pop-up|lift\s*the\s*flap|funtastic|saintis\s*cilik|seek\s*&\s*find|buku\s*interaktif|buku\s*pintar|aku\s*jadi\s*pintar|siap\s*sekolah|top\s*paud|paud|my\s*first\s*book|pinkfong|bebefinn|uwa\s*and\s*friends|cocomelon|dr\.\s*robot\s*teo|alphabet\s*writing|menulis\s*alfabet|cepat\s*membaca|metode\s*bapatja|pandai\s*membaca|buku\s*anak|cerita\s*sains|koding\s*pertamaku|parenting|fiqih|hadits|sholat|khotbah|doa\s*harian|doa\b|hijrah|buku\s*resep|resep\b|resep\s+masakan?|resep\s+kue|buku\s*masak|diet|kesehatan|kedokteran|medis|hukum\s*pidana|hukum\s*perdata|hukum\s*dan\s*keadilan|kuhp|kuhap|investasi|saham|reksadana|crypto|keuangan|finansial|akuntansi|perpajakan|bisnis|manajemen|marketing|leadership|kepemimpinan|barakah|mindset|strategi|strategic|psikologi|psikolog|self\s*improvement|self-help|self[-\s]?healing|self[-\s]?love|therapy|terapi|journaling|motivasi|motivation|sukses|kesuksesan|filsafat|filosofi|sejarah\s*indonesia|soal\s*utbk|cpns|toefl|ielts|matematika|fisika|kimia|biologi|biografi|memoar|autobiografi|geronimo\s*stilton|thea\s*stilton|catstronauts|story\s*orchestra|start\s*with\s*why|ego\s*is\s*the\s*enemy|daring\s*greatly|dare\s*to\s*lead|burnout|the\s*idiot|the\s*four\s*agreements|the\s*patriarchs|principles:\s*your\s*guided\s*journal|memoirs\s*from\s*the\s*women|teenlit|romance\s*novel|international\s*classics?|penguin\s*books?|treasure\s*pack|games\s*&\s*puzzles?)\b',
     re.IGNORECASE
@@ -48,7 +61,7 @@ DISALLOWED_CATEGORY_SEGMENTS = {
     'kepercayaan-diri', 'motivasi',
     'cerita-anak', 'dongeng',
     'novel-terjemahan', 'sastra', 'nonfiksi-anak-remaja',
-    'fiksi-teenlit',
+    'fiksi-teenlit', 'fiksi-sastra',
     'stationery', 'stationery-sekolah-kantor', 'alat-tulis',
     'hobi',
     'desain', 'arsitektur',
@@ -232,6 +245,13 @@ def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None):
     for known in KNOWN_NON_MANGA_SERIES:
         if known in t_lower:
             return 'REJECT', None, f'Known non-manga/non-LN series: {known}'
+
+    # Clover craft supplies: "Clover <craft item>" is never a book.
+    if t_lower.startswith('clover ') and CRAFT_SUPPLY_REGEX.search(title):
+        return 'REJECT', None, 'Clover craft supply (non-book product)'
+    # Other craft supplies: reject on non-comic store category only.
+    if CRAFT_SUPPLY_REGEX.search(title) and cat_slugs and not _has_comic_category(cat_slugs):
+        return 'REJECT', None, 'Craft supply (non-comic store category)'
 
     has_comic_cat = _has_comic_category(cat)
     has_explicit_token = any(tok in t_lower for tok in EXPLICIT_FORMAT_TOKENS)

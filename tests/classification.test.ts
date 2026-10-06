@@ -341,6 +341,24 @@ describe('Multi-Signal Classification Engine', () => {
     });
     expect(origami.status).toBe('REJECTED');
 
+    // Clover craft supplies (Japanese craft brand, not books).
+    const cloverCraft = classifyProduct({
+      title: 'Clover Balon Foil Happy Birthday',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
+      categorySlugs: 'buku/kerajinan',
+    });
+    expect(cloverCraft.status).toBe('REJECTED');
+
+    // ...but a manga title containing a craft word with comic category survives.
+    const demonWood = classifyProduct({
+      title: 'KOLONI Rajasa - Demon of the Wood',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'buku/komik/manga',
+    });
+    expect(demonWood.status).toBe('ACCEPTED');
+
     // Verified Indonesian fantasy NOVEL series (store files it as komik).
     const therMelian = classifyProduct({
       title: 'Ther Melian: Derelict',
