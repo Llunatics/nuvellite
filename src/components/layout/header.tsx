@@ -75,35 +75,35 @@ export function Header() {
     <>
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 pointer-events-none ${
-          isScrolled ? 'pt-2.5 sm:pt-3 px-3 sm:px-6' : 'pt-4 sm:pt-6 px-4 sm:px-8'
+          isScrolled ? 'pt-3 sm:pt-3.5 px-3 sm:px-6' : 'pt-5 sm:pt-7 px-4 sm:px-8'
         }`}
       >
         <div
-          className={`max-w-6xl mx-auto h-12 sm:h-13 rounded-full px-3.5 sm:px-5 flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition ${
+          className={`max-w-6xl mx-auto h-14 sm:h-16 rounded-full px-4 sm:px-6 flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition ${
             isScrolled
               ? 'liquid-glass-pill shadow-2xl'
               : 'integrated-nav'
           }`}
         >
           {/* Brand Identity */}
-          <div className="flex items-center gap-6 shrink-0">
-            <Link href="/" className="inline-flex items-center gap-2 group focus:outline-none" aria-label="Nuvellite Beranda">
-              <span className="font-editorial text-xl sm:text-[22px] font-semibold tracking-tight text-editorial-title group-hover:text-accent transition-colors">
+          <div className="flex items-center gap-7 shrink-0">
+            <Link href="/" className="inline-flex items-center gap-2.5 group focus:outline-none" aria-label="Nuvellite Beranda">
+              <span className="font-editorial text-[26px] sm:text-3xl font-semibold tracking-tight text-editorial-title group-hover:text-accent transition-colors leading-none">
                 nuvellite
               </span>
               <span
-                className="w-1.5 h-1.5 rounded-full shadow-xs transition-transform group-hover:scale-125"
+                className="w-2 h-2 rounded-full shadow-xs transition-transform group-hover:scale-125"
                 style={{ backgroundColor: currentThemeColor }}
               />
             </Link>
 
             {/* Desktop Center Floating Pill Navigation */}
-            <nav className="hidden md:flex items-center gap-1 p-0.5 rounded-full bg-surface-sunken/40 border border-white/[0.04]">
+            <nav className="hidden md:flex items-center gap-1 p-1 rounded-full bg-surface-sunken/40 border border-white/[0.04]">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-3.5 py-1 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 ${
+                  className={`relative px-4 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 flex items-center gap-1.5 ${
                     link.active
                       ? 'text-editorial-title bg-white/[0.08] shadow-xs font-semibold'
                       : 'text-editorial-muted hover:text-editorial-title hover:bg-white/[0.03]'
@@ -124,15 +124,15 @@ export function Header() {
           </div>
 
           {/* Right Action Controls */}
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-2.5 shrink-0">
             {/* Minimal Command Palette Trigger */}
             <button
               type="button"
               onClick={() => setIsSearchOpen(true)}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full soft-glass hover:bg-white/[0.06] border border-white/[0.06] hover:border-white/[0.12] text-editorial-muted hover:text-editorial-title transition-all text-xs group active:scale-95"
+              className="flex items-center gap-2.5 px-4 py-2 rounded-full soft-glass hover:bg-white/[0.06] border border-white/[0.06] hover:border-white/[0.12] text-editorial-muted hover:text-editorial-title transition-all text-xs group active:scale-95"
               aria-label="Cari judul, ISBN, pengarang, seri"
             >
-              <Search className="w-3.5 h-3.5 text-editorial-muted group-hover:text-editorial-title transition-colors" />
+              <Search className="w-4 h-4 text-editorial-muted group-hover:text-editorial-title transition-colors" />
               <span className="hidden sm:inline-block text-xs font-normal text-editorial-muted group-hover:text-editorial-title">
                 Cari judul, seri, ISBN...
               </span>
@@ -146,7 +146,7 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setIsPaletteOpen((prev) => !prev)}
-                className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/[0.06] text-editorial-muted hover:text-editorial-title transition-all active:scale-95 border border-transparent hover:border-white/[0.06]"
+                className="w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/[0.06] text-editorial-muted hover:text-editorial-title transition-all active:scale-95 border border-transparent hover:border-white/[0.06]"
                 aria-label="Pilih Warna Aksen"
                 title="Pilih Tema Aksen"
               >
@@ -201,14 +201,14 @@ export function Header() {
             <button
               type="button"
               onClick={toggleTheme}
-              className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/[0.06] text-editorial-muted hover:text-editorial-title transition-all active:scale-95 border border-transparent hover:border-white/[0.06]"
+              className="w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/[0.06] text-editorial-muted hover:text-editorial-title transition-all active:scale-95 border border-transparent hover:border-white/[0.06]"
               aria-label={isDark ? 'Beralih ke Mode Terang' : 'Beralih ke Mode Gelap'}
               title={isDark ? 'Mode Terang' : 'Mode Gelap'}
             >
               {mounted && !isDark ? (
-                <Moon className="w-3.5 h-3.5 text-editorial-title" />
+                <Moon className="w-4 h-4 text-editorial-title" />
               ) : (
-                <Sun className="w-3.5 h-3.5 text-amber-300/80 hover:text-amber-200" />
+                <Sun className="w-4 h-4 text-amber-300/80 hover:text-amber-200" />
               )}
             </button>
           </div>

@@ -33,6 +33,19 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   const [activeSpotlightIdx, setActiveSpotlightIdx] = useState(0);
   const activeSpotlight = spotlightBooks[activeSpotlightIdx] || initialBooks[0];
 
+  // Archive stats for the editorial hero strip (computed from props, no data-file read)
+  const archiveStats = useMemo(() => {
+    const seriesIds = new Set<string>();
+    for (const b of initialBooks) {
+      if (b.seriesId) seriesIds.add(b.seriesId);
+    }
+    return {
+      titles: initialBooks.length,
+      series: seriesIds.size,
+      publishers: publishers.length,
+    };
+  }, [initialBooks, publishers]);
+
   // Dedicated Highlight Rails - Newest to oldest
   const mangaHighlights = useMemo(() => {
     return [...initialBooks]
@@ -177,6 +190,33 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             Arsip lengkap terbitan Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia.
             Pantau rilis mingguan, varian kanonikal, riwayat harga, dan kelengkapan koleksi Anda.
           </p>
+
+          {/* Archive Stats Strip */}
+          <dl className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-2 text-[11px] font-mono text-editorial-muted">
+            <div className="flex items-baseline gap-1.5">
+              <dt className="sr-only">Judul terarsip</dt>
+              <dd className="text-sm font-semibold text-editorial-title">
+                {archiveStats.titles.toLocaleString('id-ID')}
+              </dd>
+              <dd>judul terarsip</dd>
+            </div>
+            <span aria-hidden="true" className="text-editorial-faint/50">/</span>
+            <div className="flex items-baseline gap-1.5">
+              <dt className="sr-only">Seri</dt>
+              <dd className="text-sm font-semibold text-editorial-title">
+                {archiveStats.series.toLocaleString('id-ID')}
+              </dd>
+              <dd>seri</dd>
+            </div>
+            <span aria-hidden="true" className="text-editorial-faint/50">/</span>
+            <div className="flex items-baseline gap-1.5">
+              <dt className="sr-only">Penerbit</dt>
+              <dd className="text-sm font-semibold text-editorial-title">
+                {archiveStats.publishers.toLocaleString('id-ID')}
+              </dd>
+              <dd>penerbit</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -326,7 +366,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
       )}
 
       {/* 5. MAIN CATALOG ARCHIVE & COHESIVE CONTROLS */}
-      <section ref={catalogRef} className="space-y-8 pt-4">
+      <section ref={catalogRef} className="space-y-8 pt-4 scroll-mt-28">
         {/* Section Heading & Result Counter */}
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/[0.04] pb-4">
           <div>

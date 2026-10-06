@@ -188,6 +188,13 @@
     transition: background 0.4s ease;
   }
 
+  /* Refined keyboard focus: quiet accent ring instead of the default outline */
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent-rgb));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
   /* Respect prefers-reduced-motion */
   @media (prefers-reduced-motion: reduce) {
     *,
@@ -198,6 +205,17 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbars on horizontal rails while keeping scrollability */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 }
 

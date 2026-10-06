@@ -107,7 +107,7 @@ export function ReleaseCard({ book, variant = 'standard' }: ReleaseCardProps) {
             width={184}
             height={258}
             sizes="(max-width: 640px) 160px, (max-width: 1024px) 190px, 220px"
-            imgClassName="w-full h-full object-cover transition-transform duration-300 ease-out"
+            imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
           />
 
           {/* Subtle Ambient Vignette on Cover for Depth */}
