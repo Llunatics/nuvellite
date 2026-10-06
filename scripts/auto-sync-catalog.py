@@ -30,9 +30,9 @@ CRAFT_SUPPLY_REGEX = re.compile(
     r'\b(balon|balloon|confetti|benang|rajut|hakpen|kawat|foil|payet|manik|'
     r'flanel|jarum|artificial|lilin|tali|goni|rami|krep|karton|paperbag|'
     r'washi|terompet|kancing|kokot|peniti|pinset|gunting|rantai|mote|'
-    r'serbuk|miniatur|polaroid|scrapbook|newspaper|masking|flower\s*tape|'
+    r'serbuk|miniatur|polaroid|scrapbook|scrapbooking|newspaper|masking|flower\s*tape|'
     r'sticky|sticky\s*notes|snow\s*spray|wood|jump\s*ring|fancy\s*banner|'
-    r'memo|deco\s*paper|putik|pita|bunga|daun|wol)\b',
+    r'memo|deco\s*paper|putik|pita|bunga|daun|wol|jeruk|but+ons?|bot+ons?|wooden)\b',
     re.IGNORECASE
 )
 
