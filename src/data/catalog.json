@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-07T04:38:43.000Z",
+  "lastUpdated": "2026-10-07T12:48:28.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -99680,7 +99680,7 @@
       "genres": [
         "Manga"
       ],
-      "isbn13": "",
+      "isbn13": "9786230080135",
       "synopsis": "“Hoshishiro” yang menjuarai TGC lima kali berturut-turut itu akhirnya tampil dalam pertandingan pertamanya di TGC kali ini! Selagi bertarung di field yang lebih menguntungkan lawan, Midori malah menemukan suatu bakat yang tak disangka-sangka. Di sisi lain, menyongsong pertandingan kedua mereka, Yukimura dari “Toy? Gun Gun” malah memendam kecemasan…“Kenapa Midori dan Matsun sejak dulu terus menggunakan senjata yang sama? Apa kelak mereka berdua akan kembali menjadi partner dan bertarung bersama?”. Siapa sangka kegalauannya memicu terjadinya skenario terburuk…\n\nSelling Point:\n\nSelain action seru, pertentangan psikologis juga mewarnai field pertarungan airsoft. Kesalahpahaman yang kocak, juga suguhan art dan scene yang mendebarkan, membuat komik ini \"satu paket hiburan\" lengkap yang layak untuk dijadikan koleksi. 18 volume End!!",
       "gramediaUrl": "https://www.gramedia.com/products/youth-x-machinegun-aoharu-x-kikanju-13",
       "classificationStatus": "ACCEPTED",
@@ -105576,7 +105576,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/6nsesuserr.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
       "currentPrice": 50000,
@@ -105626,6 +105626,369 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media"
+    },
+    {
+      "id": "pub_blue_box_14",
+      "slug": "blue-box-14",
+      "title": "Blue Box 14",
+      "originalTitle": "Blue Box",
+      "seriesId": "ser_blue-box",
+      "seriesName": "Blue Box",
+      "volume": 14,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x5l8lo-2vv.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "authors": [
+        "Miura Kouji"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080319",
+      "synopsis": "Hari valentine segera tiba. Ayame memberanikan diri untuk membuatkan coklat spesial untuk Kyo. Lalu musim pun berganti, dan pada tahun ajaran baru ini klub badminton kedatangan anggota baru yang tak terduga.\n\nKeunggulan:\n\nCerita drama remaja yang romantis dan juga penuh perjuangan untuk berprestasi.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/blue-box-14",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media"
+    },
+    {
+      "id": "pub_one_piece_43_2026",
+      "slug": "one-piece-43-2026",
+      "title": "One Piece 43 (2026)",
+      "originalTitle": "One Piece",
+      "seriesId": "ser_one-piece-manga",
+      "seriesName": "One Piece",
+      "volume": 43,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/p637844o8-.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "authors": [
+        "Eiichiro Oda"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9789792705461",
+      "synopsis": "Buster Call sudah diaktifkan! Robin hampir melewati gerbang keadilan!! Apakah Luffy dan kawan-kawan dapat menerobos pertahanan CP 9 dan menolong Robin yang akan terjerumus ke dalam jurang penderitaan!?\n\n•\tGuinness World Record untuk seri komik dengan cetakan terbanyak oleh seorang penulis. Sampai 2022, seri One Piece terjual lebih dari 500 juta copy seluruh dunia.\n\n•\tKomik petualangan bajak laut dengan cerita yang super seru, dan berlatar belakang dunia yang diciptakan dengan imajinasi yang luar biasa. Komik ini tak pernah kehabisan ide baru yang terus membuat pembaca penasaran.\n\n•\tDi tengah serunya alur cerita, One Piece selalu menekankan pentingnya “Persahabatan”\n\n•\tBest Seller di seluruh dunia, dan menjadi komik yang wajib dibaca, tak hanya oleh pembaca putra, tapi juga oleh pembaca putri.\n\n•\tSerial dan film animasi One Piece, serta merchandise-nya digemari di Indonesia.\n\n•\tSudah diadaptasi jadi live action series.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan.\n\nMembaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi.\n\nPilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca.\n\nTemukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik.\n\nBuat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.",
+      "gramediaUrl": "https://www.gramedia.com/products/one-piece-43-2026",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media"
+    },
+    {
+      "id": "pub_regarding_reincarnated_to_slime_21",
+      "slug": "regarding-reincarnated-to-slime-21",
+      "title": "Regarding Reincarnated to Slime 21",
+      "originalTitle": "Regarding Reincarnated to Slime",
+      "seriesId": "ser_regarding-reincarnated-to-slime",
+      "seriesName": "Regarding Reincarnated to Slime",
+      "volume": 21,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/4ctdr--1ee.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "authors": [
+        "Taiki Kawakami"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080166",
+      "synopsis": "Rimuru dan Hinata kembali bertarung. Para pengikut Hinata pun dihadapi oleh Sion dan bawahannya. Keadaan semakin berkembang menuju perang terbuka. Situasi yang ingin dihindari oleh Rimuru ini semua terjadi karena akal-akalan Tujuh Tetua. Lalu di balik itu semua, ada konspirasi dari kekuatan besar yang ingin menguasai negara-negara di barat. Bisakah Rimuru dan Hinata mencapai perdamaian?\n\nKeunggulan:\n\n•\tSeri panjang best selling yang selalu laku.\n\n•\tSalah satu pionir genre isekai.\n\n•\tMembuahkan seri anime yang masih terus berlanjut serta film-film teater.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/regarding-reincarnated-to-slime-21",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media"
+    },
+    {
+      "id": "pub_kayachan_nggak_menakutkan_kok_vol_1",
+      "slug": "kayachan-nggak-menakutkan-kok-vol-1",
+      "title": "Kaya-chan Nggak Menakutkan, Kok Vol. 1",
+      "originalTitle": "Kaya-chan Nggak Menakutkan, Kok",
+      "seriesId": "ser_kaya-chan-nggak-menakutkan-kok",
+      "seriesName": "Kaya-chan Nggak Menakutkan, Kok",
+      "volume": 1,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/3nataa8gkt.jpg",
+      "status": "PREORDER",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-21",
+      "isWednesdayRelease": true,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "authors": [
+        "Yuritaro "
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230321139",
+      "synopsis": "Tidak ada orang dewasa yang mengetahui rahasia anak itu.\n\nDi TK, Kaya-chan terkenal sebagai anak yang selalu bermasalah, tapi guru wali kelasnya,\n\nBu Chie, mengetahui kemampuan yang disembunyikan olehnya.\n\nKisah horror menegangkan yang menjadikan TK sebagai panggungnya!!\n\nKeunggulan Buku:\n\n●\tTokoh utamanya, Kaya, adalah anak TK berusia lima tahun yang dianggap \"anak bermasalah\", padahal sebenarnya ia bisa melihat dan melawan roh jahat yang tidak dapat dilihat orang dewasa.\n\n●\tMenggabungkan genre horor supernatural, aksi, dan komedi kehidupan sehari-hari dengan latar yang tidak biasa: sebuah taman kanak-kanak.\n\n●\tPopularitas manganya cukup tinggi hingga mendapatkan adaptasi anime yang tayang pada tahun 2026.\n\n●\tHoror yang tidak hanya mengandalkan Jumpscare.\n\n●\tCocok untuk penggemar horor ringan hingga menengah.",
+      "gramediaUrl": "https://www.gramedia.com/products/kayachan-nggak-menakutkan-kok-vol-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
+    },
+    {
+      "id": "pub_haikyu_the_novel_5",
+      "slug": "haikyu-the-novel-5",
+      "title": "Haikyu!! The Novel 5",
+      "originalTitle": "Haikyu!! The Novel",
+      "seriesId": "ser_haikyu-the",
+      "seriesName": "Haikyu!! The",
+      "volume": 5,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/5vh-e8vz5t.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 89000,
+      "originalPrice": 89000,
+      "authors": [
+        "Haruichi Furudate, Kiyoko Hoshi"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "isbn13": "9786230321313",
+      "synopsis": "Masa 2 bulan dari babak kualifikasi turnamen musim semi voli SMA sampai pertandingan seleksi perwakilan. Tim voli Karasuno menjalani kamp pelatihan, memantau lawan, sampai latihan rahasia untuk persiapan menghadapi lawan yang lebih kuat. Berbagai kejadian yang tidak masuk ke cerita utama ada di novel ini! Cerita-cerita tentang Nekoma dan Fukurodani juga termasuk di dalamnya!\n\nKeunggulan:\n\n•\tNovel spin off dari komik Haikyu yang menceritakan kisah yang tidak ada di komiknya.\n\n•\tCeritanya ringan dan bisa dibaca kapan saja.\n\n•\tCocok untuk penggemar komik dan anime Haikyu.\n\n•\tKomiknya sendiri sudah cetak ulang beberapa kali di m&c!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/haikyu-the-novel-5",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Light Novel from m&c!"
+    },
+    {
+      "id": "pub_light_novel_classroom_of_the_elite_2nd_year_04",
+      "slug": "light-novel-classroom-of-the-elite-2nd-year-04",
+      "title": "Light Novel Classroom of the Elite - 2nd Year 04",
+      "originalTitle": "Classroom of the Elite",
+      "seriesId": "ser_classroom-of-the-elite-ln",
+      "seriesName": "Classroom of the Elite (Novel)",
+      "volume": null,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/natrr8--tl.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 119000,
+      "originalPrice": 119000,
+      "authors": [
+        "Syougo Kinugasa"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "isbn13": "9786347811370",
+      "synopsis": "“Mengingat yang berdiri di hadapan saya hanyalah bocah SMA kelas dua, saya harus akui kau memang mahakarya tertinggi.”\n\nUjian bertahan hidup dua minggu kini memasuki babak kedua. Tahun pertama, tahun kedua, tahun ketiga, hingga Direktur Sementara Tsukishiro—niat dan muslihat berbagai pihak saling berpilin di pulau tak berpenghuni.\n\n“Saya sama sekali tidak takut dikeluarkan dari sekolah. Demi melindungi Ayanokouji-senpai, saya rela melakukan apa saja.”\n\n“Maka dari itu, jangan sampai kalah sebelum dapat izinku, ya~”\n\n“Kalau sampai terjadi apa-apa … biar kuselesaikan saja dengan kekerasan.”\n\n“Komando untuk mengurung Kouenji akan langsung kupegang sendiri.”\n\n“Ya ampun, berisik sekali. Kalau begitu, haruskah aku sedikit menaikkan pace-ku, ya?”\n\n“A-ada sesuatu yang benar-benar harus kusampaikan padamu, Ayanokouji-kun …!”\n\nSeluruh angkatan, seluruh murid, dalam ujian bertahan hidup di pulau tak berpenghuni yang habis-habisan ini. Akhirnya semuanya menemui penyelesaian!\n\nKeunggulan:\n\n•\tTahun kedua menghadirkan angkatan dan sistem baru yang mengubah dinamika persaingan antar kelas menjadi antar angkatan.\n\n•\tBertahan hidup di pulau tak berpenghuni babak kedua beserta para murid kelas 1 menambah suspense cerita.\n\n•\tMendapatkan adaptasi anime yang sudah berlangsung empat musim, dengan pengumuman terbaru musim ke-5 yang sedang diproduksi.\n\n•\tKarakter utama menghadapi konflik yang semakin intens, membuatnya bertindak semakin dominan.\n\n•\tVersi manga yang populer turut memperluas basis penggemar dan memperkuat reputasinya sebagai salah satu judul terlaris di Jepang, juga dikenal luas di dunia.",
+      "gramediaUrl": "https://www.gramedia.com/products/light-novel-classroom-of-the-elite-2nd-year-04",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Light Novel from PGI"
+    },
+    {
+      "id": "pub_light_novel_mushoku_tensei_jobless_reincarnation_06",
+      "slug": "light-novel-mushoku-tensei-jobless-reincarnation-06",
+      "title": "Light Novel Mushoku Tensei – Jobless Reincarnation 06",
+      "originalTitle": "Mushoku Tensei",
+      "seriesId": "ser_mushoku-tensei",
+      "seriesName": "Mushoku Tensei",
+      "volume": 6,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0ve0i8nbv-.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 115000,
+      "originalPrice": 115000,
+      "authors": [
+        "Rifujin Na Magonote"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "isbn13": "9786347811400",
+      "synopsis": "Setelah melalui gejolak pertikaian ayah dan anak—Paul dan Rudeus—kelompok “Dead End” kini melanjutkan perjalanan langsung menuju Kerajaan Asura.\n\nTepat ketika rute menuju Kerajaan Asura telah ditetapkan, Rudeus diberi tahu oleh Dewa Manusia bahwa Lilia si pelayan dan Aisha, adik tirinya, sedang ditahan di Kerajaan Shirone!\n\nKetika Rudeus pergi ke sana untuk membuktikan kebenaran info tersebut, ia bertemu dengan seorang gadis yang sedang menangis. Tapi, wajahnya persis seperti Lilia!\n\nKisah fantasi tentang reinkarnasi dan memulai hidup di dunia baru kini berlanjut di volume keenam!\n\nKeunggulan:\n\n•\tMengangkat tema isekai komedi dengan tokoh utama yang unik.\n\n•\tLayer konflik yang disajikan menambah keseruan cerita dan dapat membuat pembaca menanti kelanjutan setiap ceritanya.\n\n•\tIlustrasi karakter yang menarik untuk pembaca.\n\n•\tTersedia dalam versi Manga, dengan serialisasi 3 season anime.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/light-novel-mushoku-tensei-jobless-reincarnation-06",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Light Novel from PGI"
+    },
+    {
+      "id": "pub_bungo_stray_dogs_dazai_chuya_usia_15_tahun_vol_1",
+      "slug": "bungo-stray-dogs-dazai-chuya-usia-15-tahun-vol-1",
+      "title": "Bungo Stray Dogs Dazai & Chuya – Usia 15 Tahun Vol. 1",
+      "originalTitle": "Bungo Stray Dogs Dazai & Chuya",
+      "seriesId": "ser_bungo-stray-dogs-dazai-chuya",
+      "seriesName": "Bungo Stray Dogs Dazai & Chuya",
+      "volume": 1,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/i5-ax-i-xa.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "authors": [
+        "Kafka Asagiri"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811028",
+      "synopsis": "7 tahun sebelum “masa kini”, di mana Agensi Detektif Bersenjata dan Port Mafia bertarung dengan sengit di Kota Yokohama. Seorang anak laki-laki anggota Port Mafia, Osamu Dazai, diperintah bosnya, Ogai Mori, untuk menyelidiki rumor aneh yang disebut “Arabahaki”.\n\nDi tengah penyelidikan tersebut, ia bertemu dengan raja dari kelompok bernama “Domba” yang hanya terdiri dari anak-anak di bawah umur, yakni Chuya Nakahara.\n\nOsamu Dazai dan Chuya Nakahara...\n\nKisah awal dari 2 orang yang kelak akan dikenal sebagai “Hitam Kembar”.\n\nKeunggulan:\n\n•\tSpin-off dari seri Bungo Stray Dogs, yang menceritakan tentang Dazai dan Chuya saat mereka berusia 15 tahun.\n\n•\tDazai dan Chuya adalah dua karakter terpopuler dalam seri Bungo Stray Dogs\n\n•\tArtstyle yang detail dan bagus.\n\n•\tDigambar langsung oleh komikus orisinalnya\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/bungo-stray-dogs-dazai-chuya-usia-15-tahun-vol-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI"
+    },
+    {
+      "id": "pub_jigokuraku_vol_10",
+      "slug": "jigokuraku-vol-10",
+      "title": "Jigokuraku Vol. 10",
+      "originalTitle": "Jigokuraku",
+      "seriesId": "ser_jigokuraku",
+      "seriesName": "Jigokuraku",
+      "volume": 10,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/aj21ol80ro.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "authors": [
+        "Yuji Kaku"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811417",
+      "synopsis": "Para pendarat pertama yang terdiri dari pendosa dan Yamada Asaemon bekerja sama untuk mendapatkan ramuan, namun banyak korban yang berjatuhan untuk mengalahkan Tensen. Pada saat itu, pendarat tambahan pimpinan Shugen yang memiliki beragam motif akhirnya tiba di Horai! Salah seorang Tensen, Rien, memiliki ambisi besar untuk menginvasi daratan utama dan situasinya pun makin kacau!? Jilid kesepuluh dari drama penuh aksi seorang ninja yang mendalami makna hidup dan mati pun dimulai!\n\nKeunggulan:\n\n•\tMengangkat tema aksi penuh ketegangan tentang ninja pelarian yang berjuang agar bisa bertemu kembali dengan istrinya.\n\n•\tMemiliki alur cerita yang menarik dengan karakter-karakter yang unik.\n\n•\tIlustrasinya sangat detail dan khas cerita klasik, yang mampu menangkap suasana serta nuansa cerita.\n\n•\tPeringkat ke-11 untuk kategori Web-Manga dalam Next Manga Awards pada tahun 2018.\n\n•\tMemiliki serialisasi anime season 1 dan season 2-nya yang ditayangkan di Netflix.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/jigokuraku-vol-10",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI"
+    },
+    {
+      "id": "pub_albus_changes_the_world_2",
+      "slug": "albus-changes-the-world-2",
+      "title": "Albus Changes the World! 2",
+      "originalTitle": "Albus Changes the World!",
+      "seriesId": "ser_albus-changes-the-world",
+      "seriesName": "Albus Changes the World!",
+      "volume": 2,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/5s-n4evga7.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "authors": [
+        "Akihisa Maki"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811363",
+      "synopsis": "Aku akan mengalahkan raja iblis. Sebelum kau menjadi raja iblis... Untuk pertama kalinya Albus bertemu lagi dengan rekan perjalanannya di masa lalu, seorang prajurit bernama Lauro. Roda gigi perjalanan yang direncanakan untuk masa depan mengalami sedikit perubahan, dan…\n\nPetualangan baru Timeleap fantasi sang pahlawan untuk menyelamatkan dunia dan seorang gadis!\n\nKeunggulan:\n\n•\tPeringkat 12 dalam Next Manga Awards 2025.\n\n•\tDirekomendasikan oleh akun sosial media Frieren.\n\n•\tDirekomendasikan oleh komedian Jepang, Akira Kawashima.\n\n•\tKonsep cerita fantasi yang unik.\n\n•\tMemiliki visual yang memikat.\n\n•\tPembagian alur antara momen aksi, komedi, dan plot serius berjalan secara seimbang, sehingga pembaca tidak cepat merasa bosan di setiap bab.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/albus-changes-the-world-2",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI"
+    },
+    {
+      "id": "pub_blue_lock_33",
+      "slug": "blue-lock-33",
+      "title": "Blue Lock 33",
+      "originalTitle": "Blue Lock",
+      "seriesId": "ser_blue-lock",
+      "seriesName": "Blue Lock",
+      "volume": 33,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/v-e3z2-el7.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "authors": [
+        "Muneyuki Kaneshiro"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811356",
+      "synopsis": "Harapan dan keputusasaan bercampur-aduk di laga final!\n\nTibalah momen penentuan melawan Prancis di Liga Neo Egoist!!\n\nDemi merebut gol terakhir, Isagi dan Kaiser bekerja sama serta menstimulasi keseluruhan tim Jerman! Prancis yang tidak mau kalah juga mulai berkoordinasi, membuat pertempuran maju-mundur ini semakin intens! Di tengah medan yang memanas, Ness masih saja mencari Kaiser dan ditinggalkan seorang diri. Ia pun mencari jalan untuk mendapatkan kembali dirinya….\n\nSiapa yang akhirnya akan muncul sebagai pemenang Liga Neo Egoist yang menggemparkan!? Saksikan hasil yang paling tidak terprediksi sepanjang sejarah ini!!\n\nUsai pertempuran yang mematikan, sang Neo Egoist pun terlahir!\n\nEgo yang muncul dari Blue Lock akan menggoncang dunia!!\n\nKeunggulan:\n\n•\tMengangkat tema sepak bola yang digandrungi banyak orang.\n\n•\tMemakai referensi karakter, klub sepak bola, dan teknik yang berasal dari dunia nyata.\n\n•\tArtstyle-nya bagus dan memanjakan mata.\n\n•\tJudul best seller Jepang yang sudah diterbitkan di berbagai negara.\n\n•\tMemiliki serialisasi anime season 1 yang dirilis pada tahun 2022, season 2 pada tahun 2024, dan season 3 yang sedang dalam proses produksi.\n\n•\tMemiliki film layar lebar Live-Action yang akan segera tayang di tahun 2026.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/blue-lock-33",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI"
     }
   ],
   "series": [
@@ -105985,10 +106348,11 @@
       "author": "Akihisa Maki",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 1,
-      "latestVolume": 1,
+      "totalVolumes": 2,
+      "latestVolume": 2,
       "availableVolumes": [
-        1
+        1,
+        2
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/l----1x11a.jpeg",
       "description": "Raja iblis sudah dikalahkan. dunia pun damai. Tapi aku terlambat. Pahlawan Albus yang mengulangi petualangan ini tampak tergesa-gesa karena suatu alasan. Ini adalah cerita tentang menyelamatkan dunia, dan perulangan fantasi real time attack dari pahlawan yang tahu segalanya!\n\nKeunggulan\n\n- Peringkat 12 dalam Next Manga Awards 2025.\n\n- Direkomendasikan oleh akun sosial media Frieren.\n\n- Direkomendasikan oleh komedian Jepang, Akira Kawashima.\n\n- Konsep cerita fantasi yang unik.\n\n- Memiliki visual yang memikat.\n\n- Pembagian alur antara momen aksi, komedi, dan plot serius berjalan secara seimbang, sehingga pembaca tidak cepat merasa bosan di setiap bab.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -106637,8 +107001,8 @@
       "author": "Miura Kouji",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 13,
-      "latestVolume": 13,
+      "totalVolumes": 14,
+      "latestVolume": 14,
       "availableVolumes": [
         1,
         2,
@@ -106652,7 +107016,8 @@
         10,
         11,
         12,
-        13
+        13,
+        14
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-61b0u-e1v.jpg",
       "description": "Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang. Komik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca. Sinopsis Buku: Masa muda yang penuh dengan kenangan, seperti apakah itu. Berjuang sekuat tenaga untuk suatu tujuan. Mengalami cinta yang penuh rasa manis dan pahit. Taiki Inomata memiliki seorang kakak kelas yang memikat hatinya. Chinatsu Kano yang selalu berusaha keras untuk berlatih paling awal setiap pagi. Cinta yang rasanya begitu jauh dan tak tercapai, tapi mereka sama-sama berusaha untuk menggapai kemenangan di turnamen nasional. Tiba-tiba saja, kesempatan tiba. Chinatsu akan tinggal serumah dengan Taiki. Mendadak sekali. Selling Point: Kisah drama sekolah dengan tokoh-tokoh yang berjuang keras untuk berusaha menggapai prestasi. Nuansanya mirip dengan komik-komik drama zaman dulu."
@@ -106667,8 +107032,8 @@
       "author": "Muneyuki Kaneshiro",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 39,
-      "latestVolume": 32,
+      "totalVolumes": 40,
+      "latestVolume": 33,
       "availableVolumes": [
         1,
         2,
@@ -106701,7 +107066,8 @@
         29,
         30,
         31,
-        32
+        32,
+        33
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x47u7-8v05.jpeg",
       "description": "Demi mengejar impian yang mustahil, jadi nomor satu dunia, 300 striker egois dikumpulkan!\n\nTahun 2018, timnas Jepang tereliminasi di babak 16 besar Piala Dunia. Sebagai respons atas kekalahan tersebut, Asosiasi Sepak Bola Jepang membangun asrama pelatihan untuk 300 atlet SMA unggulan demi memenangkan Piala Dunia yang diberi nama “Blue Lock”. Pria yang menjabat sebagai pelatih di sana, Jinpachi Ego, menegaskan bahwa yang diperlukan Jepang adalah “striker yang penuh keegoisan”. Yoichi Isagi, seorang striker tak bernama, dan kawan-kawannya, harus bersaing untuk mengubah dirinya jadi seorang egois!\n\nMatilah sekali, sepak bola Jepang! Demi menggapai impian yang baru!!\n\nKeunggulan Buku:\n\n- Mengangkat tema sepak bola yang digandrungi banyak orang.\n\n- Memakai referensi karakter, klub sepak bola, dan teknik yang berasal dari dunia nyata.\n\n- Artstyle-nya bagus dan memanjakan mata.\n\n- Judul best seller Jepang yang sudah diterbitkan di berbagai negara.\n\n- Memiliki serialisasi anime season 1 yang dirilis pada tahun 2022, season 2 pada tahun 2024, dan season 3 yang sedang dalam proses produksi.\n\n******\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nPilihan Edisi & Set Resmi: Regular, Regular"
@@ -107029,6 +107395,24 @@
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/9s7b4tac-a.jpg",
       "description": "Ini adalah kisah tentang \"bagaimana jika\" yang mungkin terjadi.\n\nDemi mendapatkan kembali adiknya yang diculik, Ryunosuke Akutagawa bersumpah untuk membalas dendam pada \"Pria Berbaju Hitam\". Namun saat ia hampir mati kelaparan di tengah perjalanannya, seorang pria yang mengaku sebagai pegawai \"Agensi Detektif Bersenjata\", Sakunosuke Oda, muncul di hadapannya.\n\nKeunggulan Buku:\n\n- Merupakan alternate-universe dari seri Bungo Stray Dogs, yang menceritakan Ryunosuke sebagai anggota agensi detektif dan Atsushi sebagai anggota Port Mafia.\n\n- Artstyle-nya men-detail dan bagus.\n\n- Sudah diadaptasi ke live action pada tahun 2022.\n\nBungo Stray Dogs BEAST 1 – Special Set\n\nTerdiri dari:\n\n1. Buku Komik Bungo Stray Dogs BEAST Vol.1\n\n2. Special Jacket\n\n3. Acrylic\n\n4. Bookmark\n\n5. Artprint Set\n\n******\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
+    },
+    {
+      "id": "ser_bungo-stray-dogs-dazai-chuya",
+      "slug": "bungo-stray-dogs-dazai-chuya",
+      "name": "Bungo Stray Dogs Dazai & Chuya",
+      "originalTitle": "Bungo Stray Dogs Dazai & Chuya",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Kafka Asagiri",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [
+        1
+      ],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/i5-ax-i-xa.jpg",
+      "description": "7 tahun sebelum “masa kini”, di mana Agensi Detektif Bersenjata dan Port Mafia bertarung dengan sengit di Kota Yokohama. Seorang anak laki-laki anggota Port Mafia, Osamu Dazai, diperintah bosnya, Ogai Mori, untuk menyelidiki rumor aneh yang disebut “Arabahaki”.\n\nDi tengah penyelidikan tersebut, ia bertemu dengan raja dari kelompok bernama “Domba” yang hanya terdiri dari anak-anak di bawah umur, yakni Chuya Nakahara.\n\nOsamu Dazai dan Chuya Nakahara...\n\nKisah awal dari 2 orang yang kelak akan dikenal sebagai “Hitam Kembar”.\n\nKeunggulan:\n\n•\tSpin-off dari seri Bungo Stray Dogs, yang menceritakan tentang Dazai dan Chuya saat mereka berusia 15 tahun.\n\n•\tDazai dan Chuya adalah dua karakter terpopuler dalam seri Bungo Stray Dogs\n\n•\tArtstyle yang detail dan bagus.\n\n•\tDigambar langsung oleh komikus orisinalnya\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_bungou-stray-dogs",
@@ -107378,7 +107762,7 @@
       "author": "Syougo Kinugasa",
       "type": "LIGHT_NOVEL",
       "status": "ONGOING",
-      "totalVolumes": 9,
+      "totalVolumes": 10,
       "latestVolume": 5,
       "availableVolumes": [
         1,
@@ -109443,13 +109827,14 @@
       "author": "Haruichi Furudate, Kiyoko Hoshi",
       "type": "LIGHT_NOVEL",
       "status": "ONGOING",
-      "totalVolumes": 4,
-      "latestVolume": 4,
+      "totalVolumes": 5,
+      "latestVolume": 5,
       "availableVolumes": [
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/a5n4o461ik.jpeg",
       "description": "Berlatih, memasak, dan bertugas untuk membeli barang!? Kamp pelatihan Golden Week Klub Voli SMA Karasuno diadakan sebelum babak penyisihan Interhigh! Demi memenangkan pertandingan sengit tersebut, Hinata dan kawan-kawan berlatih keras dan menjalani hari-hari bersama selama kamp pelatihan berlangsung. Versi novel ini menceritakan \"sudut pandang lain dari kamp pelatihan\" yang tidak terungkap dalam cerita utama!!\n\nSinopsis Cerita Haikyu The Novel :\n\nSpin off komik Haikyu yang mengambil beberapa adegan di komiknya yang tidak diceritakan. Di buku pertama ini mengambil cerita saat SMA Karasuno mengikuti Kamp Pelatihan selama 4 hari 3 malam demi berlatih untuk persiapan menuju babak penyisihan Interhigh. Ketika sekumpulan siswa SMA menginap bersama-sama, berbagai insiden konyol pasti tidak bisa dihindari. Kamp pelatihan pertama Hinata ini pun dijamin akan sangat meriah!\n\nKeunggulan\t:\n\n-Cerita sampingan dari komik best-seller, Haikyu!! - Fly High! Volleyball!\n\n-Sudah sangat ditunggu-tunggu oleh penggemar Haikyu!!, karena berisi banyak adegan lucu seputar tokoh-tokoh kesukaan mereka.\n\n- Bahasa lugas dan mudah dimengerti, berisi cerita-cerita pendek yang mudah dicerna untuk bacaan ringan.\n\n******\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan. Membaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi. Pilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca. Temukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik. Bergabunglah dalam kelompok membaca atau forum literasi. Diskusikan buku yang Anda baca dan dapatkan rekomendasi dari sesama pembaca. Buat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.\n\nLibatkan keluarga dalam kegiatan membaca. Bacakan cerita untuk anak-anak atau ajak mereka membaca bersama. Ini menciptakan ikatan keluarga yang erat melalui kegiatan positif. Jangan ragu untuk menjelajahi genre baru. Terkadang, kejutan terbaik datang dari buku yang tidak pernah Anda bayangkan akan Anda nikmati. Manfaatkan teknologi dengan membaca buku digital atau bergabung dalam komunitas literasi online. Ini membuka peluang untuk terhubung dengan pembaca dari seluruh dunia."
@@ -110211,8 +110596,8 @@
       "author": "Yuji Kaku",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 9,
-      "latestVolume": 9,
+      "totalVolumes": 10,
+      "latestVolume": 10,
       "availableVolumes": [
         1,
         2,
@@ -110222,7 +110607,8 @@
         6,
         7,
         8,
-        9
+        9,
+        10
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/5kzx5k-615.jpeg",
       "description": "Gabimaru yang ditakuti sebagai ninja terkuat dan ditangkap sebagai ninja pelarian, diberi sebuah syarat agar dinyatakan tidak bersalah dari algojo Sagiri Yamada Asaemon. Syaratnya adalah mendapatkan \"Ramuan Keabadian\" di tanah yang dirumorkan sebagai surga! Drama penuh aksi seorang ninja yang mendalami makna hidup dan mati pun dimulai!\n\nKeunggulan Buku:\n\n- Mengangkat tema aksi penuh ketegangan tentang ninja pelarian yang berjuang agar bisa bertemu kembali dengan istrinya.\n\n- Memiliki alur cerita yang menarik dengan karakter-karakter yang unik.\n\n- Ilustrasinya sangat detail dan khas cerita klasik, yang mampu menangkap suasana serta nuansa cerita.\n\n- Peringkat ke-11 untuk kategori Web-Manga dalam Next Manga Awards pada tahun 2018.\n\n- Memiliki serialisasi anime season 1 yang ditayangkan di Netflix dan season 2-nya direncanakan rilis pada Januari 2026.\n\n******\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -110677,6 +111063,24 @@
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/xra9-2a7v-.png",
       "description": "Dia kembaliii!! 0__0|| Siap-siap berlatih menahan emosi bersama Kariage, teman-teman! ^__^ ***** Kariage Kun 65 adalah salah satu volume dari seri manga komedi populer karya Masashi Ueda. Seri ini pertama kali diterbitkan pada tahun 1981 dan terus menarik perhatian pembaca karena humor yang ringan dan relatable. Cerita dalam Kariage Kun berpusat pada kehidupan sehari-hari seorang pegawai kantoran bernama Kariage Kun, yang dikenal memiliki sifat usil, cerdik, dan suka menciptakan lelucon di tempat kerjanya. Meski sering bertingkah jahil, ia sebenarnya adalah orang yang baik hati dan penuh ide kreatif, yang sering kali memanfaatkan situasi biasa menjadi momen yang penuh tawa. Volume ke-65 melanjutkan cerita khas seri ini dengan tema humor yang fokus pada dinamika kantor, hubungan antarpegawai, dan situasi absurd yang menghibur. Setiap bab biasanya berdiri sendiri, sehingga pembaca dapat menikmati lelucon tanpa harus mengikuti alur cerita sebelumnya **** Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang. Komik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nPilihan Edisi & Set Resmi: Regular, Regular"
+    },
+    {
+      "id": "ser_kaya-chan-nggak-menakutkan-kok",
+      "slug": "kaya-chan-nggak-menakutkan-kok",
+      "name": "Kaya-chan Nggak Menakutkan, Kok",
+      "originalTitle": "Kaya-chan Nggak Menakutkan, Kok",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "author": "Yuritaro ",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [
+        1
+      ],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/3nataa8gkt.jpg",
+      "description": "Tidak ada orang dewasa yang mengetahui rahasia anak itu.\n\nDi TK, Kaya-chan terkenal sebagai anak yang selalu bermasalah, tapi guru wali kelasnya,\n\nBu Chie, mengetahui kemampuan yang disembunyikan olehnya.\n\nKisah horror menegangkan yang menjadikan TK sebagai panggungnya!!\n\nKeunggulan Buku:\n\n●\tTokoh utamanya, Kaya, adalah anak TK berusia lima tahun yang dianggap \"anak bermasalah\", padahal sebenarnya ia bisa melihat dan melawan roh jahat yang tidak dapat dilihat orang dewasa.\n\n●\tMenggabungkan genre horor supernatural, aksi, dan komedi kehidupan sehari-hari dengan latar yang tidak biasa: sebuah taman kanak-kanak.\n\n●\tPopularitas manganya cukup tinggi hingga mendapatkan adaptasi anime yang tayang pada tahun 2026.\n\n●\tHoror yang tidak hanya mengandalkan Jumpscare.\n\n●\tCocok untuk penggemar horor ringan hingga menengah."
     },
     {
       "id": "ser_kebijakan-publik-untuk-pemimpin-indonesia",
@@ -112147,6 +112551,24 @@
       "description": "Di pegununungan yang jarang tersentuh manusia, sering terjadi hal-hal gaib. Mengapa kecelakaan sering terjadi di tempat-tempat seperti itu? Apa sebenarnya kebenaran di baliknya? Mari ikuti berbagai kisah menyeramkan di pegunungan karya Junpei Azumi, yang kali ini diadaptasi menjadi komik oleh para komikus ternama:\n\n•\tJunji Ito\n\n•\tMimika Ito\n\n•\tAkemi Inokawa\n\n•\tDaisuke Imai\n\n•\tAkihito Yoshitomi\n\nTiga pria bertemu di sebuah resor di “Gunung H”, tempat mereka akan menginap selama satu malam. Azumi gemar mendaki, Tenno seorang fotografer, dan Ishida pendaki gunung berpengalaman. Azumi menyinggung rumor tentang berbagai kejadian gaib di gunung tersebut. Pada saat itu, manajer resor datang dan menceritakan sebuah kisah tentang seorang wanita yang sering menginap di resor itu. Wanita itu berencana untuk mendaki gunung sebentar, tetapi tidak pernah kembali lagi.\n\nKeunggulan Buku:\n\nAntologi berbagai kisah seram di pegunungan karya Junpei Azumi, dengan ilustrasi oleh para komikus terkenal: Junji Ito, Mimika Ito, Akemi Inokawa, Daisuke Imai, Akihito Yoshitomi"
     },
     {
+      "id": "ser_mushoku-tensei",
+      "slug": "mushoku-tensei",
+      "name": "Mushoku Tensei",
+      "originalTitle": "Mushoku Tensei",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Rifujin Na Magonote",
+      "type": "LIGHT_NOVEL",
+      "status": "ONGOING",
+      "totalVolumes": 6,
+      "latestVolume": 6,
+      "availableVolumes": [
+        6
+      ],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0ve0i8nbv-.jpg",
+      "description": "Setelah melalui gejolak pertikaian ayah dan anak—Paul dan Rudeus—kelompok “Dead End” kini melanjutkan perjalanan langsung menuju Kerajaan Asura.\n\nTepat ketika rute menuju Kerajaan Asura telah ditetapkan, Rudeus diberi tahu oleh Dewa Manusia bahwa Lilia si pelayan dan Aisha, adik tirinya, sedang ditahan di Kerajaan Shirone!\n\nKetika Rudeus pergi ke sana untuk membuktikan kebenaran info tersebut, ia bertemu dengan seorang gadis yang sedang menangis. Tapi, wajahnya persis seperti Lilia!\n\nKisah fantasi tentang reinkarnasi dan memulai hidup di dunia baru kini berlanjut di volume keenam!\n\nKeunggulan:\n\n•\tMengangkat tema isekai komedi dengan tokoh utama yang unik.\n\n•\tLayer konflik yang disajikan menambah keseruan cerita dan dapat membuat pembaca menanti kelanjutan setiap ceritanya.\n\n•\tIlustrasi karakter yang menarik untuk pembaca.\n\n•\tTersedia dalam versi Manga, dengan serialisasi 3 season anime.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
+    },
+    {
       "id": "ser_mushoku-tensei---jobless-reincarnation",
       "slug": "mushoku-tensei---jobless-reincarnation",
       "name": "Mushoku Tensei - Jobless Reincarnation",
@@ -112762,6 +113184,7 @@
         40,
         41,
         42,
+        43,
         86,
         89,
         90,
@@ -113859,6 +114282,24 @@
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/1sgrasi6i-.jpg",
       "description": "Volume ke-10 dari seri Regarding Reincarnated As Slime karya Taiki Kawakami. Menghadirkan kelanjutan kisah Manga yang diterbitkan secara resmi oleh Elex Media Komputindo di Indonesia.\n\nPilihan Edisi & Set Resmi: Regular, Regular"
+    },
+    {
+      "id": "ser_regarding-reincarnated-to-slime",
+      "slug": "regarding-reincarnated-to-slime",
+      "name": "Regarding Reincarnated to Slime",
+      "originalTitle": "Regarding Reincarnated to Slime",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "author": "Taiki Kawakami",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 21,
+      "latestVolume": 21,
+      "availableVolumes": [
+        21
+      ],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/4ctdr--1ee.jpg",
+      "description": "Rimuru dan Hinata kembali bertarung. Para pengikut Hinata pun dihadapi oleh Sion dan bawahannya. Keadaan semakin berkembang menuju perang terbuka. Situasi yang ingin dihindari oleh Rimuru ini semua terjadi karena akal-akalan Tujuh Tetua. Lalu di balik itu semua, ada konspirasi dari kekuatan besar yang ingin menguasai negara-negara di barat. Bisakah Rimuru dan Hinata mencapai perdamaian?\n\nKeunggulan:\n\n•\tSeri panjang best selling yang selalu laku.\n\n•\tSalah satu pionir genre isekai.\n\n•\tMembuahkan seri anime yang masih terus berlanjut serta film-film teater.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_reon-and-friends",
@@ -143265,9 +143706,139 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-07",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_box_14_init",
+      "bookId": "pub_blue_box_14",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_43_2026_init",
+      "bookId": "pub_one_piece_43_2026",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_regarding_reincarnated_to_slime_21_init",
+      "bookId": "pub_regarding_reincarnated_to_slime_21",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kayachan_nggak_menakutkan_kok_vol_1_init",
+      "bookId": "pub_kayachan_nggak_menakutkan_kok_vol_1",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_the_novel_5_init",
+      "bookId": "pub_haikyu_the_novel_5",
+      "price": 89000,
+      "currentPrice": 89000,
+      "originalPrice": 89000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_classroom_of_the_elite_2nd_year_04_init",
+      "bookId": "pub_light_novel_classroom_of_the_elite_2nd_year_04",
+      "price": 119000,
+      "currentPrice": 119000,
+      "originalPrice": 119000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_mushoku_tensei_jobless_reincarnation_06_init",
+      "bookId": "pub_light_novel_mushoku_tensei_jobless_reincarnation_06",
+      "price": 115000,
+      "currentPrice": 115000,
+      "originalPrice": 115000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_dazai_chuya_usia_15_tahun_vol_1_init",
+      "bookId": "pub_bungo_stray_dogs_dazai_chuya_usia_15_tahun_vol_1",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_jigokuraku_vol_10_init",
+      "bookId": "pub_jigokuraku_vol_10",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_albus_changes_the_world_2_init",
+      "bookId": "pub_albus_changes_the_world_2",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_33_init",
+      "bookId": "pub_blue_lock_33",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791377308",
+      "startedAt": "2026-10-07T12:44:37.000Z",
+      "finishedAt": "2026-10-07T12:48:28.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1394,
+      "productsRejected": 374,
+      "productsUpdated": 1170,
+      "productsInserted": 11,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 231561,
+      "success": true
+    },
     {
       "id": "sync_1791347923",
       "startedAt": "2026-10-07T04:34:26.000Z",
@@ -143646,26 +144217,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 210631,
-      "success": true
-    },
-    {
-      "id": "sync_1790885551",
-      "startedAt": "2026-10-01T20:08:55.000Z",
-      "finishedAt": "2026-10-01T20:12:31.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1506,
-      "productsAccepted": 1417,
-      "productsRejected": 92,
-      "productsUpdated": 977,
-      "productsInserted": 440,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 216456,
       "success": true
     }
   ]
