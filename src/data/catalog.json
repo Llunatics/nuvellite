@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-06T22:27:21.000Z",
+  "lastUpdated": "2026-10-07T04:38:43.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -41642,7 +41642,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-07-21",
       "isWednesdayRelease": false,
-      "currentPrice": 32500,
+      "currentPrice": 58500,
       "authors": [
         "Syougo Kinugasa"
       ],
@@ -99601,10 +99601,10 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2024/5/20/yhikvp77prsfvfjaeqdokm.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2024-05-20",
       "isWednesdayRelease": false,
-      "currentPrice": 33750,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "authors": [
         "Elex Media Komputindo"
@@ -105593,6 +105593,39 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media"
+    },
+    {
+      "id": "pub_hunter_hat_press_ssst_x_gerai_kompas",
+      "slug": "hunter-hat-press-ssst-x-gerai-kompas",
+      "title": "Hunter Hat Press Ssst X Gerai Kompas",
+      "originalTitle": "Hunter Hat Press Ssst X Gerai Kompas",
+      "seriesId": "ser_hunter-hat-press-ssst-x-gerai-kompas",
+      "seriesName": "Hunter Hat Press Ssst X Gerai Kompas",
+      "volume": null,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0-s-ttg352.png",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-07",
+      "isWednesdayRelease": true,
+      "currentPrice": 179000,
+      "originalPrice": 179000,
+      "authors": [
+        "Merchandise Gerai Kompas"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "",
+      "synopsis": "Dedikasi dan determinasi para pekerja media memastikan kita senantiasa mendapatkan informasi tepercaya. Dengan keberanian menerjang berbagai ruang untuk menyaksikan peristiwa langsung, mereka menjadi mata dan telinga kita semua. Semangat ini menginspirasi kolaborasi Super Sentimental Secert Theory (SSST)  x Kompas 60 Tahun dalam bentuk hunter hat.\n\nDibuat dengan desain khas SSST, topi ini menjadi aksesori fungsional sekaligus statement piece. Terbuat dari 100% cotton, hunter hat ini nyaman dipakai seharian, adem, dan memiliki sirkulasi udara yang baik. Cocok digunakan melindungi kepala dari panas matahari saat di lapangan atau sekadar menambah karakter pada gaya harian.\n\nTopi ini mudah dilipat dan dibawa ke mana saja, siap menemani langkahmu, baik saat bekerja, berkelana, maupun jalan-jalan santai.",
+      "gramediaUrl": "https://www.gramedia.com/products/hunter-hat-press-ssst-x-gerai-kompas",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media"
     }
   ],
   "series": [
@@ -109774,6 +109807,22 @@
       "availableVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/products/-9hoiia5r-.jpg",
       "description": "Masa muda yang penuh riak dan gejolak! Jilid ini memuat 4 bab baru (termasuk bab baru yang ditulis langsung oleh HERO), 3 bab ekstra yang belum disertakan dalam jilid sebelumnya, dan bab terakhir versi Hori yang dirilis pada \"Horimiya Exhibition\" tahun 2021 yang mendapat sambutan hangat! Keseharian Hori, Miyamura, dan kawan-kawan mereka yang penuh warna akan terus bersinar dalam album ini. Inilah jilid bonus yang tak disangka-sangka dari Horimiya, kisah kehidupan sekolah yang penuh riak dan gejolak!\n\nSelling Point:\n\n- Diangkat dari web comic populer di Jepang.\n\n- Komik romance yang berbumbu komedi.\n\n- Telah diangkat menjadi serial anime pada Januari 2021.\n\n- Telah diangkat dalam bentuk live action dan seri animasi TV di Netflix.\n\n*****\n\nManga Horimiya yang dibuat oleh komikus bernama HERO ini bercerita tentang Kyoko Hori adalah gadis remaja rata-rata ... yang memiliki sisi yang dia tidak ingin orang lain temukan. Lalu ada teman sekelasnya Izumi Miyamura, rata-rata anak laki-laki berkacamata di sekolah dan orang yang sama sekali berbeda di luar. Ketika keduanya bertemu secara tak terduga, mereka menemukan rahasia satu sama lain dan mengembangkan persahabatan yang tak terduga.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
+    },
+    {
+      "id": "ser_hunter-hat-press-ssst-x-gerai-kompas",
+      "slug": "hunter-hat-press-ssst-x-gerai-kompas",
+      "name": "Hunter Hat Press Ssst X Gerai Kompas",
+      "originalTitle": "Hunter Hat Press Ssst X Gerai Kompas",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "author": "Merchandise Gerai Kompas",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0-s-ttg352.png",
+      "description": "Dedikasi dan determinasi para pekerja media memastikan kita senantiasa mendapatkan informasi tepercaya. Dengan keberanian menerjang berbagai ruang untuk menyaksikan peristiwa langsung, mereka menjadi mata dan telinga kita semua. Semangat ini menginspirasi kolaborasi Super Sentimental Secert Theory (SSST)  x Kompas 60 Tahun dalam bentuk hunter hat.\n\nDibuat dengan desain khas SSST, topi ini menjadi aksesori fungsional sekaligus statement piece. Terbuat dari 100% cotton, hunter hat ini nyaman dipakai seharian, adem, dan memiliki sirkulasi udara yang baik. Cocok digunakan melindungi kepala dari panas matahari saat di lapangan atau sekadar menambah karakter pada gaya harian.\n\nTopi ini mudah dilipat dan dibawa ke mana saja, siap menemani langkahmu, baik saat bekerja, berkelana, maupun jalan-jalan santai."
     },
     {
       "id": "ser_hunter-x-hunter",
@@ -143184,9 +143233,61 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-06",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_classroom_of_the_elite_vol_9_1791347923",
+      "bookId": "pub_classroom_of_the_elite_vol_9",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 32500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_reigen_1791347923",
+      "bookId": "pub_mob_psycho_100_reigen",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_hunter_hat_press_ssst_x_gerai_kompas_init",
+      "bookId": "pub_hunter_hat_press_ssst_x_gerai_kompas",
+      "price": 179000,
+      "currentPrice": 179000,
+      "originalPrice": 179000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-07",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791347923",
+      "startedAt": "2026-10-07T04:34:26.000Z",
+      "finishedAt": "2026-10-07T04:38:43.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1394,
+      "productsRejected": 374,
+      "productsUpdated": 1180,
+      "productsInserted": 1,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 256743,
+      "success": true
+    },
     {
       "id": "sync_1791325641",
       "startedAt": "2026-10-06T22:23:14.000Z",
