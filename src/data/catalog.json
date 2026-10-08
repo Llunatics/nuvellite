@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-08T04:49:36.000Z",
+  "lastUpdated": "2026-10-08T12:58:30.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -41570,7 +41570,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-07-22",
       "isWednesdayRelease": false,
-      "currentPrice": 49500,
+      "currentPrice": 41250,
       "authors": [
         "Sugaru Miaki, Yuki Hotate, Shion"
       ],
@@ -41588,7 +41588,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 49500
+      "originalPrice": 55000
     },
     {
       "id": "pub_blue_lock_23",
@@ -105989,6 +105989,72 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from PGI"
+    },
+    {
+      "id": "pub_koloni_wind_rider_sky_age_new_edition",
+      "slug": "koloni-wind-rider-sky-age-new-edition",
+      "title": "Koloni : Wind Rider Sky Age - New Edition",
+      "originalTitle": "Wind Rider Sky Age",
+      "seriesId": "ser_wind-rider-sky-age",
+      "seriesName": "Wind Rider Sky Age",
+      "volume": null,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/c3w9a-8n8o.jpg",
+      "status": "PREORDER",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-14",
+      "isWednesdayRelease": true,
+      "currentPrice": 72000,
+      "originalPrice": 72000,
+      "authors": [
+        "Is Yuniarto"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "isbn13": "9786230320767",
+      "synopsis": "Roulette Otovic, pekerja pembersih awan asam di Aeropolis Moskova, selalu yakin akan kemampuannya\n\nmengendarai angin bersama 'Hurricane', skybike andalannya.\n\nNamun sebuah kecelakaan menyeretnya menuju petualangan mendebarkan, menghadapi para sky pirate dalam pencarian harta karun terpenting di era abad langit!",
+      "gramediaUrl": "https://www.gramedia.com/products/koloni-wind-rider-sky-age-new-edition",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Light Novel from m&c!"
+    },
+    {
+      "id": "pub_plants_vs_zombies__komik_dinosaurus__berburu_bola_impian",
+      "slug": "plants-vs-zombies--komik-dinosaurus--berburu-bola-impian",
+      "title": "Plants Vs Zombies - Komik Dinosaurus : Berburu Bola Impian",
+      "originalTitle": "Plants Vs Zombies",
+      "seriesId": "ser_plants-vs-zombies",
+      "seriesName": "Plants Vs Zombies",
+      "volume": null,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/r-0-ms08za.jpg",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "releaseDate": "2025-07-31",
+      "isWednesdayRelease": false,
+      "currentPrice": 100000,
+      "originalPrice": 125000,
+      "authors": [
+        "Xiao Jiangnan"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230317576",
+      "synopsis": "Bonk Choy dan Xiao Xuan, si Lufengosaurus, memulai perjalanan berbahaya untuk menemukan Bola Impian, artefak legendaris yang bisa mengabulkan permohonan. Namun, mereka harus mengumpulkan tiga harta karun agar Bola Impian dapat mewujudkan keinginan mereka.\n\nDi tengah petualangan, mereka menghadapi rintangan mendebarkan dan berusaha mengalahkan pasukan kegelapan yang ingin merebut Bola Impian.\n\nMampukah mereka mendapatkan tiga harta karun itu dan meraih impian?\n\n*****\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan. Membaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi. Pilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca. Temukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik. Bergabunglah dalam kelompok membaca atau forum literasi. Diskusikan buku yang Anda baca dan dapatkan rekomendasi dari sesama pembaca. Buat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.\n\nLibatkan keluarga dalam kegiatan membaca. Bacakan cerita untuk anak-anak atau ajak mereka membaca bersama. Ini menciptakan ikatan keluarga yang erat melalui kegiatan positif. Jangan ragu untuk menjelajahi genre baru. Terkadang, kejutan terbaik datang dari buku yang tidak pernah Anda bayangkan akan Anda nikmati. Manfaatkan teknologi dengan membaca buku digital atau bergabung dalam komunitas literasi online. Ini membuka peluang untuk terhubung dengan pembaca dari seluruh dunia.",
+      "gramediaUrl": "https://www.gramedia.com/products/plants-vs-zombies--komik-dinosaurus--berburu-bola-impian",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!"
     }
   ],
   "series": [
@@ -113963,7 +114029,7 @@
       "author": "Xiao Jiangnan",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 5,
+      "totalVolumes": 6,
       "latestVolume": 1,
       "availableVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/zi2r-sgz13.jpg",
@@ -116925,6 +116991,22 @@
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/xo2x5k97z9.jpeg",
       "description": "Sinopsis:\n\nMereka adalah kelompok berandalan terkuat, sekaligus pahlawan kota.\n\nDengan nilai akademis terendah, tapi nomor 1 dalam bertarung. SMA Furin terkenal sebagai sekolah penuh berandalan. Musim semi ini, Haruka Sakura datang ke kota untuk mengincar posisi puncak di sana. Tapi dia dihadapkan pada kenyataan bahwa SMA Furin telah berubah menjadi kelompok pelindung kota yang dijuluki “Bofurin”. Sakura pun, bergabung menjadi anggota Furin dan mulai bertarung demi melindungi kota!\n\nKeunggulan Buku:\n\n- Mengangkat tema berandalan, persahabatan, pertarungan, serta pencarian jati diri.\n\n- Perkembangan dari semua karakternya menarik, dengan backstory yang unik.\n\n- Artstyle-nya bagus dan memanjakan mata.\n\n- Salah satu judul best seller Jepang dengan serialisasi anime season 1 yang dirilis pada tahun 2024 dan season 2 direncanakan rilis pada 2025.\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
+    },
+    {
+      "id": "ser_wind-rider-sky-age",
+      "slug": "wind-rider-sky-age",
+      "name": "Wind Rider Sky Age",
+      "originalTitle": "Wind Rider Sky Age",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "author": "Is Yuniarto",
+      "type": "LIGHT_NOVEL",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/c3w9a-8n8o.jpg",
+      "description": "Roulette Otovic, pekerja pembersih awan asam di Aeropolis Moskova, selalu yakin akan kemampuannya\n\nmengendarai angin bersama 'Hurricane', skybike andalannya.\n\nNamun sebuah kecelakaan menyeretnya menuju petualangan mendebarkan, menghadapi para sky pirate dalam pencarian harta karun terpenting di era abad langit!"
     },
     {
       "id": "ser_wistoria-wand-and-sword",
@@ -143816,9 +143898,60 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-07",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_koloni_wind_rider_sky_age_new_edition_init",
+      "bookId": "pub_koloni_wind_rider_sky_age_new_edition",
+      "price": 72000,
+      "currentPrice": 72000,
+      "originalPrice": 72000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_plants_vs_zombies__komik_dinosaurus__berburu_bola_impian_init",
+      "bookId": "pub_plants_vs_zombies__komik_dinosaurus__berburu_bola_impian",
+      "price": 100000,
+      "currentPrice": 100000,
+      "originalPrice": 125000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-07-31",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__parasite_in_love_01_1791464310",
+      "bookId": "pub_akasha__parasite_in_love_01",
+      "price": 41250,
+      "currentPrice": 41250,
+      "originalPrice": 55000,
+      "previousPrice": 49500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-08",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791464310",
+      "startedAt": "2026-10-08T12:53:54.000Z",
+      "finishedAt": "2026-10-08T12:58:30.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1394,
+      "productsRejected": 383,
+      "productsUpdated": 1170,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 276836,
+      "success": true
+    },
     {
       "id": "sync_1791434976",
       "startedAt": "2026-10-08T04:45:01.000Z",
@@ -144197,26 +144330,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 193900,
-      "success": true
-    },
-    {
-      "id": "sync_1790963382",
-      "startedAt": "2026-10-02T17:45:37.000Z",
-      "finishedAt": "2026-10-02T17:49:42.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1461,
-      "productsInserted": 1,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 245554,
       "success": true
     }
   ]
