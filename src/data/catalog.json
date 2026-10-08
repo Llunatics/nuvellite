@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-08T12:58:30.000Z",
+  "lastUpdated": "2026-10-08T23:03:24.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -99669,7 +99669,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/495h1x9u3o.jpeg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-14",
       "isWednesdayRelease": true,
       "currentPrice": 50000,
@@ -100956,7 +100956,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/7ymk-g-pvb.jpeg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-14",
       "isWednesdayRelease": true,
       "currentPrice": 125000,
@@ -105741,7 +105741,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/3nataa8gkt.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
       "currentPrice": 50000,
@@ -106005,7 +106005,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/c3w9a-8n8o.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-14",
       "isWednesdayRelease": true,
       "currentPrice": 72000,
@@ -143933,6 +143933,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1791500604",
+      "startedAt": "2026-10-08T22:58:44.000Z",
+      "finishedAt": "2026-10-08T23:03:24.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1394,
+      "productsRejected": 383,
+      "productsUpdated": 1172,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 280136,
+      "success": true
+    },
+    {
       "id": "sync_1791464310",
       "startedAt": "2026-10-08T12:53:54.000Z",
       "finishedAt": "2026-10-08T12:58:30.000Z",
@@ -144310,26 +144330,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 210480,
-      "success": true
-    },
-    {
-      "id": "sync_1790978148",
-      "startedAt": "2026-10-02T21:52:34.000Z",
-      "finishedAt": "2026-10-02T21:55:48.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1462,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 193900,
       "success": true
     }
   ]
