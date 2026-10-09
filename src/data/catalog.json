@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-08T23:03:24.000Z",
+  "lastUpdated": "2026-10-09T04:52:44.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -35821,7 +35821,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-11-14",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Katarina"
       ],
@@ -38440,7 +38440,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 60000
     },
     {
@@ -38950,7 +38950,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-09-12",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Katarina"
       ],
@@ -39438,7 +39438,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 60000
     },
     {
@@ -45052,7 +45052,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-05-05",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Daisuke Aizawa"
       ],
@@ -49313,7 +49313,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-01-28",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Katarina"
       ],
@@ -96537,7 +96537,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2025-03-27",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "originalPrice": 65000,
       "authors": [
         "Daisuke Aizawa"
@@ -104850,7 +104850,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230028786_Cov_Conan_Fist_of_Blue_02_1.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2021-11-10",
       "isWednesdayRelease": true,
       "currentPrice": 80000,
@@ -105642,7 +105642,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x5l8lo-2vv.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 45000,
@@ -105675,7 +105675,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/p637844o8-.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 45000,
@@ -105708,7 +105708,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/4ctdr--1ee.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 35000,
@@ -105774,7 +105774,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/5vh-e8vz5t.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 89000,
@@ -105873,7 +105873,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/i5-ax-i-xa.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 65000,
@@ -105939,7 +105939,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/5s-n4evga7.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 65000,
@@ -143929,9 +143929,84 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-08",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_shangrila_frontier_9_1791521564",
+      "bookId": "pub_shangrila_frontier_9",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_shangrila_frontier_7_1791521564",
+      "bookId": "pub_shangrila_frontier_7",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_eminence_in_shadow_7_1791521564",
+      "bookId": "pub_the_eminence_in_shadow_7",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_eminence_in_shadow_6_1791521564",
+      "bookId": "pub_the_eminence_in_shadow_6",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_shangrila_frontier_2_1791521564",
+      "bookId": "pub_shangrila_frontier_2",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-09",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791521564",
+      "startedAt": "2026-10-09T04:48:13.000Z",
+      "finishedAt": "2026-10-09T04:52:44.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1394,
+      "productsRejected": 383,
+      "productsUpdated": 1172,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 271059,
+      "success": true
+    },
     {
       "id": "sync_1791500604",
       "startedAt": "2026-10-08T22:58:44.000Z",
@@ -144310,26 +144385,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 205509,
-      "success": true
-    },
-    {
-      "id": "sync_1791000253",
-      "startedAt": "2026-10-03T04:00:43.000Z",
-      "finishedAt": "2026-10-03T04:04:13.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1462,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 210480,
       "success": true
     }
   ]
