@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-10T12:03:08.000Z",
+  "lastUpdated": "2026-10-10T17:21:29.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -21695,7 +21695,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-15",
       "isWednesdayRelease": true,
-      "currentPrice": 84000,
+      "currentPrice": 105000,
       "authors": [
         "Reiki Kawahara/Abec"
       ],
@@ -32306,7 +32306,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-01-09",
       "isWednesdayRelease": false,
-      "currentPrice": 127500,
+      "currentPrice": 170000,
       "authors": [
         "Hyuganatsu / Touko Shino"
       ],
@@ -100233,7 +100233,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-16",
       "isWednesdayRelease": false,
-      "currentPrice": 92000,
+      "currentPrice": 115000,
       "originalPrice": 115000,
       "authors": [
         "Bambang A.W. & Dika Sri Pandanari"
@@ -100266,7 +100266,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-01",
       "isWednesdayRelease": true,
-      "currentPrice": 62400,
+      "currentPrice": 78000,
       "originalPrice": 78000,
       "authors": [
         "Ubai Dillah Al Anshori"
@@ -100332,7 +100332,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-06-24",
       "isWednesdayRelease": true,
-      "currentPrice": 86400,
+      "currentPrice": 108000,
       "originalPrice": 108000,
       "authors": [
         "Mohammad Al-Zaqzooq, Mahmoud Alshaer"
@@ -100728,7 +100728,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 152000,
+      "currentPrice": 190000,
       "originalPrice": 190000,
       "authors": [
         "Chris Miller"
@@ -101223,7 +101223,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-07-22",
       "isWednesdayRelease": true,
-      "currentPrice": 94400,
+      "currentPrice": 118000,
       "originalPrice": 118000,
       "authors": [
         "Hyuganatsu / Touko Shino"
@@ -106005,7 +106005,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/c3w9a-8n8o.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-14",
       "isWednesdayRelease": true,
       "currentPrice": 72000,
@@ -106074,8 +106074,8 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
+      "currentPrice": 20000,
+      "originalPrice": 20000,
       "authors": [
         "Elex Media Komputindo"
       ],
@@ -106434,11 +106434,11 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/akjmnn6j40.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
-      "currentPrice": 1,
-      "originalPrice": 1,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
       "authors": [
         "Hirohiko Araki"
       ],
@@ -106635,8 +106635,8 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
-      "currentPrice": 170000,
-      "originalPrice": 170000,
+      "currentPrice": 150000,
+      "originalPrice": 150000,
       "authors": [
         "Masashi Kishimoto"
       ],
@@ -145717,9 +145717,139 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-08",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_komik_satuan_1791652889",
+      "bookId": "pub_komik_satuan",
+      "price": 20000,
+      "currentPrice": 20000,
+      "originalPrice": 20000,
+      "previousPrice": 25000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bundling_komik_6_jba4_1791652889",
+      "bookId": "pub_bundling_komik_6_jba4",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 1,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bundling_komik_1_nbu1_1791652889",
+      "bookId": "pub_bundling_komik_1_nbu1",
+      "price": 150000,
+      "currentPrice": 150000,
+      "originalPrice": 150000,
+      "previousPrice": 170000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lintas_sejarah_etnis_tionghoa_di_malang_dari_singhasari_sampai_reformasi_1791652889",
+      "bookId": "pub_lintas_sejarah_etnis_tionghoa_di_malang_dari_singhasari_sampai_reformasi",
+      "price": 115000,
+      "currentPrice": 115000,
+      "originalPrice": 115000,
+      "previousPrice": 92000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sebuah_kota_sebuah_umpama_1791652889",
+      "bookId": "pub_sebuah_kota_sebuah_umpama",
+      "price": 78000,
+      "currentPrice": 78000,
+      "originalPrice": 78000,
+      "previousPrice": 62400,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_letters_from_gaza_suara_mereka_dari_masamasa_yang_luar_biasa_1791652889",
+      "bookId": "pub_letters_from_gaza_suara_mereka_dari_masamasa_yang_luar_biasa",
+      "price": 108000,
+      "currentPrice": 108000,
+      "originalPrice": 108000,
+      "previousPrice": 86400,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_chip_war_pertarungan_untuk_teknologi_paling_krusial_di_dunia_1791652889",
+      "bookId": "pub_chip_war_pertarungan_untuk_teknologi_paling_krusial_di_dunia",
+      "price": 190000,
+      "currentPrice": 190000,
+      "originalPrice": 190000,
+      "previousPrice": 152000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_apothecary_diaries_vol_02__maomao_special_package_1791652889",
+      "bookId": "pub_light_novel_the_apothecary_diaries_vol_02__maomao_special_package",
+      "price": 118000,
+      "currentPrice": 118000,
+      "originalPrice": 118000,
+      "previousPrice": 94400,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sword_art_online_011_alicization_running__alicization_turning_1791652889",
+      "bookId": "pub_sword_art_online_011_alicization_running__alicization_turning",
+      "price": 105000,
+      "currentPrice": 105000,
+      "originalPrice": 105000,
+      "previousPrice": 84000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_apothecary_diaries_vol_01__jishi_sama_premium_package_1791652889",
+      "bookId": "pub_light_novel_the_apothecary_diaries_vol_01__jishi_sama_premium_package",
+      "price": 170000,
+      "currentPrice": 170000,
+      "originalPrice": 170000,
+      "previousPrice": 127500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791652889",
+      "startedAt": "2026-10-10T17:17:01.000Z",
+      "finishedAt": "2026-10-10T17:21:29.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1394,
+      "productsRejected": 388,
+      "productsUpdated": 1167,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 268557,
+      "success": true
+    },
     {
       "id": "sync_1791633788",
       "startedAt": "2026-10-10T11:59:01.000Z",
@@ -146098,26 +146228,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 206848,
-      "success": true
-    },
-    {
-      "id": "sync_1791114892",
-      "startedAt": "2026-10-04T11:50:50.000Z",
-      "finishedAt": "2026-10-04T11:54:52.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1462,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 242056,
       "success": true
     }
   ]
