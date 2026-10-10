@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-09T22:23:51.000Z",
+  "lastUpdated": "2026-10-10T04:37:44.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -38440,7 +38440,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 60000
     },
     {
@@ -39438,7 +39438,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 60000
     },
     {
@@ -40115,7 +40115,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-08-20",
       "isWednesdayRelease": true,
-      "currentPrice": 33750,
+      "currentPrice": 29250,
       "authors": [
         "Aki Himazi"
       ],
@@ -42212,7 +42212,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-07-07",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Kugane Maruyama"
       ],
@@ -67690,7 +67690,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-07-06",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 30000,
       "authors": [
         "Elex Media Komputindo"
       ],
@@ -67706,7 +67706,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 40000
     },
     {
@@ -104193,7 +104193,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2023-06-27",
       "isWednesdayRelease": false,
-      "currentPrice": 29250,
+      "currentPrice": 33750,
       "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
@@ -104850,7 +104850,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230028786_Cov_Conan_Fist_of_Blue_02_1.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-11-10",
       "isWednesdayRelease": true,
       "currentPrice": 80000,
@@ -105840,7 +105840,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0ve0i8nbv-.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
       "currentPrice": 115000,
@@ -106005,7 +106005,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/c3w9a-8n8o.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-14",
       "isWednesdayRelease": true,
       "currentPrice": 72000,
@@ -144611,9 +144611,73 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-09",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bocchi_the_rock_07_1791607064",
+      "bookId": "pub_bocchi_the_rock_07",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_overlord_vol_8_1791607064",
+      "bookId": "pub_overlord_vol_8",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_15_1791607064",
+      "bookId": "pub_mob_psycho_100_15",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_01_1_1791607064",
+      "bookId": "pub_one_piece_01_1",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 29250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-10",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791607064",
+      "startedAt": "2026-10-10T04:33:44.000Z",
+      "finishedAt": "2026-10-10T04:37:44.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1394,
+      "productsRejected": 388,
+      "productsUpdated": 1167,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 239890,
+      "success": true
+    },
     {
       "id": "sync_1791584631",
       "startedAt": "2026-10-09T22:20:07.000Z",
@@ -144992,26 +145056,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 235664,
-      "success": true
-    },
-    {
-      "id": "sync_1791060175",
-      "startedAt": "2026-10-03T20:38:50.000Z",
-      "finishedAt": "2026-10-03T20:42:55.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1462,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 245540,
       "success": true
     }
   ]
