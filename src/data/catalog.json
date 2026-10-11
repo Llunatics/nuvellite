@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-10T21:18:14.000Z",
+  "lastUpdated": "2026-10-11T04:22:25.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -40825,7 +40825,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-08-04",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 32500,
       "authors": [
         "Rifujin Na Magonote"
       ],
@@ -106071,7 +106071,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
       "currentPrice": 20000,
@@ -106104,7 +106104,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ik-k3b2g9c.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
       "currentPrice": 90000,
@@ -106401,7 +106401,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/9x528zmi3d.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
       "currentPrice": 70000,
@@ -106434,7 +106434,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/akjmnn6j40.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
       "currentPrice": 45000,
@@ -106533,7 +106533,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/90-5jj-2g5.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
       "currentPrice": 95000,
@@ -145827,9 +145827,40 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-10",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mushoku_tensei__jobless_reincarnation_8_1791692545",
+      "bookId": "pub_mushoku_tensei__jobless_reincarnation_8",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-11",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791692545",
+      "startedAt": "2026-10-11T04:17:53.000Z",
+      "finishedAt": "2026-10-11T04:22:25.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1394,
+      "productsRejected": 388,
+      "productsUpdated": 1167,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 271417,
+      "success": true
+    },
     {
       "id": "sync_1791667094",
       "startedAt": "2026-10-10T21:13:48.000Z",
@@ -146208,26 +146239,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 225076,
-      "success": true
-    },
-    {
-      "id": "sync_1791147542",
-      "startedAt": "2026-10-04T20:54:58.000Z",
-      "finishedAt": "2026-10-04T20:59:02.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1462,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 244205,
       "success": true
     }
   ]
