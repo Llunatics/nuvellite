@@ -57,6 +57,28 @@ const COMIC_CATEGORY_SEGMENTS = ['komik', 'manga', 'light-novel'];
 // Verified non-manga / non-LN series that the store miscategorizes as comic.
 const KNOWN_NON_MANGA_SERIES = [
   'ther melian', // Indonesian fantasy NOVEL tetralogy by Shienny M.S. (Elex)
+  // Verified non-manga/non-LN books found in the Elex feed (2026-10-11 audit).
+  'capcut', // CapCut tutorial books
+  'chip war', // Chris Miller nonfiction (translated)
+  'excel survival kit', // Excel tutorial
+  'hack the human', // cybersecurity nonfiction
+  'kebijakan publik', // public policy nonfiction
+  'letters from gaza', // nonfiction
+  'lintas sejarah', // history
+  'memahami jepang', // history
+  'republik rakyat china', // history/politics
+  'tip & trik content creator', // creator tutorial
+  'sebuah kota, sebuah umpama', // poetry collection
+  'para perasuk', // filmmaking book
+  'jalan kehormatan', // history (NOT Samurai 8/X manga)
+  'miaow', // classic Spanish novel shelved under PGI
+];
+
+// PGI light-novel-only franchises whose releases omit the "Light Novel"
+// title prefix (verified 2026-10-11 against PGI's official publication list).
+const PGI_LN_ONLY_FRANCHISES = [
+  'tentang suatu tempat di wilayah kinki',
+  'tentang ziarah yang terkutuk',
 ];
 
 function categorySegments(raw: string | undefined): string[] {
@@ -197,6 +219,9 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
   if (pubId === 'pub_pgi' || pubName.includes('phoenix gramedia') || pubName.includes('pgi')) {
     if (tLower.includes('light novel') || tLower.includes('light-novel') || catSlugs.includes('light-novel') || tLower.includes('(novel)') || tLower.includes('the novel')) {
       positiveSignals.push('Rilisan resmi Light Novel PGI / KADOKAWA');
+      isLN = true;
+    } else if (PGI_LN_ONLY_FRANCHISES.some((f) => tLower.includes(f))) {
+      positiveSignals.push('Franchise LN-only PGI terverifikasi (tanpa token Light Novel)');
       isLN = true;
     } else if (tLower.includes('manga') || tLower.includes('komik') || catSlugs.includes('manga') || catSlugs.includes('komik')) {
       positiveSignals.push('Rilisan resmi Manga PGI / KADOKAWA');

@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { CoverImage } from '../books/cover-image';
 import type { BindUpSeriesGroup } from '@/lib/data/bind-up';
 import type { Publisher } from '@/lib/types';
-import { formatRupiah } from '@/lib/formatters';
-import { BookCopy, Search, X, ChevronDown, ChevronRight, ArrowRight, Layers, Sparkles } from 'lucide-react';
+import { BookCopy, Search, X, ChevronDown, ChevronRight, Layers } from 'lucide-react';
 
 interface BindUpDirectoryViewProps {
   groups: BindUpSeriesGroup[];
@@ -78,22 +77,7 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
       });
   }, [groups, searchQuery, pubFilter, sortBy]);
 
-  // Spotlight: the freshest release among what's currently shown.
-  const featured = useMemo(() => {
-    if (filtered.length === 0) return null;
-    return [...filtered].sort(
-      (a, b) =>
-        (b.latestReleaseDate || '').localeCompare(a.latestReleaseDate || '') ||
-        b.volumeCount - a.volumeCount
-    )[0];
-  }, [filtered]);
-  const rest = useMemo(
-    () => (featured ? filtered.filter((g) => g.key !== featured.key) : filtered),
-    [filtered, featured]
-  );
-
   const totalBooks = groups.reduce((n, g) => n + g.volumeCount, 0);
-  const featuredHref = featured?.seriesSlug ? `/series/${featured.seriesSlug}` : undefined;
 
   return (
     <div className="space-y-10 sm:space-y-12 pb-16">
@@ -180,7 +164,7 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
         </div>
       </div>
 
-      {/* 3. Spotlight + directory list */}
+      {/* 3. Directory list */}
       {filtered.length === 0 ? (
         <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
           <BookCopy className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
@@ -188,94 +172,44 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
           <p className="text-xs text-editorial-muted">Coba ubah kata kunci atau bersihkan filter pencarian.</p>
         </div>
       ) : (
-        <div className="space-y-8">
-          {featured && (
-            <section className="space-y-3">
-              <p className="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-widest text-editorial-faint">
-                <Sparkles className="w-3.5 h-3.5 text-accent" />
-                Sorotan — rilisan terbaru
-              </p>
-              {(() => {
-                const card = (
-                  <div className="group flex flex-col sm:flex-row gap-5 sm:gap-8 p-5 sm:p-8 rounded-3xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-200">
-                    <CoverThumb group={featured} className="w-28 sm:w-44" iconClassName="w-8 h-8" />
-                    <div className="flex-1 min-w-0 flex flex-col justify-center space-y-2.5">
-                      <LabelPill label={featured.label} className="self-start" />
-                      <h2 className="font-editorial text-2xl sm:text-4xl font-normal text-editorial-title tracking-tight leading-tight">
-                        {featured.displayName}
-                      </h2>
-                      <p className="text-xs text-editorial-muted">{featured.publisherShortName}</p>
-                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs font-mono text-editorial-muted">
-                        <span>{featured.volumeCount} volume bind-up</span>
-                        {typeof featured.minPrice === 'number' && (
-                          <span>
-                            {formatRupiah(featured.minPrice)}
-                            {featured.maxPrice !== featured.minPrice &&
-                              ` – ${formatRupiah(featured.maxPrice as number)}`}
-                          </span>
-                        )}
-                      </div>
-                      {featuredHref && (
-                        <span className="inline-flex items-center gap-1.5 text-xs text-accent font-medium pt-1">
-                          Lihat seri{' '}
-                          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                        </span>
-                      )}
+        <section className="space-y-3">
+          <p className="text-[11px] font-mono uppercase tracking-widest text-editorial-faint">
+            Semua seri
+          </p>
+          <div className="rounded-3xl border border-white/[0.04] bg-white/[0.015] divide-y divide-white/[0.04] overflow-hidden">
+            {filtered.map((group) => {
+              const href = group.seriesSlug ? `/series/${group.seriesSlug}` : undefined;
+              const row = (
+                <div className="group flex items-center gap-3.5 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-white/[0.03] transition-colors">
+                  <CoverThumb group={group} className="w-11 sm:w-12 !rounded-lg" iconClassName="w-5 h-5" />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-sm font-medium text-editorial-title truncate">
+                      {group.displayName}
+                    </h3>
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 mt-1.5">
+                      <LabelPill label={group.label} />
+                      <span className="text-[11px] font-mono text-editorial-muted">
+                        {group.volumeCount} vol
+                      </span>
+                      <span className="text-[11px] text-editorial-faint">·</span>
+                      <span className="text-[11px] text-editorial-muted truncate">
+                        {group.publisherShortName}
+                      </span>
                     </div>
                   </div>
-                );
-                return featuredHref ? (
-                  <Link key={featured.key} href={featuredHref}>
-                    {card}
-                  </Link>
-                ) : (
-                  <div key={featured.key}>{card}</div>
-                );
-              })()}
-            </section>
-          )}
-
-          {rest.length > 0 && (
-            <section className="space-y-3">
-              <p className="text-[11px] font-mono uppercase tracking-widest text-editorial-faint">
-                Semua seri
-              </p>
-              <div className="rounded-3xl border border-white/[0.04] bg-white/[0.015] divide-y divide-white/[0.04] overflow-hidden">
-                {rest.map((group) => {
-                  const href = group.seriesSlug ? `/series/${group.seriesSlug}` : undefined;
-                  const row = (
-                    <div className="group flex items-center gap-3.5 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-white/[0.03] transition-colors">
-                      <CoverThumb group={group} className="w-11 sm:w-12 !rounded-lg" iconClassName="w-5 h-5" />
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-medium text-editorial-title truncate">
-                          {group.displayName}
-                        </h3>
-                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 mt-1.5">
-                          <LabelPill label={group.label} />
-                          <span className="text-[11px] font-mono text-editorial-muted">
-                            {group.volumeCount} vol
-                          </span>
-                          <span className="text-[11px] text-editorial-faint">·</span>
-                          <span className="text-[11px] text-editorial-muted truncate">
-                            {group.publisherShortName}
-                          </span>
-                        </div>
-                      </div>
-                      <ChevronRight className="w-4 h-4 shrink-0 text-editorial-faint group-hover:text-editorial-title group-hover:translate-x-0.5 transition-all" />
-                    </div>
-                  );
-                  return href ? (
-                    <Link key={group.key} href={href} className="block">
-                      {row}
-                    </Link>
-                  ) : (
-                    <div key={group.key}>{row}</div>
-                  );
-                })}
-              </div>
-            </section>
-          )}
-        </div>
+                  <ChevronRight className="w-4 h-4 shrink-0 text-editorial-faint group-hover:text-editorial-title group-hover:translate-x-0.5 transition-all" />
+                </div>
+              );
+              return href ? (
+                <Link key={group.key} href={href} className="block">
+                  {row}
+                </Link>
+              ) : (
+                <div key={group.key}>{row}</div>
+              );
+            })}
+          </div>
+        </section>
       )}
 
       {/* 4. How it works */}

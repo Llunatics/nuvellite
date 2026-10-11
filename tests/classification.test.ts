@@ -208,8 +208,63 @@ describe('Multi-Signal Classification Engine', () => {
     expect(pgiLN.format).toBe('LIGHT_NOVEL');
   });
 
-  it('should correctly classify Clover (m&c!) releases as Light Novels', () => {
-    const eightySix1 = classifyProduct({
+  it('should classify PGI LN-only franchises without the Light Novel token as Light Novels', () => {
+    // Verified 2026-10-11: PGI's releases for these franchises omit the token.
+    const kinki = classifyProduct({
+      title: 'Tentang Suatu Tempat di Wilayah Kinki Vol. 1',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+    });
+    expect(kinki.status).toBe('ACCEPTED');
+    expect(kinki.category).toBe('Light Novel');
+
+    const ziarah = classifyProduct({
+      title: 'Tentang Ziarah yang Terkutuk 1',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+    });
+    expect(ziarah.status).toBe('ACCEPTED');
+    expect(ziarah.category).toBe('Light Novel');
+
+    // ...but token-less PGI releases of dual-medium franchises stay Manga.
+    const overlordManga = classifyProduct({
+      title: 'Overlord Vol. 15',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+    });
+    expect(overlordManga.category).toBe('Manga');
+  });
+
+  it('should reject verified non-manga/non-LN books from the Elex feed', () => {
+    // Verified 2026-10-11 audit: these slipped into the catalog.
+    for (const title of [
+      'Excel Survival Kit: Panduan Praktis Menguasai Excel untuk Dunia Kerja',
+      'Chip War: Pertarungan untuk Teknologi Paling Krusial di Dunia',
+      'CapCut from Basic to Magic',
+      'Hack the Human',
+      'Kebijakan Publik untuk Pemimpin Indonesia',
+      'Sebuah Kota, Sebuah Umpama',
+      'Samurai : Jalan Kehormatan Sang Pejuang Terakhir',
+    ]) {
+      const r = classifyProduct({
+        title,
+        publisherId: 'pub_elex',
+        publisherName: 'Elex Media Komputindo',
+      });
+      expect(r.status).toBe('REJECTED');
+    }
+    // ...but the Samurai manga stays.
+    const samuraiX = classifyProduct({
+      title: 'Samurai X Hokkaido Arc vol. 01',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'komik,manga',
+    });
+    expect(samuraiX.status).toBe('ACCEPTED');
+    expect(samuraiX.category).toBe('Manga');
+  });
+
+  it('should correctly classify Clover (m&c!) releases as Light Novels', () => {    const eightySix1 = classifyProduct({
       title: 'Eighty Six Ep. 1: Eighty Six',
       publisherId: 'pub_mnc',
       publisherName: 'm&c! Publishing',

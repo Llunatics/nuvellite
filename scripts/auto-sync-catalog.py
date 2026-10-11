@@ -87,6 +87,22 @@ def _category_segments(cat_slugs):
 # alone cannot be trusted for these.
 KNOWN_NON_MANGA_SERIES = (
     'ther melian',  # Indonesian fantasy NOVEL tetralogy by Shienny M.S. (Elex)
+    # Verified non-manga/non-LN books found in the Elex feed (2026-10-11 audit).
+    # Each fragment was checked against the catalog for collateral hits.
+    'capcut',  # CapCut tutorial books
+    'chip war',  # Chris Miller nonfiction (translated)
+    'excel survival kit',  # Excel tutorial
+    'hack the human',  # cybersecurity nonfiction
+    'kebijakan publik',  # public policy nonfiction
+    'letters from gaza',  # nonfiction
+    'lintas sejarah',  # history
+    'memahami jepang',  # history (Memahami Jepang - Sejarah Singkat...)
+    'republik rakyat china',  # history/politics
+    'tip & trik content creator',  # creator tutorial
+    'sebuah kota, sebuah umpama',  # poetry collection
+    'para perasuk',  # filmmaking book
+    'jalan kehormatan',  # history (Samurai: Jalan Kehormatan...; NOT Samurai 8/X manga)
+    'miaow',  # classic Spanish novel (Benito Perez Galdos) shelved under PGI
 )
 
 
@@ -245,25 +261,46 @@ def detect_bind_up(title, series_name='', publisher_id=''):
             return kind, label
     return None, None
 
+# PGI light-novel-only franchises whose releases omit the "Light Novel"
+# title prefix. Verified 2026-10-11 against PGI's official publication list
+# (id.wikipedia.org/wiki/Phoenix_Gramedia_Indonesia) + publisher announcements:
+# these have no manga adaptation from PGI, so token-less releases are novels.
+PGI_LN_ONLY_FRANCHISES = (
+    'tentang suatu tempat di wilayah kinki',
+    'tentang ziarah yang terkutuk',
+)
+
 def determine_book_medium(b):
     title = (b.get('title') or '').strip()
     t_lower = title.lower()
+    has_ln_token = 'light novel' in t_lower or '(novel)' in t_lower
+
+    # Explicit LN token wins over the movie check: movie novelizations
+    # (e.g. "Light Novel One Piece: ... The Movie") are prose, not comics.
+    if has_ln_token:
+        return 'LIGHT_NOVEL'
     if 'movie' in t_lower or 'movie story' in t_lower:
         return 'MOVIE'
 
-    has_ln_token = 'light novel' in t_lower or '(novel)' in t_lower
     genres = [str(g).lower() for g in b.get('genres', [])]
     pub_id = b.get('publisherId', '')
 
     # PGI: Phoenix Gramedia Indonesia explicitly includes "Light Novel" or "(Novel)" in LN releases.
     # PGI Manga releases do NOT have "Light Novel" in the title (e.g. "The Eminence in Shadow 14").
+    # Exception: LN-only franchises whose releases omit the token (verified 2026-10-11).
     if pub_id == 'pub_pgi':
-        return 'LIGHT_NOVEL' if has_ln_token else 'MANGA'
+        if has_ln_token:
+            return 'LIGHT_NOVEL'
+        for frag in PGI_LN_ONLY_FRANCHISES:
+            if frag in t_lower:
+                return 'LIGHT_NOVEL'
+        return 'MANGA'
 
-    # m&c! Clover imprint / Light Novel
+    # m&c! Clover imprint / Light Novel. Require the Clover prefix (a bare
+    # substring mislabels manga like "You are a Four Leaf Clover" as LN).
     is_clover_novel = pub_id == 'pub_mnc' and (
-        'clover' in t_lower or
-        any('novel' in g or 'fiksi ilmiah' in g for g in genres) or
+        t_lower.startswith('clover') or
+        any('novel' in g for g in genres) or
         title.lower().startswith('eighty six')
     )
     if has_ln_token or is_clover_novel:
@@ -311,9 +348,11 @@ def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None):
 
     # 2. Non-manga/non-LN title patterns. Skipped when the store category
     #    proves comic (the store files real manga under odd titles, e.g.
-    #    "Teka-Teki Rumah Aneh - Hen Na Ie" -> buku/komik/manga/misteri),
-    #    or when the category is unknown (deferred to the spec-based audit).
-    if segs and not has_comic_cat and not has_explicit_token:
+    #    "Teka-Teki Rumah Aneh - Hen Na Ie" -> buku/komik/manga/misteri).
+    #    Applied even when the category is unknown: positive junk evidence
+    #    in the title is enough to reject (2026-10-11: junk like "Excel
+    #    Survival Kit" and "Chip War" slipped in with empty category slugs).
+    if not has_comic_cat and not has_explicit_token:
         if NON_MANGA_LN_REGEX.search(t):
             return 'REJECT', None, 'Matched non-manga/non-LN title pattern'
 
