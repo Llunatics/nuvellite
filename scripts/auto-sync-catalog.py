@@ -227,6 +227,7 @@ CURATED_BIND_UPS = [
     (re.compile(r'akasha\s*:?\s*monster', re.IGNORECASE), 'pub_mnc', 'CURATED', 'Kanzenban'),
     (re.compile(r'slam dunk[\s-]*new edition', re.IGNORECASE), 'pub_elex', 'CURATED', 'New Edition'),
     (re.compile(r'alice in borderland(?!.*retry)', re.IGNORECASE), 'pub_elex', 'CURATED', '2-in-1'),
+    (re.compile(r'orb[\s:]*on the movements of the earth', re.IGNORECASE), 'pub_elex', 'CURATED', 'Bind Up'),
 ]
 
 def detect_bind_up(title, series_name='', publisher_id=''):

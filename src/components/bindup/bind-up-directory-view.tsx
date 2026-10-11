@@ -6,11 +6,51 @@ import { CoverImage } from '../books/cover-image';
 import type { BindUpSeriesGroup } from '@/lib/data/bind-up';
 import type { Publisher } from '@/lib/types';
 import { formatRupiah } from '@/lib/formatters';
-import { BookCopy, Search, X, ChevronDown, ArrowRight, Layers } from 'lucide-react';
+import { BookCopy, Search, X, ChevronDown, ChevronRight, ArrowRight, Layers, Sparkles } from 'lucide-react';
 
 interface BindUpDirectoryViewProps {
   groups: BindUpSeriesGroup[];
   publishers: Publisher[];
+}
+
+function LabelPill({ label, className = '' }: { label: string; className?: string }) {
+  return (
+    <span
+      className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono uppercase whitespace-nowrap border border-white/[0.08] bg-white/[0.03] text-lime-300/90 ${className}`}
+    >
+      {label}
+    </span>
+  );
+}
+
+function CoverThumb({
+  group,
+  className,
+  iconClassName,
+}: {
+  group: BindUpSeriesGroup;
+  className: string;
+  iconClassName: string;
+}) {
+  return (
+    <div className={`relative shrink-0 aspect-[3/4.2] rounded-xl overflow-hidden bg-surface-sunken cover-depth ${className}`}>
+      {group.coverImage ? (
+        <CoverImage
+          src={group.coverImage}
+          alt={group.displayName}
+          width={176}
+          height={234}
+          imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
+          fallbackIconClassName={iconClassName}
+        />
+      ) : (
+        <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-surface-elevated/40">
+          <BookCopy className={`${iconClassName} text-editorial-faint mb-1`} />
+          <span className="text-[9px] text-editorial-muted line-clamp-2">{group.displayName}</span>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewProps) {
@@ -38,11 +78,26 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
       });
   }, [groups, searchQuery, pubFilter, sortBy]);
 
+  // Spotlight: the freshest release among what's currently shown.
+  const featured = useMemo(() => {
+    if (filtered.length === 0) return null;
+    return [...filtered].sort(
+      (a, b) =>
+        (b.latestReleaseDate || '').localeCompare(a.latestReleaseDate || '') ||
+        b.volumeCount - a.volumeCount
+    )[0];
+  }, [filtered]);
+  const rest = useMemo(
+    () => (featured ? filtered.filter((g) => g.key !== featured.key) : filtered),
+    [filtered, featured]
+  );
+
   const totalBooks = groups.reduce((n, g) => n + g.volumeCount, 0);
+  const featuredHref = featured?.seriesSlug ? `/series/${featured.seriesSlug}` : undefined;
 
   return (
-    <div className="space-y-12 pb-16">
-      {/* 1. Header Banner */}
+    <div className="space-y-10 sm:space-y-12 pb-16">
+      {/* 1. Header */}
       <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
           <BookCopy className="w-3 h-3 text-accent shrink-0" />
@@ -125,7 +180,7 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
         </div>
       </div>
 
-      {/* 3. Bind-Up Series Cards */}
+      {/* 3. Spotlight + directory list */}
       {filtered.length === 0 ? (
         <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
           <BookCopy className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
@@ -133,68 +188,93 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
           <p className="text-xs text-editorial-muted">Coba ubah kata kunci atau bersihkan filter pencarian.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {filtered.map((group) => {
-            const href = group.seriesSlug ? `/series/${group.seriesSlug}` : undefined;
-            const card = (
-              <div className="group flex flex-col p-4 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] hover:border-white/[0.08] transition-all duration-200 space-y-3 h-full">
-                <div className="flex gap-4 items-start">
-                  <div className="relative aspect-[3/4.2] w-20 shrink-0 rounded-xl overflow-hidden bg-surface-sunken cover-depth">
-                    {group.coverImage ? (
-                      <CoverImage
-                        src={group.coverImage}
-                        alt={group.displayName}
-                        width={88}
-                        height={117}
-                        imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
-                        fallbackIconClassName="w-6 h-6 text-editorial-faint"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-surface-elevated/40">
-                        <BookCopy className="w-6 h-6 text-editorial-faint mb-1" />
-                        <span className="text-[9px] text-editorial-muted line-clamp-2">{group.displayName}</span>
+        <div className="space-y-8">
+          {featured && (
+            <section className="space-y-3">
+              <p className="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-widest text-editorial-faint">
+                <Sparkles className="w-3.5 h-3.5 text-accent" />
+                Sorotan — rilisan terbaru
+              </p>
+              {(() => {
+                const card = (
+                  <div className="group flex flex-col sm:flex-row gap-5 sm:gap-8 p-5 sm:p-8 rounded-3xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-200">
+                    <CoverThumb group={featured} className="w-28 sm:w-44" iconClassName="w-8 h-8" />
+                    <div className="flex-1 min-w-0 flex flex-col justify-center space-y-2.5">
+                      <LabelPill label={featured.label} className="self-start" />
+                      <h2 className="font-editorial text-2xl sm:text-4xl font-normal text-editorial-title tracking-tight leading-tight">
+                        {featured.displayName}
+                      </h2>
+                      <p className="text-xs text-editorial-muted">{featured.publisherShortName}</p>
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs font-mono text-editorial-muted">
+                        <span>{featured.volumeCount} volume bind-up</span>
+                        {typeof featured.minPrice === 'number' && (
+                          <span>
+                            {formatRupiah(featured.minPrice)}
+                            {featured.maxPrice !== featured.minPrice &&
+                              ` – ${formatRupiah(featured.maxPrice as number)}`}
+                          </span>
+                        )}
                       </div>
-                    )}
-                    <div className="absolute top-1.5 left-1.5">
-                      <span className="px-1.5 py-0.5 rounded text-[8px] font-mono font-medium uppercase bg-black/60 backdrop-blur-sm border border-white/10 text-lime-300">
-                        {group.label}
-                      </span>
+                      {featuredHref && (
+                        <span className="inline-flex items-center gap-1.5 text-xs text-accent font-medium pt-1">
+                          Lihat seri{' '}
+                          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                        </span>
+                      )}
                     </div>
                   </div>
+                );
+                return featuredHref ? (
+                  <Link key={featured.key} href={featuredHref}>
+                    {card}
+                  </Link>
+                ) : (
+                  <div key={featured.key}>{card}</div>
+                );
+              })()}
+            </section>
+          )}
 
-                  <div className="flex-1 min-w-0 space-y-1">
-                    <h3 className="text-sm font-medium text-editorial-title leading-snug line-clamp-2">
-                      {group.displayName}
-                    </h3>
-                    <p className="text-[11px] text-editorial-muted truncate">{group.publisherShortName}</p>
-                    <p className="text-[11px] font-mono text-editorial-faint">
-                      {group.volumeCount} volume bind-up
-                    </p>
-                    {typeof group.minPrice === 'number' && (
-                      <p className="text-[11px] font-mono text-editorial-muted">
-                        {formatRupiah(group.minPrice)}
-                        {group.maxPrice !== group.minPrice && ` – ${formatRupiah(group.maxPrice as number)}`}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                {href && (
-                  <span className="inline-flex items-center gap-1.5 text-[11px] text-accent font-medium pt-1">
-                    Lihat seri <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                  </span>
-                )}
+          {rest.length > 0 && (
+            <section className="space-y-3">
+              <p className="text-[11px] font-mono uppercase tracking-widest text-editorial-faint">
+                Semua seri
+              </p>
+              <div className="rounded-3xl border border-white/[0.04] bg-white/[0.015] divide-y divide-white/[0.04] overflow-hidden">
+                {rest.map((group) => {
+                  const href = group.seriesSlug ? `/series/${group.seriesSlug}` : undefined;
+                  const row = (
+                    <div className="group flex items-center gap-3.5 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-white/[0.03] transition-colors">
+                      <CoverThumb group={group} className="w-11 sm:w-12 !rounded-lg" iconClassName="w-5 h-5" />
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-medium text-editorial-title truncate">
+                          {group.displayName}
+                        </h3>
+                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 mt-1.5">
+                          <LabelPill label={group.label} />
+                          <span className="text-[11px] font-mono text-editorial-muted">
+                            {group.volumeCount} vol
+                          </span>
+                          <span className="text-[11px] text-editorial-faint">·</span>
+                          <span className="text-[11px] text-editorial-muted truncate">
+                            {group.publisherShortName}
+                          </span>
+                        </div>
+                      </div>
+                      <ChevronRight className="w-4 h-4 shrink-0 text-editorial-faint group-hover:text-editorial-title group-hover:translate-x-0.5 transition-all" />
+                    </div>
+                  );
+                  return href ? (
+                    <Link key={group.key} href={href} className="block">
+                      {row}
+                    </Link>
+                  ) : (
+                    <div key={group.key}>{row}</div>
+                  );
+                })}
               </div>
-            );
-
-            return href ? (
-              <Link key={group.key} href={href}>
-                {card}
-              </Link>
-            ) : (
-              <div key={group.key}>{card}</div>
-            );
-          })}
+            </section>
+          )}
         </div>
       )}
 

@@ -70,6 +70,10 @@ describe('Bind-up / omnibus edition detection', () => {
     });
     // ...but the "- Retry" sequel stays a regular series.
     expect(detectBindUp('Alice in Borderland - Retry 02', { publisherId: 'pub_elex' })).toBeNull();
+    // Level Comics Orb: bind-up edition (8 tankobon -> 2-in-1 volumes).
+    expect(
+      detectBindUp('Orb: On The Movements of the Earth 02', { publisherId: 'pub_elex' })
+    ).toEqual({ kind: 'CURATED', label: 'Bind Up' });
   });
 
   it('falls back to the series name when the title itself has no marker', () => {
@@ -192,6 +196,7 @@ describe('Catalog bind-up coverage (anti-miss regression)', () => {
       'monster',
       'slam dunk',
       'alice in borderland',
+      'orb',
     ];
     for (const name of expected) {
       expect(names.some((n) => n.includes(name)), `missing bind-up series: ${name}`).toBe(true);

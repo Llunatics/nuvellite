@@ -121,6 +121,13 @@ const CURATED_BIND_UPS: CuratedBindUp[] = [
     label: '2-in-1',
     note: 'Elex Alice in Borderland 2-in-1 reprint: 18 vols -> 9.',
   },
+  {
+    match: /orb[\s:]*on the movements of the earth/i,
+    publisherId: 'pub_elex',
+    kind: 'CURATED',
+    label: 'Bind Up',
+    note: 'Level Comics Orb: On the Movements of the Earth: bind-up edition (8 tankobon -> 2-in-1 volumes).',
+  },
 ];
 
 export function detectBindUp(title: string, opts: DetectBindUpOptions = {}): BindUpInfo | null {
