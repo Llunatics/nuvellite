@@ -3,6 +3,7 @@ import fullCatalogData from '@/data/catalog.json';
 import { Book, Series, Publisher, CatalogData } from './types';
 import { getPriceSummary as getPriceSummaryInternal } from './data/price-service';
 import { getRelatedReleases as getRelatedReleasesInternal, getYouMayAlsoLike as getYouMayAlsoLikeInternal } from './data/recommendation-service';
+import { groupBindUpBooks, BindUpSeriesGroup } from './data/bind-up';
 
 // Listing data (lightweight, no synopsis/heavy fields) — used for grids, cards, search
 const listing = listingData as unknown as CatalogData;
@@ -79,6 +80,15 @@ export function getBooksByPublisher(pubSlugOrId: string): Book[] {
 
 export function getAllSeries(): Series[] {
   return publicSeries.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+/**
+ * Bind-up / omnibus series directory data.
+ * Books are flagged `isBindUp` at sync time (auto-sync-catalog.py) and
+ * backfilled into the catalog; grouping here is purely presentational.
+ */
+export function getBindUpSeries(): BindUpSeriesGroup[] {
+  return groupBindUpBooks(publicBooks, publicSeries);
 }
 
 export function getSeriesBySlug(slug: string): Series | undefined {

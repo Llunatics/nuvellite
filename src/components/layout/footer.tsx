@@ -31,6 +31,9 @@ export function Footer() {
           <Link href="/series" className="hover:text-editorial-title transition-colors">
             Seri
           </Link>
+          <Link href="/bind-up" className="hover:text-editorial-title transition-colors">
+            Bind-Up
+          </Link>
           <Link href="/library" className="hover:text-editorial-title transition-colors">
             Koleksi
           </Link>

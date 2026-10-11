@@ -192,6 +192,49 @@ def is_wednesday(date_str):
     except Exception:
         return False
 
+# --- Bind-up / omnibus edition detection -----------------------------------
+# Mirrors src/lib/data/edition-detector.ts. Pattern-based (no hardcoded
+# series), so newly released bind-up editions are flagged automatically at
+# sync time. Deliberately NOT markers: "Complete Set"/"Box Set" (bundles),
+# "New Edition"/"Premium"/"Special Set" (reprints/merch bundles), and story
+# anthologies ("Best of Best", "Fragments of Horror", "Twisted Visions",
+# "... Compilation").
+def _x_in_1_label(m):
+    return f'{m.group(1)}-in-1'
+
+# Order matters: first match wins (mirrors edition-detector.ts exactly).
+BIND_UP_PATTERNS = [
+    ('BIND_UP', re.compile(r'\bbind[\s-]?up\b', re.IGNORECASE), 'Bind Up'),
+    ('OMNIBUS', re.compile(r'\bomnibus\b', re.IGNORECASE), 'Omnibus'),
+    ('X_IN_1', re.compile(r'\b([2-9])\s*(?:[-–])?\s*in\s*(?:[-–])?\s*1\b', re.IGNORECASE), _x_in_1_label),
+    ('COMPLETE_EDITION', re.compile(r'\bcomplete\s+edition\b', re.IGNORECASE), 'Complete Edition'),
+    ('ULTIMATE_EDITION', re.compile(r'\bultimate\b', re.IGNORECASE), 'Ultimate Edition'),
+    ('DELUXE', re.compile(r'\bdeluxe\b', re.IGNORECASE), 'Deluxe'),
+    ('TRILOGY', re.compile(r'\btrilog[yi]\b', re.IGNORECASE), 'Trilogi'),
+    ('EDISI_KOLEKSI', re.compile(r'\bedisi\s+koleksi\b', re.IGNORECASE), 'Edisi Koleksi'),
+]
+
+# Verified bind-up releases whose Indonesian store titles carry no marker.
+CURATED_BIND_UPS = [
+    # (title_regex, publisher_id, kind, label)
+    (re.compile(r'\buzumaki\b', re.IGNORECASE), 'pub_mnc', 'CURATED', '3-in-1'),
+]
+
+def detect_bind_up(title, series_name='', publisher_id=''):
+    """Return (kind, label) for bind-up/omnibus editions, else (None, None)."""
+    haystack = ' '.join(p for p in [title, series_name] if p)
+    for kind, rx, label in BIND_UP_PATTERNS:
+        m = rx.search(haystack)
+        if m:
+            return kind, label(m) if callable(label) else label
+    pub = (publisher_id or '').lower()
+    for rx, pub_id, kind, label in CURATED_BIND_UPS:
+        if pub_id and pub != pub_id.lower():
+            continue
+        if rx.search(haystack):
+            return kind, label
+    return None, None
+
 def determine_book_medium(b):
     title = (b.get('title') or '').strip()
     t_lower = title.lower()
@@ -495,6 +538,10 @@ def run_sync(catalog_path):
         vol, sname = parse_title_smart(title)
         book_id = f"pub_{slug.replace('-', '_')}"
 
+        # Bind-up / omnibus detection: pattern-based, so future bind-up
+        # releases are categorized automatically (adaptive).
+        bind_up_kind, bind_up_label = detect_bind_up(title, sname, adapter.publisher_id)
+
         if slug in existing_books_map:
             b = existing_books_map[slug]
             if b.get('currentPrice') and current_price and b['currentPrice'] != current_price:
@@ -523,6 +570,10 @@ def run_sync(catalog_path):
                 b['coverImage'] = cover
             if len(synopsis) > len(b.get('synopsis', '')):
                 b['synopsis'] = synopsis
+            # Recompute bind-up flag on every sync (idempotent backfill).
+            b['isBindUp'] = bind_up_kind is not None
+            b['bindUpKind'] = bind_up_kind
+            b['bindUpLabel'] = bind_up_label
             updated_count += 1
         else:
             new_book = {
@@ -552,7 +603,10 @@ def run_sync(catalog_path):
                 'gramediaUrl': f"https://www.gramedia.com/products/{slug}",
                 'classificationStatus': 'ACCEPTED',
                 'classificationConfidence': 0.95,
-                'classificationReason': f"Verified {cat} from {adapter.publisher_short}"
+                'classificationReason': f"Verified {cat} from {adapter.publisher_short}",
+                'isBindUp': bind_up_kind is not None,
+                'bindUpKind': bind_up_kind,
+                'bindUpLabel': bind_up_label,
             }
             existing_books_map[slug] = new_book
             inserted_count += 1

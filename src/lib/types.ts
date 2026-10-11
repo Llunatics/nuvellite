@@ -84,6 +84,10 @@ export interface Book {
   editionType?: string;
   availableEditions?: BookEdition[];
   isSetVariant?: boolean;
+  /** Bind-up / omnibus edition (several original volumes in one book). Set by edition-detector at sync/build time. */
+  isBindUp?: boolean;
+  bindUpKind?: string;
+  bindUpLabel?: string;
   gramediaUrl?: string;
   classificationStatus?: ClassificationStatus;
   classificationReason?: string;

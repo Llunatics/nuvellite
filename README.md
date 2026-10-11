@@ -32,7 +32,13 @@ Tracker rilis harus memetakan seluruh semesta rilis resmi, bukan hanya produk ya
 - Seluruh logika klasifikasi, pemisahan format (Manga vs Light Novel), dan resolusi entitas berjalan berdasarkan aturan data: imprint penerbit, token format, slug kategori, dan metadata ISBN.
 - Tidak ada daftar judul anime/manga statis di dalam kode aplikasi. Rilisan baru di masa depan akan langsung dikenali dan diproses otomatis.
 
-### 6. Desain Editorial & Liquid Glass
+### 6. Direktori Bind-Up & Omnibus Otomatis
+- Edisi bind-up/omnibus (beberapa volume original dalam satu buku) terdeteksi otomatis dari pola judul: *bind up*, *omnibus*, *complete edition*, *ultimate*, *deluxe*, *N-in-1*, *trilogi*, *edisi koleksi*.
+- Deteksi berjalan di pipeline sinkronisasi (`detect_bind_up` di `scripts/auto-sync-catalog.py`, mirror TS di `src/lib/data/edition-detector.ts`), sehingga rilisan bind-up baru langsung masuk direktori `/bind-up` tanpa pendaftaran manual.
+- Bundel biasa (*complete set* / *box set*), cetak ulang *premium*/*new edition*, dan antologi cerita sengaja tidak dihitung sebagai bind-up.
+- Daftar terkurasi minimal (`CURATED_BIND_UPS`) hanya untuk rilisan terverifikasi yang judul tokonya tidak membawa penanda sama sekali (mis. Uzumaki Akasha 3-in-1).
+
+### 7. Desain Editorial & Liquid Glass
 - **Header Adaptif**: Menyatu tanpa batas (*integrated*) di bagian atas halaman, lalu bertransisi mulus menjadi bilah kaca mengapung (*liquid-glass pill*) saat halaman digulir.
 - **Palet Tema**: Pilihan aksen warna dinamis (Vermilion, Gold, Indigo, Emerald, Azure, Rose) yang tersimpan di penyimpanan lokal.
 - **Tipografi Terkurasi**: Perpaduan serif editorial untuk judul dan sans modern untuk keterbacaan data teknis.

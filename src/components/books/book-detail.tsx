@@ -182,6 +182,18 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
                 <span className={book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'}>
                   {book.category}
                 </span>
+                {book.isBindUp && (
+                  <>
+                    <span className="text-editorial-faint/60">•</span>
+                    <Link
+                      href="/bind-up"
+                      className="text-lime-300 font-semibold uppercase tracking-wider hover:underline"
+                      title={`Edisi ${book.bindUpLabel || 'bind-up'}: beberapa volume original dalam satu buku`}
+                    >
+                      {book.bindUpLabel || 'Bind-Up'}
+                    </Link>
+                  </>
+                )}
                 {book.status === 'PREORDER' && (
                   <>
                     <span className="text-editorial-faint/60">•</span>
