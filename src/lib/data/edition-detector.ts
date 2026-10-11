@@ -71,8 +71,12 @@ interface CuratedBindUp {
   note: string;
 }
 
-// Verified bind-up releases whose Indonesian store titles carry no marker.
-// Keep this list tiny and evidence-backed; patterns do the heavy lifting.
+// Verified bind-up releases whose Indonesian store titles carry no
+// unambiguous marker ("New Edition" / "Collector's Edition" / "Premium"
+// alone prove nothing — e.g. Orange New Edition is a 1:1 reprint).
+// Every entry below was verified volume-count by volume-count against the
+// Japanese edition it reprints. Keep this list evidence-backed; patterns
+// do the heavy lifting.
 const CURATED_BIND_UPS: CuratedBindUp[] = [
   {
     match: /\buzumaki\b/i,
@@ -80,6 +84,34 @@ const CURATED_BIND_UPS: CuratedBindUp[] = [
     kind: 'CURATED',
     label: '3-in-1',
     note: 'Akasha Uzumaki: 648-page single-volume complete edition (3-in-1).',
+  },
+  {
+    match: /death note[\s-]*new edition/i,
+    publisherId: 'pub_mnc',
+    kind: 'CURATED',
+    label: 'Bunkoban',
+    note: 'm&c! Death Note New Edition: bunkoban reprint, 12 vols -> 7 (2-in-1).',
+  },
+  {
+    match: /evangelion[\s-]*collector'?s edition/i,
+    publisherId: 'pub_mnc',
+    kind: 'CURATED',
+    label: "Collector's Edition",
+    note: "Akasha Evangelion Collector's Edition: 14 vols -> 7 (2-in-1).",
+  },
+  {
+    match: /akasha\s*:?\s*monster/i,
+    publisherId: 'pub_mnc',
+    kind: 'CURATED',
+    label: 'Kanzenban',
+    note: 'Akasha Monster: kanzenban reprint, 18 vols -> 9 (2-in-1).',
+  },
+  {
+    match: /slam dunk[\s-]*new edition/i,
+    publisherId: 'pub_elex',
+    kind: 'CURATED',
+    label: 'New Edition',
+    note: 'Elex Slam Dunk New Edition: shinsoban reprint, 31 vols -> 20.',
   },
 ];
 

@@ -214,10 +214,18 @@ BIND_UP_PATTERNS = [
     ('EDISI_KOLEKSI', re.compile(r'\bedisi\s+koleksi\b', re.IGNORECASE), 'Edisi Koleksi'),
 ]
 
-# Verified bind-up releases whose Indonesian store titles carry no marker.
+# Verified bind-up releases whose Indonesian store titles carry no
+# unambiguous marker ("New Edition" / "Collector's Edition" / "Premium"
+# alone prove nothing — e.g. Orange New Edition is a 1:1 reprint).
+# Every entry was verified volume-count by volume-count against the
+# Japanese edition it reprints.
 CURATED_BIND_UPS = [
     # (title_regex, publisher_id, kind, label)
     (re.compile(r'\buzumaki\b', re.IGNORECASE), 'pub_mnc', 'CURATED', '3-in-1'),
+    (re.compile(r'death note[\s-]*new edition', re.IGNORECASE), 'pub_mnc', 'CURATED', 'Bunkoban'),
+    (re.compile(r"evangelion[\s-]*collector'?s edition", re.IGNORECASE), 'pub_mnc', 'CURATED', "Collector's Edition"),
+    (re.compile(r'akasha\s*:?\s*monster', re.IGNORECASE), 'pub_mnc', 'CURATED', 'Kanzenban'),
+    (re.compile(r'slam dunk[\s-]*new edition', re.IGNORECASE), 'pub_elex', 'CURATED', 'New Edition'),
 ]
 
 def detect_bind_up(title, series_name='', publisher_id=''):

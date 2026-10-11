@@ -43,17 +43,48 @@ describe('Bind-up / omnibus edition detection', () => {
     expect(detectBindUp('Akasha : Uzumaki', { publisherId: 'pub_elex' })).toBeNull();
   });
 
+  it('flags verified combined reprints via the curated list', () => {
+    // m&c! Death Note New Edition: bunkoban, 12 vols -> 7 (2-in-1)
+    expect(detectBindUp('Death Note - New Edition 07', { publisherId: 'pub_mnc' })).toEqual({
+      kind: 'CURATED',
+      label: 'Bunkoban',
+    });
+    // Akasha Evangelion Collector's Edition: 14 vols -> 7 (2-in-1)
+    expect(
+      detectBindUp("Akasha : Neon Genesis Evangelion - Collector's Edition 07", { publisherId: 'pub_mnc' })
+    ).toEqual({ kind: 'CURATED', label: "Collector's Edition" });
+    // Akasha Monster: kanzenban, 18 vols -> 9 (2-in-1)
+    expect(detectBindUp('Akasha : Monster 09', { publisherId: 'pub_mnc' })).toEqual({
+      kind: 'CURATED',
+      label: 'Kanzenban',
+    });
+    // Elex Slam Dunk New Edition: shinsoban, 31 vols -> 20
+    expect(detectBindUp('Slam Dunk New Edition 20', { publisherId: 'pub_elex' })).toEqual({
+      kind: 'CURATED',
+      label: 'New Edition',
+    });
+  });
+
   it('falls back to the series name when the title itself has no marker', () => {
     expect(detectBindUp('Some Plain Title', { seriesName: 'Naruto Bind Up' })?.kind).toBe('BIND_UP');
   });
 
-  it('does NOT flag bundles, reprints, or story anthologies as bind-ups', () => {
+  it('does NOT flag bundles, 1:1 reprints, premium paper, or story anthologies', () => {
     const falsePositives = [
       'One Piece Complete Set',
       'Jujutsu Kaisen Box Set Vol. 1-5',
       'Detektif Conan Premium 33',
-      'Slam Dunk New Edition 2',
+      'Detektif Kindaichi Premium 30',
       'Yuyu Hakusho Premium 04',
+      'Hai, Miiko! Vol. 38 - Premium',
+      // "New Edition" alone proves nothing: Orange's is a 1:1 reprint (5 -> 5).
+      'Orange 01 - New Edition',
+      // Regular volume numbering, no Indonesian bind-up exists.
+      'Alice in Borderland Vol. 09',
+      'Alice in Borderland - Retry 02',
+      'Level Comic: Jojo`s Bizarre Adventure 19 - Part 4 Diamond Is Unbreakable',
+      // Sequel anthology series (Fuan no Tane+), not a combined edition.
+      'Seeds of Anxiety Plus 01',
       'The Art of Junji Ito - Twisted Visions',
       'Akasha : Ito Junji - Best of Best',
       'Akasha : Fragments of Horror',
@@ -151,6 +182,10 @@ describe('Catalog bind-up coverage (anti-miss regression)', () => {
       'koloni h2o reborn',
       'uzumaki',
       'namaku miiko',
+      'death note',
+      'evangelion',
+      'monster',
+      'slam dunk',
     ];
     for (const name of expected) {
       expect(names.some((n) => n.includes(name)), `missing bind-up series: ${name}`).toBe(true);
