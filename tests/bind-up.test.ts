@@ -63,6 +63,13 @@ describe('Bind-up / omnibus edition detection', () => {
       kind: 'CURATED',
       label: 'New Edition',
     });
+    // Elex Alice in Borderland 2-in-1 reprint: 18 vols -> 9
+    expect(detectBindUp('Alice in Borderland Vol. 09', { publisherId: 'pub_elex' })).toEqual({
+      kind: 'CURATED',
+      label: '2-in-1',
+    });
+    // ...but the "- Retry" sequel stays a regular series.
+    expect(detectBindUp('Alice in Borderland - Retry 02', { publisherId: 'pub_elex' })).toBeNull();
   });
 
   it('falls back to the series name when the title itself has no marker', () => {
@@ -80,8 +87,6 @@ describe('Bind-up / omnibus edition detection', () => {
       // "New Edition" alone proves nothing: Orange's is a 1:1 reprint (5 -> 5).
       'Orange 01 - New Edition',
       // Regular volume numbering, no Indonesian bind-up exists.
-      'Alice in Borderland Vol. 09',
-      'Alice in Borderland - Retry 02',
       'Level Comic: Jojo`s Bizarre Adventure 19 - Part 4 Diamond Is Unbreakable',
       // Sequel anthology series (Fuan no Tane+), not a combined edition.
       'Seeds of Anxiety Plus 01',
@@ -186,6 +191,7 @@ describe('Catalog bind-up coverage (anti-miss regression)', () => {
       'evangelion',
       'monster',
       'slam dunk',
+      'alice in borderland',
     ];
     for (const name of expected) {
       expect(names.some((n) => n.includes(name)), `missing bind-up series: ${name}`).toBe(true);

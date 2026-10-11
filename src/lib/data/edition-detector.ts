@@ -113,6 +113,14 @@ const CURATED_BIND_UPS: CuratedBindUp[] = [
     label: 'New Edition',
     note: 'Elex Slam Dunk New Edition: shinsoban reprint, 31 vols -> 20.',
   },
+  {
+    // Negative lookahead: the "- Retry" sequel is a regular 2-volume series.
+    match: /alice in borderland(?!.*retry)/i,
+    publisherId: 'pub_elex',
+    kind: 'CURATED',
+    label: '2-in-1',
+    note: 'Elex Alice in Borderland 2-in-1 reprint: 18 vols -> 9.',
+  },
 ];
 
 export function detectBindUp(title: string, opts: DetectBindUpOptions = {}): BindUpInfo | null {
