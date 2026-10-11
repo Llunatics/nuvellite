@@ -261,13 +261,14 @@ def detect_bind_up(title, series_name='', publisher_id=''):
             return kind, label
     return None, None
 
-# PGI light-novel-only franchises whose releases omit the "Light Novel"
-# title prefix. Verified 2026-10-11 against PGI's official publication list
-# (id.wikipedia.org/wiki/Phoenix_Gramedia_Indonesia) + publisher announcements:
-# these have no manga adaptation from PGI, so token-less releases are novels.
-PGI_LN_ONLY_FRANCHISES = (
-    'tentang suatu tempat di wilayah kinki',
-    'tentang ziarah yang terkutuk',
+# Titles verified (2026-10-11) to be LIGHT NOVELS despite lacking a
+# "Light Novel" title token. Checked against publisher product pages.
+# NOTE: do NOT add PGI franchises here on the assumption that "no token =
+# novel" — PGI publishes both manga and novels for dual-medium franchises
+# (Kinki and Ziarah manga versions verified via cover credits + KAORI
+# release schedules; the catalog entries are the manga).
+VERIFIED_LIGHT_NOVEL_FRAGMENTS = (
+    'ingatan untuk menyelamatkanmu',  # m&c! novel (380pp, Novel category)
 )
 
 def determine_book_medium(b):
@@ -279,6 +280,10 @@ def determine_book_medium(b):
     # (e.g. "Light Novel One Piece: ... The Movie") are prose, not comics.
     if has_ln_token:
         return 'LIGHT_NOVEL'
+    # Curated verified novels without a title token.
+    for frag in VERIFIED_LIGHT_NOVEL_FRAGMENTS:
+        if frag in t_lower:
+            return 'LIGHT_NOVEL'
     if 'movie' in t_lower or 'movie story' in t_lower:
         return 'MOVIE'
 
@@ -287,14 +292,8 @@ def determine_book_medium(b):
 
     # PGI: Phoenix Gramedia Indonesia explicitly includes "Light Novel" or "(Novel)" in LN releases.
     # PGI Manga releases do NOT have "Light Novel" in the title (e.g. "The Eminence in Shadow 14").
-    # Exception: LN-only franchises whose releases omit the token (verified 2026-10-11).
     if pub_id == 'pub_pgi':
-        if has_ln_token:
-            return 'LIGHT_NOVEL'
-        for frag in PGI_LN_ONLY_FRANCHISES:
-            if frag in t_lower:
-                return 'LIGHT_NOVEL'
-        return 'MANGA'
+        return 'LIGHT_NOVEL' if has_ln_token else 'MANGA'
 
     # m&c! Clover imprint / Light Novel. Require the Clover prefix (a bare
     # substring mislabels manga like "You are a Four Leaf Clover" as LN).

@@ -74,11 +74,12 @@ const KNOWN_NON_MANGA_SERIES = [
   'miaow', // classic Spanish novel shelved under PGI
 ];
 
-// PGI light-novel-only franchises whose releases omit the "Light Novel"
-// title prefix (verified 2026-10-11 against PGI's official publication list).
-const PGI_LN_ONLY_FRANCHISES = [
-  'tentang suatu tempat di wilayah kinki',
-  'tentang ziarah yang terkutuk',
+// Titles verified (2026-10-11) to be LIGHT NOVELS despite lacking a
+// "Light Novel" title token. NOTE: do NOT add PGI franchises here assuming
+// "no token = novel" — PGI publishes both manga and novels for dual-medium
+// franchises (Kinki/Ziarah manga versions verified; catalog holds the manga).
+const VERIFIED_LIGHT_NOVEL_FRAGMENTS = [
+  'ingatan untuk menyelamatkanmu', // m&c! novel (380pp, Novel category)
 ];
 
 function categorySegments(raw: string | undefined): string[] {
@@ -220,9 +221,6 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     if (tLower.includes('light novel') || tLower.includes('light-novel') || catSlugs.includes('light-novel') || tLower.includes('(novel)') || tLower.includes('the novel')) {
       positiveSignals.push('Rilisan resmi Light Novel PGI / KADOKAWA');
       isLN = true;
-    } else if (PGI_LN_ONLY_FRANCHISES.some((f) => tLower.includes(f))) {
-      positiveSignals.push('Franchise LN-only PGI terverifikasi (tanpa token Light Novel)');
-      isLN = true;
     } else if (tLower.includes('manga') || tLower.includes('komik') || catSlugs.includes('manga') || catSlugs.includes('komik')) {
       positiveSignals.push('Rilisan resmi Manga PGI / KADOKAWA');
       isManga = true;
@@ -236,6 +234,13 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
   // Format tokens
   if (tLower.includes('light novel') || tLower.includes('(novel)') || tLower.includes('the novel') || catSlugs.includes('light-novel') || (isLN && !isManga)) {
     positiveSignals.push('Token format Light Novel dalam judul/kategori');
+    isLN = true;
+    isManga = false;
+  }
+
+  // Verified novels without a title token (publisher-agnostic).
+  if (!isLN && VERIFIED_LIGHT_NOVEL_FRAGMENTS.some((f) => tLower.includes(f))) {
+    positiveSignals.push('Judul novel terverifikasi (tanpa token Light Novel)');
     isLN = true;
     isManga = false;
   }

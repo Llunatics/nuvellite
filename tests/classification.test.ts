@@ -208,31 +208,41 @@ describe('Multi-Signal Classification Engine', () => {
     expect(pgiLN.format).toBe('LIGHT_NOVEL');
   });
 
-  it('should classify PGI LN-only franchises without the Light Novel token as Light Novels', () => {
-    // Verified 2026-10-11: PGI's releases for these franchises omit the token.
-    const kinki = classifyProduct({
-      title: 'Tentang Suatu Tempat di Wilayah Kinki Vol. 1',
-      publisherId: 'pub_pgi',
-      publisherName: 'Phoenix Gramedia Indonesia',
+  it('should classify verified novels without a Light Novel token as Light Novels', () => {
+    // Verified 2026-10-11: m&c! lists it under Novel (380pp).
+    const ingatan = classifyProduct({
+      title: 'Ingatan untuk Menyelamatkanmu 1',
+      publisherId: 'pub_mnc',
+      publisherName: 'm&c! Publishing',
     });
-    expect(kinki.status).toBe('ACCEPTED');
-    expect(kinki.category).toBe('Light Novel');
-
-    const ziarah = classifyProduct({
-      title: 'Tentang Ziarah yang Terkutuk 1',
-      publisherId: 'pub_pgi',
-      publisherName: 'Phoenix Gramedia Indonesia',
-    });
-    expect(ziarah.status).toBe('ACCEPTED');
-    expect(ziarah.category).toBe('Light Novel');
+    expect(ingatan.status).toBe('ACCEPTED');
+    expect(ingatan.category).toBe('Light Novel');
 
     // ...but token-less PGI releases of dual-medium franchises stay Manga.
+    // Kinki & Ziarah manga versions verified via cover credits (Art: Tsukasa
+    // Usui) + KAORI Komik release schedules; the catalog holds the manga.
     const overlordManga = classifyProduct({
       title: 'Overlord Vol. 15',
       publisherId: 'pub_pgi',
       publisherName: 'Phoenix Gramedia Indonesia',
     });
     expect(overlordManga.category).toBe('Manga');
+
+    const kinkiManga = classifyProduct({
+      title: 'Tentang Suatu Tempat di Wilayah Kinki Vol. 1',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+    });
+    expect(kinkiManga.category).toBe('Manga');
+
+    // PGI's Re-Living is the manga adaptation (sellers list "Komik", PGI URL
+    // has no novel- prefix); the franchise novel is m&c!'s Ingatan... above.
+    const reliving = classifyProduct({
+      title: 'Re-Living My Life to Save You Vol. 1',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+    });
+    expect(reliving.category).toBe('Manga');
   });
 
   it('should reject verified non-manga/non-LN books from the Elex feed', () => {
