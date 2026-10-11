@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-11T12:15:11.000Z",
+  "lastUpdated": "2026-10-11T21:37:15.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -114188,7 +114188,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/akjmnn6j40.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
       "currentPrice": 30000,
@@ -153691,6 +153691,26 @@
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791754635",
+      "startedAt": "2026-10-11T21:33:17.000Z",
+      "finishedAt": "2026-10-11T21:37:15.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1317,
+      "productsRejected": 400,
+      "productsUpdated": 1155,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 237571,
+      "success": true
+    },
     {
       "id": "sync_1791720911",
       "startedAt": "2026-10-11T12:11:32.000Z",
