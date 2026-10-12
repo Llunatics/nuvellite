@@ -23,7 +23,17 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'COMPLETED' | 'ONGOING'>('ALL');
   const [sortBy, setSortBy] = useState<'name' | 'volumes_high' | 'volumes_low'>('name');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [bindUpOnly, setBindUpOnly] = useState(false);
   const sentinelRef = useRef<HTMLDivElement>(null);
+
+  // Series IDs that have bind-up editions
+  const bindUpSeriesIds = useMemo(() => {
+    const set = new Set<string>();
+    for (const b of allBooks) {
+      if (b.isBindUp && b.seriesId) set.add(b.seriesId);
+    }
+    return set;
+  }, [allBooks]);
 
   // Map seriesId -> Set of owned book IDs
   const ownedSeriesMap = useMemo(() => {
@@ -52,6 +62,8 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         if (pubFilter !== 'ALL' && s.publisherId !== pubFilter) return false;
         // Status
         if (statusFilter !== 'ALL' && s.status !== statusFilter) return false;
+        // Bind-up only
+        if (bindUpOnly && !bindUpSeriesIds.has(s.id)) return false;
         // Search Query (name, author, publisher)
         if (q) {
           const matchName = s.name.toLowerCase().includes(q);
@@ -70,12 +82,12 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         }
         return a.name.localeCompare(b.name);
       });
-  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
+  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy, bindUpOnly, bindUpSeriesIds]);
 
   // Reset pagination when filters change
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
+  }, [formatFilter, pubFilter, statusFilter, searchQuery, sortBy, bindUpOnly]);
 
   // Infinite scroll: load more when sentinel enters viewport
   useEffect(() => {
@@ -146,7 +158,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         {/* Filter Controls: Symmetrical Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 text-xs">
           {/* Format Segmented Tab */}
-          <div className="sm:col-span-6 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
+          <div className="sm:col-span-5 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
             {(['ALL', 'MANGA', 'LIGHT_NOVEL'] as const).map((fmt) => (
               <button
                 key={fmt}
@@ -163,8 +175,23 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
             ))}
           </div>
 
+          {/* Bind-Up Toggle */}
+          <button
+            type="button"
+            onClick={() => setBindUpOnly((v) => !v)}
+            title="Hanya tampilkan seri yang punya edisi bind-up"
+            className={`sm:col-span-2 flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-full font-medium transition-all text-xs border truncate ${
+              bindUpOnly
+                ? 'bg-accent/15 border-accent/30 text-accent font-semibold'
+                : 'bg-white/[0.03] border-white/[0.06] text-editorial-muted hover:text-editorial-title'
+            }`}
+          >
+            <BookOpen className="w-3.5 h-3.5 shrink-0" />
+            <span className="truncate">Bind-Up</span>
+          </button>
+
           {/* Symmetrical Dropdowns */}
-          <div className="sm:col-span-6 grid grid-cols-3 gap-2">
+          <div className="sm:col-span-5 grid grid-cols-3 gap-2">
             {/* Status Select */}
             <div className="relative">
               <select
@@ -282,6 +309,11 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
                       {series.isArchive && (
                         <span className="px-1.5 py-0.5 rounded text-[8px] font-mono font-medium uppercase bg-black/60 backdrop-blur-sm border border-amber-500/30 text-amber-300">
                           Arsip
+                        </span>
+                      )}
+                      {bindUpSeriesIds.has(series.id) && (
+                        <span className="px-1.5 py-0.5 rounded text-[8px] font-mono font-medium uppercase bg-black/60 backdrop-blur-sm border border-emerald-500/30 text-emerald-300">
+                          Bind-Up
                         </span>
                       )}
                     </div>
