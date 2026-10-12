@@ -145,22 +145,10 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
         {/* Results List */}
         <div className="overflow-y-auto p-4 flex-1 space-y-4">
           {qTrim === '' ? (
-            <div className="py-8 px-4 space-y-4 text-center">
-              <div className="space-y-1">
-                <p className="font-editorial text-base font-normal text-editorial-title">
-                  Pencarian Cepat Katalog Nuvellite
-                </p>
-                <p className="text-xs text-editorial-muted">
-                  Cari berdasarkan judul, seri kanonikal, nomor ISBN-13, pengarang, atau nomor volume.
-                </p>
-              </div>
-
+            <div className="py-6 px-4 space-y-3 text-center">
               {/* Dynamic Suggestion Chips */}
               {dynamicQuickTags.length > 0 && (
-                <div className="pt-2">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block mb-2">
-                    Seri Populer Terdaftar:
-                  </span>
+                <div>
                   <div className="flex flex-wrap justify-center gap-1.5">
                     {dynamicQuickTags.map((tag) => (
                       <button
