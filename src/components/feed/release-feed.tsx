@@ -175,18 +175,18 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   return (
     <div className="space-y-16 sm:space-y-20">
       {/* 1. HERO EDITORIAL INTRODUCTION */}
-      <section className="space-y-4 pt-2 sm:pt-4">
-        <div className="max-w-3xl space-y-3">
+      <section className="space-y-4 pt-2 sm:pt-4 lg:pt-8">
+        <div className="max-w-3xl lg:max-w-4xl space-y-3 lg:space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-xs shrink-0" />
             <span>Katalog Indonesia</span>
           </div>
 
-          <h1 className="font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.08]">
+          <h1 className="font-editorial text-3xl sm:text-5xl lg:text-7xl font-normal text-editorial-title tracking-tight leading-[1.08]">
             Pelacak Manga &amp; Light Novel.
           </h1>
 
-          <p className="text-sm sm:text-base text-editorial-body leading-relaxed max-w-2xl font-sans">
+          <p className="text-sm sm:text-base lg:text-lg text-editorial-body leading-relaxed max-w-2xl lg:max-w-3xl font-sans">
             Arsip lengkap terbitan Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia.
             Pantau rilis mingguan, varian kanonikal, riwayat harga, dan kelengkapan koleksi Anda.
           </p>
@@ -502,7 +502,7 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
             {visibleBooks.map((book) => (
               <ReleaseCard key={book.id} book={book} />
             ))}

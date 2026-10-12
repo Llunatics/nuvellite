@@ -32,7 +32,7 @@ export function FeaturedReleaseCard({ book }: FeaturedReleaseCardProps) {
         {/* Large Visual Anchor Book Cover */}
         <Link
           href={`/books/${book.slug}`}
-          className="relative aspect-[3/4.2] w-44 sm:w-56 shrink-0 book-cover-elevated overflow-hidden group block"
+          className="relative aspect-[3/4.2] w-44 sm:w-56 lg:w-64 xl:w-72 shrink-0 book-cover-elevated overflow-hidden group block"
           tabIndex={-1}
         >
           {book.coverImage ? (
