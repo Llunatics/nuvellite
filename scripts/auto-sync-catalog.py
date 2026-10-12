@@ -548,6 +548,75 @@ def run_sync(catalog_path):
 
     print(f"  -> [CLASSIFICATION_COMPLETE] Accepted: {len(accepted_products)}, Rejected: {rejected_count}")
 
+    # 2.5. Stale price refresh: books in catalog but NOT in vendor feed keep
+    # stale prices forever. Fetch each directly by slug via product-detail-variants.
+    # This catches discounted books the vendor feed omits (e.g. Re:Zero manga vol 1 at 50% off).
+    accepted_slugs = set(accepted_products.keys())
+    stale_candidates = []
+    for slug, book in existing_books_map.items():
+        if slug in accepted_slugs:
+            continue
+        # Skip archive-only books (no Gramedia slug to fetch)
+        if book.get('isArchive') and not book.get('gramediaUrl'):
+            continue
+        stale_candidates.append(slug)
+
+    print(f"  -> [PRICE_REFRESH] Checking {len(stale_candidates)} catalog books not in vendor feed...")
+    refreshed_count = 0
+    refresh_snapshots = []
+
+    def refresh_price_task(slug):
+        # Use Elex adapter as default (endpoint is vendor-agnostic by slug)
+        adapter = adapters[0]
+        try:
+            specs = adapter.fetch_product_specs(slug)
+            if not specs:
+                return slug, None
+            # fetch_product_specs returns normalized 'price'/'original_price' keys
+            final_p = specs.get('price') or 0
+            slice_p = specs.get('original_price') or 0
+            if not final_p:
+                return slug, None
+            current_price = final_p
+            original_price = slice_p if slice_p > current_price else current_price
+            return slug, (current_price, original_price)
+        except Exception:
+            return slug, None
+
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        for slug, result in executor.map(refresh_price_task, stale_candidates):
+            if not result:
+                continue
+            current_price, original_price = result
+            book = existing_books_map.get(slug)
+            if not book:
+                continue
+            old_price = book.get('currentPrice')
+            old_orig = book.get('originalPrice')
+            if old_price != current_price or old_orig != original_price:
+                # Record snapshot
+                snap = {
+                    'id': f"snap_{book['id']}_{int(time.time())}",
+                    'bookId': book['id'],
+                    'price': current_price,
+                    'currentPrice': current_price,
+                    'originalPrice': original_price,
+                    'previousPrice': old_price,
+                    'availability': book.get('availability', 'AVAILABLE'),
+                    'observedAt': datetime.now(timezone.utc).strftime('%Y-%m-%d'),
+                    'source': 'gramedia_api_refresh'
+                }
+                refresh_snapshots.append(snap)
+                price_snapshot_map[book['id']].append(snap)
+                # Update book
+                book['currentPrice'] = current_price
+                book['originalPrice'] = original_price
+                refreshed_count += 1
+
+    print(f"  -> [PRICE_REFRESH] Updated {refreshed_count} stale prices.")
+    # Merge refresh snapshots into new_snapshots (defined later, so store for now)
+    # We'll append them after new_snapshots is initialized
+
     # 3. Concurrently fetch specs for new or updated products
     to_fetch_specs = []
     for slug, (item, adapter, cat) in accepted_products.items():
@@ -856,7 +925,7 @@ def run_sync(catalog_path):
     catalog['lastUpdated'] = finished_at
     catalog['books'] = all_books
     catalog['series'] = new_series_list
-    catalog['priceSnapshots'] = existing_price_snapshots + new_snapshots
+    catalog['priceSnapshots'] = existing_price_snapshots + new_snapshots + refresh_snapshots
 
     sync_run = {
         'id': f"sync_{int(time.time())}",
@@ -875,10 +944,11 @@ def run_sync(catalog_path):
         'success': len(errors) == 0
     }
 
-    all_snapshots = existing_price_snapshots + new_snapshots
+    all_snapshots = existing_price_snapshots + new_snapshots + refresh_snapshots
     catalog['lastUpdated'] = finished_at
     catalog['priceSnapshots'] = all_snapshots
-    sync_runs = catalog.get('syncRuns', [])    sync_runs.insert(0, sync_run)
+    sync_runs = catalog.get('syncRuns', [])
+    sync_runs.insert(0, sync_run)
     catalog['syncRuns'] = sync_runs[:20] # keep last 20
 
     # Consistency: report potential duplicate series (same normalized name)
@@ -896,7 +966,7 @@ def run_sync(catalog_path):
     print(f"   - Products Fetched: {total_products_fetched}")
     print(f"   - Products Accepted: {len(accepted_products)}")
     print(f"   - Products Inserted: {inserted_count}, Updated: {updated_count}")
-    print(f"   - New Price Snapshots: {len(new_snapshots)}")
+    print(f"   - New Price Snapshots: {len(new_snapshots)} (+{len(refresh_snapshots)} refresh)")
 
     # Auto-regenerate lightweight listing catalog for frontend performance
     try:
