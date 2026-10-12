@@ -284,6 +284,7 @@ def detect_bind_up(title, series_name='', publisher_id=''):
 # release schedules; the catalog entries are the manga).
 VERIFIED_LIGHT_NOVEL_FRAGMENTS = (
     'ingatan untuk menyelamatkanmu',  # m&c! novel (380pp, Novel category)
+    're:zero',  # PGI only publishes the LN (verified 2026-10-12); no PGI Re:Zero manga exists
 )
 
 def determine_book_medium(b):
