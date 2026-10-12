@@ -220,72 +220,72 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
       </section>
 
       {/* 2. Tabs & Format Filter Toolbar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 text-xs">
-        {/* Navigation Pills */}
-        <div className="flex flex-wrap items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
+      <div className="space-y-2 text-xs">
+        {/* Navigation Pills — full width, equal columns */}
+        <div className="flex items-stretch gap-1 p-1 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
           <button
             type="button"
             onClick={() => setActiveTab('OWNED')}
-            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-medium transition-all ${
+            className={`flex flex-1 items-center justify-center gap-1.5 px-2 py-2 rounded-xl font-medium transition-all text-center ${
               activeTab === 'OWNED'
                 ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                 : 'text-editorial-muted hover:text-editorial-title'
             }`}
           >
-            <BookOpen className="w-3.5 h-3.5" />
-            <span>Dimiliki ({ownedBooks.length})</span>
+            <BookOpen className="w-3.5 h-3.5 shrink-0" />
+            <span className="truncate">Dimiliki ({ownedBooks.length})</span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab('WISHLIST')}
-            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-medium transition-all ${
+            className={`flex flex-1 items-center justify-center gap-1.5 px-2 py-2 rounded-xl font-medium transition-all text-center ${
               activeTab === 'WISHLIST'
                 ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                 : 'text-editorial-muted hover:text-editorial-title'
             }`}
           >
-            <Bookmark className="w-3.5 h-3.5" />
-            <span>Wishlist ({wishlistBooks.length})</span>
+            <Bookmark className="w-3.5 h-3.5 shrink-0" />
+            <span className="truncate">Wishlist ({wishlistBooks.length})</span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab('SERIES')}
-            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-medium transition-all ${
+            className={`flex flex-1 items-center justify-center gap-1.5 px-2 py-2 rounded-xl font-medium transition-all text-center ${
               activeTab === 'SERIES'
                 ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                 : 'text-editorial-muted hover:text-editorial-title'
             }`}
           >
-            <Layers className="w-3.5 h-3.5" />
-            <span>Progres Seri ({trackedSeries.length})</span>
+            <Layers className="w-3.5 h-3.5 shrink-0" />
+            <span className="truncate">Progres Seri ({trackedSeries.length})</span>
           </button>
 
           {missingBooks.length > 0 && (
             <button
               type="button"
               onClick={() => setActiveTab('MISSING')}
-              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-medium transition-all ${
+              className={`flex flex-1 items-center justify-center gap-1.5 px-2 py-2 rounded-xl font-medium transition-all text-center ${
                 activeTab === 'MISSING'
                   ? 'bg-amber-400/20 text-amber-300 font-semibold shadow-xs'
                   : 'text-editorial-muted hover:text-editorial-title'
               }`}
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span>Volume Terlewat ({missingBooks.length})</span>
+              <Sparkles className="w-3.5 h-3.5 shrink-0 text-amber-400" />
+              <span className="truncate">Terlewat ({missingBooks.length})</span>
             </button>
           )}
         </div>
 
-        {/* Format Filter */}
-        <div className="flex items-center gap-0.5 p-0.5 rounded-full bg-white/[0.03] border border-white/[0.06]">
+        {/* Format Filter — full width, equal columns */}
+        <div className="grid grid-cols-3 gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
           {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
             <button
               key={fmt}
               type="button"
               onClick={() => setFormatFilter(fmt)}
-              className={`px-3 py-1 rounded-full font-medium transition-all ${
+              className={`py-2 rounded-full font-medium transition-all text-center truncate ${
                 formatFilter === fmt
                   ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
                   : 'text-editorial-muted hover:text-editorial-title'

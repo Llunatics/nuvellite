@@ -113,6 +113,10 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
           Direktori Seri Manga &amp; Light Novel.
         </h1>
+
+        <p className="text-[13px] text-editorial-muted font-sans">
+          {allSeries.length.toLocaleString('id-ID')} seri — termasuk arsip terbitan lama yang ditandai badge Arsip.
+        </p>
       </section>
 
       {/* 2. Symmetrical Search & Filter Command Bar */}
