@@ -43,14 +43,6 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
 
   const qTrim = query.trim().toLowerCase();
 
-  // Dynamic quick suggestions derived directly from top series in data
-  const dynamicQuickTags = useMemo(() => {
-    return allSeries
-      .filter((s) => (s.totalVolumes || 0) >= 2)
-      .slice(0, 6)
-      .map((s) => s.name);
-  }, [allSeries]);
-
   // Search Results
   const matchedBooks = useMemo(() => {
     if (!qTrim) return [];
@@ -145,24 +137,10 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
         {/* Results List */}
         <div className="overflow-y-auto p-4 flex-1 space-y-4">
           {qTrim === '' ? (
-            <div className="py-6 px-4 space-y-3 text-center">
-              {/* Dynamic Suggestion Chips */}
-              {dynamicQuickTags.length > 0 && (
-                <div>
-                  <div className="flex flex-wrap justify-center gap-1.5">
-                    {dynamicQuickTags.map((tag) => (
-                      <button
-                        key={tag}
-                        type="button"
-                        onClick={() => setQuery(tag)}
-                        className="px-3 py-1 rounded-full bg-white/[0.03] hover:bg-white/[0.08] text-editorial-muted hover:text-editorial-title text-xs font-mono transition-all border border-white/[0.06]"
-                      >
-                        {tag}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
+            <div className="py-10 px-4 text-center">
+              <p className="text-xs text-editorial-faint">
+                Ketik untuk mencari judul, seri, ISBN, pengarang, atau nomor volume.
+              </p>
             </div>
           ) : matchedBooks.length === 0 && matchedSeries.length === 0 && matchedPublishers.length === 0 ? (
             <div className="py-12 text-center text-xs text-editorial-faint space-y-2">
