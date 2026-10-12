@@ -125,8 +125,7 @@
   }
 
   /* Color Theme Overrides: Light Mode */
-  .light[data-accent="vermilion"] {
-    --accent-rgb: 225 29 72;
+  .light[data-accent="vermilion"] {    --accent-rgb: 225 29 72;
     --accent-strong-rgb: 190 18 60;
     --accent-glow: rgba(225, 29, 72, 0.20);
   }
@@ -333,6 +332,62 @@
   );
   background-size: 200% 100%;
 }
+
+/* Light-mode remap: hardcoded white/[n] overlays are designed for dark
+   backgrounds and turn invisible on light surfaces. These overrides swap
+   them to subtle dark tints so outlines and surfaces stay visible. */
+.light .bg-white\/\[0\.01\] { background-color: rgb(15 23 42 / 0.02); }
+.light .bg-white\/\[0\.015\] { background-color: rgb(15 23 42 / 0.025); }
+.light .bg-white\/\[0\.02\] { background-color: rgb(15 23 42 / 0.035); }
+.light .bg-white\/\[0\.03\] { background-color: rgb(15 23 42 / 0.045); }
+.light .bg-white\/\[0\.04\] { background-color: rgb(15 23 42 / 0.055); }
+.light .bg-white\/\[0\.05\] { background-color: rgb(15 23 42 / 0.065); }
+.light .bg-white\/\[0\.06\] { background-color: rgb(15 23 42 / 0.075); }
+.light .bg-white\/\[0\.07\] { background-color: rgb(15 23 42 / 0.085); }
+.light .bg-white\/\[0\.08\] { background-color: rgb(15 23 42 / 0.095); }
+.light .bg-white\/\[0\.1\] { background-color: rgb(15 23 42 / 0.12); }
+.light .bg-white\/\[0\.12\] { background-color: rgb(15 23 42 / 0.14); }
+.light .bg-white\/\[0\.14\] { background-color: rgb(15 23 42 / 0.16); }
+.light .bg-white\/\[0\.15\] { background-color: rgb(15 23 42 / 0.17); }
+.light .bg-white\/\[0\.16\] { background-color: rgb(15 23 42 / 0.18); }
+.light .bg-white\/\[0\.18\] { background-color: rgb(15 23 42 / 0.20); }
+.light .border-white\/\[0\.01\] { border-color: rgb(15 23 42 / 0.06); }
+.light .border-white\/\[0\.015\] { border-color: rgb(15 23 42 / 0.07); }
+.light .border-white\/\[0\.02\] { border-color: rgb(15 23 42 / 0.08); }
+.light .border-white\/\[0\.03\] { border-color: rgb(15 23 42 / 0.09); }
+.light .border-white\/\[0\.04\] { border-color: rgb(15 23 42 / 0.10); }
+.light .border-white\/\[0\.05\] { border-color: rgb(15 23 42 / 0.11); }
+.light .border-white\/\[0\.06\] { border-color: rgb(15 23 42 / 0.12); }
+.light .border-white\/\[0\.07\] { border-color: rgb(15 23 42 / 0.13); }
+.light .border-white\/\[0\.08\] { border-color: rgb(15 23 42 / 0.14); }
+.light .border-white\/\[0\.1\] { border-color: rgb(15 23 42 / 0.16); }
+.light .border-white\/\[0\.12\] { border-color: rgb(15 23 42 / 0.18); }
+.light .border-white\/\[0\.14\] { border-color: rgb(15 23 42 / 0.20); }
+.light .border-white\/\[0\.15\] { border-color: rgb(15 23 42 / 0.21); }
+.light .border-white\/\[0\.16\] { border-color: rgb(15 23 42 / 0.22); }
+.light .border-white\/\[0\.18\] { border-color: rgb(15 23 42 / 0.24); }
+.light .hover\:bg-white\/\[0\.03\]:hover { background-color: rgb(15 23 42 / 0.045); }
+.light .hover\:bg-white\/\[0\.04\]:hover { background-color: rgb(15 23 42 / 0.055); }
+.light .hover\:bg-white\/\[0\.05\]:hover { background-color: rgb(15 23 42 / 0.065); }
+.light .hover\:bg-white\/\[0\.06\]:hover { background-color: rgb(15 23 42 / 0.075); }
+.light .hover\:bg-white\/\[0\.08\]:hover { background-color: rgb(15 23 42 / 0.095); }
+.light .hover\:bg-white\/\[0\.1\]:hover { background-color: rgb(15 23 42 / 0.12); }
+.light .hover\:bg-white\/\[0\.12\]:hover { background-color: rgb(15 23 42 / 0.14); }
+.light .hover\:bg-white\/\[0\.14\]:hover { background-color: rgb(15 23 42 / 0.16); }
+.light .hover\:border-white\/\[0\.06\]:hover { border-color: rgb(15 23 42 / 0.12); }
+.light .hover\:border-white\/\[0\.08\]:hover { border-color: rgb(15 23 42 / 0.14); }
+.light .hover\:border-white\/\[0\.1\]:hover { border-color: rgb(15 23 42 / 0.16); }
+.light .hover\:border-white\/\[0\.12\]:hover { border-color: rgb(15 23 42 / 0.18); }
+.light .hover\:border-white\/\[0\.16\]:hover { border-color: rgb(15 23 42 / 0.22); }
+.light .focus\:bg-white\/\[0\.06\]:focus { background-color: rgb(15 23 42 / 0.075); }
+.light .focus\:bg-white\/\[0\.07\]:focus { background-color: rgb(15 23 42 / 0.085); }
+.light .focus\:border-white\/\[0\.15\]:focus { border-color: rgb(15 23 42 / 0.21); }
+.light .focus\:border-white\/\[0\.18\]:focus { border-color: rgb(15 23 42 / 0.24); }
+.light .divide-white\/\[0\.04\] > :not([hidden]) ~ :not([hidden]) { border-color: rgb(15 23 42 / 0.10); }
+.light .from-white\/\[0\.06\] { --tw-gradient-from: rgb(15 23 42 / 0.06) var(--tw-gradient-from-position); --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-from-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.light .to-white\/\[0\.01\] { --tw-gradient-to: rgb(15 23 42 / 0.02) var(--tw-gradient-to-position); }
+.light .to-white\/\[0\.02\] { --tw-gradient-to: rgb(15 23 42 / 0.03) var(--tw-gradient-to-position); }
+.light .via-white\/\[0\.04\] { --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), rgb(15 23 42 / 0.05) var(--tw-gradient-via-position), var(--tw-gradient-to); }
 
 .light .cover-depth {
   box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
