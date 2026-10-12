@@ -310,7 +310,7 @@ def determine_book_medium(b):
 
     return 'MANGA'
 
-def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None):
+def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None, authors=''):
     """Two-signal classification: title patterns + store category slugs.
 
     REJECT happens only on positive junk evidence (never on "no signal"),
@@ -320,10 +320,29 @@ def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None):
     t_lower = t.lower()
     cat = (cat_slugs or '').lower()
     segs = _category_segments(cat)
+    authors_lower = (authors or '').lower()
 
     # 1. Merchandise: absolute reject, regardless of category.
     if MERCHANDISE_REGEX.search(t):
         return 'REJECT', None, 'Matched merchandise title pattern'
+
+    # Merchandise author credit (e.g. "Merchandise Gerai Kompas"): precise,
+    # never collides with real manga authors. Catches items like
+    # "Hunter Hat Press Ssst X Gerai Kompas" whose title evades MERCHANDISE_REGEX
+    # ("Witch Hat Atelier" is real manga, so "hat" alone must NOT be blocked).
+    if 'merchandise' in authors_lower:
+        return 'REJECT', None, 'Author credit is merchandise (non-book product)'
+
+    # Generic placeholder titles: Gramedia lists bundle/single-copy placeholder
+    # products as "Satuan" / "Komik Satuan". No real manga/LN is titled exactly this.
+    if t_lower in ('satuan', 'komik satuan'):
+        return 'REJECT', None, 'Generic placeholder title (satuan)'
+
+    # Bundle SKUs: Gramedia bundle products are titled "Bundling Komik - JBA8",
+    # "Bundling Komik 1 - NBU1", etc. No legitimate series starts with "bundling"
+    # (verified against catalog 2026-10-12).
+    if t_lower.startswith('bundling'):
+        return 'REJECT', None, 'Bundle SKU product (non-book bundle)'
 
     # Qanza is m&c!'s Islamic children-book imprint (never manga / light novel).
     # Titles carry the imprint as a prefix, e.g. "Qanza: ...".
@@ -461,7 +480,8 @@ def run_sync(catalog_path):
 
                 status, cat, reason = classify_book(
                     title, adapter.publisher_id,
-                    cat_slugs=item.get('category_slugs') or ''
+                    cat_slugs=item.get('category_slugs') or '',
+                    authors=item.get('author') or '',
                 )
                 if status == 'REJECT':
                     rejected_count += 1
@@ -494,7 +514,8 @@ def run_sync(catalog_path):
 
             status, cat, reason = classify_book(
                 title, adapter.publisher_id,
-                cat_slugs=item.get('category_slugs') or ''
+                cat_slugs=item.get('category_slugs') or '',
+                authors=item.get('author') or '',
             )
             if status == 'REJECT':
                 rejected_count += 1
@@ -571,6 +592,7 @@ def run_sync(catalog_path):
             title, adapter.publisher_id,
             cat_slugs=sp.get('category_slugs') or item.get('category_slugs') or '',
             specs=sp,
+            authors=item.get('author') or sp.get('Pengarang') or '',
         )
         if audit_status == 'REJECT':
             rejected_count += 1

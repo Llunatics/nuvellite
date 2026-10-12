@@ -220,9 +220,24 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
                         fallbackIconClassName="w-6 h-6 text-editorial-faint"
                       />
                     ) : (
-                      <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-surface-elevated/40">
-                        <BookOpen className="w-6 h-6 text-editorial-faint mb-1" />
-                        <span className="text-[9px] text-editorial-muted line-clamp-2">{series.name}</span>
+                      <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-gradient-to-br from-white/[0.06] to-white/[0.02]">
+                        <span className="font-editorial text-lg text-editorial-muted leading-none mb-1.5">
+                          {series.name
+                            .split(/\s+/)
+                            .filter(Boolean)
+                            .slice(0, 2)
+                            .map((w) => w[0])
+                            .join('')
+                            .toUpperCase()}
+                        </span>
+                        <span className="text-[9px] text-editorial-faint line-clamp-2 leading-tight px-1">
+                          {series.name}
+                        </span>
+                        {series.isArchive && series.archiveEntry?.yearFirstVol && (
+                          <span className="mt-1 text-[8px] font-mono text-editorial-faint">
+                            {series.archiveEntry.yearFirstVol}
+                          </span>
+                        )}
                       </div>
                     )}
 

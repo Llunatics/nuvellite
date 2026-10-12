@@ -67,11 +67,24 @@ export function ArchiveSeriesDetail({ series }: ArchiveSeriesDetailProps) {
                 fallbackIconClassName="w-8 h-8 text-editorial-faint"
               />
             ) : (
-              <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-surface-elevated/40">
-                <span className="font-editorial text-5xl text-editorial-faint">
-                  {series.name.charAt(0).toUpperCase()}
+              <div className="w-full h-full flex flex-col items-center justify-center p-5 text-center bg-gradient-to-br from-amber-500/[0.08] via-white/[0.04] to-white/[0.01]">
+                <span className="font-editorial text-6xl text-editorial-muted leading-none">
+                  {series.name
+                    .split(/\s+/)
+                    .filter(Boolean)
+                    .slice(0, 2)
+                    .map((w) => w[0])
+                    .join('')
+                    .toUpperCase()}
                 </span>
-                <span className="text-[11px] text-editorial-muted line-clamp-3 mt-2">{series.name}</span>
+                <span className="text-[11px] text-editorial-muted line-clamp-3 mt-3 leading-snug">
+                  {series.name}
+                </span>
+                {series.author && (
+                  <span className="text-[10px] text-editorial-faint truncate mt-1 max-w-full">
+                    {series.author}
+                  </span>
+                )}
               </div>
             )}
             <div className="absolute top-2.5 left-2.5">

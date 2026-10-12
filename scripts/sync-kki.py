@@ -78,6 +78,15 @@ def main():
             mu_args += ["--retry-blocked"]
         run_step("MU enrichment (incremental)", *mu_args)
 
+    # Pranala og:image cover fallback (incremental, polite). Runs even when
+    # --skip-mu: publisher store pages are reachable from this network.
+    pranala_args = [str(KKI_DIR / "pranala_cover.py")]
+    if args.mu_limit:
+        pranala_args += ["--limit", str(args.mu_limit)]
+    else:
+        pranala_args += ["--all"]
+    run_step("Pranala cover fallback (incremental)", *pranala_args)
+
     print("\nSync complete. Rebuild the site (npm run build) to apply.")
     print("Review queue: scripts/kki/kki-review-queue.json")
 

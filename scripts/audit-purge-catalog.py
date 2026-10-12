@@ -47,7 +47,18 @@ def real_slug(book):
 def audit_book(book):
     title = book.get('title') or ''
     pub_id = book.get('publisherId') or ''
-    t_lower = title.lower()
+    t_lower = title.strip().lower()
+    authors = ' '.join(book.get('authors') or []).lower()
+
+    # Fast path 0: absolute junk rules (merchandise author, placeholder titles,
+    # bundle SKUs). These override everything, including explicit format tokens
+    # ("Bundling Komik - JBA8" contains "komik" but is still junk).
+    if 'merchandise' in authors:
+        return book, 'PURGE', 'Author credit is merchandise (non-book product)'
+    if t_lower in ('satuan', 'komik satuan'):
+        return book, 'PURGE', 'Generic placeholder title (satuan)'
+    if t_lower.startswith('bundling'):
+        return book, 'PURGE', 'Bundle SKU product (non-book bundle)'
 
     # Fast path 1: explicit manga/LN format token in title -> definitely keep.
     if any(tok in t_lower for tok in asc.EXPLICIT_FORMAT_TOKENS):
@@ -56,7 +67,8 @@ def audit_book(book):
     # Fast path 2: API-independent hard rejects (merchandise, Qanza imprint).
     # classify_book with no category defers title-pattern checks, so a REJECT
     # here is always safe to apply without fetching specs.
-    pre_status, _, pre_reason = asc.classify_book(title, pub_id)
+    pre_status, _, pre_reason = asc.classify_book(
+        title, pub_id, authors=' '.join(book.get('authors') or ''))
     if pre_status == 'REJECT':
         return book, 'PURGE', pre_reason + ' (title-only)'
 

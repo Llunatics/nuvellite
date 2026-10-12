@@ -78,6 +78,7 @@ def main():
             "statusJp": r["status_jp"] or None,
             "publisherJp": r["publisher_jp"] or None,
             "mangaupdatesUrl": r["mangaupdates_url"] or None,
+            "pranala": r.get("pranala") or None,
             "notes": r["notes"] or None,
         }
         if entry_id in old_mu:

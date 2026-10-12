@@ -144,6 +144,7 @@ def load_kki_rows(path: Path, medium: str):
                 "status_jp": (r.get("Status di JPN") or "").strip(),
                 "publisher_jp": (r.get("Penerbit di JPN") or "").strip(),
                 "mangaupdates_url": (r.get("MangaUpdates") or "").strip(),
+                "pranala": (r.get("Pranala") or "").strip(),
                 "notes": (r.get("Keterangan/Catatan") or "").strip(),
                 "medium": medium,
             })

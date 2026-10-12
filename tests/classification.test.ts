@@ -476,5 +476,70 @@ describe('Multi-Signal Classification Engine', () => {
     expect(henNaIe.status).toBe('ACCEPTED');
     expect(henNaIe.category).toBe('Manga');
   });
+
+  it('should reject merchandise-author products without blocking real "hat" manga', () => {
+    // "Hunter Hat Press Ssst X Gerai Kompas": title evades MERCHANDISE_REGEX,
+    // but the author credit "Merchandise Gerai Kompas" is precise evidence.
+    const hunterHat = classifyProduct({
+      title: 'Hunter Hat Press Ssst X Gerai Kompas',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      author: 'Merchandise Gerai Kompas',
+    });
+    expect(hunterHat.status).toBe('REJECTED');
+
+    // Anti-false-positive: "Witch Hat Atelier" is a real manga and must pass.
+    const witchHat = classifyProduct({
+      title: 'Witch Hat Atelier 01',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      author: 'Kamome Shirahama',
+      categorySlugs: 'buku/komik/manga/fantasi',
+    });
+    expect(witchHat.status).toBe('ACCEPTED');
+    expect(witchHat.category).toBe('Manga');
+  });
+
+  it('should reject generic placeholder and bundle-SKU titles', () => {
+    const satuan = classifyProduct({
+      title: 'Komik Satuan',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+    });
+    expect(satuan.status).toBe('REJECTED');
+
+    const satuanPlain = classifyProduct({
+      title: 'Satuan',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+    });
+    expect(satuanPlain.status).toBe('REJECTED');
+
+    const bundling = classifyProduct({
+      title: 'Bundling Komik - JBA8',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      author: 'Hirohiko Araki',
+    });
+    expect(bundling.status).toBe('REJECTED');
+
+    const bundlingNum = classifyProduct({
+      title: 'Bundling Komik 1 - NBU1',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      author: 'Masashi Kishimoto',
+    });
+    expect(bundlingNum.status).toBe('REJECTED');
+
+    // Anti-false-positive: a real manga whose title merely contains "satuan"
+    // as a substring must NOT be rejected (exact-match only).
+    const notSatuan = classifyProduct({
+      title: 'Level Comic: Jujutsu Kaisen 24',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'komik,manga',
+    });
+    expect(notSatuan.status).toBe('ACCEPTED');
+  });
 });
 

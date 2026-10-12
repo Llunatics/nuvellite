@@ -12,14 +12,18 @@ sync-kki.py
  ├── 2. match_kki.py        → src/data/kki-enrichment.json (keyed by seriesId)
  │                            + kki-review-queue.json (manual review)
  │                            + kki-unmatched.json (kandidat arsip)
- ├── 3. build_archive.py    → src/data/kki-archive.json (2104 entri level-seri)
- └── 4. mu_enrich.py         → cover + deskripsi EN dari MangaUpdates
-                               + terjemahan ID (cache kki-translations.json)
+ ├── 3. build_archive.py    → src/data/kki-archive.json (entri level-seri)
+ ├── 4. mu_enrich.py         → cover + deskripsi EN dari MangaUpdates
+ │                            + terjemahan ID (cache kki-translations.json)
+ └── 5. pranala_cover.py     → cover fallback dari og:image halaman Pranala
+                               (mncgramedia.id dsb), disimpan sbg pranalaCover
 ```
 
 Jalankan: `python3 scripts/sync-kki.py [--skip-mu] [--mu-limit N] [--retry-blocked]`
+Lalu: `python3 scripts/kki/pranala_cover.py --all` (atau `--limit N`)
 
-Idempotent & aman di-rerun. Data MU yang sudah ada dipertahankan antar rebuild.
+Idempotent & aman di-rerun. Data MU / pranalaCover yang sudah ada dipertahankan
+antar rebuild.
 
 ## Matching policy (konservatif)
 
@@ -41,6 +45,17 @@ Idempotent & aman di-rerun. Data MU yang sudah ada dipertahankan antar rebuild.
   Terjemahan ID di-cache permanen (`kki-translations.json`) sehingga progresif:
   tiap sync menambah entri yang berhasil. UI menandai sinopsis sebagai
   "Diterjemahkan otomatis dari MangaUpdates".
+- **Cover fallback via Pranala** (strategi kreatif, 2026-10-12): kolom
+  `Pranala` di sheets berisi link toko penerbit (mncgramedia.id,
+  phoenixgramedia.id, pis.gramedia.id). Halaman-halaman ini BISA diakses dari
+  VM dan membawa `og:image` berisi cover buku (hit rate ~88% pada sampel 25).
+  `pranala_cover.py` menarik og:image untuk entri arsip yang belum punya cover
+  MU; hasilnya disimpan sebagai `pranalaCover` di `kki-archive.json` dan dipakai
+  UI sebagai fallback (`mu.cover` → `pranalaCover` → placeholder monogram).
+  Prioritas cover: MangaUpdates > Pranala og:image > placeholder monogram.
+- **Alternatif yang SUDAH dicoba dan gagal dari VM ini**: AniList
+  (Cloudflare), Jikan (unreachable), Google Books (unreachable), proxy
+  allorigins (522), corsproxy.io (401 butuh key).
 
 ## File data
 

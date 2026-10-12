@@ -75,7 +75,7 @@ export function archiveEntryToSeries(e: KkiArchiveEntry): Series {
     totalVolumes: Number.isFinite(vols) ? vols : 0,
     latestVolume: 0,
     availableVolumes: [],
-    coverImage: e.mu?.status === 'ok' ? e.mu.cover : undefined,
+    coverImage: e.mu?.status === 'ok' ? e.mu.cover : (e.pranalaCover || undefined),
     description: e.mu?.descriptionId || e.mu?.descriptionEn || undefined,
     isArchive: true,
     archiveEntry: e,

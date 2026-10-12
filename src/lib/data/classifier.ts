@@ -127,6 +127,24 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
   if (MERCHANDISE_REGEX.test(title)) {
     negativeSignals.push(`Judul mengandung istilah merchandise: ${title.match(MERCHANDISE_REGEX)?.[0]}`);
   }
+  // Merchandise author credit (e.g. "Merchandise Gerai Kompas"): precise,
+  // never collides with real manga authors. Catches items like
+  // "Hunter Hat Press Ssst X Gerai Kompas" whose title evades MERCHANDISE_REGEX
+  // ("Witch Hat Atelier" is real manga, so "hat" alone must NOT be blocked).
+  const authorLower = (input.author || '').toLowerCase();
+  if (authorLower.includes('merchandise')) {
+    negativeSignals.push('Kredit author adalah merchandise (produk non-buku)');
+  }
+  // Generic placeholder titles ("Satuan" / "Komik Satuan"): no real manga/LN
+  // is titled exactly this.
+  if (tLower === 'satuan' || tLower === 'komik satuan') {
+    negativeSignals.push('Judul placeholder generik (satuan)');
+  }
+  // Bundle SKUs ("Bundling Komik - JBA8", ...): no legitimate series starts
+  // with "bundling" (verified against catalog 2026-10-12).
+  if (tLower.startsWith('bundling')) {
+    negativeSignals.push('Produk bundle SKU (bukan buku)');
+  }
   if (!hasComicCategory && NON_BOOK_NON_MANGA_REGEX.test(title)) {
     negativeSignals.push(`Judul terdeteksi non-manga/non-LN: ${title.match(NON_BOOK_NON_MANGA_REGEX)?.[0]}`);
   }

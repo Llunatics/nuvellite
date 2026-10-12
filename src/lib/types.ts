@@ -229,6 +229,9 @@ export interface KkiArchiveEntry {
   statusJp?: string | null;
   publisherJp?: string | null;
   mangaupdatesUrl?: string | null;
+  pranala?: string | null;
+  pranalaCover?: string | null;
+  pranalaCoverSource?: string | null;
   notes?: string | null;
   mu?: KkiArchiveMu;
 }
