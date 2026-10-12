@@ -19,7 +19,6 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'MANGA' | 'LIGHT_NOVEL'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'COMPLETED' | 'ONGOING'>('ALL');
-  const [sourceFilter, setSourceFilter] = useState<'ALL' | 'GRAMEDIA' | 'ARSIP'>('ALL');
   const [sortBy, setSortBy] = useState<'name' | 'volumes_high' | 'volumes_low'>('name');
 
   // Map seriesId -> Set of owned book IDs
@@ -49,9 +48,6 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         if (pubFilter !== 'ALL' && s.publisherId !== pubFilter) return false;
         // Status
         if (statusFilter !== 'ALL' && s.status !== statusFilter) return false;
-        // Source: Gramedia catalog vs KKI archive
-        if (sourceFilter === 'GRAMEDIA' && s.isArchive) return false;
-        if (sourceFilter === 'ARSIP' && !s.isArchive) return false;
         // Search Query (name, author, publisher)
         if (q) {
           const matchName = s.name.toLowerCase().includes(q);
@@ -70,7 +66,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         }
         return a.name.localeCompare(b.name);
       });
-  }, [allSeries, formatFilter, pubFilter, statusFilter, sourceFilter, searchQuery, sortBy]);
+  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
 
   const publishers = useMemo(() => {
     const map = new Map<string, string>();
@@ -92,13 +88,6 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
           Direktori Seri Manga &amp; Light Novel.
         </h1>
-
-        <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
-          Arsip kanonikal seri terbitan Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia.
-          Lacak kelengkapan volume, temukan nomor yang terlewat, dan monitor status rilis.
-          Termasuk seri arsip dari Database Komunitas Kolektor Komik Indonesia yang tidak
-          tersedia di Gramedia — ditandai badge Arsip.
-        </p>
       </section>
 
       {/* 2. Symmetrical Search & Filter Command Bar */}
@@ -128,7 +117,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         {/* Filter Controls: Symmetrical Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 text-xs">
           {/* Format Segmented Tab */}
-          <div className="sm:col-span-4 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
+          <div className="sm:col-span-6 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
             {(['ALL', 'MANGA', 'LIGHT_NOVEL'] as const).map((fmt) => (
               <button
                 key={fmt}
@@ -145,26 +134,8 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
             ))}
           </div>
 
-          {/* Source Segmented Tab: Gramedia vs Arsip */}
-          <div className="sm:col-span-4 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
-            {(['ALL', 'GRAMEDIA', 'ARSIP'] as const).map((src) => (
-              <button
-                key={src}
-                type="button"
-                onClick={() => setSourceFilter(src)}
-                className={`py-1.5 text-center rounded-full font-medium transition-all text-xs truncate ${
-                  sourceFilter === src
-                    ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
-                    : 'text-editorial-muted hover:text-editorial-title'
-                }`}
-              >
-                {src === 'ALL' ? 'Semua Sumber' : src === 'GRAMEDIA' ? 'Gramedia' : 'Arsip'}
-              </button>
-            ))}
-          </div>
-
           {/* Symmetrical Dropdowns */}
-          <div className="sm:col-span-4 grid grid-cols-3 gap-2">
+          <div className="sm:col-span-6 grid grid-cols-3 gap-2">
             {/* Status Select */}
             <div className="relative">
               <select
