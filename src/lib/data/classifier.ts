@@ -80,7 +80,6 @@ const KNOWN_NON_MANGA_SERIES = [
 // franchises (Kinki/Ziarah manga versions verified; catalog holds the manga).
 const VERIFIED_LIGHT_NOVEL_FRAGMENTS = [
   'ingatan untuk menyelamatkanmu', // m&c! novel (380pp, Novel category)
-  're:zero', // PGI only publishes the LN (verified 2026-10-12); no PGI Re:Zero manga exists
 ];
 
 function categorySegments(raw: string | undefined): string[] {
