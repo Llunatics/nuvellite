@@ -68,6 +68,7 @@ const KNOWN_NON_MANGA_SERIES = [
   'memahami jepang', // history
   'republik rakyat china', // history/politics
   'tip & trik content creator', // creator tutorial
+  'pemrograman web', // programming tutorial (7 in 1 Pemrograman Web - Elex)
   'sebuah kota, sebuah umpama', // poetry collection
   'para perasuk', // filmmaking book
   'jalan kehormatan', // history (NOT Samurai 8/X manga)

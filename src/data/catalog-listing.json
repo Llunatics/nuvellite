@@ -76566,33 +76566,6 @@
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-jojos-bizarre-adventure-20-part-4-diamond-is-unbreakable"
     },
     {
-      "id": "pub_7_in_1_pemrograman_web_untuk_pemula_new_edition",
-      "slug": "7-in-1-pemrograman-web-untuk-pemula-new-edition",
-      "title": "7 in 1 Pemrograman Web untuk Pemula (New Edition)",
-      "volume": null,
-      "category": "Manga",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/an-zauma--.jpg",
-      "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
-      "currentPrice": 165000,
-      "originalPrice": 165000,
-      "releaseDate": "2026-10-12",
-      "isWednesdayRelease": false,
-      "seriesId": "ser_7-in-1-pemrograman-web-untuk-pemula",
-      "seriesName": "7 in 1 Pemrograman Web untuk Pemula",
-      "isBindUp": true,
-      "bindUpKind": "X_IN_1",
-      "bindUpLabel": "7-in-1",
-      "authors": [
-        "Rohi Abdulloh"
-      ],
-      "classificationStatus": "ACCEPTED",
-      "gramediaUrl": "https://www.gramedia.com/products/7-in-1-pemrograman-web-untuk-pemula-new-edition"
-    },
-    {
       "id": "pub_blue_lock_04_2",
       "slug": "blue-lock-04-2",
       "title": "Blue Lock 04",
