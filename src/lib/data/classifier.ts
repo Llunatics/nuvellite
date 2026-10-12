@@ -236,7 +236,13 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
   const hasVolumeNumbering = /\b(?:vol\.?|volume|jilid|ep\.?|episode|#)\s*\d+/i.test(title) || /\s+\d{1,3}$/.test(title);
 
   if (pubId === 'pub_pgi' || pubName.includes('phoenix gramedia') || pubName.includes('pgi')) {
-    if (tLower.includes('light novel') || tLower.includes('light-novel') || catSlugs.includes('light-novel') || tLower.includes('(novel)') || tLower.includes('the novel')) {
+    // PGI Re:Zero is LN-only (verified 2026-10-12): PGI never published a
+    // Re:Zero manga; the "Re:Zero : Starting Life in Another World" books
+    // are LN vols despite lacking the "Light Novel:" prefix.
+    if (tLower.includes('re:zero') || tLower.includes('rezero')) {
+      positiveSignals.push('Re:Zero PGI adalah Light Novel (verifikasi 2026-10-12)');
+      isLN = true;
+    } else if (tLower.includes('light novel') || tLower.includes('light-novel') || catSlugs.includes('light-novel') || tLower.includes('(novel)') || tLower.includes('the novel')) {
       positiveSignals.push('Rilisan resmi Light Novel PGI / KADOKAWA');
       isLN = true;
     } else if (tLower.includes('manga') || tLower.includes('komik') || catSlugs.includes('manga') || catSlugs.includes('komik')) {

@@ -308,6 +308,11 @@ def determine_book_medium(b):
     # PGI: Phoenix Gramedia Indonesia explicitly includes "Light Novel" or "(Novel)" in LN releases.
     # PGI Manga releases do NOT have "Light Novel" in the title (e.g. "The Eminence in Shadow 14").
     if pub_id == 'pub_pgi':
+        # PGI Re:Zero is LN-only (verified 2026-10-12): PGI never published a
+        # Re:Zero manga; the 5 "Re:Zero : Starting Life in Another World" books
+        # are LN vols 1-5 despite lacking the "Light Novel:" prefix.
+        if 're:zero' in t_lower or 'rezero' in t_lower:
+            return 'LIGHT_NOVEL'
         return 'LIGHT_NOVEL' if has_ln_token else 'MANGA'
 
     # m&c! Clover imprint / Light Novel. Require the Clover prefix (a bare
