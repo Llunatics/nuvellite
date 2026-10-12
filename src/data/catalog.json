@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-11T21:37:15.000Z",
+  "lastUpdated": "2026-10-12T04:38:33.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -1965,7 +1965,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-04",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Riichiro Inagaki"
       ],
@@ -2003,7 +2003,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-04",
       "isWednesdayRelease": false,
-      "currentPrice": 68000,
+      "currentPrice": 61200,
       "authors": [
         "Jinushi"
       ],
@@ -2041,7 +2041,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -2080,7 +2080,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Ono Eriko"
       ],
@@ -2169,7 +2169,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Endo Tatsuya"
       ],
@@ -2207,7 +2207,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Hajime Komoto"
       ],
@@ -2245,7 +2245,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Hiromu Arakawa"
       ],
@@ -2410,7 +2410,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
-      "currentPrice": 85000,
+      "currentPrice": 76500,
       "authors": [
         "Yoshihiro Togashi"
       ],
@@ -2600,7 +2600,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-28",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Tatsu Yukinobu"
       ],
@@ -2639,7 +2639,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-27",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Fujiko F. Fujio"
       ],
@@ -2677,7 +2677,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-27",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Yuto Suzuki"
       ],
@@ -2716,7 +2716,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-27",
       "isWednesdayRelease": false,
-      "currentPrice": 48000,
+      "currentPrice": 43200,
       "authors": [
         "Narita Ryohgo"
       ],
@@ -2754,7 +2754,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-27",
       "isWednesdayRelease": false,
-      "currentPrice": 59000,
+      "currentPrice": 53100,
       "authors": [
         "Saka Mikami"
       ],
@@ -2831,7 +2831,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-27",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Nakamura Hikaru"
       ],
@@ -2985,7 +2985,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-27",
       "isWednesdayRelease": false,
-      "currentPrice": 65000,
+      "currentPrice": 58500,
       "authors": [
         "Inio Asano"
       ],
@@ -3023,7 +3023,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-22",
       "isWednesdayRelease": false,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Naoe"
       ],
@@ -3061,7 +3061,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-21",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Yamayu, kensei HOKAMOTO"
       ],
@@ -3099,7 +3099,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-21",
       "isWednesdayRelease": false,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Naoshi Arakawa"
       ],
@@ -3137,7 +3137,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-20",
       "isWednesdayRelease": false,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Aki Hamazi/ Kumichou"
       ],
@@ -3175,7 +3175,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-20",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Sachiko Hiyodori"
       ],
@@ -3480,7 +3480,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-18",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Yana Toboso"
       ],
@@ -3518,7 +3518,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-18",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Kamome Shirahama"
       ],
@@ -3556,7 +3556,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-18",
       "isWednesdayRelease": false,
-      "currentPrice": 168000,
+      "currentPrice": 151200,
       "authors": [
         "Akira Toriyama"
       ],
@@ -3594,7 +3594,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-18",
       "isWednesdayRelease": false,
-      "currentPrice": 85000,
+      "currentPrice": 76500,
       "authors": [
         "Uoto"
       ],
@@ -3632,7 +3632,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-18",
       "isWednesdayRelease": false,
-      "currentPrice": 138000,
+      "currentPrice": 124200,
       "authors": [
         "Naoki Urasawa"
       ],
@@ -3708,7 +3708,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-14",
       "isWednesdayRelease": false,
-      "currentPrice": 48000,
+      "currentPrice": 43200,
       "authors": [
         "AKA AKASAKA"
       ],
@@ -3747,7 +3747,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-14",
       "isWednesdayRelease": false,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Tatsuki Fujimoto"
       ],
@@ -3785,7 +3785,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Hiro Mashima"
       ],
@@ -3861,7 +3861,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Kamome Shirahama"
       ],
@@ -3976,7 +3976,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "currentPrice": 75000,
+      "currentPrice": 67500,
       "authors": [
         "Naoya Matsumoto"
       ],
@@ -4053,7 +4053,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Kishikawa Mizuki"
       ],
@@ -4091,7 +4091,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Pentagon, Nekokuro"
       ],
@@ -4129,7 +4129,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "currentPrice": 60000,
+      "currentPrice": 54000,
       "authors": [
         "Fujiko F. Fujio"
       ],
@@ -4219,7 +4219,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-11",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Izumi Tsubaki"
       ],
@@ -4412,7 +4412,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-07",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Suzu Akeko"
       ],
@@ -4450,7 +4450,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-07",
       "isWednesdayRelease": false,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Yuki Shiwasu"
       ],
@@ -4488,7 +4488,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-06",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -4566,7 +4566,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-06",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "Motohiro Katou"
       ],
@@ -4604,7 +4604,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-06",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "Ken Wakui"
       ],
@@ -4681,7 +4681,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-06",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "Kousuke Oono"
       ],
@@ -4719,7 +4719,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-06",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Shu Sakuratani"
       ],
@@ -4872,7 +4872,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-06",
       "isWednesdayRelease": false,
-      "currentPrice": 65000,
+      "currentPrice": 58500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -5920,7 +5920,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-11-17",
       "isWednesdayRelease": true,
-      "currentPrice": 65000,
+      "currentPrice": 58500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -6301,7 +6301,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-04",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Eiji Hashimoto / Shinya Umemura"
       ],
@@ -6339,7 +6339,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-31",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Gege Akutami"
       ],
@@ -6554,7 +6554,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-29",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -6605,7 +6605,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-29",
       "isWednesdayRelease": true,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Shinta Harekawa"
       ],
@@ -6644,7 +6644,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-29",
       "isWednesdayRelease": true,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Inoue Toshiki"
       ],
@@ -6682,7 +6682,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-28",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "One & Yusuke Murata"
       ],
@@ -6720,7 +6720,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-28",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Fujiko F. Fujio"
       ],
@@ -6758,7 +6758,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-28",
       "isWednesdayRelease": false,
-      "currentPrice": 65000,
+      "currentPrice": 58500,
       "authors": [
         "Shiro Moriya"
       ],
@@ -6796,7 +6796,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-28",
       "isWednesdayRelease": false,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Shinobu Yaguchi"
       ],
@@ -6834,7 +6834,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-28",
       "isWednesdayRelease": false,
-      "currentPrice": 188000,
+      "currentPrice": 169200,
       "authors": [
         "Naoki Urasawa"
       ],
@@ -7968,7 +7968,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-23",
       "isWednesdayRelease": false,
-      "currentPrice": 390000,
+      "currentPrice": 351000,
       "authors": [
         "Ito Junji"
       ],
@@ -8477,7 +8477,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-15",
       "isWednesdayRelease": true,
-      "currentPrice": 75000,
+      "currentPrice": 67500,
       "authors": [
         "Wataru Watanabe"
       ],
@@ -9891,7 +9891,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-01",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Mizuho Kusanagi"
       ],
@@ -10198,7 +10198,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-25",
       "isWednesdayRelease": false,
-      "currentPrice": 68000,
+      "currentPrice": 61200,
       "authors": [
         "Olvyanda Ariesta"
       ],
@@ -10313,7 +10313,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-24",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Satsuki Yoshino"
       ],
@@ -10771,7 +10771,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-17",
       "isWednesdayRelease": true,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Eiji Hashimoto / Shinya Umemura"
       ],
@@ -10923,7 +10923,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-17",
       "isWednesdayRelease": true,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Sachiko Hiyodori"
       ],
@@ -10961,7 +10961,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-17",
       "isWednesdayRelease": true,
-      "currentPrice": 85000,
+      "currentPrice": 76500,
       "authors": [
         "Osamu Tezuka"
       ],
@@ -11569,7 +11569,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-12",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Naoe"
       ],
@@ -11646,7 +11646,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-10",
       "isWednesdayRelease": true,
-      "currentPrice": 48000,
+      "currentPrice": 43200,
       "authors": [
         "Narita Ryohgo"
       ],
@@ -11740,7 +11740,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-10",
       "isWednesdayRelease": true,
-      "currentPrice": 48000,
+      "currentPrice": 43200,
       "authors": [
         "Yuu Toyota"
       ],
@@ -11855,7 +11855,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-09",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Takahashi Rumiko"
       ],
@@ -12083,7 +12083,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-09",
       "isWednesdayRelease": false,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Aki Kanya"
       ],
@@ -12583,7 +12583,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-02",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Shiki Satoshi"
       ],
@@ -12697,7 +12697,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-05-31",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Hitsuji Gondaira"
       ],
@@ -22273,7 +22273,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-29",
       "isWednesdayRelease": true,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Eiji Hashimoto / Shinya Umemura"
       ],
@@ -22729,7 +22729,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-22",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -23052,7 +23052,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-20",
       "isWednesdayRelease": false,
-      "currentPrice": 48000,
+      "currentPrice": 43200,
       "authors": [
         "Yuu Toyota"
       ],
@@ -23605,7 +23605,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-15",
       "isWednesdayRelease": true,
-      "currentPrice": 62000,
+      "currentPrice": 55800,
       "authors": [
         "Andik Prayogo dan Fachreza Octavio Zain"
       ],
@@ -23681,7 +23681,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-15",
       "isWednesdayRelease": true,
-      "currentPrice": 68000,
+      "currentPrice": 61200,
       "authors": [
         "Bumilangit Comics"
       ],
@@ -23795,7 +23795,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-10",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Koushi"
       ],
@@ -24190,7 +24190,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-07",
       "isWednesdayRelease": false,
-      "currentPrice": 48000,
+      "currentPrice": 43200,
       "authors": [
         "Shinji Mito"
       ],
@@ -24278,7 +24278,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-01-20",
       "isWednesdayRelease": false,
-      "currentPrice": 48000,
+      "currentPrice": 43200,
       "authors": [
         "Ono Takeo"
       ],
@@ -24567,7 +24567,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-01",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Mizuho Kusanagi"
       ],
@@ -28404,7 +28404,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-02-19",
       "isWednesdayRelease": false,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Daiki Kobayashi"
       ],
@@ -28633,7 +28633,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-02-19",
       "isWednesdayRelease": false,
-      "currentPrice": 48000,
+      "currentPrice": 43200,
       "authors": [
         "Yuu Toyota"
       ],
@@ -32569,7 +32569,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-02-04",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Mizuho Kusanagi"
       ],
@@ -35667,7 +35667,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-01-05",
       "isWednesdayRelease": false,
-      "currentPrice": 48000,
+      "currentPrice": 43200,
       "authors": [
         "Shinji Mito"
       ],
@@ -60194,7 +60194,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-09-18",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -64841,7 +64841,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-05-20",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Jeon Keuk Jin & Yang Jae Hyun"
       ],
@@ -67401,7 +67401,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-02-15",
       "isWednesdayRelease": false,
-      "currentPrice": 41500,
+      "currentPrice": 37350,
       "authors": [
         "Yana Toboso"
       ],
@@ -68491,7 +68491,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-01-02",
       "isWednesdayRelease": false,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "authors": [
         "Joji Morikawa"
       ],
@@ -70515,7 +70515,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-10-18",
       "isWednesdayRelease": true,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "ONE"
       ],
@@ -74139,7 +74139,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-05-31",
       "isWednesdayRelease": true,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "authors": [
         "Joji Morikawa"
       ],
@@ -74558,7 +74558,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-05-17",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "ONE"
       ],
@@ -74863,7 +74863,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-04-17",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -75094,7 +75094,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-04-05",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Yana Toboso"
       ],
@@ -76634,7 +76634,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-01-20",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "ONE"
       ],
@@ -77286,7 +77286,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-12-29",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -78824,7 +78824,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-08-31",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -80851,7 +80851,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-04-08",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -81272,7 +81272,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-03-11",
       "isWednesdayRelease": false,
-      "currentPrice": 30000,
+      "currentPrice": 27000,
       "authors": [
         "Joji Morikawa"
       ],
@@ -81541,7 +81541,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-02-16",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "Elex Media Komputindo"
       ],
@@ -81731,7 +81731,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-02-09",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -81988,7 +81988,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-02-02",
       "isWednesdayRelease": true,
-      "currentPrice": 30000,
+      "currentPrice": 27000,
       "authors": [
         "Joji Morikawa"
       ],
@@ -82789,7 +82789,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-12-22",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "Elex Media Komputindo"
       ],
@@ -82827,7 +82827,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-12-15",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 25200,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -82843,8 +82843,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -82865,7 +82865,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-12-15",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -83171,7 +83171,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-11-24",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "Shiba Yuusuke"
       ],
@@ -83564,7 +83564,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-10-13",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "Elex Media Komputindo"
       ],
@@ -84585,7 +84585,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-06-30",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -84776,7 +84776,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-06-23",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Yana Toboso"
       ],
@@ -85210,7 +85210,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-06-02",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -85490,7 +85490,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "Elex Media Komputindo"
       ],
@@ -85617,7 +85617,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-05-12",
       "isWednesdayRelease": true,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "authors": [
         "Masashi Ueda"
       ],
@@ -86381,7 +86381,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-03-17",
       "isWednesdayRelease": true,
-      "currentPrice": 30000,
+      "currentPrice": 27000,
       "authors": [
         "Joji Morikawa"
       ],
@@ -86457,7 +86457,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-03-17",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "authors": [
         "Elex Media Komputindo"
       ],
@@ -86495,7 +86495,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-03-10",
       "isWednesdayRelease": true,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "authors": [
         "Masashi Ueda"
       ],
@@ -86992,7 +86992,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-01-27",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -87567,7 +87567,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-11-11",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Yana Toboso"
       ],
@@ -88141,7 +88141,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-09-16",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -88372,7 +88372,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-08-19",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -88450,7 +88450,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-08-12",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -88871,7 +88871,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-06-15",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -89560,7 +89560,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-03-18",
       "isWednesdayRelease": true,
-      "currentPrice": 30000,
+      "currentPrice": 27000,
       "authors": [
         "Joji Morikawa"
       ],
@@ -90247,7 +90247,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-01-08",
       "isWednesdayRelease": true,
-      "currentPrice": 30000,
+      "currentPrice": 27000,
       "authors": [
         "Joji Morikawa"
       ],
@@ -90361,7 +90361,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-12-18",
       "isWednesdayRelease": true,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -90858,7 +90858,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-09-18",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -90936,7 +90936,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-09-11",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -91013,7 +91013,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-09-04",
       "isWednesdayRelease": true,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "authors": [
         "Yana Toboso"
       ],
@@ -91243,7 +91243,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-07-15",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -91515,7 +91515,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-05-01",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -91783,7 +91783,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-03-27",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -91861,7 +91861,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-03-20",
       "isWednesdayRelease": true,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -92015,7 +92015,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-02-20",
       "isWednesdayRelease": true,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -92053,7 +92053,7 @@
       "status": "RELEASED",
       "releaseDate": "2019-01-30",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -92361,7 +92361,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-11-28",
       "isWednesdayRelease": true,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "authors": [
         "Yana Toboso"
       ],
@@ -92399,7 +92399,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-11-20",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -92475,7 +92475,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-11-07",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -92629,7 +92629,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-09-12",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -92668,7 +92668,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-09-05",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -92822,7 +92822,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-07-04",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -92899,7 +92899,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-05-30",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -92937,7 +92937,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-05-30",
       "isWednesdayRelease": true,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "authors": [
         "Yana Toboso"
       ],
@@ -93013,7 +93013,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-05-09",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "authors": [
         "Haruichi Furudate"
       ],
@@ -93245,7 +93245,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-02-21",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -94258,7 +94258,7 @@
       "status": "RELEASED",
       "releaseDate": "2017-03-15",
       "isWednesdayRelease": true,
-      "currentPrice": 24000,
+      "currentPrice": 21600,
       "authors": [
         "Joji Morikawa"
       ],
@@ -94296,7 +94296,7 @@
       "status": "RELEASED",
       "releaseDate": "2017-03-08",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -96497,7 +96497,7 @@
       "status": "RELEASED",
       "releaseDate": "2005-02-20",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -96724,7 +96724,7 @@
       "status": "PUBLISHED",
       "releaseDate": "2026-09-04",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Akinoko"
       ],
@@ -96761,7 +96761,7 @@
       "status": "PUBLISHED",
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "currentPrice": 99000,
+      "currentPrice": 89100,
       "authors": [
         "Kaoru & Dreamerz"
       ],
@@ -96847,7 +96847,7 @@
       "status": "PUBLISHED",
       "releaseDate": "2026-04-15",
       "isWednesdayRelease": true,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "authors": [
         "Ichigo Takano"
       ],
@@ -97069,7 +97069,7 @@
       "status": "PUBLISHED",
       "releaseDate": "2026-07-28",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "authors": [
         "Aida Iro"
       ],
@@ -97193,8 +97193,8 @@
       "availability": "AVAILABLE",
       "releaseDate": "2017-12-13",
       "isWednesdayRelease": false,
-      "currentPrice": 41250,
-      "originalPrice": 55000,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -97229,7 +97229,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2018-01-24",
       "isWednesdayRelease": false,
-      "currentPrice": 75000,
+      "currentPrice": 67500,
       "originalPrice": 75000,
       "authors": [
         "Eiichiro Oda"
@@ -97385,7 +97385,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2019-02-27",
       "isWednesdayRelease": false,
-      "currentPrice": 80000,
+      "currentPrice": 72000,
       "originalPrice": 80000,
       "authors": [
         "Eiichiro Oda"
@@ -97565,7 +97565,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-03-11",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Eiichiro Oda"
@@ -97601,7 +97601,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-07-22",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Eiichiro Oda"
@@ -97637,7 +97637,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-12-02",
       "isWednesdayRelease": false,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "originalPrice": 35000,
       "authors": [
         "Eiichiro Oda"
@@ -97673,7 +97673,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-11-03",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Eiichiro Oda"
@@ -98249,7 +98249,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2024-01-08",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
@@ -98357,7 +98357,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2024-03-10",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
@@ -98429,7 +98429,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2024-04-28",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
@@ -98753,7 +98753,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-01-26",
       "isWednesdayRelease": false,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "originalPrice": 28000,
       "authors": [
         "Jeon Keuk Jin & Yang Jae Hyun"
@@ -98789,7 +98789,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-03-18",
       "isWednesdayRelease": false,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "originalPrice": 28000,
       "authors": [
         "Jeon Keuk Jin & Yang Jae Hyun"
@@ -98825,7 +98825,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-12-30",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Jeon Keuk Jin & Yang Jae Hyun"
@@ -98861,7 +98861,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2023-03-29",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Jeon Keuk Jin & Yang Jae Hyun"
@@ -98897,7 +98897,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2023-06-27",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Jeon Keuk Jin & Yang Jae Hyun"
@@ -98933,7 +98933,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2024-06-18",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Jeon Keuk Jin & Yang Jae Hyun"
@@ -99089,7 +99089,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-02-02",
       "isWednesdayRelease": false,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "originalPrice": 25000,
       "authors": [
         "Masashi Ueda"
@@ -99125,7 +99125,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-05-22",
       "isWednesdayRelease": false,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "originalPrice": 28000,
       "authors": [
         "Masashi Ueda"
@@ -99233,7 +99233,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2016-06-15",
       "isWednesdayRelease": false,
-      "currentPrice": 22000,
+      "currentPrice": 19800,
       "originalPrice": 22000,
       "authors": [
         "Tsujitomo, Masaya Tsunamoto"
@@ -99269,7 +99269,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2021-07-14",
       "isWednesdayRelease": false,
-      "currentPrice": 30000,
+      "currentPrice": 27000,
       "originalPrice": 30000,
       "authors": [
         "Tsujitomo, Masaya Tsunamoto"
@@ -99305,7 +99305,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2021-12-08",
       "isWednesdayRelease": false,
-      "currentPrice": 30000,
+      "currentPrice": 27000,
       "originalPrice": 30000,
       "authors": [
         "Tsujitomo, Masaya Tsunamoto"
@@ -99341,7 +99341,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2023-09-27",
       "isWednesdayRelease": false,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "originalPrice": 35000,
       "authors": [
         "Tsujitomo, Masaya Tsunamoto"
@@ -99377,7 +99377,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-04-08",
       "isWednesdayRelease": false,
-      "currentPrice": 30000,
+      "currentPrice": 27000,
       "originalPrice": 30000,
       "authors": [
         "Tsujitomo, Masaya Tsunamoto"
@@ -99413,7 +99413,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-12-10",
       "isWednesdayRelease": false,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "originalPrice": 35000,
       "authors": [
         "Tsujitomo"
@@ -99449,7 +99449,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2023-03-29",
       "isWednesdayRelease": false,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "originalPrice": 35000,
       "authors": [
         "Tsujitomo, Masaya Tsunamoto"
@@ -99485,7 +99485,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2023-06-27",
       "isWednesdayRelease": false,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "originalPrice": 35000,
       "authors": [
         "Tsujitomo, Masaya Tsunamoto"
@@ -99629,7 +99629,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2014-04-04",
       "isWednesdayRelease": false,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "originalPrice": 28000,
       "authors": [
         "Aoyama Gosho"
@@ -99665,7 +99665,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2019-02-11",
       "isWednesdayRelease": false,
-      "currentPrice": 52000,
+      "currentPrice": 46800,
       "originalPrice": 52000,
       "authors": [
         "Aoyama Gosho"
@@ -99701,7 +99701,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2019-06-19",
       "isWednesdayRelease": false,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "originalPrice": 25000,
       "authors": [
         "Aoyama Gosho"
@@ -99764,7 +99764,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2019-07-03",
       "isWednesdayRelease": false,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "originalPrice": 25000,
       "authors": [
         "Aoyama Gosho"
@@ -99822,7 +99822,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-01-22",
       "isWednesdayRelease": false,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "originalPrice": 28000,
       "authors": [
         "Aoyama Gosho"
@@ -99875,7 +99875,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-05-18",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "originalPrice": 50000,
       "authors": [
         "Aoyama Gosho"
@@ -99911,7 +99911,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2020-07-29",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "originalPrice": 50000,
       "authors": [
         "ARAI TAKAHIRO,AOYAMA GOSHO"
@@ -99947,7 +99947,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-10-14",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "originalPrice": 50000,
       "authors": [
         "Arai Takahiro"
@@ -99983,7 +99983,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-12-23",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -100019,7 +100019,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-03-02",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "originalPrice": 50000,
       "authors": [
         "ARAI TAKAHIRO,AOYAMA GOSHO"
@@ -100091,7 +100091,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-02-23",
       "isWednesdayRelease": false,
-      "currentPrice": 65000,
+      "currentPrice": 58500,
       "originalPrice": 65000,
       "authors": [
         "Aoyama Gosho"
@@ -100127,7 +100127,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-04-15",
       "isWednesdayRelease": false,
-      "currentPrice": 120000,
+      "currentPrice": 108000,
       "originalPrice": 120000,
       "authors": [
         "Aoyama Gosho"
@@ -105621,7 +105621,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-02-04",
       "isWednesdayRelease": false,
-      "currentPrice": 60000,
+      "currentPrice": 54000,
       "originalPrice": 60000,
       "authors": [
         "Ichigo Takano"
@@ -107601,7 +107601,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-01-27",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Elex Media Komputindo"
@@ -107637,7 +107637,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2024-05-20",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "originalPrice": 45000,
       "authors": [
         "Elex Media Komputindo"
@@ -108727,7 +108727,7 @@
       "genres": [
         "Manga"
       ],
-      "isbn13": "",
+      "isbn13": "9786230321269",
       "synopsis": "Bertempur dengan kehormatan, lalu mati. Itulah takdir mereka. Keterikatan pada kehidupan\n\nsudah lama mereka tinggalkan .… Itu yang dulu mereka percaya.\n\nNamun, kegilaan para Sirin yang maju ke medan perang—rela dihancurkan, diremukkan, dan\n\ndibiarkan membusuk—membuat retakan di jalan hidup yang selama ini Eighty-Six kejar.\n\nApa arti hidup? Shin terus tersiksa oleh pertanyaan itu, sementara Lena berusaha keras untuk\n\nmemahaminya. Sayangnya, perasaan mereka tetap tidak sejalan, tetap saling bersilang dengan\n\ncanggung hingga akhirnya “Operasi Penaklukan Gunung Taring Naga”, yang mempertaruhkan\n\nnasib Persatuan Kerajaan, dimulai tanpa belas kasihan.\n\nJika tidak bertarung, kau tak akan bertahan hidup.\n\nNamun, bertarung pun bukan satu-satunya jaminan kau bisa tetap hidup.\n\nKeunggulan Buku:\n\n- Mendapatkan Grand Prize di penghargaan Dengeki Novel Award ke-23 tahun 2016.\n\n- Beberapa kali menduduki peringkat 5 besar dalam voting popularitas Kono Light Novel ga Sugoi! (This Light Novel is Amazing!) sejak tahun 2018.\n\n- Light novelnya sendiri sudah terjual hampir 2 juta eksemplar di Jepang.\n\n- Light novel ini diadaptasi menjadi anime yang digarap oleh A1 Pictures, studio anime yang sangat populer dan sudah menggarap banyak anime terkenal. Musiknya pun ditangani oleh Hiroyuki Sawano, composer musik anime ternama.\n\n- Anime season 1-nya terdiri dari 2 bagian, bagian pertama tayang di tahun 2021, bagian kedua tayang di tahun 2022. Season 2-nya sangat ditunggu-tunggu oleh penggemar anime\n\n- Mengusung beberapa topik yang banyak dibahas saat ini seperti diskriminasi, peperangan, politik, kemanusiaan, dsb tapi dikemas dengan ringan sehingga bisa dinikmati berbagai kalangan.\n\nDeskripsi Novel Eighty-Six:\n\nMenceritakan mengenai sekelompok pemuda dan pemudi yang berasal dari Distrik 86 Republik San Magnolia, sebuah distrik tidak terdaftar berisi penduduk terbuang yang dipaksa untuk bertempur melindungi Republik San Magnolia dengan menjadi “awak dalam mesin tempur tanpa awak”.\n\nSebagian besar penduduk di Distrik 1-85 tidak memandang 86 sebagai manusia, tetapi sebagai hewan ternak yang bisa dikorbankan dalam perang sesukanya. Namun, masih ada beberapa orang yang tidak setuju dengan itu, salah satunya adalah Lena, gadis penduduk Distrik 1 yang bertugas sebagai Handler, orang yang mengomando pasukan 86 dari jauh. Lena sangat peduli dengan para pasukan 86. khususnya pasukan yang belum lama ini dipimpinnya yaitu Skuadron Spearhead, yaitu skuadron yang dipimpin oleh pemuda yang memiliki julukan Dewa Kematian, Shin.",
       "gramediaUrl": "https://www.gramedia.com/products/eighty-six-ep-6-fajar-tak-kunjung-tiba-malam-pun-membeku",
       "classificationStatus": "ACCEPTED",
@@ -108863,7 +108863,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-09-09",
       "isWednesdayRelease": true,
-      "currentPrice": 99000,
+      "currentPrice": 89100,
       "originalPrice": 99000,
       "authors": [
         "Kaoru & Dreamerz"
@@ -108899,7 +108899,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-09-09",
       "isWednesdayRelease": true,
-      "currentPrice": 99000,
+      "currentPrice": 89100,
       "originalPrice": 99000,
       "authors": [
         "Kaoru & Dreamerz"
@@ -108935,7 +108935,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "currentPrice": 99000,
+      "currentPrice": 89100,
       "originalPrice": 99000,
       "authors": [
         "Kaoru & Dreamerz"
@@ -108971,7 +108971,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "currentPrice": 99000,
+      "currentPrice": 89100,
       "originalPrice": 99000,
       "authors": [
         "Kaoru & Dreamerz"
@@ -111527,7 +111527,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-10-03",
       "isWednesdayRelease": false,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "originalPrice": 35000,
       "authors": [
         "Joji Morikawa"
@@ -111563,7 +111563,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-12-17",
       "isWednesdayRelease": false,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "originalPrice": 35000,
       "authors": [
         "Joji Morikawa"
@@ -111635,7 +111635,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2023-03-15",
       "isWednesdayRelease": true,
-      "currentPrice": 35000,
+      "currentPrice": 31500,
       "originalPrice": 35000,
       "authors": [
         "Joji Morikawa"
@@ -111779,7 +111779,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2020-04-01",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Elex Media Komputindo"
@@ -111815,7 +111815,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2020-10-05",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Elex Media Komputindo"
@@ -111851,7 +111851,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-05-13",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Elex Media Komputindo"
@@ -111887,7 +111887,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-06-26",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Elex Media Komputindo"
@@ -111923,7 +111923,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-10-17",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "ONE"
@@ -111959,7 +111959,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2023-02-22",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Elex Media Komputindo"
@@ -112031,7 +112031,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-02-24",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Eiichiro Oda"
@@ -112067,7 +112067,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-05-25",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Eiichiro Oda"
@@ -112139,7 +112139,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-11-26",
       "isWednesdayRelease": false,
-      "currentPrice": 43000,
+      "currentPrice": 38700,
       "originalPrice": 43000,
       "authors": [
         "Eiichiro Oda"
@@ -112211,7 +112211,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2023-02-22",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Eiichiro Oda"
@@ -112319,7 +112319,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-07-10",
       "isWednesdayRelease": false,
-      "currentPrice": 30000,
+      "currentPrice": 27000,
       "originalPrice": 30000,
       "authors": [
         "Tsujitomo, Masaya Tsunamoto"
@@ -112427,7 +112427,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2014-03-14",
       "isWednesdayRelease": false,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "originalPrice": 25000,
       "authors": [
         "Aoyama Gosho"
@@ -112463,7 +112463,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2018-05-16",
       "isWednesdayRelease": true,
-      "currentPrice": 52800,
+      "currentPrice": 47520,
       "originalPrice": 52800,
       "authors": [
         "Aoyama Gosho"
@@ -112499,7 +112499,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2018-12-12",
       "isWednesdayRelease": true,
-      "currentPrice": 90000,
+      "currentPrice": 81000,
       "originalPrice": 90000,
       "authors": [
         "Aoyama Gosho"
@@ -112535,7 +112535,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2019-10-23",
       "isWednesdayRelease": true,
-      "currentPrice": 60000,
+      "currentPrice": 54000,
       "originalPrice": 60000,
       "authors": [
         "Aoyama Gosho"
@@ -112571,7 +112571,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-02-19",
       "isWednesdayRelease": true,
-      "currentPrice": 80000,
+      "currentPrice": 72000,
       "originalPrice": 80000,
       "authors": [
         "Aoyama Gosho"
@@ -112607,7 +112607,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-03-24",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -112643,7 +112643,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-07-08",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -112679,7 +112679,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-07-15",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -112715,7 +112715,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2020-07-22",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -112751,7 +112751,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-04-07",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -112787,7 +112787,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-04-28",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -112823,7 +112823,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-06-02",
       "isWednesdayRelease": true,
-      "currentPrice": 60000,
+      "currentPrice": 54000,
       "originalPrice": 60000,
       "authors": [
         "Aoyama Gosho"
@@ -112859,7 +112859,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-06-16",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -112895,7 +112895,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-09-15",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -112931,7 +112931,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2021-11-03",
       "isWednesdayRelease": true,
-      "currentPrice": 80000,
+      "currentPrice": 72000,
       "originalPrice": 80000,
       "authors": [
         "Aoyama Gosho"
@@ -112967,7 +112967,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-11-10",
       "isWednesdayRelease": true,
-      "currentPrice": 80000,
+      "currentPrice": 72000,
       "originalPrice": 80000,
       "authors": [
         "Aoyama Gosho"
@@ -113003,7 +113003,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2022-01-12",
       "isWednesdayRelease": true,
-      "currentPrice": 70000,
+      "currentPrice": 63000,
       "originalPrice": 70000,
       "authors": [
         "Aoyama Gosho"
@@ -113039,7 +113039,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-01-19",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "authors": [
         "Aoyama Gosho"
@@ -113072,10 +113072,10 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230031366_Cov_Conan_Private_Eye_01_FC.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-03-04",
       "isWednesdayRelease": false,
-      "currentPrice": 80000,
+      "currentPrice": 60000,
       "originalPrice": 80000,
       "authors": [
         "Aoyama Gosho"
@@ -113108,10 +113108,10 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/722010169_Cov_Conan_Private_Eye_02_FC_1.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-03-27",
       "isWednesdayRelease": false,
-      "currentPrice": 80000,
+      "currentPrice": 60000,
       "originalPrice": 80000,
       "authors": [
         "Aoyama Gosho"
@@ -113147,7 +113147,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-03-27",
       "isWednesdayRelease": false,
-      "currentPrice": 55000,
+      "currentPrice": 49500,
       "originalPrice": 55000,
       "authors": [
         "Aoyama Gosho"
@@ -113183,7 +113183,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-11-24",
       "isWednesdayRelease": true,
-      "currentPrice": 25000,
+      "currentPrice": 22500,
       "originalPrice": 25000,
       "authors": [
         "Masashi Ueda"
@@ -113255,7 +113255,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2017-09-20",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Haruichi Furudate"
@@ -113291,7 +113291,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2017-01-18",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Haruichi Furudate"
@@ -113327,7 +113327,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2016-11-16",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Haruichi Furudate"
@@ -113399,7 +113399,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2017-03-15",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "originalPrice": 28000,
       "authors": [
         "Haruichi Furudate"
@@ -113471,7 +113471,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2017-05-17",
       "isWednesdayRelease": true,
-      "currentPrice": 28000,
+      "currentPrice": 25200,
       "originalPrice": 28000,
       "authors": [
         "Haruichi Furudate"
@@ -113507,7 +113507,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2017-07-19",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Haruichi Furudate"
@@ -113543,7 +113543,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2017-11-08",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Haruichi Furudate"
@@ -113579,7 +113579,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2018-01-08",
       "isWednesdayRelease": false,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Haruichi Furudate"
@@ -113615,7 +113615,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2018-03-14",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "authors": [
         "Haruichi Furudate"
@@ -114299,8 +114299,8 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-08",
       "isWednesdayRelease": false,
-      "currentPrice": 95000,
-      "originalPrice": 95000,
+      "currentPrice": 110000,
+      "originalPrice": 110000,
       "authors": [
         "Hirohiko Araki"
       ],
@@ -153688,9 +153688,2636 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-11",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bundling_komik_3_jba1_1791779913",
+      "bookId": "pub_bundling_komik_3_jba1",
+      "price": 110000,
+      "currentPrice": 110000,
+      "originalPrice": 110000,
+      "previousPrice": 95000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_dr_stone_20_1791779913",
+      "bookId": "pub_dr_stone_20",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_smoking_behind_the_supermarket_with_you_02_1791779913",
+      "bookId": "pub_level_comic_smoking_behind_the_supermarket_with_you_02",
+      "price": 61200,
+      "currentPrice": 61200,
+      "originalPrice": 68000,
+      "previousPrice": 68000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_spy_x_family_16_1791779913",
+      "bookId": "pub_spy_x_family_16",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mashle_16_1791779913",
+      "bookId": "pub_mashle_16",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_42_2026_1791779913",
+      "bookId": "pub_one_piece_42_2026",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_yuyu_hakusho_premium_04_1791779913",
+      "bookId": "pub_yuyu_hakusho_premium_04",
+      "price": 76500,
+      "currentPrice": 76500,
+      "originalPrice": 85000,
+      "previousPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_yomi_no_tsugai_pair_of_the_underworld_10_1791779913",
+      "bookId": "pub_yomi_no_tsugai_pair_of_the_underworld_10",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_dandadan_14_1791779913",
+      "bookId": "pub_level_comic_dandadan_14",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_arakawa_under_the_bridge_14_1791779913",
+      "bookId": "pub_arakawa_under_the_bridge_14",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sakamoto_days_23_1791779913",
+      "bookId": "pub_sakamoto_days_23",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_doraemon_28_2026_1791779913",
+      "bookId": "pub_doraemon_28_2026",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_fragrant_flower_blooms_with_dignity_kaoru_rin_16_1791779913",
+      "bookId": "pub_the_fragrant_flower_blooms_with_dignity_kaoru_rin_16",
+      "price": 53100,
+      "currentPrice": 53100,
+      "originalPrice": 59000,
+      "previousPrice": 59000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tokyo_aliens_08_1791779913",
+      "bookId": "pub_tokyo_aliens_08",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_master_keaton_special_edition_02_1791779913",
+      "bookId": "pub_master_keaton_special_edition_02",
+      "price": 124200,
+      "currentPrice": 124200,
+      "originalPrice": 138000,
+      "previousPrice": 138000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_atelier_of_witch_hat_08_2026_1791779913",
+      "bookId": "pub_atelier_of_witch_hat_08_2026",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_dragon_ball_ultimate_06_1791779913",
+      "bookId": "pub_dragon_ball_ultimate_06",
+      "price": 151200,
+      "currentPrice": 151200,
+      "originalPrice": 168000,
+      "previousPrice": 168000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_butler_35_1791779913",
+      "bookId": "pub_black_butler_35",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_orb_on_the_movements_of_the_earth_02_1791779913",
+      "bookId": "pub_orb_on_the_movements_of_the_earth_02",
+      "price": 76500,
+      "currentPrice": 76500,
+      "originalPrice": 85000,
+      "previousPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_movie_story_doraemon_nobitas_mermaid_legend_1791779913",
+      "bookId": "pub_movie_story_doraemon_nobitas_mermaid_legend",
+      "price": 54000,
+      "currentPrice": 54000,
+      "originalPrice": 60000,
+      "previousPrice": 60000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_hope_youre_happy_lemon_01_1791779913",
+      "bookId": "pub_hope_youre_happy_lemon_01",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_cute_british_girl_next_door_and_her_sister_01_1791779913",
+      "bookId": "pub_the_cute_british_girl_next_door_and_her_sister_01",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_fairy_tail_100_years_quest_16_1791779913",
+      "bookId": "pub_fairy_tail_100_years_quest_16",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_atelier_of_witch_hat_07_2026_1791779913",
+      "bookId": "pub_atelier_of_witch_hat_07_2026",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_komikus_shojo_nozaki_16_1791779913",
+      "bookId": "pub_komikus_shojo_nozaki_16",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_we_are_the_aliens_02_1791779913",
+      "bookId": "pub_we_are_the_aliens_02",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_41_2026_1791779913",
+      "bookId": "pub_one_piece_41_2026",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_qed_iff_28_1791779913",
+      "bookId": "pub_qed_iff_28",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_tokyo_revengers_28_1791779913",
+      "bookId": "pub_level_comic_tokyo_revengers_28",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_34_1791779913",
+      "bookId": "pub_detektif_conan_premium_34",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_gokushufudo_the_way_of_househusband_13_1791779913",
+      "bookId": "pub_level_comic_gokushufudo_the_way_of_househusband_13",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_rooster_fighter_06_1791779913",
+      "bookId": "pub_level_comic_rooster_fighter_06",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_jujutsu_kaisen_23_1791779913",
+      "bookId": "pub_jujutsu_kaisen_23",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_20th_century_boys_the_complete_edition_06_1791779913",
+      "bookId": "pub_level_comic_20th_century_boys_the_complete_edition_06",
+      "price": 169200,
+      "currentPrice": 169200,
+      "originalPrice": 188000,
+      "previousPrice": 188000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_doraemon_27_2026_1791779913",
+      "bookId": "pub_doraemon_27_2026",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_punch_man_33_1791779913",
+      "bookId": "pub_one_punch_man_33",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_soloist_in_a_cage_03_1791779913",
+      "bookId": "pub_soloist_in_a_cage_03",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_07_terbit_ulang_1791779913",
+      "bookId": "pub_hanako_si_arwah_penasaran_07_terbit_ulang",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_18_eighteen_02_of_03_1791779913",
+      "bookId": "pub_18_eighteen_02_of_03",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_jack_06_bind_up_edition_1791779913",
+      "bookId": "pub_black_jack_06_bind_up_edition",
+      "price": 76500,
+      "currentPrice": 76500,
+      "originalPrice": 85000,
+      "previousPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_youth_x_machinegun_aoharu_x_kikanju_12_1791779913",
+      "bookId": "pub_youth_x_machinegun_aoharu_x_kikanju_12",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_yashahime_princess_half_demon_vol_06_1791779913",
+      "bookId": "pub_yashahime_princess_half_demon_vol_06",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_insect_girl_01_1791779913",
+      "bookId": "pub_insect_girl_01",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_the_tale_of_dororo_and_hyakkimaru_07_1791779913",
+      "bookId": "pub_level_comic_the_tale_of_dororo_and_hyakkimaru_07",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mission_yozakura_family_13_1791779913",
+      "bookId": "pub_mission_yozakura_family_13",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_prince_series_penguasa_waktu_sahabat_waktu_1791779913",
+      "bookId": "pub_the_prince_series_penguasa_waktu_sahabat_waktu",
+      "price": 89100,
+      "currentPrice": 89100,
+      "originalPrice": 99000,
+      "previousPrice": 99000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_prince_series_aliansi_para_pangeran_keren_lewat_tindakan_1791779913",
+      "bookId": "pub_the_prince_series_aliansi_para_pangeran_keren_lewat_tindakan",
+      "price": 89100,
+      "currentPrice": 89100,
+      "originalPrice": 99000,
+      "previousPrice": 99000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_learning_to_love_my_catlike_classmate_02_1791779913",
+      "bookId": "pub_learning_to_love_my_catlike_classmate_02",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_hai_miiko_38_reguler_1791779913",
+      "bookId": "pub_hai_miiko_38_reguler",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_dead_mount_death_play_16_1791779913",
+      "bookId": "pub_akasha_dead_mount_death_play_16",
+      "price": 43200,
+      "currentPrice": 43200,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_dead_dead_demons_dededede_destruction_02_1791779913",
+      "bookId": "pub_akasha_dead_dead_demons_dededede_destruction_02",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_grim_night_tales_04_1791779913",
+      "bookId": "pub_akasha_grim_night_tales_04",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_your_lie_in_april_vol_3_1791779913",
+      "bookId": "pub_your_lie_in_april_vol_3",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_bocchi_the_rock_drunk_hero_rock_story_04_1791779913",
+      "bookId": "pub_akasha_bocchi_the_rock_drunk_hero_rock_story_04",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_hear_the_voice_of_the_dead_04_1791779913",
+      "bookId": "pub_akasha_hear_the_voice_of_the_dead_04",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_fire_punch_01_1791779913",
+      "bookId": "pub_akasha_fire_punch_01",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kaguyasama_love_is_war_18_1791779913",
+      "bookId": "pub_kaguyasama_love_is_war_18",
+      "price": 43200,
+      "currentPrice": 43200,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_prince_series_gemerlap_festival_aneka_perayaan_seru_dunia_1791779913",
+      "bookId": "pub_the_prince_series_gemerlap_festival_aneka_perayaan_seru_dunia",
+      "price": 89100,
+      "currentPrice": 89100,
+      "originalPrice": 99000,
+      "previousPrice": 99000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_prince_series_arena_para_juara_jiwa_juara_sejati_1791779913",
+      "bookId": "pub_the_prince_series_arena_para_juara_jiwa_juara_sejati",
+      "price": 89100,
+      "currentPrice": 89100,
+      "originalPrice": 99000,
+      "previousPrice": 99000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_prince_series_pelindung_warisan_dunia_jejak_sejarah_dan_budaya_1791779913",
+      "bookId": "pub_the_prince_series_pelindung_warisan_dunia_jejak_sejarah_dan_budaya",
+      "price": 89100,
+      "currentPrice": 89100,
+      "originalPrice": 99000,
+      "previousPrice": 99000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kaiju_bside_02_tamat_1791779913",
+      "bookId": "pub_kaiju_bside_02_tamat",
+      "price": 67500,
+      "currentPrice": 67500,
+      "originalPrice": 75000,
+      "previousPrice": 75000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tamons_bside_1_1791779913",
+      "bookId": "pub_tamons_bside_1",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_chiruran_shinsengumi_15_1791779913",
+      "bookId": "pub_akasha_chiruran_shinsengumi_15",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_11_bookpaper_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_11_bookpaper",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_perjuangan_cinta_pertama_akira_momose_03_1791779913",
+      "bookId": "pub_perjuangan_cinta_pertama_akira_momose_03",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_kamen_rider_913_vol_3_1791779913",
+      "bookId": "pub_akasha_kamen_rider_913_vol_3",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_dollhouse_1791779913",
+      "bookId": "pub_akasha_dollhouse",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha_the_art_of_junji_ito_twisted_visions_1791779913",
+      "bookId": "pub_akasha_the_art_of_junji_ito_twisted_visions",
+      "price": 351000,
+      "currentPrice": 351000,
+      "originalPrice": 390000,
+      "previousPrice": 390000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_yowamushi_pedal_go_25_1791779913",
+      "bookId": "pub_yowamushi_pedal_go_25",
+      "price": 67500,
+      "currentPrice": 67500,
+      "originalPrice": 75000,
+      "previousPrice": 75000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_yona_the_girl_standing_in_the_blush_of_dawn_09__bookpaper_1791779913",
+      "bookId": "pub_yona_the_girl_standing_in_the_blush_of_dawn_09__bookpaper",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_koloni_anaynay_2__tamat_1791779913",
+      "bookId": "pub_koloni_anaynay_2__tamat",
+      "price": 61200,
+      "currentPrice": 61200,
+      "originalPrice": 68000,
+      "previousPrice": 68000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__chiruran_shinsengumi_14_1791779913",
+      "bookId": "pub_akasha__chiruran_shinsengumi_14",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__hear_the_voice_of_the_dead_03_1791779913",
+      "bookId": "pub_akasha__hear_the_voice_of_the_dead_03",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__dead_mount_death_play_15_1791779913",
+      "bookId": "pub_akasha__dead_mount_death_play_15",
+      "price": 43200,
+      "currentPrice": 43200,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_papa_and_daddys_homecooking_13__tamat_1791779913",
+      "bookId": "pub_papa_and_daddys_homecooking_13__tamat",
+      "price": 43200,
+      "currentPrice": 43200,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__chiruran_shinsengumi_13_1791779913",
+      "bookId": "pub_akasha__chiruran_shinsengumi_13",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_09__bookpaper_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_09__bookpaper",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_papa_and_daddys_home_cooking_12_1791779913",
+      "bookId": "pub_papa_and_daddys_home_cooking_12",
+      "price": 43200,
+      "currentPrice": 43200,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ohayo_tokyo_2_1791779913",
+      "bookId": "pub_ohayo_tokyo_2",
+      "price": 55800,
+      "currentPrice": 55800,
+      "originalPrice": 62000,
+      "previousPrice": 62000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_koloni__gundala_vs_sancaka_1791779913",
+      "bookId": "pub_koloni__gundala_vs_sancaka",
+      "price": 61200,
+      "currentPrice": 61200,
+      "originalPrice": 68000,
+      "previousPrice": 68000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_orange_06__future_1791779913",
+      "bookId": "pub_orange_06__future",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__you_are_a_four_leaf_clover_02_1791779913",
+      "bookId": "pub_akasha__you_are_a_four_leaf_clover_02",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__untuk_dirimu_yang_baru_05_1791779913",
+      "bookId": "pub_akasha__untuk_dirimu_yang_baru_05",
+      "price": 43200,
+      "currentPrice": 43200,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_yona_the_girl_standing_in_the_blush_of_dawn_08__bookpaper_1791779913",
+      "bookId": "pub_yona_the_girl_standing_in_the_blush_of_dawn_08__bookpaper",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_papa_and_daddys_home_cooking_11_1791779913",
+      "bookId": "pub_papa_and_daddys_home_cooking_11",
+      "price": 43200,
+      "currentPrice": 43200,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ragna_crimson_16_1791779913",
+      "bookId": "pub_ragna_crimson_16",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_orange_05__new_edition_1791779913",
+      "bookId": "pub_orange_05__new_edition",
+      "price": 54000,
+      "currentPrice": 54000,
+      "originalPrice": 60000,
+      "previousPrice": 60000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_yona_the_girl_standing_in_the_blush_of_dawn_07__bookpaper_1791779913",
+      "bookId": "pub_yona_the_girl_standing_in_the_blush_of_dawn_07__bookpaper",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__record_of_ragnarok__the_legend_of_lu_bu_05_1791779913",
+      "bookId": "pub_akasha__record_of_ragnarok__the_legend_of_lu_bu_05",
+      "price": 43200,
+      "currentPrice": 43200,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__untuk_dirimu_yang_baru_04_1791779913",
+      "bookId": "pub_akasha__untuk_dirimu_yang_baru_04",
+      "price": 43200,
+      "currentPrice": 43200,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_107_1791779913",
+      "bookId": "pub_lc_fight_ippo_107",
+      "price": 21600,
+      "currentPrice": 21600,
+      "originalPrice": 24000,
+      "previousPrice": 24000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_123_1791779913",
+      "bookId": "pub_lc_fight_ippo_123",
+      "price": 27000,
+      "currentPrice": 27000,
+      "originalPrice": 30000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_124_1791779913",
+      "bookId": "pub_lc_fight_ippo_124",
+      "price": 27000,
+      "currentPrice": 27000,
+      "originalPrice": 30000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_125_1791779913",
+      "bookId": "pub_lc_fight_ippo_125",
+      "price": 27000,
+      "currentPrice": 27000,
+      "originalPrice": 30000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_126_1791779913",
+      "bookId": "pub_lc_fight_ippo_126",
+      "price": 27000,
+      "currentPrice": 27000,
+      "originalPrice": 30000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_127_1791779913",
+      "bookId": "pub_lc_fight_ippo_127",
+      "price": 27000,
+      "currentPrice": 27000,
+      "originalPrice": 30000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_128_1791779913",
+      "bookId": "pub_lc_fight_ippo_128",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_129_1791779913",
+      "bookId": "pub_lc_fight_ippo_129",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_130_1791779913",
+      "bookId": "pub_level_comic_fight_ippo_130",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_131_1791779913",
+      "bookId": "pub_level_comic_fight_ippo_131",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_132_1791779913",
+      "bookId": "pub_level_comic_fight_ippo_132",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_01_1791779913",
+      "bookId": "pub_mob_psycho_100_01",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_02_1791779913",
+      "bookId": "pub_mob_psycho_100_02",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_03_1791779913",
+      "bookId": "pub_mob_psycho_100_03",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_04_1791779913",
+      "bookId": "pub_mob_psycho_100_04",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_5_1791779913",
+      "bookId": "pub_mob_psycho_100_5",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_06_1791779913",
+      "bookId": "pub_mob_psycho_100_06",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_7_1791779913",
+      "bookId": "pub_mob_psycho_100_7",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_08_1791779913",
+      "bookId": "pub_mob_psycho_100_08",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_9_1791779913",
+      "bookId": "pub_mob_psycho_100_9",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_10_1791779913",
+      "bookId": "pub_mob_psycho_100_10",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_11_1791779913",
+      "bookId": "pub_mob_psycho_100_11",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_12_1791779913",
+      "bookId": "pub_mob_psycho_100_12",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_13_1791779913",
+      "bookId": "pub_mob_psycho_100_13",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_14_1791779913",
+      "bookId": "pub_mob_psycho_100_14",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_16_1791779913",
+      "bookId": "pub_mob_psycho_100_16",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_reigen_1791779913",
+      "bookId": "pub_mob_psycho_100_reigen",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_80_1791779913",
+      "bookId": "pub_ruler_of_the_land_80",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_81_1791779913",
+      "bookId": "pub_ruler_of_the_land_81",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_82_1791779913",
+      "bookId": "pub_ruler_of_the_land_82",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_83_1791779913",
+      "bookId": "pub_ruler_of_the_land_83",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_84_1791779913",
+      "bookId": "pub_ruler_of_the_land_84",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_85_1791779913",
+      "bookId": "pub_ruler_of_the_land_85",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_86_1791779913",
+      "bookId": "pub_ruler_of_the_land_86",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kariage_kun_63_1791779913",
+      "bookId": "pub_kariage_kun_63",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kariage_kun_64_1791779913",
+      "bookId": "pub_kariage_kun_64",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_blue_grand_data_file_terbit_ulang_1791779913",
+      "bookId": "pub_one_piece_blue_grand_data_file_terbit_ulang",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 41250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_yellow_grand_elements_1791779913",
+      "bookId": "pub_one_piece_yellow_grand_elements",
+      "price": 67500,
+      "currentPrice": 67500,
+      "originalPrice": 75000,
+      "previousPrice": 75000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_green_secret_pieces_1791779913",
+      "bookId": "pub_one_piece_green_secret_pieces",
+      "price": 72000,
+      "currentPrice": 72000,
+      "originalPrice": 80000,
+      "previousPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_party_02_1791779913",
+      "bookId": "pub_one_piece_party_02",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_party_03_1791779913",
+      "bookId": "pub_one_piece_party_03",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_92_1791779913",
+      "bookId": "pub_one_piece_92",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_93_1791779913",
+      "bookId": "pub_one_piece_93",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_party_04_1791779913",
+      "bookId": "pub_one_piece_party_04",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_party_05_1791779913",
+      "bookId": "pub_one_piece_party_05",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_94_1791779913",
+      "bookId": "pub_one_piece_94",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_95_1791779913",
+      "bookId": "pub_one_piece_95",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_96_1791779913",
+      "bookId": "pub_one_piece_96",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_97_1791779913",
+      "bookId": "pub_one_piece_97",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_1791779913",
+      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie",
+      "price": 38700,
+      "currentPrice": 38700,
+      "originalPrice": 43000,
+      "previousPrice": 43000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_party_06_1791779913",
+      "bookId": "pub_one_piece_party_06",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_party_07_1791779913",
+      "bookId": "pub_one_piece_party_07",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_11_2023_1791779913",
+      "bookId": "pub_one_piece_11_2023",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_13_2024_1791779913",
+      "bookId": "pub_one_piece_13_2024",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_15_2024_1791779913",
+      "bookId": "pub_one_piece_15_2024",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_giant_killing_29_lc_1791779913",
+      "bookId": "pub_giant_killing_29_lc",
+      "price": 19800,
+      "currentPrice": 19800,
+      "originalPrice": 22000,
+      "previousPrice": 22000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_53_1791779913",
+      "bookId": "pub_level_comic_giant_killing_53",
+      "price": 27000,
+      "currentPrice": 27000,
+      "originalPrice": 30000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_54_1791779913",
+      "bookId": "pub_level_comic_giant_killing_54",
+      "price": 27000,
+      "currentPrice": 27000,
+      "originalPrice": 30000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_giant_killing_56_1791779913",
+      "bookId": "pub_lc_giant_killing_56",
+      "price": 27000,
+      "currentPrice": 27000,
+      "originalPrice": 30000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_giant_killing_60_1791779913",
+      "bookId": "pub_lc_giant_killing_60",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_55_1791779913",
+      "bookId": "pub_level_comic_giant_killing_55",
+      "price": 27000,
+      "currentPrice": 27000,
+      "originalPrice": 30000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_57_1791779913",
+      "bookId": "pub_level_comic_giant_killing_57",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_58_1791779913",
+      "bookId": "pub_level_comic_giant_killing_58",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_58_1_1791779913",
+      "bookId": "pub_level_comic_giant_killing_58_1",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_90_1791779913",
+      "bookId": "pub_detektif_conan_90",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_92_1791779913",
+      "bookId": "pub_detektif_conan_92",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tantangan_dari_conan_3_edisi_kunci_jawaban_1791779913",
+      "bookId": "pub_tantangan_dari_conan_3_edisi_kunci_jawaban",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_vs_kid_the_phantom_thief_1791779913",
+      "bookId": "pub_detektif_conan_vs_kid_the_phantom_thief",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_detektif_conan_confrontation_with_the_black_organization_1791779913",
+      "bookId": "pub_light_novel_detektif_conan_confrontation_with_the_black_organization",
+      "price": 47520,
+      "currentPrice": 47520,
+      "originalPrice": 52800,
+      "previousPrice": 52800,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_93_1791779913",
+      "bookId": "pub_detektif_conan_93",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_94_1791779913",
+      "bookId": "pub_detektif_conan_94",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_jet_black_mystery_train_1791779913",
+      "bookId": "pub_detektif_conan_the_jet_black_mystery_train",
+      "price": 81000,
+      "currentPrice": 81000,
+      "originalPrice": 90000,
+      "previousPrice": 90000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_dead_or_alive_selection_1791779913",
+      "bookId": "pub_detektif_conan_dead_or_alive_selection",
+      "price": 46800,
+      "currentPrice": 46800,
+      "originalPrice": 52000,
+      "previousPrice": 52000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_spesial_43_1791779913",
+      "bookId": "pub_detektif_conan_spesial_43",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_darkest_nightmare_01_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_darkest_nightmare_01",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_darkest_nightmare_2_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_darkest_nightmare_2",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_96_1791779913",
+      "bookId": "pub_detektif_conan_96",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_toru_amuro_selection_1791779913",
+      "bookId": "pub_detektif_conan_toru_amuro_selection",
+      "price": 54000,
+      "currentPrice": 54000,
+      "originalPrice": 60000,
+      "previousPrice": 60000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_spesial_44_1791779913",
+      "bookId": "pub_detektif_conan_spesial_44",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 35000,
+      "previousPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_time_bomb_skyscraper_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_time_bomb_skyscraper",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_conan_movie_zero_the_enforcer_first_1791779913",
+      "bookId": "pub_conan_movie_zero_the_enforcer_first",
+      "price": 72000,
+      "currentPrice": 72000,
+      "originalPrice": 80000,
+      "previousPrice": 80000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_last_wizard_of_the_century_01_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_last_wizard_of_the_century_01",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_crossroad_in_the_ancient_capital_0_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_crossroad_in_the_ancient_capital_0",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_zeros_tea_time_01_1791779913",
+      "bookId": "pub_detektif_conan_zeros_tea_time_01",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_crossroad_in_the_ancient_capital_0_1_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_crossroad_in_the_ancient_capital_0_1",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_last_wizard_of_the_century_02_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_last_wizard_of_the_century_02",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_zeros_tea_time_02_1791779913",
+      "bookId": "pub_detektif_conan_zeros_tea_time_02",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_zeros_tea_time_03_1791779913",
+      "bookId": "pub_detektif_conan_zeros_tea_time_03",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_97_1791779913",
+      "bookId": "pub_detektif_conan_97",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_last_wizard_of_the_century_3_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_last_wizard_of_the_century_3",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_zeros_tea_time_04_1791779913",
+      "bookId": "pub_detektif_conan_zeros_tea_time_04",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_raven_chaser_01_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_raven_chaser_01",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_crimson_love_letter_01_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_crimson_love_letter_01",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_detektif_conan_private_eyes_requiem_1791779913",
+      "bookId": "pub_light_novel_detektif_conan_private_eyes_requiem",
+      "price": 54000,
+      "currentPrice": 54000,
+      "originalPrice": 60000,
+      "previousPrice": 60000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_crimson_love_letter_02_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_crimson_love_letter_02",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_spesial_45_1791779913",
+      "bookId": "pub_detektif_conan_spesial_45",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_raven_chaser_02_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_raven_chaser_02",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_1791779913",
+      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first",
+      "price": 72000,
+      "currentPrice": 72000,
+      "originalPrice": 80000,
+      "previousPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_last_1791779913",
+      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_last",
+      "price": 72000,
+      "currentPrice": 72000,
+      "originalPrice": 80000,
+      "previousPrice": 80000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_09_1791779913",
+      "bookId": "pub_detektif_conan_premium_09",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_raven_chaser_03_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_raven_chaser_03",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_99_1791779913",
+      "bookId": "pub_detektif_conan_99",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_detektif_conan_crossroad_in_the_ancient_capital_1791779913",
+      "bookId": "pub_light_novel_detektif_conan_crossroad_in_the_ancient_capital",
+      "price": 63000,
+      "currentPrice": 63000,
+      "originalPrice": 70000,
+      "previousPrice": 70000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_the_movie_the_lost_ship_in_the_sky_01_1791779913",
+      "bookId": "pub_detektif_conan_the_movie_the_lost_ship_in_the_sky_01",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_shuichi_akai_selection_1791779913",
+      "bookId": "pub_detektif_conan_shuichi_akai_selection",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_private_eye_in_the_distant_sea_first_1791779913",
+      "bookId": "pub_detektif_conan_movie_private_eye_in_the_distant_sea_first",
+      "price": 60000,
+      "currentPrice": 60000,
+      "originalPrice": 80000,
+      "previousPrice": 80000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_private_eye_in_the_distant_sea_last_1791779913",
+      "bookId": "pub_detektif_conan_movie_private_eye_in_the_distant_sea_last",
+      "price": 60000,
+      "currentPrice": 60000,
+      "originalPrice": 80000,
+      "previousPrice": 80000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_makoto_kyogoku_selection_1791779913",
+      "bookId": "pub_detektif_conan_makoto_kyogoku_selection",
+      "price": 49500,
+      "currentPrice": 49500,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_secret_archives_01_shinichi_kudo_ran_mouri_1791779913",
+      "bookId": "pub_detektif_conan_secret_archives_01_shinichi_kudo_ran_mouri",
+      "price": 108000,
+      "currentPrice": 108000,
+      "originalPrice": 120000,
+      "previousPrice": 120000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_new_kobochan_38_1791779913",
+      "bookId": "pub_new_kobochan_38",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_new_kobochan_39_1791779913",
+      "bookId": "pub_new_kobochan_39",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_new_kobochan_40_1791779913",
+      "bookId": "pub_new_kobochan_40",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_08_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_08",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_04_1_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_04_1",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_03_1_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_03_1",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_05_1_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_05_1",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_06_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_06",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_07_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_07",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_09_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_09",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_10_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_10",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_11_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_11",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_12_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_12",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_13_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_13",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_14_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_14",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_15_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_15",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_16_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_16",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_17_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_17",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_18_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_18",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_19_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_19",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_20_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_20",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_21_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_21",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_22_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_22",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_24_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_24",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_25_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_25",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_26_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_26",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_27_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_27",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_28_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_28",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_30_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_30",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_31_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_31",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_37_1791779913",
+      "bookId": "pub_haikyu_fly_high_volleyball_37",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_butler_26_1791779913",
+      "bookId": "pub_black_butler_26",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_butler_27_1791779913",
+      "bookId": "pub_black_butler_27",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_butler_28_1791779913",
+      "bookId": "pub_black_butler_28",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 25000,
+      "previousPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_butler_29_1791779913",
+      "bookId": "pub_black_butler_29",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_butler_30_1791779913",
+      "bookId": "pub_black_butler_30",
+      "price": 25200,
+      "currentPrice": 25200,
+      "originalPrice": 28000,
+      "previousPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_butler_32_1791779913",
+      "bookId": "pub_black_butler_32",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_butler_33_1791779913",
+      "bookId": "pub_black_butler_33",
+      "price": 37350,
+      "currentPrice": 37350,
+      "originalPrice": 41500,
+      "previousPrice": 41500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791779913",
+      "startedAt": "2026-10-12T04:34:48.000Z",
+      "finishedAt": "2026-10-12T04:38:33.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1552,
+      "productsAccepted": 1317,
+      "productsRejected": 400,
+      "productsUpdated": 1155,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 225122,
+      "success": true
+    },
     {
       "id": "sync_1791754635",
       "startedAt": "2026-10-11T21:33:17.000Z",
@@ -154069,26 +156696,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 210631,
-      "success": true
-    },
-    {
-      "id": "sync_1790885551",
-      "startedAt": "2026-10-01T20:08:55.000Z",
-      "finishedAt": "2026-10-01T20:12:31.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1506,
-      "productsAccepted": 1417,
-      "productsRejected": 92,
-      "productsUpdated": 977,
-      "productsInserted": 440,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 216456,
       "success": true
     }
   ]
