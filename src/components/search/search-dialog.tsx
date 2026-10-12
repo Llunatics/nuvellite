@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Search, X, BookOpen, ArrowRight, Layers, Building2, Sparkles, Hash } from 'lucide-react';
 import { searchCatalog, getAllSeries, getPublishers } from '@/lib/catalog-service';
+import { getUnifiedSeries } from '@/lib/kki-service';
 import { formatRupiah } from '@/lib/formatters';
 
 interface SearchDialogProps {
@@ -17,7 +18,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const allSeries = useMemo(() => getAllSeries(), []);
+  const allSeries = useMemo(() => getUnifiedSeries(), []);
   const publishers = useMemo(() => getPublishers(), []);
 
   // Keyboard shortcut listener for Esc
@@ -217,6 +218,11 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                           <div className="min-w-0 flex-1">
                             <span className="text-xs font-medium text-editorial-title group-hover:text-accent transition-colors truncate block">
                               {s.name}
+                              {s.isArchive && (
+                                <span className="ml-1.5 px-1.5 py-0.5 rounded text-[8px] font-mono uppercase bg-amber-500/10 text-amber-300 border border-amber-500/25">
+                                  Arsip
+                                </span>
+                              )}
                             </span>
                             <span className="text-[10px] text-editorial-muted font-mono">
                               {s.publisherName} • {s.totalVolumes} Volume • {s.type === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga'}

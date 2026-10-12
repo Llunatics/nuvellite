@@ -91,6 +91,15 @@ export function getBindUpSeries(): BindUpSeriesGroup[] {
   return groupBindUpBooks(publicBooks, publicSeries);
 }
 
+/**
+ * Find the bind-up group linked to a canonical series slug, if any.
+ * Used to show a "Lihat Edisi Bind-Up" button on series detail pages.
+ */
+export function getBindUpGroupForSeriesSlug(slug: string): BindUpSeriesGroup | undefined {
+  const clean = slug.toLowerCase();
+  return getBindUpSeries().find((g) => g.seriesSlug?.toLowerCase() === clean);
+}
+
 export function getSeriesBySlug(slug: string): Series | undefined {
   const cleanSlug = slug.toLowerCase().replace(/^ser_/, '');
   return publicSeries.find(

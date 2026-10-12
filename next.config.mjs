@@ -4,6 +4,13 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async redirects() {
+    return [
+      // /arsip was merged into the unified /series catalog (2026-10-12)
+      { source: '/arsip', destination: '/series', permanent: true },
+      { source: '/arsip/:slug', destination: '/series/:slug', permanent: true },
+    ];
+  },
   images: {
     // NOTE: Vercel's on-demand image optimizer returns HTTP 402 once the
     // Hobby-plan quota is exhausted, which blanked every cover site-wide.

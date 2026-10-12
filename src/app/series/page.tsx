@@ -1,14 +1,15 @@
-import { getAllSeries, getAllBooks } from '@/lib/catalog-service';
+import { getAllBooks } from '@/lib/catalog-service';
+import { getUnifiedSeries } from '@/lib/kki-service';
 import { SeriesDirectoryView } from '@/components/series/series-directory-view';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Direktori Seri Manga & Light Novel — nuvellite',
-  description: 'Daftar lengkap seri komik dan light novel dari Elex Media Komputindo, m&c!, dan Phoenix Gramedia Indonesia.',
+  description: 'Daftar lengkap seri komik dan light novel dari Elex Media Komputindo, m&c!, dan Phoenix Gramedia Indonesia, termasuk arsip terbitan lama dari Database Komunitas Kolektor Komik Indonesia.',
 };
 
 export default function SeriesDirectoryPage() {
-  const allSeries = getAllSeries();
+  const allSeries = getUnifiedSeries();
   const allBooks = getAllBooks();
 
   return (

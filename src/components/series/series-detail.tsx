@@ -27,6 +27,7 @@ interface SeriesDetailProps {
   series: Series;
   books: Book[];
   kkiEnrichment?: KkiEnrichment;
+  hasBindUp?: boolean;
 }
 
 type VolumeState = 'OWNED' | 'RELEASED' | 'UPCOMING' | 'UNKNOWN_GAP';
@@ -37,7 +38,7 @@ interface VolumeSlot {
   book?: Book;
 }
 
-export function SeriesDetail({ series, books, kkiEnrichment }: SeriesDetailProps) {
+export function SeriesDetail({ series, books, kkiEnrichment, hasBindUp }: SeriesDetailProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const [activeTab, setActiveTab] = useState<'ALL' | 'MISSING' | 'SPECIAL'>('ALL');
   const [selectedSlot, setSelectedSlot] = useState<VolumeSlot | null>(null);
@@ -207,6 +208,19 @@ export function SeriesDetail({ series, books, kkiEnrichment }: SeriesDetailProps
               )}
 
               {kkiEnrichment && <KkiDataBlock enrichment={kkiEnrichment} />}
+
+              {hasBindUp && (
+                <div className="mt-4">
+                  <Link
+                    href="/bind-up"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.1] text-editorial-title transition-all active:scale-95"
+                  >
+                    <BookOpen className="w-3.5 h-3.5" />
+                    <span>Lihat Edisi Bind-Up</span>
+                    <ArrowLeft className="w-3.5 h-3.5 rotate-180" />
+                  </Link>
+                </div>
+              )}
             </div>
 
             {/* Collection Progress & Gap Recovery Matrix */}

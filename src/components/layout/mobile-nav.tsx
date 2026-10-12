@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, Calendar, Layers, BookMarked, BookCopy, Archive } from 'lucide-react';
+import { BookOpen, Calendar, Layers, BookMarked } from 'lucide-react';
 import { useCollection } from '@/hooks/use-collection';
 import { useTheme, ACCENT_THEMES } from '@/hooks/use-theme';
 
@@ -18,8 +18,6 @@ export function MobileNav() {
     { href: '/', label: 'Katalog', icon: BookOpen, active: pathname === '/' },
     { href: '/calendar', label: 'Kalender', icon: Calendar, active: pathname.startsWith('/calendar') },
     { href: '/series', label: 'Seri', icon: Layers, active: pathname.startsWith('/series') },
-    { href: '/bind-up', label: 'Bind-Up', icon: BookCopy, active: pathname.startsWith('/bind-up') },
-    { href: '/arsip', label: 'Arsip', icon: Archive, active: pathname.startsWith('/arsip') },
     {
       href: '/library',
       label: 'Koleksi',

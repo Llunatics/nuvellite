@@ -188,8 +188,34 @@ def main():
     review_queue = []
     matched_kki_idx = set()  # (medium, idx)
 
+    # Preserve manual matches from previous runs (human-reviewed, never overwrite)
+    existing_enrich_path = DATA_DIR / "kki-enrichment.json"
+    manual_keep = {}
+    if existing_enrich_path.exists():
+        try:
+            existing = json.loads(existing_enrich_path.read_text(encoding="utf-8"))
+            for sid, e in existing.items():
+                if isinstance(e, dict) and e.get("matchMethod") == "manual":
+                    manual_keep[sid] = e
+        except Exception as ex:
+            print(f"WARN: could not load existing enrichment: {ex}")
+    # Load already-reviewed (NOT_MATCH) decisions so they are not re-queued
+    reviewed_not_match = set()
+    for log_name in ("kki-review-queue.json",):
+        p = KKI_DIR / log_name
+        if p.exists():
+            try:
+                for q in json.loads(p.read_text(encoding="utf-8")):
+                    if q.get("reviewDecision") == "NOT_MATCH":
+                        reviewed_not_match.add(q.get("nuvelliteSeriesId"))
+            except Exception:
+                pass
+
     for s in nuv_series:
         sid = s["id"]
+        # Skip human-reviewed decisions: manual matches are kept, NOT_MATCH are not re-queued
+        if sid in manual_keep or sid in reviewed_not_match:
+            continue
         sname = s.get("name") or ""
         stype = s.get("type")  # MANGA | LIGHT_NOVEL
         snorm = normalize(sname)
@@ -280,6 +306,18 @@ def main():
 
     # sort review queue by score desc
     review_queue.sort(key=lambda q: -q["score"])
+
+    # Re-attach preserved manual matches (human-reviewed, never auto-overwritten)
+    for sid, e in manual_keep.items():
+        enrichment[sid] = e
+        # mark their KKI rows as matched so they don't leak into the archive
+        # (best-effort: match by title)
+        kt = (e.get("kkiTitle") or "").strip().lower()
+        for medium, pool in (("MANGA", manga_rows), ("LIGHT_NOVEL", ln_rows)):
+            for i, r in enumerate(pool):
+                if r["title"].strip().lower() == kt:
+                    matched_kki_idx.add((medium, i))
+                    break
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     with open(DATA_DIR / "kki-enrichment.json", "w", encoding="utf-8") as f:

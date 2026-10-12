@@ -1,64 +1,57 @@
-import { notFound } from 'next/navigation';
+'use client';
+
+import React from 'react';
 import Link from 'next/link';
-import { getArchiveEntryBySlug } from '@/lib/kki-service';
-import { CoverImage } from '@/components/books/cover-image';
-import { Archive, ArrowLeft, ExternalLink, Languages } from 'lucide-react';
-import type { Metadata } from 'next';
+import { CoverImage } from '../books/cover-image';
+import type { Series } from '@/lib/types';
+import { Archive, ArrowLeft, ExternalLink, Languages, ShoppingBag } from 'lucide-react';
 
-interface PageProps {
-  params: Promise<{ slug: string }>;
+interface ArchiveSeriesDetailProps {
+  series: Series;
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const entry = getArchiveEntryBySlug(slug);
-  if (!entry) return { title: 'Arsip Tidak Ditemukan — nuvellite' };
-  return {
-    title: `${entry.title} (Arsip) — nuvellite`,
-    description: `Arsip seri ${entry.title} terbitan ${entry.publisherId || 'Indonesia'} — tidak tersedia di Gramedia.`,
-  };
-}
-
-export default async function ArchiveDetailPage({ params }: PageProps) {
-  const { slug } = await params;
-  const entry = getArchiveEntryBySlug(slug);
-
-  if (!entry) {
-    notFound();
-  }
-
-  const cover = entry.mu?.status === 'ok' ? entry.mu.cover : undefined;
-  const synopsisId = entry.mu?.descriptionId;
-  const synopsisEn = entry.mu?.descriptionEn;
+/**
+ * Detail view for KKI archive entries inside the unified /series/[slug] route.
+ * The "Beli di Gramedia" button is intentionally DISABLED — archive titles
+ * are not listed on gramedia.com.
+ */
+export function ArchiveSeriesDetail({ series }: ArchiveSeriesDetailProps) {
+  const entry = series.archiveEntry;
+  const cover = series.coverImage;
+  const synopsisId = entry?.mu?.descriptionId;
+  const synopsisEn = entry?.mu?.descriptionEn;
 
   const facts: Array<[string, string | null | undefined]> = [
-    ['Pengarang', entry.author],
-    ['Ilustrator', entry.illustrator],
-    ['Penerbit Indonesia', entry.publisherId],
-    ['Demografi', entry.demographic],
-    ['Volume (INA)', entry.volumesId ? `${entry.volumesId} vol` : null],
-    ['Status (INA)', entry.statusId],
-    ['Vol. 1 Terbit', entry.yearFirstVol],
-    ['Jenis Kertas', entry.paperType],
+    ['Pengarang', series.author],
+    ['Ilustrator', series.illustrator],
+    ['Penerbit Indonesia', series.publisherName],
+    ['Demografi', entry?.demographic],
+    ['Volume (INA)', entry?.volumesId ? `${entry.volumesId} vol` : null],
+    ['Status (INA)', entry?.statusId],
+    ['Vol. 1 Terbit', entry?.yearFirstVol],
+    ['Jenis Kertas', entry?.paperType],
     [
       'Rentang Harga',
-      entry.priceMin && entry.priceMax
+      entry?.priceMin && entry?.priceMax
         ? `${entry.priceMin} – ${entry.priceMax}`
-        : entry.priceMax || entry.priceMin,
+        : entry?.priceMax || entry?.priceMin,
     ],
-    ['Penerbit Jepang', entry.publisherJp],
-    ['Volume (Jepang)', entry.volumesJp],
-    ['Status (Jepang)', entry.statusJp],
+    ['Penerbit Jepang', entry?.publisherJp],
+    ['Volume (Jepang)', entry?.volumesJp],
+    ['Status (Jepang)', entry?.statusJp],
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <Link
-        href="/arsip"
-        className="inline-flex items-center gap-1.5 text-xs text-editorial-muted hover:text-editorial-title transition-colors mb-5"
-      >
-        <ArrowLeft className="w-3.5 h-3.5" /> Kembali ke Arsip
-      </Link>
+    <div className="space-y-6 pb-16">
+      <div>
+        <Link
+          href="/series"
+          className="inline-flex items-center gap-1.5 text-xs text-editorial-muted hover:text-editorial-title transition-colors group"
+        >
+          <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
+          <span>Direktori Seri</span>
+        </Link>
+      </div>
 
       <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
         {/* Cover */}
@@ -67,7 +60,7 @@ export default async function ArchiveDetailPage({ params }: PageProps) {
             {cover ? (
               <CoverImage
                 src={cover}
-                alt={entry.title}
+                alt={series.name}
                 width={224}
                 height={298}
                 imgClassName="w-full h-full object-cover"
@@ -76,9 +69,9 @@ export default async function ArchiveDetailPage({ params }: PageProps) {
             ) : (
               <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-surface-elevated/40">
                 <span className="font-editorial text-5xl text-editorial-faint">
-                  {entry.title.charAt(0).toUpperCase()}
+                  {series.name.charAt(0).toUpperCase()}
                 </span>
-                <span className="text-[11px] text-editorial-muted line-clamp-3 mt-2">{entry.title}</span>
+                <span className="text-[11px] text-editorial-muted line-clamp-3 mt-2">{series.name}</span>
               </div>
             )}
             <div className="absolute top-2.5 left-2.5">
@@ -86,6 +79,23 @@ export default async function ArchiveDetailPage({ params }: PageProps) {
                 Arsip
               </span>
             </div>
+          </div>
+
+          {/* Disabled Gramedia button — archive titles are not on gramedia.com */}
+          <div className="mt-4 w-full max-w-[224px]">
+            <button
+              type="button"
+              disabled
+              title="Judul arsip ini tidak tersedia di Gramedia.com"
+              aria-disabled="true"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full text-xs font-medium bg-white/[0.06] text-editorial-faint border border-white/[0.08] cursor-not-allowed opacity-60 select-none"
+            >
+              <ShoppingBag className="w-4 h-4 shrink-0" />
+              <span>Beli di Gramedia.com</span>
+            </button>
+            <p className="mt-2 text-[10px] font-mono text-editorial-faint text-center leading-relaxed">
+              Tidak tersedia di Gramedia
+            </p>
           </div>
         </div>
 
@@ -98,18 +108,24 @@ export default async function ArchiveDetailPage({ params }: PageProps) {
               </span>
               <span
                 className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono uppercase font-semibold border ${
-                  entry.medium === 'LIGHT_NOVEL'
+                  series.type === 'LIGHT_NOVEL'
                     ? 'bg-amber-500/10 text-amber-300 border-amber-500/25'
                     : 'bg-sky-500/10 text-sky-300 border-sky-500/25'
                 }`}
               >
-                {entry.medium === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga'}
+                {series.type === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga'}
               </span>
             </div>
 
             <h1 className="text-2xl sm:text-4xl font-editorial font-normal text-editorial-title tracking-tight leading-[1.15]">
-              {entry.title}
+              {series.name}
             </h1>
+
+            {series.author && (
+              <p className="text-xs text-editorial-muted mt-2 font-sans">
+                Pengarang: <span className="text-editorial-title font-medium">{series.author}</span>
+              </p>
+            )}
 
             {/* Synopsis */}
             {(synopsisId || synopsisEn) && (
@@ -150,7 +166,7 @@ export default async function ArchiveDetailPage({ params }: PageProps) {
                 ))}
             </dl>
             <div className="mt-3 pt-2.5 border-t border-white/[0.06] flex flex-wrap items-center gap-x-4 gap-y-1">
-              {entry.mangaupdatesUrl && (
+              {entry?.mangaupdatesUrl && (
                 <a
                   href={entry.mangaupdatesUrl}
                   target="_blank"
@@ -166,7 +182,7 @@ export default async function ArchiveDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          {entry.notes && (
+          {entry?.notes && (
             <p className="text-[11px] text-editorial-muted max-w-2xl font-sans">
               <span className="font-mono text-editorial-faint uppercase text-[10px]">Catatan: </span>
               {entry.notes}

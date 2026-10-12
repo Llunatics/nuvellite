@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
-import { getSeriesBySlug, getBooksBySeries } from '@/lib/catalog-service';
+import { getSeriesBySlug, getBooksBySeries, getBindUpGroupForSeriesSlug } from '@/lib/catalog-service';
 import { SeriesDetail } from '@/components/series/series-detail';
-import { getKkiEnrichment } from '@/lib/kki-service';
+import { ArchiveSeriesDetail } from '@/components/series/archive-series-detail';
+import { getKkiEnrichment, getArchiveSeriesBySlug } from '@/lib/kki-service';
 import type { Metadata } from 'next';
 
 interface PageProps {
@@ -11,28 +12,50 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const series = getSeriesBySlug(slug);
-  if (!series) return { title: 'Seri Tidak Ditemukan — nuvellite' };
-
-  return {
-    title: `${series.name} — Pelacak Volume nuvellite`,
-    description: `Kelengkapan volume dan pelacak koleksi seri ${series.name} terbitan ${series.publisherName}.`,
-  };
+  if (series) {
+    return {
+      title: `${series.name} — Pelacak Volume nuvellite`,
+      description: `Kelengkapan volume dan pelacak koleksi seri ${series.name} terbitan ${series.publisherName}.`,
+    };
+  }
+  const archiveSeries = getArchiveSeriesBySlug(slug);
+  if (archiveSeries) {
+    return {
+      title: `${archiveSeries.name} (Arsip) — nuvellite`,
+      description: `Arsip seri ${archiveSeries.name} terbitan ${archiveSeries.publisherName} — tidak tersedia di Gramedia.`,
+    };
+  }
+  return { title: 'Seri Tidak Ditemukan — nuvellite' };
 }
 
 export default async function SeriesDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const series = getSeriesBySlug(slug);
 
-  if (!series) {
-    notFound();
+  if (series) {
+    const books = getBooksBySeries(series.id);
+    const kkiEnrichment = getKkiEnrichment(series.id);
+    const bindUpGroup = getBindUpGroupForSeriesSlug(series.slug);
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <SeriesDetail
+          series={series}
+          books={books}
+          kkiEnrichment={kkiEnrichment}
+          hasBindUp={!!bindUpGroup}
+        />
+      </div>
+    );
   }
 
-  const books = getBooksBySeries(series.id);
-  const kkiEnrichment = getKkiEnrichment(series.id);
+  const archiveSeries = getArchiveSeriesBySlug(slug);
+  if (archiveSeries) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <ArchiveSeriesDetail series={archiveSeries} />
+      </div>
+    );
+  }
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <SeriesDetail series={series} books={books} kkiEnrichment={kkiEnrichment} />
-    </div>
-  );
+  notFound();
 }

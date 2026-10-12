@@ -118,6 +118,10 @@ export interface Series {
   genres?: string[];
   firstReleaseDate?: string;
   latestReleaseDate?: string;
+  /** True for KKI archive entries merged into the unified catalog (not on Gramedia). */
+  isArchive?: boolean;
+  /** The underlying KKI archive entry, present when isArchive is true. */
+  archiveEntry?: KkiArchiveEntry;
 }
 
 export interface CollectionItem {
