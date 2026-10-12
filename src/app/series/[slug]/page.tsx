@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getSeriesBySlug, getBooksBySeries } from '@/lib/catalog-service';
 import { SeriesDetail } from '@/components/series/series-detail';
+import { getKkiEnrichment } from '@/lib/kki-service';
 import type { Metadata } from 'next';
 
 interface PageProps {
@@ -27,10 +28,11 @@ export default async function SeriesDetailPage({ params }: PageProps) {
   }
 
   const books = getBooksBySeries(series.id);
+  const kkiEnrichment = getKkiEnrichment(series.id);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <SeriesDetail series={series} books={books} />
+      <SeriesDetail series={series} books={books} kkiEnrichment={kkiEnrichment} />
     </div>
   );
 }

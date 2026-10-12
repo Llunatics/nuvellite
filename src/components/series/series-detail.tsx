@@ -3,7 +3,8 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { CoverImage } from '../books/cover-image';
-import { Series, Book } from '@/lib/types';
+import { Series, Book, KkiEnrichment } from '@/lib/types';
+import { KkiDataBlock } from './kki-data-block';
 import { useCollection } from '@/hooks/use-collection';
 import { ReleaseCard } from '@/components/books/release-card';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
@@ -25,6 +26,7 @@ import {
 interface SeriesDetailProps {
   series: Series;
   books: Book[];
+  kkiEnrichment?: KkiEnrichment;
 }
 
 type VolumeState = 'OWNED' | 'RELEASED' | 'UPCOMING' | 'UNKNOWN_GAP';
@@ -35,7 +37,7 @@ interface VolumeSlot {
   book?: Book;
 }
 
-export function SeriesDetail({ series, books }: SeriesDetailProps) {
+export function SeriesDetail({ series, books, kkiEnrichment }: SeriesDetailProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const [activeTab, setActiveTab] = useState<'ALL' | 'MISSING' | 'SPECIAL'>('ALL');
   const [selectedSlot, setSelectedSlot] = useState<VolumeSlot | null>(null);
@@ -203,6 +205,8 @@ export function SeriesDetail({ series, books }: SeriesDetailProps) {
                   {series.description}
                 </p>
               )}
+
+              {kkiEnrichment && <KkiDataBlock enrichment={kkiEnrichment} />}
             </div>
 
             {/* Collection Progress & Gap Recovery Matrix */}

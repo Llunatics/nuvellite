@@ -171,3 +171,60 @@ export interface RecommendationItem {
   score: number;
   explanation: string;
 }
+
+/**
+ * KKI (Komunitas Kolektor Komik Indonesia) enrichment for a Nuvellite series.
+ * Source: "Database Komik yang Terbit di Indonesia" Google Sheets (community
+ * maintained). Keyed by Nuvellite seriesId in kki-enrichment.json.
+ */
+export interface KkiEnrichment {
+  demographic?: string | null;
+  publisherJp?: string | null;
+  volumesJp?: string | null;
+  statusJp?: string | null;
+  mangaupdatesUrl?: string | null;
+  priceMin?: string | null;
+  priceMax?: string | null;
+  paperType?: string | null;
+  yearFirstVol?: string | null;
+  kkiTitle: string;
+  kkiPublisher?: string | null;
+  matchScore?: number;
+  matchMethod?: 'auto' | 'manual';
+}
+
+export interface KkiArchiveMu {
+  status: 'ok' | 'blocked' | 'fetch-failed' | 'parse-empty';
+  cover?: string;
+  descriptionEn?: string;
+  /** Indonesian auto-translation of descriptionEn (MyMemory/offline, cached at sync) */
+  descriptionId?: string;
+  fetchedAt?: string;
+}
+
+/**
+ * Archive entry: a KKI series with no counterpart in the Nuvellite catalog
+ * (mostly old / out-of-print series absent from gramedia.com).
+ */
+export interface KkiArchiveEntry {
+  id: string;
+  slug: string;
+  title: string;
+  author?: string | null;
+  illustrator?: string | null;
+  medium: 'MANGA' | 'LIGHT_NOVEL';
+  demographic?: string | null;
+  volumesId?: string | null;
+  statusId?: string | null;
+  publisherId?: string | null;
+  yearFirstVol?: string | null;
+  priceMin?: string | null;
+  priceMax?: string | null;
+  paperType?: string | null;
+  volumesJp?: string | null;
+  statusJp?: string | null;
+  publisherJp?: string | null;
+  mangaupdatesUrl?: string | null;
+  notes?: string | null;
+  mu?: KkiArchiveMu;
+}
