@@ -12,7 +12,7 @@ export default function CalendarPage() {
   const publishers = getPublishers();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+    <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8">
       <CalendarView books={books} publishers={publishers} />
     </div>
   );

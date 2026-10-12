@@ -37,7 +37,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
     const kkiEnrichment = getKkiEnrichment(series.id);
     const bindUpGroup = getBindUpGroupForSeriesSlug(series.slug);
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6">
         <SeriesDetail
           series={series}
           books={books}
@@ -51,7 +51,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
   const archiveSeries = getArchiveSeriesBySlug(slug);
   if (archiveSeries) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6">
         <ArchiveSeriesDetail series={archiveSeries} />
       </div>
     );
