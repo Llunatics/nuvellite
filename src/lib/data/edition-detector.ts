@@ -15,6 +15,10 @@
  * - Story anthologies ("Best of Best", "Fragments of Horror",
  *   "Twisted Visions", "... Compilation") -> short-story collections,
  *   not volume bind-ups
+ *
+ * Verified 1:1 "Complete Edition" reprints (NON_BIND_UP_PATTERNS):
+ * - City Hunter Complete Edition       -> 35 vols -> 32 (kanzenban reprint,
+ *   not combined; "Complete Edition" is just reprint branding)
  */
 
 export type BindUpKind =
@@ -69,6 +73,23 @@ interface CuratedBindUp {
   kind: BindUpKind;
   label: string;
   note: string;
+}
+
+// Verified NON-bind-ups whose titles match a bind-up pattern but are actually
+// 1:1 reprints (no volumes combined). Checked BEFORE patterns — if a title
+// matches here, it is never a bind-up, no matter what markers it carries.
+//
+// - City Hunter "Complete Edition": the Tokuma kanzenban reprint, 35 tankobon
+//   -> 32 vols (Akasha: 31 vols). "Complete Edition" here is reprint branding,
+//   not combined volumes. (Verified 2026-10-12 vs en.wikipedia.org List of
+//   City Hunter chapters: 35 vols original, 32-vol "Complete Edition".)
+const NON_BIND_UP_PATTERNS: RegExp[] = [
+  /\bcity\s+hunter\b/i,
+];
+
+function isExplicitNonBindUp(title: string, seriesName?: string | null): boolean {
+  const haystack = [title, seriesName].filter(Boolean).join(' ');
+  return NON_BIND_UP_PATTERNS.some((re) => re.test(haystack));
 }
 
 // Verified bind-up releases whose Indonesian store titles carry no
@@ -131,6 +152,9 @@ const CURATED_BIND_UPS: CuratedBindUp[] = [
 ];
 
 export function detectBindUp(title: string, opts: DetectBindUpOptions = {}): BindUpInfo | null {
+  // Explicit non-bind-ups win over everything (1:1 reprints with misleading markers).
+  if (isExplicitNonBindUp(title, opts.seriesName)) return null;
+
   const haystack = [title, opts.seriesName].filter(Boolean).join(' ');
 
   for (const rule of BIND_UP_PATTERNS) {

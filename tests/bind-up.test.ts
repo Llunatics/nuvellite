@@ -3,7 +3,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import { detectBindUp, isBindUpTitle } from '../src/lib/data/edition-detector';
 import { groupBindUpBooks } from '../src/lib/data/bind-up';
-import type { Book } from '../src/lib/types';
+import type { Book, Series } from '../src/lib/types';
 
 describe('Bind-up / omnibus edition detection', () => {
   it('detects "bind up" markers across Indonesian publisher title formats', () => {
@@ -23,15 +23,25 @@ describe('Bind-up / omnibus edition detection', () => {
       label: '2-in-1',
     });
     expect(detectBindUp('Namaku Miiko 4 in 1')).toEqual({ kind: 'X_IN_1', label: '4-in-1' });
-    expect(detectBindUp('Akasha : City Hunter - Complete Edition 30')).toEqual({
-      kind: 'COMPLETE_EDITION',
-      label: 'Complete Edition',
-    });
     expect(detectBindUp('Dragon Ball Ultimate 06')).toEqual({
       kind: 'ULTIMATE_EDITION',
       label: 'Ultimate Edition',
     });
     expect(detectBindUp('Shaman King Complete Edition 16')?.kind).toBe('COMPLETE_EDITION');
+  });
+
+  it('does NOT flag verified 1:1 "Complete Edition" reprints (blocklist)', () => {
+    // City Hunter: 35 tankobon -> 32-vol kanzenban "Complete Edition".
+    // "Complete Edition" here is reprint branding, not combined volumes.
+    // (Verified 2026-10-12 vs List of City Hunter chapters.)
+    const titles = [
+      'Akasha : City Hunter - Complete Edition 30',
+      'Akasha : City Hunter - Complete Edition 01',
+    ];
+    for (const title of titles) {
+      expect(detectBindUp(title, { publisherId: 'pub_mnc' }), `false positive: ${title}`).toBeNull();
+      expect(isBindUpTitle(title, { publisherId: 'pub_mnc' })).toBe(false);
+    }
   });
 
   it('flags curated bind-ups whose store titles carry no marker', () => {
@@ -179,7 +189,6 @@ describe('Catalog bind-up coverage (anti-miss regression)', () => {
     const groups = groupBindUpBooks(books, catalog.series || []);
     const names = groups.map((g) => g.displayName.toLowerCase());
     const expected = [
-      'city hunter',
       'naruto',
       'shaman king',
       'attack on titan',
@@ -201,11 +210,62 @@ describe('Catalog bind-up coverage (anti-miss regression)', () => {
     for (const name of expected) {
       expect(names.some((n) => n.includes(name)), `missing bind-up series: ${name}`).toBe(true);
     }
+    // City Hunter was removed 2026-10-12: its "Complete Edition" is a 1:1
+    // kanzenban reprint (35 -> 32 vols), not a bind-up.
+    expect(names.some((n) => n.includes('city hunter'))).toBe(false);
   });
 
   it('flags a meaningful share of the catalog without over-flagging', () => {
-    // 115 of 2908 as of 2026-10-11; guard against both collapse and explosion.
+    // 135 of 2902 as of 2026-10-12 (was 169; City Hunter 31 removed as
+    // 1:1 reprint, 3 Shaman King dup books removed); guard against both
+    // collapse and explosion.
     expect(flagged.length).toBeGreaterThan(50);
     expect(flagged.length).toBeLessThan(400);
+  });
+
+  it('has no duplicate series (bind-up splits merged)', () => {
+    // Regression: Black Jack and Shaman King were split across two series
+    // each (2026-10-12 audit).
+    const ids = (catalog.series || []).map((s: Series) => s.id);
+    expect(ids).not.toContain('ser_black-jack');
+    expect(ids).not.toContain('ser_shaman-king-complete');
+    expect(ids).toContain('ser_black-jack-bind-up');
+    expect(ids).toContain('ser_shaman-king-complete-edition');
+
+    // Black Jack bind-up series holds all 6 volumes in one place.
+    const bjBooks = books.filter((b: Book) => b.seriesId === 'ser_black-jack-bind-up');
+    expect(bjBooks.map((b: Book) => b.volume).sort((a, b) => (a ?? 0) - (b ?? 0)))
+      .toEqual([1, 2, 3, 4, 5, 6]);
+
+    // Shaman King complete edition holds vols 1-16 with no dup books.
+    const skBooks = books.filter((b: Book) => b.seriesId === 'ser_shaman-king-complete-edition');
+    expect(skBooks).toHaveLength(16);
+    const skVols = skBooks.map((b: Book) => b.volume).sort((a, b) => (a ?? 0) - (b ?? 0));
+    expect(skVols).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]);
+  });
+
+  it('has no duplicate books (same series + volume + title)', () => {
+    // Only flags true dupes: same series, same volume, same normalized title.
+    // Different editions (Special Set, Cetak Ulang, Premium Package, ...) are
+    // legitimately separate products and must NOT be flagged.
+    const norm = (t: string) =>
+      t.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    const seen = new Set<string>();
+    const dups: string[] = [];
+    for (const b of books) {
+      if (!b.seriesId || b.volume == null) continue;
+      const key = `${b.seriesId}__${b.volume}__${norm(b.title)}`;
+      if (seen.has(key)) dups.push(`${b.title} (${b.id})`);
+      seen.add(key);
+    }
+    expect(dups).toEqual([]);
+  });
+
+  it('has no stale isSetVariant flags (all 17 were false positives)', () => {
+    // Regression 2026-10-12: isSetVariant was set on 17 regular volumes
+    // (Overlord 1-5, Doraemon Petualangan 4-7/15, Gokushufudo 12, ...),
+    // hiding them from the release feed and misplacing them in "Edisi Khusus".
+    const flagged = books.filter((b: Book) => b.isSetVariant);
+    expect(flagged.map((b: Book) => b.title)).toEqual([]);
   });
 });

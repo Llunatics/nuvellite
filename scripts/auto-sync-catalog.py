@@ -249,6 +249,12 @@ CURATED_BIND_UPS = [
 def detect_bind_up(title, series_name='', publisher_id=''):
     """Return (kind, label) for bind-up/omnibus editions, else (None, None)."""
     haystack = ' '.join(p for p in [title, series_name] if p)
+    # Explicit non-bind-ups win over everything (verified 1:1 reprints with
+    # misleading markers). Mirrors NON_BIND_UP_PATTERNS in edition-detector.ts.
+    # - City Hunter "Complete Edition": 35 vols -> 32 (kanzenban 1:1 reprint).
+    for rx in (re.compile(r'\bcity\s+hunter\b', re.IGNORECASE),):
+        if rx.search(haystack):
+            return None, None
     for kind, rx, label in BIND_UP_PATTERNS:
         m = rx.search(haystack)
         if m:

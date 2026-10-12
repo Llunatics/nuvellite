@@ -10950,8 +10950,8 @@
       "slug": "black-jack-06-bind-up-edition",
       "title": "Black Jack 06 (Bind Up Edition)",
       "originalTitle": "Black Jack",
-      "seriesId": "ser_black-jack",
-      "seriesName": "Black Jack",
+      "seriesId": "ser_black-jack-bind-up",
+      "seriesName": "Black Jack Bind Up",
       "volume": 6,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -10988,8 +10988,8 @@
       "slug": "shaman-king-complete-edition-16",
       "title": "Shaman King Complete Edition 16",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 16,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11022,126 +11022,12 @@
       "bindUpLabel": "Complete Edition"
     },
     {
-      "id": "pub_shaman_king_complete_edition_09_1",
-      "slug": "shaman-king-complete-edition-09-1",
-      "title": "Shaman King Complete Edition 09",
-      "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
-      "volume": 9,
-      "category": "Manga",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/dc--e9m1si.jpg",
-      "status": "RELEASED",
-      "releaseDate": "2026-05-21",
-      "isWednesdayRelease": false,
-      "currentPrice": 80000,
-      "authors": [
-        "Hiroyuki Takei"
-      ],
-      "genres": [
-        "Manga",
-        "Komik"
-      ],
-      "isbn13": "9786230050725",
-      "synopsis": "Kami terkejut bukan kepalang dengan pengakuan Yoh tentang dirinya dan Hao bersaudara dan menunggu cerita detailnya nanti malam. Di sisi lain, ayah Yoh, Mickey Asakura, muncul di hadapan Ren dan kawan-kawan untuk mengajari mereka Cho Senji Ryakketsu agar mereka dapat melawan Hao. Komik Shaman King Complete ini merupakan sebuah karya penulis Hiroyuki Takei. Menceritakan mengenai kisah pertarungan Yoh yang berusaha untuk menghalangi pembalasan dendam roh pada Amidamaru. Roh tersebut memiliki dendam kepada Amidamaru karena kisah di masa lampau mereka, dan hal tersebut menjadi awal dari kisah seru di dalam cerita ini. Pertarungan tentunya tidak dapat dihindari, namun siapakah yang akan menang nantinya? Komik ini hadir dengan kisah yang unik apalagi berbagai konflik yang muncul membuat ceritanya menjadi sangat seru. Ilustrasi gambar p\n\nPilihan Edisi & Set Resmi: Regular, Regular",
-      "gramediaUrl": "https://www.gramedia.com/products/shaman-king-complete-edition-09-1",
-      "author": "Hiroyuki Takei",
-      "format": "MANGA",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
-      "originalPrice": 80000,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
-    },
-    {
-      "id": "pub_shaman_king_complete_edition_13_1",
-      "slug": "shaman-king-complete-edition-13-1",
-      "title": "Shaman King Complete Edition 13",
-      "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
-      "volume": 13,
-      "category": "Manga",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/t-ec3n7ee3.jpg",
-      "status": "RELEASED",
-      "releaseDate": "2026-05-21",
-      "isWednesdayRelease": false,
-      "currentPrice": 10000,
-      "authors": [
-        "Hiroyuki Takei"
-      ],
-      "genres": [
-        "Manga",
-        "Komik"
-      ],
-      "isbn13": "9786230067822",
-      "synopsis": "Yoh pergi mendatangi Maiden untuk meminta izinnya kembali ke turnamen Shaman Fight. Akan tetapi, tiba-tiba di sana muncul Luchist, anak buah Hao untuk melenyapkan Maiden. Marco pun tumbang, menyisakan Yoh dan Lyserg dalam pertempuran alot melawan Luchist. Apakah Yoh bisa mendapatkan izin untuk kembali ke turnamen? Komik Shaman King Complete ini merupakan sebuah karya penulis Hiroyuki Takei. Menceritakan mengenai kisah pertarungan Yoh yang berusaha untuk menghalangi pembalasan dendam roh pada Amidamaru. Roh tersebut memiliki dendam kepada Amidamaru karena kisah di masa lampau mereka, dan hal tersebut menjadi awal dari kisah seru di dalam cerita ini. Pertarungan tentunya tidak dapat dihindari, namun siapakah yang akan menang nantinya? Komik ini hadir dengan kisah yang unik apalagi berbagai konflik yang muncul membuat ceritanya menjadi sangat seru. Ilustrasi gambar p\n\nPilihan Edisi & Set Resmi: Regular, Regular",
-      "gramediaUrl": "https://www.gramedia.com/products/shaman-king-complete-edition-13-1",
-      "author": "Hiroyuki Takei",
-      "format": "MANGA",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
-      "originalPrice": 10000,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
-    },
-    {
-      "id": "pub_shaman_king_complete_edition_14_1",
-      "slug": "shaman-king-complete-edition-14-1",
-      "title": "Shaman King Complete Edition 14",
-      "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
-      "volume": 14,
-      "category": "Manga",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/z3-e4a6lnv.jpg",
-      "status": "RELEASED",
-      "releaseDate": "2026-05-21",
-      "isWednesdayRelease": false,
-      "currentPrice": 10000,
-      "authors": [
-        "Hiroyuki Takei"
-      ],
-      "genres": [
-        "Manga",
-        "Komik"
-      ],
-      "isbn13": "9786230071089",
-      "synopsis": "Yoh dikirim ke neraka oleh Sati, pemimpin tim Gandala. Tanpa terduga, di neraka, Yoh malah bertemu dengan leluhurnya yang bernama Yohken. Dia orang yang telah mengalahkan Hao 500 tahun lalu dan kini Yoh harus melawannya…. Komik Shaman King Complete ini merupakan sebuah karya penulis Hiroyuki Takei. Menceritakan mengenai kisah pertarungan Yoh yang berusaha untuk menghalangi pembalasan dendam roh pada Amidamaru. Roh tersebut memiliki dendam kepada Amidamaru karena kisah di masa lampau mereka, dan hal tersebut menjadi awal dari kisah seru di dalam cerita ini. Pertarungan tentunya tidak dapat dihindari, namun siapakah yang akan menang nantinya? Komik ini hadir dengan kisah yang unik apalagi berbagai konflik yang muncul membuat ceritanya menjadi sangat seru. Ilustrasi gambar p\n\nPilihan Edisi & Set Resmi: Regular, Regular",
-      "gramediaUrl": "https://www.gramedia.com/products/shaman-king-complete-edition-14-1",
-      "author": "Hiroyuki Takei",
-      "format": "MANGA",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
-      "originalPrice": 10000,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
-    },
-    {
       "id": "pub_shaman_king_complete_edition_15",
       "slug": "shaman-king-complete-edition-15",
       "title": "Shaman King Complete Edition 15",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 15,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11178,8 +11064,8 @@
       "slug": "shaman-king-complete-edition-12",
       "title": "Shaman King Complete Edition 12",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 12,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11216,8 +11102,8 @@
       "slug": "shaman-king-complete-edition-11",
       "title": "Shaman King Complete Edition 11",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 11,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11254,8 +11140,8 @@
       "slug": "shaman-king-complete-edition-10",
       "title": "Shaman King Complete Edition 10",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 10,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11292,8 +11178,8 @@
       "slug": "shaman-king-complete-edition-08",
       "title": "Shaman King Complete Edition 08",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 8,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11330,8 +11216,8 @@
       "slug": "shaman-king-complete-edition-07",
       "title": "Shaman King Complete Edition 07",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 7,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11368,8 +11254,8 @@
       "slug": "shaman-king-complete-edition-06",
       "title": "Shaman King Complete Edition 06",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 6,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11406,8 +11292,8 @@
       "slug": "shaman-king-complete-edition-05",
       "title": "Shaman King Complete Edition 05",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 5,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11444,8 +11330,8 @@
       "slug": "shaman-king-complete-edition-04",
       "title": "Shaman King Complete Edition 04",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 4,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11482,8 +11368,8 @@
       "slug": "shaman-king-complete-edition-03",
       "title": "Shaman King Complete Edition 03",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 3,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -11520,8 +11406,8 @@
       "slug": "shaman-king-complete-edition-02",
       "title": "Shaman King Complete Edition 02",
       "originalTitle": "Shaman King Complete Edition",
-      "seriesId": "ser_shaman-king-complete",
-      "seriesName": "Shaman King Complete",
+      "seriesId": "ser_shaman-king-complete-edition",
+      "seriesName": "Shaman King Complete Edition",
       "volume": 2,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -20294,9 +20180,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 75000,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_29",
@@ -20332,9 +20216,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 75000,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_28",
@@ -20370,9 +20252,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 75000,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_27",
@@ -20408,9 +20288,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 69000,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_26",
@@ -20446,9 +20324,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 62100,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_25",
@@ -20484,9 +20360,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 62100,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_24",
@@ -20522,9 +20396,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 62100,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_23",
@@ -20560,9 +20432,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 62100,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_22",
@@ -20598,9 +20468,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 62100,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_21",
@@ -20636,9 +20504,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 62100,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_20",
@@ -20674,9 +20540,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 62100,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_19",
@@ -20712,9 +20576,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 62100,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_18",
@@ -20750,9 +20612,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 62100,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_17",
@@ -20788,9 +20648,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 58500,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_16",
@@ -20826,9 +20684,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 58500,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_15",
@@ -20864,9 +20720,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 58500,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_14",
@@ -20902,9 +20756,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 58500,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_13",
@@ -20940,9 +20792,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 58500,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_12",
@@ -20978,9 +20828,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_11",
@@ -21016,9 +20864,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_10",
@@ -21054,9 +20900,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_09",
@@ -21092,9 +20936,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_08",
@@ -21130,9 +20972,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_07",
@@ -21168,9 +21008,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_06",
@@ -21206,9 +21044,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_05",
@@ -21244,9 +21080,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_04",
@@ -21282,9 +21116,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_03",
@@ -21320,9 +21152,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha_city_hunter_complete_edition_02",
@@ -21358,9 +21188,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_akasha__city_hunter__complete_edition_01",
@@ -21396,9 +21224,7 @@
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
       "originalPrice": 52200,
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_witch_watch_6",
@@ -24518,7 +24344,7 @@
       "title": "Haikyu!! The Novel 4",
       "originalTitle": "Haikyu!! The Novel",
       "seriesId": "ser_haikyu-the",
-      "seriesName": "Haikyu!! The",
+      "seriesName": "Haikyu!! The Novel",
       "volume": 4,
       "category": "Light Novel",
       "publisherId": "pub_mnc",
@@ -24694,7 +24520,7 @@
       "isbn13": "9786347574268",
       "synopsis": "Climb, pengawal sang Tuan Putri yang bertekad untuk jadi lebih kuat demi tuannya. Brain Unglaus, tentara bayaran yang hancur setelah kekalahannya melawan Shalltear Bloodfallen. Dalam pertemuan yang tidak disengaja, kedua orang itu terpikat oleh kekuatan yang dimiliki oleh Sebas.\n\nDi sisi lain, Sebas yang sedang menjalani misinya untuk membaur dengan manusia, menyelamatkan seorang wanita yang dibuang dari rumah bordil. Tindakannya yang melenceng dari prinsip-prinsip Nazarick, membawa Sebas jatuh dalam konflik batin dan konflik dengan Eight Fingers—organisasi  penguasa dunia bawah Kerajaan Re-Estize.\n\nClimb, Brain, dan Sebas yang sebelumnya tidak saling kenal, bekerja sama menyerbu rumah bordil yang menjadi sarang kejahatan di ibu kota kerajaan.\n\nKeunggulan Buku:\n\nMengangkat tema isekai dengan tokoh utama yang apik.\n\nLatar dunia dan lore yang luas dan menarik.\n\nIlustrasi yang menarik.\n\nMempunyai serialisasi anime yang telah tayang sejak tahun 2015, dan baru saja kembali diadaptasikan menjadi film pada tahun 2024.\n\n***\n\nKugane Maruyama adalah seorang penulis asal Jepang yang paling dikenal karena karyanya yang sangat populer, Overlord. Seri light novel ini telah berhasil menarik perhatian banyak pembaca di seluruh dunia dan telah diadaptasi menjadi berbagai media, seperti manga dan anime.\n\nApa yang membuat karya Kugane Maruyama begitu menarik?\n\nKonsep Isekai yang Unik: Overlord adalah salah satu contoh klasik dari genre isekai, dimana karakter utama terjebak di dunia lain. Namun, Kugane Maruyama berhasil memberikan sentuhan yang unik pada genre ini dengan menghadirkan protagonis yang sangat kuat dan kompleks, yaitu Momonga.\n\nDunia yang Detail: Dunia yang diciptakan oleh Kugane Maruyama dalam Overlord sangatlah detail dan kompleks. Ia berhasil membangun sebuah dunia fantasi yang penuh dengan berbagai ras, sihir, dan intrik politik.\n\nKarakter yang Menarik: Selain Momonga, Kugane Maruyama juga berhasil menciptakan karakter-karakter pendukung yang menarik dan kompleks. Setiap karakter memiliki motivasi dan tujuannya masing-masing, yang membuat cerita menjadi semakin menarik.\n\nPlot yang Mencengangkan: Plot Overlord penuh dengan kejutan dan twist yang tidak terduga. Cerita ini tidak hanya berfokus pada aksi, tetapi juga pada perkembangan karakter dan intrik politik.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-5--the-men-in-the-kingdom-part-i",
-      "isSetVariant": true,
+      "isSetVariant": false,
       "availableEditions": [
         {
           "name": "Regular",
@@ -36606,7 +36432,7 @@
       "title": "Haikyu!! The Novel 3",
       "originalTitle": "Haikyu!! The Novel",
       "seriesId": "ser_haikyu-the",
-      "seriesName": "Haikyu!! The",
+      "seriesName": "Haikyu!! The Novel",
       "volume": 3,
       "category": "Light Novel",
       "publisherId": "pub_mnc",
@@ -40655,7 +40481,7 @@
       "isbn13": "9786347375131",
       "synopsis": "Pada suatu hari, pasukan undead yang tak kenal belas kasihan mendekati desa para Lizardman yang damai. Para Lizardman pun bangkit demi melindungi ras mereka dan hidup bersama pasangan yang mereka cintai. Namun, takdir mereka dipegang oleh pasukan yang dikomandani Cocytus, Ruler of Frozen Rivers .\n\nSaksikanlah dunia tanpa ampun yang dikuasai oleh hukum rimba ini.\n\nKeunggulan Buku:\n\nMengangkat tema isekai dengan tokoh utama yang apik.\n\nLatar dunia dan lore yang luas dan menarik.\n\nIlustrasi yang menarik.\n\nMempunyai serialisasi anime yang telah tayang sejak tahun 2015, dan baru saja kembali diadaptasikan menjadi film pada tahun 2024.\n\n*****\n\nKugane Maruyama adalah seorang penulis asal Jepang yang paling dikenal karena karyanya yang sangat populer, Overlord. Seri light novel ini telah berhasil menarik perhatian banyak pembaca di seluruh dunia dan telah diadaptasi menjadi berbagai media, seperti manga dan anime.\n\nApa yang membuat karya Kugane Maruyama begitu menarik?\n\nKonsep Isekai yang Unik: Overlord adalah salah satu contoh klasik dari genre isekai, di mana karakter utama terjebak di dunia lain. Namun, Kugane Maruyama berhasil memberikan sentuhan yang unik pada genre ini dengan menghadirkan protagonis yang sangat kuat dan kompleks, yaitu Momonga.\n\nDunia yang Detail: Dunia yang diciptakan oleh Kugane Maruyama dalam Overlord sangatlah detail dan kompleks. Ia berhasil membangun sebuah dunia fantasi yang penuh dengan berbagai ras, sihir, dan intrik politik.\n\nKarakter yang Menarik: Selain Momonga, Kugane Maruyama juga berhasil menciptakan karakter-karakter pendukung yang menarik dan kompleks. Setiap karakter memiliki motivasi dan tujuannya masing-masing, yang membuat cerita menjadi semakin menarik.\n\nPlot yang Mencengangkan: Plot Overlord penuh dengan kejutan dan twist yang tidak terduga. Cerita ini tidak hanya berfokus pada aksi, tetapi juga pada perkembangan karakter dan intrik politik.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-4--the-lizard-man-heroes",
-      "isSetVariant": true,
+      "isSetVariant": false,
       "availableEditions": [
         {
           "name": "Regular",
@@ -41735,7 +41561,7 @@
       "title": "Haikyu!! The Novel 2",
       "originalTitle": "Haikyu!! The Novel",
       "seriesId": "ser_haikyu-the",
-      "seriesName": "Haikyu!! The",
+      "seriesName": "Haikyu!! The Novel",
       "volume": 2,
       "category": "Light Novel",
       "publisherId": "pub_mnc",
@@ -44423,7 +44249,7 @@
       "isbn13": "",
       "synopsis": "“… Ini aku, Saa-kun.”\n\nPertemuan yang mengejutkan dengan cinta pertama yang dinanti pun terjadi. Masahika yang akhirnya tahu bahwa Maria adalah “gadis itu”, mulai bimbang dengan perasaannya.\n\nLibur musim panas yang penuh kenangan pun berakhir, SMA Seirei memasuki semester kedua! Masachika berniat mendukung Alya-san dalam festival sekolah yang nantinya dapat memberi pengaruh besar dalam pemilihan ketua OSIS. Akan tetapi, hatinya campur aduk begitu melihat keakraban Alisa dengan teman-teman sekelas.\n\n“Jangan-jangan … kamu cemburu, ya?” Hatinya semakin berdebar begitu gadis itu menggodanya sambil tersenyum jahil ….\n\nSaat garis cinta mulai goyah, ada pergerakan baru dalam pemilihan ketua OSIS?! Kekacauan di festival sekolah pun dimulai!\n\nKeunggulan Buku:\n\n- Light Novel bertema rom-com best seller di tahun 2024 di Jepang.\n\n- Memiliki karakter-karakter heroin yang menarik, dengan ilustrasi yang memikat.\n\n- Ceritanya yang ringan dan mengundang gelak tawa, dijamin dapat menghibur pembaca.\n\n- Telah diadaptasi menjadi komik yang juga merupakan best seller di Jepang.\n\n- Memiliki adaptasi season 1 anime yang telah tayang pada 2024, dan akan segera disusul dengan penayangan season 2 pada tahun 2025.\n\nLight Novel: Alya Sometimes Hides Her Feeling in Russian 5 - Complete Set terdiri dari:\n\n1. Buku Light Novel: Alya Sometimes Hides Her Feeling in Russian 5\n\n2. Special Jacket\n\n3. Acrylic Keychain\n\n4. Acrylic Photo Frame 9 cm\n\n5. Clear Card\n\n6. Acrylic Standee",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-alya-sometimes-hides-her-feeling-in-russian-5--complete-set",
-      "isSetVariant": true,
+      "isSetVariant": false,
       "availableEditions": [
         {
           "name": "Regular",
@@ -47890,7 +47716,7 @@
       "title": "Haikyu!! The Novel 1",
       "originalTitle": "Haikyu!! The Novel",
       "seriesId": "ser_haikyu-the",
-      "seriesName": "Haikyu!! The",
+      "seriesName": "Haikyu!! The Novel",
       "volume": 1,
       "category": "Light Novel",
       "publisherId": "pub_mnc",
@@ -48789,7 +48615,7 @@
       "isbn13": "9786347128218",
       "synopsis": "Bersamaan dengan Ainz yang sedang melakukan perjalanannya di kota E-Rantel, Shalltear menjalankan misinya guna mendapatkan informasi lebih lanjut mengenai Dunia Baru. Namun, di tengah misinya tersebut, tiba-tiba ia mendapati beberapa masalah. Ia harus menghadapi sekelompok petualang dengan persenjataan berkualitas tinggi hingga akhirnya—\n\nDi sisi lain, Ainz—yang sudah menyelesaikan insiden di pemakaman kota E-Rantel—mendapat kabar mengejutkan dari Albedo mengenai pemberontakan Shalltear. Ia pun langsung bergerak untuk mengungkap kebenaran di balik kejadian tersebut.\n\nDengan begitu, apakah Ainz akan menemukan alasan pemberontakan Shalltear?\n\nNantikan aksi Ainz di volume 3 ini!\n\nKeunggulan Buku:\n\nMengangkat tema isekai dengan tokoh utama yang apik.\n\nLatar dunia dan lore yang luas dan menarik.\n\nIlustrasi yang menarik.\n\nMempunyai serialisasi anime yang telah tayang sejak tahun 2015, dan baru saja kembali diadaptasikan menjadi film pada tahun 2024.\n\n*****\n\nKugane Maruyama adalah seorang penulis asal Jepang yang paling dikenal karena karyanya yang sangat populer, Overlord. Seri light novel ini telah berhasil menarik perhatian banyak pembaca di seluruh dunia dan telah diadaptasi menjadi berbagai media, seperti manga dan anime.\n\nApa yang membuat karya Kugane Maruyama begitu menarik?\n\nKonsep Isekai yang Unik: Overlord adalah salah satu contoh klasik dari genre isekai, di mana karakter utama terjebak di dunia lain. Namun, Kugane Maruyama berhasil memberikan sentuhan yang unik pada genre ini dengan menghadirkan protagonis yang sangat kuat dan kompleks, yaitu Momonga.\n\nDunia yang Detail: Dunia yang diciptakan oleh Kugane Maruyama dalam Overlord sangatlah detail dan kompleks. Ia berhasil membangun sebuah dunia fantasi yang penuh dengan berbagai ras, sihir, dan intrik politik.\n\nKarakter yang Menarik: Selain Momonga, Kugane Maruyama juga berhasil menciptakan karakter-karakter pendukung yang menarik dan kompleks. Setiap karakter memiliki motivasi dan tujuannya masing-masing, yang membuat cerita menjadi semakin menarik.\n\nPlot yang Mencengangkan: Plot Overlord penuh dengan kejutan dan twist yang tidak terduga. Cerita ini tidak hanya berfokus pada aksi, tetapi juga pada perkembangan karakter dan intrik politik.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-3--the-bloody-valkyrie",
-      "isSetVariant": true,
+      "isSetVariant": false,
       "availableEditions": [
         {
           "name": "Regular",
@@ -53438,7 +53264,7 @@
       "isbn13": "9786238961283",
       "synopsis": "Sejak ditutupnya server gim YGGDRASIL dan masuk ke dunia baru, Momonga yang kini menyandang nama guildnya—Ainz—mencari informasi sebanyak mungkin tentang dunia baru tersebut. Setelah memastikan bahwa tidak ada banyak perbedaan antara dunia baru dengan dunia gim yang ia ketahui, Ainz memutuskan untuk beralih ke rencana berikutnya.\n\nDemi lebih memahami dunia baru itu, Ainz menyamar menjadi seorang petualang bernama Momon dan memulai perjalanannya ke kota E-rantel bersama salah satu Pleiades—Narberal Gamma. Dalam perjalanannya, ia bertemu dengan sekelompok petualang, cucu laki-laki bertalenta dari apoteker terkenal, hingga Raja Hutan Yang Bijaksana.\n\nDari pertemuan-pertemuan tersebut, akankah Momon si petualang menemukan informasi baru mengenai dunia baru itu? Ataukah bahaya yang lebih besar tengah menantinya?\n\nNantikan aksi Momon si petualang di volume 2 ini!\n\nKeunggulan Buku:\n\nMengangkat tema isekai dengan tokoh utama yang apik.\n\nLatar dunia dan lore yang luas dan menarik.\n\nIlustrasi yang menarik.\n\nMempunyai serialisasi anime yang telah tayang sejak tahun 2015, dan baru saja kembali diadaptasikan menjadi film pada tahun 2024.\n\n*****\n\nKugane Maruyama adalah seorang penulis asal Jepang yang paling dikenal karena karyanya yang sangat populer, Overlord. Seri light novel ini telah berhasil menarik perhatian banyak pembaca di seluruh dunia dan telah diadaptasi menjadi berbagai media, seperti manga dan anime.\n\nApa yang membuat karya Kugane Maruyama begitu menarik?\n\nKonsep Isekai yang Unik: Overlord adalah salah satu contoh klasik dari genre isekai, di mana karakter utama terjebak di dunia lain. Namun, Kugane Maruyama berhasil memberikan sentuhan yang unik pada genre ini dengan menghadirkan protagonis yang sangat kuat dan kompleks, yaitu Momonga.\n\nDunia yang Detail: Dunia yang diciptakan oleh Kugane Maruyama dalam Overlord sangatlah detail dan kompleks. Ia berhasil membangun sebuah dunia fantasi yang penuh dengan berbagai ras, sihir, dan intrik politik.\n\nKarakter yang Menarik: Selain Momonga, Kugane Maruyama juga berhasil menciptakan karakter-karakter pendukung yang menarik dan kompleks. Setiap karakter memiliki motivasi dan tujuannya masing-masing, yang membuat cerita menjadi semakin menarik.\n\nPlot yang Mencengangkan: Plot Overlord penuh dengan kejutan dan twist yang tidak terduga. Cerita ini tidak hanya berfokus pada aksi, tetapi juga pada perkembangan karakter dan intrik politik.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-2--the-dark-warrior",
-      "isSetVariant": true,
+      "isSetVariant": false,
       "availableEditions": [
         {
           "name": "Regular",
@@ -54070,7 +53896,7 @@
       "synopsis": "Nobita harus menemukan topik untuk PR musim panasnya, yaitu penelitian bebas. Doraemon pun mengeluarkan alat untuk mengamati penciptaan dunia agar Nobita dapat menulis laporan yang seperti buku harian. Suneo, Giant, dan Shizuka akhirnya bergabung dan bersama-sama mereka mengawasi kelahiran dunia, suku, dan peradaban. Sementara itu, patroli waktu sedang mencari komplotan penjahat yang tidak sengaja mencuri dengar percakapan Giant tentang penelitian mereka. Para penjahat itu pun menangkap Giant dan Suneo!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-15-2026",
       "volume": 15,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_doraemon-petualangan",
       "seriesName": "Doraemon Petualangan",
       "availableEditions": [
@@ -54120,7 +53946,7 @@
       "synopsis": "Menjelang musim gugur, Tatsu turut serta dalam pelajaran keselamatan lalu-lintas. Tapi, polisi yang bertugas sepertinya terlalu terobsesi pada ketidakamanan, sehingga jadi sedikit mempertaruhkan nyawa.\n\n****\n\nGokushufudo - The Way of House Husband, adalah sebuah seri manga asal Jepang yang ditulis dan diilustrasikan oleh Kousuke Oono. Manga ini dirilis dalam majalah manga daring Kurage Bunch sejak tahun 2018, dan mengisahkan tentang seorang eks bos yakuza yang pensiun dari dunia kriminal untuk menjadi seorang ayah rumah tangga.\n\nBokushufudo menceritakan keseharian seorang karakter utama bernama Tatsu, ia merupakan mantan Yakuza yang sudah pensiun dan berusaha menjalani kehidupannya sebagai seorang bapak-bapak rumah tangga secara normal.\n\nMeski tampilannya terlihat sangat menakutkan, lengkap dengan tato ikan koi, codet dan kebiasaannya berbicara dengan nada tinggi, Tatsu sebenarnya adalah seorang bapak rumah tangga yang baik. Dia bisa mengerjakan semua pekerjaan rumah, mulai dari membersihkan rumah, berbelanja keperluan dapur, memasak, hingga mengajak anjingnya jalan-jalan, demi menyenangkan hati istrinya, Miku, yang bekerja kantoran.\n\n****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-gokushufudo--the-way-of-househusband-12",
       "volume": 12,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_gokushufudo---the-way-of-househusband",
       "seriesName": "Gokushufudo - The Way of Househusband",
       "availableEditions": [
@@ -54244,7 +54070,7 @@
       "synopsis": "Nobita tak sengaja memungut robot raksasa di Kutub Utara! Nobita dkk pun memutuskan untuk ke dunia cermin dan memainkannya di sana. Lalu, muncul Liley, gadis misterius yang mencari robot tersebut. Ternyata kehadiran keduanya adalah awal dari teror pasukan robot!\n\n******\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nProfil Penulis:\n\nFujiko F. Fujio adalah nama pena dari Hiroshi Fujimoto, salah satu dari duo mangaka legendaris Fujiko Fujio. Hiroshi Fujimoto, yang lahir pada 1 Desember 1933, membentuk duo Fujiko Fujio bersama Motoo Abiko pada tahun 1951. Duo ini terkenal karena menciptakan manga dan anime ikonik seperti Doraemon, Ninja Hattori, dan Perman.\n\nPada tahun 1987, Fujiko Fujio bubar karena perbedaan visi artistik dan kesehatan Fujimoto yang menurun. Fujimoto kemudian menggunakan nama Fujiko F. Fujio, sementara Abiko menggunakan nama Fujiko A. Fujio. Fujiko F. Fujio terus menciptakan manga dan anime Doraemon yang sangat dicintai hingga kematiannya pada tanggal 23 September 1996.\n\nFujiko F. Fujio dikenal karena gaya menggambarnya yang khas, cerita-cerita yang mengharukan, dan karakter-karakter yang lucu dan menggemaskan. Karyanya telah memengaruhi banyak generasi pembaca dan penonton di seluruh dunia.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-07-terbit-ulang",
       "volume": 7,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_doraemon-petualangan",
       "seriesName": "Doraemon Petualangan",
       "availableEditions": [
@@ -54368,7 +54194,7 @@
       "synopsis": "Fujiko Fujio (藤子 不二雄) adalah duo penulis manga yang dibentuk oleh seniman manga Jepang Hiroshi Fujimoto (藤本, Fujimoto Hiroshi , 1 Desember 1933 – 23 September 1996) dan Motoo Abiko (安孫子 素雄, Abiko Motoo , 10 Maret 1934 – 7 April 2022) . Mereka membentuk kemitraan mereka pada tahun 1951, dan menggunakan nama Fujiko Fujio dari tahun 1954 hingga pembubaran kemitraan pada tahun 1987, setelah Fujimoto sakit. Pasangan ini terkenal karena komedi populer mereka, termasuk Obake no Q-Tarō, Ninja Hattori-kun, Kaibutsu-kun, dan Doraemon, karakter utama yang secara resmi diakui sebagai ikon budaya Jepang modern.\n\nSejak awal mereka mengadopsi gaya kolaboratif di mana keduanya bekerja secara bersamaan pada cerita dan karya seni, tetapi ketika mereka menyimpang secara kreatif, mereka mulai merilis karya individu dengan nama yang berbeda, Abiko sebagai Fujiko Fujio (藤子不二雄Ⓐ, Fujiko Fujio, dikreditkan sebagai Fujiko A. Fujio di luar Jepang), dan Fujimoto sebagai Fujiko F. Fujio (藤子・F, Fujiko Efu Fujio). Beberapa pengaruh dari sebagian besar proyek mereka adalah karya seniman manga terkenal Osamu Tezuka dan banyak kartun dan buku komik AS —termasuk karya Hanna-Barbera .\n\nNobita ingin mebuat film untuk menyaingi Suneo dan Giant. Namun di tengah pengambilan gamber bersama Doraemon dan Shizuka, boneka kelinci milik Shizuka menghilang. Ke manakah boneka itu pergi? Lalu siapa yang telah membawanya pergi?\n\nDetail\n\nJumlah Halaman\n\n187\n\nPenerbit\n\nElex Media Komputindo\n\nTanggal Terbit\n\n20 Apr 2022\n\nBerat\n\n0.3 kg\n\nISBN\n\n9786020263731\n\nLebar\n\n11.0 cm\n\nBahasa\n\nIndonesia\n\nPanjang\n\n17.0cm\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-06-terbit-ulang",
       "volume": 6,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_doraemon-petualangan",
       "seriesName": "Doraemon Petualangan",
       "availableEditions": [
@@ -54529,7 +54355,7 @@
       "synopsis": "Doraemon (ドラえもん Doraemon) adalah judul sebuah manga dan anime yang sangat populer yang dikarang Fujiko F. Fujio (藤子・F・不二雄) sejak 1 Juni 1969 dan berkisah tentang kehidupan seorang anak pemalas kelas 5 sekolah dasar yang bernama Nobita Nobi (野比のび太) yang didatangi oleh sebuah robot kucing bernama Doraemon yang datang dari abad ke-22. Doraemon dikirim untuk menolong Nobita agar keturunan Nobita dapat menikmati kesuksesannya daripada harus menderita dari utang finansial yang akan terjadi pada masa depan yang disebabkan karena kebodohan Nobita.\n\nCerita berfokus tentang kehidupan sehari-hari Nobita yang merupakan tokoh utama dalam cerita ini. Doraemon memiliki sebuah Kantong Ajaib (Kantong Empat Dimensi) yang berisi alat-alat ajaib dari masa depan. Seringkali Nobita datang merengek-rengek karena masalah di sekolah atau di lingkungannya, setelah memohon atau memaksa, Doraemon akan mengeluarkan sebuah alat yang membantu Nobita menyelesaikan masalah, membalas dendam, atau hanya sekadar pamer ke teman-temannya.\n\nGara-gara mimpi bertemu dengan Raja Setan, Nobita jadi ingin bisa menyihir. Alangkah enaknya kalau orang bisa menyihir, begitu pikirnya.Impian itu akhirnya terkabul dengan kotak andaikan.\n\nNobita dan kawan-kawan masuk ke dunia sihir. Ternyata saat itu dunia sihir sedang terancam oleh iblis dari dunia setan.\n\nBagaimana kejadian selanjutnya? Bisakah mereka menyelamatkan bumi?\n\nDetail\n\nJumlah Halaman\n\n188\n\nPenerbit\n\nElex Media Komputindo\n\nTanggal Terbit\n\n8 Apr 2015\n\nBerat\n\n0.1 kg\n\nISBN\n\n9786020262161\n\nLebar\n\n11.5 cm\n\nBahasa\n\nIndonesia\n\nPanjang\n\n17.0cm\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-05-terbit-ulang",
       "volume": 5,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_doraemon-petualangan",
       "seriesName": "Doraemon Petualangan",
       "availableEditions": [
@@ -54579,7 +54405,7 @@
       "synopsis": "Rilisan resmi Manga terbitan Phoenix Gramedia Indonesia.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 35.000\n• Edisi Khusus: Rp 73.500",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-bungo-stray-dogs-04",
       "volume": 4,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_bungo-stray-dogs",
       "seriesName": "Bungo Stray Dogs",
       "availableEditions": [
@@ -54666,7 +54492,7 @@
       "synopsis": "Doraemon (bahasa Jepang: ドラえもん) adalah karakter fiksi dalam serial manga dan anime Jepang dengan nama yang sama yang dibuat oleh Fujiko Fujio, nama pena dari tim penulisan Hiroshi Fujimoto dan Motoo Abiko. Dia adalah seorang laki-laki robot kucing yang melakukan perjalanan kembali dalam waktu dari abad ke-22 untuk membantu seorang remaja laki-laki bernama Nobita. Sebuah \"resmi\" akta kelahiran untuk karakter memberinya kelahiran tanggal 5 april 2112. dan daftar kota tempat tinggal seperti Kawasaki, Kanagawa, kota di mana manga diciptakan.\n\nDoraemon dikirim kembali dalam waktu dengan seorang anak muda bernama Sewashi Nobi untuk memperbaiki kakek buyutnya, Nobita, sehingga keturunannya dapat menikmati masa depan yang lebih baik. Di dalam kisah aslinya, Nobita tidak mengalami apa-apa kecuali kesengsaraan dan kemalangan, yang diwujudkan dalam bentuk nilai yang buruk dan intimidasi sepanjang hidupnya. Keadaan ini berujung pada jatuhnya bisnis masa depannya yang menyebabkan ia harus meninggalkan keluarganya, yang juga dilanda dengan masalah keuangan. Dalam rangka untuk mengubah sejarah keluarga Nobi, Sewashi awalnya ingin mengirim \"super-robot\" untuk melindungi Nobita, tetapi dengan uangnya yang sedikit, dia hanya mampu membeli robot tidak sempurna yang ditolak pabrik mainan: Robot kucing antropomorfik bernama Doraemon.\n\nPetualangan kali ini Nobita dan teman-temanya jadi prajurit di dunia mimpi melawan Penyihir Yo dan pasukannya. Melihat aksi Penyihir Yo, sebagai prajurit Nobita rela bertempur demi mengembalikan perdamaian. Anehnya aksi Nobita dan teman-temannya seperti mimpi yang masuk ke dunia nyata.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-petualangan-04-terbit-ulang",
       "volume": 4,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_doraemon-petualangan",
       "seriesName": "Doraemon Petualangan",
       "availableEditions": [
@@ -54901,7 +54727,7 @@
       "synopsis": "Attack on Titan, adalah sebuah seri manga shōnen asal Jepang yang ditulis dan diilustrasikan oleh Hajime Isayama. Ceritanya berlatar di dunia tempat umat manusia hidup di wilayah yang dikelilingi tiga lapis tembok besar, yang melindungi mereka dari makhluk pemakan manusia berukuran raksasa yang dikenal sebagai Titan. Manga ini dimuat berseri dalam majalah Bessatsu Shōnen Magazine terbitan Kodansha sejak bulan September 2009 hingga April 2021, dan telah diterbitkan menjadi 34 volume tankōbon per bulan Desember 2020.\n\nSeabad yang lalu, raksasa aneh yang dikenal sebagai Titan muncul dan memakan semua manusia dan menyisakan beberapa ribu manusia saja. Para penyintas berlindung di balik tembok raksasa. Hari ini, ancaman para Titan adalah kenangan yang menakutkan, dan seorang anak laki-laki bernama Eren sangat ingin menjelajahi dunia di luar Tembok. Tapi apa yang dimulai sebagai mimpi kekanak-kanakannya akan menjadi mimpi buruk yang terlalu nyata ketika para Titan kembali dan umat manusia sekali lagi berada di ambang kepunahan.\n\nSetelah dipuji sebagai harapan terbesar umat manusia, Eren sejak itu menjadi tidak dapat dikenali lagi. Dengan Attack Titan sekarang berubah menjadi kerangka kolosal yang aneh dari dirinya yang dulu, Eren terus mengendalikan gelombang Titans yang menghancurkan dunia, memadamkan rumah, kota, dan kehidupan yang tak terhitung jumlahnya di belakang mereka. Untuk menyelamatkan apa yang tersisa dari umat manusia, Mikasa, Armin, dan Survey Corps memutuskan untuk menghadapi Eren secara langsung. Tetapi untuk menghentikan gemuruh itu, mereka harus mendedikasikan lebih dari hati mereka.\n\nSinopsis\n\nEren dan teman-temannya yang telah menjadi calon pasukan berusaha melawan Titan yang menerobos masuk ke dalam tembok. Tapi, Eren mengorbankan diri demi menolong Armin dan ditelan Titan. Begitu mengetahui bahwa Eren tewas, Mikasa yang terbakar amarah pun memimpin pasukan yang tersisa untuk melawan para makhluk raksasa itu. Namun, Mikasa kemudian terperangkap di antara dua Titan.\n\nJudul: Level Comic: Attack on Titan 2\n\nRating: Untuk Pembaca Dewasa\n\nCerita & Ilustrasi: Hajime Isayama\n\nTebal: 192 halaman\n\nFormat: Soft Cover\n\nTanggal Terbit: 9 Juni 2021\n\nDimensi: 12 x 18 cm\n\nBerat: 150 gram\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-attack-on-titan-02",
       "volume": 2,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_attack-on-titan",
       "seriesName": "Attack On Titan",
       "availableEditions": [
@@ -54988,7 +54814,7 @@
       "synopsis": "Takaki Toono dan Akari Shinohara, dua orang yang saling mencintai namun tidak pernah berani mengungkapkan perasaan mereka. Bertemu saat SD lalu menjadi teman dekat, keduanya harus berpisah saat SMP karena Akari harus melanjutkan sekolah di tempat yang jauh. Awalnya mereka saling mengirim surat, namun kian lama surat tak lebih dari sekadar kata-kata tanpa makna.\n\nKeunggulan:\n\n- Salah satu karya Makoto Shinkai yang disukai banyak pembaca\n\n- Ada versi anime-nya\n\n- Format baru dicetak bookpaper dan 4 halaman warna\n\nDeskripsi Buku:\n\nKomik \"5 Centimeters per Second\" (Byousoku 5 Centimeter) adalah sebuah manga yang ditulis oleh Makoto Shinkai dan diilustrasikan oleh Yukiko Seike. Berkisah tentang Takaki Toono dan Akari Shinohara, dua orang yang saling mencintai namun tidak pernah berani mengungkapkan perasaan mereka. Bertemu saat SD lalu menjadi teman dekat, keduanya harus berpisah saat SMP karena Akari harus melanjutkan sekolah di tempat yang jauh. Awalnya mereka saling mengirim surat, namun kian lama surat tak lebih dari sekadar kata-kata tanpa makna.\n\nBeberapa ulasan mengenai komik ini, di antaranya;\n\nAnime UK News: Ulasan ini menyebutkan bahwa komik ini adalah \"solid adaptation of a beautiful story\" dengan \"emotional resonance\" yang masih terasa meskipun memiliki beberapa kekurangan dalam pacing. Mereka juga menggambarkan bahwa komik ini memberikan \"good relationship advice\" dan memiliki \"importance of wholeness in oneself.\"\n\nThe Anime Harvest: Ulasan ini menyatakan bahwa komik ini \"is not an expertly crafted manga\" tetapi masih \"a solid adaptation of a beautiful story.\" Mereka juga menggambarkan bahwa komik ini memiliki \"emotional resonance\" dan \"easy to relate to.\"\n\nGoodreads: Komik ini mendapatkan apresiasi tinggi dari pembaca manga dunia sebagai \"tragic manga\" atau \"depressing manga.\" Dalam kategori sastra, ia dapat dimasukkan dalam kategori tragedy.\n\n\"5 Centimeters Per Second\" menjadi komik yang relatable bagi banyak orang karena beberapa alasan:\n\nCerita yang Sederhana Namun Berkesan: Cerita tentang Takaki Tono dan Akari Shinohara yang saling mencintai namun tidak pernah berani mengungkapkan perasaan mereka membuat pembaca merasakan kesamaan dalam pengalaman cinta yang tidak terungkap. Cerita ini sederhana namun sangat berkesan dan dapat dihubungkan dengan pengalaman pribadi banyak orang.\n\nPerasaan yang Kompleks: Komik ini menggambarkan perasaan yang kompleks dan emosional, seperti sakit hati, kehilangan, dan pertumbuhan pribadi. Perasaan-perasaan ini sangat umum dialami oleh banyak orang dan membuat pembaca merasa terhubung dengan cerita.\n\nPenggambaran Alam yang Indah: Penggambaran alam dalam komik ini sangat indah dan menenangkan. Suara-suara alam yang disertakan membuat pembaca merasa tenang dan terhubung dengan suasana yang ada dalam cerita.\n\nKarakter yang Menarik: Karakter-karakter dalam komik ini menarik dan dapat diidentifikasi dengan mudah. Takaki dan Akari memiliki sifat yang unik dan membuat pembaca merasa terhubung dengan mereka.\n\nEmotional Resonance: Komik ini memiliki emotional resonance yang sangat tinggi. Cerita yang berkesan dan penggambaran alam yang indah membuat pembaca merasa emosional dan terhubung dengan cerita.\n\nKesamaan dalam Pengalaman: Cerita tentang hubungan yang tidak terungkap dan perasaan yang kompleks membuat banyak orang merasa kesamaan dalam pengalaman mereka sendiri. Hal ini membuat komik ini sangat relatable bagi banyak orang.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--5-cm-per-second-02--tamat",
       "volume": 2,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_5-cm-per-second",
       "seriesName": "5 Cm Per Second",
       "availableEditions": [
@@ -55198,7 +55024,7 @@
       "synopsis": "Rilisan resmi Manga terbitan Elex Media Komputindo.\n\n📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: Rp 33.750\n• Edisi Khusus: Rp 40.500",
       "gramediaUrl": "https://www.gramedia.com/products/blue-lock--episode-nagi-vol-01",
       "volume": 1,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_blue-lock---episode-nagi",
       "seriesName": "Blue Lock - Episode Nagi",
       "availableEditions": [
@@ -55248,7 +55074,7 @@
       "synopsis": "Takaki Toono dan Akari Shinohara, dua orang yang saling mencintai namun tidak pernah berani mengungkapkan perasaan mereka. Bertemu saat SD lalu menjadi teman dekat, keduanya harus berpisah saat SMP karena Akari harus melanjutkan sekolah di tempat yang jauh. Awalnya mereka saling mengirim surat, namun kian lama surat tak lebih dari sekadar kata-kata tanpa makna.\n\nKeunggulan:\n\n- Salah satu karya Makoto Shinkai yang disukai banyak pembaca\n\n- Ada versi anime-nya\n\n- Format baru dicetak bookpaper dan 4 halaman warna\n\nDeskripsi Buku:\n\nKomik \"5 Centimeters per Second\" (Byousoku 5 Centimeter) adalah sebuah manga yang ditulis oleh Makoto Shinkai dan diilustrasikan oleh Yukiko Seike. Berkisah tentang Takaki Toono dan Akari Shinohara, dua orang yang saling mencintai namun tidak pernah berani mengungkapkan perasaan mereka. Bertemu saat SD lalu menjadi teman dekat, keduanya harus berpisah saat SMP karena Akari harus melanjutkan sekolah di tempat yang jauh. Awalnya mereka saling mengirim surat, namun kian lama surat tak lebih dari sekadar kata-kata tanpa makna.\n\nBeberapa ulasan mengenai komik ini, di antaranya;\n\nAnime UK News: Ulasan ini menyebutkan bahwa komik ini adalah \"solid adaptation of a beautiful story\" dengan \"emotional resonance\" yang masih terasa meskipun memiliki beberapa kekurangan dalam pacing. Mereka juga menggambarkan bahwa komik ini memberikan \"good relationship advice\" dan memiliki \"importance of wholeness in oneself.\"\n\nThe Anime Harvest: Ulasan ini menyatakan bahwa komik ini \"is not an expertly crafted manga\" tetapi masih \"a solid adaptation of a beautiful story.\" Mereka juga menggambarkan bahwa komik ini memiliki \"emotional resonance\" dan \"easy to relate to.\"\n\nGoodreads: Komik ini mendapatkan apresiasi tinggi dari pembaca manga dunia sebagai \"tragic manga\" atau \"depressing manga.\" Dalam kategori sastra, ia dapat dimasukkan dalam kategori tragedy.\n\n\"5 Centimeters Per Second\" menjadi komik yang relatable bagi banyak orang karena beberapa alasan:\n\nCerita yang Sederhana Namun Berkesan: Cerita tentang Takaki Tono dan Akari Shinohara yang saling mencintai namun tidak pernah berani mengungkapkan perasaan mereka membuat pembaca merasakan kesamaan dalam pengalaman cinta yang tidak terungkap. Cerita ini sederhana namun sangat berkesan dan dapat dihubungkan dengan pengalaman pribadi banyak orang.\n\nPerasaan yang Kompleks: Komik ini menggambarkan perasaan yang kompleks dan emosional, seperti sakit hati, kehilangan, dan pertumbuhan pribadi. Perasaan-perasaan ini sangat umum dialami oleh banyak orang dan membuat pembaca merasa terhubung dengan cerita.\n\nPenggambaran Alam yang Indah: Penggambaran alam dalam komik ini sangat indah dan menenangkan. Suara-suara alam yang disertakan membuat pembaca merasa tenang dan terhubung dengan suasana yang ada dalam cerita.\n\nKarakter yang Menarik: Karakter-karakter dalam komik ini menarik dan dapat diidentifikasi dengan mudah. Takaki dan Akari memiliki sifat yang unik dan membuat pembaca merasa terhubung dengan mereka.\n\nEmotional Resonance: Komik ini memiliki emotional resonance yang sangat tinggi. Cerita yang berkesan dan penggambaran alam yang indah membuat pembaca merasa emosional dan terhubung dengan cerita.\n\nKesamaan dalam Pengalaman: Cerita tentang hubungan yang tidak terungkap dan perasaan yang kompleks membuat banyak orang merasa kesamaan dalam pengalaman mereka sendiri. Hal ini membuat komik ini sangat relatable bagi banyak orang.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/akasha--5-cm-per-second-01",
       "volume": 1,
-      "isSetVariant": true,
+      "isSetVariant": false,
       "seriesId": "ser_5-cm-per-second",
       "seriesName": "5 Cm Per Second",
       "availableEditions": [
@@ -59203,7 +59029,7 @@
       "isbn13": "9786231034342",
       "synopsis": "Sinopsis:\n\nYGGDRASIL. Sebuah gim virtual reality yang memungkinkan pemainnya untuk merasakan dunia gim secara nyata, menjadi gim yang sangat populer sejak dirilis pada tahun 2126. Namun sayangnya, 12 tahun kemudian, gim ini harus berakhir.\n\nPada hari terakhir sebelum server gim ditutup, seorang player bernama Momonga bernostalgia di dalamnya. Momonga memutuskan untuk berada di dalam gim hingga akhir. Ketika Momonga bersiap menghadapi akhir dari gim favoritnya dan menutup mata. Anehnya, YGGDRASIL tidak kunjung berakhir dan Momonga terjebak di dalamnya.\n\nDitambah lagi, NPC yang seharusnya hanya sebuah program, kini bisa merespons layaknya makhluk hidup. Gim ini berubah menjadi dunia yang baru. Sebenarnya dunia apa ini? Apakah Momonga masih berada di dalam gim YGGDRASIL? Demi mendapatkan jawabannya, Momonga mengumpulkan informasi dan melakukan banyak hal di dunia baru itu. Selama mengumpulkan informasi, ia pun dihadapi berbagai macam situasi. Petualangan seperti apakah yang menunggu Momonga?\n\nKeunggulan Buku:\n\nMengangkat tema isekai dengan tokoh utama yang apik.\n\nLatar dunia yang luas dan menarik, mampu membuat pembaca terasa ikut masuk ke dalamnya.\n\nIlustrasi karakter yang menarik untuk pembaca.\n\nTersedia dalam versi Manga, dengan serialisasi 4 season anime, dan 3 anime movie.\n\n*****\n\nKugane Maruyama adalah seorang penulis asal Jepang yang paling dikenal karena karyanya yang sangat populer, Overlord. Seri light novel ini telah berhasil menarik perhatian banyak pembaca di seluruh dunia dan telah diadaptasi menjadi berbagai media, seperti manga dan anime.\n\nApa yang membuat karya Kugane Maruyama begitu menarik?\n\nKonsep Isekai yang Unik: Overlord adalah salah satu contoh klasik dari genre isekai, di mana karakter utama terjebak di dunia lain. Namun, Kugane Maruyama berhasil memberikan sentuhan yang unik pada genre ini dengan menghadirkan protagonis yang sangat kuat dan kompleks, yaitu Momonga.\n\nDunia yang Detail: Dunia yang diciptakan oleh Kugane Maruyama dalam Overlord sangatlah detail dan kompleks. Ia berhasil membangun sebuah dunia fantasi yang penuh dengan berbagai ras, sihir, dan intrik politik.\n\nKarakter yang Menarik: Selain Momonga, Kugane Maruyama juga berhasil menciptakan karakter-karakter pendukung yang menarik dan kompleks. Setiap karakter memiliki motivasi dan tujuannya masing-masing, yang membuat cerita menjadi semakin menarik.\n\nPlot yang Mencengangkan: Plot Overlord penuh dengan kejutan dan twist yang tidak terduga. Cerita ini tidak hanya berfokus pada aksi, tetapi juga pada perkembangan karakter dan intrik politik.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-overlord-1--the-undead-king",
-      "isSetVariant": true,
+      "isSetVariant": false,
       "availableEditions": [
         {
           "name": "Regular",
@@ -95207,7 +95033,7 @@
       "title": "Naruto The Movie: Guardians Of The Crescent Moon Kingdom",
       "originalTitle": "Naruto The Movie: Guardians Of The Crescent Moon Kingdom",
       "seriesId": "ser_naruto-the",
-      "seriesName": "Naruto The",
+      "seriesName": "Naruto The Movie",
       "volume": null,
       "category": "Manga",
       "publisherId": "pub_elex",
@@ -99689,7 +99515,7 @@
       "title": "Detektif Conan The Movie: The Darkest Nightmare 1",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 1,
       "category": "Manga",
       "format": "MANGA",
@@ -99752,7 +99578,7 @@
       "title": "Detektif Conan The Movie: The Darkest Nightmare 2",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 2,
       "category": "Manga",
       "format": "MANGA",
@@ -99810,7 +99636,7 @@
       "title": "Detektif Conan The Movie: The Time Bomb Skyscraper",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": null,
       "category": "Manga",
       "format": "MANGA",
@@ -99971,7 +99797,7 @@
       "title": "Detektif Conan The Movie: The Last Wizard Of The Century Vol 3",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 3,
       "category": "Manga",
       "format": "MANGA",
@@ -102630,54 +102456,6 @@
       "bindUpLabel": null
     },
     {
-      "id": "pub_eighty_six_ep_4__under_pressure__merchandise",
-      "slug": "eighty-six-ep-4--under-pressure--merchandise",
-      "title": "Eighty Six Ep. 4 : Under Pressure",
-      "originalTitle": "Eighty Six",
-      "seriesId": "ser_eighty-six",
-      "seriesName": "Eighty Six",
-      "volume": 4,
-      "category": "Light Novel",
-      "format": "LIGHT_NOVEL",
-      "publisherId": "pub_mnc",
-      "publisherName": "m&c! Publishing",
-      "publisherShortName": "m&c!",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/in-z6r-she.jpg",
-      "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2025-08-10",
-      "isWednesdayRelease": false,
-      "currentPrice": 188000,
-      "originalPrice": 188000,
-      "authors": [
-        "Asato Asato/ Shirabii"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230317132",
-      "synopsis": "Menceritakan mengenai sekelompok pemuda dan pemudi yang berasal dari Distrik 86 Republik San Magnolia, sebuah distrik tidak terdaftar berisi penduduk terbuang yang dipaksa untuk bertempur melindungi Republik San Magnolia dengan menjadi “awak dalam mesin tempur tanpa awak”.\n\nSebagian besar penduduk di Distrik 1-85 tidak memandang 86 sebagai manusia, tetapi sebagai hewan ternak yang bisa dikorbankan dalam perang sesukanya. Namun, masih ada beberapa orang yang tidak setuju dengan itu, salah satunya adalah Lena, gadis penduduk Distrik 1 yang bertugas sebagai Handler, orang yang mengomando pasukan 86 dari jauh. Lena sangat peduli dengan para pasukan 86. khususnya pasukan yang belum lama ini dipimpinnya yaitu Skuadron Spearhead, yaitu skuadron yang dipimpin oleh pemuda yang memiliki julukan Dewa Kematian, Shin.\n\nKeunggulan\t:\n\n-\tMendapatkan Grand Prize di penghargaan Dengeki Novel Award ke-23 tahun 2016.\n\n-\tBeberapa kali menduduki peringkat 5 besar dalam voting popularitas Kono Light Novel ga Sugoi! (This Light Novel is Amazing!) sejak tahun 2018.\n\n-\tLight novelnya sendiri sudah terjual hampir 2 juta eksemplar di Jepang.\n\n-\tLight novel ini diadaptasi menjadi anime yang digarap oleh A1 Pictures, studio anime yang sangat populer dan sudah menggarap banyak anime terkenal. Musiknya pun ditangani oleh Hiroyuki Sawano, composer musik anime ternama.\n\n-\tAnime season 1-nya terdiri dari 2 bagian, bagian pertama tayang di tahun 2021, bagian kedua tayang di tahun 2022. Season 2-nya sangat ditunggu-tunggu oleh penggemar anime\n\n-\tMengusung beberapa topik yang banyak dibahas saat ini seperti diskriminasi, peperangan, politik, kemanusiaan, dsb tapi dikemas dengan ringan sehingga bisa dinikmati berbagai kalangan.",
-      "gramediaUrl": "https://www.gramedia.com/products/eighty-six-ep-4--under-pressure--merchandise",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified release from m&c!",
-      "availableEditions": [
-        {
-          "name": "Regular",
-          "price": 94000,
-          "gramediaUrl": "https://www.gramedia.com/products/eighty-six-ep-4--under-pressure--merchandise"
-        },
-        {
-          "name": "Regular",
-          "price": 89250,
-          "gramediaUrl": "https://www.gramedia.com/products/eighty-six-ep-4--under-pressure"
-        }
-      ],
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
       "id": "pub_eighty_six_ep_5__wahai_maut_janganlah_congkak",
       "slug": "eighty-six-ep-5--wahai-maut-janganlah-congkak",
       "title": "Eighty Six Ep. 5 : Wahai Maut, Janganlah Congkak",
@@ -104680,54 +104458,6 @@
       "bindUpLabel": null
     },
     {
-      "id": "pub_hanako_si_arwah_penasaran_09",
-      "slug": "hanako-si-arwah-penasaran-09",
-      "title": "Hanako Si Arwah Penasaran 09",
-      "originalTitle": "Hanako Si Arwah Penasaran",
-      "seriesId": "ser_hanako-si-arwah-penasaran",
-      "seriesName": "Hanako Si Arwah Penasaran",
-      "volume": 9,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "",
-      "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2020-02-05",
-      "isWednesdayRelease": false,
-      "currentPrice": 20800,
-      "originalPrice": 32000,
-      "authors": [
-        "Aida Iro"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230012693",
-      "synopsis": "Rilisan resmi Hanako Si Arwah Penasaran 09 terbitan Elex Media Komputindo.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
-      "gramediaUrl": "https://www.gramedia.com/products/hanako-si-arwah-penasaran-09",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified release from Elex Media",
-      "availableEditions": [
-        {
-          "name": "Regular",
-          "price": 20800,
-          "gramediaUrl": "https://www.gramedia.com/products/hanako-si-arwah-penasaran-09"
-        },
-        {
-          "name": "Regular",
-          "price": 10000,
-          "gramediaUrl": "https://www.gramedia.com/products/hanako-si-arwah-penasaran-09-1"
-        }
-      ],
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
       "id": "pub_hanako_si_arwah_penasaran_10",
       "slug": "hanako-si-arwah-penasaran-10",
       "title": "Hanako Si Arwah Penasaran 10",
@@ -104939,54 +104669,6 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified release from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_hanako_si_arwah_penasaran_16",
-      "slug": "hanako-si-arwah-penasaran-16",
-      "title": "Hanako Si Arwah Penasaran 16",
-      "originalTitle": "Hanako Si Arwah Penasaran",
-      "seriesId": "ser_hanako-si-arwah-penasaran",
-      "seriesName": "Hanako Si Arwah Penasaran",
-      "volume": 16,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "",
-      "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2022-06-12",
-      "isWednesdayRelease": false,
-      "currentPrice": 19600,
-      "originalPrice": 28000,
-      "authors": [
-        "Aida Iro"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230033032",
-      "synopsis": "Rilisan resmi Hanako Si Arwah Penasaran 16 terbitan Elex Media Komputindo.\n\nPilihan Edisi & Set Resmi: Regular, Regular",
-      "gramediaUrl": "https://www.gramedia.com/products/hanako-si-arwah-penasaran-16",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified release from Elex Media",
-      "availableEditions": [
-        {
-          "name": "Regular",
-          "price": 19600,
-          "gramediaUrl": "https://www.gramedia.com/products/hanako-si-arwah-penasaran-16"
-        },
-        {
-          "name": "Regular",
-          "price": 10000,
-          "gramediaUrl": "https://www.gramedia.com/products/hanako-si-arwah-penasaran-16-1"
-        }
-      ],
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -108198,42 +107880,6 @@
       "bindUpLabel": null
     },
     {
-      "id": "pub_blue_lock_04_2",
-      "slug": "blue-lock-04-2",
-      "title": "Blue Lock 04",
-      "originalTitle": "Blue Lock",
-      "seriesId": "ser_blue-lock",
-      "seriesName": "Blue Lock",
-      "volume": 4,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/18k8eecl-4.jpg",
-      "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2026-05-29",
-      "isWednesdayRelease": false,
-      "currentPrice": 45000,
-      "originalPrice": 45000,
-      "authors": [
-        "Muneyuki Kaneshiro"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230034336",
-      "synopsis": "Flash Sale !!!\n\nFlash Sale !!!\n\nFlash Sale !!!\n\nCerita berawal dari persatuan sepak bola jepang yang memulai sebuah program pencarian bakat pemain sepak bola SMA yang mulai berlatih untuk piala dunia 2022. Isagi Youichi, seorang pemain penyerang, mendapatkan undangan untuk program ini setelah kekalahan timnya dan tidak melaju ke tingkat nasional. Pelatih program ini adalah Jinpachi yang mempunyai keinginan “menghancurkan sepak bola pecundang jepang” dengan memperkenalkan jenis pelatihan baru: mengisolasi 300 penyerang muda di dalam penjara yang disebut “Blue Lock” dan melatih mereka dengan keras untuk menciptakan “penyerang egois terhebat di dunia.” Sinopsis Pertandingan terakhir seleksi tahap 1 Blue Lock dimulai! Isagi dan teman-teman tim Z mengikuti pertandingan yang menentukan takdir, di mana satu-satunya pilihan hanya menang, ‘kalah atau seri = eliminasi’. Lawan mereka tim V, tim paling kuat di blok 5 yang dibawahi oleh jenius Seishiro Nagi. Apakah kekuatan Z yang dikerahkan mati-matian mampu menghadapi serangan tim V yang luar biasa hebat? Kunci kemenangan adalah kemampuan mereproduksi gol!? Kalau kalah, karier tamat! Ayoo, berjuang, para pemain egois! Kalah = karier tamat! tidak ada pilihan lain selain menang! wajar saja, ‘kan!? itu lah dunia pertarungan! Detail Penulis Muneyuki Kaneshiro & Yusuke Nomura Jumlah Halaman 192 Penerbit Elex Media Komputindo Tanggal Terbit 20 Jul 2022 Format Soft Cover Berat 0.13 kg ISBN 9786230034336 Lebar 12.0 cm Bahasa Indonesia Panjang 18.0cm",
-      "gramediaUrl": "https://www.gramedia.com/products/blue-lock-04-2",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
       "id": "pub_hanako_si_arwah_penasaran_16_1",
       "slug": "hanako-si-arwah-penasaran-16-1",
       "title": "Hanako Si Arwah Penasaran 16",
@@ -108262,42 +107908,6 @@
       "isbn13": "9786230033032",
       "synopsis": "Flash Sale !!!\n\nFlash Sale !!!\n\nFlash Sale !!!\n\nHanako Si Arwah Penasaran adalah serial manga Jepang yang ditulis dan diilustrasikan oleh Aida Iro. Manga ini telah dikumpulkan ke dalam tujuh belas volume komik per bulan Februari 2022. Manga Hanako Si Arwah Penasaran mengisahkan tentang adanya rumor tentang tujuh misteri atau lebih yang dikenal dengan nama “Nana Fushigi” di Akademi Kamome. Salah satu dari tujuh misteri itu adalah “Hanako”, hantu yang menghuni toilet wanita bilik ketiga di lantai 3 gedung sekolah lama. Konon katanya, Hanako akan mengabulkan apapun harapan orang yang memanggilnya. Di sisi lain, Nene Yashiro, seorang siswi SMA, melibatkan dirinya dengan makhluk supernatural supaya harapannya terkabul. Ia mencoba untuk membuktikan sendiri misteri yang beredar itu. Ini adalah kisah komedi yang menghangatkan hati tentang Hanako, si hantu toilet, dan gadis penggemar misteri! Sinopsis Di episode sebelumnya, sahabat Nene–Aoi, tertawan di dunia seberang. Namun hal itu merupakan situasi yang bisa dikatakan situasi menguntungkan bagi Hanako yang mencemaskan sisa usia Nana yang tinggal sedikit. Dengan mempersembahkan tumbal Kannagi, “momen” tersebut dapat ditunda sedikit demi sedikit. Perpisahan dengan Nana Fushigi dan para makhluk supernatural pun tak dapat dihindari. Perjalanan Hanako kembali berlanjut. Di episode kali ini, setelah tumbal manusia dikorbankan, dunia nyata dan dunia supernatural pun terputus. Saat tengah mencari cara untuk menyeberang ke perbatasan, Nene dan Kou tak sengaja masuk ke “Rumah Merah” yang terkutuk. Di sana mereka bertemu anak kecil yang mirip Hanako. Inilah jilid 16 kisah Tujuh Keajaiban di sekolah dan “Rumah Merah”! Informasi lainnya Judul: Hanako Si Arwah Penasaran Jilid 16 Cerita: Aida Iro Tebal: 184 Halaman Tanggal Terbit: Juni 2022 Format: Soft Cover",
       "gramediaUrl": "https://www.gramedia.com/products/hanako-si-arwah-penasaran-16-1",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_blue_lock_07_2",
-      "slug": "blue-lock-07-2",
-      "title": "Blue Lock 07",
-      "originalTitle": "Blue Lock",
-      "seriesId": "ser_blue-lock",
-      "seriesName": "Blue Lock",
-      "volume": 7,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/l2k4-v9331.jpg",
-      "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2026-05-29",
-      "isWednesdayRelease": false,
-      "currentPrice": 45000,
-      "originalPrice": 45000,
-      "authors": [
-        "Muneyuki Kaneshiro"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230036866",
-      "synopsis": "Blue Lock adalah serial manga Jepang yang ditulis oleh Muneyuki Kaneshiro dan diilustrasikan oleh Yusuke Nomura. Blue Lock sendiri adalah sebuah fasilitas yang dibangun oleh pemerintahan Jepang guna menemukan dan mengembangkan 1 striker yang akan menjadi bintang timnas jepang sekaligus super star di dunia sepakbola kelak. Blue Lock tidak menceritakan kisah pemain di suatu turnamen sepakbola seperti pada umumnya. Blue Lock memiliki sedikit kesamaan dengan Squid Game. Yaitu menyeleksi 300 peserta, melakukan serangkaian permainan dengan sistem gugur, sehingga akan tersisa 1 orang sebagai pemenang. Cerita dimulai ketika seorang bernama Isagi Yoichi kelas 2 SMA yang tergabung dalam klub sepakbola yang kalah dalam kualifikasi turnamen nasional jepang tingkat SMA. Kendati kalah di kualifikasi, Isagi tetap diundang sebagai salah 1 dari 300 orang yang akan diseleksi di fasilitas Blue Lock Sinopsis Buku: Kehilangan Bachira setelah kalah oleh striker papan atas, Rin Itoshi, dan kelompoknya dalam Rivalry Battle seleksi tahap 2 di mana pemenang mengambil pemain yang kalah, Isagi dan Nagi bersumpah untuk bangkit kembali dan berkembang, lalu melanjutkan ke pertandingan berikutnya. Pada pertarungan 2 vs 2 di mana kekuatan individu yang terbatas diuji, lawan yang dihadapi ternyata pencetak gol terbanyak blok 5, Barou. Kalau kalah, akan jatuh ke jurang eliminasi. Target Isagi, mencapai sisi jenius yang ada setelah mengalahkan king Barou!",
-      "gramediaUrl": "https://www.gramedia.com/products/blue-lock-07-2",
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media",
@@ -108370,42 +107980,6 @@
       "isbn13": "9786230034725",
       "synopsis": "Flash Sale !!!\n\nFlash Sale !!!\n\nFlash Sale !!!\n\nSinopsis Tsumugi Fujishiro, 26 tahun. Wanita yang payah dalam percintaan, tiba-tiba saja dia dijadikan calon mempelai dalam acara perjodohan dengan anak presdir! Di tengah kebingungan yang melandanya, muncul sesosok penyelidik yang misterius, Madarame. Hari-hari di mana dia terus menyelidiki Tsumugi dengan ketat baik saat sedang bekerja ataupun di kehidupan pribadinya untuk dihakimi dan dinilai pantas tidaknya menjadi calon mempelai presdir…!? Buku ini berisi dua cerita yang berisi kisah percintaan. Cerita dalam komik ini berpusat pada Tsumugi yang bekerja pada suatu perusahaan. Suatu waktu, anak presdir mencari pasangan karena sudah mencari kesana kesini namun tidak ada yang cocok. Akhirnya diutuslah seorang penyelidik bernama Madarame. Ia ditugaskan untuk mencari calon mempelai yang cocok dijadikan dan dijodohkan dengan anak presdir tersebut. Komik ini memiliki unsur love comedy. Komik ini merupakan buku ketiga yang ditulis oleh sang pengarang. Komik ini tergolong ke dalam komik shoujo. Komik Shoujo adalah komik/manga yang ditujukan untuk pembaca perempuan remaja antara usia 10 hingga 18 tahun. Genre ini mencakup tema yang luas seperti shōnen manga, hanya saja lebih mengarah ke perasaan dan drama antar karakternya bila dibandingkan dengan manga shōnen yang keras dan penuh aksi. Dalam bahasa Jepang, shōjo atau shoujo berarti anak perempuan atau gadis. Tema shoujo manga bisa macam-macam, mulai dari drama sejarah hingga fiksi ilmiah, dengan fokus utama pada hubungan romantis antarmanusia dan emosi. Dalam arti sempit, shōjo manga bukanlah suatu genre dengan sendirinya, melainkan menunjukkan target demografi. Jumlah Halaman : 168 Penerbit : Elex Media Komputindo Tanggal Terbit : 31 Jul 2022 Berat : 0.115 kg ISBN : 9786230034725 Lebar : 12 cm Panjang : 18 cm Bahasa : Indonesia",
       "gramediaUrl": "https://www.gramedia.com/products/love-judgement",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_hanako_si_arwah_penasaran_17_1",
-      "slug": "hanako-si-arwah-penasaran-17-1",
-      "title": "Hanako Si Arwah Penasaran 17",
-      "originalTitle": "Hanako Si Arwah Penasaran",
-      "seriesId": "ser_hanako-si-arwah-penasaran",
-      "seriesName": "Hanako Si Arwah Penasaran",
-      "volume": 17,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/cca9aaaw7a.jpg",
-      "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2026-05-29",
-      "isWednesdayRelease": false,
-      "currentPrice": 32000,
-      "originalPrice": 32000,
-      "authors": [
-        "Aida Iro"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230035807",
-      "synopsis": "Sinopsis Volume 17: Nene dan Kou berjuang mencari petunjuk yang bisa membawa mereka ke “dunia perbatasan” tempat Hanako berada. Akhirnya mereka menemukan Rumah Merah dan berjumpa Tsukasa yang masih kecil di sana. Bersama Tsukasa, mereka mencoba keluar dari rumah terkutuk itu, tetapi usaha mereka sia-sia.... Jangan lewatkan klimaks dari kisah “Rumah Merah” di sini! Kisah komedi tentang hantu dan penggemar misteri ada di serial Hanako Si Arwah Penasaran. Manga karya Aida Iro ini mengisahkan tentang rumor tujuh misteri atau lebih dikenal dengan \"Nana Fushigi\" di Akademi Kamome. Salah satunya adalah “Hanako”, hantu yang menghuni toilet wanita bilik ketiga di lantai 3 gedung sekolah lama. Konon, dia akan mengabulkan apapun harapan orang yang memanggilnya. Nene Yashiro, seorang siswa SMA, ingin harapannya bisa terkabul. Bagaimana keduanya bisa terlibat satu sama lain? Ikuti akhir kisahnya di volume ke 17 ini! Seri lainnya Hanako Si Arwah Penasaran Vol. 1 Hanako Si Arwah Penasaran Vol. 2 Hanako Si Arwah Penasaran Vol. 3 Hanako Si Arwah Penasaran Vol. 4 Hanako Si Arwah Penasaran Vol. 5 Hanako Si Arwah Penasaran Vol. 6 Hanako Si Arwah Penasaran Vol. 7 Hanako Si Arwah Penasaran Vol. 8 Hanako Si Arwah Penasaran Vol. 9 Hanako Si Arwah Penasaran Vol. 10 Hanako Si Arwah Penasaran Vol. 11 Hanako Si Arwah Penasaran Vol. 12 Hanako Si Arwah Penasaran Vol. 13 Hanako Si Arwah Penasaran Vol. 14 Hanako Si Arwah Penasaran Vol. 15 Hanako Si Arwah Penasaran Vol. 16 Hanako Si Arwah Penasaran Vol. 17 Informasi Buku Judul : Hanako Si Arwah Penasaran Vol. 17 Penulis : Aida Iro ISBN : 9786230035807 Penerbit : Elex Media Komputindo Tahun Terbit : 2022 Jumlah Halaman : 184 halaman Berat : 0.095 kg Jenis Cover : Soft Cover Dimensi : 11.4 x 17.2 cm Bahasa : Bahasa Indonesia",
-      "gramediaUrl": "https://www.gramedia.com/products/hanako-si-arwah-penasaran-17-1",
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media",
@@ -108841,9 +108415,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from m&c!",
-      "isBindUp": true,
-      "bindUpKind": "COMPLETE_EDITION",
-      "bindUpLabel": "Complete Edition"
+      "isBindUp": false
     },
     {
       "id": "pub_the_prince_series_penguasa_waktu_sahabat_waktu",
@@ -109422,42 +108994,6 @@
       "bindUpLabel": null
     },
     {
-      "id": "pub_eighty_six_ep_4__under_pressure",
-      "slug": "eighty-six-ep-4--under-pressure",
-      "title": "Eighty Six Ep. 4 : Under Pressure",
-      "originalTitle": "Eighty Six",
-      "seriesId": "ser_eighty-six",
-      "seriesName": "Eighty Six",
-      "volume": 4,
-      "category": "Light Novel",
-      "format": "LIGHT_NOVEL",
-      "publisherId": "pub_mnc",
-      "publisherName": "m&c! Publishing",
-      "publisherShortName": "m&c!",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/r39xrrv-p4.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2025-08-26",
-      "isWednesdayRelease": false,
-      "currentPrice": 95200,
-      "originalPrice": 119000,
-      "authors": [
-        "Asato Asato/ Shirabii"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230317132",
-      "synopsis": "Menceritakan mengenai sekelompok pemuda dan pemudi yang berasal dari Distrik 86 Republik San Magnolia, sebuah distrik tidak terdaftar berisi penduduk terbuang yang dipaksa untuk bertempur melindungi Republik San Magnolia dengan menjadi “awak dalam mesin tempur tanpa awak”.\n\nSebagian besar penduduk di Distrik 1-85 tidak memandang 86 sebagai manusia, tetapi sebagai hewan ternak yang bisa dikorbankan dalam perang sesukanya. Namun, masih ada beberapa orang yang tidak setuju dengan itu, salah satunya adalah Lena, gadis penduduk Distrik 1 yang bertugas sebagai Handler, orang yang mengomando pasukan 86 dari jauh. Lena sangat peduli dengan para pasukan 86. khususnya pasukan yang belum lama ini dipimpinnya yaitu Skuadron Spearhead, yaitu skuadron yang dipimpin oleh pemuda yang memiliki julukan Dewa Kematian, Shin.\n\nKeunggulan\t:\n\n-\tMendapatkan Grand Prize di penghargaan Dengeki Novel Award ke-23 tahun 2016.\n\n-\tBeberapa kali menduduki peringkat 5 besar dalam voting popularitas Kono Light Novel ga Sugoi! (This Light Novel is Amazing!) sejak tahun 2018.\n\n-\tLight novelnya sendiri sudah terjual hampir 2 juta eksemplar di Jepang.\n\n-\tLight novel ini diadaptasi menjadi anime yang digarap oleh A1 Pictures, studio anime yang sangat populer dan sudah menggarap banyak anime terkenal. Musiknya pun ditangani oleh Hiroyuki Sawano, composer musik anime ternama.\n\n-\tAnime season 1-nya terdiri dari 2 bagian, bagian pertama tayang di tahun 2021, bagian kedua tayang di tahun 2022. Season 2-nya sangat ditunggu-tunggu oleh penggemar anime\n\n-\tMengusung beberapa topik yang banyak dibahas saat ini seperti diskriminasi, peperangan, politik, kemanusiaan, dsb tapi dikemas dengan ringan sehingga bisa dinikmati berbagai kalangan.",
-      "gramediaUrl": "https://www.gramedia.com/products/eighty-six-ep-4--under-pressure",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from m&c!",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
       "id": "pub_haikyu_fly_high_volleyball_43",
       "slug": "haikyu-fly-high-volleyball-43",
       "title": "Haikyu!!: Fly High! Volleyball! 43",
@@ -109921,42 +109457,6 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Light Novel from PGI",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_in_the_clear_moonlit_dusk_5",
-      "slug": "in-the-clear-moonlit-dusk-5",
-      "title": "In the Clear Moonlit Dusk 5",
-      "originalTitle": "In the Clear Moonlit Dusk",
-      "seriesId": "ser_in-the-clear-moonlit-dusk",
-      "seriesName": "In the Clear Moonlit Dusk",
-      "volume": 5,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_pgi",
-      "publisherName": "Phoenix Gramedia Indonesia",
-      "publisherShortName": "PGI",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/705vdkotxe.jpeg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2026-09-23",
-      "isWednesdayRelease": true,
-      "currentPrice": 65000,
-      "originalPrice": 65000,
-      "authors": [
-        "Mika Yamamori"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786347574800",
-      "synopsis": "\"Perasaan ini sebenarnya disebut apa, ya?\"\n\nYoi Takiguchi adalah seorang gadis yang dijuluki pangeran karena parasnya yang rupawan dan sikapnya yang elegan. Di sekolah, dia bertemu dengan Ichimura, seniornya yang juga dijuluki pangeran. Karena suatu hal tak terduga, mereka memutuskan untuk mulai melakukan percobaan pacaran. Perasaan Yoi yang awalnya bersikap waspada pun perlahan berubah dan hari-harinya dipenuhi kebingungan. Di sisi lain, Ichimura menyadari bahwa keberadaan Yoi makin berarti baginya dan mulai cemburu pada Oji, si pangeran baru di tempat kerja paruh waktu Yoi. Mereka akhirnya mengungkapkan perasaan masing-masing dengan jujur dan resmi berpacaran meski sempat bertengkar. Lalu tibalah libur musim panas!\n\nKisah cinta tentang 2 orang yang sama-sama dijuluki pangeran semakin memanas!\n\nKeunggulan:\n\n- Mengangkat tema romance slow-burn antara protagonis wanita berpenampilan androgini dengan protagonis pria yang juga tampan.\n\n- Ilustrasinya yang sangat detail dan memanjakan mata.\n\n- Peringkat ke-1 untuk kategori komik shojo dalam Recommended Shojo Manga of 2022 Selected by Booksellers Nationwide.\n\n- Serialisasi animenya ditayangkan pada 11 Januari 2026.\n\n- Memiliki adaptasi live-action yang akan tayang pada 23 Oktober 2026.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
-      "gramediaUrl": "https://www.gramedia.com/products/in-the-clear-moonlit-dusk-5",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from PGI",
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -111114,42 +110614,6 @@
       "bindUpLabel": null
     },
     {
-      "id": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
-      "slug": "light-novel-alya-sometimes-hides-her-feeling-in-russian-5",
-      "title": "Light Novel: Alya Sometimes Hides Her Feeling in Russian 5",
-      "originalTitle": "Alya Sometimes Hides Her Feeling in Russian",
-      "seriesId": "ser_alya-sometimes-hides-her-feelings-in-russian-ln",
-      "seriesName": "Alya Sometimes Hides Her Feeling in Russian (Novel)",
-      "volume": 5,
-      "category": "Light Novel",
-      "format": "LIGHT_NOVEL",
-      "publisherId": "pub_pgi",
-      "publisherName": "Phoenix Gramedia Indonesia",
-      "publisherShortName": "PGI",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/evltn-5rnc.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2025-07-21",
-      "isWednesdayRelease": false,
-      "currentPrice": 88200,
-      "originalPrice": 98000,
-      "authors": [
-        "Sunsunsun "
-      ],
-      "genres": [
-        "Light Novel"
-      ],
-      "isbn13": "9786347128515",
-      "synopsis": "“… Ini aku, Saa-kun.”\n\nPertemuan yang mengejutkan dengan cinta pertama yang dinanti pun terjadi. Masahika yang akhirnya tahu bahwa Maria adalah “gadis itu”, mulai bimbang dengan perasaannya.\n\nLibur musim panas yang penuh kenangan pun berakhir, SMA Seirei memasuki semester kedua! Masachika berniat mendukung Alya-san dalam festival sekolah yang nantinya dapat memberi pengaruh besar dalam pemilihan ketua OSIS. Akan tetapi, hatinya campur aduk begitu melihat keakraban Alisa dengan teman-teman sekelas.\n\n“Jangan-jangan … kamu cemburu, ya?” Hatinya semakin berdebar begitu gadis itu menggodanya sambil tersenyum jahil.\n\nSaat garis cinta mulai goyah, ada pergerakan baru dalam pemilihan ketua OSIS?! Kekacauan di festival sekolah pun dimulai!\n\nCerita Sebelumnya:\n\nKamp pelatihan musim panas menandakan dimulainya kisah cinta baru. Namun, musim panas Alya-san dan teman-temannya belum berakhir!\n\nDi bawah pengaruh hipnotis Yuki, Masachika berubah menjadi cowok ikemen nan penyayang? Skinship tak terduga yang Masachika lakukan membuat sang adik dan pelayannya hampir pingsan dengan penuh penderitaan! Latihan Alya-san dalam menghadapi makanan pedas membawanya ke kedai ramen di mana ia bertemu dengan seseorang yang tidak ia duga? Aku ingin memakaikan baju renang yang cantik pada adikku! Alya-san terjebak dalam hasrat penuh keputusasaan dari sang kakak dan pasrah menjadi maneken percobaan!? Kakak perempuan yang tegar dan cantik, serta awal mula kisah cinta itu.\n\nVolume yang menceritakan gemerlap kisah musim panas dari para anggota OSIS!\n\n“Saa-kun, apa kita tidak akan bisa bertemu lagi …?” Perasaan si gadis ketika menunggu belahan jiwanya di tempat yang dijanjikan, sekarang akan terungkap.\n\nKeunggulan Buku:\n\n- Light Novel bertema rom-com best seller di tahun 2024 di Jepang.\n\n- Memiliki karakter-karakter heroin yang menarik, dengan ilustrasi yang memikat.\n\n- Ceritanya yang ringan dan mengundang gelak tawa, dijamin dapat menghibur pembaca.\n\n- Telah diadaptasi menjadi komik yang juga merupakan best seller di Jepang.\n\n- Memiliki adaptasi season 1 anime yang telah tayang pada 2024, dan akan segera disusul dengan penayangan season 2 pada tahun 2025.",
-      "gramediaUrl": "https://www.gramedia.com/products/light-novel-alya-sometimes-hides-her-feeling-in-russian-5",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Light Novel from PGI",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
       "id": "pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_3",
       "slug": "100-pacar-yang-sangat-sangat-sangat-sangat-sangat-mencintaimu-3",
       "title": "100 Pacar yang Sangat, Sangat, Sangat, Sangat, Sangat, Mencintaimu 3",
@@ -111510,582 +110974,6 @@
       "bindUpLabel": null
     },
     {
-      "id": "pub_lc_fight_ippo_128",
-      "slug": "lc-fight-ippo-128",
-      "title": "LC: Fight Ippo 128",
-      "originalTitle": "Fight Ippo",
-      "seriesId": "ser_fight-ippo",
-      "seriesName": "Fight Ippo",
-      "volume": 128,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/9786230035715_cover_Fight_Ippo_128.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2022-10-03",
-      "isWednesdayRelease": false,
-      "currentPrice": 31500,
-      "originalPrice": 35000,
-      "authors": [
-        "Joji Morikawa"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230035715",
-      "synopsis": "Ippo mengambil posisi sebagai kepala kedua dalam pertandingan Kimura. Karena hasil dari metode penurunan berat badan Kimura, akankah strategi rahasia yang dipikirkan Ippo, \"Strategi 1RKO\" yang tampaknya sembrono berhasil!?\n\nKemudian, seperti yang diperintahkan oleh pelatih \"untuk belajar\", Ippo buru-buru terbang ke Meksiko , dan yang menunggunya adalah pertandingan Sendō vs Alfredo . Jadi apa yang akan dilihat, dipahami, dan dipelajari oleh Ippo!? Ippo, ke Meksiko!! Pertandingan Sendō vs. González.\n\nPertempuran sengit di tempat yang panas! Sebelum pertarungan memperebutkan hak untuk menantang juara dunia Ricardo Martinez, Ippo dan Send tiba-tiba bertengkar!! Apa yang Sendō lihat!? Dan kemudian pertarungan harimau vs malaikat maut dimulai!! \"Saya datang untuk menjual pertarungan kepada seorang pria yang mengalahkan Makunouchi Ippo\"\n\nSinopsis\n\nMendekat ke teman dan bertarung bersama… Itulah Ippo yang sekarang… Ippo menjadi Chief Second Kimura dalam pertandingan antara Kimura dan Yoshimoto. Akankah strategi menang K.O. satu ronde yang ngawur itu berhasil!? Lalu, Ippo mendadak pergi ke Meksiko untuk belajar atas instruksi dari ketua Sasana Kamogawa. Hal yang menantinya di sana adalah pertandingan antara Sendo melawan Gonzales… Apakah yang akan Ippo saksikan di sana!?\n\nkomik ini direkomendasikan untuk pembaca yang menyukai genre\n\nInformasi lain :\n\nJudul: LC: FIGHT IPPO 128\n\nRating: yang diperuntukan untuk pembaca berusia  tahun ke atas.\n\nCerita & Ilustrasi:\n\nProduction: Elex Media Komputindo\n\nTebal: 192 halaman\n\nFormat: Soft Cover\n\nTanggal Terbit: 3 Oktober 2022\n\nISBN : 9786230035715\n\nBerat : 0.11 kg\n\nDimensi : 18 x 12 cm",
-      "gramediaUrl": "https://www.gramedia.com/products/lc-fight-ippo-128",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_lc_fight_ippo_129",
-      "slug": "lc-fight-ippo-129",
-      "title": "LC: Fight Ippo 129",
-      "originalTitle": "Fight Ippo",
-      "seriesId": "ser_fight-ippo",
-      "seriesName": "Fight Ippo",
-      "volume": 129,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2022/12/14/fmthpezjzstwpggkbery6b.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2022-12-17",
-      "isWednesdayRelease": false,
-      "currentPrice": 31500,
-      "originalPrice": 35000,
-      "authors": [
-        "Joji Morikawa"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230036798",
-      "synopsis": "Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nFight!! Ippo merupakan serial manga Jepang dengan judul asli “Hajime no Ippo” yang artinya “Langkah Pertama”, yang ditulis dan diilustrasikan oleh Joji Morikawa. Serial manga ini bertumpu pada tema olahraga khususnya tinju. Manga ini menceritakan seorang siswa laki-laki bernama Makunouchi yang memulai karirnya dalam dunia tinju hingga ia dapat meraih beberapa penghargaan melalui kompetisi-kompetisi yang ia ikuti.\n\nKisah perjalanan Ippo berawal ketika ia seringkali mendapat perlakuan tidak baik dari berandalan-berandalan namun ia tidak bisa melawan. Sampai suatu hari seseorang bernama Takamura yang merupakan seorang petinju profesional membantunya ketika ia sedang diganggu. Takamura berhasil membuat para berandalan yang mengganggu Ippo ciut dan kabur. Sejak adanya kejadian itu, Ippo kagum pada aksi dan kemampuan Takamura hingga ia berniat untuk belajar menjadi petinju mahir seperti Takamura.\n\nSinopsis Buku :\n\n‘Tigre’ vs. ‘Metztli’. Inilah pertarungan yang mempertaruhkan hak untuk menantang sang juara dunia! Dimulailah pertarungan sengit antara Gonzales yang menduduki peringkat dua dunia dengan Sendo yang menempati peringkat tiga dunia. Sendo berusaha menarik keluar karakter asli Gonzales yang bertarung dengan kepala dingin, sehingga Gonzales akhirnya menunjukkan kekuatan aslinya. Baku hantam mati-matian itu membuat antusiasme dan semangat para penonton menggelegak. Kawan dan lawan bersatu padu, bersama-sama dimabukkan pertarungan sengit keduanya. Bagaimanakah akhir dari pertarungan maut di malam Meksiko yang gerah itu!?\n\nSelling Point :\n\nKomik terpanjang dengan kisah menarik seputar tinju dunia.",
-      "gramediaUrl": "https://www.gramedia.com/products/lc-fight-ippo-129",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_level_comic_fight_ippo_136",
-      "slug": "level-comic-fight-ippo-136",
-      "title": "Level Comic: Fight Ippo 136",
-      "originalTitle": "Fight Ippo",
-      "seriesId": "ser_fight-ippo",
-      "seriesName": "Fight Ippo",
-      "volume": 136,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/tx0i66ziev.jpeg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2025-07-01",
-      "isWednesdayRelease": false,
-      "currentPrice": 21000,
-      "originalPrice": 35000,
-      "authors": [
-        "Joji Morikawa"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230071317",
-      "synopsis": "Ippo kembali datang ke Meksiko. Apakah penyulut panasnya itu pertarungan temannya? Ataukah tinjunya sendiri? Wally mendapatkan hak menjadi penantang gelar Ricardo Martinez, sang juara yang tak terkalahkan, sehingga kini dia dan volg berada di Meksiko, medan perang mereka. Ippo juga pergi ke sana bersama sendo untuk menonton, tapi mendadak mereka berdua diminta menjadi partner sparring Volg dan Wally. Ippo menganggapnya bentuk balas budi ke volg, sehingga bersedia naik ke atas ring. Namun, tinju yang harusnya hanya dilancarkan untuk sparring itu lambat laun semakin panas.\n\nFight Ippo merupakan serial manga Jepang dengan judul asli “Hajime no Ippo” yang artinya “Langkah Pertama”, yang ditulis dan diilustrasikan oleh Joji Morikawa. Serial manga ini bertumpu pada tema olahraga khususnya tinju. Manga ini menceritakan seorang siswa laki-laki bernama Makunouchi yang memulai karirnya dalam dunia tinju hingga ia dapat meraih beberapa penghargaan melalui kompetisi-kompetisi yang ia ikuti.\n\nKisah perjalanan Ippo berawal ketika ia seringkali mendapat perlakuan tidak baik dari berandalan-berandalan namun ia tidak bisa melawan. Sampai suatu hari seseorang bernama Takamura yang merupakan seorang petinju profesional membantunya ketika ia sedang diganggu. Takamura berhasil membuat para berandalan yang mengganggu Ippo ciut dan kabur. Sejak adanya kejadian itu, Ippo kagum pada aksi dan kemampuan Takamura hingga ia berniat untuk belajar menjadi petinju mahir seperti Takamura.\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
-      "gramediaUrl": "https://www.gramedia.com/products/level-comic-fight-ippo-136",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_level_comic_fight_ippo_130",
-      "slug": "level-comic-fight-ippo-130",
-      "title": "Level Comic: Fight Ippo 130",
-      "originalTitle": "Fight Ippo",
-      "seriesId": "ser_fight-ippo",
-      "seriesName": "Fight Ippo",
-      "volume": 130,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/3/15/5xjc2kg9j3qzvmcs8suun4.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2023-03-15",
-      "isWednesdayRelease": true,
-      "currentPrice": 31500,
-      "originalPrice": 35000,
-      "authors": [
-        "Joji Morikawa"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230046575",
-      "synopsis": "Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nFight!! Ippo merupakan serial manga Jepang dengan judul asli “Hajime no Ippo” yang artinya “Langkah Pertama”, yang ditulis dan diilustrasikan oleh Joji Morikawa. Serial manga ini bertumpu pada tema olahraga khususnya tinju. Manga ini menceritakan seorang siswa laki-laki bernama Makunouchi yang memulai karirnya dalam dunia tinju hingga ia dapat meraih beberapa penghargaan melalui kompetisi-kompetisi yang ia ikuti.\n\nKisah perjalanan Ippo berawal ketika ia seringkali mendapat perlakuan tidak baik dari berandalan-berandalan namun ia tidak bisa melawan. Sampai suatu hari seseorang bernama Takamura yang merupakan seorang petinju profesional membantunya ketika ia sedang diganggu. Takamura berhasil membuat para berandalan yang mengganggu Ippo ciut dan kabur. Sejak adanya kejadian itu, Ippo kagum pada aksi dan kemampuan Takamura hingga ia berniat untuk belajar menjadi petinju mahir seperti Takamura.\n\nSinopsis Buku:\n\nSeperti apakah reaksi Ippo melihat dunia yang dipertunjukkan oleh pertarungan sengit di malam Meksiko yang panas itu!? Belum sampai gelora antusiasme yang tersisa dari pertandingan Gonzales vs Sendo mereda, pertandingan antara Ricardo Martinez melawan Billy Mccallum sudah langsung dimulai. Bagaimanakah hasil dari title match tingkat dunia sekaligus pertandingan memperebutkan gelar terpadu ini!? Setelahnya, Ippo pulang ke Tokyo. Di sanalah Ippo yang telah memperdalam pengetahuannya itu mengetahui tantangan baru yang diajukan ‘lelaki itu’!!",
-      "gramediaUrl": "https://www.gramedia.com/products/level-comic-fight-ippo-130",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_level_comic_fight_ippo_135",
-      "slug": "level-comic-fight-ippo-135",
-      "title": "Level Comic: Fight Ippo 135",
-      "originalTitle": "Fight Ippo",
-      "seriesId": "ser_fight-ippo",
-      "seriesName": "Fight Ippo",
-      "volume": 135,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/1zcc4tfm-1.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2025-04-14",
-      "isWednesdayRelease": false,
-      "currentPrice": 21000,
-      "originalPrice": 35000,
-      "authors": [
-        "Joji Morikawa"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230069772",
-      "synopsis": "Siapakah yang ketika itu dilihat dewa kematian? Apakah yang didengarnya? Dimulailah pertandingan pendahuluan menuju title match dunia antara Garcia dan Mashiba yang menduduki peringkat 2 dan 3 kelas ringan dunia. Garcia sang mantan juara dunia dengan cerdiknya berhasil menggerus stamina serta mental Mashiba. Akhirnya pada ronde 4, iblis berbisik ke telinga Mashiba yang tak lagi sanggup mengangkat lengan akibat cedera yang terakumulasi… ‘kalau tinjuku tidak kena, aku cukup mengeluarkan yang lainnya’. Mashiba pun terdesak. Ippo berseru, penonton berseru. Apa yang terjadi pada momen itu!?\n\nFight Ippo merupakan serial manga Jepang dengan judul asli “Hajime no Ippo” yang artinya “Langkah Pertama”, yang ditulis dan diilustrasikan oleh Joji Morikawa. Serial manga ini bertumpu pada tema olahraga khususnya tinju. Manga ini menceritakan seorang siswa laki-laki bernama Makunouchi yang memulai karirnya dalam dunia tinju hingga ia dapat meraih beberapa penghargaan melalui kompetisi-kompetisi yang ia ikuti.\n\nKisah perjalanan Ippo berawal ketika ia seringkali mendapat perlakuan tidak baik dari berandalan-berandalan namun ia tidak bisa melawan. Sampai suatu hari seseorang bernama Takamura yang merupakan seorang petinju profesional membantunya ketika ia sedang diganggu. Takamura berhasil membuat para berandalan yang mengganggu Ippo ciut dan kabur. Sejak adanya kejadian itu, Ippo kagum pada aksi dan kemampuan Takamura hingga ia berniat untuk belajar menjadi petinju mahir seperti Takamura.\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
-      "gramediaUrl": "https://www.gramedia.com/products/level-comic-fight-ippo-135",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_level_comic_fight_ippo_137",
-      "slug": "level-comic-fight-ippo-137",
-      "title": "Level Comic: Fight Ippo 137",
-      "originalTitle": "Fight Ippo",
-      "seriesId": "ser_fight-ippo",
-      "seriesName": "Fight Ippo",
-      "volume": 137,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/1m71z--i5-.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2025-10-23",
-      "isWednesdayRelease": false,
-      "currentPrice": 22750,
-      "originalPrice": 35000,
-      "authors": [
-        "Joji Morikawa"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230073526",
-      "synopsis": "Sang penantang melakukan serangan kejutan! Apa yang akan dilakukan sang juara?\n\nPertandingan terbesar abad ini antara Wally yang menduduki peringkat 1 dunia WBA dan Ricardo, sang juara dunia akhirnya dimulai. Wally langsung menerjang Ricardo dengan kecepatan penuh begitu bel berbunyi dan berlarian mengelilingi ring dengan aksi penuh trik. Sementara Wally melakukan berbagai macam aksi eksentrik, Ricardo tampak hanya terus mengobservasinya.\n\nSeperti apa sebenarnya ‘tinju berbahaya’ Wally yang telah menumbangkan semua partner sparring-nya!? Akan jadi seperti apa hasil pertandingan mencengangkan yang tak dapat diprediksi siapa pun ini!?\n\nFight Ippo merupakan serial manga Jepang dengan judul asli “Hajime no Ippo” yang artinya “Langkah Pertama”, yang ditulis dan diilustrasikan oleh Joji Morikawa. Serial manga ini bertumpu pada tema olahraga khususnya tinju. Manga ini menceritakan seorang siswa laki-laki bernama Makunouchi yang memulai karirnya dalam dunia tinju hingga ia dapat meraih beberapa penghargaan melalui kompetisi-kompetisi yang ia ikuti.\n\nKisah perjalanan Ippo berawal ketika ia seringkali mendapat perlakuan tidak baik dari berandalan-berandalan namun ia tidak bisa melawan. Sampai suatu hari seseorang bernama Takamura yang merupakan seorang petinju profesional membantunya ketika ia sedang diganggu. Takamura berhasil membuat para berandalan yang mengganggu Ippo ciut dan kabur. Sejak adanya kejadian itu, Ippo kagum pada aksi dan kemampuan Takamura hingga ia berniat untuk belajar menjadi petinju mahir seperti Takamura.\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
-      "gramediaUrl": "https://www.gramedia.com/products/level-comic-fight-ippo-137",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_level_comic_fight_ippo_138",
-      "slug": "level-comic-fight-ippo-138",
-      "title": "Level Comic: Fight Ippo 138",
-      "originalTitle": "Fight Ippo",
-      "seriesId": "ser_fight-ippo",
-      "seriesName": "Fight Ippo",
-      "volume": 138,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/xhvippgc-i.png",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2026-01-06",
-      "isWednesdayRelease": false,
-      "currentPrice": 26250,
-      "originalPrice": 35000,
-      "authors": [
-        "Joji Morikawa"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230074332",
-      "synopsis": "Akhirnya pertandingan di Meksiko mencapai puncak! Siapa yang lebih kuat? Alfa ataukah omega? Wally yang menduduki peringkat satu dunia melawan Ricardo sang juara dunia. Title match kelas bulu yang penuh pergolakan ini akhirnya didominasi Ricardo setelah masuk ke ronde 5. Miguel menyerahkan ‘kartu as terakhir’ kepada Wally yang dengan susah payah berhasil pulang ke sudutnya. Memasuki ronde 6, akhirnya pertarungan alfa dan omega ini mencapai puncak!! Melihat Wally bertarung dengan sengit, Ippo merasa gerah memikirkan para rival segenerasinya yang kini mengincar gelar dunia!\n\nFight Ippo merupakan serial manga Jepang dengan judul asli “Hajime no Ippo” yang artinya “Langkah Pertama”, yang ditulis dan diilustrasikan oleh Joji Morikawa. Serial manga ini bertumpu pada tema olahraga khususnya tinju. Manga ini menceritakan seorang siswa laki-laki bernama Makunouchi yang memulai karirnya dalam dunia tinju hingga ia dapat meraih beberapa penghargaan melalui kompetisi-kompetisi yang ia ikuti.\n\nKisah perjalanan Ippo berawal ketika ia seringkali mendapat perlakuan tidak baik dari berandalan-berandalan namun ia tidak bisa melawan. Sampai suatu hari seseorang bernama Takamura yang merupakan seorang petinju profesional membantunya ketika ia sedang diganggu. Takamura berhasil membuat para berandalan yang mengganggu Ippo ciut dan kabur. Sejak adanya kejadian itu, Ippo kagum pada aksi dan kemampuan Takamura hingga ia berniat untuk belajar menjadi petinju mahir seperti Takamura.\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
-      "gramediaUrl": "https://www.gramedia.com/products/level-comic-fight-ippo-138",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_mob_psycho_100_01",
-      "slug": "mob-psycho-100-01",
-      "title": "Mob Psycho 100 01",
-      "originalTitle": "Mob Psycho 100",
-      "seriesId": "ser_mob-psycho-100",
-      "seriesName": "Mob Psycho 100",
-      "volume": 1,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/720010496_Mob_Psycho_100_01.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2020-04-01",
-      "isWednesdayRelease": true,
-      "currentPrice": 36000,
-      "originalPrice": 40000,
-      "authors": [
-        "Elex Media Komputindo"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230015786",
-      "synopsis": "Sinopsis\n\nNama si anak lelaki yang akan meledak begitu barometernya jadi 100 itu adalah ‘Mob’!! Shigeo Kageyama–alias Mob, seorang anak lelaki kelas 2 SMP yang mendambakan masa muda yang normal, memiliki sebuah kekuatan istimewa, yaitu kekuatan supernatural! Berbagai macam orang berusaha memanfaatkan kekuatannya, mulai dari cenayang gadungan, sekte mencurigakan, dan lainnya, sehingga pada suatu hari ‘sesuatu’ dalam diri Mob pun mulai bangkit!!\n\nOne mengilustrasikan sendiri Mob Psycho 100 untuk kemudian dipublikasikan di sebuah website tahun 2017. Shigeo Kageyama adalah anak laki-laki usia sekolah menengah rata-rata, dijuluki Mob karena tidak memiliki rasa kehadiran. Meskipun dia terlihat seperti orang yang tidak mencolok, dia sebenarnya adalah seseorang dengan kekuatan membaca pikiran dan masa depan  yang luar biasa. Agar tidak kehilangan kendali atas kekuatan ini, dia terus-menerus menjalani kehidupan di bawah belenggu emosional.\n\nUntuk membantu mempelajari cara mengontrol kemampuannya, Mob bekerja sebagai asisten penipu Reigen Arataka, seorang medium roh yang memproklamirkan diri. Mob ingin menjalani kehidupan normal seperti orang-orang di sekitarnya, tetapi rentetan masalah terus mengejarnya. Dengan emosinya yang tertekan tumbuh di dalam Mob sedikit demi sedikit, kekuatannya mengancam untuk menembus batasnya saat ia akhirnya bertemu esper lain seperti Claws.\n\nInformasi Lainnya:\n\nJudul: Mob Psycho 100 01\n\nCerita: One\n\nTebal: 200 Halaman\n\nTanggal terbit: April 2020\n\nFormat: Soft Cover\n\nSeri lainnya:",
-      "gramediaUrl": "https://www.gramedia.com/products/mob-psycho-100-01",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_mob_psycho_100_02",
-      "slug": "mob-psycho-100-02",
-      "title": "Mob Psycho 100 Vol 2",
-      "originalTitle": "Mob Psycho 100",
-      "seriesId": "ser_mob-psycho-100",
-      "seriesName": "Mob Psycho 100",
-      "volume": 2,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/9786230020209_Mob_Psycho_100_02.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2020-10-05",
-      "isWednesdayRelease": false,
-      "currentPrice": 36000,
-      "originalPrice": 40000,
-      "authors": [
-        "Elex Media Komputindo"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230020209",
-      "synopsis": "Sebuah adaptasi serial televisi anime telah diproduksi oleh Bones. Musim pertama ditayangkan antara Juli dan September 2016, diikuti oleh musim kedua, ditayangkan antara Januari dan April 2019. Musim ketiga akan tayang perdana pada Oktober 2022. Sebuah adaptasi live-action ditayangkan dari Januari hingga April 2018. Sebuah spin-off seri manga, berjudul Reigen, diserialkan di aplikasi Shogakukan MangaONE pada tahun 2018.\n\nDi Amerika Utara, Dark Horse Comics melisensikan manga untuk publikasi bahasa Inggris pada tahun 2018. Sementara itu, Crunchyroll melisensikan serial anime untuk streaming, dengan pangkat bahasa Inggris yang diproduksi oleh Bang Zoom! Hiburan pada Desember 2016, dan disiarkan di blok Toonami Adult Swim pada Oktober 2018.\n\nMob Psycho 100 memiliki lebih dari 1,2 juta kopi yang beredar pada Juli 2016. Pada tahun 2017, manga ini memenangkan Penghargaan Manga Shogakukan ke-62 dalam kategori shōnen.\n\nSinopsis\n\nCahaya dan bayangan, Teru dan Mob. Dua esper yang saling bertolak belakang. Shigeo Kageyama (alias Mob) adalah seorang anak lelaki kelas dua SMP yang berhasil menghancurkan sekte mencurigakan ‘LOL’ dengan kekuatan supernaturalnya yang mencengangkan dan ketidakpekaannya dalam membaca situasi. Teruki Hanazawa (alias Teru) adalah ketua rahasia SMP lain yang telah mengalahkan geng berandalan SMP Mob dengan kekuatan supernaturalnya. Apakah yang akan terjadi saat dua remaja esper dengan cara hidup bertolak belakang ini bertemu?\n\nJudul : Mob Psycho 100 Vol 2\n\nRating : remaja\n\nCerita & Ilustrasi : One\n\nTebal : 192 halaman\n\nBerat : 0,1 kg\n\nFormat : Soft Cover\n\nTanggal Terbit : 5 Okt 2020\n\nDimensi : 18 x 12 cm",
-      "gramediaUrl": "https://www.gramedia.com/products/mob-psycho-100-02",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_mob_psycho_100_9",
-      "slug": "mob-psycho-100-9",
-      "title": "Mob Psycho 100 Vol. 9",
-      "originalTitle": "Mob Psycho 100",
-      "seriesId": "ser_mob-psycho-100",
-      "seriesName": "Mob Psycho 100",
-      "volume": 9,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/722010305_Mob_Psycho_100_09.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2022-05-13",
-      "isWednesdayRelease": false,
-      "currentPrice": 36000,
-      "originalPrice": 40000,
-      "authors": [
-        "Elex Media Komputindo"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230032615",
-      "synopsis": "Mob Psycho 100 Vol. 09\n\nMob Psycho 100 adalah sebuah seri manga web shōnen Jepang karya ONE, yang mulai dimuat melalui platform Ura Sunday sejak bulan April 2012, dan berakhir pada bulan Desember 2017. Manga ini juga tersedia secara daring pada aplikasi seluler MangaONE milik Shogakukan sejak bulan Desember 2014. Dark Horse Comics telah melisensi seri ini untuk diterbitkan dalam bahasa Inggris.\n\nSebuah manga spin-off berjudul REIGEN dimuat berseri pada aplikasi seluler MangaONE sejak tanggal 19 Maret 2018 hingga 19 Februari 2019.\n\nManga ini menceritakan seorang pelajar biasa sekolah menengah pertama bernama Kageyama Shigeo dengan nama panggilan \"Mob\", dikarenakan kurangnya kehadirannya dalam ruang lingkup pergaulannya di sekolah. Meskipun terlihat seperti orang biasa, ia memiliki kekuatan supernatural Esper yang luar biasa. Dengan kekuatannya, ia yang menjadi murid seseorang yang mengaku Cenayang itu, turut membantu orang - orang yang mengalami gangguan supernatural. Mob yang mempunyai kekuatan luar biasa itu sering kali kehilangan kesadaran akan kekuatan itu sendiri, hingga akhirnya ia menyadari betapa mengerikannya kekuatannya itu. Mob yang ingin menjalani kehidupan sebagai orang normal seperti yang lainnya, selalu terhalang oleh masalah - masalah yang menghampirinya.\n\nSinopsis\n\nTerdapat retakan dalam hubungan guru-murid antara Reigen dan Mob!? Mob dan Reigen kembali ke keseharian mereka setelah menyelesaikan permohonan pembasmian roh.\n\nSuatu hari, Reigen kelepasan mengatakan hal yang keterlaluan, membuat Mob jadi tidak lagi datang kerja sambilan mulai hari berikutnya!! Reigen yang harus bekerja tanpa Mob malah mendapatkan permohonan untuk tampil di televisi, tapi malah terjadi bencana!?",
-      "gramediaUrl": "https://www.gramedia.com/products/mob-psycho-100-9",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_mob_psycho_100_10",
-      "slug": "mob-psycho-100-10",
-      "title": "Mob Psycho 100 10",
-      "originalTitle": "Mob Psycho 100",
-      "seriesId": "ser_mob-psycho-100",
-      "seriesName": "Mob Psycho 100",
-      "volume": 10,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/722010341_Mob_Psycho_100_10.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2022-06-26",
-      "isWednesdayRelease": false,
-      "currentPrice": 36000,
-      "originalPrice": 40000,
-      "authors": [
-        "Elex Media Komputindo"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230033476",
-      "synopsis": "Mob Psycho 100 adalah serial manga Jepang yang ditulis dan diilustrasikan oleh One. Shigeo Kageyama adalah anak laki-laki berusia sekolah menengah rata-rata,  yang sering dijuluki Mob karena tidak memiliki rasa kehadiran.\n\nShigeo \"Mob\" Kageyama kelas delapan telah memanfaatkan sumber kekuatan batinnya di usia muda. Tetapi kekuatan itu dengan cepat terbukti menjadi tanggung jawab ketika dia menyadari potensi bahaya dalam keterampilannya. Memilih untuk menekan kekuatannya, satu-satunya cara yang bisa Mob saat ini lakukan untuk kemampuannya adalah mengendalikan emosi yang ada pada dirinya. Meskipun dia terlihat seperti orang yang tidak mencolok, dia sebenarnya adalah esper yang kuat dengan kekuatan psikis yang luar biasa. Agar tidak kehilangan kendali atas kekuatan ini, dia terus-menerus menjalani kehidupan di bawah belenggu emosional.\n\nUntuk membantu mempelajari cara mengontrol kemampuannya, Mob bekerja sebagai asisten penipu Reigen Arataka, seorang self-proclaimed spirit medium. Untuk mengendalikan keterampilannya, Mob mendaftarkan dirinya di bawah sayap Arataka Reigen, seorang penipu yang mengaku sebagai paranormal, yang mengeksploitasi kekuatan Mob untuk uang yang tidak seberapa jumlahnya. Sekarang, perintah mengusir roh jahat telah menjadi bagian dari kehidupan sehari-hari Mob yang monoton.\n\nNamun, energi psikis yang dia berikan hanyalah puncak gunung es; jika potensinya yang besar dan emosinya yang tidak terkendali mengamuk, peristiwa dahsyat yang akan membuatnya benar-benar tidak dapat dikenali akan dipicu. Mob hanya ingin menjalani kehidupan normal seperti orang-orang di sekitarnya, tetapi rentetan masalah terus mengejarnya tanpa henti. Dengan emosinya yang tertekan dan semakin tumbuh di dalam diri Mob, maka sedikit demi sedikit kekuatannya bisa mengancam dan menembus batasnya saat ia akhirnya bertemu esper lain seperti Claws.\n\nSinopsis\n\n‘Claw’ yang berusaha menguasai dunia dengan kekuatan supernatural mulai beraksi. Mob sudah selesai mengikuti marathon. Sepulang sekolah, dia melihat rumahnya terbakar. Keseharian normalnya seketika berubah menjadi situasi darurat!! Para eksekutif ‘Claw’ yang merencanakan teror dengan kekuatan supernatural mendatangi Mob dan Teru!? Komik ini dari pengarang One Punch Man. Salah satu komik terpopuler di Jepang saat ini yang menjadi pemenang Shogakukan Manga Award. Anime-nya sudah ditayangkan di berbagai negara.\n\nJudul: Mob Psycho 100 10\n\nRating: Untuk Pembaca Dewasa\n\nCerita & Ilustrasi: ONE\n\nTebal: 208 halaman\n\nFormat: Soft Cover\n\nTanggal Terbit: 26 Juni 2022\n\nDimensi: 12 x 18 cm\n\nBerat: 300 gram\n\nSeri/Versi Lain\n\nMob Psycho 100 01\n\nMob Psycho 100 02\n\nMob Psycho 100 03\n\nMob Psycho 100 04\n\nMob Psycho 100 05\n\nMob Psycho 100 06\n\nMob Psycho 100 07\n\nMob Psycho 100 08\n\nMob Psycho 100 09\n\nMob Psycho 100 10",
-      "gramediaUrl": "https://www.gramedia.com/products/mob-psycho-100-10",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_mob_psycho_100_11",
-      "slug": "mob-psycho-100-11",
-      "title": "Mob Psycho 100 11",
-      "originalTitle": "Mob Psycho 100",
-      "seriesId": "ser_mob-psycho-100",
-      "seriesName": "Mob Psycho 100",
-      "volume": 11,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/722010656_cover_Mob_Psycho_100_11.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2022-10-17",
-      "isWednesdayRelease": false,
-      "currentPrice": 36000,
-      "originalPrice": 40000,
-      "authors": [
-        "ONE"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230035890",
-      "synopsis": "Mob Psycho 100 adalah serial manga Jepang yang ditulis dan diilustrasikan oleh One. Itu diserialkan di situs web Ura Sunday Shogakukan dari April 2012 hingga Desember 2017. Itu juga tersedia online di aplikasi seluler Manga ONE Shogakukan sejak Desember 2014. Shogakukan menyusun bab-babnya menjadi enam belas volume tankōbon. Ceritanya mengikuti Shigeo Kageyama yang dijuluki Mob, seorang anak laki-laki yang memiliki kekuatan psikis yang kuat, dan perjuangannya untuk menemukan kebahagiaan sederhana yang dia cari.\n\nAdaptasi serial televisi anime telah diproduksi oleh Bones. Musim pertama ditayangkan antara Juli dan September 2016, diikuti oleh musim kedua, ditayangkan antara Januari dan April 2019. Musim ketiga ditayangkan perdana pada Oktober 2022. Adaptasi serial aksi langsung ditayangkan dari Januari hingga April 2018. Serial manga spin-off , berjudul Reigen, diserialisasikan di aplikasi Shogakukan Manga ONE pada tahun 2018. Di Amerika Utara, Dark Horse Comics melisensikan manga tersebut untuk terbitan bahasa Inggris pada tahun 2018. Sementara itu, Crunchyroll melisensikan serial anime tersebut untuk streaming, dengan sulih suara bahasa Inggris yang diproduksi oleh Bang Zoom! Entertainment pada Desember 2016, dan disiarkan di blok Toonami Adult Swim pada Oktober 2018.\n\nPada Juli 2016, manga tersebut telah beredar lebih dari 1,2 juta eksemplar. Pada tahun 2017, Mob Psycho 100 memenangkan Penghargaan Manga Shogakukan ke-62 dalam kategori shōnen. Adaptasi anime telah dianggap sebagai salah satu serial anime terbaik tahun 2010-an.\n\nSinopsis\n\nDimulailah pertarungan esper di kota yang dijarah. Setelah mendeklarasikan akan menguasai dunia, organisasi teroris esper ‘CLAW’ mulai menghancurkan kota. Reigen dan lainnya yang hendak menghentikan aksi keji mereka berangkat menuju Menara Budaya Chomi, tempat bos musuh berada. Namun, para eksekutif ‘CLAW’ yang luar biasa kuat telah menanti kedatangan mereka di kota….\n\nTentang Penulis\n\nOne (bergaya sebagai ONE) atau Tomohiro adalah nama samaran dari seorang seniman manga Jepang, yang terkenal dengan serial manga webnya One-Punch Man, yang kemudian dibuat ulang menjadi manga digital yang diilustrasikan oleh Yusuke Murata. One membuat serial webcomic One-Punch Man di situsnya sendiri tanpa penerbit resmi, sedangkan pembuatan ulang manganya diserialkan dalam versi web Weekly Young Jump. Serial terkenal lainnya, Mob Psycho 100, diserialkan dalam versi online Weekly Shōnen Sunday, Ura Sunday.\n\nDetail\n\nPenulis\n\nOne\n\nJumlah Halaman\n\n208\n\nPenerbit\n\nElex Media Komputindo\n\nTanggal Terbit\n\n17 Okt 2022\n\nFormat\n\nSoft Cover\n\nBerat\n\n0.14 kg\n\nISBN\n\n9786230035890\n\nLebar\n\n12.0 cm\n\nBahasa\n\nIndonesia\n\nPanjang\n\n18.0cm",
-      "gramediaUrl": "https://www.gramedia.com/products/mob-psycho-100-11",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_mob_psycho_100_13",
-      "slug": "mob-psycho-100-13",
-      "title": "Mob Psycho 100 13",
-      "originalTitle": "Mob Psycho 100",
-      "seriesId": "ser_mob-psycho-100",
-      "seriesName": "Mob Psycho 100",
-      "volume": 13,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/2/22/hv5qsewzgjbdnplrcxeitd.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2023-02-22",
-      "isWednesdayRelease": true,
-      "currentPrice": 36000,
-      "originalPrice": 40000,
-      "authors": [
-        "Elex Media Komputindo"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230045981",
-      "synopsis": "Mob Psycho 100 adalah serial manga Jepang yang ditulis dan diilustrasikan oleh One. Itu diserialkan di situs web Ura Sunday Shogakukan dari April 2012 hingga Desember 2017. Itu juga tersedia online di aplikasi seluler Manga ONE Shogakukan sejak Desember 2014. Shogakukan menyusun bab-babnya menjadi enam belas volume tankōbon. Ceritanya mengikuti Shigeo Kageyama yang dijuluki Mob, seorang anak laki-laki yang memiliki kekuatan psikis yang kuat, dan perjuangannya untuk menemukan kebahagiaan sederhana yang dia cari.\n\nAdaptasi serial televisi anime telah diproduksi oleh Bones. Musim pertama ditayangkan antara Juli dan September 2016, diikuti oleh musim kedua, ditayangkan antara Januari dan April 2019. Musim ketiga ditayangkan perdana pada Oktober 2022. Adaptasi serial aksi langsung ditayangkan dari Januari hingga April 2018. Serial manga spin-off , berjudul Reigen, diserialisasikan di aplikasi Shogakukan Manga ONE pada tahun 2018. Di Amerika Utara, Dark Horse Comics melisensikan manga tersebut untuk terbitan bahasa Inggris pada tahun 2018. Sementara itu, Crunchyroll melisensikan serial anime tersebut untuk streaming, dengan sulih suara bahasa Inggris yang diproduksi oleh Bang Zoom! Entertainment pada Desember 2016, dan disiarkan di blok Toonami Adult Swim pada Oktober 2018.\n\nPada Juli 2016, manga tersebut telah beredar lebih dari 1,2 juta eksemplar. Pada tahun 2017, Mob Psycho 100 memenangkan Penghargaan Manga Shogakukan ke-62 dalam kategori shōnen. Adaptasi anime telah dianggap sebagai salah satu serial anime terbaik tahun 2010-an.\n\nSinopsis Buku:\n\nSiapakah sang master pendiri!? ‘Sekte Psycho Helmet’… meluas!! Sebuah tanaman raksasa muncul di kota akibat pengaruh ledakan kekuatan supernatural. Orang menyebutnya ‘pohon keramat’. Para siluman dan anggota kelompok sekte baru terus berdatangan ke Kota Chomi dengan niat mendapatkan kekuatan super itu!! Di sisi lain, Mob mengalami berbagai macam momen penting…",
-      "gramediaUrl": "https://www.gramedia.com/products/mob-psycho-100-13",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_ruler_of_the_land_89_1",
-      "slug": "ruler-of-the-land-89-1",
-      "title": "Ruler of the Land 89",
-      "originalTitle": "Ruler of the Land",
-      "seriesId": "ser_ruler-of-the-land",
-      "seriesName": "Ruler of The Land",
-      "volume": 89,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/vtz47hd3-r.png",
-      "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2026-02-18",
-      "isWednesdayRelease": true,
-      "currentPrice": 32000,
-      "originalPrice": 32000,
-      "authors": [
-        "Jeon Keuk Jin & Yang Jae Hyun"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230072352",
-      "synopsis": "Pertarungan Sengit Han Bikwang dan Jaha Masin! Han Bikwang akhirnya mendapat izin dari Cheon Ma Shin Gun untuk bertarung melawan Jaha Masin. Demi menghadapi serangan Han Bikwang yang memadukan teknik bela diri dari golongan putih dan golongan hitam, Jaha Masin pun menggunakan teknik pedang dari Sinji. Di sisi lain, Galroe mengabaikan peringatan keras dari Jaha Masin dan melangkah menuju putranya, Pung Yeon, yang sedang terbaring dalam kondisi kritis. Selling Point: Cerita tentang perjalanan Han Bikwang untuk menjadi seorang pendekar hebat. Kali ini, Han Bikwang dan rekan-rekannya bertarung melawan Jaha Masin, yang merupakan orang terkuat di Sinji! ***** Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang. Komik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca. Ruler Of The Land adalah komik atau manhwa asal Korea karya Jeon Keuk Jin dan Yang Jae Hyun yang menceritakan tentang kisah persilatan klasik dengan melibatkan unsur komedi di dalam ceritanya.",
-      "gramediaUrl": "https://www.gramedia.com/products/ruler-of-the-land-89-1",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_one_piece_95",
-      "slug": "one-piece-95",
-      "title": "One Piece 95",
-      "originalTitle": "One Piece",
-      "seriesId": "ser_one-piece-manga",
-      "seriesName": "One Piece",
-      "volume": 95,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/721010082_Cov_One_Piece_95.jpg",
-      "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2021-02-24",
-      "isWednesdayRelease": true,
-      "currentPrice": 28800,
-      "originalPrice": 32000,
-      "authors": [
-        "Eiichiro Oda"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230023729",
-      "synopsis": "Sinopsis Buku\n\nSubjudul: “Petualangan Oden” Aliansi terburuk tercipta!! Sementara Kaido membentuk aliansi dengan monster itu, kelompok Luffy berhasil mengumpulkan kawan-kawan dan serbuan ke Onigashima pun sudah di depan mata. Tapi, di balik layar, situasi dunia mulai terguncang drastis. Simak kisah petualangan di lautan, One Piece.\n\nDi chapter sebelumnya, Hiyori dan Kawamatsu ternyata saling mengenal. Bahkan Gyukimaru, sang pencuri pedang Shushui pun ternyata mengenal Kawamatsu. Ternyata dia adalah penjaga dari Hiyori dan mereka sempat tinggal bersama.\n\nMelihat kondisi Kawamatsu yang menderita, Hiyori kemudian kabur. Saat kawamatsu akan menyerah, dia kemudian bertemu dengan Onimaru, rubah peliharaan mantan Daimyo di wilayah Ringo.\n\nFakta baru kemudian terungkap jika Gyukimaru sebenarnya merupakan Onimaru yang berubah wujud menajdi manusia. Nama Gyukimaru sendiri merupakan nama samaran yang sempat digunakan oleh Kawamatsu.\n\nPada volume 95 ini, kita akan mengetahui apakah Zoro mau menerima pedang milik Oden, Enma. Seperti yang dijelaskan Hiyori, pedang tersebut pernah melukai Kaido dan satu-satunya pedang yang melakukan hal tersebut.\n\nZoro mungkin orang yang keras kepala dan sangat menghormati Shushui, tapi mengingat dia suka sesuatu hal yang kuat rasanya dia akhirnya mau menerima tawaran Hiyori untuk memberikan Shushui dan menerima penggantinya yaitu Enma.\n\nInformasi lain :\n\nJudul: One Piece 95\n\nRating: Remaja\n\nCerita & Ilustrasi: Eiichiro Oda\n\nTebal: 208 halaman\n\nFormat: Soft cover\n\nTanggal Terbit: 24 Februari 2021\n\nDimensi : 11,4 x 17,2",
-      "gramediaUrl": "https://www.gramedia.com/products/one-piece-95",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_one_piece_96",
-      "slug": "one-piece-96",
-      "title": "One Piece 96",
-      "originalTitle": "One Piece",
-      "seriesId": "ser_one-piece-manga",
-      "seriesName": "One Piece",
-      "volume": 96,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/9786230026195_Cov_One_Piece_96_1.jpg",
-      "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2021-05-25",
-      "isWednesdayRelease": false,
-      "currentPrice": 28800,
-      "originalPrice": 32000,
-      "authors": [
-        "Eiichiro Oda"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230026195",
-      "synopsis": "Komik One Piece masuk ke dalam Guinness World Record untuk seri komik dengan cetakan terbanyak oleh seorang penulis. Sampai Oktober 2017, seri One Piece terjual lebih dari 430 juta copy seluruh dunia. Komik petualangan bajak laut dengan cerita yang super seru, dan berlatar belakang dunia yang diciptakan dengan imajinasi yang luar biasa. Komik ini tak pernah kehabisan ide baru yang terus membuat pembaca penasaran. Di tengah serunya alur cerita, One Piece selalu menekankan pentingnya Persahabatan. Komik ini menjadi Best Seller di seluruh dunia, dan menjadi komik yang wajib dibaca, tak hanya oleh pembaca putra, tapi juga oleh pembaca putri. Serial dan film animasi One Piece, serta merchandise-nya digemari di Indonesia. Akan diadaptasi jadi live action series.\n\nSinopsis\n\nKALAU TIDAK MENDIDIH, BUKAN ODEN NAMANYA\n\nBagaikan dituntun takdir, di tengah petualangannya dengan Shirohige, Oden berjumpa Roger!! Seperti apa dampak pertemuan kebetulan mereka pada dunia!? Sementara itu, di Negara Wano, Orochi diam-diam mulai bergerak saat Oden absen!? Simak kisah petualangan di lautan, One Piece!!\n\nJudul: One Piece 96\n\nRating: Untuk Pembaca Remaja Dewasa\n\nCerita & Ilustrasi: Eiichiro Oda\n\nTebal: 208 halaman\n\nFormat: Soft Cover\n\nTanggal Terbit: 25 Mei 2021\n\nDimensi: 11.4 cm x 17.2cm\n\nBerat: 150 gram",
-      "gramediaUrl": "https://www.gramedia.com/products/one-piece-96",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
       "id": "pub_light_novel_one_piece_loguetown_arc",
       "slug": "light-novel-one-piece-loguetown-arc",
       "title": "Light Novel One Piece: Loguetown Arc",
@@ -112153,186 +111041,6 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Retyped: explicit LN token in title [medium re-derived 2026-10-11] [medium re-derived 2026-10-11]",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_one_piece_101",
-      "slug": "one-piece-101",
-      "title": "One Piece 101",
-      "originalTitle": "One Piece",
-      "seriesId": "ser_one-piece-manga",
-      "seriesName": "One Piece",
-      "volume": 101,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/1/20/yfpafzhqm6rv6osubntbs5.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2023-01-20",
-      "isWednesdayRelease": false,
-      "currentPrice": 39000,
-      "originalPrice": 60000,
-      "authors": [
-        "Eiichiro Oda"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230045509",
-      "synopsis": "One Piece 85 ini merupakan sebuah komik remaja yang di dalamnya menceritakan tentang kembalinya Sanji ke Bajak Laut Topi Jerami. Setelah kebusukan Charlotte Pudding sang calon istri terbongkar, Sanji dalam kebimbangan besar. Jika ia pergi maka seluruh keluarga Vinsmoke alias Germa 66 akan dibantai oleh Bajak Laut Big Mom.\n\nSinopsis Buku:\n\nTampilnya Bintang Utama. Meyakini kebangkitan Luffy yang tidak akan pernah menyerah untuk menumbangkan Kaido, kawan-kawannya bertarung gagah berani menghadapi para petinggi Kaido!! Di sisi lain, duel orangtua-anak antara Kaido dan Yamato di atap istana Onigashima pun dimulai! Simak kisah petualangan di lautan, One Piece!!\n\nSelling Point:\n\n- Guinness World Record untuk seri komik dengan cetakan terbanyak oleh seorang penulis. Sampai Oktober 2017, seri One Piece terjual lebih dari 430 juta copy seluruh dunia.\n\n- Komik petualangan bajak laut dengan cerita yang super seru, dan berlatar belakang dunia yang diciptakan dengan imajinasi yang luar biasa. Komik ini tak pernah kehabisan ide baru yang terus membuat pembaca penasaran.\n\n- Di tengah serunya alur cerita, One Piece selalu menekankan pentingnya “Persahabatan”\n\n- Best Seller di seluruh dunia, dan menjadi komik yang wajib dibaca, tak hanya oleh pembaca putra, tapi juga oleh pembaca putri.\n\n- Serial dan film animasi One Piece, serta merchandise-nya digemari di Indonesia.\n\n- Akan diadaptasi jadi live action series.",
-      "gramediaUrl": "https://www.gramedia.com/products/one-piece-101",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_one_piece_party_06",
-      "slug": "one-piece-party-06",
-      "title": "One Piece Party 06",
-      "originalTitle": "One Piece Party",
-      "seriesId": "ser_one-piece-party",
-      "seriesName": "One Piece Party",
-      "volume": 6,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/2/22/buvn6ihhwzghzjfxy8be3f.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2023-02-22",
-      "isWednesdayRelease": true,
-      "currentPrice": 28800,
-      "originalPrice": 32000,
-      "authors": [
-        "Eiichiro Oda"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230046254",
-      "synopsis": "Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nSinopsis Buku:\n\nLuffy dan kawan-kawan terbawa terbang ke Pulau Langit lalu tertangkap oleh tangan iblis Enel! Simak komik berisi lima cerita pendek, termasuk cerita “Kelas Ninja”! Syukurlah kita punya nice buddies!\n\nSelling Point:\n\n-Guinness World Record untuk seri komik orisinalnya dengan cetakan terbanyak oleh seorang penulis. Sampai Juni 2017, seri One Piece terjual lebih dari 416 juta copy seluruh dunia.\n\n- Komik petualangan bajak laut dengan cerita yang super seru, dan berlatar belakang dunia yang diciptakan dengan imajinasi yang luar biasa. Komik ini tak pernah kehabisan ide baru yang terus membuat pembaca penasaran.\n\n- Di tengah serunya alur cerita, One Piece selalu menekankan pentingnya “Persahabatan”\n\n- Best Seller di seluruh dunia, dan menjadi komik yang wajib dibaca, tak hanya oleh pembaca putra, tapi juga oleh pembaca putri.\n\n- Serial dan film animasi One Piece, serta merchandise-nya digemari di Indonesia, dan seluruh Indonesia. - Akan diadaptasi jadi live action series",
-      "gramediaUrl": "https://www.gramedia.com/products/one-piece-party-06",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_one_piece_01_1",
-      "slug": "one-piece-01-1",
-      "title": "One Piece 01",
-      "originalTitle": "One Piece",
-      "seriesId": "ser_one-piece-manga",
-      "seriesName": "One Piece",
-      "volume": 1,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/6/27/dtk4llf7bhxhees7rn8nkp.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2023-06-27",
-      "isWednesdayRelease": false,
-      "currentPrice": 33750,
-      "originalPrice": 45000,
-      "authors": [
-        "Eiichiro Oda"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9789792039504",
-      "synopsis": "Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nSinopsis Buku:\n\nNamaku Luffy. Dahulu, ada seorang pria yang telah memiliki semua kekayaan, kemasyhuran, dan kekuasaan di dunia yang disebut One Piece, yaitu Gold Roger, si Raja Bajak Laut. Kalimat terakhir yang diucapkan sebelum kematiannya telah mendorong orang-orang di seluruh dunia untuk mengarungi lautan, mencari harta karun, termasuk aku. Aku ingin menjadi Raja Bajak Laut! Namun, untuk meraih cita-cita itu aku harus jadi kuat! Buah gomu-gomu yang kumakan, membuatku menjadi manusia karet. Ya! Sekarang saatnya mencari kru untuk kapal bajak lautku!\n\nSelling Point:\n\n- Guinness World Record untuk seri komik dengan cetakan terbanyak oleh seorang penulis. Sampai 2022, seri One Piece terjual lebih dari 500 juta copy seluruh dunia.\n\n- Komik petualangan bajak laut dengan cerita yang super seru, dan berlatar belakang dunia yang diciptakan dengan imajinasi yang luar biasa. Komik ini tak pernah kehabisan ide baru yang terus membuat pembaca penasaran.\n\n- Di tengah serunya alur cerita, One Piece selalu menekankan pentingnya “Persahabatan”\n\n- Best Seller di seluruh dunia, dan menjadi komik yang wajib dibaca, tak hanya oleh pembaca putra, tapi juga oleh pembaca putri.\n\n- Serial dan film animasi One Piece, serta merchandise-nya digemari di Indonesia. - Akan diadaptasi jadi live action series.",
-      "gramediaUrl": "https://www.gramedia.com/products/one-piece-01-1",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_kariage_kun_65",
-      "slug": "kariage-kun-65",
-      "title": "Kariage Kun 65",
-      "originalTitle": "Kariage Kun",
-      "seriesId": "ser_kariage-kun",
-      "seriesName": "Kariage Kun",
-      "volume": 65,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/products/ixr3r6364n.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2025-01-27",
-      "isWednesdayRelease": false,
-      "currentPrice": 24000,
-      "originalPrice": 40000,
-      "authors": [
-        "Masashi Ueda"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230059858",
-      "synopsis": "Dia kembaliii!! 0__0|| Siap-siap berlatih menahan emosi bersama Kariage, teman-teman! ^__^\n\n*****\n\nKariage Kun 65 adalah salah satu volume dari seri manga komedi populer karya Masashi Ueda. Seri ini pertama kali diterbitkan pada tahun 1981 dan terus menarik perhatian pembaca karena humor yang ringan dan relatable.\n\nCerita dalam Kariage Kun berpusat pada kehidupan sehari-hari seorang pegawai kantoran bernama Kariage Kun, yang dikenal memiliki sifat usil, cerdik, dan suka menciptakan lelucon di tempat kerjanya. Meski sering bertingkah jahil, ia sebenarnya adalah orang yang baik hati dan penuh ide kreatif, yang sering kali memanfaatkan situasi biasa menjadi momen yang penuh tawa.\n\nVolume ke-65 melanjutkan cerita khas seri ini dengan tema humor yang fokus pada dinamika kantor, hubungan antarpegawai, dan situasi absurd yang menghibur. Setiap bab biasanya berdiri sendiri, sehingga pembaca dapat menikmati lelucon tanpa harus mengikuti alur cerita sebelumnya\n\n****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
-      "gramediaUrl": "https://www.gramedia.com/products/kariage-kun-65",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_lc_giant_killing_56",
-      "slug": "lc-giant-killing-56",
-      "title": "Level Comic: Giant Killing 56",
-      "originalTitle": "Giant Killing",
-      "seriesId": "ser_giant-killing",
-      "seriesName": "Giant Killing",
-      "volume": 56,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/722010445_cov_Giant_Killing_56.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2022-07-10",
-      "isWednesdayRelease": false,
-      "currentPrice": 27000,
-      "originalPrice": 30000,
-      "authors": [
-        "Tsujitomo, Masaya Tsunamoto"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230033865",
-      "synopsis": "Paruh awal pertandingan semifinal Piala Asia melawan Australia telah berakhir! Jepang kehilangan keunggulan 2 angka dan mengingat kembali kekecewaan di Piala Dunia. Hanamori, sang ace penyendiri, bangkit untuk mengubah suasana berat di ruang ganti! Paruh akhir adalah waktu untuk “saling mencocokkan jawaban” pada saat istirahat! Para pemain berdiri di lapangan untuk menemukan “jawaban” mereka masing-masing dengan semangat baru!!\n\nJepang tertinggal 1 angka pada semifinal yang berjalan dengan sengit! Jepang bertaruh dengan memasukkan sang joker, Natsuki! Di lapangan, kedua tim saling menyerang dan bertahan. Sosok yang menjadi pusat kontribusi dalam pertandingan itu adalah pemain muda yang dulu dipanggil pengecut. Tsubaki mampu melihat dunia baru setelah melewati banyak pertandingan. Sekaranglah waktunya untuk mengubah rasa percaya diri yang terpupuk menjadi sebuah keyakinan!! “Samar-samar aku merasa bahwa pemain ini akan segera melampaui para pemain di seluruh Jepang.”\n\nSemifinal Piala Asia mencapai puncaknya dalam pertarungan sengit antara Jepang dan Australia! Tsubaki menciptakan gol kemenangan yang luar biasa, tetapi ia menjadi bimbang akibat situasi tak terduga yang menimpa Kubota! Sementara itu, ETU akhirnya memulai pertandingan pertama mereka di Piala Kaisar. Pertarungan para pemain merah-hitam dimulai kembali, dengan tekad menjadi pemeran utama dalam pertandingan terakhir di musim ini!!\n\nDetail\n\nPenulis\n\nTsujitomo, Masaya Tsunamoto\n\nJumlah Halaman\n\n232\n\nPenerbit\n\nElex Media Komputindo\n\nTanggal Terbit\n\n10 Jul 2022\n\nFormat\n\nSoft Cover\n\nBerat\n\n0.14 kg\n\nISBN\n\n9786230033865\n\nLebar\n\n13.0 cm\n\nBahasa\n\nIndonesia\n\nPanjang\n\n18.0cm",
-      "gramediaUrl": "https://www.gramedia.com/products/lc-giant-killing-56",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -112595,7 +111303,7 @@
       "title": "Detektif Conan The Movie: The Last Wizard Of The Century 01",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": null,
       "category": "Manga",
       "format": "MANGA",
@@ -112631,7 +111339,7 @@
       "title": "Detektif Conan The Movie: Crossroad In The Ancient Capital 01",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 1,
       "category": "Manga",
       "format": "MANGA",
@@ -112667,7 +111375,7 @@
       "title": "Detektif Conan The Movie: Crossroad In The Ancient Capital 2",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 2,
       "category": "Manga",
       "format": "MANGA",
@@ -112703,7 +111411,7 @@
       "title": "Detektif Conan The Movie: The Last Wizard Of The Century 2",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": null,
       "category": "Manga",
       "format": "MANGA",
@@ -112739,7 +111447,7 @@
       "title": "Detektif Conan The Movie: The Raven Chaser 01",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 1,
       "category": "Manga",
       "format": "MANGA",
@@ -112775,7 +111483,7 @@
       "title": "Detektif Conan The Movie: Crimson Love Letter 1",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 1,
       "category": "Manga",
       "format": "MANGA",
@@ -112847,7 +111555,7 @@
       "title": "Detektif Conan The Movie: Crimson Love Letter 2",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 2,
       "category": "Manga",
       "format": "MANGA",
@@ -112883,7 +111591,7 @@
       "title": "Detektif Conan The Movie: The Raven Chaser 02",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 2,
       "category": "Manga",
       "format": "MANGA",
@@ -113027,7 +111735,7 @@
       "title": "Detektif Conan The Movie: The Lost Ship in the Sky Vol. 1",
       "originalTitle": "Detektif Conan The Movie",
       "seriesId": "ser_detektif-conan-the",
-      "seriesName": "Detektif Conan The",
+      "seriesName": "Detektif Conan The Movie",
       "volume": 1,
       "category": "Manga",
       "format": "MANGA",
@@ -113158,78 +111866,6 @@
       "isbn13": "9786230031403",
       "synopsis": "Makoto Kyogoku (Kyogoku Makoto Kyogoku Makoto?) adalah karakter dalam manga dan anime franchise Detective Conan dan bunga cinta Sonoko Suzuki.\n\nMakoto bersekolah di Haido High School, di mana ia menjadi anggota terkemuka, dan akhirnya menjadi kapten, dari tim karatenya dan dikenal sebagai \"The Prince of Kicks\". Dia melihat Sonoko bersorak pada temannya Ran dengan semangat besar selama turnamen seni bela diri, dan menjadi tertarik padanya.\n\nBeberapa waktu kemudian, dia bekerja di penginapan keluarganya sebagai pelayan, di mana dia bertemu lagi dengan Sonoko, kali ini ditemani Ran dan Conan. Namun, Sonoko segera dibuntuti oleh seorang pembunuh berantai gila yang mencurigainya telah memotretnya pada pembunuhan terakhirnya (yang dia tidak lakukan) dan karena itu ingin membungkamnya sebagai saksi potensial dan membunuhnya karena dia membencinya. gadis berambut cokelat pada umumnya.\n\nMakoto menyelamatkannya tepat pada waktunya, mendapatkan kasih sayang, tetapi partisipasinya yang konstan dalam kompetisi seni bela diri dan masa belajar di luar negeri mencegah mereka untuk sering bertemu. Sonoko selalu melakukan yang terbaik untuk mempertahankan kontak dengannya, termasuk mengiriminya pernak-pernik kecil dan hadiah yang dia buat sendiri, dan Makoto tetap setia padanya. Dia biasanya terjebak dalam salah satu skema romantis konyol Sonoko. Keterampilan bertarungnya telah terbukti sangat berguna bagi Conan, setelah menyelamatkan Conan, Sonoko, dan Ran dari bahaya berbahaya berkali-kali.\n\nSinopsis\n\nMakoto Kyogoku, seorang karateka terkuat yang banyak dibicarakan di antara tokoh yang muncul dalam “Detektif Conan”. Kekuatannya itu bahkan sampai dijuluki sebagai “Pangeran Tendangan”. Di sisi lain, dia juga punya sifat apa adanya dan punya pandangan yang kuno… Inilah kompilasi episode pilihan, mulai dari kemunculan pertama Makoto Kyogoku, sampai pertarungannya melawan Kaito Kid! Dengan membaca ini, kalian pasti akan langsung memahami pesona Makoto Kyogoku!!\n\nDetail\n\nPenulis\n\nAoyama Gosho\n\nJumlah Halaman\n\n304\n\nPenerbit\n\nElex Media Komputindo\n\nTanggal Terbit\n\n27 Mar 2022\n\nFormat\n\nSoft Cover\n\nBerat\n\n0.155 kg\n\nISBN\n\n9786230031403\n\nLebar\n\n11.4 cm\n\nBahasa\n\nIndonesia\n\nPanjang\n\n17.2cm",
       "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-makoto-kyogoku-selection",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_new_kobochan_40",
-      "slug": "new-kobochan-40",
-      "title": "New Kobochan 40",
-      "originalTitle": "New Kobochan",
-      "seriesId": "ser_new-kobochan",
-      "seriesName": "New Kobochan",
-      "volume": 40,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/9786230029097_KOBOCHAN_40.jpg",
-      "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
-      "releaseDate": "2021-11-24",
-      "isWednesdayRelease": true,
-      "currentPrice": 22500,
-      "originalPrice": 25000,
-      "authors": [
-        "Masashi Ueda"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230029097",
-      "synopsis": "Siapa pecinta Kobo Chan? Angkat tangan! Kali ini kita bawain komik Kobochan edisi ke 40! Yang belum tahu Kobochan sini merapat.\n\nKobo-Chan adalah sebuah komik manga dari Jepang yang dibuat oleh Masashi Ueda. Kobo-chan pertama kali terbit di surat kabar Yomiuri Shimbun pada 1 April 1982. Mulai Desember di tahun yang sama, Soyosha menerbitkan serial ini dalam bentuk buku. Sampai Maret 1999, Yomiuri Shimbun telah menerbitkan 6.000 strip Kobo-chan. Soyosha menerbitkan Volume 60 pada 22 Oktober 2003. Houbunsha mulai menerbitkan komik ini mulai 6 Mei 2004. Di Indonesia Kobo-chan diterbitkan oleh Elex Media Komputindo.\n\nNippon Television mulai menayangkan serial anime televisi Kobo-chan setiap minggu mulai tanggal 19 Oktober 1992 hingga 21 Maret 1994. Di Indonesia, serial ini pernah ditayangkan di RCTI lho, tepat pada tanggal 2 Januari 2000 sampai dengan 10 Juni 2001 dan NET. sejak tanggal 18 Mei 2013.\n\nSinopsis\n\nNenek kesal karena nggak berhasil melepaskan plastic wrap dari gulungannya dengan rapi. Tapi, akhirnya Nenek punya ide memanfaatkan plastik yang tidak terpakainya. Wah, Nenek berjiwa muda ternyata. Ayoo, apa kalian bisa tebak Nenek memakainya untuk apa?^^\n\nKeterangan Buku Fisik:\n\nJudul\t: New Kobochan 40\n\nPenulis\t: Masashi Ueda\n\nPenerbit\t: Elex Media Komputindo\n\nTerbit\t: 23 November 2021\n\nHalaman: 136\n\nBahasa\t: Indonesia\n\nISBN\t: 9786230029097",
-      "gramediaUrl": "https://www.gramedia.com/products/new-kobochan-40",
-      "classificationStatus": "ACCEPTED",
-      "classificationConfidence": 0.95,
-      "classificationReason": "Verified Manga from Elex Media",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null
-    },
-    {
-      "id": "pub_black_butler_34",
-      "slug": "black-butler-34",
-      "title": "Black Butler 34",
-      "originalTitle": "Black Butler",
-      "seriesId": "ser_black-butler",
-      "seriesName": "Black Butler",
-      "volume": 34,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/products/332cb1er43.jpg",
-      "status": "PUBLISHED",
-      "availability": "AVAILABLE",
-      "releaseDate": "2025-01-09",
-      "isWednesdayRelease": false,
-      "currentPrice": 27000,
-      "originalPrice": 45000,
-      "authors": [
-        "Yana Toboso"
-      ],
-      "genres": [
-        "Manga"
-      ],
-      "isbn13": "9786230068317",
-      "synopsis": "Jangan lupa! Finny dan Snake mengunjungi panti asuhan yang baru didirikan di wilayah timur. Orang yang menyambut mereka adalah seseorang yang memiliki hubungan dengan mereka. Pertemuan itu menimbulkan kekacauan dalam pelaksanaan misi. Api neraka merah memadamkan mimpi kecil seorang gadis cantik, mimpi yang ingin diperoleh teman-temannya. Inilah komik butler paling penuh kebencian sedunia, dipersembahkan untuk Anda.\n\nSelling Point:\n\nSeri Black Butler yang terkenal dengan tema gothic-nya yang memukau! Komik best seller di Jepang yang telah diproduksi menjadi drama cd, anime, musical, dan video game. Pada tahun 2009 telah terjual lebih dari satu juta kopi di seluruh Jepang.\n\nBlack Butler dibuat oleh Yana Toboso dan diterbitkan tahun 2006 yang kemudian diadaptasi menjadi anime tahun 2008 dengan 24 episode dalam season pertama. Bercerita tentang seorang anak bernama Ciel Phantomhive yang hidup di manor megah bersama kedua orangtuanya. Berlatarkan era Victoria di London, Ciel mendapati manor tempat tinggalnya hangus terbakar bersamaan dengan orang tua serta anjing peliharaan saat ulang tahunnya ke 10. Ia kemudian diculik dan dijual untuk dijadikan persembahan sebagai pelengkap ritual pemanggilan iblis.\n\nSetelah sebulan terperangkap dan menderita, ia membuat perjanjian dengan sang Iblis. Sang Iblis berjanji akan membalas dendam kedua orang tuanya serta menjadi pelayan Ciel dan pelindungnya. Namun sebagai gantinya, Ciel harus bersedia menyerahkan jiwanya. Ciel kembali ke kediamannya dan bertemu Sebastian. Keduanya memulai perjalanannya memecahkan kasus-kasus yang melibatkan dunia bawah tanah untuk menghapus keresahan hati sang Ratu. Selain itu, keduanya juga menunggu pembunuh yang membunuh kedua orang tuanya untuk datang dan dibalaskan dendamnya.\n\n****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
-      "gramediaUrl": "https://www.gramedia.com/products/black-butler-34",
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media",
@@ -114611,7 +113247,7 @@
       "title": "Haikyu!! The Novel 5",
       "originalTitle": "Haikyu!! The Novel",
       "seriesId": "ser_haikyu-the",
-      "seriesName": "Haikyu!! The",
+      "seriesName": "Haikyu!! The Novel",
       "volume": 5,
       "category": "Light Novel",
       "format": "LIGHT_NOVEL",
@@ -114889,6 +113525,42 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_eighty_six_ep_4__under_pressure",
+      "slug": "eighty-six-ep-4--under-pressure",
+      "title": "Eighty Six Ep. 4 : Under Pressure",
+      "originalTitle": "Eighty Six",
+      "seriesId": "ser_eighty-six",
+      "seriesName": "Eighty Six",
+      "volume": 4,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/r39xrrv-p4.jpg",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "releaseDate": "2025-08-26",
+      "isWednesdayRelease": false,
+      "currentPrice": 95200,
+      "originalPrice": 119000,
+      "authors": [
+        "Asato Asato/ Shirabii"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230317132",
+      "synopsis": "Menceritakan mengenai sekelompok pemuda dan pemudi yang berasal dari Distrik 86 Republik San Magnolia, sebuah distrik tidak terdaftar berisi penduduk terbuang yang dipaksa untuk bertempur melindungi Republik San Magnolia dengan menjadi “awak dalam mesin tempur tanpa awak”.\n\nSebagian besar penduduk di Distrik 1-85 tidak memandang 86 sebagai manusia, tetapi sebagai hewan ternak yang bisa dikorbankan dalam perang sesukanya. Namun, masih ada beberapa orang yang tidak setuju dengan itu, salah satunya adalah Lena, gadis penduduk Distrik 1 yang bertugas sebagai Handler, orang yang mengomando pasukan 86 dari jauh. Lena sangat peduli dengan para pasukan 86. khususnya pasukan yang belum lama ini dipimpinnya yaitu Skuadron Spearhead, yaitu skuadron yang dipimpin oleh pemuda yang memiliki julukan Dewa Kematian, Shin.\n\nKeunggulan\t:\n\n-\tMendapatkan Grand Prize di penghargaan Dengeki Novel Award ke-23 tahun 2016.\n\n-\tBeberapa kali menduduki peringkat 5 besar dalam voting popularitas Kono Light Novel ga Sugoi! (This Light Novel is Amazing!) sejak tahun 2018.\n\n-\tLight novelnya sendiri sudah terjual hampir 2 juta eksemplar di Jepang.\n\n-\tLight novel ini diadaptasi menjadi anime yang digarap oleh A1 Pictures, studio anime yang sangat populer dan sudah menggarap banyak anime terkenal. Musiknya pun ditangani oleh Hiroyuki Sawano, composer musik anime ternama.\n\n-\tAnime season 1-nya terdiri dari 2 bagian, bagian pertama tayang di tahun 2021, bagian kedua tayang di tahun 2022. Season 2-nya sangat ditunggu-tunggu oleh penggemar anime\n\n-\tMengusung beberapa topik yang banyak dibahas saat ini seperti diskriminasi, peperangan, politik, kemanusiaan, dsb tapi dikemas dengan ringan sehingga bisa dinikmati berbagai kalangan.",
+      "gramediaUrl": "https://www.gramedia.com/products/eighty-six-ep-4--under-pressure",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!",
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -115768,24 +114440,6 @@
       "description": "Official Guidebook pertama BLACK CLOVER!! Terdapat panduan cerita yang akan mengungkap misteri dunia dan data karakter sebanyak lebih dari 100 orang! Lalu, ada cerita rahasia kelahiran BLACK CLOVER juga dalam laporan khusus Tabata-sensei sang pengarang. Untuk pertama kalinya juga dimuat versi cerita lepas BLACK CLOVER! Buku yang wajib dimiliki seorang penggemar!\n\nSelling Point:\n\n- Komik Action populer dari majalah \"Shounen Jump\" yang sampai saat ini pun anime-nya masih tayang di Jepang dan Movie-nya telah tayang di 2023. Rilis komiknya pun teratur.\n\n- Gambar keren, cerita super seru! Kini ada \"Official Guidebook\"-nya yang berisi detail dan rahasia-rahasia para karakter! Plus beberapa lembar Halaman Warna eksklusif dan Cerita Lepas yang tidak ada di mana pun.\n\n- Kertas Book Paper\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
-      "id": "ser_black-jack",
-      "slug": "black-jack",
-      "name": "Black Jack",
-      "originalTitle": "Black Jack",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "author": "Osamu Tezuka",
-      "type": "MANGA",
-      "status": "ONGOING",
-      "totalVolumes": 6,
-      "latestVolume": 6,
-      "availableVolumes": [
-        6
-      ],
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-4---cl050.jpg",
-      "description": "Black Jack dibayar oleh seorang dokter senior untuk membantunya mengoperasi seorang pasien. Di tengah-tengah operasi, terungkap  kalau dokter senior tersebut salah mendiagnosis pasien sehingga berakhir kritis. Ia juga tidak berpengalaman dalam menangani prosedur operasi.\n\nBlack Jack yang tidak mau buang waktu segera mengambil alih ruang operasi dan menyelesaikan prosedurtersebut. Berhasilkah Black Jack menyelamatkan pasien keluar dari masa-masa kritis di meja operasi?\n\nSelling Point:\n\n- Berisi ratusan cerita pendek yang berdiri sendiri\n\n- Mendapat penghargaan manga kodansha pertama untuk kategori shonen\n\n- \"Dewa Manga\" dalam dunia manga/komik.\n\n- Black Jack juga menjadi salah satu inspirasi dari banyak karya medis modern lain, baik\n\nmanga maupun karya media lainnya.\n\n- Manga ini diadaptasi menjadi film, anime dan live action berkali-kali\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
-    },
-    {
       "id": "ser_black-jack-bind-up",
       "slug": "black-jack-bind-up",
       "name": "Black Jack Bind Up",
@@ -115795,7 +114449,7 @@
       "author": "Osamu Tezuka",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 5,
+      "totalVolumes": 6,
       "latestVolume": 5,
       "availableVolumes": [
         1,
@@ -117367,7 +116021,7 @@
     {
       "id": "ser_detektif-conan-the",
       "slug": "detektif-conan-the",
-      "name": "Detektif Conan The",
+      "name": "Detektif Conan The Movie",
       "originalTitle": "Detektif Conan The",
       "publisherId": "pub_elex",
       "publisherName": "Elex Media Komputindo",
@@ -118915,7 +117569,7 @@
     {
       "id": "ser_haikyu-the",
       "slug": "haikyu-the",
-      "name": "Haikyu!! The",
+      "name": "Haikyu!! The Novel",
       "originalTitle": "Haikyu!! The",
       "publisherId": "pub_mnc",
       "publisherName": "m&c! Publishing",
@@ -121955,7 +120609,7 @@
     {
       "id": "ser_naruto-the",
       "slug": "naruto-the",
-      "name": "Naruto The",
+      "name": "Naruto The Movie",
       "originalTitle": "Naruto The",
       "publisherId": "pub_elex",
       "publisherName": "Elex Media Komputindo",
@@ -123768,38 +122422,6 @@
       "description": "Selamat datang. Apakah ini kali pertama Anda di sini? Tidak selamanya koktail mengandung alkohol. Sebagai gantinya, kami memasukkan sesuatu yang spesial.\n\nMengikuti jejak seekor kucing hitam segelap malam dengan mata biru zamrud, Na-woo tiba pada sebuah bar koktail magis tanpa tamu di gang kecil pusat kota. Alih-alih alkohol, bar itu mencampurkan suatu hal menarik yang tak ditawarkan bar lain; kesempatan untuk melakukan perjalanan waktu.\n\nMelalui berbagai racikan bartender misterius menggunakan shaker, sebuah portal perjalanan waktu terbuka bagi Na-woo untuk mematahkan takdir cinta yang menyakitkan, menghentikan sebuah kecelakaan maut, dan membebaskan dirinya dari penyesalan dan rasa bersalah di masa lalu.\n\n******\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan. Membaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi. Pilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca. Temukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik. Bergabunglah dalam kelompok membaca atau forum literasi. Diskusikan buku yang Anda baca dan dapatkan rekomendasi dari sesama pembaca. Buat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.\n\nLibatkan keluarga dalam kegiatan membaca. Bacakan cerita untuk anak-anak atau ajak mereka membaca bersama. Ini menciptakan ikatan keluarga yang erat melalui kegiatan positif. Jangan ragu untuk menjelajahi genre baru. Terkadang, kejutan terbaik datang dari buku yang tidak pernah Anda bayangkan akan Anda nikmati. Manfaatkan teknologi dengan membaca buku digital atau bergabung dalam komunitas literasi online. Ini membuka peluang untuk terhubung dengan pembaca dari seluruh dunia."
     },
     {
-      "id": "ser_shaman-king-complete",
-      "slug": "shaman-king-complete",
-      "name": "Shaman King Complete",
-      "originalTitle": "Shaman King Complete",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "author": "Hiroyuki Takei",
-      "type": "MANGA",
-      "status": "ONGOING",
-      "totalVolumes": 16,
-      "latestVolume": 16,
-      "availableVolumes": [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16
-      ],
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/251e1mtnti.jpg",
-      "description": "Shaman Fight berakhir dengan Hao sebagai pemenangnya. Hao tertidur untuk dapat menyatu dengan Roh Agung. Yoh dan kawan-kawan harus melintasi lorong-lorong di Benua Mu demi sampai ke tempat Hao. Pendeta Patch yang menanti mereka di Plant 1 adalah Namari. Ryu kalah, Horohoro dan Ren menyerang berikutnya, tapi….\n\n***\n\nKomik Shaman King Complete ini merupakan sebuah karya penulis Hiroyuki Takei. Menceritakan mengenai kisah pertarungan Yoh yang berusaha untuk menghalangi pembalasan dendam roh pada Amidamaru. Roh tersebut memiliki dendam kepada Amidamaru karena kisah di masa lampau mereka, dan hal tersebut menjadi awal dari kisah seru di dalam cerita ini. Pertarungan tentunya tidak dapat dihindari, namun siapakah yang akan menang nantinya?\n\nKomik ini hadir dengan kisah yang unik apalagi berbagai konflik yang muncul membuat ceritanya menjadi sangat seru. Ilustrasi gambar p"
-    },
-    {
       "id": "ser_shaman-king-complete-edition",
       "slug": "shaman-king-complete-edition",
       "name": "Shaman King Complete Edition",
@@ -123809,7 +122431,7 @@
       "author": "Hiroyuki Takei",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 14,
+      "totalVolumes": 16,
       "latestVolume": 14,
       "availableVolumes": [
         1,
