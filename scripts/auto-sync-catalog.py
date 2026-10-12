@@ -17,6 +17,15 @@ from concurrent.futures import ThreadPoolExecutor
 
 from adapters import ElexAdapter, MCAdapter, PGIAdapter
 
+# Consistency primitives (shared with src/lib/series-consistency.ts)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from catalog_consistency import (
+    validate_price,
+    detect_junk_title,
+    find_duplicate_series,
+    normalize_series_name,
+)
+
 # Positive and Negative classification signals
 MERCHANDISE_REGEX = re.compile(
     r'\b(acrylic|akrilik|standee|keychain|key\s*ring|gantungan\s*kunci|tote\s*bag|totebag|sling\s*bag|backpack|tas|pouch|dompet|tumbler|mug|gelas|cushion|bantal|mousepad|desk\s*mat|tapestry|stickers?|stikers?|poker-|amulet|eye\s*mask|figures?|figurine|plush|boneka|monopoly|pin\s*badge|badge|lanyard|washi\s*tape|postcards?|poster|art\s*print|clear\s*file|clear\s*folder|5-layer\s*folder|folder|card\s*pack|booster\s*pack|kartu\s*koleksi|tarot|flash\s*card|reflection\s*card|t-?shirt|kaos|stationary|stationery|binder|notebook|buku\s*tulis|memo\s*pad|pencil\s*case|kotak\s*pensil|merchandise|merch|origami)\b',
@@ -574,6 +583,19 @@ def run_sync(catalog_path):
         current_price = final_price
         original_price = slice_price if slice_price > current_price else current_price
 
+        # Consistency: validate prices (auto-fix currentPrice > originalPrice swap)
+        _pvalid, _pissues, _pfc, _pfo = validate_price(current_price, original_price)
+        if _pfc is not None:
+            current_price, original_price = _pfc, _pfo
+        for _iss in _pissues:
+            print(f"  [price-warn] {slug}: {_iss}")
+
+        # Consistency: junk-title safety net (mirrors classify_book)
+        _junk = detect_junk_title(title)
+        if _junk:
+            print(f"  [junk-skip] {slug}: {_junk}")
+            continue
+
         is_oos = sp.get('is_oos') if sp.get('is_oos') is not None else item.get('is_oos', False)
         availability = 'OUT_OF_STOCK' if is_oos else 'AVAILABLE'
 
@@ -856,9 +878,16 @@ def run_sync(catalog_path):
     all_snapshots = existing_price_snapshots + new_snapshots
     catalog['lastUpdated'] = finished_at
     catalog['priceSnapshots'] = all_snapshots
-    sync_runs = catalog.get('syncRuns', [])
-    sync_runs.insert(0, sync_run)
+    sync_runs = catalog.get('syncRuns', [])    sync_runs.insert(0, sync_run)
     catalog['syncRuns'] = sync_runs[:20] # keep last 20
+
+    # Consistency: report potential duplicate series (same normalized name)
+    dupes = find_duplicate_series(catalog.get('series', []))
+    if dupes:
+        print(f"\n[consistency] {len(dupes)} potential duplicate series groups:")
+        for norm_key, grp in sorted(dupes.items()):
+            names = [f"'{s.get('name')}' [{s.get('id')}]" for s in grp]
+            print(f"  - {norm_key}: {', '.join(names)}")
 
     with open(catalog_path, 'w', encoding='utf-8') as f:
         json.dump(catalog, f, ensure_ascii=False, indent=2)

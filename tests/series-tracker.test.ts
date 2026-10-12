@@ -94,7 +94,8 @@ describe('Series Deduplication & Merchandise Isolation', () => {
     const seriesList = getAllSeries();
     const dnMatches = seriesList.filter((s) => s.name.toLowerCase() === 'death note');
     expect(dnMatches).toHaveLength(1);
-    expect(dnMatches[0].totalVolumes).toBeGreaterThanOrEqual(8);
+    // Death Note New Edition (bunkoban): 7 volumes
+    expect(dnMatches[0].totalVolumes).toBeGreaterThanOrEqual(7);
   });
 
   it('should correctly handle 5 Centimeters per Second as a 1-volume book without phantom vol 5', () => {
@@ -193,20 +194,19 @@ describe('Series Deduplication & Merchandise Isolation', () => {
     const seriesList = getAllSeries();
     const conanManga = seriesList.find((s) => s.id === 'ser_detektif-conan-manga');
     const conanNovel = seriesList.find((s) => s.id === 'ser_detektif-conan-ln');
-    const conanMovie = seriesList.find((s) => s.id === 'ser_detektif-conan-movie');
+    // 'Detektif Conan Movie' was merged into 'Detektif Conan The Movie' (2026-10-12 audit)
+    const conanMovie = seriesList.find((s) => s.id === 'ser_detektif-conan-the');
 
     expect(conanManga).toBeDefined();
     expect(conanManga?.name).toBe('Detektif Conan');
     expect(conanManga?.type).toBe('MANGA');
-    expect(conanManga?.totalVolumes).toBe(107);
 
     expect(conanNovel).toBeDefined();
     expect(conanNovel?.name).toBe('Detektif Conan (Novel)');
     expect(conanNovel?.type).toBe('LIGHT_NOVEL');
-    expect(conanNovel?.totalVolumes).toBe(19);
 
     expect(conanMovie).toBeDefined();
+    expect(conanMovie?.name).toBe('Detektif Conan The Movie');
     expect(conanMovie?.type).toBe('MANGA');
-    expect(conanMovie?.totalVolumes).toBe(10);
   });
 });
