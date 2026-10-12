@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { CoverImage } from '../books/cover-image';
 import { Series, Book } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
 import { Layers, Search, BookOpen, X, ArrowRight, ChevronDown } from 'lucide-react';
+
+const PAGE_SIZE = 60;
 
 interface SeriesDirectoryViewProps {
   allSeries: Series[];
@@ -20,6 +22,8 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'COMPLETED' | 'ONGOING'>('ALL');
   const [sortBy, setSortBy] = useState<'name' | 'volumes_high' | 'volumes_low'>('name');
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
   // Map seriesId -> Set of owned book IDs
   const ownedSeriesMap = useMemo(() => {
@@ -67,6 +71,27 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         return a.name.localeCompare(b.name);
       });
   }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
+
+  // Reset pagination when filters change
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
+
+  // Infinite scroll: load more when sentinel enters viewport
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((c) => c + PAGE_SIZE);
+        }
+      },
+      { rootMargin: '800px' }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   const publishers = useMemo(() => {
     const map = new Map<string, string>();
@@ -193,7 +218,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {filteredSeries.map((series) => {
+          {filteredSeries.slice(0, visibleCount).map((series) => {
             const ownedBookIds = ownedSeriesMap.get(series.id) || new Set();
             const ownedCount = ownedBookIds.size;
             const percent =
@@ -299,6 +324,15 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
               </Link>
             );
           })}
+        </div>
+      )}
+
+      {/* Infinite scroll sentinel + counter */}
+      {filteredSeries.length > 0 && (
+        <div ref={sentinelRef} className="pt-4 text-center">
+          <p className="text-[11px] font-mono text-editorial-faint">
+            Menampilkan {Math.min(visibleCount, filteredSeries.length)} dari {filteredSeries.length.toLocaleString('id-ID')} seri
+          </p>
         </div>
       )}
     </div>
