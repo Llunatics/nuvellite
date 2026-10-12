@@ -21,8 +21,8 @@ PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 CATALOG_PATH = os.path.join(PROJECT_ROOT, "src", "data", "catalog.json")
 LISTING_PATH = os.path.join(PROJECT_ROOT, "src", "data", "catalog-listing.json")
 
-# Fields to keep for listing/card views
-LISTING_BOOK_FIELDS = {
+# Fields to keep for listing/card views (ordered list for deterministic output)
+LISTING_BOOK_FIELDS = [
     "id",
     "slug",
     "title",
@@ -47,7 +47,7 @@ LISTING_BOOK_FIELDS = {
     "authors",
     "classificationStatus",
     "gramediaUrl",
-}
+]
 
 
 def split_catalog():
@@ -78,10 +78,11 @@ def split_catalog():
         "publishers": publishers,
         "books": listing_books,
         "series": series,
+        "priceSnapshots": catalog.get("priceSnapshots", []),
     }
 
     with open(LISTING_PATH, "w", encoding="utf-8") as f:
-        json.dump(listing_catalog, f, ensure_ascii=False, separators=(",", ":"))
+        json.dump(listing_catalog, f, ensure_ascii=False, indent=2)
 
     listing_size = os.path.getsize(LISTING_PATH)
     reduction = ((full_size - listing_size) / full_size) * 100

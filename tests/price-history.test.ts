@@ -73,5 +73,54 @@ describe('Real Price History Service', () => {
     expect(summary.originalPrice).toBe(45000);
     expect(summary.currentPrice).toBe(45000);
   });
+
+  it('should load legacy snapshots (price-only schema) via initializePriceSnapshots', () => {
+    // Old sync wrote snapshots with only `price`, no `currentPrice`/`originalPrice` keys
+    initializePriceSnapshots([
+      { id: 's1', bookId: 'book_legacy', price: 108000, availability: 'AVAILABLE', observedAt: '2024-12-12', source: 'gramedia_api' },
+      { id: 's2', bookId: 'book_legacy', price: 36000, availability: 'AVAILABLE', observedAt: '2026-10-12', source: 'gramedia_api' },
+    ] as any);
+
+    const summary = getPriceSummary('book_legacy', 36000, '2024-12-12', 120000);
+    expect(summary.observationCount).toBe(2);
+    expect(summary.previousPrice).toBe(108000);
+    expect(summary.lowestObservedPrice).toBe(36000);
+    expect(summary.highestObservedPrice).toBe(120000);
+    expect(summary.hasHistoricalFluctuation).toBe(true);
+    expect(summary.priceChangeAmount).toBe(-72000);
+    expect(summary.snapshots.length).toBe(2);
+  });
+
+  it('should record a new snapshot when availability changes even if price is same', () => {
+    recordPriceObservation('book_avail', 50000, 'AVAILABLE', 'gramedia_api', '2026-01-01');
+    const snap = recordPriceObservation('book_avail', 50000, 'OUT_OF_STOCK', 'gramedia_api', '2026-02-01');
+    expect(snap).toBeDefined();
+    expect(snap?.availability).toBe('OUT_OF_STOCK');
+
+    const summary = getPriceSummary('book_avail', 50000);
+    expect(summary.observationCount).toBe(2);
+  });
+
+  it('should reject invalid price observations', () => {
+    expect(recordPriceObservation('book_bad', 0)).toBeNull();
+    expect(recordPriceObservation('book_bad', -100)).toBeNull();
+    expect(recordPriceObservation('book_bad', NaN)).toBeNull();
+    expect(recordPriceObservation('', 50000)).toBeNull();
+  });
+
+  it('should track lowest/highest across multiple fluctuations', () => {
+    recordPriceObservation('book_multi', 100000, 'AVAILABLE', 'gramedia_api', '2026-01-01');
+    recordPriceObservation('book_multi', 80000, 'AVAILABLE', 'gramedia_api', '2026-02-01');
+    recordPriceObservation('book_multi', 120000, 'AVAILABLE', 'gramedia_api', '2026-03-01');
+    recordPriceObservation('book_multi', 90000, 'AVAILABLE', 'gramedia_api', '2026-04-01');
+
+    const summary = getPriceSummary('book_multi', 90000);
+    expect(summary.observationCount).toBe(4);
+    expect(summary.lowestObservedPrice).toBe(80000);
+    expect(summary.highestObservedPrice).toBe(120000);
+    expect(summary.previousPrice).toBe(120000);
+    expect(summary.priceChangeAmount).toBe(-30000);
+    expect(summary.hasHistoricalFluctuation).toBe(true);
+  });
 });
 

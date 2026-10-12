@@ -57010,7 +57010,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-12-12",
       "isWednesdayRelease": false,
-      "currentPrice": 108000,
+      "currentPrice": 36000,
       "authors": [
         "Kumo Kagyu"
       ],
@@ -57027,7 +57027,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Light Novel release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 108000,
+      "originalPrice": 120000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -154917,6 +154917,2157 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-12",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_goblin_slayer_1_1791808525",
+      "bookId": "pub_light_novel_goblin_slayer_1",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 120000,
+      "previousPrice": 108000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "manual_correction"
+    },
+    {
+      "id": "snap_pub_one_piece_99_init",
+      "bookId": "pub_one_piece_99",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2022-06-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_100_init",
+      "bookId": "pub_one_piece_100",
+      "price": 41250,
+      "currentPrice": 41250,
+      "originalPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2022-10-13",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_102_init",
+      "bookId": "pub_one_piece_102",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-04-05",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_02_1_init",
+      "bookId": "pub_one_piece_02_1",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-07-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_03_1_init",
+      "bookId": "pub_one_piece_03_1",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-08-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_103_init",
+      "bookId": "pub_one_piece_103",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-08-25",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_04_2023_init",
+      "bookId": "pub_one_piece_04_2023",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-09-01",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_06_2023_init",
+      "bookId": "pub_one_piece_06_2023",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-10-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_07_2023_init",
+      "bookId": "pub_one_piece_07_2023",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-10-20",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_10_2023_init",
+      "bookId": "pub_one_piece_10_2023",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-12-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_105_init",
+      "bookId": "pub_one_piece_105",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-03-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_14_2024_init",
+      "bookId": "pub_one_piece_14_2024",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-03-31",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_106_init",
+      "bookId": "pub_one_piece_106",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-05-28",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_16_2024_init",
+      "bookId": "pub_one_piece_16_2024",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-06-07",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_19_2024_init",
+      "bookId": "pub_one_piece_19_2024",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-09-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_piece_20_2024_init",
+      "bookId": "pub_one_piece_20_2024",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-10-06",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_88_init",
+      "bookId": "pub_ruler_of_the_land_88",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-07-14",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_kariage_kun_67_init",
+      "bookId": "pub_kariage_kun_67",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-03-18",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_63_init",
+      "bookId": "pub_level_comic_giant_killing_63",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-09-26",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_11_init",
+      "bookId": "pub_detektif_conan_premium_11",
+      "price": 48750,
+      "currentPrice": 48750,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2022-05-13",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_5_init",
+      "bookId": "pub_detektif_kindaichi_premium_5",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-03-07",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_6_init",
+      "bookId": "pub_detektif_kindaichi_premium_6",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-03-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_7_init",
+      "bookId": "pub_detektif_kindaichi_premium_7",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-05-02",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_8_init",
+      "bookId": "pub_detektif_kindaichi_premium_8",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-05-30",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_10_init",
+      "bookId": "pub_detektif_kindaichi_premium_10",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-08-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_11_init",
+      "bookId": "pub_detektif_kindaichi_premium_11",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-08-29",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_12_init",
+      "bookId": "pub_detektif_kindaichi_premium_12",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-12-19",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_13_init",
+      "bookId": "pub_detektif_kindaichi_premium_13",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-06-19",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_14_init",
+      "bookId": "pub_detektif_kindaichi_premium_14",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-06-26",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_15_init",
+      "bookId": "pub_detektif_kindaichi_premium_15",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2014-08-20",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_16_init",
+      "bookId": "pub_detektif_kindaichi_premium_16",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-09-18",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_17_init",
+      "bookId": "pub_detektif_kindaichi_premium_17",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-10-02",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_18_init",
+      "bookId": "pub_detektif_kindaichi_premium_18",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-11-06",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_19_init",
+      "bookId": "pub_detektif_kindaichi_premium_19",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-12-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_20_init",
+      "bookId": "pub_detektif_kindaichi_premium_20",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-01-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_21_init",
+      "bookId": "pub_detektif_kindaichi_premium_21",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-04-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_22_init",
+      "bookId": "pub_detektif_kindaichi_premium_22",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-08-19",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_23_init",
+      "bookId": "pub_detektif_kindaichi_premium_23",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2020-09-30",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_24_init",
+      "bookId": "pub_detektif_kindaichi_premium_24",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2020-10-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_26_init",
+      "bookId": "pub_detektif_kindaichi_premium_26",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-04-28",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_28_init",
+      "bookId": "pub_detektif_kindaichi_premium_28",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-09-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_kindaichi_premium_29_init",
+      "bookId": "pub_detektif_kindaichi_premium_29",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-12-22",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_yona_the_girl_standing_in_the_blush_of_dawn_34_init",
+      "bookId": "pub_yona_the_girl_standing_in_the_blush_of_dawn_34",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-02-24",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_yona_the_girl_standing_in_the_blush_of_dawn_35_init",
+      "bookId": "pub_yona_the_girl_standing_in_the_blush_of_dawn_35",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-05-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_02_init",
+      "bookId": "pub_one_punch_man_02",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2016-10-05",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_04_init",
+      "bookId": "pub_one_punch_man_04",
+      "price": 17500,
+      "currentPrice": 17500,
+      "originalPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2016-11-23",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_09_init",
+      "bookId": "pub_one_punch_man_09",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2017-09-13",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_06_init",
+      "bookId": "pub_one_punch_man_06",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2017-02-22",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_03_init",
+      "bookId": "pub_one_punch_man_03",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2016-10-26",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_01_init",
+      "bookId": "pub_one_punch_man_01",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2016-08-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_07_init",
+      "bookId": "pub_one_punch_man_07",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2017-03-29",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_05_init",
+      "bookId": "pub_one_punch_man_05",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2017-01-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_10_init",
+      "bookId": "pub_one_punch_man_10",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "AVAILABLE",
+      "observedAt": "2017-10-18",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_08_init",
+      "bookId": "pub_one_punch_man_08",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2017-06-14",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_11_init",
+      "bookId": "pub_one_punch_man_11",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-02-07",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_12_init",
+      "bookId": "pub_one_punch_man_12",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2018-04-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_13_init",
+      "bookId": "pub_one_punch_man_13",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2018-05-16",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_14_init",
+      "bookId": "pub_one_punch_man_14",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2018-07-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_15_init",
+      "bookId": "pub_one_punch_man_15",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2018-07-25",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_16_init",
+      "bookId": "pub_one_punch_man_16",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2018-10-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_17_init",
+      "bookId": "pub_one_punch_man_17",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-05-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_18_init",
+      "bookId": "pub_one_punch_man_18",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-08-07",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_19_init",
+      "bookId": "pub_one_punch_man_19",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2020-03-24",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_20_init",
+      "bookId": "pub_one_punch_man_20",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-05-18",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_21_init",
+      "bookId": "pub_one_punch_man_21",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-09-09",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_22_init",
+      "bookId": "pub_one_punch_man_22",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-09-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_23_init",
+      "bookId": "pub_one_punch_man_23",
+      "price": 22750,
+      "currentPrice": 22750,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-02-02",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_one_punch_man_24_init",
+      "bookId": "pub_one_punch_man_24",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-05-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_03__part_1_phantom_blood_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_03__part_1_phantom_blood",
+      "price": 52000,
+      "currentPrice": 52000,
+      "originalPrice": 80000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-10-06",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_lc_jojos_bizarre_adventure_07_part_2_battle_tendency_init",
+      "bookId": "pub_lc_jojos_bizarre_adventure_07_part_2_battle_tendency",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-10-18",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_02__part_1_phantom_blood_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_02__part_1_phantom_blood",
+      "price": 52000,
+      "currentPrice": 52000,
+      "originalPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2022-08-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_05__part_2_battle_tendency_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_05__part_2_battle_tendency",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-03-29",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_04__part_2_battle_tendency_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_04__part_2_battle_tendency",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2022-12-24",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_06_part_2_battle_tendency_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_06_part_2_battle_tendency",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-08-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_08__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_08__part_3_stardust_crusaders",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2024-01-14",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_09__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_09__part_3_stardust_crusaders",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2024-04-28",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_10__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_10__part_3_stardust_crusaders",
+      "price": 59500,
+      "currentPrice": 59500,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-07-11",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_11__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_11__part_3_stardust_crusaders",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-07-25",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_12__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_12__part_3_stardust_crusaders",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-10-18",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_13__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_13__part_3_stardust_crusaders",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-12-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_14__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_14__part_3_stardust_crusaders",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-02-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_15__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_15__part_3_stardust_crusaders",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-05-19",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_16__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_16__part_3_stardust_crusaders",
+      "price": 63750,
+      "currentPrice": 63750,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-10-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_17__part_3_stardust_crusaders_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_17__part_3_stardust_crusaders",
+      "price": 63750,
+      "currentPrice": 63750,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-11-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_18__part_4_diamond_is_unbreakable_init",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_18__part_4_diamond_is_unbreakable",
+      "price": 63750,
+      "currentPrice": 63750,
+      "originalPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-03-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_eighty_six_ep_1_eighty_six_init",
+      "bookId": "pub_eighty_six_ep_1_eighty_six",
+      "price": 81000,
+      "currentPrice": 81000,
+      "originalPrice": 108000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-02-22",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_eighty_six_ep_2_run_trough_the_battlefront_init",
+      "bookId": "pub_eighty_six_ep_2_run_trough_the_battlefront",
+      "price": 73500,
+      "currentPrice": 73500,
+      "originalPrice": 98000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-06-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_eighty_six_ep_3__run_trough_the_battlefront_akhir_init",
+      "bookId": "pub_eighty_six_ep_3__run_trough_the_battlefront_akhir",
+      "price": 81000,
+      "currentPrice": 81000,
+      "originalPrice": 108000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-11-14",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_eighty_six_ep_5__wahai_maut_janganlah_congkak_init",
+      "bookId": "pub_eighty_six_ep_5__wahai_maut_janganlah_congkak",
+      "price": 93750,
+      "currentPrice": 93750,
+      "originalPrice": 125000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-02-13",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_paket_komik_naruto_vol_31_40_init",
+      "bookId": "pub_paket_komik_naruto_vol_31_40",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2015-03-16",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_paket_one_piece_51_60_init",
+      "bookId": "pub_paket_one_piece_51_60",
+      "price": 175000,
+      "currentPrice": 175000,
+      "originalPrice": 175000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2012-12-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_box_paket_komik_one_piece_21_30_init",
+      "bookId": "pub_box_paket_komik_one_piece_21_30",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2014-11-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_01_init",
+      "bookId": "pub_qed_iff_01",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-02-24",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_02_init",
+      "bookId": "pub_qed_iff_02",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-04-28",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_03_init",
+      "bookId": "pub_qed_iff_03",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-09-29",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_04_init",
+      "bookId": "pub_qed_iff_04",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-01-05",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_05_init",
+      "bookId": "pub_qed_iff_05",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2022-02-28",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_09_init",
+      "bookId": "pub_qed_iff_09",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-12-24",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_10_init",
+      "bookId": "pub_qed_iff_10",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-02-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_11_init",
+      "bookId": "pub_qed_iff_11",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-05-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_12_init",
+      "bookId": "pub_qed_iff_12",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-07-28",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_13_init",
+      "bookId": "pub_qed_iff_13",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-10-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_14_init",
+      "bookId": "pub_qed_iff_14",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-12-05",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_qed_iff_15_init",
+      "bookId": "pub_qed_iff_15",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2024-01-14",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_gokushufudo_the_way_of_house_husband_07_init",
+      "bookId": "pub_level_comic_gokushufudo_the_way_of_house_husband_07",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-11-26",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_level_comic_gokushufudo_the_way_of_house_husband_4_init",
+      "bookId": "pub_level_comic_gokushufudo_the_way_of_house_husband_4",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-11-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_lc_gokushufudo_the_way_of_house_husband_06_init",
+      "bookId": "pub_lc_gokushufudo_the_way_of_house_husband_06",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-08-30",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_edens_zero_01_init",
+      "bookId": "pub_edens_zero_01",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-12-11",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_edens_zero_2_init",
+      "bookId": "pub_edens_zero_2",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-02-12",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_edens_zero_03_init",
+      "bookId": "pub_edens_zero_03",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-03-24",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_edens_zero_04_init",
+      "bookId": "pub_edens_zero_04",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-07-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_edens_zero_05_init",
+      "bookId": "pub_edens_zero_05",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2020-08-12",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_edens_zero_06_init",
+      "bookId": "pub_edens_zero_06",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-01-27",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_edens_zero_07_init",
+      "bookId": "pub_edens_zero_07",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-04-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_edens_zero_08_init",
+      "bookId": "pub_edens_zero_08",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-06-23",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_edens_zero_09_init",
+      "bookId": "pub_edens_zero_09",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-10-27",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_kung_fu_boy_legend_07_init",
+      "bookId": "pub_kung_fu_boy_legend_07",
+      "price": 17500,
+      "currentPrice": 17500,
+      "originalPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2010-08-02",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_25_init",
+      "bookId": "pub_detektif_conan_premium_25",
+      "price": 48750,
+      "currentPrice": 48750,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-08-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x_hokkaido_arc_vol_01_init",
+      "bookId": "pub_samurai_x_hokkaido_arc_vol_01",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-12-14",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x_hokkaido_arc_vol_02_init",
+      "bookId": "pub_samurai_x_hokkaido_arc_vol_02",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-02-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x_hokkaido_arc_vol_03_init",
+      "bookId": "pub_samurai_x_hokkaido_arc_vol_03",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-05-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x_hokkaido_arc_vol_04_init",
+      "bookId": "pub_samurai_x_hokkaido_arc_vol_04",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-06-20",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x_hokkaido_arc_vol_05_1_init",
+      "bookId": "pub_samurai_x_hokkaido_arc_vol_05_1",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-08-23",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x_hokkaido_arc_vol_06_init",
+      "bookId": "pub_samurai_x_hokkaido_arc_vol_06",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-12-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x_hokkaido_arc_vol_07_init",
+      "bookId": "pub_samurai_x_hokkaido_arc_vol_07",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-02-11",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x_hokkaido_arc_vol_08_init",
+      "bookId": "pub_samurai_x_hokkaido_arc_vol_08",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2024-07-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x__another_story_premium_init",
+      "bookId": "pub_samurai_x__another_story_premium",
+      "price": 57200,
+      "currentPrice": 57200,
+      "originalPrice": 88000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-01-27",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_samurai_x_hokkaido_arc_vol_09_init",
+      "bookId": "pub_samurai_x_hokkaido_arc_vol_09",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-06-20",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_eminence_in_shadow_1_init",
+      "bookId": "pub_the_eminence_in_shadow_1",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-05-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_eminence_in_shadow_2_init",
+      "bookId": "pub_the_eminence_in_shadow_2",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-08-22",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_eminence_in_shadow_3_init",
+      "bookId": "pub_the_eminence_in_shadow_3",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-11-28",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_eminence_in_shadow_4_init",
+      "bookId": "pub_the_eminence_in_shadow_4",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-12-13",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_eminence_in_shadow_5_init",
+      "bookId": "pub_the_eminence_in_shadow_5",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-02-14",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_01_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_01",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-03-06",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_02_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_02",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-04-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_03_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_03",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-05-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_04_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_04",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-06-26",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_05_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_05",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-07-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_06_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_06",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-08-14",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_08_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_08",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-11-20",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_10_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_10",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-03-18",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_11_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_11",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-07-22",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_12_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_12",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-10-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_13_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_13",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-04-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_14_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_14",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-09-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_15_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_15",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-02-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_17_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_17",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-10-23",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_0_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_0",
+      "price": 41250,
+      "currentPrice": 41250,
+      "originalPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-01-11",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_18_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_18",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-05-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_19_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_19",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-09-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_20_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_20",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-07-11",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_21_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_21",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-12-02",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_22_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_22",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-06-02",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_23_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_23",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-10-31",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_24_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_24",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-02-09",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_06_terbit_ulang_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_06_terbit_ulang",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-03-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_hanako_si_arwah_penasaran_25_init",
+      "bookId": "pub_hanako_si_arwah_penasaran_25",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-07-07",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_orange_breeze_by_cherry_init",
+      "bookId": "pub_orange_breeze_by_cherry",
+      "price": 33000,
+      "currentPrice": 33000,
+      "originalPrice": 33000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2014-10-13",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_orange_01__new_edition_init",
+      "bookId": "pub_orange_01__new_edition",
+      "price": 41250,
+      "currentPrice": 41250,
+      "originalPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-06-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_orange_02__new_edition_init",
+      "bookId": "pub_orange_02__new_edition",
+      "price": 35750,
+      "currentPrice": 35750,
+      "originalPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-07-31",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_orange_03__new_edition_init",
+      "bookId": "pub_orange_03__new_edition",
+      "price": 35750,
+      "currentPrice": 35750,
+      "originalPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-09-22",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_overlord_vol_1_init",
+      "bookId": "pub_overlord_vol_1",
+      "price": 52200,
+      "currentPrice": 52200,
+      "originalPrice": 58000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-05-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_overlord_vol_2_init",
+      "bookId": "pub_overlord_vol_2",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-09-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_overlord_vol_3_init",
+      "bookId": "pub_overlord_vol_3",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-12-13",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_yoimachi_overlord_02_init",
+      "bookId": "pub_yoimachi_overlord_02",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 22500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2017-03-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_si_juki_x_black_jack_init",
+      "bookId": "pub_si_juki_x_black_jack",
+      "price": 51000,
+      "currentPrice": 51000,
+      "originalPrice": 68000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-08-18",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_dragon_ball_super_vol_1_init",
+      "bookId": "pub_dragon_ball_super_vol_1",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-03-06",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_dragon_ball_super_volume_2_init",
+      "bookId": "pub_dragon_ball_super_volume_2",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-04-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_dragon_ball_super_vol_3_init",
+      "bookId": "pub_dragon_ball_super_vol_3",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-05-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_dragon_ball_super_vol_4_init",
+      "bookId": "pub_dragon_ball_super_vol_4",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-06-26",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_dragon_ball_super_vol_5_init",
+      "bookId": "pub_dragon_ball_super_vol_5",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-07-24",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_super_dragon_ball_heroes_dark_demon_realm_mission_03_init",
+      "bookId": "pub_super_dragon_ball_heroes_dark_demon_realm_mission_03",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2022-08-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_01_init",
+      "bookId": "pub_the_quintessential_quintuplets_01",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-12-23",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_02_init",
+      "bookId": "pub_the_quintessential_quintuplets_02",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-01-29",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_03_init",
+      "bookId": "pub_the_quintessential_quintuplets_03",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-03-04",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_04_init",
+      "bookId": "pub_the_quintessential_quintuplets_04",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-04-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_06_init",
+      "bookId": "pub_the_quintessential_quintuplets_06",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-09-30",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_07_init",
+      "bookId": "pub_the_quintessential_quintuplets_07",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2020-11-25",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_vol08_init",
+      "bookId": "pub_the_quintessential_quintuplets_vol08",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-01-20",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_09_init",
+      "bookId": "pub_the_quintessential_quintuplets_09",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-03-10",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_10_init",
+      "bookId": "pub_the_quintessential_quintuplets_10",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-05-25",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_11_init",
+      "bookId": "pub_the_quintessential_quintuplets_11",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-07-21",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_12_init",
+      "bookId": "pub_the_quintessential_quintuplets_12",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-10-13",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_13_init",
+      "bookId": "pub_the_quintessential_quintuplets_13",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-12-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_quintessential_quintuplets_14_init",
+      "bookId": "pub_the_quintessential_quintuplets_14",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-02-09",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_promised_neverland_1_init",
+      "bookId": "pub_the_promised_neverland_1",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-07-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_promised_neverland_2_init",
+      "bookId": "pub_the_promised_neverland_2",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-08-28",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_promised_neverland_3_init",
+      "bookId": "pub_the_promised_neverland_3",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2019-09-25",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_1__special_set_init",
+      "bookId": "pub_bungo_stray_dogs_beast_1__special_set",
+      "price": 198000,
+      "currentPrice": 198000,
+      "originalPrice": 220000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-08-26",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_1_init",
+      "bookId": "pub_the_summer_hikaru_died_1",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-07-30",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_2_init",
+      "bookId": "pub_the_summer_hikaru_died_2",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-09-18",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_mao_01_init",
+      "bookId": "pub_mao_01",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-06-23",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_mao_03_init",
+      "bookId": "pub_mao_03",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-01-12",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_apothecary_diaries_01_init",
+      "bookId": "pub_the_apothecary_diaries_01",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-04-14",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_apothecary_diaries_02_init",
+      "bookId": "pub_the_apothecary_diaries_02",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-06-02",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_i_sold_my_life_for_ten_thousand_yen_per_year_01_of_03_init",
+      "bookId": "pub_i_sold_my_life_for_ten_thousand_yen_per_year_01_of_03",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-09-09",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_i_sold_my_life_for_ten_thousand_yen_per_year_03_of_03_init",
+      "bookId": "pub_i_sold_my_life_for_ten_thousand_yen_per_year_03_of_03",
+      "price": 18200,
+      "currentPrice": 18200,
+      "originalPrice": 28000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-02-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_la_galigo_jilid_2_init",
+      "bookId": "pub_la_galigo_jilid_2",
+      "price": 144000,
+      "currentPrice": 144000,
+      "originalPrice": 160000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2017-11-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_la_galigo_jilid_1_init",
+      "bookId": "pub_la_galigo_jilid_1",
+      "price": 144000,
+      "currentPrice": 144000,
+      "originalPrice": 160000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2017-11-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_yotsuba_01_init",
+      "bookId": "pub_yotsuba_01",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2023-09-15",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_shaman_king_complete_edition_01_init",
+      "bookId": "pub_shaman_king_complete_edition_01",
+      "price": 48750,
+      "currentPrice": 48750,
+      "originalPrice": 75000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-09-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_shaman_king_complete_edition_09_init",
+      "bookId": "pub_shaman_king_complete_edition_09",
+      "price": 52000,
+      "currentPrice": 52000,
+      "originalPrice": 80000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-10-31",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_shaman_king_complete_edition_13_init",
+      "bookId": "pub_shaman_king_complete_edition_13",
+      "price": 52000,
+      "currentPrice": 52000,
+      "originalPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-03-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_shaman_king_complete_edition_14_init",
+      "bookId": "pub_shaman_king_complete_edition_14",
+      "price": 52000,
+      "currentPrice": 52000,
+      "originalPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-06-26",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_light_novel_the_rising_of_the_shield_hero_01_init",
+      "bookId": "pub_light_novel_the_rising_of_the_shield_hero_01",
+      "price": 103500,
+      "currentPrice": 103500,
+      "originalPrice": 115000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-12-03",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_my_pre_wedding_init",
+      "bookId": "pub_my_pre_wedding",
+      "price": 44200,
+      "currentPrice": 44200,
+      "originalPrice": 68000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2020-08-16",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_jagabumi_5_jawara_init",
+      "bookId": "pub_jagabumi_5_jawara",
+      "price": 3500,
+      "currentPrice": 3500,
+      "originalPrice": 5000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-05-25",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_attack_on_titan_09_lc_init",
+      "bookId": "pub_attack_on_titan_09_lc",
+      "price": 18900,
+      "currentPrice": 18900,
+      "originalPrice": 27000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2014-08-08",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_rising_of_the_shield_hero_2_init",
+      "bookId": "pub_the_rising_of_the_shield_hero_2",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-09-27",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_the_rising_of_the_shield_hero_3_init",
+      "bookId": "pub_the_rising_of_the_shield_hero_3",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2024-12-13",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_komikus_shojo_nozaki_13_init",
+      "bookId": "pub_komikus_shojo_nozaki_13",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-07-20",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_komikus_shojo_nozaki_15_special_edition_init",
+      "bookId": "pub_komikus_shojo_nozaki_15_special_edition",
+      "price": 74250,
+      "currentPrice": 74250,
+      "originalPrice": 99000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-10-20",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_os_komikus_shojo_nozaki_anthology_init",
+      "bookId": "pub_os_komikus_shojo_nozaki_anthology",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2017-05-17",
+      "source": "backfill"
+    },
+    {
+      "id": "snap_pub_light_novel_makeine_heroine_yang_patah_hati_ternyata_banyak_vol_1_init",
+      "bookId": "pub_light_novel_makeine_heroine_yang_patah_hati_ternyata_banyak_vol_1",
+      "price": 118000,
+      "currentPrice": 118000,
+      "originalPrice": 118000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-08-19",
+      "source": "backfill"
     }
   ],
   "syncRuns": [

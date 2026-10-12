@@ -1,7 +1,7 @@
 import listingData from '@/data/catalog-listing.json';
 import fullCatalogData from '@/data/catalog.json';
 import { Book, Series, Publisher, CatalogData } from './types';
-import { getPriceSummary as getPriceSummaryInternal } from './data/price-service';
+import { getPriceSummary as getPriceSummaryInternal, initializePriceSnapshots } from './data/price-service';
 import { getRelatedReleases as getRelatedReleasesInternal, getYouMayAlsoLike as getYouMayAlsoLikeInternal } from './data/recommendation-service';
 import { groupBindUpBooks, BindUpSeriesGroup } from './data/bind-up';
 
@@ -10,6 +10,19 @@ const listing = listingData as unknown as CatalogData;
 
 // Full data — used only for single book detail pages (server-side)
 const full = fullCatalogData as unknown as CatalogData;
+
+// Lazy singleton: seed the price snapshot registry from listing data once,
+// before any getPriceSummary() call. Without this the registry stays empty
+// and every book reports "Stabil (0%)" with fabricated data.
+let priceSnapshotsInitialized = false;
+function ensurePriceSnapshotsInitialized(): void {
+  if (priceSnapshotsInitialized) return;
+  priceSnapshotsInitialized = true;
+  const snapshots = (listing as CatalogData).priceSnapshots || [];
+  if (snapshots.length > 0) {
+    initializePriceSnapshots(snapshots);
+  }
+}
 
 // Filter out any quarantined or non-manga/non-LN items from public catalog
 const publicBooks: Book[] = (listing.books || []).filter((b) => {
@@ -194,6 +207,7 @@ export function searchCatalog(query: string, limit?: number): Book[] {
 }
 
 export function getPriceSummary(book: Book) {
+  ensurePriceSnapshotsInitialized();
   return getPriceSummaryInternal(book.id, book.currentPrice, book.releaseDate, book.originalPrice);
 }
 

@@ -620,22 +620,45 @@ def run_sync(catalog_path):
 
         if slug in existing_books_map:
             b = existing_books_map[slug]
-            if b.get('currentPrice') and current_price and b['currentPrice'] != current_price:
-                snap = {
-                    'id': f"snap_{b['id']}_{int(time.time())}",
-                    'bookId': b['id'],
-                    'price': current_price,
-                    'currentPrice': current_price,
-                    'originalPrice': original_price,
-                    'previousPrice': b['currentPrice'],
-                    'availability': availability,
-                    'observedAt': datetime.now(timezone.utc).strftime('%Y-%m-%d'),
-                    'source': 'gramedia_api'
-                }
-                new_snapshots.append(snap)
-                b['currentPrice'] = current_price
+            old_price = b.get('currentPrice')
+            old_orig = b.get('originalPrice')
+            old_avail = b.get('availability')
 
-            b['originalPrice'] = original_price
+            # Determine if anything price-relevant changed. Also handles the
+            # case where the stored price was missing (falsy) — previously the
+            # new price was silently dropped and the book stayed stale forever.
+            price_changed = bool(current_price) and old_price != current_price
+            orig_changed = bool(original_price) and old_orig != original_price
+            avail_changed = old_avail != availability
+
+            if price_changed or orig_changed or avail_changed:
+                # Dedup: skip if the last recorded snapshot already matches
+                # (protects against double-recording on re-runs).
+                last_snaps = price_snapshot_map.get(b['id'], [])
+                last = last_snaps[-1] if last_snaps else None
+                last_price = (last.get('currentPrice') if last else None) or (last.get('price') if last else None)
+                last_orig = last.get('originalPrice') if last else None
+                last_avail = last.get('availability') if last else None
+                if not (last and last_price == current_price and last_orig == original_price and last_avail == availability):
+                    snap = {
+                        'id': f"snap_{b['id']}_{int(time.time())}",
+                        'bookId': b['id'],
+                        'price': current_price,
+                        'currentPrice': current_price,
+                        'originalPrice': original_price,
+                        'previousPrice': old_price,
+                        'availability': availability,
+                        'observedAt': datetime.now(timezone.utc).strftime('%Y-%m-%d'),
+                        'source': 'gramedia_api'
+                    }
+                    new_snapshots.append(snap)
+                    price_snapshot_map[b['id']].append(snap)
+
+            # Always write the fresh values — never leave a stale/missing price.
+            if current_price:
+                b['currentPrice'] = current_price
+            if original_price:
+                b['originalPrice'] = original_price
             b['availability'] = availability
 
             if not b.get('volume') and vol:
