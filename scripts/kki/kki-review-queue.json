@@ -70,6 +70,20 @@
   "reason": "cross-medium"
  },
  {
+  "nuvelliteSeriesId": "ser_wind-rider-sky-age",
+  "nuvelliteTitle": "Wind Rider Sky Age",
+  "nuvelliteType": "LIGHT_NOVEL",
+  "nuvelliteAuthor": "Is Yuniarto",
+  "kkiTitle": "Wind Rider - Sky Age",
+  "kkiMedium": "MANGA",
+  "kkiAuthor": "Is Yuniarto",
+  "kkiPublisher": "M&C!",
+  "score": 100.0,
+  "authorScore": 100.0,
+  "crossMedium": true,
+  "reason": "cross-medium"
+ },
+ {
   "nuvelliteSeriesId": "ser_detektif-conan-ln",
   "nuvelliteTitle": "Detektif Conan (Novel)",
   "nuvelliteType": "LIGHT_NOVEL",
