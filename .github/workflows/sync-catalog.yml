@@ -39,6 +39,17 @@ jobs:
           git config user.name "Llunatics"
           git config user.email "57332128+Llunatics@users.noreply.github.com"
 
+          # Race-proof: cron sinkron KKI lokal (Sel/Jum 07:08 WIB) bisa push
+          # duluan saat run ini jalan (keduanya menulis catalog.json).
+          # Kalau remote sudah maju, skip push — scrape ini idempoten,
+          # perubahan ikut run 6 jam berikutnya. (Fix 2026-10-13: run
+          # 38326059903 gagal push karena race persis seperti ini.)
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo "Remote main sudah maju duluan (race dengan sinkron KKI) — skip push."
+            exit 0
+          fi
+
           git add src/data/catalog.json src/data/catalog-listing.json
           if git diff --staged --quiet; then
             echo "Tidak ada perubahan katalog — skip commit."
