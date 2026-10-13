@@ -50,64 +50,9 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
     return map;
   }, [ownedItems, isLoaded]);
 
-  // Filtered & Sorted Series
-  const filteredSeries = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim();
-    const pubIds = resolvePubFilter(pubFilter);
-
-    return allSeries
-      .filter((s) => {
-        // Format
-        if (formatFilter !== 'ALL' && s.type !== formatFilter) return false;
-        // Publisher (group-aware)
-        if (pubIds && !pubIds.has(s.publisherId)) return false;
-        // Status
-        if (statusFilter !== 'ALL' && s.status !== statusFilter) return false;
-        // Bind-up only
-        if (bindUpOnly && !bindUpSeriesIds.has(s.id)) return false;
-        // Search Query (name, author, publisher)
-        if (q) {
-          const matchName = s.name.toLowerCase().includes(q);
-          const matchAuthor = s.author?.toLowerCase().includes(q);
-          const matchPub = s.publisherName.toLowerCase().includes(q);
-          if (!matchName && !matchAuthor && !matchPub) return false;
-        }
-        return true;
-      })
-      .sort((a, b) => {
-        if (sortBy === 'volumes_high') {
-          return b.totalVolumes - a.totalVolumes;
-        }
-        if (sortBy === 'volumes_low') {
-          return a.totalVolumes - b.totalVolumes;
-        }
-        return a.name.localeCompare(b.name);
-      });
-  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy, bindUpOnly, bindUpSeriesIds]);
-
-  // Reset pagination when filters change
-  useEffect(() => {
-    setVisibleCount(PAGE_SIZE);
-  }, [formatFilter, pubFilter, statusFilter, searchQuery, sortBy, bindUpOnly]);
-
-  // Infinite scroll: load more when sentinel enters viewport
-  useEffect(() => {
-    const el = sentinelRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisibleCount((c) => c + PAGE_SIZE);
-        }
-      },
-      { rootMargin: '800px' }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
   // Publisher groups: 3 main publishers + imprints as sub-options + "Lainnya" for the rest.
   // Maps each series publisherId to its canonical group.
+  // (Defined before filteredSeries to avoid TDZ issues during SSR prerender.)
   const PUBLISHER_GROUPS = useMemo(() => [
     {
       id: 'grp_pgi',
@@ -169,6 +114,62 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
     }
     return new Set([filterVal]);
   };
+
+  // Filtered & Sorted Series
+  const filteredSeries = useMemo(() => {
+    const q = searchQuery.toLowerCase().trim();
+    const pubIds = resolvePubFilter(pubFilter);
+
+    return allSeries
+      .filter((s) => {
+        // Format
+        if (formatFilter !== 'ALL' && s.type !== formatFilter) return false;
+        // Publisher (group-aware)
+        if (pubIds && !pubIds.has(s.publisherId)) return false;
+        // Status
+        if (statusFilter !== 'ALL' && s.status !== statusFilter) return false;
+        // Bind-up only
+        if (bindUpOnly && !bindUpSeriesIds.has(s.id)) return false;
+        // Search Query (name, author, publisher)
+        if (q) {
+          const matchName = s.name.toLowerCase().includes(q);
+          const matchAuthor = s.author?.toLowerCase().includes(q);
+          const matchPub = s.publisherName.toLowerCase().includes(q);
+          if (!matchName && !matchAuthor && !matchPub) return false;
+        }
+        return true;
+      })
+      .sort((a, b) => {
+        if (sortBy === 'volumes_high') {
+          return b.totalVolumes - a.totalVolumes;
+        }
+        if (sortBy === 'volumes_low') {
+          return a.totalVolumes - b.totalVolumes;
+        }
+        return a.name.localeCompare(b.name);
+      });
+  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy, bindUpOnly, bindUpSeriesIds]);
+
+  // Reset pagination when filters change
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [formatFilter, pubFilter, statusFilter, searchQuery, sortBy, bindUpOnly]);
+
+  // Infinite scroll: load more when sentinel enters viewport
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((c) => c + PAGE_SIZE);
+        }
+      },
+      { rootMargin: '800px' }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   return (
     <div className="space-y-12 pb-16">
