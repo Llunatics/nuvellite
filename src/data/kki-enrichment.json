@@ -464,21 +464,6 @@
   "matchScore": 95.0,
   "matchMethod": "auto"
  },
- "ser_black-jack": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "12",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/yzpe1ei/black-jack",
-  "priceMin": "Rp85.000",
-  "priceMax": "Rp85.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2024",
-  "kkiTitle": "Black Jack Bind-Up Edition",
-  "kkiPublisher": "Elex",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
  "ser_black-jack-bind-up": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
@@ -704,21 +689,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_bungo-stray-dogs---beast": {
-  "demographic": "Shounen",
-  "publisherJp": "Kadokawa",
-  "volumesJp": "4",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/2mwv8yr/bungou-stray-dogs-beast",
-  "priceMin": "Rp65.000",
-  "priceMax": "Rp65.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Bungo Stray Dogs - Beast",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 100.0,
-  "matchMethod": "auto"
- },
  "ser_bungo-stray-dogs---dazai-chuya-usia-15-tahun": {
   "demographic": "Seinen",
   "publisherJp": "Kadokawa",
@@ -822,6 +792,21 @@
   "kkiTitle": "Chainsaw Man",
   "kkiPublisher": "Akasha",
   "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_chinmi-other-story": {
+  "demographic": "Shounen",
+  "publisherJp": "Kodansha",
+  "volumesJp": "4",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/qy9gnbs/tekken-chinmi-gaiden",
+  "priceMin": "Rp4.500",
+  "priceMax": "Rp45.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2025",
+  "kkiTitle": "Chinmi Other Story: Chinmi & Tan Tan",
+  "kkiPublisher": "Elex",
+  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_chion-and-the-cat-temple": {
@@ -1185,16 +1170,16 @@
   "matchMethod": "auto"
  },
  "ser_detektif-kindaichi-37": {
-  "demographic": "Shounen",
+  "demographic": "Seinen",
   "publisherJp": "Kodansha",
-  "volumesJp": "27",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/vb0q8y8/kindaichi-shounen-no-jikenbo",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "yearFirstVol": null,
-  "kkiTitle": "Detektif Kindaichi",
+  "volumesJp": "16",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/pn94okm/kindaichi-37-sai-no-jikenbo",
+  "priceMin": "Rp42.000",
+  "priceMax": "Rp42.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2020",
+  "kkiTitle": "Detektif Kindaichi 37 Tahun",
   "kkiPublisher": "Elex",
   "matchScore": 95.0,
   "matchMethod": "auto"
@@ -1829,51 +1814,6 @@
   "matchScore": 90.0,
   "matchMethod": "auto"
  },
- "ser_gokushufudo---the-way-of-house-husband": {
-  "demographic": "Seinen",
-  "publisherJp": "Shinchosha",
-  "volumesJp": "17",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/a2iznkp/gokushufudou",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2020",
-  "kkiTitle": "Gokushufudo - The Way of House Husband",
-  "kkiPublisher": "Level",
-  "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_gokushufudo---the-way-of-househusband": {
-  "demographic": "Seinen",
-  "publisherJp": "Shinchosha",
-  "volumesJp": "17",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/a2iznkp/gokushufudou",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2020",
-  "kkiTitle": "Gokushufudo - The Way of House Husband",
-  "kkiPublisher": "Level",
-  "matchScore": 98.6,
-  "matchMethod": "auto"
- },
- "ser_gokushufudou---the-way-of-house-husband": {
-  "demographic": "Seinen",
-  "publisherJp": "Shinchosha",
-  "volumesJp": "17",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/a2iznkp/gokushufudou",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2020",
-  "kkiTitle": "Gokushufudo - The Way of House Husband",
-  "kkiPublisher": "Level",
-  "matchScore": 98.6,
-  "matchMethod": "auto"
- },
  "ser_goodbye-eri": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
@@ -2219,51 +2159,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_i-sold-my-life-for-ten-thousand-yen-per-year-01-of": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "3",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/dzugf4q/jumyou-wo-kaitotte-moratta-ichinen-ni-tsuki-ichimanen-de",
-  "priceMin": "Rp28.000",
-  "priceMax": "Rp28.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2020",
-  "kkiTitle": "I Sold My Life for Ten Thousand Yen Per Year",
-  "kkiPublisher": "M&C!",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
- "ser_i-sold-my-life-for-ten-thousand-yen-per-year-02-of": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "3",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/dzugf4q/jumyou-wo-kaitotte-moratta-ichinen-ni-tsuki-ichimanen-de",
-  "priceMin": "Rp28.000",
-  "priceMax": "Rp28.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2020",
-  "kkiTitle": "I Sold My Life for Ten Thousand Yen Per Year",
-  "kkiPublisher": "M&C!",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
- "ser_i-sold-my-life-for-ten-thousand-yen-per-year-03-of": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "3",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/dzugf4q/jumyou-wo-kaitotte-moratta-ichinen-ni-tsuki-ichimanen-de",
-  "priceMin": "Rp28.000",
-  "priceMax": "Rp28.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2020",
-  "kkiTitle": "I Sold My Life for Ten Thousand Yen Per Year",
-  "kkiPublisher": "M&C!",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
  "ser_ive-been-killing-slimes-for-300-years": {
   "demographic": "Shounen",
   "publisherJp": "Square Enix",
@@ -2472,21 +2367,6 @@
   "kkiTitle": "Jurnal Mukai Usagido",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_jurnal-mukai-usagido-6-of": {
-  "demographic": "Seinen",
-  "publisherJp": "Shinchosha",
-  "volumesJp": "8",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ti0fdh4/mukahi-usagidou-nikki",
-  "priceMin": "Rp28.000",
-  "priceMax": "Rp32.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2021",
-  "kkiTitle": "Jurnal Mukai Usagido",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
   "matchMethod": "auto"
  },
  "ser_juru-masak-para-maiko": {
@@ -2714,21 +2594,6 @@
   "matchScore": 96.2,
   "matchMethod": "auto"
  },
- "ser_kindaichi-37": {
-  "demographic": "Seinen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "16",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/pn94okm/kindaichi-37-sai-no-jikenbo",
-  "priceMin": "Rp42.000",
-  "priceMax": "Rp42.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2020",
-  "kkiTitle": "Detektif Kindaichi 37 Tahun",
-  "kkiPublisher": "Elex",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
  "ser_kindaichi-37-tahun": {
   "demographic": "Seinen",
   "publisherJp": "Kodansha",
@@ -2862,21 +2727,6 @@
   "kkiTitle": "Kubo Won't Let Me Be Invisible",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_kung-fu-boy-legend": {
-  "demographic": "Shounen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "29",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/oir2424/tekken-chinmi-legends",
-  "priceMin": "Rp18.500",
-  "priceMax": "Rp32.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2010",
-  "kkiTitle": "Kungfu Boy Legends",
-  "kkiPublisher": "Elex",
-  "matchScore": 94.4,
   "matchMethod": "auto"
  },
  "ser_kung-fu-boy-legends": {
@@ -3467,14 +3317,14 @@
  "ser_naruto-bind-up": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
-  "volumesJp": "72",
+  "volumesJp": "36",
   "statusJp": "End",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/7z3yqqk/naruto",
-  "priceMin": null,
-  "priceMax": "Rp25.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2004",
-  "kkiTitle": "Naruto",
+  "priceMin": "Rp99.000",
+  "priceMax": "Rp99.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2024",
+  "kkiTitle": "Naruto Bind Up Edition",
   "kkiPublisher": "Elex",
   "matchScore": 90.0,
   "matchMethod": "auto"
@@ -4364,21 +4214,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_shaman-king-complete": {
-  "demographic": "Shounen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "17",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/6o2lpgf/shaman-king",
-  "priceMin": "Rp75.000",
-  "priceMax": "Rp80.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2021",
-  "kkiTitle": "Shaman King Complete Edition",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
  "ser_shaman-king-complete-edition": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",
@@ -4437,21 +4272,6 @@
   "kkiTitle": "She is More Ordinary That I Expected",
   "kkiPublisher": "Elex",
   "matchScore": 97.2,
-  "matchMethod": "auto"
- },
- "ser_shiboyugi": {
-  "demographic": "Seinen",
-  "publisherJp": "Media Factory",
-  "volumesJp": "10",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/aa48qdw/shibou-yuugi-de-meshi-wo-kuu-novel",
-  "priceMin": "Rp98.000",
-  "priceMax": "Rp98.000",
-  "paperType": null,
-  "yearFirstVol": "2026",
-  "kkiTitle": "Shiboyugi: Menantang Permainan Maut demi Sesuap Nasi",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_shiboyugi-menantang-permainan-maut-demi-sesuap-nasi": {
