@@ -53,13 +53,14 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
   // Filtered & Sorted Series
   const filteredSeries = useMemo(() => {
     const q = searchQuery.toLowerCase().trim();
+    const pubIds = resolvePubFilter(pubFilter);
 
     return allSeries
       .filter((s) => {
         // Format
         if (formatFilter !== 'ALL' && s.type !== formatFilter) return false;
-        // Publisher
-        if (pubFilter !== 'ALL' && s.publisherId !== pubFilter) return false;
+        // Publisher (group-aware)
+        if (pubIds && !pubIds.has(s.publisherId)) return false;
         // Status
         if (statusFilter !== 'ALL' && s.status !== statusFilter) return false;
         // Bind-up only
@@ -105,13 +106,69 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
     return () => obs.disconnect();
   }, []);
 
+  // Publisher groups: 3 main publishers + imprints as sub-options + "Lainnya" for the rest.
+  // Maps each series publisherId to its canonical group.
+  const PUBLISHER_GROUPS = useMemo(() => [
+    {
+      id: 'grp_pgi',
+      name: 'Phoenix Gramedia Indonesia',
+      matchIds: ['pub_pgi', 'arc_phoenix'],
+    },
+    {
+      id: 'grp_elex',
+      name: 'Elex Media Komputindo',
+      matchIds: ['pub_elex', 'arc_elex'],
+      subs: [{ id: 'arc_level', name: 'Level' }],
+    },
+    {
+      id: 'grp_mnc',
+      name: 'm&c! Publishing',
+      matchIds: ['pub_mnc', 'arc_m-c'],
+      subs: [
+        { id: 'arc_akasha', name: 'Akasha' },
+        { id: 'arc_clover', name: 'Clover' },
+      ],
+    },
+  ], []);
+
   const publishers = useMemo(() => {
-    const map = new Map<string, string>();
-    for (const s of allSeries) {
-      map.set(s.publisherId, s.publisherName);
+    const seenIds = new Set<string>();
+    for (const s of allSeries) seenIds.add(s.publisherId);
+    // "Lainnya": any publisherId not covered by the groups above
+    const groupedIds = new Set<string>();
+    for (const g of PUBLISHER_GROUPS) {
+      for (const id of g.matchIds) groupedIds.add(id);
+      for (const sub of g.subs || []) groupedIds.add(sub.id);
     }
-    return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
-  }, [allSeries]);
+    const othersCount = Array.from(seenIds).filter((id) => !groupedIds.has(id)).length;
+    return { groups: PUBLISHER_GROUPS, othersCount };
+  }, [allSeries, PUBLISHER_GROUPS]);
+
+  // Resolve which publisherIds a filter value matches
+  const resolvePubFilter = (filterVal: string): Set<string> | null => {
+    if (filterVal === 'ALL') return null;
+    if (filterVal === 'OTHERS') {
+      const groupedIds = new Set<string>();
+      for (const g of PUBLISHER_GROUPS) {
+        for (const id of g.matchIds) groupedIds.add(id);
+        for (const sub of g.subs || []) groupedIds.add(sub.id);
+      }
+      const seenIds = new Set<string>();
+      for (const s of allSeries) seenIds.add(s.publisherId);
+      return new Set(Array.from(seenIds).filter((id) => !groupedIds.has(id)));
+    }
+    for (const g of PUBLISHER_GROUPS) {
+      if (filterVal === g.id) {
+        const ids = new Set(g.matchIds);
+        for (const sub of g.subs || []) ids.add(sub.id);
+        return ids;
+      }
+      for (const sub of g.subs || []) {
+        if (filterVal === sub.id) return new Set([sub.id]);
+      }
+    }
+    return new Set([filterVal]);
+  };
 
   return (
     <div className="space-y-12 pb-16">
@@ -214,11 +271,29 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
                 className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
               >
                 <option value="ALL" className="bg-surface text-editorial-title">Semua Penerbit</option>
-                {publishers.map((p) => (
-                  <option key={p.id} value={p.id} className="bg-surface text-editorial-title">
-                    {p.name}
-                  </option>
+                {publishers.groups.map((g) => (
+                  g.subs && g.subs.length > 0 ? (
+                    <optgroup key={g.id} label={g.name} className="bg-surface text-editorial-title">
+                      <option value={g.id} className="bg-surface text-editorial-title">
+                        {g.name} (Semua)
+                      </option>
+                      {g.subs.map((sub) => (
+                        <option key={sub.id} value={sub.id} className="bg-surface text-editorial-title">
+                          └ {sub.name}
+                        </option>
+                      ))}
+                    </optgroup>
+                  ) : (
+                    <option key={g.id} value={g.id} className="bg-surface text-editorial-title">
+                      {g.name}
+                    </option>
+                  )
                 ))}
+                {publishers.othersCount > 0 && (
+                  <option value="OTHERS" className="bg-surface text-editorial-title">
+                    Lainnya ({publishers.othersCount} penerbit)
+                  </option>
+                )}
               </select>
               <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
