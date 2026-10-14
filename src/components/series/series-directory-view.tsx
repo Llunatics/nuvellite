@@ -23,7 +23,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'COMPLETED' | 'ONGOING'>('ALL');
   const [sortBy, setSortBy] = useState<'name' | 'volumes_high' | 'volumes_low'>('name');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const [bindUpOnly, setBindUpOnly] = useState(false);
+  const [editionFilter, setEditionFilter] = useState<'ALL' | 'ONESHOT' | 'SHORT' | 'BINDUP'>('ALL');
   const sentinelRef = useRef<HTMLDivElement>(null);
 
   // Series IDs that have bind-up editions
@@ -128,8 +128,10 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         if (pubIds && !pubIds.has(s.publisherId)) return false;
         // Status
         if (statusFilter !== 'ALL' && s.status !== statusFilter) return false;
-        // Bind-up only
-        if (bindUpOnly && !bindUpSeriesIds.has(s.id)) return false;
+        // Edition: oneshot (1 vol) / short series (2-4 vol) / has bind-up
+        if (editionFilter === 'ONESHOT' && s.totalVolumes !== 1) return false;
+        if (editionFilter === 'SHORT' && (s.totalVolumes < 2 || s.totalVolumes > 4)) return false;
+        if (editionFilter === 'BINDUP' && !bindUpSeriesIds.has(s.id)) return false;
         // Search Query (name, author, publisher)
         if (q) {
           const matchName = s.name.toLowerCase().includes(q);
@@ -148,12 +150,12 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         }
         return a.name.localeCompare(b.name);
       });
-  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy, bindUpOnly, bindUpSeriesIds]);
+  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy, editionFilter, bindUpSeriesIds]);
 
   // Reset pagination when filters change
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [formatFilter, pubFilter, statusFilter, searchQuery, sortBy, bindUpOnly]);
+  }, [formatFilter, pubFilter, statusFilter, searchQuery, sortBy, editionFilter]);
 
   // Infinite scroll: load more when sentinel enters viewport
   useEffect(() => {
@@ -216,7 +218,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         {/* Filter Controls: Symmetrical Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 text-xs">
           {/* Format Segmented Tab */}
-          <div className="sm:col-span-5 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
+          <div className="sm:col-span-4 grid grid-cols-3 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
             {(['ALL', 'MANGA', 'LIGHT_NOVEL'] as const).map((fmt) => (
               <button
                 key={fmt}
@@ -233,20 +235,21 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
             ))}
           </div>
 
-          {/* Bind-Up Toggle */}
-          <button
-            type="button"
-            onClick={() => setBindUpOnly((v) => !v)}
-            title="Hanya tampilkan seri yang punya edisi bind-up"
-            className={`sm:col-span-2 flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-full font-medium transition-all text-xs border truncate ${
-              bindUpOnly
-                ? 'bg-accent/15 border-accent/30 text-accent font-semibold'
-                : 'bg-white/[0.03] border-white/[0.06] text-editorial-muted hover:text-editorial-title'
-            }`}
-          >
-            <BookOpen className="w-3.5 h-3.5 shrink-0" />
-            <span className="truncate">Bind-Up</span>
-          </button>
+          {/* Edition Select: oneshot / short series / bind-up */}
+          <div className="relative sm:col-span-3">
+            <select
+              value={editionFilter}
+              onChange={(e) => setEditionFilter(e.target.value as any)}
+              title="Filter edisi: oneshot, seri pendek, atau bind-up"
+              className="w-full h-full py-2 pl-3.5 pr-8 rounded-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.06] text-editorial-title focus:outline-none text-xs cursor-pointer appearance-none truncate"
+            >
+              <option value="ALL" className="bg-surface text-editorial-title">Semua Edisi</option>
+              <option value="ONESHOT" className="bg-surface text-editorial-title">Oneshot (1 vol)</option>
+              <option value="SHORT" className="bg-surface text-editorial-title">Seri Pendek (2–4 vol)</option>
+              <option value="BINDUP" className="bg-surface text-editorial-title">Ada Bind-Up</option>
+            </select>
+            <ChevronDown className="w-3.5 h-3.5 text-editorial-muted absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+          </div>
 
           {/* Symmetrical Dropdowns */}
           <div className="sm:col-span-5 grid grid-cols-3 gap-2">
