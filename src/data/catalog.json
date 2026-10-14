@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-14T11:27:52.000Z",
+  "lastUpdated": "2026-10-14T16:47:57.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -113153,10 +113153,10 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230031366_Cov_Conan_Private_Eye_01_FC.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2022-03-04",
       "isWednesdayRelease": false,
-      "currentPrice": 60000,
+      "currentPrice": 72000,
       "originalPrice": 80000,
       "authors": [
         "Aoyama Gosho"
@@ -174697,9 +174697,40 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-14",
       "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_private_eye_in_the_distant_sea_first_1791996477",
+      "bookId": "pub_detektif_conan_movie_private_eye_in_the_distant_sea_first",
+      "price": 72000,
+      "currentPrice": 72000,
+      "originalPrice": 80000,
+      "previousPrice": 60000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-14",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1791996477",
+      "startedAt": "2026-10-14T16:39:02.000Z",
+      "finishedAt": "2026-10-14T16:47:57.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1292,
+      "productsRejected": 429,
+      "productsUpdated": 1126,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 534966,
+      "success": true
+    },
     {
       "id": "sync_1791977272",
       "startedAt": "2026-10-14T11:18:26.000Z",
@@ -175078,26 +175109,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 236093,
-      "success": true
-    },
-    {
-      "id": "sync_1791026077",
-      "startedAt": "2026-10-03T11:11:12.000Z",
-      "finishedAt": "2026-10-03T11:14:37.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1462,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 205509,
       "success": true
     }
   ]
