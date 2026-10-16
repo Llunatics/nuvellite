@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-15T21:08:28.000Z",
+  "lastUpdated": "2026-10-16T03:31:06.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -9675,7 +9675,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-01",
       "isWednesdayRelease": true,
-      "currentPrice": 38250,
+      "currentPrice": 40500,
       "authors": [
         "Fujiko F. Fujio"
       ],
@@ -44522,7 +44522,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-07-07",
       "isWednesdayRelease": false,
-      "currentPrice": 76500,
+      "currentPrice": 68000,
       "authors": [
         "Dubu/Chugong"
       ],
@@ -82392,7 +82392,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-10-13",
       "isWednesdayRelease": true,
-      "currentPrice": 36000,
+      "currentPrice": 32000,
       "authors": [
         "FUJITA"
       ],
@@ -111173,7 +111173,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/3-4g062n5z.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-12",
       "isWednesdayRelease": false,
       "currentPrice": 55000,
@@ -111209,7 +111209,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/w-6gzl8cle.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-12",
       "isWednesdayRelease": false,
       "currentPrice": 45000,
@@ -111245,7 +111245,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/8blux92v0o.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-12",
       "isWednesdayRelease": false,
       "currentPrice": 85000,
@@ -113261,7 +113261,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-ss8leenrd.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-13",
       "isWednesdayRelease": false,
       "currentPrice": 118000,
@@ -113297,7 +113297,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-xnciasivl.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-13",
       "isWednesdayRelease": false,
       "currentPrice": 65000,
@@ -113333,7 +113333,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/--6--90az-.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-13",
       "isWednesdayRelease": false,
       "currentPrice": 65000,
@@ -113369,7 +113369,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/i785853eee.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-13",
       "isWednesdayRelease": false,
       "currentPrice": 65000,
@@ -188612,9 +188612,139 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-15",
       "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_insect_girl_02_1792121466",
+      "bookId": "pub_insect_girl_02",
+      "price": 55000,
+      "currentPrice": 55000,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_i_want_to_end_this_love_game_05_1792121466",
+      "bookId": "pub_i_want_to_end_this_love_game_05",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_20_part_4_diamond_is_unbreakable_1792121466",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_20_part_4_diamond_is_unbreakable",
+      "price": 85000,
+      "currentPrice": 85000,
+      "originalPrice": 85000,
+      "previousPrice": 85000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_doraemon_26_2026_1792121466",
+      "bookId": "pub_doraemon_26_2026",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 38250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_1792121466",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 118000,
+      "currentPrice": 118000,
+      "originalPrice": 118000,
+      "previousPrice": 118000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_abang_siscon_yang_menyebalkan_vol_2_1792121466",
+      "bookId": "pub_abang_siscon_yang_menyebalkan_vol_2",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_in_the_clear_moonlit_dusk_6_1792121466",
+      "bookId": "pub_in_the_clear_moonlit_dusk_6",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kill_blue_4_1792121466",
+      "bookId": "pub_kill_blue_4",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_solo_leveling_13_komik_1792121089",
+      "bookId": "pub_solo_leveling_13_komik",
+      "price": 68000,
+      "currentPrice": 68000,
+      "originalPrice": 85000,
+      "previousPrice": 76500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_akasha_wotakoi_lone_is_hard_for_otaku_02_1792121255",
+      "bookId": "pub_akasha_wotakoi_lone_is_hard_for_otaku_02",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 40000,
+      "previousPrice": 36000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-16",
+      "source": "gramedia_api_refresh"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1792121466",
+      "startedAt": "2026-10-16T03:21:18.000Z",
+      "finishedAt": "2026-10-16T03:31:06.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1292,
+      "productsRejected": 429,
+      "productsUpdated": 1126,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 588259,
+      "success": true
+    },
     {
       "id": "sync_1792098508",
       "startedAt": "2026-10-15T20:58:52.000Z",
@@ -188993,26 +189123,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 225076,
-      "success": true
-    },
-    {
-      "id": "sync_1791147542",
-      "startedAt": "2026-10-04T20:54:58.000Z",
-      "finishedAt": "2026-10-04T20:59:02.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1462,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 244205,
       "success": true
     }
   ]
