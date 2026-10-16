@@ -28,6 +28,84 @@
   "pranalaCoverSource": "https://www.mncgramedia.id/books/2607/un-famous-girl"
  },
  {
+  "id": "kki_anima",
+  "slug": "anima",
+  "title": "+anima",
+  "author": "Natsumi Mukai",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "10",
+  "statusId": "End",
+  "publisherId": "M&C!",
+  "yearFirstVol": null,
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "volumesJp": "10",
+  "statusJp": "End",
+  "publisherJp": "ASCII Media Works",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/cthp6n7/anima",
+  "pranala": null,
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
+ },
+ {
+  "id": "kki_c-sword-and-cornett",
+  "slug": "c-sword-and-cornett",
+  "title": "+C: Sword and Cornett",
+  "author": "Tama Yugyoji",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Josei",
+  "volumesId": "8",
+  "statusId": "End",
+  "publisherId": "Elex",
+  "yearFirstVol": "2017",
+  "priceMin": "Rp22.500",
+  "priceMax": "Rp25.000",
+  "paperType": "Koran",
+  "volumesJp": "8",
+  "statusJp": "End",
+  "publisherJp": "Ichijinsha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/40ubd1g/c-sword-and-cornett",
+  "pranala": null,
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
+ },
+ {
+  "id": "kki_c-sword-and-cornett-appendix",
+  "slug": "c-sword-and-cornett-appendix",
+  "title": "+C: Sword and Cornett Appendix",
+  "author": "Tama Yugyoji",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Josei",
+  "volumesId": "1",
+  "statusId": "End",
+  "publisherId": "Elex",
+  "yearFirstVol": "2018",
+  "priceMin": "Rp25.000",
+  "priceMax": "Rp25.000",
+  "paperType": "Koran",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "publisherJp": "Ichijinsha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/zk5c3vo/c-sword-and-cornett-appendix",
+  "pranala": null,
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
+ },
+ {
   "id": "kki_hackgu",
   "slug": "hackgu",
   "title": ".hack//G.U.+",
@@ -80,6 +158,32 @@
   }
  },
  {
+  "id": "kki_hackthe-legend-of-the-twilight",
+  "slug": "hackthe-legend-of-the-twilight",
+  "title": ".hack//The Legend of The Twilight",
+  "author": "Cerita: Tatsuya Hamasaki; Gambar: Rei Izumi",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "3",
+  "statusId": "End",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2009",
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "volumesJp": "3",
+  "statusJp": "End",
+  "publisherJp": "Kadokawa",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/mn75au1/hack-tasogare-no-udewa-densetsu",
+  "pranala": null,
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
+ },
+ {
   "id": "kki_07-ghost",
   "slug": "07-ghost",
   "title": "07-Ghost",
@@ -103,6 +207,32 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
+  }
+ },
+ {
+  "id": "kki_1-or-w",
+  "slug": "1-or-w",
+  "title": "1 or W",
+  "author": "Rumiko Takahashi",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Seinen",
+  "volumesId": "1",
+  "statusId": "End",
+  "publisherId": "Elex",
+  "yearFirstVol": "2010",
+  "priceMin": "Rp22.000",
+  "priceMax": "Rp22.000",
+  "paperType": "Koran",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "publisherJp": "Shogakukan",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/r4opc46/1-or-w",
+  "pranala": null,
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
   }
  },
  {
@@ -212,6 +342,34 @@
    "status": "blocked",
    "fetchedAt": "2026-10-13"
   }
+ },
+ {
+  "id": "kki_100-blossoms-of-love",
+  "slug": "100-blossoms-of-love",
+  "title": "100 Blossoms of Love",
+  "author": "Yuka Shibano",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shojo",
+  "volumesId": "2",
+  "statusId": "End",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2020",
+  "priceMin": "Rp28.000",
+  "priceMax": "Rp28.000",
+  "paperType": "Koran",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "publisherJp": "Shogakukan",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/1wozk2b/100-mankai-no-suki-o-ageru",
+  "pranala": "https://www.mncgramedia.id/books/4494/100-blossoms-of-love-01",
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/4494/100_BLOSSOMS_OF_LOVE_01_1678952829.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/4494/100-blossoms-of-love-01"
  },
  {
   "id": "kki_100-days-left",
@@ -664,6 +822,34 @@
   }
  },
  {
+  "id": "kki_375-c-tears",
+  "slug": "375-c-tears",
+  "title": "37,5 C Tears",
+  "author": "Chika Shiina",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shojo",
+  "volumesId": "7",
+  "statusId": "Stopped",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2016",
+  "priceMin": "Rp22.500",
+  "priceMax": "Rp25.000",
+  "paperType": "Koran",
+  "volumesJp": "24",
+  "statusJp": "End",
+  "publisherJp": "Shogakukan",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/emu4dj1/37-5-c-no-namida",
+  "pranala": "https://www.mncgramedia.id/books/2796/375-c-tears-01",
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/2796/2921_37.5_C_Tears_01_1678952526.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/2796/375-c-tears-01"
+ },
+ {
   "id": "kki_3x3-eyes",
   "slug": "3x3-eyes",
   "title": "3x3 Eyes",
@@ -950,6 +1136,34 @@
   }
  },
  {
+  "id": "kki_a-bad-cinderella",
+  "slug": "a-bad-cinderella",
+  "title": "A Bad Cinderella",
+  "author": "Hwang Mi Ree",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shojo",
+  "volumesId": "10",
+  "statusId": "End",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2012",
+  "priceMin": "Rp22.000",
+  "priceMax": "Rp22.000",
+  "paperType": "Koran",
+  "volumesJp": "10",
+  "statusJp": "End",
+  "publisherJp": null,
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/svaeviw/delinquent-cinderella",
+  "pranala": "https://www.mncgramedia.id/books/947/a-bad-cinderella-2",
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/947/9786022107364_1678952100.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/947/a-bad-cinderella-2"
+ },
+ {
   "id": "kki_a-beautiful-girls-secret",
   "slug": "a-beautiful-girls-secret",
   "title": "A Beautiful Girl's Secret",
@@ -1001,6 +1215,32 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
+  }
+ },
+ {
+  "id": "kki_a-bouquet-for-my-sleepless-knight",
+  "slug": "a-bouquet-for-my-sleepless-knight",
+  "title": "A Bouquet for My Sleepless Knight",
+  "author": "Kiiro Yumi",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shojo",
+  "volumesId": "1",
+  "statusId": "End",
+  "publisherId": "M&C!",
+  "yearFirstVol": null,
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "publisherJp": "Hakusensha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/qp2zm7n/nemurenu-kishi-ni-hanataba-o",
+  "pranala": null,
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
   }
  },
  {
@@ -1639,7 +1879,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/83twgfh/1945-nen-10-dai-no-sensou",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-playboy-an-innocent-girl",
@@ -1662,6 +1906,10 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/hvg5syx/chara-mote-otoko-to-junjou-onna",
   "pranala": "https://www.mncgramedia.id/books/3253/a-playboy-an-innocent-girl",
   "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  },
   "pranalaCover": "https://media.mncgramedia.id/images/books/3253/A_playboy_an_innocent_girl_1678952588.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/3253/a-playboy-an-innocent-girl"
  },
@@ -1685,7 +1933,11 @@
   "publisherJp": "Hakusensha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/6sktozl/m-to-n-no-shouzou",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-presto-see-you-soon",
@@ -1707,7 +1959,11 @@
   "publisherJp": "Ichijinsha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/36n7uil/a-presto",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-prince-for-a-princess",
@@ -1730,6 +1986,10 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/wih5rme/sensei-nante-daikirai",
   "pranala": "https://www.mncgramedia.id/books/2134/a-prince-for-a-princess",
   "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  },
   "pranalaCover": "https://media.mncgramedia.id/images/books/2134/9786022668022_1678952318.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/2134/a-prince-for-a-princess"
  },
@@ -1753,7 +2013,11 @@
   "publisherJp": "Sharp Point Publishing",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/6fwxn78/bo-li-xie-zhi-yue",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-secret-marriage",
@@ -1776,6 +2040,10 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/osnhg6s/naisho-ja-tarinai-yo",
   "pranala": "https://www.mncgramedia.id/books/2391/a-secret-marriage",
   "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  },
   "pranalaCover": "https://media.mncgramedia.id/images/books/2391/9786023391844_1678952353.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/2391/a-secret-marriage"
  },
@@ -1799,7 +2067,11 @@
   "publisherJp": "Shueisha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/5ct49tf/hiyokoi",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-spirit-of-the-sun",
@@ -1821,7 +2093,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/1aclkv0/taiyou-no-mokishiroku",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-spirit-of-the-sun-founding-of-the-nation",
@@ -1843,7 +2119,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/lta5jmu/taiyou-no-mokushiroku-dai-2-bu-kenkoku-hen",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-tale-for-you",
@@ -1866,8 +2146,10 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/gj9i9uq/otogibanashi-wo-anata-ni",
   "pranala": "https://www.mncgramedia.id/books/2524/a-tale-for-you",
   "notes": null,
-  "pranalaCover": "https://media.mncgramedia.id/images/books/2524/9786023393220_1678952373.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/2524/a-tale-for-you"
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-tale-for-you-the-dancing-princess",
@@ -1890,8 +2172,36 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/aj3fmi0/otogibanashi-o-anata-ni-tsukiyo-no-maihime",
   "pranala": "https://www.mncgramedia.id/books/2533/a-tale-for-you-the-dancing-princess",
   "notes": null,
-  "pranalaCover": "https://media.mncgramedia.id/images/books/2533/9786023393206_1678952374.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/2533/a-tale-for-you-the-dancing-princess"
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
+ },
+ {
+  "id": "kki_a-tale-of-the-cat-painter",
+  "slug": "a-tale-of-the-cat-painter",
+  "title": "A Tale of the Cat Painter",
+  "author": "Nagao Maru",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Josei",
+  "volumesId": "7",
+  "statusId": "Stopped",
+  "publisherId": "Elex",
+  "yearFirstVol": "2011",
+  "priceMin": "Rp18.500",
+  "priceMax": "Rp20.000",
+  "paperType": "Koran",
+  "volumesJp": "25",
+  "statusJp": "Ongoing",
+  "publisherJp": "Shonen Gahosha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/gf20rqq/nekoe-juubee-otogi-soushi",
+  "pranala": null,
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-thousand-heartbeats",
@@ -1913,7 +2223,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/dw1ef7r/1000-no-kodou",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-ticket-to-heaven",
@@ -1936,8 +2250,10 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/z5tipwi/tengoku-no-kippu",
   "pranala": "https://www.mncgramedia.id/books/2305/a-ticket-to-heaven",
   "notes": null,
-  "pranalaCover": "https://media.mncgramedia.id/images/books/2305/9786023390366_1678952339.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/2305/a-ticket-to-heaven"
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-town-where-you-live",
@@ -1959,7 +2275,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/2v2g9b2/kimi-no-iru-machi",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-trip-to-the-east",
@@ -1981,7 +2301,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/ary06g4/touyuki",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-very-straight-girl-a-so-twisted-boy",
@@ -2003,7 +2327,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/kr4hnir/tonikaku-kimi-ga",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_a-witch-who-looks-for-love",
@@ -2025,7 +2353,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/lzzm37h/majo-wa-koi-ni-hen-shiteru",
   "pranala": "https://www.mncgramedia.id/books/440/a-witch-who-looks-for-love",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_aaa",
@@ -2047,7 +2379,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/3alch3n/aaa",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_absolute-duo",
@@ -2069,7 +2405,11 @@
   "publisherJp": "Media Factory",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/nhbhtyu/absolute-duo-novel",
   "pranala": null,
-  "notes": "Penerbit Gulung Tikar"
+  "notes": "Penerbit Gulung Tikar",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-16"
+  }
  },
  {
   "id": "kki_absolute-love-program",
@@ -3568,6 +3908,28 @@
   "notes": null
  },
  {
+  "id": "kki_anohana-the-flower-we-saw-that-day",
+  "slug": "anohana-the-flower-we-saw-that-day",
+  "title": "Anohana - The Flower We Saw That Day",
+  "author": "Cerita: Mari Okada; Gambar: Mitsu Izumi",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "3",
+  "statusId": "End",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2019",
+  "priceMin": "Rp43.000",
+  "priceMax": "Rp48.000",
+  "paperType": "Bookpaper",
+  "volumesJp": "3",
+  "statusJp": "End",
+  "publisherJp": "Shueisha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/deld4xy/ano-hi-mita-hana-no-namae-o-boku-tachi-wa-mada-shiranai",
+  "pranala": null,
+  "notes": null
+ },
+ {
   "id": "kki_another-manga",
   "slug": "another-manga",
   "title": "Another (Manga)",
@@ -4246,28 +4608,6 @@
   "statusJp": "End",
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/wb73fd3/soukyuu-no-ariadne",
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_arisa",
-  "slug": "arisa",
-  "title": "Arisa",
-  "author": "Ntasumi Ando",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shojo",
-  "volumesId": "12",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2015",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "12",
-  "statusJp": "End",
-  "publisherJp": "Kodansha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/h3zgrv6/arisa",
   "pranala": null,
   "notes": null
  },
@@ -5878,6 +6218,28 @@
   "notes": null
  },
  {
+  "id": "kki_best-blue",
+  "slug": "best-blue",
+  "title": "Best Blue",
+  "author": "Masahiro Hirakata",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "3",
+  "statusId": "End",
+  "publisherId": "Elex",
+  "yearFirstVol": "2019",
+  "priceMin": "Rp25.000",
+  "priceMax": "Rp28.000",
+  "paperType": "Koran",
+  "volumesJp": "3",
+  "statusJp": "End",
+  "publisherJp": "Shueisha",
+  "mangaupdatesUrl": null,
+  "pranala": null,
+  "notes": null
+ },
+ {
   "id": "kki_bestiarius",
   "slug": "bestiarius",
   "title": "Bestiarius",
@@ -6274,6 +6636,28 @@
   "notes": null
  },
  {
+  "id": "kki_black-bullet",
+  "slug": "black-bullet",
+  "title": "Black Bullet",
+  "author": "Morinohon, Shiden Kanzaki",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Seinen",
+  "volumesId": "4",
+  "statusId": "End",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2016",
+  "priceMin": "Rp25.000",
+  "priceMax": "Rp25.000",
+  "paperType": "Koran",
+  "volumesJp": "4",
+  "statusJp": "End",
+  "publisherJp": "ASCII Media Works",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/l7jd3ok/black-bullet",
+  "pranala": "https://www.mncgramedia.id/books/2786/black-bullet-01",
+  "notes": null
+ },
+ {
   "id": "kki_black-cat",
   "slug": "black-cat",
   "title": "Black Cat",
@@ -6292,6 +6676,28 @@
   "statusJp": "End",
   "publisherJp": "Shueisha",
   "mangaupdatesUrl": null,
+  "pranala": null,
+  "notes": null
+ },
+ {
+  "id": "kki_black-clover-165-official-guidebook",
+  "slug": "black-clover-165-official-guidebook",
+  "title": "Black Clover 16.5 : Official Guidebook",
+  "author": "Yuki Tabata",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "1",
+  "statusId": "End",
+  "publisherId": "Elex",
+  "yearFirstVol": "2025",
+  "priceMin": "Rp75.000",
+  "priceMax": "Rp75.000",
+  "paperType": "Bookpaper",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "publisherJp": "Shueisha",
+  "mangaupdatesUrl": "https://elexmedia.id/produk/detail/komik-elex/yuki-tabata/black-clover-16-5--official-guidebook/9786230036736",
   "pranala": null,
   "notes": null
  },
@@ -6424,6 +6830,28 @@
   "statusJp": "End",
   "publisherJp": "Square Enix",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/h10n985/zetsuen-no-tempest",
+  "pranala": null,
+  "notes": null
+ },
+ {
+  "id": "kki_blindside-horror-anthology-comic",
+  "slug": "blindside-horror-anthology-comic",
+  "title": "Blindside - Horror Anthology Comic",
+  "author": "Junji Ito; dkk.",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Josei",
+  "volumesId": "1",
+  "statusId": "End",
+  "publisherId": "Akasha",
+  "yearFirstVol": "2025",
+  "priceMin": "Rp75.000",
+  "priceMax": "Rp75.000",
+  "paperType": "Bookpaper",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "publisherJp": "Bunkasha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/vjydvdb/horror-anthology-comic-shikaku",
   "pranala": null,
   "notes": null
  },
@@ -6846,6 +7274,28 @@
   "notes": null
  },
  {
+  "id": "kki_bocchi-the-rock-side-story-kikuri-the-drunk-hero-rock-story",
+  "slug": "bocchi-the-rock-side-story-kikuri-the-drunk-hero-rock-story",
+  "title": "Bocchi The Rock! Side Story: Kikuri the \"Drunk Hero\" Rock Story",
+  "author": "Cerita: Aki Hamaji; Gambar: Kumichou",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Seinen",
+  "volumesId": "4",
+  "statusId": "Ongoing",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2025",
+  "priceMin": "Rp55.000",
+  "priceMax": "Rp55.000",
+  "paperType": "Bookpaper",
+  "volumesJp": "7",
+  "statusJp": "Ongoing",
+  "publisherJp": "Houbunsha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/b5lljv5/bocchi-the-rock-gaiden-hiroi-kikuri-no-fukazake-nikki",
+  "pranala": "https://mncgramedia.id/books/6522/bocchi-the-rock-side-story-1",
+  "notes": null
+ },
+ {
   "id": "kki_body-rebuild-series",
   "slug": "body-rebuild-series",
   "title": "Body Rebuild Series",
@@ -7019,6 +7469,28 @@
   "publisherJp": "Kadokawa",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/r8df2jf/border-kotegawa-yua",
   "pranala": null,
+  "notes": null
+ },
+ {
+  "id": "kki_born-to-cook-mister-ajikko-the-next-generation",
+  "slug": "born-to-cook-mister-ajikko-the-next-generation",
+  "title": "Born To Cook - Mister Ajikko The Next Generation",
+  "author": "Daisuke Terasawa",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Seinen",
+  "volumesId": "13",
+  "statusId": "End",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2011",
+  "priceMin": "Rp22.500",
+  "priceMax": "Rp22.500",
+  "paperType": "Koran",
+  "volumesJp": "13",
+  "statusJp": "End",
+  "publisherJp": "Kodansha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/15kd1yn/mister-ajikko-ii",
+  "pranala": "https://www.mncgramedia.id/books/147/born-to-cook-7",
   "notes": null
  },
  {
@@ -7305,28 +7777,6 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/pmeu4rm/otonari-wa-1-ken-de-2-do-oishii",
   "pranala": "https://www.mncgramedia.id/books/3188/boys-next-door-01",
-  "notes": null
- },
- {
-  "id": "kki_boys-we-love",
-  "slug": "boys-we-love",
-  "title": "Boys We Love",
-  "author": "Kyoko Maki",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shojo",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "M&C!",
-  "yearFirstVol": null,
-  "priceMin": "Rp25.000",
-  "priceMax": "Rp25.000",
-  "paperType": null,
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Shogakukan",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/7o8t19u/bukatsu-kareshi-sawayaka-na-kare-to-anna-koto",
-  "pranala": "https://www.mncgramedia.id/books/3466/boys-we-love",
   "notes": null
  },
  {
@@ -8628,28 +9078,6 @@
   "notes": null
  },
  {
-  "id": "kki_cat-god",
-  "slug": "cat-god",
-  "title": "Cat God",
-  "author": "Flipflops",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Seinen",
-  "volumesId": "5",
-  "statusId": "Stopped",
-  "publisherId": "Elex",
-  "yearFirstVol": "2013",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "6",
-  "statusJp": "End",
-  "publisherJp": "Akita Shoten",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/mtlqn9t/nekogami-yaoyorozu",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_cat-street",
   "slug": "cat-street",
   "title": "Cat Street",
@@ -8782,28 +9210,6 @@
   "notes": null
  },
  {
-  "id": "kki_cells-at-work-black",
-  "slug": "cells-at-work-black",
-  "title": "Cells at Work! Black",
-  "author": "Cerita: Shigemitsu Harda;  Gambar: Issey Hatsuyoshiya;  Created By: Akane Shimizu",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Seinen",
-  "volumesId": "8",
-  "statusId": "End",
-  "publisherId": "Akasha",
-  "yearFirstVol": "2022",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "8",
-  "statusJp": "End",
-  "publisherJp": "Kodansha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/5otfiv2/hataraku-saibou-black",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_cengkraman-roh-jahat",
   "slug": "cengkraman-roh-jahat",
   "title": "Cengkraman Roh Jahat",
@@ -8844,6 +9250,28 @@
   "statusJp": "End",
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/ujwxik2/ayashi-no-ceres",
+  "pranala": null,
+  "notes": null
+ },
+ {
+  "id": "kki_cerita-spesial-doraemon",
+  "slug": "cerita-spesial-doraemon",
+  "title": "Cerita Spesial Doraemon",
+  "author": "Fujiko F. Fujio",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "18",
+  "statusId": "End",
+  "publisherId": "Elex",
+  "yearFirstVol": null,
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "volumesJp": "18",
+  "statusJp": "End",
+  "publisherJp": "Shogakukan",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/gzp5lsi/doraemon",
   "pranala": null,
   "notes": null
  },
@@ -9489,28 +9917,6 @@
   "id": "kki_chocolat",
   "slug": "chocolat",
   "title": "Chocolat",
-  "author": "Kubonouchi Eisaku",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Seinen",
-  "volumesId": "7",
-  "statusId": "End",
-  "publisherId": "Level",
-  "yearFirstVol": "2009",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "7",
-  "statusJp": "End",
-  "publisherJp": "Shogakukan",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/jryq2l0/chocolat-kubonouchi-eisaku",
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_chocolat-2",
-  "slug": "chocolat-2",
-  "title": "Chocolat",
   "author": "Shin Ji-Sang",
   "illustrator": null,
   "medium": "MANGA",
@@ -9526,6 +9932,28 @@
   "statusJp": "End",
   "publisherJp": "Sigongsa",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/h0cniyt/chocolat",
+  "pranala": null,
+  "notes": null
+ },
+ {
+  "id": "kki_chocolat-2",
+  "slug": "chocolat-2",
+  "title": "Chocolat",
+  "author": "Kubonouchi Eisaku",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Seinen",
+  "volumesId": "7",
+  "statusId": "End",
+  "publisherId": "Level",
+  "yearFirstVol": "2009",
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "volumesJp": "7",
+  "statusJp": "End",
+  "publisherJp": "Shogakukan",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/jryq2l0/chocolat-kubonouchi-eisaku",
   "pranala": null,
   "notes": null
  },
@@ -9704,6 +10132,28 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/iatjcdf/chocolat-no-mahou",
   "pranala": null,
   "notes": "Tiap volume punya judul sesuai abjad alfabet. Volume terbaru M&C di Queen Candy."
+ },
+ {
+  "id": "kki_chocolate-magic-collection",
+  "slug": "chocolate-magic-collection",
+  "title": "Chocolate Magic Collection",
+  "author": "Mizuho Rino",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shojo",
+  "volumesId": "3",
+  "statusId": "Stopped",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2016",
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "volumesJp": "4",
+  "statusJp": "End",
+  "publisherJp": "Shogakukan",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/iatjcdf/chocolat-no-mahou",
+  "pranala": null,
+  "notes": null
  },
  {
   "id": "kki_chocolate-magic-memorial-collection-2025",
@@ -9992,26 +10442,26 @@
   "notes": null
  },
  {
-  "id": "kki_city-hunter-complete-edition",
-  "slug": "city-hunter-complete-edition",
-  "title": "City Hunter (Complete Edition)",
-  "author": "Tsukasa Hojo",
+  "id": "kki_city",
+  "slug": "city",
+  "title": "City",
+  "author": "Keiichi Arawi",
   "illustrator": null,
   "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "31",
-  "statusId": "Ongoing",
-  "publisherId": "Akasha",
-  "yearFirstVol": "2020",
-  "priceMin": "Rp58.000",
-  "priceMax": "Rp69.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "32",
+  "demographic": "Seinen",
+  "volumesId": "1",
+  "statusId": "Stopped",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2019",
+  "priceMin": "Rp25.000",
+  "priceMax": "Rp25.000",
+  "paperType": "Koran",
+  "volumesJp": "15",
   "statusJp": "End",
-  "publisherJp": "Tokuma Shoten",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/n5pb3ho/city-hunter",
+  "publisherJp": "Kodansha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/8tph2c4/city",
   "pranala": null,
-  "notes": "Book Paper, Edisi Kanzenban"
+  "notes": null
  },
  {
   "id": "kki_city-of-darkness",
@@ -14304,28 +14754,6 @@
   "notes": null
  },
  {
-  "id": "kki_di-balik-jendela-putih-deluxe",
-  "slug": "di-balik-jendela-putih-deluxe",
-  "title": "Di Balik Jendela Putih (Deluxe)",
-  "author": "Kyoko Hikawa",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shojo",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2011",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Hakusensha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/hkcji4z/shiroi-mado-no-mukougawa",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_diamond-beat",
   "slug": "diamond-beat",
   "title": "Diamond Beat",
@@ -15096,28 +15524,6 @@
   "notes": null
  },
  {
-  "id": "kki_doraemon-vol-0",
-  "slug": "doraemon-vol-0",
-  "title": "Doraemon Vol. 0",
-  "author": "Fujiko F. Fujio",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2021",
-  "priceMin": "Rp60.000",
-  "priceMax": "Rp60.000",
-  "paperType": "HVS",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Shogakukan",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/gv419qj/doraemon-0",
-  "pranala": null,
-  "notes": "Kabarnya tidak akan pernah dicetul"
- },
- {
   "id": "kki_dorm-life",
   "slug": "dorm-life",
   "title": "Dorm Life",
@@ -15730,28 +16136,6 @@
   "statusJp": "End",
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/z4mfip5/duel-masters",
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_dunia-mimpi-deluxe",
-  "slug": "dunia-mimpi-deluxe",
-  "title": "Dunia Mimpi (Deluxe)",
-  "author": "Kyoko Hikawa",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shojo",
-  "volumesId": "7",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2014",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": null,
-  "volumesJp": "7",
-  "statusJp": "End",
-  "publisherJp": "Hakusensha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/az5r0us/kanata-kara",
   "pranala": null,
   "notes": null
  },
@@ -18418,28 +18802,6 @@
   "notes": null
  },
  {
-  "id": "kki_frieren-after-the-end-special-edition",
-  "slug": "frieren-after-the-end-special-edition",
-  "title": "Frieren: After the End - Special Edition",
-  "author": "Cerita: Kanehito Yamada; Gambar: Tsukasa Abe",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "8",
-  "statusId": "Ongoing",
-  "publisherId": "M&C!",
-  "yearFirstVol": "2024",
-  "priceMin": "Rp68.000",
-  "priceMax": "Rp68.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "15",
-  "statusJp": "Hiatus",
-  "publisherJp": "Shogakukan",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ugf5dzu/sousou-no-frieren",
-  "pranala": null,
-  "notes": "Vol.8 special edition dgn bonus sticker sheet, harga 68k"
- },
- {
   "id": "kki_frieren-after-the-end-prelude",
   "slug": "frieren-after-the-end-prelude",
   "title": "Frieren: After “The End” -Prelude-",
@@ -19184,6 +19546,28 @@
   "statusJp": "End",
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/yq9xhqy/gs-mikami-gokuraku-daisakusen",
+  "pranala": null,
+  "notes": null
+ },
+ {
+  "id": "kki_giga-tokyo-toy-box",
+  "slug": "giga-tokyo-toy-box",
+  "title": "Giga Tokyo Toy Box",
+  "author": "Ume",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Seinen",
+  "volumesId": "9",
+  "statusId": "Stopped",
+  "publisherId": "Level",
+  "yearFirstVol": "2012",
+  "priceMin": "Rp20.000",
+  "priceMax": "Rp22.000",
+  "paperType": "Koran",
+  "volumesJp": "10",
+  "statusJp": "End",
+  "publisherJp": "Gentosha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/bj83btu/giga-tokyo-toy-box",
   "pranala": null,
   "notes": null
  },
@@ -22532,28 +22916,6 @@
   "notes": null
  },
  {
-  "id": "kki_higehiro-after-being-rejected-i-shaved-and-took-in-a-highschool-runaway",
-  "slug": "higehiro-after-being-rejected-i-shaved-and-took-in-a-highschool-runaway",
-  "title": "Higehiro: After Being Rejected, I Shaved and Took in a Highschool Runaway",
-  "author": "Cerita: Shimesaba; Gambar: Imaru Adachi; Desain Karakter: Booota",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "4",
-  "statusId": "Ongoing",
-  "publisherId": "Akasha",
-  "yearFirstVol": "2023",
-  "priceMin": "Rp48.000",
-  "priceMax": "Rp48.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "13",
-  "statusJp": "End",
-  "publisherJp": "Kadokawa",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=151731",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_high-jump",
   "slug": "high-jump",
   "title": "High Jump",
@@ -23322,6 +23684,28 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=3548",
   "pranala": null,
   "notes": null
+ },
+ {
+  "id": "kki_hitman-reborn",
+  "slug": "hitman-reborn",
+  "title": "Hitman Reborn!",
+  "author": "Akira Amano",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "30",
+  "statusId": "Ongoing",
+  "publisherId": "M&C!",
+  "yearFirstVol": "2014",
+  "priceMin": "Rp25.000",
+  "priceMax": "Rp45.000",
+  "paperType": "Koran",
+  "volumesJp": "42",
+  "statusJp": "End",
+  "publisherJp": "Shueisha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/tw61gvk/kateikyoushi-hitman-reborn",
+  "pranala": null,
+  "notes": "Mulai Volume 21 Ganti Kertas Book Paper"
  },
  {
   "id": "kki_hitohira",
@@ -24490,25 +24874,25 @@
   "notes": null
  },
  {
-  "id": "kki_i-want-to-end-this-love-game",
-  "slug": "i-want-to-end-this-love-game",
-  "title": "I Want to End this Love Game",
-  "author": "Yuki Domoto",
+  "id": "kki_i-want-to-eat-your-pancreass-complete-edition",
+  "slug": "i-want-to-eat-your-pancreass-complete-edition",
+  "title": "I Want To Eat Your Pancreass - Complete Edition",
+  "author": "Cerita: Yoru Sumino; Gambar: Idumi Kirihara",
   "illustrator": null,
   "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "5",
-  "statusId": "Ongoing",
-  "publisherId": "Elex",
+  "demographic": "Seinen",
+  "volumesId": "1",
+  "statusId": "End",
+  "publisherId": "M&C!",
   "yearFirstVol": "2025",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
+  "priceMin": "Rp114.000",
+  "priceMax": "Rp114.000",
   "paperType": "Bookpaper",
-  "volumesJp": "9",
-  "statusJp": "Ongoing",
-  "publisherJp": "Shogakukan",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/6t8o7q6/aishiteru-game-wo-owarasetai",
-  "pranala": "https://elexmedia.id/produk/detail/komik-elex/yuki-domoto/i-want-to-end-this-love-game-01/9786230073908",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "publisherJp": "Futabasha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/tedp3b6/kimi-no-suizou-wo-tabetai",
+  "pranala": null,
   "notes": null
  },
  {
@@ -26092,28 +26476,6 @@
   "statusJp": "End",
   "publisherJp": "Asahi Sonorama",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/l01y1vq/shibito-no-koiwazurai",
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_ito-junji-compilation-5-a-deserter-in-the-house",
-  "slug": "ito-junji-compilation-5-a-deserter-in-the-house",
-  "title": "Ito Junji Compilation 5: A Deserter In The House",
-  "author": "Junji Ito",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Seinen",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Akasha",
-  "yearFirstVol": "2024",
-  "priceMin": "Rp95.000",
-  "priceMax": "Rp95.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Asahi Sonorama",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/9tkgyds/dassouhei-no-iru-ie",
   "pranala": null,
   "notes": null
  },
@@ -32454,6 +32816,28 @@
   "notes": null
  },
  {
+  "id": "kki_makeine-heroine-yang-patah-hati-terlalu-banyak",
+  "slug": "makeine-heroine-yang-patah-hati-terlalu-banyak",
+  "title": "Makeine – Heroine yang Patah Hati Terlalu Banyak!",
+  "author": "Cerita: Takibi Amamori; Gambar: Itachi",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "2",
+  "statusId": "Ongoing",
+  "publisherId": "Phoenix",
+  "yearFirstVol": "2026",
+  "priceMin": "Rp65.000",
+  "priceMax": "Rp65.000",
+  "paperType": "Bookpaper",
+  "volumesJp": "6",
+  "statusJp": "Ongoing",
+  "publisherJp": "Shogakukan",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/zc9bk0t/make-heroine-ga-oosugiru",
+  "pranala": "https://phoenixgramedia.id/books/makeine-heroine-yang-patah-hati-terlalu-banyak-vol-1/",
+  "notes": null
+ },
+ {
   "id": "kki_mama-colle",
   "slug": "mama-colle",
   "title": "Mama Colle",
@@ -33481,28 +33865,6 @@
   "priceMax": null,
   "paperType": "Koran",
   "volumesJp": "10",
-  "statusJp": "End",
-  "publisherJp": "Shogakukan",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/8dh2qiv/uwasa-no-midori-kun",
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_midori-is-a-tomboy-official-fan-book",
-  "slug": "midori-is-a-tomboy-official-fan-book",
-  "title": "Midori is A Tomboy Official Fan Book",
-  "author": "Ikeyamada Go",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shojo",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "3L",
-  "yearFirstVol": null,
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "1",
   "statusJp": "End",
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/8dh2qiv/uwasa-no-midori-kun",
@@ -35290,28 +35652,6 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/0we7vq5/yagiza-no-yuujin",
   "pranala": null,
   "notes": null
- },
- {
-  "id": "kki_my-capricorn-friend-bookpaper",
-  "slug": "my-capricorn-friend-bookpaper",
-  "title": "My Capricorn Friend (Bookpaper)",
-  "author": "Cerita: Otsuichi; Gambar: Masaru Mitokawa",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Akasha",
-  "yearFirstVol": "2022",
-  "priceMin": "Rp48.000",
-  "priceMax": "Rp48.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Shueisha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/0we7vq5/yagiza-no-yuujin",
-  "pranala": null,
-  "notes": "Cetak ulang dengan format baru, bookpaper"
  },
  {
   "id": "kki_my-cheeky-junior",
@@ -38988,26 +39328,26 @@
   "notes": "Asisten Editor: Riana Adnan"
  },
  {
-  "id": "kki_oshi-no-ko-anak-idola-limited-edition",
-  "slug": "oshi-no-ko-anak-idola-limited-edition",
-  "title": "Oshi no Ko: Anak Idola (LIMITED EDITION)",
+  "id": "kki_oshi-no-ko-anak-idola",
+  "slug": "oshi-no-ko-anak-idola",
+  "title": "Oshi no Ko: Anak Idola",
   "author": "Cerita: Aka Akasaka; Gambar: Mengo Yokoyari",
   "illustrator": null,
   "medium": "MANGA",
   "demographic": "Seinen",
-  "volumesId": "1",
+  "volumesId": "16",
   "statusId": "End",
   "publisherId": "Akasha",
-  "yearFirstVol": "2023",
-  "priceMin": "Rp55.000",
-  "priceMax": "Rp55.000",
+  "yearFirstVol": "2022",
+  "priceMin": "Rp48.000",
+  "priceMax": "Rp72.000",
   "paperType": "Bookpaper",
-  "volumesJp": "14",
-  "statusJp": "Ongoing",
+  "volumesJp": "16",
+  "statusJp": "End",
   "publisherJp": "Shueisha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/89n01s3/oshi-no-ko",
   "pranala": null,
-  "notes": "Cover depan & ttd beda, halaman warna artpaper, bonus stiker. https://twitter.com/nokkyu16/status/1689254214785196032"
+  "notes": null
  },
  {
   "id": "kki_otoboke-section-chief",
@@ -39846,6 +40186,28 @@
   "notes": null
  },
  {
+  "id": "kki_pembunuhan-di-rumah-dekagon",
+  "slug": "pembunuhan-di-rumah-dekagon",
+  "title": "Pembunuhan di Rumah Dekagon",
+  "author": "Cerita: Yukito Ayatsuji; Gambar: Hiro Kiyohara",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Seinen",
+  "volumesId": "5",
+  "statusId": "End",
+  "publisherId": "Elex",
+  "yearFirstVol": "2025",
+  "priceMin": "Rp50.000",
+  "priceMax": "Rp50.000",
+  "paperType": "Bookpaper",
+  "volumesJp": "5",
+  "statusJp": "End",
+  "publisherJp": "Kodansha",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/wc4q25v/jukkakukan-no-satsujin",
+  "pranala": "https://elexmedia.id/produk/detail/komik-elex/yukito-ayatsuji-hiro-kiyohara/pembunuhan-di-rumah-dekagon-01/9786230071485",
+  "notes": null
+ },
+ {
   "id": "kki_pen-and-chocolate",
   "slug": "pen-and-chocolate",
   "title": "Pen and chocolate",
@@ -40418,8 +40780,8 @@
   "notes": null
  },
  {
-  "id": "kki_please-love-me",
-  "slug": "please-love-me",
+  "id": "kki_please-love-me-2",
+  "slug": "please-love-me-2",
   "title": "Please Love Me",
   "author": "Yukie Sasaki, Yuu",
   "illustrator": null,
@@ -40440,8 +40802,8 @@
   "notes": null
  },
  {
-  "id": "kki_please-love-me-2",
-  "slug": "please-love-me-2",
+  "id": "kki_please-love-me",
+  "slug": "please-love-me",
   "title": "Please Love Me!",
   "author": "Aya Nakahara",
   "illustrator": null,
@@ -42750,28 +43112,6 @@
   "notes": null
  },
  {
-  "id": "kki_reborn-kumiho",
-  "slug": "reborn-kumiho",
-  "title": "Reborn Kumiho",
-  "author": "Han Hyun Dong",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "21",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2004",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "21",
-  "statusJp": "End",
-  "publisherJp": "Daiwon",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/cdk8kb0/shin-gumiho",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_rec-the-day-you-cried",
   "slug": "rec-the-day-you-cried",
   "title": "REC - The Day You Cried",
@@ -44884,28 +45224,6 @@
   "notes": null
  },
  {
-  "id": "kki_school-live",
-  "slug": "school-live",
-  "title": "School Live",
-  "author": "Norimitsu Kaihou (Nitroplus), Sadoru Chiba",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Seinen",
-  "volumesId": "2",
-  "statusId": "Ongoing",
-  "publisherId": "M&C!",
-  "yearFirstVol": "2026",
-  "priceMin": "Rp999.999",
-  "priceMax": "Rp999.999",
-  "paperType": null,
-  "volumesJp": "12",
-  "statusJp": "End",
-  "publisherJp": "Houbunsha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/j51lrpa/gakkou-gurashi",
-  "pranala": "https://www.mncgramedia.id/books/6810/school-live-1",
-  "notes": null
- },
- {
   "id": "kki_school-rumble",
   "slug": "school-rumble",
   "title": "School Rumble",
@@ -45056,6 +45374,28 @@
   "statusJp": "End",
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": null,
+  "pranala": null,
+  "notes": null
+ },
+ {
+  "id": "kki_secret",
+  "slug": "secret",
+  "title": "Secret",
+  "author": "Yoshiki Tonogai",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "3",
+  "statusId": "End",
+  "publisherId": "Level",
+  "yearFirstVol": "2016",
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "volumesJp": "3",
+  "statusJp": "End",
+  "publisherJp": "Square Enix",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/7jwuodx/secret-tonogai-yoshiki",
   "pranala": null,
   "notes": null
  },
@@ -49548,28 +49888,6 @@
   "notes": null
  },
  {
-  "id": "kki_teman-sekelasku-berkacamata-semua",
-  "slug": "teman-sekelasku-berkacamata-semua",
-  "title": "Teman Sekelasku Berkacamata Semua?",
-  "author": "Marumikan",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "3",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2023",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "3",
-  "statusJp": "End",
-  "publisherJp": "Square Enix",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/4a5ares/classmate-wa-zenin-megane",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_tena-on-s-string",
   "slug": "tena-on-s-string",
   "title": "Tena On S String",
@@ -50626,28 +50944,6 @@
   "notes": null
  },
  {
-  "id": "kki_the-evil-collection",
-  "slug": "the-evil-collection",
-  "title": "The Evil Collection",
-  "author": "Motoi Tanaka",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Seinen",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Akasha",
-  "yearFirstVol": "2021",
-  "priceMin": "Rp38.000",
-  "priceMax": "Rp38.000",
-  "paperType": "Koran",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Shueisha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/oecib0a/akudou-bunko",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_the-executives-of-houou-academy",
   "slug": "the-executives-of-houou-academy",
   "title": "The Executives of Houou Academy",
@@ -51326,28 +51622,6 @@
   "statusJp": "End",
   "publisherJp": "Square Enix",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=151886",
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_the-king-of-sweets-in-the-universe",
-  "slug": "the-king-of-sweets-in-the-universe",
-  "title": "The King of Sweets in the Universe",
-  "author": "Oishi Hiroto",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": null,
-  "volumesId": "5",
-  "statusId": "End",
-  "publisherId": "3L",
-  "yearFirstVol": null,
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": null,
-  "volumesJp": "5",
-  "statusJp": "End",
-  "publisherJp": "Shogakukan",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/3y707x6/king-sweets",
   "pranala": null,
   "notes": null
  },
@@ -52140,50 +52414,6 @@
   "statusJp": "End",
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/mfyj30e/shojotachi-no-himitsu-hitorijime",
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_the-secret-scroll-of-confrontation-naruto-character-official-data-book",
-  "slug": "the-secret-scroll-of-confrontation-naruto-character-official-data-book",
-  "title": "The Secret Scroll Of Confrontation: Naruto Character Official Data Book",
-  "author": "Masashi Kishimoto",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2015",
-  "priceMin": "Rp28.000",
-  "priceMax": "Rp28.000",
-  "paperType": "Koran",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Shueisha",
-  "mangaupdatesUrl": null,
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_the-secret-scroll-of-fighting-naruto-character-official-data-book",
-  "slug": "the-secret-scroll-of-fighting-naruto-character-official-data-book",
-  "title": "The Secret Scroll Of Fighting: Naruto Character Official Data Book",
-  "author": "Masashi Kishimoto",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2017",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Koran",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Shueisha",
-  "mangaupdatesUrl": null,
   "pranala": null,
   "notes": null
  },
@@ -53834,28 +54064,6 @@
   "statusJp": null,
   "publisherJp": null,
   "mangaupdatesUrl": null,
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_tokyo-mew-mew-a-la-mode",
-  "slug": "tokyo-mew-mew-a-la-mode",
-  "title": "Tokyo Mew Mew A La Mode",
-  "author": "Mia Ikumi",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shojo",
-  "volumesId": "2",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": null,
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "2",
-  "statusJp": "End",
-  "publisherJp": "Kodansha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/zvlvkyf/tokyo-mew-mew-a-la-mode",
   "pranala": null,
   "notes": null
  },
@@ -56192,28 +56400,6 @@
   "notes": null
  },
  {
-  "id": "kki_who-is-to-blame-the-bully-or-the-bullied",
-  "slug": "who-is-to-blame-the-bully-or-the-bullied",
-  "title": "Who is to Blame: The Bully, or The Bullied",
-  "author": "Cerita: Chikara Kimizuka; Gambar: Yen Hioka",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "6",
-  "statusId": "End",
-  "publisherId": "Akasha",
-  "yearFirstVol": "2023",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "6",
-  "statusJp": "End",
-  "publisherJp": "Square Enix",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/qzrekvb/ijimeru-aitsu-ga-warui-noka-ijimerareta-boku-ga-warui-noka",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_whos-afraid-of-wolves",
   "slug": "whos-afraid-of-wolves",
   "title": "Who's Afraid of Wolves?!",
@@ -56894,28 +57080,6 @@
   "mangaupdatesUrl": null,
   "pranala": null,
   "notes": null
- },
- {
-  "id": "kki_wotakoi-love-is-hard-for-otaku-comic-anthology",
-  "slug": "wotakoi-love-is-hard-for-otaku-comic-anthology",
-  "title": "Wotakoi: Love is Hard for Otaku - Comic Anthology",
-  "author": "Fujita",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Josei",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Akasha",
-  "yearFirstVol": "2021",
-  "priceMin": "Rp70.000",
-  "priceMax": "Rp70.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Ichijinsha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/vm9a5ut/wotaku-ni-koi-wa-muzukashii-comic-anthology",
-  "pranala": null,
-  "notes": "Bundling dgn gantungan kunci"
  },
  {
   "id": "kki_wuthering-thriller",
@@ -57773,28 +57937,6 @@
   "publisherJp": "Shueisha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/30v6c0n/kimi-no-himitsu",
   "pranala": "https://www.mncgramedia.id/books/3105/your-secret",
-  "notes": null
- },
- {
-  "id": "kki_your-smile",
-  "slug": "your-smile",
-  "title": "Your Smile",
-  "author": "Hiromi Mashiba",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shojo",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "1999",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Kodansha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/5r14f04/kimi-ga-waratta",
-  "pranala": null,
   "notes": null
  },
  {

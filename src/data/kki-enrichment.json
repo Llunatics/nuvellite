@@ -884,6 +884,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_city-hunter": {
+  "demographic": "Shounen",
+  "publisherJp": "Tokuma Shoten",
+  "volumesJp": "32",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/n5pb3ho/city-hunter",
+  "priceMin": "Rp58.000",
+  "priceMax": "Rp69.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2020",
+  "kkiTitle": "City Hunter (Complete Edition)",
+  "kkiPublisher": "Akasha",
+  "matchScore": 90.0,
+  "matchMethod": "auto"
+ },
  "ser_city-hunter-rebirth": {
   "demographic": "Shounen",
   "publisherJp": "Tokuma Shoten",
@@ -935,11 +950,11 @@
   "volumesJp": "105",
   "statusJp": "Ongoing",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/3xfm8ig/meitantei-conan",
-  "priceMin": null,
-  "priceMax": "Rp50.000",
+  "priceMin": "Rp65.000",
+  "priceMax": "Rp65.000",
   "paperType": "Bookpaper",
-  "yearFirstVol": null,
-  "kkiTitle": "Detektif Conan",
+  "yearFirstVol": "2020",
+  "kkiTitle": "Detektif Conan Premium",
   "kkiPublisher": "Elex",
   "matchScore": 90.0,
   "matchMethod": "auto"
@@ -1242,6 +1257,21 @@
   "kkiTitle": "Dollhouse",
   "kkiPublisher": "Akasha",
   "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_doraemon-manga": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/gv419qj/doraemon-0",
+  "priceMin": "Rp60.000",
+  "priceMax": "Rp60.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2021",
+  "kkiTitle": "Doraemon Vol. 0",
+  "kkiPublisher": "Elex",
+  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_doraemon-nobitas-sky-utopia-ln": {
@@ -1632,21 +1662,6 @@
   "kkiTitle": "Fragments of Horror",
   "kkiPublisher": "Akasha",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_frieren-manga": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "15",
-  "statusJp": "Hiatus",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ugf5dzu/sousou-no-frieren",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp50.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2022",
-  "kkiTitle": "Frieren: After the End",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_frieren-after-the": {
@@ -2159,6 +2174,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_i-want-to": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "9",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/6t8o7q6/aishiteru-game-wo-owarasetai",
+  "priceMin": "Rp45.000",
+  "priceMax": "Rp45.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2025",
+  "kkiTitle": "I Want to End this Love Game",
+  "kkiPublisher": "Elex",
+  "matchScore": 90.0,
+  "matchMethod": "auto"
+ },
  "ser_ive-been-killing-slimes-for-300-years": {
   "demographic": "Shounen",
   "publisherJp": "Square Enix",
@@ -2251,15 +2281,15 @@
  },
  "ser_ito-junji": {
   "demographic": "Seinen",
-  "publisherJp": "Shogakukan",
+  "publisherJp": "Asahi Shinbunsha",
   "volumesJp": "1",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/b7dkq4z/itou-junji-tanpenshuu-best-of-best",
-  "priceMin": "Rp68.000",
-  "priceMax": "Rp68.000",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/76mmgvd/itou-junji-jisen-kessakushuu",
+  "priceMin": "Rp105.000",
+  "priceMax": "Rp105.000",
   "paperType": "Bookpaper",
-  "yearFirstVol": "2021",
-  "kkiTitle": "Ito Junji - Best of Best Short Story Collection",
+  "yearFirstVol": "2025",
+  "kkiTitle": "Ito Junji's Selected Collection - Shiver",
   "kkiPublisher": "Akasha",
   "matchScore": 90.0,
   "matchMethod": "auto"
@@ -2907,21 +2937,6 @@
   "kkiTitle": "Lycoris Recoil Ordinary Days",
   "kkiPublisher": "Phoenix",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_makeine": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "6",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/zc9bk0t/make-heroine-ga-oosugiru",
-  "priceMin": "Rp65.000",
-  "priceMax": "Rp65.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2026",
-  "kkiTitle": "Makeine – Heroine yang Patah Hati Terlalu Banyak!",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_makeine---heroine-yang-patah-hati-ternyata-banyak-ln": {
@@ -3647,14 +3662,14 @@
  "ser_oshi-no-ko": {
   "demographic": "Seinen",
   "publisherJp": "Shueisha",
-  "volumesJp": "16",
-  "statusJp": "End",
+  "volumesJp": "14",
+  "statusJp": "Ongoing",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/89n01s3/oshi-no-ko",
-  "priceMin": "Rp48.000",
-  "priceMax": "Rp72.000",
+  "priceMin": "Rp55.000",
+  "priceMax": "Rp55.000",
   "paperType": "Bookpaper",
-  "yearFirstVol": "2022",
-  "kkiTitle": "Oshi no Ko: Anak Idola",
+  "yearFirstVol": "2023",
+  "kkiTitle": "Oshi no Ko: Anak Idola (LIMITED EDITION)",
   "kkiPublisher": "Akasha",
   "matchScore": 90.0,
   "matchMethod": "auto"
@@ -3944,6 +3959,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_rezero-starting-life-in-another-world": {
+  "demographic": "Seinen",
+  "publisherJp": "Media Factory",
+  "volumesJp": "46",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/3qzxncc/re-zero-kara-hajimeru-isekai-seikatsu-novel",
+  "priceMin": "Rp98.000",
+  "priceMax": "Rp98.000",
+  "paperType": null,
+  "yearFirstVol": "2024",
+  "kkiTitle": "Re:Zero -Starting Life in Another World-",
+  "kkiPublisher": "Phoenix",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
  "ser_record-of-ragnarok": {
   "demographic": "Seinen",
   "publisherJp": "Tokuma Shoten",
@@ -4150,6 +4180,21 @@
   "paperType": "Koran",
   "yearFirstVol": "2005",
   "kkiTitle": "Say Hello To Black Jack",
+  "kkiPublisher": "M&C!",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_school-live": {
+  "demographic": "Seinen",
+  "publisherJp": "Houbunsha",
+  "volumesJp": "12",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/j51lrpa/gakkou-gurashi",
+  "priceMin": "Rp999.999",
+  "priceMax": "Rp999.999",
+  "paperType": null,
+  "yearFirstVol": "2026",
+  "kkiTitle": "School Live",
   "kkiPublisher": "M&C!",
   "matchScore": 100.0,
   "matchMethod": "auto"
@@ -5322,21 +5367,6 @@
   "kkiTitle": "Witch Watch",
   "kkiPublisher": "Phoenix",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_wotakoi": {
-  "demographic": "Josei",
-  "publisherJp": "Ichijinsha",
-  "volumesJp": "11",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ff8xqtk/wotaku-ni-koi-wa-muzukashii",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp59.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2021",
-  "kkiTitle": "Wotakoi: Love Is Hard for Otaku",
-  "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_wotakoi-love-is-hard-for-otaku": {
