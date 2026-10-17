@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-17T03:19:57.000Z",
+  "lastUpdated": "2026-10-17T10:21:16.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -105951,7 +105951,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2024/5/20/yhikvp77prsfvfjaeqdokm.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2024-05-20",
       "isWednesdayRelease": false,
       "currentPrice": 31500,
@@ -111137,7 +111137,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x60e6ohz7i.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
       "currentPrice": 40500,
@@ -210304,9 +210304,51 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-17",
       "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_chinmi_other_story_chinmi_seiren_1792232475",
+      "bookId": "pub_chinmi_other_story_chinmi_seiren",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_reigen_1792232476",
+      "bookId": "pub_mob_psycho_100_reigen",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 45000,
+      "previousPrice": 31500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-17",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1792232476",
+      "startedAt": "2026-10-17T10:13:18.000Z",
+      "finishedAt": "2026-10-17T10:21:16.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1292,
+      "productsRejected": 429,
+      "productsUpdated": 1126,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 477603,
+      "success": true
+    },
     {
       "id": "sync_1792207197",
       "startedAt": "2026-10-17T03:12:21.000Z",
@@ -210685,26 +210727,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 218992,
-      "success": true
-    },
-    {
-      "id": "sync_1791291268",
-      "startedAt": "2026-10-06T12:50:39.000Z",
-      "finishedAt": "2026-10-06T12:54:28.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1462,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 229241,
       "success": true
     }
   ]
