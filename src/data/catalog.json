@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-16T20:42:27.000Z",
+  "lastUpdated": "2026-10-17T03:19:57.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -47019,7 +47019,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-05-14",
       "isWednesdayRelease": true,
-      "currentPrice": 54400,
+      "currentPrice": 44000,
       "authors": [
         "FUJITA"
       ],
@@ -47037,7 +47037,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 68000,
+      "originalPrice": 55000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -76055,7 +76055,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -109985,7 +109985,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230029172_LN_Conan_Crossroad_in_the_Ancient_Capital_copy.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2022-01-12",
       "isWednesdayRelease": true,
       "currentPrice": 49000,
@@ -110777,7 +110777,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/3nataa8gkt.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
       "currentPrice": 50000,
@@ -111137,7 +111137,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x60e6ohz7i.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
       "currentPrice": 40500,
@@ -210249,9 +210249,84 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-16",
       "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_chinmi_other_story_chinmi_seiren_1792207197",
+      "bookId": "pub_chinmi_other_story_chinmi_seiren",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kayachan_nggak_menakutkan_kok_vol_1_1792207197",
+      "bookId": "pub_kayachan_nggak_menakutkan_kok_vol_1",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_detektif_conan_crossroad_in_the_ancient_capital_1792207197",
+      "bookId": "pub_light_novel_detektif_conan_crossroad_in_the_ancient_capital",
+      "price": 49000,
+      "currentPrice": 49000,
+      "originalPrice": 70000,
+      "previousPrice": 49000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_31_1792207197",
+      "bookId": "pub_haikyu_fly_high_volleyball_31",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "previousPrice": 22400,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__wotakoi_love_is_hard_for_otaku__comic_anthology_1792206918",
+      "bookId": "pub_akasha__wotakoi_love_is_hard_for_otaku__comic_anthology",
+      "price": 44000,
+      "currentPrice": 44000,
+      "originalPrice": 55000,
+      "previousPrice": 54400,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-17",
+      "source": "gramedia_api_refresh"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1792207197",
+      "startedAt": "2026-10-17T03:12:21.000Z",
+      "finishedAt": "2026-10-17T03:19:57.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1292,
+      "productsRejected": 429,
+      "productsUpdated": 1126,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 455888,
+      "success": true
+    },
     {
       "id": "sync_1792183347",
       "startedAt": "2026-10-16T20:33:53.000Z",
@@ -210630,26 +210705,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 229241,
-      "success": true
-    },
-    {
-      "id": "sync_1791263470",
-      "startedAt": "2026-10-06T05:07:34.000Z",
-      "finishedAt": "2026-10-06T05:11:10.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1462,
-      "productsRejected": 92,
-      "productsUpdated": 1462,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 215378,
       "success": true
     }
   ]
