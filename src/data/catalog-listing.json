@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-17T10:21:16.000Z",
+  "lastUpdated": "2026-10-17T15:10:50.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -76468,7 +76468,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x60e6ohz7i.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 40500,
       "originalPrice": 45000,
       "releaseDate": "2026-10-21",
@@ -175046,6 +175046,17 @@
       "currentPrice": 31500,
       "originalPrice": 45000,
       "previousPrice": 31500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_chinmi_other_story_chinmi_seiren_1792249850",
+      "bookId": "pub_chinmi_other_story_chinmi_seiren",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-17",
       "source": "gramedia_api"
