@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-17T15:10:50.000Z",
+  "lastUpdated": "2026-10-17T20:21:22.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -111137,7 +111137,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x60e6ohz7i.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
       "currentPrice": 40500,
@@ -210337,9 +210337,40 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-17",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_chinmi_other_story_chinmi_seiren_1792268481",
+      "bookId": "pub_chinmi_other_story_chinmi_seiren",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-17",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1792268482",
+      "startedAt": "2026-10-17T20:11:53.000Z",
+      "finishedAt": "2026-10-17T20:21:22.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1292,
+      "productsRejected": 429,
+      "productsUpdated": 1126,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 568732,
+      "success": true
+    },
     {
       "id": "sync_1792249850",
       "startedAt": "2026-10-17T15:02:48.000Z",
@@ -210718,26 +210749,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 225122,
-      "success": true
-    },
-    {
-      "id": "sync_1791754635",
-      "startedAt": "2026-10-11T21:33:17.000Z",
-      "finishedAt": "2026-10-11T21:37:15.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1552,
-      "productsAccepted": 1317,
-      "productsRejected": 400,
-      "productsUpdated": 1155,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 237571,
       "success": true
     }
   ]
