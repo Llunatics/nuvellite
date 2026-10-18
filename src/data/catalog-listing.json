@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-17T20:21:22.000Z",
+  "lastUpdated": "2026-10-18T03:25:15.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -50198,7 +50198,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/3/2/ihbepbsrfusj4ivqcqafeh.jpeg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 28000,
+      "currentPrice": 30000,
       "originalPrice": 40000,
       "releaseDate": "2023-03-10",
       "isWednesdayRelease": false,
@@ -65506,7 +65506,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230021763_Cov_One_Piece_94.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 24500,
       "originalPrice": 35000,
       "releaseDate": "2020-12-02",
@@ -72580,7 +72580,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2024/5/20/yhikvp77prsfvfjaeqdokm.jpg",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "currentPrice": 31500,
       "originalPrice": 45000,
       "releaseDate": "2024-05-20",
@@ -76468,7 +76468,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x60e6ohz7i.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 40500,
       "originalPrice": 45000,
       "releaseDate": "2026-10-21",
@@ -175071,6 +175071,50 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-17",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_chinmi_other_story_chinmi_seiren_1792293915",
+      "bookId": "pub_chinmi_other_story_chinmi_seiren",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_reigen_1792293915",
+      "bookId": "pub_mob_psycho_100_reigen",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 45000,
+      "previousPrice": 31500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_94_1792293915",
+      "bookId": "pub_one_piece_94",
+      "price": 24500,
+      "currentPrice": 24500,
+      "originalPrice": 35000,
+      "previousPrice": 24500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_tokyo_revengers_07_1792293669",
+      "bookId": "pub_level_comic_tokyo_revengers_07",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "previousPrice": 28000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-18",
+      "source": "gramedia_api_refresh"
     }
   ]
 }
