@@ -1,5 +1,6 @@
 import { Book, BookEdition, Series, BookFormat } from '../types';
 import { parseTitleSmart } from './volume-parser';
+import { resolveBaseAlias, resolveMediumAlias } from '../series-consistency';
 
 export function cleanSlug(text: string): string {
   const slug = String(text || '')
@@ -69,14 +70,20 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
   const franchiseMediums: Record<string, Set<string>> = {};
   const franchiseCanonicalNames: Record<string, string> = {};
 
+  function baseOf(sname: string): { slug: string; name: string } {
+    const { slug, canonicalName } = cleanBaseFranchise(sname);
+    const [canonSlug, aliasName] = resolveBaseAlias(slug);
+    return { slug: canonSlug, name: aliasName ?? canonicalName };
+  }
+
   for (const b of books) {
     const sname = b.seriesName || b.title;
-    const { slug, canonicalName } = cleanBaseFranchise(sname);
+    const { slug, name } = baseOf(sname);
     if (!slug) continue;
 
     if (!franchiseMediums[slug]) {
       franchiseMediums[slug] = new Set();
-      franchiseCanonicalNames[slug] = canonicalName;
+      franchiseCanonicalNames[slug] = name;
     }
 
     const medium = determineBookMedium(b);
@@ -86,10 +93,11 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
   // 2. Assign medium-separated series IDs and titles
   const processedBooks: Book[] = books.map((b) => {
     const sname = b.seriesName || b.title;
-    const { slug: baseSlug } = cleanBaseFranchise(sname);
-    const baseName = franchiseCanonicalNames[baseSlug] || sname;
-
+    const { slug: rawSlug } = baseOf(sname);
     const medium = determineBookMedium(b);
+    const [baseSlug, mediumAliasName] = resolveMediumAlias(rawSlug, medium);
+    const baseName = mediumAliasName ?? franchiseCanonicalNames[baseSlug] ?? sname;
+
     const hasMultipleMediums = (franchiseMediums[baseSlug]?.size || 0) > 1;
 
     let sid = `ser_${baseSlug}`;
@@ -103,7 +111,7 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
         category = 'Light Novel';
       } else if (medium === 'MOVIE') {
         sid = `ser_${baseSlug}-movie`;
-        sDisplay = `${baseName} Movie`;
+        sDisplay = baseName.endsWith('Movie') ? baseName : `${baseName} Movie`;
         category = 'Manga';
       } else {
         sid = `ser_${baseSlug}-manga`;
@@ -111,6 +119,12 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
         category = 'Manga';
       }
     } else {
+      // Single-medium franchise: keep the medium token in the display name
+      // (cleanBaseFranchise strips 'Movie', which used to decay
+      // 'Detektif Conan The Movie' into 'Detektif Conan The').
+      if (medium === 'MOVIE' && !sDisplay.endsWith('Movie')) {
+        sDisplay = `${sDisplay} Movie`;
+      }
       category = medium === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga';
     }
 

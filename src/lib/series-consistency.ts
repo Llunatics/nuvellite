@@ -126,3 +126,46 @@ export function detectJunkTitle(title: string): string | null {
   }
   return null;
 }
+
+// ---------------------------------------------------------------------------
+// Canonical franchise aliases.
+//
+// TypeScript mirror of scripts/catalog_consistency.py (SERIES_BASE_ALIASES /
+// SERIES_MEDIUM_ALIASES). Durable encoding of the 2026-10-12 audit's series
+// merges — applied by the sync pipeline on every run so vendor-feed drift
+// cannot re-split them. Keep both implementations in sync.
+// ---------------------------------------------------------------------------
+
+/** base_slug -> [canonical_base_slug, canonical_display_name] */
+export const SERIES_BASE_ALIASES: Record<string, [string, string]> = {
+  // 'Bungo Stray Dogs BEAST' consolidates into 'Bungo Stray Dogs'.
+  'bungo-stray-dogs-beast': ['bungo-stray-dogs', 'Bungo Stray Dogs'],
+  // New-format 'Cerita Spesial Doraemon Edisi <subtitle>' titles keep the
+  // full subtitle as series name; the canonical series is the short name.
+  'cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek': [
+    'cerita-spesial-doraemon',
+    'Cerita Spesial Doraemon',
+  ],
+};
+
+/** "base_slug::medium" -> [canonical_base_slug, canonical_display_name] */
+export const SERIES_MEDIUM_ALIASES: Record<string, [string, string]> = {
+  // Both 'Detektif Conan Movie: ...' and 'Detektif Conan The Movie: ...'
+  // are the same movie line; canonical id ser_detektif-conan-the.
+  'detektif-conan::MOVIE': ['detektif-conan-the', 'Detektif Conan The Movie'],
+};
+
+/** Resolve a base franchise slug through SERIES_BASE_ALIASES. */
+export function resolveBaseAlias(baseSlug: string): [string, string | null] {
+  const hit = SERIES_BASE_ALIASES[baseSlug || ''];
+  return hit ? [hit[0], hit[1]] : [baseSlug, null];
+}
+
+/** Resolve a (base_slug, medium) pair through SERIES_MEDIUM_ALIASES. */
+export function resolveMediumAlias(
+  baseSlug: string,
+  medium: string
+): [string, string | null] {
+  const hit = SERIES_MEDIUM_ALIASES[`${baseSlug || ''}::${medium || ''}`];
+  return hit ? [hit[0], hit[1]] : [baseSlug, null];
+}

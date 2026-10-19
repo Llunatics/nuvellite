@@ -31,6 +31,7 @@ Tracker rilis harus memetakan seluruh semesta rilis resmi, bukan hanya produk ya
 ### 5. 100% Data-Driven (Tanpa Judul Hardcoded)
 - Seluruh logika klasifikasi, pemisahan format (Manga vs Light Novel), dan resolusi entitas berjalan berdasarkan aturan data: imprint penerbit, token format, slug kategori, dan metadata ISBN.
 - Tidak ada daftar judul anime/manga statis di dalam kode aplikasi. Rilisan baru di masa depan akan langsung dikenali dan diproses otomatis.
+- Pengecualian terkurasi minimal (seperti `CURATED_BIND_UPS`): `SERIES_BASE_ALIASES` / `SERIES_MEDIUM_ALIASES` di `scripts/catalog_consistency.py` (mirror di `src/lib/series-consistency.ts`) mengabadikan hasil merge audit konsistensi 2026-10-12 agar sinkronisasi berikutnya tidak memecah lagi seri yang sudah digabung (mis. Detektif Conan Movie, Bungo Stray Dogs BEAST).
 
 ### 6. Direktori Bind-Up & Omnibus Otomatis
 - Edisi bind-up/omnibus (beberapa volume original dalam satu buku) terdeteksi otomatis dari pola judul: *bind up*, *omnibus*, *complete edition*, *ultimate*, *deluxe*, *N-in-1*, *trilogi*, *edisi koleksi*.
@@ -70,7 +71,7 @@ nuvellite/
 - **Styling**: Tailwind CSS dengan custom design tokens (editorial surfaces, soft glass, liquid glass)
 - **Icons**: Lucide React
 - **Engine Data**: Python 3 (Urllib, ThreadPoolExecutor, Regex Normalization)
-- **Testing**: Vitest (51 unit & regression tests)
+- **Testing**: Vitest (126 unit & regression tests)
 
 ---
 

@@ -11,8 +11,9 @@ import time
 import os
 import sys
 import argparse
+import importlib.util
 from datetime import datetime, timezone
-from collections import defaultdict
+from collections import defaultdict, Counter
 from concurrent.futures import ThreadPoolExecutor
 
 from adapters import ElexAdapter, MCAdapter, PGIAdapter
@@ -24,6 +25,8 @@ from catalog_consistency import (
     detect_junk_title,
     find_duplicate_series,
     normalize_series_name,
+    resolve_base_alias,
+    resolve_medium_alias,
 )
 
 # Positive and Negative classification signals
@@ -455,6 +458,331 @@ def discover_sequence_gaps(existing_books, adapter):
 
     return gap_products
 
+def _norm_title_key(title):
+    """Normalized title for duplicate detection (mirrors the bind-up test)."""
+    return re.sub(r'[^a-z0-9]+', ' ', (title or '').lower()).strip()
+
+
+def apply_franchise_separation(all_books):
+    """Step 5: Dynamic Franchise Medium Separation (Manga vs Light Novel vs Movie).
+
+    Applies the curated SERIES_BASE_ALIASES / SERIES_MEDIUM_ALIASES
+    (scripts/catalog_consistency.py) so the 2026-10-12 audit's series merges
+    survive every sync. Previously those merges were one-time DATA edits, so
+    later syncs silently re-split them (Conan movie, BSD BEAST) and the
+    single-medium display name decayed ('Detektif Conan The Movie' became
+    'Detektif Conan The').
+    """
+    franchise_mediums = defaultdict(set)
+    franchise_canonical_names = {}
+
+    def base_of(b):
+        sname = b.get('seriesName') or b.get('title')
+        base_slug, base_name = clean_base_franchise(sname)
+        base_slug, alias_name = resolve_base_alias(base_slug)
+        if alias_name:
+            base_name = alias_name
+        return base_slug, base_name, sname
+
+    for b in all_books:
+        base_slug, base_name, _ = base_of(b)
+        if not base_slug:
+            continue
+        if base_slug not in franchise_canonical_names:
+            franchise_canonical_names[base_slug] = base_name
+        franchise_mediums[base_slug].add(determine_book_medium(b))
+
+    for b in all_books:
+        base_slug, _, sname = base_of(b)
+        base_name = franchise_canonical_names.get(base_slug, sname)
+        med = determine_book_medium(b)
+
+        # Canonical medium alias (e.g. Conan movie line -> detektif-conan-the).
+        canon_slug, canon_name = resolve_medium_alias(base_slug, med)
+        if canon_name:
+            base_name = canon_name
+        base_slug = canon_slug
+
+        has_multiple = len(franchise_mediums[base_slug]) > 1
+
+        if has_multiple:
+            if med == 'LIGHT_NOVEL':
+                sid = f"ser_{base_slug}-ln"
+                s_display = f"{base_name} (Novel)"
+                b['category'] = 'Light Novel'
+                b['format'] = 'LIGHT_NOVEL'
+            elif med == 'MOVIE':
+                sid = f"ser_{base_slug}-movie"
+                s_display = base_name
+                if not s_display.lower().endswith('movie'):
+                    s_display = f"{s_display} Movie"
+                b['category'] = 'Manga'
+                b['format'] = 'MANGA'
+            else:
+                sid = f"ser_{base_slug}-manga"
+                s_display = base_name
+                b['category'] = 'Manga'
+                b['format'] = 'MANGA'
+        else:
+            sid = f"ser_{base_slug}"
+            s_display = base_name
+            if med == 'MOVIE' and not s_display.lower().endswith('movie'):
+                # clean_base_franchise() strips the 'Movie' token; restore it
+                # so a movie-only franchise keeps its full display name.
+                s_display = f"{s_display} Movie"
+            b['category'] = 'Light Novel' if med == 'LIGHT_NOVEL' else 'Manga'
+            b['format'] = 'LIGHT_NOVEL' if med == 'LIGHT_NOVEL' else 'MANGA'
+
+        b['seriesId'] = sid
+        b['seriesName'] = s_display
+
+    return all_books
+
+
+def _book_completeness(b):
+    """Score for picking the canonical record when merging duplicates."""
+    score = 0
+    if b.get('coverImage'):
+        score += 2
+    if b.get('isbn13'):
+        score += 2
+    score += min(len(b.get('synopsis') or ''), 500) / 500
+    if b.get('currentPrice'):
+        score += 1
+    if b.get('gramediaUrl'):
+        score += 1
+    return score
+
+
+def merge_duplicate_listings(all_books, price_snapshot_map=None):
+    """Step 5b: merge duplicate vendor listings of the same product.
+
+    The same product is often listed under two Gramedia slugs
+    (e.g. 'blue-lock-04-1' vs 'blue-lock-04-2'). Same (seriesId, volume,
+    normalized title) is treated as the same product: keep one canonical
+    record, fold missing fields from the dropped duplicate, and reassign its
+    price snapshots to the canonical book so no new orphans are created.
+    """
+    series_pub_majority = {}
+    pub_counts = defaultdict(Counter)
+    for b in all_books:
+        if b.get('seriesId'):
+            pub_counts[b['seriesId']][b.get('publisherId')] += 1
+    for sid, counts in pub_counts.items():
+        series_pub_majority[sid] = counts.most_common(1)[0][0]
+
+    groups = defaultdict(list)
+    for b in all_books:
+        if not b.get('seriesId') or b.get('volume') is None:
+            continue
+        key = (b['seriesId'], b['volume'], _norm_title_key(b.get('title')))
+        groups[key].append(b)
+
+    dropped_ids = set()
+    merged = []
+    for key, b_list in groups.items():
+        if len(b_list) == 1:
+            merged.append(b_list[0])
+            continue
+        sid = key[0]
+        majority_pub = series_pub_majority.get(sid)
+
+        def rank(b):
+            # Majority publisher of the series first, then completeness,
+            # then stable slug order.
+            return (
+                0 if b.get('publisherId') == majority_pub else 1,
+                -_book_completeness(b),
+                b.get('slug') or '',
+            )
+
+        ordered = sorted(b_list, key=rank)
+        keep = ordered[0]
+        for dup in ordered[1:]:
+            for field in ('coverImage', 'isbn13', 'synopsis', 'gramediaUrl',
+                           'releaseDate', 'authors', 'genres'):
+                if not keep.get(field) and dup.get(field):
+                    keep[field] = dup[field]
+            # Keep the richer edition data if the duplicate has it.
+            if not keep.get('availableEditions') and dup.get('availableEditions'):
+                keep['availableEditions'] = dup['availableEditions']
+            if price_snapshot_map is not None:
+                for snap in price_snapshot_map.get(dup['id'], []):
+                    snap['bookId'] = keep['id']
+                price_snapshot_map[keep['id']].extend(
+                    price_snapshot_map.get(dup['id'], []))
+                if dup['id'] in price_snapshot_map:
+                    del price_snapshot_map[dup['id']]
+            dropped_ids.add(dup['id'])
+            print(f"  [dup-merge] {dup['title']} ({dup['id']}) -> {keep['id']}")
+        merged.append(keep)
+
+    # Books without seriesId/volume pass through untouched.
+    passthrough = [b for b in all_books
+                   if not b.get('seriesId') or b.get('volume') is None]
+    result = merged + passthrough
+    if dropped_ids:
+        print(f"  [dup-merge] merged {len(dropped_ids)} duplicate listings")
+    return result, len(dropped_ids)
+
+
+def _edition_base_title(title):
+    """Title with edition suffixes stripped, normalized for comparison."""
+    stripped = EDITION_SUFFIX_REGEX.sub('', title or '').strip(' :-–—+')
+    return _norm_title_key(stripped)
+
+
+def consolidate_editions(all_books, price_snapshot_map=None):
+    """Step 5c: fold edition variants into the canonical volume's availableEditions.
+
+    Ported from the one-time scripts/reconcile-catalog.py into the recurring
+    pipeline so edition consolidation no longer decays between audits.
+    Groups by (seriesId, volume), then sub-groups by edition-stripped title:
+    only true edition variants of the SAME product are folded (e.g. 'Alya 5'
+    + 'Alya 5 - Special Set'). Different products that share a volume number
+    (e.g. 'Bungo Stray Dogs 1' vs the 'Beast' spin-off 'Bungo Stray Dogs -
+    Beast 1') are kept as separate books.
+
+    The regular edition becomes the canonical book; Special Set / Complete
+    Set / Birthday Set / Limited variants become entries in its
+    availableEditions (with the 'Pilihan Edisi & Set Resmi' synopsis marker
+    the frontend renders).
+
+    Price snapshots of folded-away edition books are reassigned to the
+    canonical book so the price-history invariant (no new orphan snapshots)
+    holds.
+    """
+    series_vol_map = defaultdict(list)
+    for b in all_books:
+        series_vol_map[(b.get('seriesId'), b.get('volume'))].append(b)
+
+    canonical_books = []
+    for (sid, v), b_list in series_vol_map.items():
+        # Sub-group by edition-stripped title: only fold true variants.
+        title_groups = defaultdict(list)
+        for b in b_list:
+            title_groups[_edition_base_title(b.get('title'))].append(b)
+
+        for tkey, t_list in title_groups.items():
+            if len(t_list) == 1:
+                canonical_books.append(t_list[0])
+                continue
+            regular = next(
+                (b for b in t_list if not any(
+                    k in (b.get('title') or '').lower()
+                    for k in ['special set', 'birthday set', 'limited edition',
+                              'bundling', 'complete set', 'bonus'])),
+                t_list[0],
+            )
+            editions = []
+            for b in t_list:
+                ed_name = 'Regular'
+                t_low = (b.get('title') or '').lower()
+                if 'special set' in t_low or 'special' in t_low:
+                    ed_name = 'Special Set'
+                elif 'birthday set' in t_low:
+                    ed_name = 'Birthday Set'
+                elif 'complete set' in t_low or 'box set' in t_low:
+                    ed_name = 'Complete Set'
+                elif 'limited' in t_low:
+                    ed_name = 'Limited Edition'
+                editions.append({
+                    'name': ed_name,
+                    'price': b.get('currentPrice'),
+                    'gramediaUrl': b.get('gramediaUrl'),
+                })
+            regular['title'] = EDITION_SUFFIX_REGEX.sub(
+                '', regular.get('title') or '').strip(' :-–—+')
+            regular['availableEditions'] = editions
+            if len(editions) > 1 and 'Pilihan Edisi & Set Resmi' not in (regular.get('synopsis') or ''):
+                regular['synopsis'] = (regular.get('synopsis') or '') + \
+                    f"\n\nPilihan Edisi & Set Resmi: {', '.join(e['name'] for e in editions)}"
+            if price_snapshot_map is not None:
+                for b in t_list:
+                    if b['id'] == regular['id']:
+                        continue
+                    for snap in price_snapshot_map.get(b['id'], []):
+                        snap['bookId'] = regular['id']
+                    price_snapshot_map[regular['id']].extend(
+                        price_snapshot_map.get(b['id'], []))
+                    if b['id'] in price_snapshot_map:
+                        del price_snapshot_map[b['id']]
+            canonical_books.append(regular)
+
+    # Deduplicate books with identical seriesId and clean title.
+    seen_titles = set()
+    deduped = []
+    for b in canonical_books:
+        key = (b.get('seriesId'), clean_slug(b.get('title')))
+        if key in seen_titles:
+            continue
+        seen_titles.add(key)
+        deduped.append(b)
+    return deduped
+
+
+def reconstruct_series(all_books, existing_series_map):
+    """Step 6: rebuild the denormalized series list from the canonical books."""
+    series_groups = defaultdict(list)
+    for b in all_books:
+        if b.get('seriesId'):
+            series_groups[b['seriesId']].append(b)
+
+    new_series_list = []
+    for sid, b_list in series_groups.items():
+        sample = b_list[0]
+        cat = sample['category']
+        pub_id = sample['publisherId']
+        pub_name = sample['publisherName']
+
+        vols = [b['volume'] for b in b_list if b.get('volume') is not None]
+        avail_vols = sorted(list(set(vols))) if vols else []
+        latest_vol = max(avail_vols) if avail_vols else 1
+
+        ex = existing_series_map.get(sid)
+        if ex and ex.get('totalVolumes'):
+            total_vols = max(ex['totalVolumes'], latest_vol, len(b_list))
+            latest_vol = max(ex.get('latestVolume', 0), latest_vol)
+            avail_vols = sorted(list(set(ex.get('availableVolumes', []) + avail_vols)))
+        else:
+            total_vols = max(len(avail_vols), latest_vol, len(b_list))
+
+        s_name = sample.get('seriesName') or sample.get('title')
+        cover = next((b['coverImage'] for b in b_list if b.get('coverImage')), '')
+        if not cover and ex:
+            cover = ex.get('coverImage', '')
+
+        author = sample.get('authors', ['Various Authors'])[0]
+        if (not author or author == 'Various Authors') and ex:
+            author = ex.get('author', author)
+
+        first_vol = next((b for b in b_list if b.get('volume') == 1 and len(b.get('synopsis', '')) > 50), None)
+        if not first_vol:
+            first_vol = next((b for b in b_list if len(b.get('synopsis', '')) > 50), b_list[0])
+        s_desc = first_vol.get('synopsis') or f"Diterbitkan resmi oleh {pub_name}."
+
+        series_obj = {
+            'id': sid,
+            'slug': sid.replace('ser_', ''),
+            'name': s_name,
+            'originalTitle': s_name,
+            'publisherId': pub_id,
+            'publisherName': pub_name,
+            'author': author,
+            'type': 'LIGHT_NOVEL' if cat == 'Light Novel' or sid.endswith('-ln') else 'MANGA',
+            'status': 'ONGOING',
+            'totalVolumes': total_vols,
+            'latestVolume': latest_vol,
+            'availableVolumes': avail_vols,
+            'coverImage': cover,
+            'description': s_desc
+        }
+        new_series_list.append(series_obj)
+
+    new_series_list.sort(key=lambda s: s['name'].lower())
+    return new_series_list
+
+
 def run_sync(catalog_path):
     start_time = time.time()
     started_at = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
@@ -818,111 +1146,22 @@ def run_sync(catalog_path):
                 'source': 'gramedia_api'
             })
 
-    # 5. Dynamic Franchise Medium Separation (Manga vs Light Novel vs Movie)
+    # 5. Dynamic Franchise Medium Separation (Manga vs Light Novel vs Movie).
+    # Applies the curated franchise aliases so the 2026-10-12 audit merges
+    # survive every sync instead of decaying back into splits.
     all_books = list(existing_books_map.values())
-    franchise_mediums = defaultdict(set)
-    franchise_canonical_names = {}
+    apply_franchise_separation(all_books)
 
-    for b in all_books:
-        sname = b.get('seriesName') or b.get('title')
-        base_slug, base_name = clean_base_franchise(sname)
-        if base_slug:
-            if base_slug not in franchise_canonical_names:
-                franchise_canonical_names[base_slug] = base_name
-            med = determine_book_medium(b)
-            franchise_mediums[base_slug].add(med)
+    # 5b. Merge duplicate vendor listings (same product sold under two slugs).
+    all_books, dupes_merged = merge_duplicate_listings(all_books, price_snapshot_map)
 
-    for b in all_books:
-        sname = b.get('seriesName') or b.get('title')
-        base_slug, _ = clean_base_franchise(sname)
-        base_name = franchise_canonical_names.get(base_slug, sname)
-        med = determine_book_medium(b)
-
-        has_multiple = len(franchise_mediums[base_slug]) > 1
-
-        if has_multiple:
-            if med == 'LIGHT_NOVEL':
-                sid = f"ser_{base_slug}-ln"
-                s_display = f"{base_name} (Novel)"
-                b['category'] = 'Light Novel'
-                b['format'] = 'LIGHT_NOVEL'
-            elif med == 'MOVIE':
-                sid = f"ser_{base_slug}-movie"
-                s_display = f"{base_name} Movie"
-                b['category'] = 'Manga'
-                b['format'] = 'MANGA'
-            else:
-                sid = f"ser_{base_slug}-manga"
-                s_display = base_name
-                b['category'] = 'Manga'
-                b['format'] = 'MANGA'
-        else:
-            sid = f"ser_{base_slug}"
-            s_display = base_name
-            b['category'] = 'Light Novel' if med == 'LIGHT_NOVEL' else 'Manga'
-            b['format'] = 'LIGHT_NOVEL' if med == 'LIGHT_NOVEL' else 'MANGA'
-
-        b['seriesId'] = sid
-        b['seriesName'] = s_display
+    # 5c. Edition & Set Consolidation (group by seriesId + volume).
+    # Ported from one-time scripts/reconcile-catalog.py into the recurring
+    # pipeline.
+    all_books = consolidate_editions(all_books, price_snapshot_map)
 
     # 6. Reconstruct Series metadata
-    series_groups = defaultdict(list)
-    for b in all_books:
-        if b.get('seriesId'):
-            series_groups[b['seriesId']].append(b)
-
-    new_series_list = []
-    for sid, b_list in series_groups.items():
-        sample = b_list[0]
-        cat = sample['category']
-        pub_id = sample['publisherId']
-        pub_name = sample['publisherName']
-
-        vols = [b['volume'] for b in b_list if b.get('volume') is not None]
-        avail_vols = sorted(list(set(vols))) if vols else []
-        latest_vol = max(avail_vols) if avail_vols else 1
-
-        ex = existing_series_map.get(sid)
-        if ex and ex.get('totalVolumes'):
-            total_vols = max(ex['totalVolumes'], latest_vol, len(b_list))
-            latest_vol = max(ex.get('latestVolume', 0), latest_vol)
-            avail_vols = sorted(list(set(ex.get('availableVolumes', []) + avail_vols)))
-        else:
-            total_vols = max(len(avail_vols), latest_vol, len(b_list))
-
-        s_name = sample.get('seriesName') or sample.get('title')
-        cover = next((b['coverImage'] for b in b_list if b.get('coverImage')), '')
-        if not cover and ex:
-            cover = ex.get('coverImage', '')
-
-        author = sample.get('authors', ['Various Authors'])[0]
-        if (not author or author == 'Various Authors') and ex:
-            author = ex.get('author', author)
-
-        first_vol = next((b for b in b_list if b.get('volume') == 1 and len(b.get('synopsis', '')) > 50), None)
-        if not first_vol:
-            first_vol = next((b for b in b_list if len(b.get('synopsis', '')) > 50), b_list[0])
-        s_desc = first_vol.get('synopsis') or f"Diterbitkan resmi oleh {pub_name}."
-
-        series_obj = {
-            'id': sid,
-            'slug': sid.replace('ser_', ''),
-            'name': s_name,
-            'originalTitle': s_name,
-            'publisherId': pub_id,
-            'publisherName': pub_name,
-            'author': author,
-            'type': 'LIGHT_NOVEL' if cat == 'Light Novel' or sid.endswith('-ln') else 'MANGA',
-            'status': 'ONGOING',
-            'totalVolumes': total_vols,
-            'latestVolume': latest_vol,
-            'availableVolumes': avail_vols,
-            'coverImage': cover,
-            'description': s_desc
-        }
-        new_series_list.append(series_obj)
-
-    new_series_list.sort(key=lambda s: s['name'].lower())
+    new_series_list = reconstruct_series(all_books, existing_series_map)
 
     # 7. Finalize and save
     finished_at = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
@@ -944,7 +1183,7 @@ def run_sync(catalog_path):
         'productsRejected': rejected_count,
         'productsUpdated': updated_count,
         'productsInserted': inserted_count,
-        'duplicatesResolved': 0,
+        'duplicatesResolved': dupes_merged,
         'errors': errors,
         'durationMs': duration_ms,
         'success': len(errors) == 0
@@ -974,10 +1213,18 @@ def run_sync(catalog_path):
     print(f"   - Products Inserted: {inserted_count}, Updated: {updated_count}")
     print(f"   - New Price Snapshots: {len(new_snapshots)} (+{len(refresh_snapshots)} refresh)")
 
-    # Auto-regenerate lightweight listing catalog for frontend performance
+    # Auto-regenerate lightweight listing catalog for frontend performance.
+    # NOTE: the module file is split-catalog.py (hyphenated), so it must be
+    # loaded via importlib — a plain `from split_catalog import ...` can never
+    # resolve and used to fail silently on every sync (2026-10-20 audit fix).
     try:
-        from split_catalog import split_catalog
-        split_catalog()
+        _split_spec = importlib.util.spec_from_file_location(
+            "split_catalog",
+            os.path.join(os.path.dirname(os.path.abspath(__file__)), "split-catalog.py"),
+        )
+        _split_mod = importlib.util.module_from_spec(_split_spec)
+        _split_spec.loader.exec_module(_split_mod)
+        _split_mod.split_catalog()
     except Exception as e:
         print(f"   [WARN] Could not regenerate catalog-listing.json: {e}")
 

@@ -94,3 +94,58 @@ def find_duplicate_series(series_list):
         if len(key) >= 4:
             groups[key].append(s)
     return {k: v for k, v in groups.items() if len(v) > 1}
+
+
+# ---------------------------------------------------------------------------
+# Canonical franchise aliases.
+#
+# Durable encoding of the 2026-10-12 consistency audit's series merges.
+# The audit fixed these as one-time DATA edits, so later auto-syncs re-split
+# them as soon as the vendor feed drifted (regressions observed 2026-10-15..20:
+# Conan movie split again, Bungo Stray Dogs BEAST split again, display name
+# 'Detektif Conan The Movie' decayed to 'Detektif Conan The').
+#
+# The sync pipeline MUST apply these on every run (see auto-sync-catalog.py
+# step 5). The TypeScript mirror lives in src/lib/series-consistency.ts and
+# the TS consolidator (src/lib/data/deduplicator.ts) applies the same rules.
+# ---------------------------------------------------------------------------
+
+# base_slug -> (canonical_base_slug, canonical_display_name)
+# Applied right after clean_base_franchise().
+SERIES_BASE_ALIASES = {
+    # 'Bungo Stray Dogs BEAST' (spin-off line) consolidates into the main
+    # 'Bungo Stray Dogs' series per the 2026-10-12 audit + series-tracker test.
+    'bungo-stray-dogs-beast': ('bungo-stray-dogs', 'Bungo Stray Dogs'),
+    # New-format 'Cerita Spesial Doraemon Edisi <subtitle>' titles keep the
+    # full subtitle as series name; the canonical series is 'Cerita Spesial
+    # Doraemon' (old ' - Edisi ...' titles parsed to the short name).
+    'cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek': (
+        'cerita-spesial-doraemon', 'Cerita Spesial Doraemon'),
+}
+
+# (base_slug, medium) -> (canonical_base_slug, canonical_display_name)
+# Applied after the per-franchise medium set is computed, before the
+# medium-separated series id/display name is assigned.
+SERIES_MEDIUM_ALIASES = {
+    # Both 'Detektif Conan Movie: ...' (base 'detektif-conan', medium MOVIE)
+    # and 'Detektif Conan The Movie: ...' (base 'detektif-conan-the') are the
+    # same movie line; canonical id ser_detektif-conan-the per the 2026-10-12
+    # audit + series-tracker test.
+    ('detektif-conan', 'MOVIE'): ('detektif-conan-the', 'Detektif Conan The Movie'),
+}
+
+
+def resolve_base_alias(base_slug):
+    """Return (canonical_base_slug, canonical_display_name|None)."""
+    hit = SERIES_BASE_ALIASES.get(base_slug or '')
+    if hit:
+        return hit
+    return base_slug, None
+
+
+def resolve_medium_alias(base_slug, medium):
+    """Return (canonical_base_slug, canonical_display_name|None)."""
+    hit = SERIES_MEDIUM_ALIASES.get((base_slug or '', medium or ''))
+    if hit:
+        return hit
+    return base_slug, None
