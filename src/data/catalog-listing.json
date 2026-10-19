@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-18T20:18:21.000Z",
+  "lastUpdated": "2026-10-19T03:36:21.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -958,7 +958,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/products/4bun-u12-z.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 74250,
+      "currentPrice": 99000,
       "originalPrice": 99000,
       "releaseDate": "2025-02-19",
       "isWednesdayRelease": true,
@@ -193330,6 +193330,17 @@
       "previousPrice": 100000,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-18",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_naruto_bind_up_edition_15_1792380615",
+      "bookId": "pub_naruto_bind_up_edition_15",
+      "price": 99000,
+      "currentPrice": 99000,
+      "originalPrice": 99000,
+      "previousPrice": 74250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-19",
       "source": "gramedia_api_refresh"
     }
   ]

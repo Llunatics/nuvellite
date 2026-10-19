@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-18T20:18:21.000Z",
+  "lastUpdated": "2026-10-19T03:36:21.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -1380,7 +1380,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-02-19",
       "isWednesdayRelease": true,
-      "currentPrice": 74250,
+      "currentPrice": 99000,
       "authors": [
         "Masashi Kishimoto"
       ],
@@ -228608,9 +228608,40 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-10-18",
       "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_naruto_bind_up_edition_15_1792380615",
+      "bookId": "pub_naruto_bind_up_edition_15",
+      "price": 99000,
+      "currentPrice": 99000,
+      "originalPrice": 99000,
+      "previousPrice": 74250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-19",
+      "source": "gramedia_api_refresh"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1792380981",
+      "startedAt": "2026-10-19T03:28:12.000Z",
+      "finishedAt": "2026-10-19T03:36:21.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1551,
+      "productsAccepted": 1292,
+      "productsRejected": 429,
+      "productsUpdated": 1126,
+      "productsInserted": 0,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 488764,
+      "success": true
+    },
     {
       "id": "sync_1792354701",
       "startedAt": "2026-10-18T20:10:06.000Z",
@@ -228989,26 +229020,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 566338,
-      "success": true
-    },
-    {
-      "id": "sync_1791950072",
-      "startedAt": "2026-10-14T03:44:24.000Z",
-      "finishedAt": "2026-10-14T03:54:32.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1551,
-      "productsAccepted": 1296,
-      "productsRejected": 425,
-      "productsUpdated": 1130,
-      "productsInserted": 0,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 608340,
       "success": true
     }
   ]
