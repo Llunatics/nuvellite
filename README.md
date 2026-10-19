@@ -1,5 +1,7 @@
 # nuvellite
 
+**Live:** https://nuvellite.llunaticsys.web.id
+
 Pelacak rilisan resmi Manga dan Light Novel berlisensi di Indonesia untuk tiga penerbit utama: **Elex Media Komputindo** (termasuk Level Comics), **m&c! Publishing** (termasuk Akasha dan Koloni), serta **Phoenix Gramedia Indonesia (PGI / Kadokawa)**.
 
 Nuvellite dirancang sebagai katalog editorial yang berfokus pada kelengkapan data kolektor, keakuratan riwayat harga, dan pengalaman membaca informasi yang rapi tanpa gangguan barang non-buku.
