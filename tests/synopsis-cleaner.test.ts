@@ -87,3 +87,19 @@ Pernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lemba
     expect(longRes.preview).toContain('Oriana');
   });
 });
+
+describe('Synopsis regression guards (deep-8 mutation testing)', () => {
+  it('prefers a sentence boundary at ~70% of maxLength for previews (N18)', () => {
+    const text = 'A'.repeat(175) + '. ' + 'B'.repeat(100);
+    const { preview, isLong } = getSynopsisPreview(text, 260);
+    expect(isLong).toBe(true);
+    expect(preview.endsWith('...')).toBe(false);
+    expect(preview.endsWith('.')).toBe(true);
+  });
+
+  it('cuts the synopsis at the Selling Point marker (N19)', () => {
+    expect(
+      cleanStorySynopsis('Sinopsis cerita yang seru.\nSelling Point: Harga murah dan bonus.')
+    ).toBe('Sinopsis cerita yang seru.');
+  });
+});

@@ -45,3 +45,23 @@ describe('Robust Volume Parser', () => {
     expect(tamat.seriesName).toBe('Tokyo Revengers');
   });
 });
+
+describe('Volume parser regression guards (deep-8 mutation testing)', () => {
+  it('keeps "Jilid" out of the series name (N11)', () => {
+    const r = parseTitleSmart('Naruto Jilid 5');
+    expect(r.volume).toBe(5);
+    expect(r.seriesName).toBe('Naruto');
+  });
+
+  it('parses 3-digit trailing volumes (N12)', () => {
+    const r = parseTitleSmart('Detektif Conan 100');
+    expect(r.volume).toBe(100);
+    expect(r.seriesName).toBe('Detektif Conan');
+  });
+
+  it('strips publisher prefixes like "Akasha:" from the series name (N13)', () => {
+    const r = parseTitleSmart('Akasha: One Piece 5');
+    expect(r.volume).toBe(5);
+    expect(r.seriesName).toBe('One Piece');
+  });
+});

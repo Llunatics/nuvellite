@@ -543,3 +543,52 @@ describe('Multi-Signal Classification Engine', () => {
   });
 });
 
+
+describe('Classification regression guards (deep-8 mutation testing)', () => {
+  it('comic category exempts disallowed store categories (N03)', () => {
+    const r = classifyProduct({
+      title: 'One Piece 1',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'komik/agama',
+    });
+    expect(r.status).toBe('ACCEPTED');
+    expect(r.category).toBe('Manga');
+  });
+
+  it('PGI no-token volume releases are manga, per publisher rule (N05)', () => {
+    const r = classifyProduct({
+      title: 'Overlord 3',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+    });
+    expect(r.status).toBe('ACCEPTED');
+    expect(r.category).toBe('Manga');
+    // The PGI licensing signal itself must fire (2 signals -> 0.95), not just
+    // the generic volume-numbering fallback (1 signal -> 0.85).
+    expect(r.confidence).toBe(0.95);
+    expect(r.reason).toContain('Rilisan resmi berlisensi PGI');
+  });
+
+  it('qanza reject only fires on a title prefix, not mid-title (N08)', () => {
+    const r = classifyProduct({
+      title: 'Petualangan Qanza 5',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'komik',
+    });
+    expect(r.status).toBe('ACCEPTED');
+    expect(r.reason).not.toContain('Qanza');
+  });
+
+  it('bundling reject only fires on a title prefix, not mid-title (N10)', () => {
+    const r = classifyProduct({
+      title: 'One Piece 5 - Bundling Set Hemat',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'komik',
+    });
+    expect(r.status).toBe('ACCEPTED');
+    expect(r.reason).not.toContain('bundle SKU');
+  });
+});

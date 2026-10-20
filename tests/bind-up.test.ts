@@ -269,3 +269,9 @@ describe('Catalog bind-up coverage (anti-miss regression)', () => {
     expect(flagged.map((b: Book) => b.title)).toEqual([]);
   });
 });
+
+describe('Bind-up regression guards (deep-8 mutation testing)', () => {
+  it('detects the trilogi marker (N15)', () => {
+    expect(detectBindUp('Naruto Trilogi')).toEqual({ kind: 'TRILOGY', label: 'Trilogi' });
+  });
+});
