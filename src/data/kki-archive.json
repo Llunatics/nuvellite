@@ -23,9 +23,7 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  },
-  "pranalaCover": "https://media.mncgramedia.id/images/books/2607/9786023394685_1678952386.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/2607/un-famous-girl"
+  }
  },
  {
   "id": "kki_anima",
@@ -287,9 +285,7 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  },
-  "pranalaCover": "https://media.mncgramedia.id/images/books/3018/978-602-339-964-2_1678952552.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/3018/12-love-terbit-ulang"
+  }
  },
  {
   "id": "kki_12-series",
@@ -367,9 +363,7 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-16"
-  },
-  "pranalaCover": "https://media.mncgramedia.id/images/books/4494/100_BLOSSOMS_OF_LOVE_01_1678952829.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/4494/100-blossoms-of-love-01"
+  }
  },
  {
   "id": "kki_100-days-left",
@@ -475,9 +469,7 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  },
-  "pranalaCover": "https://media.mncgramedia.id/images/books/939/9786022107293_1678952099.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/939/100-perfect-girl-1"
+  }
  },
  {
   "id": "kki_12-signs-of-zodiac",
@@ -1399,9 +1391,7 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  },
-  "pranalaCover": "https://media.mncgramedia.id/images/books/1700/9786022663409_1678952238.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/1700/a-fake-friend-01"
+  }
  },
  {
   "id": "kki_a-future-doctor",
@@ -1583,9 +1573,7 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  },
-  "pranalaCover": "https://media.mncgramedia.id/images/books/1006/9786022107644_1678952146.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/1006/a-kiss-for-money-2"
+  }
  },
  {
   "id": "kki_a-kiss-in-the-night",
@@ -1637,9 +1625,7 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  },
-  "pranalaCover": "https://media.mncgramedia.id/images/books/1607/9786022662433_1678952227.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/1607/a-loner-chunja-01"
+  }
  },
  {
   "id": "kki_a-love-which-changes-my-heart",
@@ -1801,9 +1787,7 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  },
-  "pranalaCover": "https://media.mncgramedia.id/images/books/2119/9786022667926_1678952316.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/2119/a-mysterious-feeling-called-love"
+  }
  },
  {
   "id": "kki_a-mysterious-scandal",
@@ -1829,9 +1813,7 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  },
-  "pranalaCover": "https://media.mncgramedia.id/images/books/2233/9786022668961_1678952328.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/2233/a-mysterious-scandal-01"
+  }
  },
  {
   "id": "kki_a-neverending-song",
@@ -2431,7 +2413,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/mdahgl1/zettai-renai-program",
   "pranala": "https://www.mncgramedia.id/books/1696/absolute-love-program-1",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_absolute-peace-strategy",
@@ -2453,7 +2439,11 @@
   "publisherJp": "Hakusensha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/it517d5/zettai-heiwa-daisakusen",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_ace-of-diamond",
@@ -2475,7 +2465,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/tnhubxi/daiya-no-a",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_act-age",
@@ -2497,7 +2491,11 @@
   "publisherJp": "Shueisha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/5u76kuz/act-age",
   "pranala": null,
-  "notes": "Dihentikan, karena kasus perbuatan asusila yang diperbuat si penulis cerita. https://www.kaorinusantara.or.id/newsline/152004/komik-act-age-akhirnya-ditarik-dari-peredaran"
+  "notes": "Dihentikan, karena kasus perbuatan asusila yang diperbuat si penulis cerita. https://www.kaorinusantara.or.id/newsline/152004/komik-act-age-akhirnya-ditarik-dari-peredaran",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_actor-wannabe-endo-kun",
@@ -2519,7 +2517,11 @@
   "publisherJp": "Square Enix",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/278bsvr/engi-mon-endou-kun",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_adamas",
@@ -2541,7 +2543,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/luq5eno/adamas",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_adandai-the-demon-painter",
@@ -2563,7 +2569,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/xxzhf8g/adandai-youkai-eshi-rokuhana-nishikie",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_adolf",
@@ -2585,7 +2595,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/64o0tng/adolf-ni-tsugu",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_adventure-boy",
@@ -2607,7 +2621,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/n1l6ie0/bouken-shounen",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_adventure-of-cat-mix-toraji",
@@ -2629,7 +2647,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/64th49r/neko-mix-genkitan-toraji",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_aegis-in-the-dark",
@@ -2651,7 +2673,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/79897sn/yami-no-aegis",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_aflame-inferno",
@@ -2673,7 +2699,11 @@
   "publisherJp": "Haksan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/z5g31yz/aflame-inferno",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_after-school-love-age",
@@ -2695,7 +2725,11 @@
   "publisherJp": "Shueisha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/dc8alg3/houkago-love-age",
   "pranala": "https://www.mncgramedia.id/books/3565/after-school-love-age",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_after-school-with-prince",
@@ -2717,7 +2751,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/83jidm6/ouji-to-houkago",
   "pranala": "https://www.mncgramedia.id/books/1673/after-school-with-prince",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_after-the-rain",
@@ -2739,7 +2777,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/zu7pyny/koi-wa-ameagari-no-you-ni",
   "pranala": null,
-  "notes": "Kertas Book Paper"
+  "notes": "Kertas Book Paper",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_after-the-rain-terbit-ulang",
@@ -2761,7 +2803,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/zu7pyny/koi-wa-ameagari-no-you-ni",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_afterschool-charisma",
@@ -2783,7 +2829,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/tl2w3co/houkago-no-charisma",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_ah-dear-banchou",
@@ -2805,7 +2855,11 @@
   "publisherJp": "Hakusensha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/8n1m1ua/aa-itoshi-no-banchou-sama",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_ai-hime-love-and-secret",
@@ -2827,7 +2881,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/p0o8d06/ai-hime-ai-to-himegoto",
   "pranala": "https://www.mncgramedia.id/books/575/ai-hime-love-and-secret-01",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_air-gear",
@@ -2849,7 +2907,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/xgxh48h/air-gear",
   "pranala": null,
-  "notes": "Desain sampul di vol.1-6: Y. Wisnu. Brata"
+  "notes": "Desain sampul di vol.1-6: Y. Wisnu. Brata",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_airus-magical-school",
@@ -2871,7 +2933,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/azbfuro/mahochu",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_akame-ga-kill",
@@ -2893,7 +2959,11 @@
   "publisherJp": "Square Enix",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/p5ufl4y/akame-ga-kiru",
   "pranala": null,
-  "notes": "Mulai vol. 7 menjadi bookpaper."
+  "notes": "Mulai vol. 7 menjadi bookpaper.",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_akanes-heart",
@@ -2915,7 +2985,11 @@
   "publisherJp": "Shueisha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/muuxqj6/akane-kun-no-kokoro",
   "pranala": "https://www.mncgramedia.id/books/3576/akanes-heart",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_akihabaradeep",
@@ -2937,7 +3011,11 @@
   "publisherJp": "Shinchosha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/v1ydb9e/akihabara-deep",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_akira",
@@ -2959,7 +3037,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/lbc1s15/akira",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_akizuki-san",
@@ -2981,7 +3063,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/4sdgslm/akiduki-san-wa-otona-ni-narenai",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_aku",
@@ -3003,7 +3089,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/fx6eq81/boku",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_aku-hilang",
@@ -3025,7 +3115,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/10qlewp/watashi-ga-kieta",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_aku-takut",
@@ -3047,7 +3141,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/8h4gger/anata-ga-kowai",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_akutagawa-case-files",
@@ -3069,7 +3167,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/o0s3etp/shikeishuu-sousakan-akutagawa-kai-no-jikenbo",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-20"
+  }
  },
  {
   "id": "kki_album-kenangan",
@@ -8176,6 +8278,28 @@
   "notes": "Ceritanya bersambung dengan judul yang berbeda untuk masing-masing buku"
  },
  {
+  "id": "kki_bungo-stray-dogs-beast",
+  "slug": "bungo-stray-dogs-beast",
+  "title": "Bungo Stray Dogs - Beast",
+  "author": "Cerita: Kafka Asagiri; Gambar: Shiwasu Hoshikawa; Character Design: Sango Harukawa",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "4",
+  "statusId": "End",
+  "publisherId": "Phoenix",
+  "yearFirstVol": "2025",
+  "priceMin": "Rp65.000",
+  "priceMax": "Rp65.000",
+  "paperType": "Bookpaper",
+  "volumesJp": "4",
+  "statusJp": "End",
+  "publisherJp": "Kadokawa",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/2mwv8yr/bungou-stray-dogs-beast",
+  "pranala": "https://phoenixgramedia.id/books/bungo-stray-dogs-beast-vol-1/",
+  "notes": null
+ },
+ {
   "id": "kki_bungo-stray-dogs-another-story-yukito-ayatsuji-vs-natsuhiko-kyogoku",
   "slug": "bungo-stray-dogs-another-story-yukito-ayatsuji-vs-natsuhiko-kyogoku",
   "title": "Bungo Stray Dogs Another Story: Yukito Ayatsuji Vs Natsuhiko Kyogoku",
@@ -9254,28 +9378,6 @@
   "notes": null
  },
  {
-  "id": "kki_cerita-spesial-doraemon",
-  "slug": "cerita-spesial-doraemon",
-  "title": "Cerita Spesial Doraemon",
-  "author": "Fujiko F. Fujio",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "18",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": null,
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "18",
-  "statusJp": "End",
-  "publisherJp": "Shogakukan",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/gzp5lsi/doraemon",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_cerita-spesial-doraemon-edisi-bepergian-ke-mana-saja-kapan-saja",
   "slug": "cerita-spesial-doraemon-edisi-bepergian-ke-mana-saja-kapan-saja",
   "title": "Cerita Spesial Doraemon Edisi Bepergian Ke Mana Saja Kapan Saja",
@@ -9361,6 +9463,28 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": null,
   "pranala": "https://pis.gramedia.id/q/166078",
+  "notes": null
+ },
+ {
+  "id": "kki_cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek",
+  "slug": "cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek",
+  "title": "Cerita Spesial Doraemon Edisi Musik yang Bergema Dungtek",
+  "author": "Fujiko F. Fujio",
+  "illustrator": null,
+  "medium": "MANGA",
+  "demographic": "Shounen",
+  "volumesId": "1",
+  "statusId": "End",
+  "publisherId": "Elex",
+  "yearFirstVol": "2026",
+  "priceMin": "Rp50.000",
+  "priceMax": "Rp50.000",
+  "paperType": "Bookpaper",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "publisherJp": "Shogakukan",
+  "mangaupdatesUrl": null,
+  "pranala": "https://pis.gramedia.id/q/245819",
   "notes": null
  },
  {
@@ -11432,28 +11556,6 @@
   "notes": null
  },
  {
-  "id": "kki_crayon-shinchan-movie-fast-asleep-the-great-assault-on-dreamy-world",
-  "slug": "crayon-shinchan-movie-fast-asleep-the-great-assault-on-dreamy-world",
-  "title": "Crayon Shinchan Movie - Fast Asleep! The Great Assault On Dreamy World",
-  "author": "Cerita: Yoshiro Usui; Gambar: Mirei Takata",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2020",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Futabasha",
-  "mangaupdatesUrl": null,
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_crazy-24-hours",
   "slug": "crazy-24-hours",
   "title": "Crazy 24 Hours",
@@ -13034,28 +13136,6 @@
   "statusJp": "End",
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://shogakukan-comic.jp/book?isbn=9784098505449",
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_detektif-conan-movie-the-scarlet-bullet",
-  "slug": "detektif-conan-movie-the-scarlet-bullet",
-  "title": "Detektif Conan Movie - The Scarlet Bullet",
-  "author": "Aoyama Gosho",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "2",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2025",
-  "priceMin": "Rp100.000",
-  "priceMax": "Rp100.000",
-  "paperType": null,
-  "volumesJp": "2",
-  "statusJp": "End",
-  "publisherJp": "Shogakukan",
-  "mangaupdatesUrl": null,
   "pranala": null,
   "notes": null
  },

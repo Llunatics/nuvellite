@@ -392,8 +392,8 @@
   "reason": "substring-extra-words"
  },
  {
-  "nuvelliteSeriesId": "ser_naruto-the",
-  "nuvelliteTitle": "Naruto The",
+  "nuvelliteSeriesId": "ser_naruto-the-leg",
+  "nuvelliteTitle": "Naruto The : Leg Movie",
   "nuvelliteType": "MANGA",
   "nuvelliteAuthor": "Elex Media Komputindo",
   "kkiTitle": "Naruto",
@@ -406,8 +406,8 @@
   "reason": "substring-extra-words"
  },
  {
-  "nuvelliteSeriesId": "ser_naruto-the-leg",
-  "nuvelliteTitle": "Naruto The : Leg",
+  "nuvelliteSeriesId": "ser_naruto-the",
+  "nuvelliteTitle": "Naruto The Movie",
   "nuvelliteType": "MANGA",
   "nuvelliteAuthor": "Elex Media Komputindo",
   "kkiTitle": "Naruto",
@@ -850,6 +850,20 @@
   "kkiPublisher": "Akasha",
   "score": 85.5,
   "authorScore": 45.0,
+  "crossMedium": false,
+  "reason": "author-mismatch"
+ },
+ {
+  "nuvelliteSeriesId": "ser_koloni-gundala",
+  "nuvelliteTitle": "Koloni Gundala Movie",
+  "nuvelliteType": "MANGA",
+  "nuvelliteAuthor": "Bumilangit Comic Media/Andy Wijaya",
+  "kkiTitle": "Crayon Shinchan Movie - Fast Asleep! The Great Assault On Dreamy World",
+  "kkiMedium": "MANGA",
+  "kkiAuthor": "Cerita: Yoshiro Usui; Gambar: Mirei Takata",
+  "kkiPublisher": "Elex",
+  "score": 85.5,
+  "authorScore": 37.3,
   "crossMedium": false,
   "reason": "author-mismatch"
  },

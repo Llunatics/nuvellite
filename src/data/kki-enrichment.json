@@ -704,21 +704,6 @@
   "matchScore": 90.0,
   "matchMethod": "auto"
  },
- "ser_bungo-stray-dogs-beast": {
-  "demographic": "Shounen",
-  "publisherJp": "Kadokawa",
-  "volumesJp": "4",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/2mwv8yr/bungou-stray-dogs-beast",
-  "priceMin": "Rp65.000",
-  "priceMax": "Rp65.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Bungo Stray Dogs - Beast",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 100.0,
-  "matchMethod": "auto"
- },
  "ser_bungo-stray-dogs-dazai-chuya": {
   "demographic": "Seinen",
   "publisherJp": "Kadokawa",
@@ -764,17 +749,17 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek": {
+ "ser_cerita-spesial-doraemon": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
-  "volumesJp": "1",
+  "volumesJp": "18",
   "statusJp": "End",
-  "mangaupdatesUrl": null,
-  "priceMin": "Rp50.000",
-  "priceMax": "Rp50.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2026",
-  "kkiTitle": "Cerita Spesial Doraemon Edisi Musik yang Bergema Dungtek",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/gzp5lsi/doraemon",
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "yearFirstVol": null,
+  "kkiTitle": "Cerita Spesial Doraemon",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
   "matchMethod": "auto"
@@ -947,14 +932,14 @@
  "ser_conan": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
-  "volumesJp": "105",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/3xfm8ig/meitantei-conan",
-  "priceMin": "Rp65.000",
-  "priceMax": "Rp65.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2020",
-  "kkiTitle": "Detektif Conan Premium",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp100.000",
+  "priceMax": "Rp100.000",
+  "paperType": null,
+  "yearFirstVol": "2025",
+  "kkiTitle": "Detektif Conan Movie - The Scarlet Bullet",
   "kkiPublisher": "Elex",
   "matchScore": 90.0,
   "matchMethod": "auto"
@@ -1079,21 +1064,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_detektif-conan-movie": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "105",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/3xfm8ig/meitantei-conan",
-  "priceMin": null,
-  "priceMax": "Rp50.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": null,
-  "kkiTitle": "Detektif Conan",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
  "ser_detektif-conan-premium": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
@@ -1151,7 +1121,7 @@
   "yearFirstVol": null,
   "kkiTitle": "Detektif Conan",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_detektif-conan-zeros-tea-time": {
@@ -1316,7 +1286,7 @@
   "yearFirstVol": "2025",
   "kkiTitle": "Doraemon Movie: Stand by Me Doraemon",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_doraemon-movie": {
@@ -1346,7 +1316,7 @@
   "yearFirstVol": "2025",
   "kkiTitle": "Movie Doraemon Nobita and the Last Haven Animal Adventure",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_doraemon-nobitas-mermaid-leg": {
@@ -2942,7 +2912,7 @@
  "ser_makeine---heroine-yang-patah-hati-ternyata-banyak-ln": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
-  "volumesJp": "8",
+  "volumesJp": "9+1",
   "statusJp": "Ongoing",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/98hjvqf/make-heroine-ga-oosugiru-novel",
   "priceMin": "Rp118.000",
@@ -3386,7 +3356,7 @@
   "yearFirstVol": "2016",
   "kkiTitle": "Naruto The Movie: Ninja Clash In The Land Of Snow",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_neon-genesis-evangelion": {
@@ -4556,7 +4526,7 @@
   "yearFirstVol": "2024",
   "kkiTitle": "Sword Art Online The Movie - Ordinal Scale",
   "kkiPublisher": "M&C!",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_tamons-b-side": {
