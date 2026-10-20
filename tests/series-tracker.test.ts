@@ -154,7 +154,12 @@ describe('Series Deduplication & Merchandise Isolation', () => {
     const vol5Detail = getBookDetailBySlug(vol5!.slug);
     expect(vol5Detail?.availableEditions).toBeDefined();
     expect(vol5Detail!.availableEditions!.length).toBeGreaterThan(1);
-    expect(vol5Detail?.synopsis).toContain('Pilihan Edisi & Set Resmi');
+    // The edition picker is rendered from availableEditions; the legacy
+    // "Pilihan Edisi & Set Resmi" synopsis trailer is a write-only build
+    // artifact (the frontend strips it via cleanStorySynopsis) and must not
+    // linger in the synopsis (deep-6, 2026-10-20: stale markers removed by
+    // the idempotent consolidate_editions).
+    expect(vol5Detail?.synopsis).not.toContain('Pilihan Edisi & Set Resmi');
   });
 
   it('should separate Classroom of the Elite into distinct Manga and Light Novel series', () => {

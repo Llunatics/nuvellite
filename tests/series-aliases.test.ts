@@ -38,6 +38,40 @@ describe('canonical franchise aliases', () => {
     ]);
   });
 
+  it("resolves the Re:Zero LN vendor-drift alias (deep-6, 2026-10-20)", () => {
+    // Older feed: 'Re:Zero : Starting Life in Another World NN' (colon);
+    // newer feed: 'Light Novel: Re:Zero - Starting Life in Another World - NN'.
+    expect(
+      resolveMediumAlias('rezero-starting-life-in-another-world', 'LIGHT_NOVEL')
+    ).toEqual([
+      'rezero---starting-life-in-another-world',
+      'Re:Zero - Starting Life in Another World',
+    ]);
+    // The canonical dash form is idempotent (resolves to itself)...
+    expect(
+      resolveMediumAlias('rezero---starting-life-in-another-world', 'LIGHT_NOVEL')
+    ).toEqual([
+      'rezero---starting-life-in-another-world',
+      'Re:Zero - Starting Life in Another World',
+    ]);
+    // ...and the alias is medium-scoped (a hypothetical Re:Zero manga base
+    // with the colon form must NOT be folded into the LN series).
+    expect(
+      resolveMediumAlias('rezero-starting-life-in-another-world', 'MANGA')
+    ).toEqual(['rezero-starting-life-in-another-world', null]);
+  });
+
+  it("resolves the Sasuke's Story vendor-typo alias (deep-6, 2026-10-20)", () => {
+    expect(
+      resolveBaseAlias(
+        'naruto---sasukess-story---the-uchiha-and-the-heavenly-stardust'
+      )
+    ).toEqual([
+      'naruto---sasukes-story---the-uchiha-and-the-heavenly-stardust',
+      "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust",
+    ]);
+  });
+
   it('keeps the Python and TS alias tables non-empty and documented', () => {
     // If you add an entry to scripts/catalog_consistency.py, add it here too.
     expect(Object.keys(SERIES_BASE_ALIASES).length).toBeGreaterThan(0);
@@ -133,5 +167,80 @@ describe('alias-driven consolidation (consolidateCatalog)', () => {
     expect(seriesList).toHaveLength(1);
     expect(seriesList[0].id).toBe('ser_cerita-spesial-doraemon');
     expect(seriesList[0].name).toBe('Cerita Spesial Doraemon');
+  });
+
+  it('merges the Re:Zero LN vendor-drift series into one canonical series (deep-6)', () => {
+    const lnBook = (
+      id: string,
+      title: string,
+      seriesName: string,
+      volume: number
+    ): Book => ({
+      ...baseBook,
+      id,
+      slug: id,
+      title,
+      seriesName,
+      volume,
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+      publisherShortName: 'PGI',
+      category: 'Light Novel',
+      format: 'LIGHT_NOVEL',
+      genres: ['Light Novel', 'Isekai & Fantasi'],
+    });
+    const books = [
+      lnBook(
+        'r1',
+        'Re:Zero : Starting Life in Another World 01',
+        'Re:Zero : Starting Life in Another World',
+        1
+      ),
+      lnBook(
+        'r2',
+        'Light Novel: Re:Zero - Starting Life in Another World - 21',
+        'Light Novel: Re:Zero - Starting Life in Another World',
+        21
+      ),
+    ];
+    const { seriesList, canonicalBooks } = consolidateCatalog({ books });
+    expect(seriesList).toHaveLength(1);
+    expect(seriesList[0].id).toBe('ser_rezero---starting-life-in-another-world');
+    expect(seriesList[0].name).toBe('Re:Zero - Starting Life in Another World');
+    expect(seriesList[0].type).toBe('LIGHT_NOVEL');
+    expect(
+      canonicalBooks.every(
+        (b) => b.seriesId === 'ser_rezero---starting-life-in-another-world'
+      )
+    ).toBe(true);
+  });
+
+  it("merges the 'Sasukess Story' typo series into Sasuke's Story (deep-6)", () => {
+    const books = [
+      mkBook(
+        's1',
+        "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust 01",
+        "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust",
+        1
+      ),
+      mkBook(
+        's2',
+        'Naruto - Sasukess Story - The Uchiha and the Heavenly Stardust 02',
+        'Naruto - Sasukess Story - The Uchiha and the Heavenly Stardust',
+        2
+      ),
+    ];
+    const { seriesList, canonicalBooks } = consolidateCatalog({ books });
+    expect(seriesList).toHaveLength(1);
+    // NOTE: the TS cleanSlug() collapses repeated dashes, so the TS-side
+    // canonical id is the single-dash form; the Python pipeline (production)
+    // produces the triple-dash form 'ser_naruto---sasukes-story---...'.
+    expect(seriesList[0].id).toBe(
+      'ser_naruto-sasukes-story-the-uchiha-and-the-heavenly-stardust'
+    );
+    expect(seriesList[0].name).toBe(
+      "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust"
+    );
+    expect(canonicalBooks).toHaveLength(2);
   });
 });

@@ -632,6 +632,27 @@ def _edition_base_title(title):
     return _norm_title_key(stripped)
 
 
+# Strict pattern for the PIPELINE's own edition marker
+# ("\n\nPilihan Edisi & Set Resmi: Regular, Special Set"). Only this exact
+# format is ever stripped/re-appended by consolidate_editions — vendor
+# marketing copy that merely contains the words "Pilihan Edisi & Set Resmi"
+# (e.g. "📌 **Pilihan Edisi & Set Resmi:**\n• Edisi Standar: ...") is left
+# alone: the frontend synopsis-cleaner already hides it on book pages.
+_EDITION_MARKER_RE = re.compile(
+    r"\n\nPilihan Edisi & Set Resmi: "
+    r"(?:Regular|Special Set|Birthday Set|Complete Set|Limited Edition)"
+    r"(?:, (?:Regular|Special Set|Birthday Set|Complete Set|Limited Edition))*"
+    r"\s*$"
+)
+
+
+def _strip_edition_marker(synopsis):
+    """Remove a stale pipeline edition marker from a synopsis, if present."""
+    if not synopsis:
+        return synopsis
+    return _EDITION_MARKER_RE.sub("", synopsis)
+
+
 def consolidate_editions(all_books, price_snapshot_map=None):
     """Step 5c: fold edition variants into the canonical volume's availableEditions.
 
@@ -661,6 +682,13 @@ def consolidate_editions(all_books, price_snapshot_map=None):
         # Sub-group by edition-stripped title: only fold true variants.
         title_groups = defaultdict(list)
         for b in b_list:
+            # Idempotency: drop any marker appended by a PREVIOUS run before
+            # re-folding. Otherwise a stale marker survives after its edition
+            # variants disappear (or goes stale when the fold changes),
+            # leaking "Pilihan Edisi & Set Resmi: Regular, Regular" into
+            # book synopses and series descriptions (found 2026-10-20: 64
+            # books carried the marker with zero availableEditions).
+            b['synopsis'] = _strip_edition_marker(b.get('synopsis'))
             title_groups[_edition_base_title(b.get('title'))].append(b)
 
         for tkey, t_list in title_groups.items():
@@ -694,7 +722,9 @@ def consolidate_editions(all_books, price_snapshot_map=None):
             regular['title'] = EDITION_SUFFIX_REGEX.sub(
                 '', regular.get('title') or '').strip(' :-–—+')
             regular['availableEditions'] = editions
-            if len(editions) > 1 and 'Pilihan Edisi & Set Resmi' not in (regular.get('synopsis') or ''):
+            # The marker was stripped above, so re-append it fresh: it always
+            # mirrors the CURRENT fold (never a stale previous run).
+            if len(editions) > 1:
                 regular['synopsis'] = (regular.get('synopsis') or '') + \
                     f"\n\nPilihan Edisi & Set Resmi: {', '.join(e['name'] for e in editions)}"
             if price_snapshot_map is not None:
@@ -759,7 +789,13 @@ def reconstruct_series(all_books, existing_series_map):
         first_vol = next((b for b in b_list if b.get('volume') == 1 and len(b.get('synopsis', '')) > 50), None)
         if not first_vol:
             first_vol = next((b for b in b_list if len(b.get('synopsis', '')) > 50), b_list[0])
-        s_desc = first_vol.get('synopsis') or f"Diterbitkan resmi oleh {pub_name}."
+        # Strip the edition marker from the series description (mirrors the
+        # TS consolidator's split). The marker is book-level metadata; users
+        # reading a series description must never see the raw
+        # "Pilihan Edisi & Set Resmi: ..." trailer (found 2026-10-20 on 64
+        # series pages).
+        s_desc = (first_vol.get('synopsis') or f"Diterbitkan resmi oleh {pub_name}.")
+        s_desc = s_desc.split('\n\nPilihan Edisi & Set Resmi:')[0]
 
         series_obj = {
             'id': sid,

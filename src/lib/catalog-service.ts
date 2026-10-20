@@ -3,7 +3,7 @@ import fullCatalogData from '@/data/catalog.json';
 import { Book, Series, Publisher, CatalogData } from './types';
 import { getPriceSummary as getPriceSummaryInternal, initializePriceSnapshots } from './data/price-service';
 import { getRelatedReleases as getRelatedReleasesInternal, getYouMayAlsoLike as getYouMayAlsoLikeInternal } from './data/recommendation-service';
-import { groupBindUpBooks, BindUpSeriesGroup } from './data/bind-up';
+import { groupBindUpBooks, BindUpSeriesGroup, normalizeBindUpSeriesName } from './data/bind-up';
 
 // Listing data (lightweight, no synopsis/heavy fields) — used for grids, cards, search
 const listing = listingData as unknown as CatalogData;
@@ -107,10 +107,40 @@ export function getBindUpSeries(): BindUpSeriesGroup[] {
 /**
  * Find the bind-up group linked to a canonical series slug, if any.
  * Used to show a "Lihat Edisi Bind-Up" button on series detail pages.
+ *
+ * Besides the direct match (bind-up books shelved under the canonical
+ * series, e.g. Slam Dunk), this also matches when the bind-up books live
+ * under a dedicated "<Series> Bind Up" series (e.g. ser_naruto-bind-up, 29
+ * books) while the user is on the canonical series page (ser_naruto-manga).
+ * Matching is done on the marker-stripped base name — the same merge key
+ * the /bind-up directory uses — preferring the same publisher, then any
+ * publisher (e.g. Elex's Attack on Titan bind-up from m&c!'s series page).
+ * Medium stays separated: "Naruto (Novel)" normalizes to "naruto (novel)",
+ * never to "naruto", so the LN page never advertises the manga bind-up.
  */
 export function getBindUpGroupForSeriesSlug(slug: string): BindUpSeriesGroup | undefined {
   const clean = slug.toLowerCase();
-  return getBindUpSeries().find((g) => g.seriesSlug?.toLowerCase() === clean);
+  const groups = getBindUpSeries();
+  const direct = groups.find((g) => g.seriesSlug?.toLowerCase() === clean);
+  if (direct) return direct;
+
+  const series = getSeriesBySlug(slug);
+  if (!series) return undefined;
+  const base = normalizeBindUpSeriesName(series.name);
+  if (!base) return undefined;
+  const groupBase = (g: BindUpSeriesGroup): string => {
+    const idx = g.key.indexOf('__');
+    return idx >= 0 ? g.key.slice(idx + 2) : g.key;
+  };
+
+  // Prefer the same publisher's bind-up edition...
+  const samePublisher = groups.find(
+    (g) => g.publisherId === series.publisherId && groupBase(g) === base
+  );
+  if (samePublisher) return samePublisher;
+
+  // ...then any publisher's edition of the same franchise.
+  return groups.find((g) => groupBase(g) === base);
 }
 
 export function getSeriesBySlug(slug: string): Series | undefined {

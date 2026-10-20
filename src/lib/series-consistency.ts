@@ -146,6 +146,24 @@ export const SERIES_BASE_ALIASES: Record<string, [string, string]> = {
     'cerita-spesial-doraemon',
     'Cerita Spesial Doraemon',
   ],
+  // Vendor typo: 'Naruto - Sasukess Story - ...' (double s) is the same
+  // 2-volume Elex manga as 'Naruto - Sasuke's Story - ...'. Found 2026-10-20:
+  // vol 1 shelved under the correct spelling, vol 2 under the typo.
+  //
+  // NOTE on slug forms: the Python pipeline's clean_slug does NOT collapse
+  // repeated dashes, so production base slugs look like
+  // 'naruto---sasukess-story---...' (triple dash, as in the real catalog).
+  // The TS cleanSlug() collapses them to single dashes. Both forms are
+  // registered here so the alias resolves whichever implementation computes
+  // the base slug; the Python table keeps the triple-dash (production) form.
+  'naruto---sasukess-story---the-uchiha-and-the-heavenly-stardust': [
+    'naruto---sasukes-story---the-uchiha-and-the-heavenly-stardust',
+    "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust",
+  ],
+  'naruto-sasukess-story-the-uchiha-and-the-heavenly-stardust': [
+    'naruto-sasukes-story-the-uchiha-and-the-heavenly-stardust',
+    "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust",
+  ],
 };
 
 /** "base_slug::medium" -> [canonical_base_slug, canonical_display_name] */
@@ -153,6 +171,24 @@ export const SERIES_MEDIUM_ALIASES: Record<string, [string, string]> = {
   // Both 'Detektif Conan Movie: ...' and 'Detektif Conan The Movie: ...'
   // are the same movie line; canonical id ser_detektif-conan-the.
   'detektif-conan::MOVIE': ['detektif-conan-the', 'Detektif Conan The Movie'],
+  // PGI's Re:Zero LN vendor titles drifted: older feed used
+  // 'Re:Zero : Starting Life in Another World NN' (colon form), newer feed
+  // uses 'Light Novel: Re:Zero - Starting Life in Another World - NN'
+  // (dash form). Same LIGHT_NOVEL line; canonical id
+  // ser_rezero---starting-life-in-another-world (found 2026-10-20: vols 1-5
+  // split from vols 6/21-23).
+  //
+  // Slug-form note (see SERIES_BASE_ALIASES): the Python pipeline produces
+  // triple-dash slugs; the TS cleanSlug() collapses them. Both key forms
+  // are registered; values keep the production (triple-dash) form.
+  'rezero-starting-life-in-another-world::LIGHT_NOVEL': [
+    'rezero---starting-life-in-another-world',
+    'Re:Zero - Starting Life in Another World',
+  ],
+  'rezero---starting-life-in-another-world::LIGHT_NOVEL': [
+    'rezero---starting-life-in-another-world',
+    'Re:Zero - Starting Life in Another World',
+  ],
 };
 
 /** Resolve a base franchise slug through SERIES_BASE_ALIASES. */

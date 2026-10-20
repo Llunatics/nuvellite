@@ -121,6 +121,13 @@ SERIES_BASE_ALIASES = {
     # Doraemon' (old ' - Edisi ...' titles parsed to the short name).
     'cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek': (
         'cerita-spesial-doraemon', 'Cerita Spesial Doraemon'),
+    # Vendor typo (found 2026-10-20): 'Naruto - Sasukess Story - ...'
+    # (double s) is the same 2-volume Elex manga as "Naruto - Sasuke's
+    # Story - ..."; vol 1 was shelved under the correct spelling, vol 2
+    # under the typo.
+    'naruto---sasukess-story---the-uchiha-and-the-heavenly-stardust': (
+        'naruto---sasukes-story---the-uchiha-and-the-heavenly-stardust',
+        "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust"),
 }
 
 # (base_slug, medium) -> (canonical_base_slug, canonical_display_name)
@@ -132,6 +139,15 @@ SERIES_MEDIUM_ALIASES = {
     # same movie line; canonical id ser_detektif-conan-the per the 2026-10-12
     # audit + series-tracker test.
     ('detektif-conan', 'MOVIE'): ('detektif-conan-the', 'Detektif Conan The Movie'),
+    # PGI Re:Zero LN vendor-title drift (found 2026-10-20): older feed used
+    # 'Re:Zero : Starting Life in Another World NN' (colon form), newer feed
+    # uses 'Light Novel: Re:Zero - Starting Life in Another World - NN'
+    # (dash form). Same LIGHT_NOVEL line; canonical id
+    # ser_rezero---starting-life-in-another-world (vols 1-5 were split from
+    # vols 6/21-23).
+    ('rezero-starting-life-in-another-world', 'LIGHT_NOVEL'): (
+        'rezero---starting-life-in-another-world',
+        'Re:Zero - Starting Life in Another World'),
 }
 
 
