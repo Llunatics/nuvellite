@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-23T03:44:22.000Z",
+  "lastUpdated": "2026-10-23T11:15:25.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -11704,7 +11704,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2024/6/23/xlp8debjfhee4czkme2njf.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 56250,
+      "currentPrice": 67500,
       "originalPrice": 75000,
       "releaseDate": "2024-06-23",
       "isWednesdayRelease": false,
@@ -27557,7 +27557,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ol-l4-e-73.png",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 54000,
       "originalPrice": 60000,
       "releaseDate": "2025-09-08",
@@ -45796,7 +45796,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/10/10/6fdwgqqcfyo9ggpf9x9acg.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 33750,
+      "currentPrice": 40500,
       "originalPrice": 45000,
       "releaseDate": "2023-10-10",
       "isWednesdayRelease": false,
@@ -60322,7 +60322,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786020490441_memoarty4.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 24000,
+      "currentPrice": 28800,
       "originalPrice": 32000,
       "releaseDate": "2019-02-27",
       "isWednesdayRelease": true,
@@ -72984,7 +72984,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/20c6k2aaz1.jfif",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-10-28",
@@ -75064,7 +75064,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2024/5/16/amkwjfbkesjo7zeqduuf5b.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 180000,
+      "currentPrice": 216000,
       "originalPrice": 240000,
       "releaseDate": "2024-05-16",
       "isWednesdayRelease": false,
@@ -75145,7 +75145,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/12/11/wgyu3dy8yly4rusrak5rxz.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 46500,
+      "currentPrice": 55800,
       "originalPrice": 62000,
       "releaseDate": "2023-12-16",
       "isWednesdayRelease": false,
@@ -76953,7 +76953,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/6nsesuserr.jpg",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 50000,
       "originalPrice": 50000,
       "releaseDate": "2026-10-21",
@@ -229455,7 +229455,7 @@
     },
     {
       "id": "snap_pub_i_want_to_end_this_love_game_05_init",
-      "bookId": "pub_i_want_to_end_this_love_game_05",
+      "bookId": "pub_i_want_to_end_this_love_game_04",
       "price": 45000,
       "currentPrice": 45000,
       "originalPrice": 45000,
@@ -229465,7 +229465,7 @@
     },
     {
       "id": "snap_pub_kariage_kun_65_2_init",
-      "bookId": "pub_kariage_kun_65_2",
+      "bookId": "pub_kariage_kun_65",
       "price": 30000,
       "currentPrice": 30000,
       "originalPrice": 40000,
@@ -229530,7 +229530,7 @@
     },
     {
       "id": "snap_pub_blue_lock_04_2_init",
-      "bookId": "pub_blue_lock_04_2",
+      "bookId": "pub_blue_lock_04_1",
       "price": 45000,
       "currentPrice": 45000,
       "originalPrice": 45000,
@@ -229540,7 +229540,7 @@
     },
     {
       "id": "snap_pub_level_comic_giant_killing_56_init",
-      "bookId": "pub_level_comic_giant_killing_56",
+      "bookId": "pub_lc_giant_killing_56",
       "price": 10000,
       "currentPrice": 10000,
       "originalPrice": 10000,
@@ -229550,7 +229550,7 @@
     },
     {
       "id": "snap_pub_blue_lock_07_2_init",
-      "bookId": "pub_blue_lock_07_2",
+      "bookId": "pub_blue_lock_07_1",
       "price": 45000,
       "currentPrice": 45000,
       "originalPrice": 45000,
@@ -229560,7 +229560,7 @@
     },
     {
       "id": "snap_pub_mob_psycho_100_13_1_init",
-      "bookId": "pub_mob_psycho_100_13_1",
+      "bookId": "pub_mob_psycho_100_13",
       "price": 10000,
       "currentPrice": 10000,
       "originalPrice": 10000,
@@ -229570,7 +229570,7 @@
     },
     {
       "id": "snap_pub_mob_psycho_100_10_1_init",
-      "bookId": "pub_mob_psycho_100_10_1",
+      "bookId": "pub_mob_psycho_100_10",
       "price": 10000,
       "currentPrice": 10000,
       "originalPrice": 10000,
@@ -229580,7 +229580,7 @@
     },
     {
       "id": "snap_pub_lc_fight_ippo_128_1_init",
-      "bookId": "pub_lc_fight_ippo_128_1",
+      "bookId": "pub_lc_fight_ippo_128",
       "price": 10000,
       "currentPrice": 10000,
       "originalPrice": 10000,
@@ -229590,7 +229590,7 @@
     },
     {
       "id": "snap_pub_level_comic_fight_ippo_130_1_init",
-      "bookId": "pub_level_comic_fight_ippo_130_1",
+      "bookId": "pub_level_comic_fight_ippo_130",
       "price": 35000,
       "currentPrice": 35000,
       "originalPrice": 35000,
@@ -229600,7 +229600,7 @@
     },
     {
       "id": "snap_pub_new_kobochan_40_1_init",
-      "bookId": "pub_new_kobochan_40_1",
+      "bookId": "pub_new_kobochan_40",
       "price": 25000,
       "currentPrice": 25000,
       "originalPrice": 25000,
@@ -229957,7 +229957,7 @@
     },
     {
       "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
       "price": 365000,
       "currentPrice": 365000,
       "originalPrice": 365000,
@@ -229967,7 +229967,7 @@
     },
     {
       "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
       "price": 265000,
       "currentPrice": 265000,
       "originalPrice": 265000,
@@ -229988,7 +229988,7 @@
     },
     {
       "id": "snap_pub_in_the_clear_moonlit_dusk_5_special_set_init",
-      "bookId": "pub_in_the_clear_moonlit_dusk_5_special_set",
+      "bookId": "pub_in_the_clear_moonlit_dusk_5",
       "price": 234000,
       "currentPrice": 234000,
       "originalPrice": 260000,
@@ -229998,7 +229998,7 @@
     },
     {
       "id": "snap_pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set_init",
-      "bookId": "pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set",
+      "bookId": "pub_tentang_kita_yang_bertolak_belakang_vol_8",
       "price": 238500,
       "currentPrice": 238500,
       "originalPrice": 265000,
@@ -230008,7 +230008,7 @@
     },
     {
       "id": "snap_pub_phantom_busters_vol_5_special_set_init",
-      "bookId": "pub_phantom_busters_vol_5_special_set",
+      "bookId": "pub_phantom_busters_vol_5",
       "price": 243000,
       "currentPrice": 243000,
       "originalPrice": 270000,
@@ -230018,7 +230018,7 @@
     },
     {
       "id": "snap_pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set_init",
-      "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set",
+      "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai",
       "price": 247500,
       "currentPrice": 247500,
       "originalPrice": 275000,
@@ -230028,7 +230028,7 @@
     },
     {
       "id": "snap_pub_the_summer_hikaru_died_8__special_set_init",
-      "bookId": "pub_the_summer_hikaru_died_8__special_set",
+      "bookId": "pub_the_summer_hikaru_died_8",
       "price": 265500,
       "currentPrice": 265500,
       "originalPrice": 295000,
@@ -230048,7 +230048,7 @@
     },
     {
       "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
       "price": 256500,
       "currentPrice": 256500,
       "originalPrice": 285000,
@@ -230058,7 +230058,7 @@
     },
     {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
-      "bookId": "pub_light_novel_the_summer_hikaru_died_2_special_set",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
       "currentPrice": 160200,
       "originalPrice": 178000,
@@ -230068,7 +230068,7 @@
     },
     {
       "id": "snap_pub_blue_lock_28__special_set_init",
-      "bookId": "pub_blue_lock_28__special_set",
+      "bookId": "pub_blue_lock_28",
       "price": 243000,
       "currentPrice": 243000,
       "originalPrice": 270000,
@@ -230078,7 +230078,7 @@
     },
     {
       "id": "snap_pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set_init",
-      "bookId": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set",
+      "bookId": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3",
       "price": 225000,
       "currentPrice": 225000,
       "originalPrice": 250000,
@@ -230088,7 +230088,7 @@
     },
     {
       "id": "snap_pub_the_summer_hikaru_died_7__special_set_init",
-      "bookId": "pub_the_summer_hikaru_died_7__special_set",
+      "bookId": "pub_the_summer_hikaru_died_7",
       "price": 207000,
       "currentPrice": 207000,
       "originalPrice": 230000,
@@ -230098,7 +230098,7 @@
     },
     {
       "id": "snap_pub_phantom_busters_vol_1__special_set_init",
-      "bookId": "pub_phantom_busters_vol_1__special_set",
+      "bookId": "pub_phantom_busters_vol_1",
       "price": 243000,
       "currentPrice": 243000,
       "originalPrice": 270000,
@@ -230108,7 +230108,7 @@
     },
     {
       "id": "snap_pub_blue_lock_27__special_set_init",
-      "bookId": "pub_blue_lock_27__special_set",
+      "bookId": "pub_blue_lock_27",
       "price": 243000,
       "currentPrice": 243000,
       "originalPrice": 270000,
@@ -230118,7 +230118,7 @@
     },
     {
       "id": "snap_pub_blue_lock_26__special_set_init",
-      "bookId": "pub_blue_lock_26__special_set",
+      "bookId": "pub_blue_lock_26",
       "price": 243000,
       "currentPrice": 243000,
       "originalPrice": 270000,
@@ -230128,7 +230128,7 @@
     },
     {
       "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6",
       "price": 225000,
       "currentPrice": 225000,
       "originalPrice": 250000,
@@ -230138,7 +230138,7 @@
     },
     {
       "id": "snap_pub_bungo_stray_dogs_beast_4__special_set_init",
-      "bookId": "pub_bungo_stray_dogs_beast_4__special_set",
+      "bookId": "pub_bungo_stray_dogs__beast_4",
       "price": 225000,
       "currentPrice": 225000,
       "originalPrice": 250000,
@@ -230148,7 +230148,7 @@
     },
     {
       "id": "snap_pub_gokurakugai_vol_4__special_set_init",
-      "bookId": "pub_gokurakugai_vol_4__special_set",
+      "bookId": "pub_gokurakugai_vol_4",
       "price": 225000,
       "currentPrice": 225000,
       "originalPrice": 250000,
@@ -230158,7 +230158,7 @@
     },
     {
       "id": "snap_pub_blue_lock_25__special_set_init",
-      "bookId": "pub_blue_lock_25__special_set",
+      "bookId": "pub_blue_lock_25",
       "price": 243000,
       "currentPrice": 243000,
       "originalPrice": 270000,
@@ -230168,7 +230168,7 @@
     },
     {
       "id": "snap_pub_light_novel_who_killed_the_brave__special_set_init",
-      "bookId": "pub_light_novel_who_killed_the_brave__special_set",
+      "bookId": "pub_light_novel_who_killed_the_brave",
       "price": 189000,
       "currentPrice": 189000,
       "originalPrice": 210000,
@@ -230178,7 +230178,7 @@
     },
     {
       "id": "snap_pub_bungo_stray_dogs_beast_1__special_set_init",
-      "bookId": "pub_bungo_stray_dogs_beast_1__special_set",
+      "bookId": "pub_bungo_stray_dogs__beast_1",
       "price": 198000,
       "currentPrice": 198000,
       "originalPrice": 220000,
@@ -230188,7 +230188,7 @@
     },
     {
       "id": "snap_pub_gokurakugai_vol_3__special_set_init",
-      "bookId": "pub_gokurakugai_vol_3__special_set",
+      "bookId": "pub_gokurakugai_vol_3",
       "price": 225000,
       "currentPrice": 225000,
       "originalPrice": 250000,
@@ -230198,7 +230198,7 @@
     },
     {
       "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
       "price": 315000,
       "currentPrice": 315000,
       "originalPrice": 350000,
@@ -230208,7 +230208,7 @@
     },
     {
       "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
       "price": 225000,
       "currentPrice": 225000,
       "originalPrice": 250000,
@@ -230218,7 +230218,7 @@
     },
     {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_1___special_set_init",
-      "bookId": "pub_light_novel_the_summer_hikaru_died_1___special_set",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_1",
       "price": 225000,
       "currentPrice": 225000,
       "originalPrice": 250000,
@@ -230228,7 +230228,7 @@
     },
     {
       "id": "snap_pub_the_summer_hikaru_died_6__special_set_init",
-      "bookId": "pub_the_summer_hikaru_died_6__special_set",
+      "bookId": "pub_the_summer_hikaru_died_6",
       "price": 225000,
       "currentPrice": 225000,
       "originalPrice": 250000,
@@ -230238,7 +230238,7 @@
     },
     {
       "id": "snap_pub_light_novel_classroom_of_the_elite_03__special_set_init",
-      "bookId": "pub_light_novel_classroom_of_the_elite_03__special_set",
+      "bookId": "pub_light_novel_classroom_of_the_elite_03",
       "price": 225000,
       "currentPrice": 225000,
       "originalPrice": 250000,
@@ -230292,7 +230292,7 @@
     },
     {
       "id": "snap_pub_lc_fight_ippo_129_1_init",
-      "bookId": "pub_lc_fight_ippo_129_1",
+      "bookId": "pub_lc_fight_ippo_129",
       "price": 35000,
       "currentPrice": 35000,
       "originalPrice": 35000,
@@ -230302,7 +230302,7 @@
     },
     {
       "id": "snap_pub_level_comic_fight_ippo_136_1_init",
-      "bookId": "pub_level_comic_fight_ippo_136_1",
+      "bookId": "pub_level_comic_fight_ippo_136",
       "price": 35000,
       "currentPrice": 35000,
       "originalPrice": 35000,
@@ -230334,7 +230334,7 @@
     },
     {
       "id": "snap_pub_level_comic_fight_ippo_137_1_init",
-      "bookId": "pub_level_comic_fight_ippo_137_1",
+      "bookId": "pub_level_comic_fight_ippo_137",
       "price": 35000,
       "currentPrice": 35000,
       "originalPrice": 35000,
@@ -230344,7 +230344,7 @@
     },
     {
       "id": "snap_pub_level_comic_fight_ippo_138_1_init",
-      "bookId": "pub_level_comic_fight_ippo_138_1",
+      "bookId": "pub_level_comic_fight_ippo_138",
       "price": 35000,
       "currentPrice": 35000,
       "originalPrice": 35000,
@@ -230354,7 +230354,7 @@
     },
     {
       "id": "snap_pub_level_comic_fight_ippo_135_1_init",
-      "bookId": "pub_level_comic_fight_ippo_135_1",
+      "bookId": "pub_level_comic_fight_ippo_135",
       "price": 35000,
       "currentPrice": 35000,
       "originalPrice": 35000,
@@ -230397,7 +230397,7 @@
     },
     {
       "id": "snap_pub_mob_psycho_100_01_1_init",
-      "bookId": "pub_mob_psycho_100_01_1",
+      "bookId": "pub_mob_psycho_100_01",
       "price": 40000,
       "currentPrice": 40000,
       "originalPrice": 40000,
@@ -230407,7 +230407,7 @@
     },
     {
       "id": "snap_pub_mob_psycho_100_vol_2_init",
-      "bookId": "pub_mob_psycho_100_vol_2",
+      "bookId": "pub_mob_psycho_100_02",
       "price": 40000,
       "currentPrice": 40000,
       "originalPrice": 40000,
@@ -230417,7 +230417,7 @@
     },
     {
       "id": "snap_pub_mob_psycho_100_11_1_init",
-      "bookId": "pub_mob_psycho_100_11_1",
+      "bookId": "pub_mob_psycho_100_11",
       "price": 10000,
       "currentPrice": 10000,
       "originalPrice": 10000,
@@ -230427,7 +230427,7 @@
     },
     {
       "id": "snap_pub_mob_psycho_100_vol_9_init",
-      "bookId": "pub_mob_psycho_100_vol_9",
+      "bookId": "pub_mob_psycho_100_9",
       "price": 10000,
       "currentPrice": 10000,
       "originalPrice": 10000,
@@ -230448,7 +230448,7 @@
     },
     {
       "id": "snap_pub_ruler_of_the_land_89_1_init",
-      "bookId": "pub_ruler_of_the_land_89_1",
+      "bookId": "pub_ruler_of_the_land_89",
       "price": 32000,
       "currentPrice": 32000,
       "originalPrice": 32000,
@@ -230469,7 +230469,7 @@
     },
     {
       "id": "snap_pub_one_piece_01_init",
-      "bookId": "pub_one_piece_01",
+      "bookId": "pub_one_piece_01_1",
       "price": 28800,
       "currentPrice": 28800,
       "originalPrice": 32000,
@@ -230490,7 +230490,7 @@
     },
     {
       "id": "snap_pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_init",
-      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie",
+      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_1",
       "price": 38700,
       "currentPrice": 38700,
       "originalPrice": 43000,
@@ -230621,7 +230621,7 @@
     },
     {
       "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_init",
-      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first",
+      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_2",
       "price": 72000,
       "currentPrice": 72000,
       "originalPrice": 80000,
@@ -232726,6 +232726,614 @@
       "currentPrice": 28800,
       "originalPrice": 36000,
       "previousPrice": 32400,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_black_clover_29_1792754125",
+      "bookId": "pub_black_clover_29",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_cerita_spesial_doraemon_edisi_musik_yang_bergema_dungtek_1792754125",
+      "bookId": "pub_cerita_spesial_doraemon_edisi_musik_yang_bergema_dungtek",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_i_want_to_end_this_love_game_05_init",
+      "bookId": "pub_i_want_to_end_this_love_game_05",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kariage_kun_65_2_init",
+      "bookId": "pub_kariage_kun_65_2",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_04_2_init",
+      "bookId": "pub_blue_lock_04_2",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_56_init",
+      "bookId": "pub_level_comic_giant_killing_56",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_07_2_init",
+      "bookId": "pub_blue_lock_07_2",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_13_1_init",
+      "bookId": "pub_mob_psycho_100_13_1",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_10_1_init",
+      "bookId": "pub_mob_psycho_100_10_1",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_128_1_init",
+      "bookId": "pub_lc_fight_ippo_128_1",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_130_1_init",
+      "bookId": "pub_level_comic_fight_ippo_130_1",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_new_kobochan_40_1_init",
+      "bookId": "pub_new_kobochan_40_1",
+      "price": 25000,
+      "currentPrice": 25000,
+      "originalPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_reliving_my_life_to_save_you_vol_1_special_set_init",
+      "bookId": "pub_reliving_my_life_to_save_you_vol_1_special_set",
+      "price": 159000,
+      "currentPrice": 159000,
+      "originalPrice": 159000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set",
+      "price": 365000,
+      "currentPrice": 365000,
+      "originalPrice": 365000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set",
+      "price": 265000,
+      "currentPrice": 265000,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_in_the_clear_moonlit_dusk_5_special_set_init",
+      "bookId": "pub_in_the_clear_moonlit_dusk_5_special_set",
+      "price": 234000,
+      "currentPrice": 234000,
+      "originalPrice": 260000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set_init",
+      "bookId": "pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set",
+      "price": 238500,
+      "currentPrice": 238500,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_5_special_set_init",
+      "bookId": "pub_phantom_busters_vol_5_special_set",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set_init",
+      "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set",
+      "price": 247500,
+      "currentPrice": 247500,
+      "originalPrice": 275000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_8__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_8__special_set",
+      "price": 265500,
+      "currentPrice": 265500,
+      "originalPrice": 295000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-07-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 346500,
+      "currentPrice": 346500,
+      "originalPrice": 385000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set",
+      "price": 256500,
+      "currentPrice": 256500,
+      "originalPrice": 285000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_2_special_set",
+      "price": 160200,
+      "currentPrice": 160200,
+      "originalPrice": 178000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_28__special_set_init",
+      "bookId": "pub_blue_lock_28__special_set",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set_init",
+      "bookId": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_7__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_7__special_set",
+      "price": 207000,
+      "currentPrice": 207000,
+      "originalPrice": 230000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_1__special_set_init",
+      "bookId": "pub_phantom_busters_vol_1__special_set",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_27__special_set_init",
+      "bookId": "pub_blue_lock_27__special_set",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_26__special_set_init",
+      "bookId": "pub_blue_lock_26__special_set",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_4__special_set_init",
+      "bookId": "pub_bungo_stray_dogs_beast_4__special_set",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_4__special_set_init",
+      "bookId": "pub_gokurakugai_vol_4__special_set",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-11-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_25__special_set_init",
+      "bookId": "pub_blue_lock_25__special_set",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_02_1_1792754125",
+      "bookId": "pub_blue_lock_02_1",
+      "price": 54000,
+      "currentPrice": 54000,
+      "originalPrice": 60000,
+      "previousPrice": 54000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_who_killed_the_brave__special_set_init",
+      "bookId": "pub_light_novel_who_killed_the_brave__special_set",
+      "price": 189000,
+      "currentPrice": 189000,
+      "originalPrice": 210000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_1__special_set_init",
+      "bookId": "pub_bungo_stray_dogs_beast_1__special_set",
+      "price": 198000,
+      "currentPrice": 198000,
+      "originalPrice": 220000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-08-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_3__special_set_init",
+      "bookId": "pub_gokurakugai_vol_3__special_set",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set",
+      "price": 315000,
+      "currentPrice": 315000,
+      "originalPrice": 350000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_1___special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_1___special_set",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_6__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_6__special_set",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_classroom_of_the_elite_03__special_set_init",
+      "bookId": "pub_light_novel_classroom_of_the_elite_03__special_set",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-06-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_129_1_init",
+      "bookId": "pub_lc_fight_ippo_129_1",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_136_1_init",
+      "bookId": "pub_level_comic_fight_ippo_136_1",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_137_1_init",
+      "bookId": "pub_level_comic_fight_ippo_137_1",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_138_1_init",
+      "bookId": "pub_level_comic_fight_ippo_138_1",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_135_1_init",
+      "bookId": "pub_level_comic_fight_ippo_135_1",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_01_1_init",
+      "bookId": "pub_mob_psycho_100_01_1",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_2_init",
+      "bookId": "pub_mob_psycho_100_vol_2",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_11_1_init",
+      "bookId": "pub_mob_psycho_100_11_1",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_9_init",
+      "bookId": "pub_mob_psycho_100_vol_9",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_89_1_init",
+      "bookId": "pub_ruler_of_the_land_89_1",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_01_init",
+      "bookId": "pub_one_piece_01",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-06-01",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_init",
+      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie",
+      "price": 38700,
+      "currentPrice": 38700,
+      "originalPrice": 43000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-11-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_init",
+      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first",
+      "price": 72000,
+      "currentPrice": 72000,
+      "originalPrice": 80000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-11-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_slam_dunk_new_edition_04_1792753705",
+      "bookId": "pub_slam_dunk_new_edition_04",
+      "price": 67500,
+      "currentPrice": 67500,
+      "originalPrice": 75000,
+      "previousPrice": 56250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_kaguya_sama_love_is_war_14_1792753850",
+      "bookId": "pub_kaguya_sama_love_is_war_14",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_moriarty_the_patriot_4_1792753936",
+      "bookId": "pub_moriarty_the_patriot_4",
+      "price": 28800,
+      "currentPrice": 28800,
+      "originalPrice": 32000,
+      "previousPrice": 24000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_koloni_h2o_reborn_trilogy_omnibus_1792753988",
+      "bookId": "pub_koloni_h2o_reborn_trilogy_omnibus",
+      "price": 216000,
+      "currentPrice": 216000,
+      "originalPrice": 240000,
+      "previousPrice": 180000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_koloni_not_today_human_your_despair_our_delight_1792753989",
+      "bookId": "pub_koloni_not_today_human_your_despair_our_delight",
+      "price": 55800,
+      "currentPrice": 55800,
+      "originalPrice": 62000,
+      "previousPrice": 46500,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-23",
       "source": "gramedia_api_refresh"
