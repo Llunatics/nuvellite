@@ -966,6 +966,20 @@
   "reason": "author-mismatch"
  },
  {
+  "nuvelliteSeriesId": "ser_kumpulan-cerita-kakak-adik-saling-sayang",
+  "nuvelliteTitle": "Kumpulan Cerita Kakak Adik Saling Sayang",
+  "nuvelliteType": "MANGA",
+  "nuvelliteAuthor": "Evy Sofia",
+  "kkiTitle": "Kakakku Sayang",
+  "kkiMedium": "MANGA",
+  "kkiAuthor": "Yu Asagiri",
+  "kkiPublisher": "Elex",
+  "score": 85.5,
+  "authorScore": 42.1,
+  "crossMedium": false,
+  "reason": "author-mismatch"
+ },
+ {
   "nuvelliteSeriesId": "ser_la-galigo",
   "nuvelliteTitle": "La Galigo",
   "nuvelliteType": "MANGA",
@@ -1088,6 +1102,20 @@
   "kkiPublisher": "Elex",
   "score": 85.5,
   "authorScore": 32.4,
+  "crossMedium": false,
+  "reason": "author-mismatch"
+ },
+ {
+  "nuvelliteSeriesId": "ser_saint-seiya-final-edition",
+  "nuvelliteTitle": "Saint Seiya Final Edition",
+  "nuvelliteType": "MANGA",
+  "nuvelliteAuthor": "Masami Kurumada",
+  "kkiTitle": "Neon Genesis Evangelion - Colector's Edition",
+  "kkiMedium": "MANGA",
+  "kkiAuthor": "Yoshiyuki Sadamoto, Khara",
+  "kkiPublisher": "Akasha",
+  "score": 85.5,
+  "authorScore": 46.0,
   "crossMedium": false,
   "reason": "author-mismatch"
  },

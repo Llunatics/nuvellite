@@ -23,7 +23,9 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/2607/9786023394685_1678952386.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/2607/un-famous-girl"
  },
  {
   "id": "kki_anima",
@@ -285,7 +287,9 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/3018/978-602-339-964-2_1678952552.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/3018/12-love-terbit-ulang"
  },
  {
   "id": "kki_12-series",
@@ -363,7 +367,9 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-16"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/4494/100_BLOSSOMS_OF_LOVE_01_1678952829.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/4494/100-blossoms-of-love-01"
  },
  {
   "id": "kki_100-days-left",
@@ -469,7 +475,9 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/939/9786022107293_1678952099.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/939/100-perfect-girl-1"
  },
  {
   "id": "kki_12-signs-of-zodiac",
@@ -1391,7 +1399,9 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/1700/9786022663409_1678952238.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/1700/a-fake-friend-01"
  },
  {
   "id": "kki_a-future-doctor",
@@ -1573,7 +1583,9 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/1006/9786022107644_1678952146.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/1006/a-kiss-for-money-2"
  },
  {
   "id": "kki_a-kiss-in-the-night",
@@ -1625,7 +1637,9 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/1607/9786022662433_1678952227.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/1607/a-loner-chunja-01"
  },
  {
   "id": "kki_a-love-which-changes-my-heart",
@@ -1787,7 +1801,9 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/2119/9786022667926_1678952316.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/2119/a-mysterious-feeling-called-love"
  },
  {
   "id": "kki_a-mysterious-scandal",
@@ -1813,7 +1829,9 @@
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-10-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/2233/9786022668961_1678952328.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/2233/a-mysterious-scandal-01"
  },
  {
   "id": "kki_a-neverending-song",
@@ -3193,7 +3211,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/7q9wech/sotsugyou-shashin",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_aldnoahzero",
@@ -3215,7 +3237,11 @@
   "publisherJp": "Houbunsha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/9uua2nt/aldnoah-zero",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_aldnoahzero-2nd-season",
@@ -3237,7 +3263,11 @@
   "publisherJp": "Houbunsha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/226uvup/aldnoah-zero-2nd-season",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_alice-19th",
@@ -3259,7 +3289,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/dn77cs0/alice-19th",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_alice-academy",
@@ -3281,7 +3315,11 @@
   "publisherJp": "Hakusensha",
   "mangaupdatesUrl": "https://elexmedia.id/produk/detail/komik-elex/tachibana-higuchi/alice-academy-31/9786020245546",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "fetch-failed",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_alice-in-borderland-omnibus",
@@ -3303,7 +3341,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/2nswwyo/imawa-no-kuni-no-alice",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_alice-on-border-road",
@@ -3325,7 +3367,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/c0ar2nx/imawa-no-michi-no-alice",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_alice-time",
@@ -3347,7 +3393,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/k53smkz/alice-no-jikan",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_alive-the-final-evolution",
@@ -3369,7 +3419,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/3nbkh0e/alive-saishuu-shinkateki-shounen",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_all-about-eve",
@@ -3391,7 +3445,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/44lv6wp/eve-no-subete",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_all-for-you",
@@ -3413,7 +3471,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/pkldr00/all-for-you",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_all-you-need-is-kill",
@@ -3435,7 +3497,11 @@
   "publisherJp": "Shueisha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/zt48r7l/all-you-need-is-kill",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_all-rounder-meguru",
@@ -3457,7 +3523,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/phrx4yd/all-rounder-meguru",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_altair-tale-of-the-great-war",
@@ -3479,7 +3549,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/htlorjy/shoukoku-no-altair",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_always-be-by-your-side",
@@ -3523,7 +3597,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/jtsskd1/kore-kara-mo-futari-de",
   "pranala": "https://www.mncgramedia.id/books/4191/always-be-with-you",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_always-by-your-side",
@@ -3545,7 +3623,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/3w1brpo/itsumo-soba-ni-koi-no-uta",
   "pranala": "https://www.mncgramedia.id/books/898/always-by-your-side",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_always-on-my-mind",
@@ -3567,7 +3649,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/74byhn8/omoibito",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_ami-non-stop",
@@ -3589,7 +3675,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/4ui1ak4/ami-nonstop",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_an-ancient-love-story",
@@ -3611,7 +3701,11 @@
   "publisherJp": "Hakusensha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/w14xhgw/nante-suteki-ni-japanesque",
   "pranala": null,
-  "notes": "Judul Jepangnya Nante Suteki ni Japanesque"
+  "notes": "Judul Jepangnya Nante Suteki ni Japanesque",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_ana-no-mujina",
@@ -3633,7 +3727,11 @@
   "publisherJp": "Shueisha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/67bzyyx/ana-no-mujina",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_anagle-mole",
@@ -3655,7 +3753,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/edog63c/anagle-mole",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_and-pair",
@@ -3677,7 +3779,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/usows00/and-pair",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_and-yet-you-are-so-sweet",
@@ -3699,7 +3805,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/q0wl240/nanoni-chigira-kun-ga-amasugiru",
   "pranala": "https://www.mncgramedia.id/books/4180/and-yet-you-are-so-sweet-01",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_android-love",
@@ -3721,7 +3831,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/1w3d9j9/android-na-koiwosuru",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_android-odette",
@@ -3743,7 +3857,11 @@
   "publisherJp": "Hakusensha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/oztculj/karakuri-odette",
   "pranala": "https://www.mncgramedia.id/books/1553/android-odette-1",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_anemone-flower-shop",
@@ -3765,7 +3883,11 @@
   "publisherJp": "Hakusensha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/33gl1re/ane-mone-seikaten",
   "pranala": "https://www.mncgramedia.id/books/532/anemone-flower-shop",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_angel-heart",
@@ -3787,7 +3909,11 @@
   "publisherJp": "Shinchosha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/os4oywo/angel-heart",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_angel-kiss",
@@ -3809,7 +3935,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/pdxa3s8/tenshi-ni-kiss",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_angel-trumpet",
@@ -3831,7 +3961,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/y1y6nn8/angel-trumpet",
   "pranala": "https://www.mncgramedia.id/books/2802/angel-trumpet-01",
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_angel-voice",
@@ -3853,7 +3987,11 @@
   "publisherJp": "Akita Shoten",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/fplds66/angel-voice",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-10-23"
+  }
  },
  {
   "id": "kki_angels-happiness",
@@ -27374,28 +27512,6 @@
   "notes": null
  },
  {
-  "id": "kki_kakakku-sayang",
-  "slug": "kakakku-sayang",
-  "title": "Kakakku Sayang",
-  "author": "Yu Asagiri",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shojo",
-  "volumesId": "1",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "1998",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "publisherJp": "Kodansha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/07usjo3/oneesan-no-jijou",
-  "pranala": null,
-  "notes": null
- },
- {
   "id": "kki_kamiyadori",
   "slug": "kamiyadori",
   "title": "Kamiyadori",
@@ -37908,28 +38024,6 @@
   "statusJp": "End",
   "publisherJp": "Mag Garden",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/u0pltx9/nega-channel",
-  "pranala": null,
-  "notes": null
- },
- {
-  "id": "kki_neon-genesis-evangelion-colectors-edition",
-  "slug": "neon-genesis-evangelion-colectors-edition",
-  "title": "Neon Genesis Evangelion - Colector's Edition",
-  "author": "Yoshiyuki Sadamoto, Khara",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Seinen",
-  "volumesId": "7",
-  "statusId": "End",
-  "publisherId": "Akasha",
-  "yearFirstVol": "2023",
-  "priceMin": "Rp110.000",
-  "priceMax": "Rp110.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "7",
-  "statusJp": "End",
-  "publisherJp": "Kadokawa",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/jgjdahb/shin-seiki-evangelion",
   "pranala": null,
   "notes": null
  },
@@ -58149,28 +58243,6 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/th4m4u2/yume-no-mirai-nikki",
   "pranala": "https://www.mncgramedia.id/books/3943/yumes-future-diary",
-  "notes": null
- },
- {
-  "id": "kki_yuru-camp-kemah-santai-gadis-sma",
-  "slug": "yuru-camp-kemah-santai-gadis-sma",
-  "title": "Yuru Camp - Kemah Santai Gadis SMA",
-  "author": "Afro",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Seinen",
-  "volumesId": "1",
-  "statusId": null,
-  "publisherId": "M&C!",
-  "yearFirstVol": "2026",
-  "priceMin": "Rp999.999",
-  "priceMax": "Rp999.999",
-  "paperType": null,
-  "volumesJp": "18",
-  "statusJp": "Ongoing",
-  "publisherJp": "Houbunsha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/dwn4msk/yurukyan",
-  "pranala": "https://www.mncgramedia.id/books/6824/yuru-camp-kemah-santai-gadis-sma-01",
   "notes": null
  },
  {

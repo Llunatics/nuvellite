@@ -3299,21 +3299,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_naruto---sasukess-story---the-uchiha-and-the-heavenly-stardust": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "2",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ok1q3lt/naruto-sasuke-retsuden-uchiha-no-matsuei-to-tenkyu-no-hoshikuzu",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp50.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Naruto: Sasuke's Story - The Uchiha and the Heavenly Stardust",
-  "kkiPublisher": "Elex",
-  "matchScore": 98.3,
-  "matchMethod": "auto"
- },
  "ser_naruto-bind-up": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
@@ -3929,21 +3914,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_rezero-starting-life-in-another-world": {
-  "demographic": "Seinen",
-  "publisherJp": "Media Factory",
-  "volumesJp": "46",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/3qzxncc/re-zero-kara-hajimeru-isekai-seikatsu-novel",
-  "priceMin": "Rp98.000",
-  "priceMax": "Rp98.000",
-  "paperType": null,
-  "yearFirstVol": "2024",
-  "kkiTitle": "Re:Zero -Starting Life in Another World-",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 100.0,
-  "matchMethod": "auto"
- },
  "ser_record-of-ragnarok": {
   "demographic": "Seinen",
   "publisherJp": "Tokuma Shoten",
@@ -4062,6 +4032,21 @@
   "kkiTitle": "Sakamoto Days",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_sakamoto-days-24": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "21",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=174038",
+  "priceMin": "Rp45.000",
+  "priceMax": "Rp45.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2023",
+  "kkiTitle": "Sakamoto Days",
+  "kkiPublisher": "Elex",
+  "matchScore": 95.0,
   "matchMethod": "auto"
  },
  "ser_samurai-8---the-tale-of-hachimaru": {
@@ -5517,6 +5502,21 @@
   "kkiTitle": "Yowamushi Pedal, Go!",
   "kkiPublisher": "M&C!",
   "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_yuru-camp": {
+  "demographic": "Seinen",
+  "publisherJp": "Houbunsha",
+  "volumesJp": "18",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/dwn4msk/yurukyan",
+  "priceMin": "Rp999.999",
+  "priceMax": "Rp999.999",
+  "paperType": null,
+  "yearFirstVol": "2026",
+  "kkiTitle": "Yuru Camp - Kemah Santai Gadis SMA",
+  "kkiPublisher": "M&C!",
+  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_yuyu-hakusho": {
