@@ -1196,6 +1196,44 @@ def run_sync(catalog_path):
     # pipeline.
     all_books = consolidate_editions(all_books, price_snapshot_map)
 
+    # 5d. Legacy sweep: the stages above only audit books that appear in
+    # the current vendor feed. A book that entered the catalog BEFORE its
+    # junk fragment was added to KNOWN_NON_MANGA_SERIES (e.g. "7 in 1
+    # Pemrograman Web untuk Pemula", release 2026-10-12) therefore survived
+    # every later sync untouched — that is how non-manga/non-LN titles
+    # kept "slipping through" even though classify_book() rejects them.
+    # This sweep re-checks EVERY stored book against the unconditional
+    # title signals only (known junk fragments, merchandise, placeholder,
+    # bundle SKU, Qanza). It deliberately does NOT use the broader
+    # NON_MANGA_LN_REGEX here: without a store category, that regex would
+    # false-positive real manga (e.g. "Teka-Teki Rumah Aneh - Hen Na Ie").
+    purged_ids = set()
+    for _b in all_books:
+        _t = (_b.get('title') or '').strip().lower()
+        _authors = ' '.join(_b.get('authors') or []).lower()
+        _reason = None
+        if 'merchandise' in _authors:
+            _reason = 'Author credit is merchandise'
+        elif _t in ('satuan', 'komik satuan'):
+            _reason = 'Generic placeholder title (satuan)'
+        elif _t.startswith('bundling'):
+            _reason = 'Bundle SKU product'
+        elif _t.startswith('qanza'):
+            _reason = 'Qanza imprint'
+        elif MERCHANDISE_REGEX.search(_b.get('title') or ''):
+            _reason = 'Matched merchandise title pattern'
+        else:
+            for _known in KNOWN_NON_MANGA_SERIES:
+                if _known in _t:
+                    _reason = f'Known non-manga/non-LN series: {_known}'
+                    break
+        if _reason:
+            purged_ids.add(_b.get('id'))
+            print(f"     [LEGACY_SWEEP] Removed legacy non-manga item: {_b.get('title')} ({_reason})")
+    if purged_ids:
+        all_books = [_b for _b in all_books if _b.get('id') not in purged_ids]
+        existing_price_snapshots = [s for s in existing_price_snapshots if s.get('bookId') not in purged_ids]
+
     # 6. Reconstruct Series metadata
     new_series_list = reconstruct_series(all_books, existing_series_map)
 

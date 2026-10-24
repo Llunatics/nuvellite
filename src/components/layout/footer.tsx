@@ -1,43 +1,83 @@
 import React from 'react';
 import Link from 'next/link';
 
+const PUBLISHERS = [
+  { href: '/?publisher=pub_elex', label: 'Elex Media' },
+  { href: '/?publisher=pub_mnc', label: 'm&c!' },
+  { href: '/?publisher=pub_pgi', label: 'Phoenix Gramedia' },
+];
+
+const NAV = [
+  { href: '/calendar', label: 'Kalender' },
+  { href: '/series', label: 'Seri' },
+  { href: '/library', label: 'Koleksi' },
+];
+
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.04] bg-background/50 text-editorial-muted py-14 px-4 sm:px-6 lg:px-8 transition-colors mt-auto">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-xs">
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
-          <span className="font-editorial text-lg font-semibold tracking-tight text-editorial-title">
-            nuvellite
-          </span>
-          <span className="hidden sm:inline text-editorial-faint/60">•</span>
-          <span className="text-editorial-muted text-xs max-w-xs leading-relaxed">
-            Arsip &amp; pelacak rilis manga &amp; light novel Indonesia
-          </span>
+    <footer className="border-t border-white/[0.06] bg-background text-editorial-muted mt-auto">
+      <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-10 pb-28 sm:pb-10">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+          {/* Brand */}
+          <div className="space-y-1.5 text-center lg:text-left">
+            <span className="font-editorial text-lg font-semibold tracking-tight text-editorial-title">
+              nuvellite
+            </span>
+            <p className="text-xs leading-relaxed">
+              Arsip &amp; pelacak rilis manga &amp; light novel Indonesia
+            </p>
+          </div>
+
+          {/* Link groups: 2 symmetric groups, never a lone wrapped link.
+              Mobile: 3 equal columns per group (no orphan row).
+              Desktop: two compact columns, right-aligned. */}
+          <div className="grid grid-cols-2 gap-8 sm:gap-12 lg:flex lg:gap-14">
+            <nav aria-label="Penerbit" className="space-y-3">
+              <h2 className="text-[10px] font-mono uppercase tracking-widest text-editorial-faint text-center sm:text-left">
+                Penerbit
+              </h2>
+              <ul className="grid grid-cols-1 gap-2.5 text-center sm:text-left">
+                {PUBLISHERS.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-xs text-editorial-muted hover:text-editorial-title transition-colors whitespace-nowrap"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <nav aria-label="Navigasi" className="space-y-3">
+              <h2 className="text-[10px] font-mono uppercase tracking-widest text-editorial-faint text-center sm:text-left">
+                Navigasi
+              </h2>
+              <ul className="grid grid-cols-1 gap-2.5 text-center sm:text-left">
+                {NAV.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-xs text-editorial-muted hover:text-editorial-title transition-colors whitespace-nowrap"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-5 text-xs text-editorial-muted">
-          <Link href="/?publisher=pub_elex" className="hover:text-editorial-title transition-colors">
-            Elex Media
-          </Link>
-          <Link href="/?publisher=pub_mnc" className="hover:text-editorial-title transition-colors">
-            m&amp;c!
-          </Link>
-          <Link href="/?publisher=pub_pgi" className="hover:text-editorial-title transition-colors">
-            Phoenix Gramedia
-          </Link>
-          <Link href="/calendar" className="hover:text-editorial-title transition-colors">
-            Kalender
-          </Link>
-          <Link href="/series" className="hover:text-editorial-title transition-colors">
-            Seri
-          </Link>
-          <Link href="/library" className="hover:text-editorial-title transition-colors">
-            Koleksi
-          </Link>
-        </div>
-
-        <div className="text-[11px] font-mono text-editorial-faint text-center md:text-right">
-          Data sinkronisasi Gramedia Indonesia
+        {/* Bottom bar */}
+        <div className="mt-10 pt-5 border-t border-white/[0.04] flex flex-col items-center justify-between gap-1.5 sm:flex-row sm:items-baseline">
+          <span className="text-[11px] font-mono text-editorial-faint">
+            Data sinkronisasi Gramedia Indonesia
+          </span>
+          <span className="text-[11px] font-mono text-editorial-faint">
+            © {new Date().getFullYear()} nuvellite
+          </span>
         </div>
       </div>
     </footer>

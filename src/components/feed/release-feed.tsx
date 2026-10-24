@@ -25,9 +25,23 @@ interface ReleaseFeedProps {
 }
 
 export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
-  // Curated spotlight items (top items with verified synopsis and cover image)
+  // Curated spotlight items: the 5 newest releases with a cover and price.
+  // NOTE: do NOT require `synopsis` here. The homepage feed uses the
+  // lightweight listing data, which strips synopsis (see split-catalog.py),
+  // so a synopsis filter matched nothing and the spotlight silently fell
+  // back to initialBooks[0] on every visit — Re-Living Vol. 1, forever.
+  // FeaturedReleaseCard already renders its synopsis paragraph only when
+  // one is present, so synopsis must stay optional.
   const spotlightBooks = useMemo(() => {
-    return initialBooks.filter((b) => b.coverImage && b.synopsis && b.currentPrice > 0).slice(0, 5);
+    return [...initialBooks]
+      .filter((b) => b.coverImage && b.currentPrice > 0 && !b.isSetVariant)
+      .sort((a, b) => {
+        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
+        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
+        if (dateB !== dateA) return dateB - dateA;
+        return (b.volume ?? 0) - (a.volume ?? 0);
+      })
+      .slice(0, 5);
   }, [initialBooks]);
 
   const [activeSpotlightIdx, setActiveSpotlightIdx] = useState(0);

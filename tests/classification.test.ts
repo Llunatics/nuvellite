@@ -274,6 +274,21 @@ describe('Multi-Signal Classification Engine', () => {
     expect(samuraiX.category).toBe('Manga');
   });
 
+  it('should reject the programming tutorial that leaked into the catalog (2026-10-24)', () => {
+    // Regression: "7 in 1 Pemrograman Web untuk Pemula" sat in the public
+    // catalog as Manga/ACCEPTED even though both classifiers reject it —
+    // the sync only audited books present in the current vendor feed, so a
+    // legacy entry was never re-checked. The data purge + legacy sweep in
+    // auto-sync-catalog.py close that path; this test pins the classifier.
+    const r = classifyProduct({
+      title: '7 in 1 Pemrograman Web untuk Pemula (New Edition)',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+      categorySlugs: 'buku/komik/manga',
+    });
+    expect(r.status).toBe('REJECTED');
+  });
+
   it('should correctly classify Clover (m&c!) releases as Light Novels', () => {    const eightySix1 = classifyProduct({
       title: 'Eighty Six Ep. 1: Eighty Six',
       publisherId: 'pub_mnc',

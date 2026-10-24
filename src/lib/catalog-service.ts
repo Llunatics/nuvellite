@@ -24,12 +24,37 @@ function ensurePriceSnapshotsInitialized(): void {
   }
 }
 
+// Verified non-manga/non-LN fragments (mirrors KNOWN_NON_MANGA_SERIES in
+// scripts/auto-sync-catalog.py and src/lib/data/classifier.ts). Last line
+// of defence at render time: even if a bad entry is reintroduced into the
+// data files by an old script, it can never reach the public catalog again.
+const KNOWN_NON_MANGA_FRAGMENTS = [
+  'ther melian',
+  'capcut',
+  'chip war',
+  'excel survival kit',
+  'hack the human',
+  'kebijakan publik',
+  'letters from gaza',
+  'lintas sejarah',
+  'memahami jepang',
+  'republik rakyat china',
+  'tip & trik content creator',
+  'pemrograman web',
+  'sebuah kota, sebuah umpama',
+  'para perasuk',
+  'jalan kehormatan',
+  'miaow',
+];
+
 // Filter out any quarantined or non-manga/non-LN items from public catalog
 const publicBooks: Book[] = (listing.books || []).filter((b) => {
   const cat = b.category;
   if (cat !== 'Manga' && cat !== 'Light Novel') return false;
   if (!['pub_elex', 'pub_mnc', 'pub_pgi'].includes(b.publisherId)) return false;
   if (b.classificationStatus === 'REJECTED' || b.classificationStatus === 'REVIEW_REQUIRED') return false;
+  const titleLower = (b.title || '').toLowerCase();
+  if (KNOWN_NON_MANGA_FRAGMENTS.some((frag) => titleLower.includes(frag))) return false;
   return true;
 });
 
@@ -54,6 +79,8 @@ export function getBookDetailBySlug(slug: string): Book | undefined {
     if (cat !== 'Manga' && cat !== 'Light Novel') return false;
     if (!['pub_elex', 'pub_mnc', 'pub_pgi'].includes(b.publisherId)) return false;
     if (b.classificationStatus === 'REJECTED' || b.classificationStatus === 'REVIEW_REQUIRED') return false;
+    const titleLower = (b.title || '').toLowerCase();
+    if (KNOWN_NON_MANGA_FRAGMENTS.some((frag) => titleLower.includes(frag))) return false;
     return true;
   });
   return fullBooks.find((b) => b.slug.toLowerCase() === clean || b.id.toLowerCase() === clean);
