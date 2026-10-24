@@ -37,13 +37,21 @@ def main():
 
     unmatched = json.load(open(unmatched_path, encoding="utf-8"))
 
-    # keep existing MU enrichment across rebuilds
+    # keep existing MU enrichment AND pranala covers across rebuilds.
+    # BUG fixed 2026-10-24: pranalaCover was NOT preserved here, so every
+    # Tue/Fri sync wiped all publisher-store covers, and the incremental
+    # pranala run (30/run) could never accumulate — the real reason
+    # archive covers stayed blank for weeks despite "successful" syncs.
     old_mu = {}
+    old_pranala = {}
     archive_path = DATA_DIR / "kki-archive.json"
     if archive_path.exists():
         for e in json.load(open(archive_path, encoding="utf-8")):
             if e.get("mu"):
                 old_mu[e["id"]] = e["mu"]
+            if e.get("pranalaCover"):
+                old_pranala[e["id"]] = (
+                    e["pranalaCover"], e.get("pranalaCoverSource"))
 
     seen_slugs = set()
     archive = []
@@ -83,6 +91,8 @@ def main():
         }
         if entry_id in old_mu:
             entry["mu"] = old_mu[entry_id]
+        if entry_id in old_pranala:
+            entry["pranalaCover"], entry["pranalaCoverSource"] = old_pranala[entry_id]
         archive.append(entry)
 
     archive.sort(key=lambda e: e["title"].lower())

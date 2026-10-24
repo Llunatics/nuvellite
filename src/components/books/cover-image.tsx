@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { BookOpen } from 'lucide-react';
 
 interface CoverImageProps {
   src?: string;
@@ -21,7 +20,13 @@ interface CoverImageProps {
  * The origin CDN (cdn.gramedia.com) is slow and flaky, and Vercel's image
  * optimizer quota gets exhausted (HTTP 402) — so instead of a black box
  * while waiting, we render a shimmer placeholder, fade the image in on
- * load, and fall back to a book icon when the image fails entirely.
+ * load, and fall back to a designed typographic cover when there is no
+ * image at all (or it fails to load).
+ *
+ * The typographic fallback matters: 99% of KKI archive series have no
+ * photo cover yet (MangaUpdates 429-blocks this network, publisher pages
+ * die), and a bare book icon reads as "broken". Initials + title in the
+ * house editorial style reads as an intentional cover, not a blank.
  */
 export function CoverImage({
   src,
@@ -37,9 +42,22 @@ export function CoverImage({
   const [failed, setFailed] = useState(false);
 
   if (!src || failed) {
+    const initials = alt
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((w) => w[0])
+      .join('')
+      .toUpperCase();
     return (
-      <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-surface-elevated/40">
-        <BookOpen className={fallbackIconClassName} />
+      <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-surface-elevated/60 border border-white/[0.06]">
+        <span className="block h-px w-8 bg-white/25 mb-3" aria-hidden="true" />
+        <span className="font-editorial text-2xl text-editorial-title leading-none">
+          {initials || '—'}
+        </span>
+        <span className="text-[10px] text-editorial-muted line-clamp-3 leading-snug mt-2 px-1">
+          {alt}
+        </span>
       </div>
     );
   }

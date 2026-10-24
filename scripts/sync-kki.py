@@ -78,13 +78,27 @@ def main():
             mu_args += ["--retry-blocked"]
         run_step("MU enrichment (incremental)", *mu_args)
 
-    # Pranala og:image cover fallback (incremental, polite). Runs even when
+    # Cover-only MU bulk fetch (no translation bottleneck): mu_enrich.py
+    # also translates descriptions via MyMemory and is therefore capped
+    # at ~30/run, while cover fetching alone is fast. Ultra-polite
+    # (1 worker, 3s delay) because MangaUpdates 429-blocks this network
+    # on bursts; on 429 the script stops gracefully and retries next run.
+    if not args.skip_mu:
+        mu_cover_args = [str(KKI_DIR / "mu_cover_bulk.py"),
+                         "--workers", "1", "--delay", "3"]
+        if args.mu_limit:
+            mu_cover_args += ["--limit", str(args.mu_limit)]
+        else:
+            mu_cover_args += ["--limit", "150"]
+        run_step("MU cover-only bulk fetch (polite)", *mu_cover_args)
+
+    # Pranala og:image cover fallback (incremental). Runs even when
     # --skip-mu: publisher store pages are reachable from this network.
-    pranala_args = [str(KKI_DIR / "pranala_cover.py")]
-    if args.mu_limit:
-        pranala_args += ["--limit", str(args.mu_limit)]
-    else:
-        pranala_args += ["--all"]
+    # --all is deliberate: the backlog (950+ entries) is what kept covers
+    # blank for weeks; once it is drained, later runs are incremental
+    # (only new entries) and fast. build_archive.py now preserves
+    # pranalaCover across rebuilds, so results finally accumulate.
+    pranala_args = [str(KKI_DIR / "pranala_cover.py"), "--all"]
     run_step("Pranala cover fallback (incremental)", *pranala_args)
 
     print("\nSync complete. Rebuild the site (npm run build) to apply.")
