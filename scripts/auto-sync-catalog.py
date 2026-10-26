@@ -1128,6 +1128,16 @@ def run_sync(catalog_path):
                 b['isbn13'] = isbn
             if not b.get('coverImage') and cover:
                 b['coverImage'] = cover
+            # ISBN is the product identity, not a cosmetic field: if the
+            # fresh Gramedia variant carries a different ISBN, the stored
+            # cover belongs to the old product and must follow the new one.
+            # (Makeine case: LN was locked to the manga ISBN 9786347811059
+            # and manga cover, while the live LN variant is 9786347811066
+            # with its own novel cover. Only-if-missing never repaired it.)
+            if isbn and b.get('isbn13') and isbn != b['isbn13']:
+                b['isbn13'] = isbn
+                if cover:
+                    b['coverImage'] = cover
             if len(synopsis) > len(b.get('synopsis', '')):
                 b['synopsis'] = synopsis
             # Recompute bind-up flag on every sync (idempotent backfill).
