@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-28T04:24:06.000Z",
+  "lastUpdated": "2026-10-28T12:22:31.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -106430,7 +106430,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/96-azkg403.png",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-04",
       "isWednesdayRelease": true,
       "currentPrice": 40000,
@@ -106444,6 +106444,150 @@
       "isbn13": "9786230080548",
       "synopsis": "Saat kita penat karena sekolah atau kerjaan, pastinya butuh \"healing\". Tapi, kadang bingung mau ngapain? Nah, untuk soal yang satu ini, sudah pasti Kariage jagonya. Healing ala Kariage!! Kayak apa, ya...?\n\nSelling Point:\n\nKocaknya nggak habis-habis!! Bacaan (remaja ke atas) yang selalu asyik dibaca kapan pun dan di mana pun. Penghilang penat & stres. 69 (akhirnya) Tamat!!\n\n****\n\nKariage Kun 68 adalah salah satu volume dari seri manga komedi populer karya Masashi Ueda. Seri ini pertama kali diterbitkan pada tahun 1981 dan terus menarik perhatian pembaca karena humor yang ringan dan relatable.\n\nCerita dalam Kariage Kun berpusat pada kehidupan sehari-hari seorang pegawai kantoran bernama Kariage Kun, yang dikenal memiliki sifat usil, cerdik, dan suka menciptakan lelucon di tempat kerjanya. Meski sering bertingkah jahil, ia sebenarnya adalah orang yang baik hati dan penuh ide kreatif, yang sering kali memanfaatkan situasi biasa menjadi momen yang penuh tawa.",
       "gramediaUrl": "https://www.gramedia.com/products/kariage-kun-68",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_level_comic_dandadan_15",
+      "slug": "level-comic-dandadan-15",
+      "title": "Level Comic: Dandadan 15",
+      "originalTitle": "Dandadan",
+      "seriesId": "ser_dandadan",
+      "seriesName": "Dandadan",
+      "volume": 15,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/7dz3vdcdld.jfif",
+      "status": "PREORDER",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-11",
+      "isWednesdayRelease": true,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "authors": [
+        "Tatsu Yukinobu"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080739",
+      "synopsis": "Pertempuran melawan makhluk dari luar alam semesta berakhir, dan Okarun dkk pun membentuk klub penelitian sejarah dan budaya dengan tujuan mengumpulkan informasi untuk menemukan bola emas yang tersisa!! Meskipun merasa curiga terhadap guru pembimbing yang sama sekali tidak mereka ingat bernama “Sanjome”, mereka tetap melanjutkan persiapan untuk memulai kegiatan klub. Di saat seperti itu, ketua kelas mengaku pada Okarun, “Sejak aku memungut bola berwarna emas, kadang-kadang Takakura terlihat seperti Vampire ganteng”. Dia juga bercerita kalau terkadang punggungnya terasa begitu berat sampai tidak bisa berdiri. Penyebab dari fenomena yang tak dapat dijelaskan itu. berkaitan dengan “masa lalu” ketua kelas!?\n\nSelling Point:\n\nDandadan manga Jepang yang ditulis dan diilustrasikan oleh Yukinobu Tatsu menyajikan perpaduan unik antara cerita tentang okultisme, alien, dan kehidupan remaja sehari-hari yang penuh dengan humor segar. Sudah diserialkan di aplikasi Shueisha dan situs web Sh?nen Jump+ sejak April 2021, dan berhasil mengumpulkan 13 jilid tank?bon per Januari 2024. Sebuah serial anime yang diproduksi oleh Science Saru dijadwalkan tayang perdana pada Oktober 2024.",
+      "gramediaUrl": "https://www.gramedia.com/products/level-comic-dandadan-15",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_dr_stone_21",
+      "slug": "dr-stone-21",
+      "title": "Dr. Stone 21",
+      "originalTitle": "Dr. Stone",
+      "seriesId": "ser_dr-stone",
+      "seriesName": "Dr. Stone",
+      "volume": 21,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/3cc3v3rco-.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-28",
+      "isWednesdayRelease": true,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "authors": [
+        "Riichiro Inagaki"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080654",
+      "synopsis": "Balapan melintasi Amerika Selatan menuju “sumber bencana” pembatuan, telah memasuki hutan belantara Amazon! Apakah pemandangan mengerikan yang dipenuhi niat jahat, yang dilihat oleh Senku dkk. di tanah awal mula bencana besar!? Pertempuran terakhir melawan Stanley di “Stone Sanctuary” di bagian terdalam Amazon, semakin dekat!!\n\nKeunggulan:\n\nCerita petualangan yang seru dan unik. Bertualang sambil belajar sains. Artwork keren & detail karya Boichi bikin dunia postapocalyptic terasa hidup. Pemenang Shogakukan Manga Award 2020. Diadaptasi menjadi anime populer dengan banyak penggemar internasional. Sering masuk daftar best manga series oleh kritikus dan pembaca.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/dr-stone-21",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_detektif_conan_shinichi_kudo_selection_vol_2_terbit_ulang",
+      "slug": "detektif-conan-shinichi-kudo-selection-vol-2-terbit-ulang",
+      "title": "Detektif Conan Shinichi Kudo Selection Vol. 2 (Terbit Ulang)",
+      "originalTitle": "Detektif Conan Shinichi Kudo Selection",
+      "seriesId": "ser_detektif-conan-shinichi-kudo-selection",
+      "seriesName": "Detektif Conan Shinichi Kudo Selection",
+      "volume": 2,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/dvselh4ict.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-28",
+      "isWednesdayRelease": true,
+      "currentPrice": 95000,
+      "originalPrice": 95000,
+      "authors": [
+        "Aoyama Gosho"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230050848",
+      "synopsis": "Meskipun organisasi baju hitam berhasil membuat tubuh Shinichi Kudo, si detektif SMA, mengecil menjadi Conan Edogawa, namun dengan obat penawar, pemuda itu dapat kembali ke tubuhnya semula sementara waktu untuk memecahkan kasus. Buku ini memuat berbagai kasus yang diselesaikan Shinichi saat itu. Sejak dipaksa meminum racun misterius APTX 4869, hingga kini belum ditemukan cara untuk mengembalikan tubuh kecil Shinichi ke tubuhnya semula secara permanen. Shinichi harus menyembunyikan, memecahkan kasus dan membereskan hubungan cintanya!\n\nJangan lewatkan petualangan seru detektif hebat kita yang serba bisa ini!!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-shinichi-kudo-selection-vol-2-terbit-ulang",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_level_comic_bakemonogatari_22",
+      "slug": "level-comic-bakemonogatari-22",
+      "title": "Level Comic: Bakemonogatari 22",
+      "originalTitle": "Bakemonogatari",
+      "seriesId": "ser_bakemonogatari",
+      "seriesName": "Bakemonogatari",
+      "volume": 22,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/6ccvlem-tz.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-28",
+      "isWednesdayRelease": true,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "authors": [
+        "Nisioisin, Oh!Great"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080494",
+      "synopsis": "Penutup bab terakhir, “Tsubasa Cat”!! Setelah menyelesaikan kasus Shinobu, masalah yang tersisa tinggal Tsubasa Hanekawa. Tapi, perasaan Tsubasa Hanekawa yang terus membesar hingga menjadi keganjilan baru, Kako, terlalu kuat dan sulit ditangani meski sudah jatuh-bangun!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/level-comic-bakemonogatari-22",
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media",
@@ -113476,8 +113620,8 @@
       "author": "Nisioisin, Oh!Great",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 21,
-      "latestVolume": 21,
+      "totalVolumes": 22,
+      "latestVolume": 22,
       "availableVolumes": [
         1,
         2,
@@ -113499,7 +113643,8 @@
         18,
         19,
         20,
-        21
+        21,
+        22
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ento4ot5ml.jpg",
       "description": "Sinopsis:\n\nMonster sejak awal ada di sana. Selalu. Di mana pun. Hitagi Senjogahara. Gadis yang ditangkap oleh Koyomi Araragi ketika dia terjatuh pada suatu hari. Tubuh gadis itu… tidak memiliki berat. Dia bertemu dengan seekor “kepiting” dan berat badannya diambil sampai ke akar-akarnya…\n\nSekilas Tentang Bakemonogatari:\n\nBakemonogatari adalah manga karya Oh! Great yang berkisah tentang Koyomi Araragi, eorang siswa kelas 3 SMA yang berhasil bertahan dari serangan vampir dengan bantuan seorang pria asing yang tinggal di sebuah gedung kumuh bernama Meme Oshino. Meskipun telah selamat dari serangan vampir dan kembali menjadi manusia, beberapa efek sampingnya, seperti kemampuan menyembuhkan dan kemampuan penglihatan masih tersisa.\n\nMeski begitu, Araragi mencoba hidup sebagai seorang siswa biasa, dengan bantuan temannya dan ketua kelas, Tsubasa Hanekawa. Ketika teman sekelasnya, Hitagi Senjougahara terjatuh dari tangga dan ditangkap oleh Araragi, Tsubasa menyadari bahwa Hitagi Senjogahara itu begitu ringan.\n\nWalaupun Senjougahara protes, Araragi tetap menolongnya, dan menyerahkannya pada Oshino yang pernah menolongnya dalam bahaya.\n\nDalam cerita yang melibatkan dewa dan iblis, Bakemonogatari mengikuti Araragi saat ia mencoba untuk membantu mereka yang menderita penyakit supranatural.\n\nSekilas Tentang Penulis:\n\nOh! Great atau nama aslinya Ito Ogure adalah mangaka asal Jepang yang populer berkat seri manga Air Gear dan Bakemonogatari. Di tahun 2006, Ito memenangkan ajang Kodansha Manga Award untuk manga Air Gear.\n\nNama Oh! Great sendiri diambil dari nama aslinya yang dibalik dan cara penuturan kata “Oh, Great!” oleh orang Jepang. Selain itu, “O” juga berarti raja dalam Bahasa Jepang.\n\nSegera dapatkan komik Light Comic: Bakemonogatari 1 hanya di Gramedia terdekat di kota kamu atau pesan secara online di gramedia.com!\n\nInformasi Lainnya:\n\nTerbit: 1 April 2020\n\nPenerbit: m&c!\n\nPenulis: Oh! Great & Nishioishin\n\nFormat: soft-cover\n\nISBN: 9786230015526\n\nHarga: Rp 40.000\n\nDimensi: 13 x 18 cm\n\nJumlah halaman: 216"
@@ -114601,8 +114746,8 @@
       "author": "Tatsu Yukinobu",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 14,
-      "latestVolume": 14,
+      "totalVolumes": 15,
+      "latestVolume": 15,
       "availableVolumes": [
         1,
         2,
@@ -114617,7 +114762,8 @@
         11,
         12,
         13,
-        14
+        14,
+        15
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-675c62c67.png",
       "description": "Momo Ayase, seorang siswi SMA yang percaya pada hantu, dan teman seangkatannya si Okarun, seorang otaku fenomena misterius. Untuk membuat percaya terhadap UFO dan makhluk supranatural yang saling disangkal oleh mereka berdua, Momo pergi ke rumah sakit terbengkalai tempat UFO, dan si Okarun ke terowongan berhantu, tapi… Cinta yang ditakdirkan pun dimulai!\n\nSelling Point:\n\nDandadan manga Jepang yang ditulis dan diilustrasikan oleh Yukinobu Tatsu menyajikan perpaduan unik antara cerita tentang okultisme, alien, dan kehidupan remaja sehari-hari yang penuh dengan humor segar.\n\nSudah diserialkan di aplikasi Shueisha dan situs web Shōnen Jump+ sejak April 2021, dan berhasil mengumpulkan 13 jilid tankōbon per Januari 2024.\n\nSebuah serial anime yang diproduksi oleh Science Saru dijadwalkan tayang perdana pada Oktober 2024.\n\n******\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -114915,6 +115061,24 @@
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/items/722010244_Conan_Secret_Archives_01.jpg",
       "description": "Manga atau komik adalah salah satu budaya populer dari Jepang yang dapat didefinisikan sebagai karikatur, komik dalam bentuk buku, atau singkatnya komik Jepang. Rentang usia pembaca manga juga beragam, mulai dari umur anak-anak hingga umur dewasa. Bahkan terdapat genre tersendiri untuk pembaca berdasarkan tingkat usia maupun jenis kelamin. Komik memang menjadi bahan bacaan yang menarik  dan banyak digemari semua orang. Banyak komik yang diproduksi oleh Jepang yang meraih penghargaan karena kesuksesannya yang menarik minat pembaca.\n\nElex Media Komputindo adalah penerbit buku populer dan multimedia di Indonesia sebagai perusahaan media terbesar di Indonesia. Produk terbitan Elex Media Komputindo cukup populer di Indonesia sehingga menerima beberapa penghargaan dari e-Learning Award versi Departemen Pendidikan dan Kebudayaan RI dan majalah Swa (2007), Global Popularity Award Web Toon (2015), bukan cuma sekali mendapatkan penghargaan tapi berkali-kali menerima penghargaan untuk kategori buku terbaik nasional versi Perpustakaan Nasional. Seperti komik “ Detektif Conan Secret Archives 1: Shinichi Kudo & Ran Mouri”.\n\nOfficial Fan Book Perdana Shinichi Kudo dan Ran Mouri! Kumpulan episode kisah cinta mereka yang dirangkum dari serial animasi televisi, OVA, maupun film animasi Detektif Conan yang telah tayang! Termasuk berbagai hal seperti koleksi fashion, desain, artistik, dan lain-lain. Serta koleksi ilustrasi orisinal pilihan Shinichi dan Ran!\n\nJudul\t\t\t:  Detektif Conan Secret Archives 1: Shinichi Kudo & Ran Mouri\n\nPenulis                      \t: Aoyama Gosho\n\nJumlah Halaman       \t: 125\n\nPenerbit                    \t: Elex Media Komputindo\n\nTanggal Terbit\t\t: 15 Apr 2022\n\nIsbn                            \t: 9786230032066\n\nBahasa \t          \t: Indonesia"
+    },
+    {
+      "id": "ser_detektif-conan-shinichi-kudo-selection",
+      "slug": "detektif-conan-shinichi-kudo-selection",
+      "name": "Detektif Conan Shinichi Kudo Selection",
+      "originalTitle": "Detektif Conan Shinichi Kudo Selection",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "author": "Aoyama Gosho",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 2,
+      "latestVolume": 2,
+      "availableVolumes": [
+        2
+      ],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/dvselh4ict.jpg",
+      "description": "Meskipun organisasi baju hitam berhasil membuat tubuh Shinichi Kudo, si detektif SMA, mengecil menjadi Conan Edogawa, namun dengan obat penawar, pemuda itu dapat kembali ke tubuhnya semula sementara waktu untuk memecahkan kasus. Buku ini memuat berbagai kasus yang diselesaikan Shinichi saat itu. Sejak dipaksa meminum racun misterius APTX 4869, hingga kini belum ditemukan cara untuk mengembalikan tubuh kecil Shinichi ke tubuhnya semula secara permanen. Shinichi harus menyembunyikan, memecahkan kasus dan membereskan hubungan cintanya!\n\nJangan lewatkan petualangan seru detektif hebat kita yang serba bisa ini!!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_detektif-conan-shuichi-akai-selection",
@@ -115407,8 +115571,8 @@
       "author": "Riichiro Inagaki",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 20,
-      "latestVolume": 20,
+      "totalVolumes": 21,
+      "latestVolume": 21,
       "availableVolumes": [
         1,
         2,
@@ -115429,7 +115593,8 @@
         17,
         18,
         19,
-        20
+        20,
+        21
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/1r660-oc0x.jpg",
       "description": "Manga atau komik adalah salah satu budaya populer dari Jepang yang dapat didefinisikan sebagai karikatur, komik dalam bentuk buku, atau singkatnya komik Jepang. Rentang usia pembaca manga juga beragam, mulai dari umur anak-anak hingga umur dewasa. Bahkan terdapat genre tersendiri untuk pembaca berdasarkan tingkat usia maupun jenis kelamin. Komik memang menjadi bahan bacaan yang menarik dan banyak digemari semua orang. Banyak komik yang diproduksi oleh Jepang yang meraih penghargaan karena kesuksesannya yang menarik minat pembaca. Elex Media Komputindo adalah penerbit buku populer dan multimedia di Indonesia sebagai perusahaan media terbesar di Indonesia. Produk terbitan Elex Media Komputindo cukup populer di Indonesia sehingga menerima beberapa penghargaan dari e-Learning Award versi Departemen Pendidikan dan Kebudayaan RI dan majalah Swa (2007), Global Popularity Award Web Toon (2015). Bukan cuma sekali mendapatkan penghargaan tapi berkali-kali menerima penghargaan untuk kategori buku terbaik nasional versi Perpustakaan Nasional. Seperti komik ”Dr. Stone 1”. Taiju, seorang siswa sekolah menengah, terlibat dalam fenomena misterius dimana semua manusia di dunia berubah menjadi batu dalam sekejap. Ribuan tahun kemudian, Taiju yang terbangun dan temannya Senku, memutuskan untuk menciptakan peradaban mulai dari awal! Kisah petualangan survival sci-fi yang belum pernah ada sebelumnya, dimulai. Bagaimanakah petualangan Taiju dan senku menghadapi tantangan-tantangan yang akan datang? Judul : Dr. Stone 1 Pengarang : Riichiro Inagaki Penerbit : Elex Media Komputindo Tanggal Terbit : 24 Jul 2022 Halaman : 200 halaman Isbn : 9786230033926 Bahasa : Indonesia"
@@ -321778,7 +321943,7 @@
     },
     {
       "id": "snap_pub_i_want_to_end_this_love_game_05_init",
-      "bookId": "pub_i_want_to_end_this_love_game_05",
+      "bookId": "pub_i_want_to_end_this_love_game_04",
       "price": 45000,
       "currentPrice": 45000,
       "originalPrice": 45000,
@@ -321799,7 +321964,7 @@
     },
     {
       "id": "snap_pub_kariage_kun_65_2_init",
-      "bookId": "pub_kariage_kun_65_2",
+      "bookId": "pub_kariage_kun_65",
       "price": 26000,
       "currentPrice": 26000,
       "originalPrice": 40000,
@@ -321815,6 +321980,590 @@
       "originalPrice": 45000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_13_1_init",
+      "bookId": "pub_mob_psycho_100_13",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_10_1_init",
+      "bookId": "pub_mob_psycho_100_10",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_128_1_init",
+      "bookId": "pub_lc_fight_ippo_128",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_130_1_init",
+      "bookId": "pub_level_comic_fight_ippo_130",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_new_kobochan_40_1_init",
+      "bookId": "pub_new_kobochan_40",
+      "price": 25000,
+      "currentPrice": 25000,
+      "originalPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_hai_miiko_37__reguler_1793161445",
+      "bookId": "pub_hai_miiko_37__reguler",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 30000,
+      "previousPrice": 24000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-28",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_reliving_my_life_to_save_you_vol_1_special_set_init",
+      "bookId": "pub_reliving_my_life_to_save_you_vol_1",
+      "price": 159000,
+      "currentPrice": 159000,
+      "originalPrice": 159000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 365000,
+      "currentPrice": 365000,
+      "originalPrice": 365000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 265000,
+      "currentPrice": 265000,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_in_the_clear_moonlit_dusk_5_special_set_init",
+      "bookId": "pub_in_the_clear_moonlit_dusk_5",
+      "price": 234000,
+      "currentPrice": 234000,
+      "originalPrice": 260000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set_init",
+      "bookId": "pub_tentang_kita_yang_bertolak_belakang_vol_8",
+      "price": 238500,
+      "currentPrice": 238500,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_5_special_set_init",
+      "bookId": "pub_phantom_busters_vol_5",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set_init",
+      "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai",
+      "price": 247500,
+      "currentPrice": 247500,
+      "originalPrice": 275000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_8__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_8",
+      "price": 265500,
+      "currentPrice": 265500,
+      "originalPrice": 295000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-07-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 346500,
+      "currentPrice": 346500,
+      "originalPrice": 385000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 256500,
+      "currentPrice": 256500,
+      "originalPrice": 285000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
+      "price": 160200,
+      "currentPrice": 160200,
+      "originalPrice": 178000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_28__special_set_init",
+      "bookId": "pub_blue_lock_28",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set_init",
+      "bookId": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_7__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_7",
+      "price": 207000,
+      "currentPrice": 207000,
+      "originalPrice": 230000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_1__special_set_init",
+      "bookId": "pub_phantom_busters_vol_1",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_27__special_set_init",
+      "bookId": "pub_blue_lock_27",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_26__special_set_init",
+      "bookId": "pub_blue_lock_26",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_4__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_4",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_4__special_set_init",
+      "bookId": "pub_gokurakugai_vol_4",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-11-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_25__special_set_init",
+      "bookId": "pub_blue_lock_25",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_who_killed_the_brave__special_set_init",
+      "bookId": "pub_light_novel_who_killed_the_brave",
+      "price": 189000,
+      "currentPrice": 189000,
+      "originalPrice": 210000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_1__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_1",
+      "price": 198000,
+      "currentPrice": 198000,
+      "originalPrice": 220000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-08-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_3__special_set_init",
+      "bookId": "pub_gokurakugai_vol_3",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 315000,
+      "currentPrice": 315000,
+      "originalPrice": 350000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_1___special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_1",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_6__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_6",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_classroom_of_the_elite_03__special_set_init",
+      "bookId": "pub_light_novel_classroom_of_the_elite_03",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-06-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_129_1_init",
+      "bookId": "pub_lc_fight_ippo_129",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_136_1_init",
+      "bookId": "pub_level_comic_fight_ippo_136",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_137_1_init",
+      "bookId": "pub_level_comic_fight_ippo_137",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_138_1_init",
+      "bookId": "pub_level_comic_fight_ippo_138",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_135_1_init",
+      "bookId": "pub_level_comic_fight_ippo_135",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_01_1_init",
+      "bookId": "pub_mob_psycho_100_01",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_2_init",
+      "bookId": "pub_mob_psycho_100_02",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_11_1_init",
+      "bookId": "pub_mob_psycho_100_11",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_9_init",
+      "bookId": "pub_mob_psycho_100_9",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_89_1_init",
+      "bookId": "pub_ruler_of_the_land_89",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_01_init",
+      "bookId": "pub_one_piece_01_1",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-06-01",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_init",
+      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_1",
+      "price": 25800,
+      "currentPrice": 25800,
+      "originalPrice": 43000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-11-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_56_init",
+      "bookId": "pub_lc_giant_killing_56",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_init",
+      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_2",
+      "price": 48000,
+      "currentPrice": 48000,
+      "originalPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-11-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_28_1793161446",
+      "bookId": "pub_haikyu_fly_high_volleyball_28",
+      "price": 19200,
+      "currentPrice": 19200,
+      "originalPrice": 32000,
+      "previousPrice": 19200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-28",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_31_1793161446",
+      "bookId": "pub_haikyu_fly_high_volleyball_31",
+      "price": 9600,
+      "currentPrice": 9600,
+      "originalPrice": 32000,
+      "previousPrice": 9600,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-28",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_dandadan_15_init",
+      "bookId": "pub_level_comic_dandadan_15",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kariage_kun_68_1793190150",
+      "bookId": "pub_kariage_kun_68",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-28",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_dr_stone_21_init",
+      "bookId": "pub_dr_stone_21",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-28",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_shinichi_kudo_selection_vol_2_terbit_ulang_init",
+      "bookId": "pub_detektif_conan_shinichi_kudo_selection_vol_2_terbit_ulang",
+      "price": 95000,
+      "currentPrice": 95000,
+      "originalPrice": 95000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-28",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_bakemonogatari_22_init",
+      "bookId": "pub_level_comic_bakemonogatari_22",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-28",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_i_want_to_end_this_love_game_05_init",
+      "bookId": "pub_i_want_to_end_this_love_game_05",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kariage_kun_65_2_init",
+      "bookId": "pub_kariage_kun_65_2",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-10",
       "source": "gramedia_api"
     },
     {
@@ -321865,17 +322614,6 @@
       "originalPrice": 25000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-05-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_hai_miiko_37__reguler_1793161445",
-      "bookId": "pub_hai_miiko_37__reguler",
-      "price": 24000,
-      "currentPrice": 24000,
-      "originalPrice": 30000,
-      "previousPrice": 24000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-10-28",
       "source": "gramedia_api"
     },
     {
@@ -322307,31 +323045,29 @@
       "availability": "AVAILABLE",
       "observedAt": "2021-11-03",
       "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_haikyu_fly_high_volleyball_28_1793161446",
-      "bookId": "pub_haikyu_fly_high_volleyball_28",
-      "price": 19200,
-      "currentPrice": 19200,
-      "originalPrice": 32000,
-      "previousPrice": 19200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-28",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_haikyu_fly_high_volleyball_31_1793161446",
-      "bookId": "pub_haikyu_fly_high_volleyball_31",
-      "price": 9600,
-      "currentPrice": 9600,
-      "originalPrice": 32000,
-      "previousPrice": 9600,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-10-28",
-      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1793190151",
+      "startedAt": "2026-10-28T12:12:49.000Z",
+      "finishedAt": "2026-10-28T12:22:31.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1568,
+      "productsAccepted": 1308,
+      "productsRejected": 445,
+      "productsUpdated": 1073,
+      "productsInserted": 54,
+      "duplicatesResolved": 18,
+      "errors": [],
+      "durationMs": 581725,
+      "success": true
+    },
     {
       "id": "sync_1793161446",
       "startedAt": "2026-10-28T04:15:49.000Z",
@@ -322710,26 +323446,6 @@
       "duplicatesResolved": 20,
       "errors": [],
       "durationMs": 573103,
-      "success": true
-    },
-    {
-      "id": "sync_1792727062",
-      "startedAt": "2026-10-23T03:35:14.000Z",
-      "finishedAt": "2026-10-23T03:44:22.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1565,
-      "productsAccepted": 1306,
-      "productsRejected": 431,
-      "productsUpdated": 1082,
-      "productsInserted": 56,
-      "duplicatesResolved": 21,
-      "errors": [],
-      "durationMs": 548752,
       "success": true
     }
   ]
