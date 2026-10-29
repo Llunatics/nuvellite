@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-10-28T22:24:48.000Z",
+  "lastUpdated": "2026-10-29T04:45:34.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -52805,7 +52805,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-01-15",
       "isWednesdayRelease": true,
-      "currentPrice": 24000,
+      "currentPrice": 40000,
       "authors": [
         "YAMAMOTO SOUICHIROU"
       ],
@@ -57973,7 +57973,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-09-17",
       "isWednesdayRelease": false,
-      "currentPrice": 29250,
+      "currentPrice": 33750,
       "authors": [
         "Masashi Kishimoto"
       ],
@@ -61832,7 +61832,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-05-29",
       "isWednesdayRelease": true,
-      "currentPrice": 33750,
+      "currentPrice": 45000,
       "authors": [
         "Azychika / Shinya Umemura"
       ],
@@ -74229,7 +74229,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -102721,7 +102721,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2024/5/20/yhikvp77prsfvfjaeqdokm.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2024-05-20",
       "isWednesdayRelease": false,
       "currentPrice": 29250,
@@ -106469,7 +106469,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-11-11",
       "isWednesdayRelease": true,
-      "currentPrice": 50000,
+      "currentPrice": 45000,
       "originalPrice": 50000,
       "authors": [
         "Tatsu Yukinobu"
@@ -106591,6 +106591,114 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_naruto_bind_up_edition_30",
+      "slug": "naruto-bind-up-edition-30",
+      "title": "Naruto Bind Up Edition 30",
+      "originalTitle": "Naruto Bind Up Edition",
+      "seriesId": "ser_naruto-bind-up-edition",
+      "seriesName": "Naruto Bind Up Edition",
+      "volume": 30,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-0n2tboont.jfif",
+      "status": "PREORDER",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-11",
+      "isWednesdayRelease": true,
+      "currentPrice": 99000,
+      "originalPrice": 99000,
+      "authors": [
+        "Masashi Kishimoto"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080593",
+      "synopsis": "Bersama empat orang temannya, termasuk Jugo si original dari `Segel Gaib`, Sasuke membentuk tim inti untuk mencapai tujuannya! Konoha mencium gerakan itu. `Akatsuki` juga memperkuat kewaspadaannya terhadap Konoha yang sudah mengetahui gerakan itu. Naruto yang mengetahui target Sasuke itu adalah Itachi, bergerak bersama tim inti baru!! L\n\nalu, Naruto dan B bertarung sengit melawan 6 biju. Sementara itu, Kakashi dan Guy pun datang membantu, namun Naruto ditelan Yonbi. Dalam perut Yonbi, Naruto bertemu wujud asli biju bernama Son Goku! Di lain pihak, Sasuke akhirnya bergerak!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/naruto-bind-up-edition-30",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": true,
+      "bindUpKind": "BIND_UP",
+      "bindUpLabel": "Bind Up"
+    },
+    {
+      "id": "pub_insomniacs_after_school_vol_1",
+      "slug": "insomniacs-after-school-vol-1",
+      "title": "Insomniacs After School Vol. 1",
+      "originalTitle": "Insomniacs After School",
+      "seriesId": "ser_insomniacs-after-school",
+      "seriesName": "Insomniacs After School",
+      "volume": 1,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/v65oev0vzc.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-29",
+      "isWednesdayRelease": false,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Makoto Ojiro"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811530",
+      "synopsis": "Selalu ada makna dalam setiap malam saat kamu sulit tidur...\n\nGanta Nakami, siswa SMA yang dihantui insomnia, bertemu dengan Isaki Magari, gadis yang mengalami hal serupa. Sepulang sekolah, mereka menghabiskan waktu di observatorium sekolah yang terbengkalai, untuk tidur diam-diam sejenak dan berbagi rahasia bersama. Dari sanalah, hubungan aneh di antara mereka mulai terjalin.\n\nKini mereka tak lagi harus melewati malam panjang yang menyiksa itu seorang diri.\n\nMengambil latar di daerah Noto, kisah ini mengangkat kegelisahan para remaja yang kerap terjaga sepanjang malam.\n\nKeunggulan:\n\n•\tSalah satu dari 50 nominasi untuk Next Manga Awards ke-6 dalam kategori cetak.\n\n•\tRomansa yang natural dan tidak berlebihan.\n\n•\tMengangkat tema kesepian dan kebutuhan untuk dipahami.\n\n•\tPerpaduan slice of life, komedi, dan drama emosional.\n\n•\tMendapat adaptasi animasi dan Live Action di tahun 2023.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/insomniacs-after-school-vol-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_medalist_vol_10",
+      "slug": "medalist-vol-10",
+      "title": "Medalist Vol. 10",
+      "originalTitle": "Medalist",
+      "seriesId": "ser_medalist",
+      "seriesName": "Medalist",
+      "volume": 10,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/o0i-lvsx1x.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-10-29",
+      "isWednesdayRelease": false,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Tsurumaikada "
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811462",
+      "synopsis": "“jadikan kelemahan dan bekas luka sebagai zirah”\n\n“jadikan tangan dan kaki yang memanjang serta tubuh yang makin berat sebagai senjata untuk menyerang”\n\nBalon kanan: mulai dari panggung junior, kamu bukan lagi pihak yang memilih, melainkan pihak yang dipilih\n\nKiri: pelatih adalah mata kedua bagi orang yang berjalan di dalam mimpi\n\nInori terus melangkah maju, dari kategori novice naik ke junior. walau gagal naik podium di kejurnas novice, penampilan penuh semangat dan kemampuan teknisnya memperoleh pengakuan hingga terpilih sebagai atlet binaan! Demi bisa jadi atlet papan atas junior grand prix, hasil di all japan saja tidak cukup. Inori juga wajib meraih prestasi di junior grand prix internasional! baik di novice maupun junior, yang diincar inori tetap medali emas!!\n\nKeunggulan:\n\n- Mengangkat tema olahraga, persahabatan, perjuangan meraih mimpi.\n\n- Perkembangan dari semua karakternya menarik, backstory unik, menambah pengetahuan figure skating.\n\n- Gambarnya detail dan ceria.\n\n- Salah satu judul best seller Jepang dengan serialisasi anime season 1 yang dirilis 2025 dan season 2 pada 2026.\n\n- Meraih sejumlah penghargaan: Next Manga Award 2022, Shogakukan Manga Award 2024, dan Kodansha's Annual Manga Awards 2024.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/medalist-vol-10",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -117505,6 +117613,24 @@
       "description": "Mashiro Miyaji adalah seorang miko, pendeta yang melindungi manusia dari para mimushi, monster serangga pemakan manusia. Saat pergi ke gunung untuk tugas membasmi mimushi yang berbahaya, dia bertemu dengan Yuren, seorang gadis yang aneh. Mashiro menerima ajakan Yuren untuk menginap di rumahnya. Namun di sana, dia menemukan rahasia gadis itu.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
+      "id": "ser_insomniacs-after-school",
+      "slug": "insomniacs-after-school",
+      "name": "Insomniacs After School",
+      "originalTitle": "Insomniacs After School",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Makoto Ojiro",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [
+        1
+      ],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/v65oev0vzc.jpeg",
+      "description": "Selalu ada makna dalam setiap malam saat kamu sulit tidur...\n\nGanta Nakami, siswa SMA yang dihantui insomnia, bertemu dengan Isaki Magari, gadis yang mengalami hal serupa. Sepulang sekolah, mereka menghabiskan waktu di observatorium sekolah yang terbengkalai, untuk tidur diam-diam sejenak dan berbagi rahasia bersama. Dari sanalah, hubungan aneh di antara mereka mulai terjalin.\n\nKini mereka tak lagi harus melewati malam panjang yang menyiksa itu seorang diri.\n\nMengambil latar di daerah Noto, kisah ini mengangkat kegelisahan para remaja yang kerap terjaga sepanjang malam.\n\nKeunggulan:\n\n•\tSalah satu dari 50 nominasi untuk Next Manga Awards ke-6 dalam kategori cetak.\n\n•\tRomansa yang natural dan tidak berlebihan.\n\n•\tMengangkat tema kesepian dan kebutuhan untuk dipahami.\n\n•\tPerpaduan slice of life, komedi, dan drama emosional.\n\n•\tMendapat adaptasi animasi dan Live Action di tahun 2023.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
+    },
+    {
       "id": "ser_interview-with-monster-girls",
       "slug": "interview-with-monster-girls",
       "name": "Interview with Monster Girls",
@@ -119216,8 +119342,8 @@
       "author": "Tsurumaikada",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 9,
-      "latestVolume": 9,
+      "totalVolumes": 10,
+      "latestVolume": 10,
       "availableVolumes": [
         1,
         2,
@@ -119227,7 +119353,8 @@
         6,
         7,
         8,
-        9
+        9,
+        10
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/66vc4-sl82.jpg",
       "description": "“Pak Tsukasa, kalau kubilang mau jadi nomor satu dunia, apa Anda mau membantuku?”\n\nJepang adalah negara yang unggul dalam dunia figure skating. Hanya segelintir atlet terpilih yang bisa tampil di kejuaraan nasional, tempat para skater bersaing di level dunia.\n\nTsukasa merupakan pemuda yang telah mengabdikan seluruh hidupnya untuk skating, tapi gagal meraih mimpinya. Sementara Inori adalah gadis cilik yang sangat ingin jadi atlet skating, tapi dianggap tak punya harapan. Keduanya bertemu di atas es sebagai pelatih dan atlet, lalu bersama-sama mengejar panggung dunia dengan semangat yang lebih membara dari siapa pun!\n\nKeunggulan Buku:\n\n- Mengangkat tema olahraga, persahabatan, perjuangan meraih mimpi\n\n- Perkembangan dari semua karakternya menarik, backstory unik, menambah pengetahuan figure skating\n\n- Gambarnya detail dan ceria\n\n- Salah satu judul best seller Jepang dengan serialisasi anime season 1 yang dirilis 2025 dan season 2 pada 2026 mendatang.\n\n- Meraih sejumlah penghargaan: Next Manga Award 2022, Shogakukan Manga Award 2024, dan Kodansha's Annual Manga Awards 2024\n\n*****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -119792,6 +119919,24 @@
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/t-r3i5i-ao.jpg",
       "description": "Sebuah cerita dari Desa Konohagakure. Adalah seorang murid di Akademi Ninja yang suka berbuat onar dan bermimpi menjadi seorang Hokage, bernama Naruto. Ia memiliki rahasia, sejak lahir di dalam tubuhnya terdapat siluman rubah yang disegel! Naruto berhasil meraih mimpinya. Ia berhasil lulus ujian Ninja yang diberikan oleh Guru Kakashi, bersama Sakura dan Sasuke. Sebagai Genin, tingkatan Ninja terbawah, mereka harus melaksanakan berbagai macam misi. Kali ini, misi yang diberikan adalah mengawal Tazuna, si pembuat jembatan. Namun, tanpa disadari, ada pembunuh yang sedang mengincar mereka semua!!\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nSelling Point:\n\nKomik fenomenal yang akan membuat pembaca penasaran menunggu kelanjutan ceritanya. Pernah terbit regular dan menjadi komik megabestseller yg terjual sampai ratusan ribu eksemplar."
+    },
+    {
+      "id": "ser_naruto-bind-up-edition",
+      "slug": "naruto-bind-up-edition",
+      "name": "Naruto Bind Up Edition",
+      "originalTitle": "Naruto Bind Up Edition",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "author": "Masashi Kishimoto",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 30,
+      "latestVolume": 30,
+      "availableVolumes": [
+        30
+      ],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-0n2tboont.jfif",
+      "description": "Bersama empat orang temannya, termasuk Jugo si original dari `Segel Gaib`, Sasuke membentuk tim inti untuk mencapai tujuannya! Konoha mencium gerakan itu. `Akatsuki` juga memperkuat kewaspadaannya terhadap Konoha yang sudah mengetahui gerakan itu. Naruto yang mengetahui target Sasuke itu adalah Itachi, bergerak bersama tim inti baru!! L\n\nalu, Naruto dan B bertarung sengit melawan 6 biju. Sementara itu, Kakashi dan Guy pun datang membantu, namun Naruto ditelan Yonbi. Dalam perut Yonbi, Naruto bertemu wujud asli biju bernama Son Goku! Di lain pihak, Sasuke akhirnya bergerak!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_naruto-konohas-story---the-steam-ninja-scrolls",
@@ -323059,6 +323204,527 @@
     },
     {
       "id": "snap_pub_i_want_to_end_this_love_game_05_init",
+      "bookId": "pub_i_want_to_end_this_love_game_04",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kariage_kun_65_2_init",
+      "bookId": "pub_kariage_kun_65",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_13_1_init",
+      "bookId": "pub_mob_psycho_100_13",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_10_1_init",
+      "bookId": "pub_mob_psycho_100_10",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_128_1_init",
+      "bookId": "pub_lc_fight_ippo_128",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_130_1_init",
+      "bookId": "pub_level_comic_fight_ippo_130",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_new_kobochan_40_1_init",
+      "bookId": "pub_new_kobochan_40",
+      "price": 25000,
+      "currentPrice": 25000,
+      "originalPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_reliving_my_life_to_save_you_vol_1_special_set_init",
+      "bookId": "pub_reliving_my_life_to_save_you_vol_1",
+      "price": 159000,
+      "currentPrice": 159000,
+      "originalPrice": 159000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 365000,
+      "currentPrice": 365000,
+      "originalPrice": 365000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 265000,
+      "currentPrice": 265000,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_in_the_clear_moonlit_dusk_5_special_set_init",
+      "bookId": "pub_in_the_clear_moonlit_dusk_5",
+      "price": 234000,
+      "currentPrice": 234000,
+      "originalPrice": 260000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set_init",
+      "bookId": "pub_tentang_kita_yang_bertolak_belakang_vol_8",
+      "price": 238500,
+      "currentPrice": 238500,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_5_special_set_init",
+      "bookId": "pub_phantom_busters_vol_5",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set_init",
+      "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai",
+      "price": 247500,
+      "currentPrice": 247500,
+      "originalPrice": 275000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_8__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_8",
+      "price": 265500,
+      "currentPrice": 265500,
+      "originalPrice": 295000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-07-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 346500,
+      "currentPrice": 346500,
+      "originalPrice": 385000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 256500,
+      "currentPrice": 256500,
+      "originalPrice": 285000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
+      "price": 160200,
+      "currentPrice": 160200,
+      "originalPrice": 178000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_28__special_set_init",
+      "bookId": "pub_blue_lock_28",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set_init",
+      "bookId": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_7__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_7",
+      "price": 207000,
+      "currentPrice": 207000,
+      "originalPrice": 230000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_1__special_set_init",
+      "bookId": "pub_phantom_busters_vol_1",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_27__special_set_init",
+      "bookId": "pub_blue_lock_27",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_26__special_set_init",
+      "bookId": "pub_blue_lock_26",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_4__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_4",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_4__special_set_init",
+      "bookId": "pub_gokurakugai_vol_4",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-11-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_25__special_set_init",
+      "bookId": "pub_blue_lock_25",
+      "price": 243000,
+      "currentPrice": 243000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_who_killed_the_brave__special_set_init",
+      "bookId": "pub_light_novel_who_killed_the_brave",
+      "price": 189000,
+      "currentPrice": 189000,
+      "originalPrice": 210000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_1__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_1",
+      "price": 198000,
+      "currentPrice": 198000,
+      "originalPrice": 220000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-08-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_3__special_set_init",
+      "bookId": "pub_gokurakugai_vol_3",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 315000,
+      "currentPrice": 315000,
+      "originalPrice": 350000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_1___special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_1",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_6__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_6",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_classroom_of_the_elite_03__special_set_init",
+      "bookId": "pub_light_novel_classroom_of_the_elite_03",
+      "price": 225000,
+      "currentPrice": 225000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-06-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_129_1_init",
+      "bookId": "pub_lc_fight_ippo_129",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_136_1_init",
+      "bookId": "pub_level_comic_fight_ippo_136",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_137_1_init",
+      "bookId": "pub_level_comic_fight_ippo_137",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_138_1_init",
+      "bookId": "pub_level_comic_fight_ippo_138",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_135_1_init",
+      "bookId": "pub_level_comic_fight_ippo_135",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_01_1_init",
+      "bookId": "pub_mob_psycho_100_01",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_2_init",
+      "bookId": "pub_mob_psycho_100_02",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_11_1_init",
+      "bookId": "pub_mob_psycho_100_11",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_9_init",
+      "bookId": "pub_mob_psycho_100_9",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_89_1_init",
+      "bookId": "pub_ruler_of_the_land_89",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_01_init",
+      "bookId": "pub_one_piece_01_1",
+      "price": 20800,
+      "currentPrice": 20800,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-06-01",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_init",
+      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_1",
+      "price": 25800,
+      "currentPrice": 25800,
+      "originalPrice": 43000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-11-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_56_init",
+      "bookId": "pub_lc_giant_killing_56",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_init",
+      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_2",
+      "price": 48000,
+      "currentPrice": 48000,
+      "originalPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-11-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_naruto_bind_up_edition_30_init",
+      "bookId": "pub_naruto_bind_up_edition_30",
+      "price": 99000,
+      "currentPrice": 99000,
+      "originalPrice": 99000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_dandadan_15_1793249133",
+      "bookId": "pub_level_comic_dandadan_15",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_i_want_to_end_this_love_game_05_init",
       "bookId": "pub_i_want_to_end_this_love_game_05",
       "price": 45000,
       "currentPrice": 45000,
@@ -323125,6 +323791,26 @@
       "originalPrice": 25000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_insomniacs_after_school_vol_1_init",
+      "bookId": "pub_insomniacs_after_school_vol_1",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_medalist_vol_10_init",
+      "bookId": "pub_medalist_vol_10",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-29",
       "source": "gramedia_api"
     },
     {
@@ -323468,6 +324154,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_mob_psycho_100_reigen_1793249133",
+      "bookId": "pub_mob_psycho_100_reigen",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "previousPrice": 29250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-29",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_mob_psycho_100_01_1_init",
       "bookId": "pub_mob_psycho_100_01_1",
       "price": 40000,
@@ -323556,9 +324253,73 @@
       "availability": "AVAILABLE",
       "observedAt": "2021-11-03",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_31_1793249133",
+      "bookId": "pub_haikyu_fly_high_volleyball_31",
+      "price": 9600,
+      "currentPrice": 9600,
+      "originalPrice": 32000,
+      "previousPrice": 9600,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_teasing_master_takagi_3_1793248819",
+      "bookId": "pub_teasing_master_takagi_3",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "previousPrice": 24000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-29",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_naruto_konoha_s_story_the_steam_ninja_scrolls_02_1793248840",
+      "bookId": "pub_naruto_konoha_s_story_the_steam_ninja_scrolls_02",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 29250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-29",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_akasha_record_of_ragnarok_14_1793248857",
+      "bookId": "pub_akasha_record_of_ragnarok_14",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-29",
+      "source": "gramedia_api_refresh"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1793249134",
+      "startedAt": "2026-10-29T04:36:21.000Z",
+      "finishedAt": "2026-10-29T04:45:34.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1568,
+      "productsAccepted": 1308,
+      "productsRejected": 445,
+      "productsUpdated": 1074,
+      "productsInserted": 53,
+      "duplicatesResolved": 18,
+      "errors": [],
+      "durationMs": 552682,
+      "success": true
+    },
     {
       "id": "sync_1793226288",
       "startedAt": "2026-10-28T22:14:57.000Z",
@@ -323937,26 +324698,6 @@
       "duplicatesResolved": 20,
       "errors": [],
       "durationMs": 677150,
-      "success": true
-    },
-    {
-      "id": "sync_1792773766",
-      "startedAt": "2026-10-23T16:33:06.000Z",
-      "finishedAt": "2026-10-23T16:42:46.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1565,
-      "productsAccepted": 1306,
-      "productsRejected": 431,
-      "productsUpdated": 1086,
-      "productsInserted": 52,
-      "duplicatesResolved": 20,
-      "errors": [],
-      "durationMs": 580038,
       "success": true
     }
   ]
