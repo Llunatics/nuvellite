@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-02T04:51:53.000Z",
+  "lastUpdated": "2026-11-02T15:01:11.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -5275,7 +5275,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-05-13",
       "isWednesdayRelease": false,
-      "currentPrice": 48750,
+      "currentPrice": 32500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -43418,7 +43418,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-07-22",
       "isWednesdayRelease": false,
-      "currentPrice": 32500,
+      "currentPrice": 35750,
       "authors": [
         "Sugaru Miaki, Yuki Hotate, Shion"
       ],
@@ -43436,7 +43436,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 50000,
+      "originalPrice": 55000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -61832,7 +61832,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-05-29",
       "isWednesdayRelease": true,
-      "currentPrice": 29250,
+      "currentPrice": 45000,
       "authors": [
         "Azychika / Shinya Umemura"
       ],
@@ -106788,6 +106788,186 @@
       ]
     },
     {
+      "id": "pub_one_piece_44_2026",
+      "slug": "one-piece-44-2026",
+      "title": "One Piece 44 (2026)",
+      "originalTitle": "One Piece",
+      "seriesId": "ser_one-piece-manga",
+      "seriesName": "One Piece",
+      "volume": 44,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-zepe30p24.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-02",
+      "isWednesdayRelease": false,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "authors": [
+        "Eiichiro Oda"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9789792707021",
+      "synopsis": "Setelah menemukan Robin, kini kelompok Topi Jerami berjuang keras untuk bisa lolos. Sementara itu, Buster Call sudah diaktifkan!!\n\nBagaimana kelanjutan pertarungan antara Lucci melawan Luffy!?\n\nKeunggulan:\n\n•\tGuinness World Record untuk seri komik dengan cetakan terbanyak oleh seorang penulis. Sampai 2022, seri One Piece terjual lebih dari 500 juta copy seluruh dunia.\n\n•\tKomik petualangan bajak laut dengan cerita yang super seru, dan berlatar belakang dunia yang diciptakan dengan imajinasi yang luar biasa.\n\n•\tKomik ini tak pernah kehabisan ide baru yang terus membuat pembaca penasaran.\n\n•\tDi tengah serunya alur cerita, One Piece selalu menekankan pentingnya “Persahabatan”\n\n•\tBest Seller di seluruh dunia, dan menjadi komik yang wajib dibaca, tak hanya oleh pembaca putra, tapi juga oleh pembaca putri.\n\n•\tSerial dan film animasi One Piece, serta merchandise-nya digemari di Indonesia.\n\n•\tSudah diadaptasi jadi live action series.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan.\n\nMembaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi.\n\nPilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca.\n\nTemukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik.\n\nBuat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.",
+      "gramediaUrl": "https://www.gramedia.com/products/one-piece-44-2026",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_mission_yozakura_family_15",
+      "slug": "mission-yozakura-family-15",
+      "title": "Mission: Yozakura Family 15",
+      "originalTitle": "Mission",
+      "seriesId": "ser_mission",
+      "seriesName": "Mission",
+      "volume": 15,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/c--21u8--k.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-02",
+      "isWednesdayRelease": false,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "authors": [
+        "Hitsuji Gondaira"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080753",
+      "synopsis": "Ketika kakak beradik Yozakura berhasil menemukan Kyoichiro yang menghilang, Taiyo segera pergi menemui mereka. Namun, kondisi Kyoichiro tidak seperti biasa. Bunga sakura hitam tumbuh di tubuhnya akibat racun dari Tsubomi. Demi menyelamatkan Kyoichiro, Taiyo pun memakai kembali ‘mekar selaksa bunga’.\n\nKeunggulan:\n\nSeri action dengan tema kekeluargaan. Ada adaptasi anime di Disney+. Sudah tamat.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/mission-yozakura-family-15",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_level_comic_attack_on_titan_bind_up_12",
+      "slug": "level-comic-attack-on-titan-bind-up-12",
+      "title": "Level Comic: Attack on Titan Bind Up 12",
+      "originalTitle": "Attack on Titan Bind Up",
+      "seriesId": "ser_attack-on-titan-bind-up",
+      "seriesName": "Attack on Titan Bind Up",
+      "volume": 12,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/1lka-ac-n9.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-02",
+      "isWednesdayRelease": false,
+      "currentPrice": 118000,
+      "originalPrice": 118000,
+      "authors": [
+        "Hajime Isayama"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080562",
+      "synopsis": "Di luar Pulau Paradis, membentang dunia tempat tinggal manusia lain. Di antaranya adalah negara Marley yang sedang berperang dengan negara-negara asing. Di tengah-tengah perang sengit, Marley memperbarui tekad untuk menyerang Pulau Paradis dan mendapatkan Titan Perintis. Di sini pun, ada anak-anak yang mati-matian bertahan hidup...\n\nKeunggulan:\n\n•\tTelah terjual puluhan juta eksemplar di seluruh dunia.\n\n•\tMeraih penghargaan Kodansha Manga Award Ke-35 untuk kategori komik bagi pembaca remaja pria.\n\n•\tPada paruh pertama 2014, meraih peringkat pertama komik best seller di Jepang.\n\n•\tTelah diangkat ke berbagai media, antara lain serial animasi TV, game, light novel, berbagai komik spin off, serta film bioskop.\n\n•\tMusim terakhir animasinya tayang pada akhir 2023.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan.\n\nMembaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi.\n\nPilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca.\n\nTemukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik.\n\nBuat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.",
+      "gramediaUrl": "https://www.gramedia.com/products/level-comic-attack-on-titan-bind-up-12",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": true,
+      "bindUpKind": "BIND_UP",
+      "bindUpLabel": "Bind Up"
+    },
+    {
+      "id": "pub_menguasai_statistik_di_era_digital_dengan_spss_31",
+      "slug": "menguasai-statistik-di-era-digital-dengan-spss-31",
+      "title": "Menguasai Statistik di Era Digital dengan SPSS 31",
+      "originalTitle": "Menguasai Statistik di Era Digital dengan SPSS",
+      "seriesId": "ser_menguasai-statistik-di-era-digital-dengan-spss",
+      "seriesName": "Menguasai Statistik di Era Digital dengan SPSS",
+      "volume": 31,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/1as0gsntxi.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-02",
+      "isWednesdayRelease": false,
+      "currentPrice": 145000,
+      "originalPrice": 145000,
+      "authors": [
+        "Singgih Santoso"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080784",
+      "synopsis": "SPSS adalah software statistik paling user-friendly di Indonesia dan dunia saat ini. Dengan fasilitas pengolahan data yang sangat lengkap, kemampuan membuat grafik-grafik yang sophisticated, serta kompatibilitas dengan software populer seperti Word, Excel, dan PowerPoint, SPSS dapat digunakan oleh orang yang awam tentang statistik dan komputer sekalipun! Untuk memudahkan pemahaman materi dalam buku ini, setiap topik disertai contoh kasus; mulai dari cara memasukkan data statistik kedalam SPSS, bagaimana cara SPSS mengolahnya, dan cara menginterpretasi output SPSS secara praktis dan relevan. Agar dapat dipahami dengan sistematis, materi dibagi menjadi dua bagian besar:\n\n• Bagian 1: menjelaskan persiapan data statistik sebelum diproses dengan SPSS.\n\n• Bagian 2: menjelaskan penggunaan SPSS untuk mengolah data dengan berbagai prosedur statistik. Buku ini ditujukan kepada para pengguna statistik yang tidak ingin direpotkan dengan perhitungan manual statistik yang melelahkan, namun tetap ingin memperoleh output statistik yang akurat dan dapat dimengerti. Para mahasiswa, peneliti, pengusaha dan pengguna awam yang terlibat dalam pengolahan data statistik merupakan kalangan yang tepat untuk memiliki dan menggunakan buku ini.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan.\n\nMembaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi.\n\nPilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca.\n\nTemukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik.\n\nBuat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.",
+      "gramediaUrl": "https://www.gramedia.com/products/menguasai-statistik-di-era-digital-dengan-spss-31",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_your_lie_in_april_vol_4",
+      "slug": "your-lie-in-april-vol-4",
+      "title": "Your Lie in April Vol. 4",
+      "originalTitle": "Your Lie in April",
+      "seriesId": "ser_your-lie-in-april",
+      "seriesName": "Your Lie in April",
+      "volume": 4,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_mnc",
+      "publisherName": "m&c! Publishing",
+      "publisherShortName": "m&c!",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/a9py33zll5.jpg",
+      "status": "PREORDER",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-13",
+      "isWednesdayRelease": false,
+      "currentPrice": 55000,
+      "originalPrice": 55000,
+      "authors": [
+        "Naoshi Arakawa"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "",
+      "synopsis": "Takeshi Aiza berkembang pesat karena persaingannya dengan Kousei Arima.\n\nDi mata semua orang, Aiza adalah nomor 1! Mereka yakin Aiza akan mengalahkan Arima di kompetisi musik Maihou.\n\nDi kompetisi tersebut, Arima membawakan lagu pilihan The Well-Tempered Clavier Book 1 No. 15 dan Etude Op.25-5.\n\nNamun, tiba-tiba Arima tidak bisa mendengar suara pianonya!?\n\n****\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan.\n\nMembaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi.\n\nPilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca.\n\nTemukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik.\n\nBuat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.",
+      "gramediaUrl": "https://www.gramedia.com/products/your-lie-in-april-vol-4",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from m&c!",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
       "id": "pub_akasha_mountain_ghost_stories",
       "slug": "akasha-mountain-ghost-stories",
       "title": "Akasha : Mountain Ghost Stories",
@@ -110163,7 +110343,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-02-03",
       "isWednesdayRelease": true,
-      "currentPrice": 44200,
+      "currentPrice": 48750,
       "authors": [
         "Ito Junji"
       ],
@@ -110180,7 +110360,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 68000,
+      "originalPrice": 75000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -113832,8 +114012,8 @@
       "author": "Hajime Isayama",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 11,
-      "latestVolume": 11,
+      "totalVolumes": 12,
+      "latestVolume": 12,
       "availableVolumes": [
         1,
         2,
@@ -113845,7 +114025,8 @@
         8,
         9,
         10,
-        11
+        11,
+        12
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/4oopcv-ee-.png",
       "description": "Sinopsis Buku:\n\nDunia ini dikuasai oleh Titan. Orang-orang yang menjadi mangsa para Titan membangun tembok, menukar kebebasan mereka pergi ke dunia luar demi menghindari serangan Titan. Tapi, ketenangan itu hilang karena datangnya Titan besar yang menghancurkan tembok. Lalu, dari keputusasaan itu dimulailah perang...\n\nSelling Point:\n\n- Telah terjual puluhan juta eksemplar di seluruh dunia.\n\n- Meraih penghargaan Kodansha Manga Award Ke-35 untuk kategori komik bagi pembaca remaja pria.\n\n- Pada paruh pertama 2014, meraih peringkat pertama komik best seller di Jepang.\n\n- Telah diangkat ke berbagai media, antara lain serial animasi TV, game, light novel, berbagai komik spin off, serta film bioskop.\n\n- Musim terakhir animasinya tayang pada akhir 2023.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -119515,6 +119696,24 @@
       "description": "Cerita tentang buku sihir yang bekerja secara mekanis, yang menyebarkan kutukan pada para vampir. Apa kau pernah mendengarnya? Sekarang, dipandu oleh “Buku Vanitas”, roda gigi cerita ini mulai berputar.\n\nVanitas mengunjungi tempat tinggal para vampir di Paris yang satunya lagi. Di sana, kutukan merajalela sehingga para vampir tak dapat menahan dorongan untuk mengisap darah. Di sana, hari-hari yang telah hilang yang selama ini tersimpan dalam ingatan terdalam terkuak. Bulan biru pun muncul di pesta topeng para vampir yang penuh tipu muslihat.\n\nWalau pesta topeng telah berakhir, tapi irama konspirasi masih menggema di pemakaman bawah tanah. Panggung sekali lagi kembali ke Paris dan sekarang tirai perang terangkat. Vampir dan manusia, mana yang harus diburu?\n\nVanitas dan Noé berhadapan dengan ancaman yang telah menanti di pemakaman bawah tanah, pasukan pemburu vampir “Chasseur” serta “pemikul kutukan bayangan” yang mengerikan. Tapi, untuk apa mereka bertarung? Untuk menyelamatkan siapa…? Mereka saling menjaga punggung masing-masing, sekalipun taring itu suatu hari nanti akan menyakiti satu sama lain.\n\n***\n\nJun Mochizuki (Mochizuki Jun Mochizuki Jun) adalah seorang komikus Jepang (manga-ka), terkenal karena serial shounen fantasi Pandora Hearts.\n\nDetail\n\nPenulis\n\nJun Mochizuki\n\nJumlah Halaman\n\n240\n\nPenerbit\n\nElex Media Komputindo\n\nTanggal Terbit\n\n28 Feb 2022\n\nFormat\n\nSoft Cover\n\nBerat\n\n0.125 kg\n\nISBN\n\n9786020455495\n\nLebar\n\n11.4 cm\n\nBahasa\n\nIndonesia\n\nPanjang\n\n17.2cm"
     },
     {
+      "id": "ser_menguasai-statistik-di-era-digital-dengan-spss",
+      "slug": "menguasai-statistik-di-era-digital-dengan-spss",
+      "name": "Menguasai Statistik di Era Digital dengan SPSS",
+      "originalTitle": "Menguasai Statistik di Era Digital dengan SPSS",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "author": "Singgih Santoso",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 31,
+      "latestVolume": 31,
+      "availableVolumes": [
+        31
+      ],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/1as0gsntxi.jpg",
+      "description": "SPSS adalah software statistik paling user-friendly di Indonesia dan dunia saat ini. Dengan fasilitas pengolahan data yang sangat lengkap, kemampuan membuat grafik-grafik yang sophisticated, serta kompatibilitas dengan software populer seperti Word, Excel, dan PowerPoint, SPSS dapat digunakan oleh orang yang awam tentang statistik dan komputer sekalipun! Untuk memudahkan pemahaman materi dalam buku ini, setiap topik disertai contoh kasus; mulai dari cara memasukkan data statistik kedalam SPSS, bagaimana cara SPSS mengolahnya, dan cara menginterpretasi output SPSS secara praktis dan relevan. Agar dapat dipahami dengan sistematis, materi dibagi menjadi dua bagian besar:\n\n• Bagian 1: menjelaskan persiapan data statistik sebelum diproses dengan SPSS.\n\n• Bagian 2: menjelaskan penggunaan SPSS untuk mengolah data dengan berbagai prosedur statistik. Buku ini ditujukan kepada para pengguna statistik yang tidak ingin direpotkan dengan perhitungan manual statistik yang melelahkan, namun tetap ingin memperoleh output statistik yang akurat dan dapat dimengerti. Para mahasiswa, peneliti, pengusaha dan pengguna awam yang terlibat dalam pengolahan data statistik merupakan kalangan yang tepat untuk memiliki dan menggunakan buku ini.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan.\n\nMembaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi.\n\nPilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca.\n\nTemukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik.\n\nBuat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan."
+    },
+    {
       "id": "ser_mieruko-chan-the-girl-that-sees",
       "slug": "mieruko-chan-the-girl-that-sees",
       "name": "Mieruko-Chan : The Girl That Sees",
@@ -119553,6 +119752,24 @@
       "availableVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/kra-esv091.png",
       "description": "Seorang mahasiswi bernama Mimi dan pacarnya, Naoto, mengalami serangkaian kejadian supranatural yang misterius. Dari tetangga Mimi yang aneh, hingga sosok mengerikan yang mengintai dalam kegelapan… Setiap kisah membawa mereka semakin dekat pada dunia yang tidak bisa dilihat manusia!\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
+    },
+    {
+      "id": "ser_mission",
+      "slug": "mission",
+      "name": "Mission",
+      "originalTitle": "Mission",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "author": "Hitsuji Gondaira",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 15,
+      "latestVolume": 15,
+      "availableVolumes": [
+        15
+      ],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/c--21u8--k.jpg",
+      "description": "Ketika kakak beradik Yozakura berhasil menemukan Kyoichiro yang menghilang, Taiyo segera pergi menemui mereka. Namun, kondisi Kyoichiro tidak seperti biasa. Bunga sakura hitam tumbuh di tubuhnya akibat racun dari Tsubomi. Demi menyelamatkan Kyoichiro, Taiyo pun memakai kembali ‘mekar selaksa bunga’.\n\nKeunggulan:\n\nSeri action dengan tema kekeluargaan. Ada adaptasi anime di Disney+. Sudah tamat.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_mission-yozakura-family",
@@ -120369,6 +120586,7 @@
         41,
         42,
         43,
+        44,
         86,
         89,
         90,
@@ -124355,12 +124573,13 @@
       "author": "Naoshi Arakawa",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 3,
-      "latestVolume": 3,
+      "totalVolumes": 4,
+      "latestVolume": 4,
       "availableVolumes": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/2vp-iy-09r.jpg",
       "description": "SINOPSIS\n\nKosei Arima (9 tahun), anak ajaib! Di usia muda, ia sudah menjuarai berbagai kompetisi piano. Namun, saat usianya 11 tahun, ibunya yang juga pelatih pianonya, meninggal. Sejak saat itu, ia menjadi tak lagi mampu mendengar suara piano. Karir pianonya hancur berantakan. Dua tahun lamanya, Arima tak menyentuh piano. Sampai suatu hari, seorang gadis bernama Kaori Miyazono mengubah segalanya.\n\nJudul m&c : Your Lie in April Vol. 1\n\nUkuran 11,2 cm x 17,6 cm\n\nJapanese binding\n\nJumlah halaman: 224 halaman"
@@ -361475,6 +361694,577 @@
     },
     {
       "id": "snap_pub_i_want_to_end_this_love_game_05_init",
+      "bookId": "pub_i_want_to_end_this_love_game_04",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kariage_kun_65_2_init",
+      "bookId": "pub_kariage_kun_65",
+      "price": 20000,
+      "currentPrice": 20000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_13_1_init",
+      "bookId": "pub_mob_psycho_100_13",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_10_1_init",
+      "bookId": "pub_mob_psycho_100_10",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_128_1_init",
+      "bookId": "pub_lc_fight_ippo_128",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_130_1_init",
+      "bookId": "pub_level_comic_fight_ippo_130",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_new_kobochan_40_1_init",
+      "bookId": "pub_new_kobochan_40",
+      "price": 25000,
+      "currentPrice": 25000,
+      "originalPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_yuru_camp_kemah_santai_gadis_sma_vol_1_1793595113",
+      "bookId": "pub_yuru_camp_kemah_santai_gadis_sma_vol_1",
+      "price": 55000,
+      "currentPrice": 55000,
+      "originalPrice": 55000,
+      "previousPrice": 41250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_who_killed_the_brave_chapter_of_the_brave_special_set_init",
+      "bookId": "pub_light_novel_who_killed_the_brave_chapter_of_the_brave",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-12-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_9_special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_9",
+      "price": 295000,
+      "currentPrice": 295000,
+      "originalPrice": 295000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_reliving_my_life_to_save_you_vol_1_special_set_init",
+      "bookId": "pub_reliving_my_life_to_save_you_vol_1",
+      "price": 159000,
+      "currentPrice": 159000,
+      "originalPrice": 159000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 365000,
+      "currentPrice": 365000,
+      "originalPrice": 365000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 265000,
+      "currentPrice": 265000,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_in_the_clear_moonlit_dusk_5_special_set_init",
+      "bookId": "pub_in_the_clear_moonlit_dusk_5",
+      "price": 221000,
+      "currentPrice": 221000,
+      "originalPrice": 260000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set_init",
+      "bookId": "pub_tentang_kita_yang_bertolak_belakang_vol_8",
+      "price": 225250,
+      "currentPrice": 225250,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_5_special_set_init",
+      "bookId": "pub_phantom_busters_vol_5",
+      "price": 229500,
+      "currentPrice": 229500,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set_init",
+      "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai",
+      "price": 233750,
+      "currentPrice": 233750,
+      "originalPrice": 275000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_8__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_8",
+      "price": 250750,
+      "currentPrice": 250750,
+      "originalPrice": 295000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-07-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 385000,
+      "currentPrice": 385000,
+      "originalPrice": 385000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 285000,
+      "currentPrice": 285000,
+      "originalPrice": 285000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
+      "price": 178000,
+      "currentPrice": 178000,
+      "originalPrice": 178000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_28__special_set_init",
+      "bookId": "pub_blue_lock_28",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set_init",
+      "bookId": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_7__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_7",
+      "price": 230000,
+      "currentPrice": 230000,
+      "originalPrice": 230000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_1__special_set_init",
+      "bookId": "pub_phantom_busters_vol_1",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_27__special_set_init",
+      "bookId": "pub_blue_lock_27",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_26__special_set_init",
+      "bookId": "pub_blue_lock_26",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_4__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_4",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_4__special_set_init",
+      "bookId": "pub_gokurakugai_vol_4",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-11-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_25__special_set_init",
+      "bookId": "pub_blue_lock_25",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_who_killed_the_brave__special_set_init",
+      "bookId": "pub_light_novel_who_killed_the_brave",
+      "price": 210000,
+      "currentPrice": 210000,
+      "originalPrice": 210000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_1__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_1",
+      "price": 220000,
+      "currentPrice": 220000,
+      "originalPrice": 220000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-08-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_3__special_set_init",
+      "bookId": "pub_gokurakugai_vol_3",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 350000,
+      "currentPrice": 350000,
+      "originalPrice": 350000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 212500,
+      "currentPrice": 212500,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_1___special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_1",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_6__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_6",
+      "price": 212500,
+      "currentPrice": 212500,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_classroom_of_the_elite_03__special_set_init",
+      "bookId": "pub_light_novel_classroom_of_the_elite_03",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-06-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_129_1_init",
+      "bookId": "pub_lc_fight_ippo_129",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_136_1_init",
+      "bookId": "pub_level_comic_fight_ippo_136",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_137_1_init",
+      "bookId": "pub_level_comic_fight_ippo_137",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_138_1_init",
+      "bookId": "pub_level_comic_fight_ippo_138",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_135_1_init",
+      "bookId": "pub_level_comic_fight_ippo_135",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_01_1_init",
+      "bookId": "pub_mob_psycho_100_01",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_2_init",
+      "bookId": "pub_mob_psycho_100_02",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_11_1_init",
+      "bookId": "pub_mob_psycho_100_11",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_9_init",
+      "bookId": "pub_mob_psycho_100_9",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_89_1_init",
+      "bookId": "pub_ruler_of_the_land_89",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_01_init",
+      "bookId": "pub_one_piece_01_1",
+      "price": 16000,
+      "currentPrice": 16000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-06-01",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_init",
+      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_1",
+      "price": 21500,
+      "currentPrice": 21500,
+      "originalPrice": 43000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-11-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_56_init",
+      "bookId": "pub_lc_giant_killing_56",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_init",
+      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_2",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-11-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_44_2026_init",
+      "bookId": "pub_one_piece_44_2026",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mission_yozakura_family_15_init",
+      "bookId": "pub_mission_yozakura_family_15",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_attack_on_titan_bind_up_12_init",
+      "bookId": "pub_level_comic_attack_on_titan_bind_up_12",
+      "price": 118000,
+      "currentPrice": 118000,
+      "originalPrice": 118000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_menguasai_statistik_di_era_digital_dengan_spss_31_init",
+      "bookId": "pub_menguasai_statistik_di_era_digital_dengan_spss_31",
+      "price": 145000,
+      "currentPrice": 145000,
+      "originalPrice": 145000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_i_want_to_end_this_love_game_05_init",
       "bookId": "pub_i_want_to_end_this_love_game_05",
       "price": 45000,
       "currentPrice": 45000,
@@ -361544,14 +362334,13 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_yuru_camp_kemah_santai_gadis_sma_vol_1_1793595113",
-      "bookId": "pub_yuru_camp_kemah_santai_gadis_sma_vol_1",
+      "id": "snap_pub_your_lie_in_april_vol_4_init",
+      "bookId": "pub_your_lie_in_april_vol_4",
       "price": 55000,
       "currentPrice": 55000,
       "originalPrice": 55000,
-      "previousPrice": 41250,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-11-02",
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-13",
       "source": "gramedia_api"
     },
     {
@@ -362003,9 +362792,73 @@
       "availability": "AVAILABLE",
       "observedAt": "2021-11-03",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_23_1793631671",
+      "bookId": "pub_detektif_conan_premium_23",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 48750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_akasha__parasite_in_love_01_1793631364",
+      "bookId": "pub_akasha__parasite_in_love_01",
+      "price": 35750,
+      "currentPrice": 35750,
+      "originalPrice": 55000,
+      "previousPrice": 32500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-02",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_akasha_record_of_ragnarok_14_1793631424",
+      "bookId": "pub_akasha_record_of_ragnarok_14",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 29250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-02",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_akasha_ito_junji_best_of_best_short_story_collection_1793631583",
+      "bookId": "pub_akasha_ito_junji_best_of_best_short_story_collection",
+      "price": 48750,
+      "currentPrice": 48750,
+      "originalPrice": 75000,
+      "previousPrice": 44200,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-02",
+      "source": "gramedia_api_refresh"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1793631671",
+      "startedAt": "2026-11-02T14:52:59.000Z",
+      "finishedAt": "2026-11-02T15:01:11.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1548,
+      "productsAccepted": 1288,
+      "productsRejected": 449,
+      "productsUpdated": 1046,
+      "productsInserted": 57,
+      "duplicatesResolved": 18,
+      "errors": [],
+      "durationMs": 492017,
+      "success": true
+    },
     {
       "id": "sync_1793595113",
       "startedAt": "2026-11-02T04:41:25.000Z",
@@ -362384,26 +363237,6 @@
       "duplicatesResolved": 19,
       "errors": [],
       "durationMs": 469203,
-      "success": true
-    },
-    {
-      "id": "sync_1793101740",
-      "startedAt": "2026-10-27T11:40:33.000Z",
-      "finishedAt": "2026-10-27T11:49:00.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1568,
-      "productsAccepted": 1308,
-      "productsRejected": 439,
-      "productsUpdated": 1082,
-      "productsInserted": 51,
-      "duplicatesResolved": 19,
-      "errors": [],
-      "durationMs": 506988,
       "success": true
     }
   ]
