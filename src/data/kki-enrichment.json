@@ -5384,6 +5384,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_who-killed-the-brave-chapter-of-the-brave": {
+  "demographic": "Shounen",
+  "publisherJp": "Kadokawa",
+  "volumesJp": "4",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp108.000",
+  "priceMax": "Rp108.000",
+  "paperType": null,
+  "yearFirstVol": "2026",
+  "kkiTitle": "Who Killed The Brave? Chapter of Prophecy",
+  "kkiPublisher": "Phoenix",
+  "matchScore": 95.0,
+  "matchMethod": "auto"
+ },
  "ser_wind-breaker": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",

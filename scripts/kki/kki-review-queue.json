@@ -364,6 +364,20 @@
   "reason": "author-mismatch"
  },
  {
+  "nuvelliteSeriesId": "ser_mission",
+  "nuvelliteTitle": "Mission",
+  "nuvelliteType": "MANGA",
+  "nuvelliteAuthor": "Hitsuji Gondaira",
+  "kkiTitle": "Harlequin - Heart Mission",
+  "kkiMedium": "MANGA",
+  "kkiAuthor": "Jean Webster; Tsukiko Kurebayashi",
+  "kkiPublisher": "Level",
+  "score": 90.0,
+  "authorScore": 42.8,
+  "crossMedium": false,
+  "reason": "author-mismatch"
+ },
+ {
   "nuvelliteSeriesId": "ser_naruto-ln",
   "nuvelliteTitle": "Naruto (Novel)",
   "nuvelliteType": "LIGHT_NOVEL",
@@ -594,10 +608,10 @@
   "nuvelliteAuthor": "Kaoru & Dreamerz",
   "kkiTitle": "Rin",
   "kkiMedium": "MANGA",
-  "kkiAuthor": "Harold Sakuishi",
-  "kkiPublisher": "Elex",
+  "kkiAuthor": "500, Harold Sakuishi, Harold Sakuishi 22",
+  "kkiPublisher": "M&C!",
   "score": 90.0,
-  "authorScore": 32.8,
+  "authorScore": 36.6,
   "crossMedium": false,
   "reason": "short-title-inexact"
  },
@@ -1162,6 +1176,20 @@
   "reason": "author-mismatch"
  },
  {
+  "nuvelliteSeriesId": "ser_menguasai-statistik-di-era-digital-dengan-spss",
+  "nuvelliteTitle": "Menguasai Statistik di Era Digital dengan SPSS",
+  "nuvelliteType": "MANGA",
+  "nuvelliteAuthor": "Singgih Santoso",
+  "kkiTitle": "Dalam Atap di Bawah Langit",
+  "kkiMedium": "MANGA",
+  "kkiAuthor": "Hutami Sui",
+  "kkiPublisher": "Elex",
+  "score": 85.5,
+  "authorScore": 34.2,
+  "crossMedium": false,
+  "reason": "author-mismatch"
+ },
+ {
   "nuvelliteSeriesId": "ser_my-pre-wedding",
   "nuvelliteTitle": "My Pre-Wedding",
   "nuvelliteType": "MANGA",
@@ -1446,6 +1474,20 @@
   "nuvelliteTitle": "Koloni Senior Bekalmu!",
   "nuvelliteType": "MANGA",
   "nuvelliteAuthor": "Sihanjir /Bangsyah",
+  "kkiTitle": "Sensor",
+  "kkiMedium": "MANGA",
+  "kkiAuthor": "Junji Ito",
+  "kkiPublisher": "Akasha",
+  "score": 75.0,
+  "authorScore": 42.8,
+  "crossMedium": false,
+  "reason": "author-mismatch"
+ },
+ {
+  "nuvelliteSeriesId": "ser_senior-bekalmu",
+  "nuvelliteTitle": "Senior Bekalmu!",
+  "nuvelliteType": "MANGA",
+  "nuvelliteAuthor": "Sihanjir, Bangsyah",
   "kkiTitle": "Sensor",
   "kkiMedium": "MANGA",
   "kkiAuthor": "Junji Ito",
