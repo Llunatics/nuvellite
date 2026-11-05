@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-04T23:23:55.000Z",
+  "lastUpdated": "2026-11-05T05:31:25.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -283,7 +283,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ab5axivv30.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 40500,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-09-11",
       "isWednesdayRelease": false,
@@ -310,7 +310,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-3053dnn0o.jpeg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 124200,
+      "currentPrice": 138000,
       "originalPrice": 138000,
       "releaseDate": "2026-09-09",
       "isWednesdayRelease": true,
@@ -3658,7 +3658,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/a534rkf8iu.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 32500,
+      "currentPrice": 48750,
       "originalPrice": 65000,
       "releaseDate": "2025-05-13",
       "isWednesdayRelease": false,
@@ -71364,7 +71364,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/gnutasm-2e.jpeg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "currentPrice": 65000,
       "originalPrice": 65000,
       "releaseDate": "2026-07-23",
@@ -72958,7 +72958,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/l2a9i4a9c9.jpg",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 41250,
+      "currentPrice": 55000,
       "originalPrice": 55000,
       "releaseDate": "2026-10-28",
       "isWednesdayRelease": true,
@@ -72985,7 +72985,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/20c6k2aaz1.jfif",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 33750,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-10-28",
       "isWednesdayRelease": true,
@@ -73767,7 +73767,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/5acza02kha.jfif",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-11-18",
@@ -73782,6 +73782,114 @@
       ],
       "classificationStatus": "ACCEPTED",
       "gramediaUrl": "https://www.gramedia.com/products/kiteretsu-daihyakka-03"
+    },
+    {
+      "id": "pub_light_novel_even_a_replica_can_fall_in_love_2",
+      "slug": "light-novel-even-a-replica-can-fall-in-love-2",
+      "title": "Light Novel: Even a Replica Can Fall in Love 2",
+      "volume": 2,
+      "category": "Light Novel",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/3nl7a-ep6n.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 98000,
+      "originalPrice": 98000,
+      "releaseDate": "2026-11-05",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_even-a-replica-can-fall-in-love",
+      "seriesName": "Even a Replica Can Fall in Love",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Harunadon "
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/light-novel-even-a-replica-can-fall-in-love-2"
+    },
+    {
+      "id": "pub_bungo_stray_dogs_dazai_chuya_usia_15_tahun_vol_2",
+      "slug": "bungo-stray-dogs-dazai-chuya-usia-15-tahun-vol-2",
+      "title": "Bungo Stray Dogs Dazai & Chuya – Usia 15 Tahun Vol. 2",
+      "volume": 2,
+      "category": "Manga",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/2ycz-30chd.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "releaseDate": "2026-11-05",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_bungo-stray-dogs-dazai-chuya",
+      "seriesName": "Bungo Stray Dogs Dazai & Chuya",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Kafka Asagiri"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/bungo-stray-dogs-dazai-chuya-usia-15-tahun-vol-2"
+    },
+    {
+      "id": "pub_blue_lock_34",
+      "slug": "blue-lock-34",
+      "title": "Blue Lock 34",
+      "volume": 34,
+      "category": "Manga",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/866c3x44-e.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "releaseDate": "2026-11-05",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_blue-lock",
+      "seriesName": "Blue Lock",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Muneyuki Kaneshiro"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/blue-lock-34"
+    },
+    {
+      "id": "pub_n_vol_2",
+      "slug": "n-vol-2",
+      "title": "N Vol. 2",
+      "volume": 2,
+      "category": "Manga",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/vnxv34xv1v.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "releaseDate": "2026-11-05",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_n",
+      "seriesName": "N",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "kurumuakumu "
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/n-vol-2"
     },
     {
       "id": "pub_akasha_mountain_ghost_stories",
@@ -77683,7 +77791,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/t4a712s1as.jfif",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 45000,
+      "currentPrice": 33750,
       "originalPrice": 45000,
       "releaseDate": "2026-11-04",
       "isWednesdayRelease": true,
@@ -79188,7 +79296,7 @@
       "type": "MANGA",
       "status": "ONGOING",
       "totalVolumes": 40,
-      "latestVolume": 33,
+      "latestVolume": 34,
       "availableVolumes": [
         1,
         2,
@@ -79222,7 +79330,8 @@
         30,
         31,
         32,
-        33
+        33,
+        34
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x47u7-8v05.jpeg",
       "description": "Demi mengejar impian yang mustahil, jadi nomor satu dunia, 300 striker egois dikumpulkan!\n\nTahun 2018, timnas Jepang tereliminasi di babak 16 besar Piala Dunia. Sebagai respons atas kekalahan tersebut, Asosiasi Sepak Bola Jepang membangun asrama pelatihan untuk 300 atlet SMA unggulan demi memenangkan Piala Dunia yang diberi nama “Blue Lock”. Pria yang menjabat sebagai pelatih di sana, Jinpachi Ego, menegaskan bahwa yang diperlukan Jepang adalah “striker yang penuh keegoisan”. Yoichi Isagi, seorang striker tak bernama, dan kawan-kawannya, harus bersaing untuk mengubah dirinya jadi seorang egois!\n\nMatilah sekali, sepak bola Jepang! Demi menggapai impian yang baru!!\n\nKeunggulan Buku:\n\n- Mengangkat tema sepak bola yang digandrungi banyak orang.\n\n- Memakai referensi karakter, klub sepak bola, dan teknik yang berasal dari dunia nyata.\n\n- Artstyle-nya bagus dan memanjakan mata.\n\n- Judul best seller Jepang yang sudah diterbitkan di berbagai negara.\n\n- Memiliki serialisasi anime season 1 yang dirilis pada tahun 2022, season 2 pada tahun 2024, dan season 3 yang sedang dalam proses produksi.\n\n******\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -79538,10 +79647,11 @@
       "author": "Kafka Asagiri",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 1,
-      "latestVolume": 1,
+      "totalVolumes": 2,
+      "latestVolume": 2,
       "availableVolumes": [
-        1
+        1,
+        2
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/i5-ax-i-xa.jpg",
       "description": "7 tahun sebelum “masa kini”, di mana Agensi Detektif Bersenjata dan Port Mafia bertarung dengan sengit di Kota Yokohama. Seorang anak laki-laki anggota Port Mafia, Osamu Dazai, diperintah bosnya, Ogai Mori, untuk menyelidiki rumor aneh yang disebut “Arabahaki”.\n\nDi tengah penyelidikan tersebut, ia bertemu dengan raja dari kelompok bernama “Domba” yang hanya terdiri dari anak-anak di bawah umur, yakni Chuya Nakahara.\n\nOsamu Dazai dan Chuya Nakahara...\n\nKisah awal dari 2 orang yang kelak akan dikenal sebagai “Hitam Kembar”.\n\nKeunggulan:\n\n•\tSpin-off dari seri Bungo Stray Dogs, yang menceritakan tentang Dazai dan Chuya saat mereka berusia 15 tahun.\n\n•\tDazai dan Chuya adalah dua karakter terpopuler dalam seri Bungo Stray Dogs\n\n•\tArtstyle yang detail dan bagus.\n\n•\tDigambar langsung oleh komikus orisinalnya\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -80979,10 +81089,11 @@
       "author": "Harunadon",
       "type": "LIGHT_NOVEL",
       "status": "ONGOING",
-      "totalVolumes": 1,
-      "latestVolume": 1,
+      "totalVolumes": 2,
+      "latestVolume": 2,
       "availableVolumes": [
-        1
+        1,
+        2
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-oelnvlfoa.jpeg",
       "description": "Musim panas di usia 16 tahun. Awal dari masa muda.\n\nHari ketika kondisi tidak baik, malas piket, atau ada ujian. Aku adalah replika yang dipanggil untuk menggantikannya di hari ia tidak ingin ke sekolah. Kehidupanku yang digunakan untuk menggantikan yang asli, tanpa bisa bergerak bebas. Aku yang seharusnya kosong dan kehidupanku yang seharusnya seperti itu tiba-tiba berubah.\n\nAku … jatuh cinta pada laki-laki itu.\n\nAku menata rambutku menjadi kucir setengah agar ia bisa mengenaliku. Kami menghabiskan waktu bersama dan juga berjanji untuk bertemu besok, lusa, dan seterusnya.\n\nHati yang sedang jatuh cinta ini … hanya milikku seorang.\n\nKeunggulan Buku:\n\n- Mengambil konsep doppelganger yang menarik.\n\n- Kisah romansa  masa muda yang dibalut dengan konsep yang tidak biasa sehingga jalan cerita sulit ditebak.\n\n- Karakter yang unik serta cerita yang hangat dan mengharukan.\n\n- Karya pemenang Hadiah Utama dalam Penghargaan Novel Dengeki ke-29.\n\n- Mendapat adaptasi anime yang tayang pada bulan April 2026.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -84949,10 +85060,11 @@
       "author": "kurumuakumu ",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 1,
-      "latestVolume": 1,
+      "totalVolumes": 2,
+      "latestVolume": 2,
       "availableVolumes": [
-        1
+        1,
+        2
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/4l82cxovo9.jpeg",
       "description": "•\tKasus hilangnya 5 siswa SMP\n\n•\tKasus pembantaian brutal 1 kelas SD XX (efek darahnya dipake)\n\n•\tKasus kecelakaan mobil yang melaju tak terkendali, menewaskan 2 orang\n\nDi tiap lokasi kejadian ditemukan huruf “N” yang ditinggalkan.\n\nMasyarakat pun diguncang oleh legenda urban yang disebut-sebut sebagai dalang di balik semua kasus tersebut. “N”, suatu organisasi keagamaan yang seharusnya telah runtuh 2000 tahun lalu.\n\nSebenarnya, apakah “N” itu?\n\nKeunggulan:\n\n•\tMemiliki nuansa horor misteri yang cocok untuk penggemar Tentang Suatu Tempat di Wilayah Kinki.\n\n•\tMenghadirkan misteri “N” dan serangkaian kejadian aneh yang saling berkaitan.\n\n•\tCerita penuh teka-teki, clue, dan plot twist yang mengajak pembaca ikut memecahkan misterinya.\n\n•\tMenawarkan horor psikologis yang unsettling, bukan sekadar adegan mengejutkan.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -330408,12 +330520,598 @@
     },
     {
       "id": "snap_pub_i_want_to_end_this_love_game_05_init",
+      "bookId": "pub_i_want_to_end_this_love_game_04",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kariage_kun_65_2_init",
+      "bookId": "pub_kariage_kun_65",
+      "price": 20000,
+      "currentPrice": 20000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_10_1_init",
+      "bookId": "pub_mob_psycho_100_10",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_128_1_init",
+      "bookId": "pub_lc_fight_ippo_128",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_130_1_init",
+      "bookId": "pub_level_comic_fight_ippo_130",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_new_kobochan_40_1_init",
+      "bookId": "pub_new_kobochan_40",
+      "price": 25000,
+      "currentPrice": 25000,
+      "originalPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_who_killed_the_brave_chapter_of_the_brave_special_set_init",
+      "bookId": "pub_light_novel_who_killed_the_brave_chapter_of_the_brave",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-12-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_9_special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_9",
+      "price": 295000,
+      "currentPrice": 295000,
+      "originalPrice": 295000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_reliving_my_life_to_save_you_vol_1_special_set_init",
+      "bookId": "pub_reliving_my_life_to_save_you_vol_1",
+      "price": 159000,
+      "currentPrice": 159000,
+      "originalPrice": 159000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 365000,
+      "currentPrice": 365000,
+      "originalPrice": 365000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 265000,
+      "currentPrice": 265000,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_in_the_clear_moonlit_dusk_5_special_set_init",
+      "bookId": "pub_in_the_clear_moonlit_dusk_5",
+      "price": 221000,
+      "currentPrice": 221000,
+      "originalPrice": 260000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set_init",
+      "bookId": "pub_tentang_kita_yang_bertolak_belakang_vol_8",
+      "price": 225250,
+      "currentPrice": 225250,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_5_special_set_init",
+      "bookId": "pub_phantom_busters_vol_5",
+      "price": 229500,
+      "currentPrice": 229500,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set_init",
+      "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai",
+      "price": 233750,
+      "currentPrice": 233750,
+      "originalPrice": 275000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_8__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_8",
+      "price": 250750,
+      "currentPrice": 250750,
+      "originalPrice": 295000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-07-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 385000,
+      "currentPrice": 385000,
+      "originalPrice": 385000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 285000,
+      "currentPrice": 285000,
+      "originalPrice": 285000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
+      "price": 178000,
+      "currentPrice": 178000,
+      "originalPrice": 178000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_28__special_set_init",
+      "bookId": "pub_blue_lock_28",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set_init",
+      "bookId": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_7__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_7",
+      "price": 230000,
+      "currentPrice": 230000,
+      "originalPrice": 230000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_1__special_set_init",
+      "bookId": "pub_phantom_busters_vol_1",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_27__special_set_init",
+      "bookId": "pub_blue_lock_27",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_26__special_set_init",
+      "bookId": "pub_blue_lock_26",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_4__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_4",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_4__special_set_init",
+      "bookId": "pub_gokurakugai_vol_4",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-11-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_4_1793834634",
+      "bookId": "pub_gokurakugai_vol_4",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-04",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_25__special_set_init",
+      "bookId": "pub_blue_lock_25",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_who_killed_the_brave__special_set_init",
+      "bookId": "pub_light_novel_who_killed_the_brave",
+      "price": 210000,
+      "currentPrice": 210000,
+      "originalPrice": 210000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_1__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_1",
+      "price": 220000,
+      "currentPrice": 220000,
+      "originalPrice": 220000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-08-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_3__special_set_init",
+      "bookId": "pub_gokurakugai_vol_3",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 350000,
+      "currentPrice": 350000,
+      "originalPrice": 350000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 212500,
+      "currentPrice": 212500,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_1___special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_1",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_6__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_6",
+      "price": 212500,
+      "currentPrice": 212500,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_classroom_of_the_elite_03__special_set_init",
+      "bookId": "pub_light_novel_classroom_of_the_elite_03",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-06-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_129_1_init",
+      "bookId": "pub_lc_fight_ippo_129",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_136_1_init",
+      "bookId": "pub_level_comic_fight_ippo_136",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_137_1_init",
+      "bookId": "pub_level_comic_fight_ippo_137",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_138_1_init",
+      "bookId": "pub_level_comic_fight_ippo_138",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_135_1_init",
+      "bookId": "pub_level_comic_fight_ippo_135",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_01_1_init",
+      "bookId": "pub_mob_psycho_100_01",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_2_init",
+      "bookId": "pub_mob_psycho_100_02",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_11_1_init",
+      "bookId": "pub_mob_psycho_100_11",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_9_init",
+      "bookId": "pub_mob_psycho_100_9",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_13_1_init",
+      "bookId": "pub_mob_psycho_100_13",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_89_1_init",
+      "bookId": "pub_ruler_of_the_land_89",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_01_init",
+      "bookId": "pub_one_piece_01_1",
+      "price": 16000,
+      "currentPrice": 16000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-06-01",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_init",
+      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_1",
+      "price": 21500,
+      "currentPrice": 21500,
+      "originalPrice": 43000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-11-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_56_init",
+      "bookId": "pub_lc_giant_killing_56",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_init",
+      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_2",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-11-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kiteretsu_daihyakka_03_1793856685",
+      "bookId": "pub_kiteretsu_daihyakka_03",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sakamoto_days_24_1793856685",
+      "bookId": "pub_sakamoto_days_24",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_clover_29_1793856685",
+      "bookId": "pub_black_clover_29",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_i_want_to_end_this_love_game_05_init",
       "bookId": "pub_i_want_to_end_this_love_game_05",
       "price": 45000,
       "currentPrice": 45000,
       "originalPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-12",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kagurabachi_07_1793856685",
+      "bookId": "pub_kagurabachi_07",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_vagabond_bind_up_vol_03_1793856685",
+      "bookId": "pub_vagabond_bind_up_vol_03",
+      "price": 138000,
+      "currentPrice": 138000,
+      "originalPrice": 138000,
+      "previousPrice": 124200,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-05",
       "source": "gramedia_api"
     },
     {
@@ -330467,6 +331165,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_akasha_schoollive_vol_1_1793856685",
+      "bookId": "pub_akasha_schoollive_vol_1",
+      "price": 55000,
+      "currentPrice": 55000,
+      "originalPrice": 55000,
+      "previousPrice": 41250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_light_novel_who_killed_the_brave_chapter_of_the_brave_special_set_init",
       "bookId": "pub_light_novel_who_killed_the_brave_chapter_of_the_brave_special_set",
       "price": 270000,
@@ -330484,6 +331193,46 @@
       "originalPrice": 295000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_even_a_replica_can_fall_in_love_2_init",
+      "bookId": "pub_light_novel_even_a_replica_can_fall_in_love_2",
+      "price": 98000,
+      "currentPrice": 98000,
+      "originalPrice": 98000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_dazai_chuya_usia_15_tahun_vol_2_init",
+      "bookId": "pub_bungo_stray_dogs_dazai_chuya_usia_15_tahun_vol_2",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_34_init",
+      "bookId": "pub_blue_lock_34",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_n_vol_2_init",
+      "bookId": "pub_n_vol_2",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-05",
       "source": "gramedia_api"
     },
     {
@@ -330564,6 +331313,17 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_12_1793856685",
+      "bookId": "pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_12",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-05",
       "source": "gramedia_api"
     },
     {
@@ -330684,17 +331444,6 @@
       "originalPrice": 250000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2025-11-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_gokurakugai_vol_4_1793834634",
-      "bookId": "pub_gokurakugai_vol_4",
-      "price": 65000,
-      "currentPrice": 65000,
-      "originalPrice": 65000,
-      "previousPrice": 65000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-11-04",
       "source": "gramedia_api"
     },
     {
@@ -330935,6 +331684,17 @@
       "originalPrice": 80000,
       "availability": "AVAILABLE",
       "observedAt": "2021-11-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_23_1793856685",
+      "bookId": "pub_detektif_conan_premium_23",
+      "price": 48750,
+      "currentPrice": 48750,
+      "originalPrice": 65000,
+      "previousPrice": 32500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-05",
       "source": "gramedia_api"
     }
   ]
