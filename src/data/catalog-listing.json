@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-07T04:59:35.000Z",
+  "lastUpdated": "2026-11-07T10:51:14.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -368,7 +368,7 @@
       "originalPrice": 65000,
       "releaseDate": "2026-09-08",
       "isWednesdayRelease": false,
-      "seriesId": "ser_tentang-suatu-tempat-di-wilayah-kinki",
+      "seriesId": "ser_tentang-suatu-tempat-di-wilayah-kinki-manga",
       "seriesName": "Tentang Suatu Tempat di Wilayah Kinki",
       "isBindUp": false,
       "bindUpKind": null,
@@ -2744,7 +2744,7 @@
       "originalPrice": 65000,
       "releaseDate": "2026-08-13",
       "isWednesdayRelease": false,
-      "seriesId": "ser_tentang-ziarah-yang-terkutuk",
+      "seriesId": "ser_tentang-ziarah-yang-terkutuk-manga",
       "seriesName": "Tentang Ziarah yang Terkutuk",
       "isBindUp": false,
       "bindUpKind": null,
@@ -14167,7 +14167,7 @@
       "originalPrice": 65000,
       "releaseDate": "2026-05-07",
       "isWednesdayRelease": false,
-      "seriesId": "ser_tentang-suatu-tempat-di-wilayah-kinki",
+      "seriesId": "ser_tentang-suatu-tempat-di-wilayah-kinki-manga",
       "seriesName": "Tentang Suatu Tempat di Wilayah Kinki",
       "isBindUp": false,
       "bindUpKind": null,
@@ -25342,7 +25342,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/64or-ca1is.jpg",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "currentPrice": 55250,
       "originalPrice": 65000,
       "releaseDate": "2025-10-31",
@@ -26374,7 +26374,7 @@
       "originalPrice": 65000,
       "releaseDate": "2025-10-13",
       "isWednesdayRelease": false,
-      "seriesId": "ser_tentang-suatu-tempat-di-wilayah-kinki",
+      "seriesId": "ser_tentang-suatu-tempat-di-wilayah-kinki-manga",
       "seriesName": "Tentang Suatu Tempat di Wilayah Kinki",
       "isBindUp": false,
       "bindUpKind": null,
@@ -49522,8 +49522,8 @@
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/1/29/p8pfqfmk9g7zsxtnwhgpwq.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 32180,
-      "originalPrice": 49500,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
       "releaseDate": "2023-02-10",
       "isWednesdayRelease": false,
       "seriesId": "ser_the-cold-sato-is-only-sweet-to-me",
@@ -61644,7 +61644,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786020433448_detektif-conan-91.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 16000,
       "originalPrice": 32000,
       "releaseDate": "2017-07-12",
@@ -63323,7 +63323,7 @@
       "originalPrice": 65000,
       "releaseDate": "2026-09-16",
       "isWednesdayRelease": true,
-      "seriesId": "ser_tentang-ziarah-yang-terkutuk",
+      "seriesId": "ser_tentang-ziarah-yang-terkutuk-manga",
       "seriesName": "Tentang Ziarah yang Terkutuk",
       "isBindUp": false,
       "bindUpKind": null,
@@ -72202,7 +72202,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/3nataa8gkt.jpg",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 50000,
+      "currentPrice": 37500,
       "originalPrice": 50000,
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
@@ -76980,7 +76980,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/722010124_Cov_Conan_Suichi_BW_1.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 32500,
       "originalPrice": 65000,
       "releaseDate": "2022-02-23",
@@ -77710,7 +77710,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x60e6ohz7i.jpg",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 45000,
+      "currentPrice": 36000,
       "originalPrice": 45000,
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
@@ -78264,6 +78264,87 @@
       ],
       "classificationStatus": "ACCEPTED",
       "gramediaUrl": "https://www.gramedia.com/products/light-novel-who-killed-the-brave-chapter-of-the-brave"
+    },
+    {
+      "id": "pub_novel_tentang_suatu_tempat_di_wilayah_kinki_new_cover",
+      "slug": "novel-tentang-suatu-tempat-di-wilayah-kinki-new-cover",
+      "title": "Novel: Tentang Suatu Tempat Di Wilayah Kinki - New Cover",
+      "volume": null,
+      "category": "Light Novel",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/heg---0t93.jpeg",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "currentPrice": 129000,
+      "originalPrice": 129000,
+      "releaseDate": "2026-10-26",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_tentang-suatu-tempat-di-wilayah-kinki-ln",
+      "seriesName": "Tentang Suatu Tempat di Wilayah Kinki (Novel)",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Sesuji"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/novel-tentang-suatu-tempat-di-wilayah-kinki-new-cover"
+    },
+    {
+      "id": "pub_tentang_suatu_tempat_di_wilayah_kinki",
+      "slug": "tentang-suatu-tempat-di-wilayah-kinki",
+      "title": "Tentang Suatu Tempat di Wilayah Kinki",
+      "volume": null,
+      "category": "Light Novel",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/i-cvlu7u7t.png",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "currentPrice": 129000,
+      "originalPrice": 129000,
+      "releaseDate": "2025-09-15",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_tentang-suatu-tempat-di-wilayah-kinki-ln",
+      "seriesName": "Tentang Suatu Tempat di Wilayah Kinki (Novel)",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Sesuji"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/tentang-suatu-tempat-di-wilayah-kinki"
+    },
+    {
+      "id": "pub_novel_tentang_ziarah_yang_terkutuk",
+      "slug": "novel-tentang-ziarah-yang-terkutuk",
+      "title": "Novel: Tentang Ziarah yang Terkutuk",
+      "volume": null,
+      "category": "Light Novel",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/it7ee1--9c.jpg",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "currentPrice": 108000,
+      "originalPrice": 108000,
+      "releaseDate": "2026-02-13",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_tentang-ziarah-yang-terkutuk-ln",
+      "seriesName": "Tentang Ziarah yang Terkutuk (Novel)",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Sesuji"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/novel-tentang-ziarah-yang-terkutuk"
     }
   ],
   "series": [
@@ -87833,8 +87914,8 @@
       "description": "Suzuki yang ceria dan penuh energi, tapi selalu memikirkan pandangan sekitar, sedang memendam cinta sepihak pada Tani, cowok pendiam yang berani menyuarakan pendapatnya. Namun karena terlalu memikirkan orang lain, dia nggak bisa bersikap biasa dan malah terus mendekati Tani dengan cara-cara yang aneh. Tetapi suatu hari, dia memberanikan diri mengajaknya pulang bareng!\n\nKomedi romantis realistis yang akan membuat anda berempati, dimulai!\n\nKeunggulan Buku:\n\nMengangkat tema komedi romantis realistis yang dapat membuat pembaca berempati.\n\nPeringkat 3 dalam 16th Manga Taisho.\n\nKisah ini menekankan menyukai dan menghormati kepribadian satu sama lain tanpa berusaha mengubah pasangannya, meskipun mereka sangat berlawanan.\n\nFokus cerita yang luas dengan menyoroti perkembangan hubungan pasangan lain juga sehingga menambah kedalaman dan variasi dalam tema romansa.\n\nMendapat 1 musim adaptasi animasi di tahun 2026.\n\n******\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
-      "id": "ser_tentang-suatu-tempat-di-wilayah-kinki",
-      "slug": "tentang-suatu-tempat-di-wilayah-kinki",
+      "id": "ser_tentang-suatu-tempat-di-wilayah-kinki-manga",
+      "slug": "tentang-suatu-tempat-di-wilayah-kinki-manga",
       "name": "Tentang Suatu Tempat di Wilayah Kinki",
       "originalTitle": "Tentang Suatu Tempat di Wilayah Kinki",
       "publisherId": "pub_pgi",
@@ -87853,8 +87934,24 @@
       "description": "Teman saya, Ozawa, menghilang. Ia adalah seorang editor majalah okultisme, yang sedang meliput kisah horor yang berhubungan dengan daerah bernama “●●●●●” sebelum menghilang.  Saat menelusuri jejaknya melalui dokumen-dokumen yang telah ia kumpulkan (seperti kutipan artikel majalah lampau, pengalaman aneh pembaca, serta posting di forum internet), keterkaitan tersembunyi di antara kisah-kisah horor yang sebelumnya dianggap tidak saling berhubungan, mulai terlihat...\n\nKeunggulan Buku:\n\nKomik genre horor yang disajikan dengan gaya mockumentary.\n\nMerupakan adaptasi dari novel dengan judul yang sama, yang memenangkan peringkat pertama pada penghargaan “Kono Horror ga Sugoi!” di tahun 2024.\n\nSudah diadaptasi ke live-action dan tayang di bioskop Jepang pada Agustus 2025.\n\nMisteri yang disajikan menarik dan bisa mengajak pembaca untuk ikut berspekulasi.\n\n******\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
-      "id": "ser_tentang-ziarah-yang-terkutuk",
-      "slug": "tentang-ziarah-yang-terkutuk",
+      "id": "ser_tentang-suatu-tempat-di-wilayah-kinki-ln",
+      "slug": "tentang-suatu-tempat-di-wilayah-kinki-ln",
+      "name": "Tentang Suatu Tempat di Wilayah Kinki (Novel)",
+      "originalTitle": "Tentang Suatu Tempat di Wilayah Kinki (Novel)",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Sesuji",
+      "type": "LIGHT_NOVEL",
+      "status": "ONGOING",
+      "totalVolumes": 2,
+      "latestVolume": 1,
+      "availableVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/heg---0t93.jpeg",
+      "description": "TEMAN SAYA MENGHILANG.\n\nJika Anda memiliki informasi, mohon hubungi saya.\n\nTeman saya adalah editor baru yang sempat memegang proyek untuk edisi khusus sebuah majalah okultisme. Karena tugas tersebut, ia mengumpulkan dokumen dan materi dari berbagai sumber hingga akhirnya menyadari keanehan yang tersembunyi di suatu tempat di wilayah Kinki ….\n\nBuku ini merangkum berbagai tulisan dari sejumlah media yang ia dan saya kumpulkan. Sebagian besar dari tulisan di dalamnya memiliki keterkaitan dengan “suatu tempat” di wilayah Kinki.\n\nOleh karena itu, saya butuh bantuan. Jika Anda memiliki informasi, mohon hubungi saya.\n\nKeunggulan Buku:\n\n- Salah satu novel horor mega best seller di Jepang yang sudah terjual sebanyak 800.000 eksemplar.\n\n- Novel genre horor mockumentary di mana batas antara fiksi dan nyata terasa kabur, membuat pembaca seolah ikut masuk ke dalam cerita.\n\n- Misteri yang disajikan menarik dan bisa mengajak pembaca untuk ikut berspekulasi.\n\n- Terdapat dokumen berupa foto-foto penunjang dari cerita yang ada di dalam novel ini.\n\n- Memiliki adaptasi film yang baru dirilis di tahun 2025 dan juga komik.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
+    },
+    {
+      "id": "ser_tentang-ziarah-yang-terkutuk-manga",
+      "slug": "tentang-ziarah-yang-terkutuk-manga",
       "name": "Tentang Ziarah yang Terkutuk",
       "originalTitle": "Tentang Ziarah yang Terkutuk",
       "publisherId": "pub_pgi",
@@ -87870,6 +87967,22 @@
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/i--nn5u30c.jpg",
       "description": "Kobayashi, seorang editor lepas, berencana untuk membuat fanbook “Channel Occult Yankee” yang dikelola Youtuber bernama Chanike (alias Ikeda). Artikel liputan tambahan tentang tempat angker yang pernah dikunjungi Ikeda seharusnya hanyalah “bualan” semata, tapi…\n\nKeunggulan\n\n- Komik genre horor yang penulisnya sama dengan Tentang Suatu Tempat di Wilayah Kinki, yaitu Sesuji.\n\n- Merupakan adaptasi dari novel best-seller dengan judul yang sama dan sudah diterbitkan di PGI.\n\n- Akan diadaptasi ke live-action.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
+    },
+    {
+      "id": "ser_tentang-ziarah-yang-terkutuk-ln",
+      "slug": "tentang-ziarah-yang-terkutuk-ln",
+      "name": "Tentang Ziarah yang Terkutuk (Novel)",
+      "originalTitle": "Tentang Ziarah yang Terkutuk (Novel)",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Sesuji",
+      "type": "LIGHT_NOVEL",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/it7ee1--9c.jpg",
+      "description": "Kobayashi, seorang editor lepas, mengajukan sebuah proposal ke penerbit berupa rencana pembuatan fanbook untuk kanal Occult Yankee milik YouTuber penjelajah tempat angker, Chanike (alias Ikeda).\n\nNamun, jumlah subscriber kanal Occult Yankee masih dirasa kurang meyakinkan sehingga persetujuan untuk proposal itu masih sulit untuk didapatkan. Demi menutupi kekurangan tersebut, Kobayashi dan Ikeda memutuskan untuk membuat konten fanbook yang lebih menarik. Mereka pun mengumpulkan data tambahan dari tempat-tempat angker yang pernah dibahas dalam video Chanike sebelumnya.\n\nBerdasarkan informasi yang me­re­­ka kumpulkan dari internet dan sumber lain, Kobayashi dan Ikeda mulai mengarang berbagai teori yang sekiranya akan disukai oleh pembaca.\n\nKeunggulan Buku:\n\nNovel dengan tema misteri yang dikarang oleh Sesuji, penulis novel Tentang Suatu Tempat di Wilayah Kinki\n\nMengangkat tema horror misteri yang disukai pembaca Indonesia.\n\nAlur ceritanya dikemas kompleks dan penuh teka-teki, dijamin akan membuat pembaca penasaran.\n\nSalah satu buku best seller dari penerbit Kadokawa Jepang\n\n******\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan. Membaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi. Pilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca. Temukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik. Bergabunglah dalam kelompok membaca atau forum literasi. Diskusikan buku yang Anda baca dan dapatkan rekomendasi dari sesama pembaca. Buat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.\n\nLibatkan keluarga dalam kegiatan membaca. Bacakan cerita untuk anak-anak atau ajak mereka membaca bersama. Ini menciptakan ikatan keluarga yang erat melalui kegiatan positif. Jangan ragu untuk menjelajahi genre baru. Terkadang, kejutan terbaik datang dari buku yang tidak pernah Anda bayangkan akan Anda nikmati. Manfaatkan teknologi dengan membaca buku digital atau bergabung dalam komunitas literasi online. Ini membuka peluang untuk terhubung dengan pembaca dari seluruh dunia."
     },
     {
       "id": "ser_the-ancient-magus-bride",
@@ -334695,7 +334808,7 @@
     },
     {
       "id": "snap_pub_i_want_to_end_this_love_game_05_init",
-      "bookId": "pub_i_want_to_end_this_love_game_05",
+      "bookId": "pub_i_want_to_end_this_love_game_04",
       "price": 45000,
       "currentPrice": 45000,
       "originalPrice": 45000,
@@ -334712,6 +334825,548 @@
       "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kariage_kun_65_2_init",
+      "bookId": "pub_kariage_kun_65",
+      "price": 20000,
+      "currentPrice": 20000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_10_1_init",
+      "bookId": "pub_mob_psycho_100_10",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_128_1_init",
+      "bookId": "pub_lc_fight_ippo_128",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_130_1_init",
+      "bookId": "pub_level_comic_fight_ippo_130",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_new_kobochan_40_1_init",
+      "bookId": "pub_new_kobochan_40",
+      "price": 25000,
+      "currentPrice": 25000,
+      "originalPrice": 25000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_who_killed_the_brave_chapter_of_the_brave_special_set_init",
+      "bookId": "pub_light_novel_who_killed_the_brave_chapter_of_the_brave",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-12-16",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_9_special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_9",
+      "price": 295000,
+      "currentPrice": 295000,
+      "originalPrice": 295000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_reliving_my_life_to_save_you_vol_1_special_set_init",
+      "bookId": "pub_reliving_my_life_to_save_you_vol_1",
+      "price": 159000,
+      "currentPrice": 159000,
+      "originalPrice": 159000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 365000,
+      "currentPrice": 365000,
+      "originalPrice": 365000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8",
+      "price": 265000,
+      "currentPrice": 265000,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-10-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_in_the_clear_moonlit_dusk_5_special_set_init",
+      "bookId": "pub_in_the_clear_moonlit_dusk_5",
+      "price": 221000,
+      "currentPrice": 221000,
+      "originalPrice": 260000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set_init",
+      "bookId": "pub_tentang_kita_yang_bertolak_belakang_vol_8",
+      "price": 225250,
+      "currentPrice": 225250,
+      "originalPrice": 265000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_5_special_set_init",
+      "bookId": "pub_phantom_busters_vol_5",
+      "price": 229500,
+      "currentPrice": 229500,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-09-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set_init",
+      "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai",
+      "price": 233750,
+      "currentPrice": 233750,
+      "originalPrice": 275000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-08-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_8__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_8",
+      "price": 250750,
+      "currentPrice": 250750,
+      "originalPrice": 295000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-07-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 385000,
+      "currentPrice": 385000,
+      "originalPrice": 385000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
+      "price": 285000,
+      "currentPrice": 285000,
+      "originalPrice": 285000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
+      "price": 178000,
+      "currentPrice": 178000,
+      "originalPrice": 178000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-04-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_28__special_set_init",
+      "bookId": "pub_blue_lock_28",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set_init",
+      "bookId": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_7__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_7",
+      "price": 230000,
+      "currentPrice": 230000,
+      "originalPrice": 230000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-01-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_phantom_busters_vol_1__special_set_init",
+      "bookId": "pub_phantom_busters_vol_1",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_27__special_set_init",
+      "bookId": "pub_blue_lock_27",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_26__special_set_init",
+      "bookId": "pub_blue_lock_26",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_4__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_4",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-12-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_4__special_set_init",
+      "bookId": "pub_gokurakugai_vol_4",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-11-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_25__special_set_init",
+      "bookId": "pub_blue_lock_25",
+      "price": 270000,
+      "currentPrice": 270000,
+      "originalPrice": 270000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_who_killed_the_brave__special_set_init",
+      "bookId": "pub_light_novel_who_killed_the_brave",
+      "price": 210000,
+      "currentPrice": 210000,
+      "originalPrice": 210000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-09-02",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_beast_1__special_set_init",
+      "bookId": "pub_bungo_stray_dogs__beast_1",
+      "price": 220000,
+      "currentPrice": 220000,
+      "originalPrice": 220000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-08-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_rezero__starting_life_in_another_world_04_1794027575",
+      "bookId": "pub_rezero__starting_life_in_another_world_04",
+      "price": 91800,
+      "currentPrice": 91800,
+      "originalPrice": 108000,
+      "previousPrice": 83300,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_3__special_set_init",
+      "bookId": "pub_gokurakugai_vol_3",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 350000,
+      "currentPrice": 350000,
+      "originalPrice": 350000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set_init",
+      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5",
+      "price": 212500,
+      "currentPrice": 212500,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-30",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_summer_hikaru_died_1___special_set_init",
+      "bookId": "pub_light_novel_the_summer_hikaru_died_1",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_summer_hikaru_died_6__special_set_init",
+      "bookId": "pub_the_summer_hikaru_died_6",
+      "price": 212500,
+      "currentPrice": 212500,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-07-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_classroom_of_the_elite_03__special_set_init",
+      "bookId": "pub_light_novel_classroom_of_the_elite_03",
+      "price": 250000,
+      "currentPrice": 250000,
+      "originalPrice": 250000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2025-06-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_lc_fight_ippo_129_1_init",
+      "bookId": "pub_lc_fight_ippo_129",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_136_1_init",
+      "bookId": "pub_level_comic_fight_ippo_136",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_137_1_init",
+      "bookId": "pub_level_comic_fight_ippo_137",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_138_1_init",
+      "bookId": "pub_level_comic_fight_ippo_138",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_fight_ippo_135_1_init",
+      "bookId": "pub_level_comic_fight_ippo_135",
+      "price": 35000,
+      "currentPrice": 35000,
+      "originalPrice": 35000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_01_1_init",
+      "bookId": "pub_mob_psycho_100_01",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_2_init",
+      "bookId": "pub_mob_psycho_100_02",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_11_1_init",
+      "bookId": "pub_mob_psycho_100_11",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-21",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_vol_9_init",
+      "bookId": "pub_mob_psycho_100_9",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_mob_psycho_100_13_1_init",
+      "bookId": "pub_mob_psycho_100_13",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_ruler_of_the_land_89_1_init",
+      "bookId": "pub_ruler_of_the_land_89",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-02-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_01_init",
+      "bookId": "pub_one_piece_01_1",
+      "price": 16000,
+      "currentPrice": 16000,
+      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2021-06-01",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_init",
+      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_1",
+      "price": 21500,
+      "currentPrice": 21500,
+      "originalPrice": 43000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2022-11-26",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_giant_killing_56_init",
+      "bookId": "pub_lc_giant_killing_56",
+      "price": 10000,
+      "currentPrice": 10000,
+      "originalPrice": 10000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-05-29",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_init",
+      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_2",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 80000,
+      "availability": "AVAILABLE",
+      "observedAt": "2021-11-03",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_chinmi_other_story_chinmi_seiren_1794048673",
+      "bookId": "pub_chinmi_other_story_chinmi_seiren",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_i_want_to_end_this_love_game_05_init",
+      "bookId": "pub_i_want_to_end_this_love_game_05",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-12",
       "source": "gramedia_api"
     },
     {
@@ -334765,6 +335420,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_kayachan_nggak_menakutkan_kok_vol_1_1794048673",
+      "bookId": "pub_kayachan_nggak_menakutkan_kok_vol_1",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_light_novel_who_killed_the_brave_chapter_of_the_brave_special_set_init",
       "bookId": "pub_light_novel_who_killed_the_brave_chapter_of_the_brave_special_set",
       "price": 270000,
@@ -334782,6 +335448,16 @@
       "originalPrice": 295000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-14",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_novel_tentang_suatu_tempat_di_wilayah_kinki_new_cover_init",
+      "bookId": "pub_novel_tentang_suatu_tempat_di_wilayah_kinki_new_cover",
+      "price": 129000,
+      "currentPrice": 129000,
+      "originalPrice": 129000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-10-26",
       "source": "gramedia_api"
     },
     {
@@ -334895,6 +335571,16 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_novel_tentang_ziarah_yang_terkutuk_init",
+      "bookId": "pub_novel_tentang_ziarah_yang_terkutuk",
+      "price": 108000,
+      "currentPrice": 108000,
+      "originalPrice": 108000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-02-13",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_blue_lock_28__special_set_init",
       "bookId": "pub_blue_lock_28__special_set",
       "price": 270000,
@@ -334985,6 +335671,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_wistoria_wand_and_sword_vol_07_1794048673",
+      "bookId": "pub_wistoria_wand_and_sword_vol_07",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 65000,
+      "previousPrice": 55250,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_blue_lock_25__special_set_init",
       "bookId": "pub_blue_lock_25__special_set",
       "price": 270000,
@@ -334992,6 +335689,16 @@
       "originalPrice": 270000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2025-09-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_tentang_suatu_tempat_di_wilayah_kinki_init",
+      "bookId": "pub_tentang_suatu_tempat_di_wilayah_kinki",
+      "price": 129000,
+      "currentPrice": 129000,
+      "originalPrice": 129000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-09-15",
       "source": "gramedia_api"
     },
     {
@@ -335012,17 +335719,6 @@
       "originalPrice": 220000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2025-08-26",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_rezero__starting_life_in_another_world_04_1794027575",
-      "bookId": "pub_rezero__starting_life_in_another_world_04",
-      "price": 91800,
-      "currentPrice": 91800,
-      "originalPrice": 108000,
-      "previousPrice": 83300,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-11-07",
       "source": "gramedia_api"
     },
     {
@@ -335226,6 +335922,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_detektif_conan_91_1794048673",
+      "bookId": "pub_detektif_conan_91",
+      "price": 16000,
+      "currentPrice": 16000,
+      "originalPrice": 32000,
+      "previousPrice": 16000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_init",
       "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first",
       "price": 40000,
@@ -335234,6 +335941,28 @@
       "availability": "AVAILABLE",
       "observedAt": "2021-11-03",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_shuichi_akai_selection_1794048673",
+      "bookId": "pub_detektif_conan_shuichi_akai_selection",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 32500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_cold_sato_is_only_sweet_to_me_02_1794048237",
+      "bookId": "pub_the_cold_sato_is_only_sweet_to_me_02",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "previousPrice": 32180,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-07",
+      "source": "gramedia_api_refresh"
     }
   ]
 }
