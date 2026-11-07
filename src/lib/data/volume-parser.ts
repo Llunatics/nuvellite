@@ -16,7 +16,7 @@ const EDITION_SUFFIX_REGEX =
   /\s*[\-–—:+]?\s*\b(?:Special Set|Complete Set|Birthday Set|Limited Edition|Deluxe Edition|Premium Edition|Bundling(?: Set)?|Box Set|Regular|Reguler|Bookpaper|Edisi Khusus|Merchandise|Merch|Bonus|Akrilik|Standee)\b.*$|\s*(?:[\-–—:+]\s*|\(\s*)(?:Tamat|End)\s*\)?\s*$/i;
 
 const PREFIX_REGEX =
-  /^(?:Akasha|LC|Level\s*Comics?|Light\s*Comics?|m&c!|Elex|Koloni|Qanza|Komik|Movie\s*Story)\s*[:：\-]\s*|^(?:A\s+Light\s*Novel|Manga|Light\s*Novel|Novel)\s*[:：\-]?\s*/i;
+  /^FS\s*-\s*|^(?:Akasha|LC|Level\s*Comics?|Light\s*Comics?|m&c!|Elex|Koloni|Qanza|Komik|Movie\s*Story)\s*[:：\-]\s*|^(?:A\s+Light\s*Novel|Manga|Light\s*Novel|Novel)\s*[:：\-]?\s*/i;
 
 export function parseTitleSmart(title: string): ParsedTitleResult {
   const raw = (title || '').trim();

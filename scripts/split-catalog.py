@@ -64,7 +64,10 @@ def split_catalog():
     for book in books:
         listing_book = {}
         for field in LISTING_BOOK_FIELDS:
-            if field in book and book[field] is not None:
+            # Keep explicit nulls (e.g. volume: null for one-shots): the
+            # frontend Book type is `number | null`, and dropping the key
+            # surfaces `undefined` instead, breaking that contract.
+            if field in book:
                 listing_book[field] = book[field]
         listing_books.append(listing_book)
 

@@ -86,13 +86,17 @@ _JUNK_TITLE_PATTERNS = [
     (re.compile(r'^(komik\s+)?satuan$', re.I), 'satuan placeholder'),
     (re.compile(r'^paket(\s|$)', re.I), 'paket bundle SKU'),
     (re.compile(r'hunter hat', re.I), 'hunter hat junk (witch hat atelier is exempt)'),
-    (re.compile(r'^fs-[a-z0-9]', re.I), 'flash-sale non-manga SKU'),
 ]
 
 
 def detect_junk_title(title):
     """Return junk reason or None. 'Witch Hat Atelier' and volume-range Paket are exempt."""
     t = (title or '').strip()
+    # An "FS-" (flash-sale) prefix alone is not junk: Gramedia also lists
+    # genuine manga/LN volumes only under FS- SKUs. Strip it and judge the
+    # underlying title; FS- non-manga is still caught by the known
+    # non-manga fragments and category gates in classify_book().
+    t = re.sub(r'^fs-\s*', '', t, flags=re.I)
     if re.search(r'witch hat atelier', t, re.I):
         return None
     if re.match(r'^paket\b', t, re.I) and re.search(r'\d+\s*-\s*\d+', t):

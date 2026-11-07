@@ -5,6 +5,7 @@ import { Book, Series, Publisher, CatalogData } from './types';
 import { getPriceSummary as getPriceSummaryInternal, initializePriceSnapshots } from './data/price-service';
 import { getRelatedReleases as getRelatedReleasesInternal, getYouMayAlsoLike as getYouMayAlsoLikeInternal } from './data/recommendation-service';
 import { groupBindUpBooks, BindUpSeriesGroup, normalizeBindUpSeriesName } from './data/bind-up';
+import { cleanStorySynopsis } from './data/synopsis-cleaner';
 
 // Listing data (lightweight, no synopsis/heavy fields) — used for grids, cards, search
 const listing = listingData as unknown as CatalogData;
@@ -67,7 +68,12 @@ export function getBookDetailBySlug(slug: string): Book | undefined {
     if (KNOWN_NON_MANGA_FRAGMENTS.some((frag) => titleLower.includes(frag))) return false;
     return true;
   });
-  return fullBooks.find((b) => b.slug.toLowerCase() === clean || b.id.toLowerCase() === clean);
+  const book = fullBooks.find((b) => b.slug.toLowerCase() === clean || b.id.toLowerCase() === clean);
+  if (!book) return undefined;
+  // Stored synopses carry build-time trailers (edition markers, selling
+  // points, spec blocks) that the UI strips at render; strip them here too
+  // so every consumer of detail data gets the clean story text.
+  return { ...book, synopsis: cleanStorySynopsis(book.synopsis) };
 }
 
 /**

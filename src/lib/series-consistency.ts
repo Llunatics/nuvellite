@@ -81,7 +81,6 @@ const JUNK_TITLE_PATTERNS: Array<{ pattern: RegExp; reason: string }> = [
   { pattern: /^(komik\s+)?satuan$/i, reason: 'satuan placeholder' },
   { pattern: /^paket$/i, reason: 'paket placeholder' },
   { pattern: /^paket\s+/i, reason: 'paket bundle SKU' },
-  { pattern: /^fs-[a-z0-9]/i, reason: 'flash-sale non-manga SKU' },
   {
     pattern: /hunter hat/i,
     reason: 'hunter hat junk (witch hat atelier is exempt)',
@@ -89,7 +88,11 @@ const JUNK_TITLE_PATTERNS: Array<{ pattern: RegExp; reason: string }> = [
 ];
 
 export function detectJunkTitle(title: string): string | null {
-  const t = (title || '').trim();
+  // An "FS-" (flash-sale) prefix alone is not junk: Gramedia also lists
+  // genuine manga/LN volumes only under FS- SKUs. Strip it and judge the
+  // underlying title; FS- non-manga is still caught by the known
+  // non-manga fragments and category gates in classifyProduct().
+  const t = (title || '').trim().replace(/^fs-\s*/i, '');
   if (/witch hat atelier/i.test(t)) return null;
   if (/^paket\b/i.test(t) && /\d+\s*-\s*\d+/.test(t)) return null;
   for (const { pattern, reason } of JUNK_TITLE_PATTERNS) {

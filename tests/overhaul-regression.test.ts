@@ -120,6 +120,26 @@ describe('Overhaul Regression Suite (Audit 2026-11-07)', () => {
     expect(seriesList.every((s) => s.type === 'LIGHT_NOVEL')).toBe(true);
   });
 
+  it('FS: flash-sale prefix alone is not junk — FS- manga parses clean, FS- non-manga still rejected', () => {
+    const lofty = parseTitleSmart('FS-Lofty Flower, Fall For Me!! 03 of 04 Bind Up Edition');
+    expect(lofty.volume).toBe(3);
+    expect(lofty.seriesName).not.toContain('FS');
+
+    const loftyRes = classifyProduct({
+      title: 'FS-Lofty Flower, Fall For Me!! 03',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+    });
+    expect(loftyRes.status).not.toBe('REJECTED');
+
+    const progRes = classifyProduct({
+      title: 'FS-Pemrograman Scratch untuk Pemula',
+      publisherId: 'pub_elex',
+      publisherName: 'Elex Media Komputindo',
+    });
+    expect(progRes.status).toBe('REJECTED');
+  });
+
   it('B-02: does not false-positive "Ultimate" mid-title when not an edition marker', () => {
     expect(detectBindUp('Ultimate Otaku Teacher Vol. 1')).toBeNull();
     expect(detectBindUp('Dragon Ball Ultimate 06')?.kind).toBe('ULTIMATE_EDITION');

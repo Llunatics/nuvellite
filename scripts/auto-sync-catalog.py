@@ -68,7 +68,7 @@ EDITION_SUFFIX_REGEX = re.compile(
 
 # Fixed: removed single `[a-zA-Z]` which stripped initial letters from titles like "V - Vendetta" or "X - 1999"
 PREFIX_REGEX = re.compile(
-    r'^(?:Akasha|LC|Level\s*Comics?|Light\s*Comics?|m&c!|Elex|Koloni|Qanza|Komik|Movie\s*Story)\s*[:：\-]\s*|^(?:A\s+Light\s*Novel|Manga|Light\s*Novel|Novel)\s*[:：\-]?\s*',
+    r'^(?:FS\s*-\s*)|^(?:Akasha|LC|Level\s*Comics?|Light\s*Comics?|m&c!|Elex|Koloni|Qanza|Komik|Movie\s*Story)\s*[:：\-]\s*|^(?:A\s+Light\s*Novel|Manga|Light\s*Novel|Novel)\s*[:：\-]?\s*',
     re.IGNORECASE
 )
 
