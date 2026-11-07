@@ -3,11 +3,10 @@ import urllib.parse
 import json
 import time
 import re
-from datetime import datetime, timezone
 from abc import ABC, abstractmethod
 
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 nuvellite-engine/2.0',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 nuvellite-engine/2.0',
     'Accept': 'application/vnd.gramedia.v3+json, application/json, */*;',
     'X-Grmd-Device-Type': 'desktop'
 }
@@ -21,11 +20,12 @@ MONTH_MAP = {
     'jun': '06', 'juni': '06', 'june': '06',
     'jul': '07', 'juli': '07', 'july': '07',
     'agu': '08', 'ags': '08', 'agustus': '08', 'aug': '08', 'august': '08',
-    'sep': '09', 'september': '09',
+    'sep': '09', 'september': '09', 'sept': '09',
     'okt': '10', 'oktober': '10', 'oct': '10', 'october': '10',
     'nov': '11', 'november': '11',
     'des': '12', 'desember': '12', 'dec': '12', 'december': '12'
 }
+
 
 class BaseAdapter(ABC):
     def __init__(self, publisher_id, publisher_name, publisher_short):
@@ -35,13 +35,13 @@ class BaseAdapter(ABC):
         self.base_api_url = 'https://api-service.gramedia.com/api/v2/public'
 
     def fetch_json(self, url, retries=3, timeout=8):
-        req = urllib.request.Request(url, headers=HEADERS)
         for attempt in range(retries):
             try:
+                req = urllib.request.Request(url, headers=HEADERS)
                 with urllib.request.urlopen(req, timeout=timeout) as resp:
                     if resp.status == 200:
                         return json.loads(resp.read().decode('utf-8'))
-            except Exception as e:
+            except Exception:
                 backoff = 0.2 * (attempt + 1)
                 time.sleep(backoff)
         return None
@@ -74,21 +74,31 @@ class BaseAdapter(ABC):
         if not date_str or not isinstance(date_str, str):
             return None
         date_str = date_str.strip()
-        if re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
-            return date_str
-        m = re.match(r'^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$', date_str)
+        # ISO date or ISO timestamp (YYYY-MM-DD...)
+        m_iso = re.match(r'^(\d{4}-\d{2}-\d{2})', date_str)
+        if m_iso:
+            return m_iso.group(1)
+        # DD Month YYYY (Indonesian or English)
+        m = re.match(r'^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})', date_str)
         if m:
             day = int(m.group(1))
             month_name = m.group(2).lower()
             year = int(m.group(3))
-            month_num = MONTH_MAP.get(month_name[:3], '01')
+            month_num = MONTH_MAP.get(month_name) or MONTH_MAP.get(month_name[:3], '01')
             return f'{year:04d}-{month_num}-{day:02d}'
+        # Month YYYY
         m2 = re.match(r'^([A-Za-z]+)\s+(\d{4})$', date_str)
         if m2:
             month_name = m2.group(1).lower()
             year = int(m2.group(2))
-            month_num = MONTH_MAP.get(month_name[:3], '01')
+            month_num = MONTH_MAP.get(month_name) or MONTH_MAP.get(month_name[:3], '01')
             return f'{year:04d}-{month_num}-15'
+        # DD/MM/YYYY or DD-MM-YYYY
+        m3 = re.match(r'^(\d{1,2})[/\-](\d{1,2})[/\-](\d{4})$', date_str)
+        if m3:
+            day, month, year = int(m3.group(1)), int(m3.group(2)), int(m3.group(3))
+            if 1 <= month <= 12 and 1 <= day <= 31:
+                return f'{year:04d}-{month:02d}-{day:02d}'
         return None
 
     def fetch_product_specs(self, slug):
@@ -96,11 +106,15 @@ class BaseAdapter(ABC):
         data = self.fetch_json(url)
         if data and data.get('data') and len(data['data']) > 0:
             first = data['data'][0]
-            specs = {s.get('label'): s.get('value') for s in first.get('specifications', [])}
+            specs = {
+                (s.get('label') or '').strip(): (s.get('value') or '').strip()
+                for s in (first.get('specifications') or [])
+                if s.get('label')
+            }
             img = None
             if first.get('image') and len(first['image']) > 0:
                 img = first['image'][0].get('image')
-            isbn = specs.get('ISBN') or ''
+            isbn = specs.get('ISBN') or specs.get('ISBN-13') or ''
             cleaned_isbn = re.sub(r'[^0-9Xx]', '', str(isbn))
             if not re.match(r'^(?:97[89]\d{10}|\d{9}[\dXx]|\d{10,13})$', cleaned_isbn):
                 cleaned_isbn = ''
@@ -110,15 +124,27 @@ class BaseAdapter(ABC):
             curr_p = final_p if final_p > 0 else slice_p
             orig_p = slice_p if slice_p > curr_p else curr_p
 
+            publisher_val = specs.get('Penerbit') or ''
+            imprint_val = specs.get('Imprint') or specs.get('Lini') or ''
+            author_val = specs.get('Penulis') or specs.get('Pengarang') or ''
+
             return {
-                'publisher': specs.get('Penerbit'),
+                'publisher': publisher_val,
+                'Penerbit': publisher_val,
+                'imprint': imprint_val,
+                'Imprint': imprint_val,
+                'author': author_val,
+                'Pengarang': author_val,
+                'Penulis': author_val,
+                'pages': specs.get('Jumlah Halaman') or '',
                 'releaseDate': self.parse_indonesian_date(specs.get('Tanggal Terbit')),
                 'isbn13': cleaned_isbn,
                 'price': curr_p,
                 'original_price': orig_p,
                 'coverImage': img,
                 'category_slugs': first.get('category_slugs', ''),
-                'is_oos': first.get('is_oos', False)
+                'is_oos': first.get('is_oos', False),
+                'raw_specs': specs,
             }
         return None
 

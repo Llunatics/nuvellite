@@ -1,6 +1,7 @@
 from .base_adapter import BaseAdapter
 import time
 
+
 class MCAdapter(BaseAdapter):
     def __init__(self):
         super().__init__('pub_mnc', 'm&c! Publishing', 'm&c!')
@@ -19,6 +20,7 @@ class MCAdapter(BaseAdapter):
             for it in items:
                 slug = it.get('slug')
                 if slug and slug not in seen_slugs:
+                    it['_from_vendor_feed'] = True
                     seen_slugs.add(slug)
                     products.append(it)
             total_page = (data.get('meta') or {}).get('total_page') or max_pages
@@ -27,12 +29,14 @@ class MCAdapter(BaseAdapter):
             page += 1
             time.sleep(0.05)
 
-        # Also discover Clover imprint light novel products
+        # Discover Clover imprint light novel products, tagged as search candidates
+        # so Step 4 strictly verifies their publisher spec before accepting.
         try:
             clover_items = self.search_products('clover', is_available_only=False, max_pages=5)
             for it in clover_items:
                 slug = it.get('slug')
                 if slug and slug not in seen_slugs:
+                    it['_from_global_search'] = True
                     seen_slugs.add(slug)
                     products.append(it)
         except Exception:
