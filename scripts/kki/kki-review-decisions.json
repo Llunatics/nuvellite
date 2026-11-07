@@ -1,0 +1,866 @@
+{
+ "ser_apa-salahnya-mencari-cinta-di-dungeon::Apa Salahnya Mencari Cinta di Dungeon?::LIGHT_NOVEL": {
+  "nuvelliteSeriesId": "ser_apa-salahnya-mencari-cinta-di-dungeon",
+  "kkiTitle": "Apa Salahnya Mencari Cinta di Dungeon?",
+  "kkiMedium": "LIGHT_NOVEL",
+  "decision": "MATCHED",
+  "reason": "author-mismatch",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_attack-on-titan-before-the-fall::Attack on Titan Before the Fall::MANGA": {
+  "nuvelliteSeriesId": "ser_attack-on-titan-before-the-fall",
+  "kkiTitle": "Attack on Titan Before the Fall",
+  "kkiMedium": "MANGA",
+  "decision": "MATCHED",
+  "reason": "author-mismatch",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_stand-by-me-doraemon::Stand by Me Doraemon::LIGHT_NOVEL": {
+  "nuvelliteSeriesId": "ser_stand-by-me-doraemon",
+  "kkiTitle": "Stand by Me Doraemon",
+  "kkiMedium": "LIGHT_NOVEL",
+  "decision": "MATCHED",
+  "reason": "author-mismatch",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_tatsuki-fujimoto-before-chainsaw-man-22-26::Tatsuki Fujimoto Before Chainsaw Man 22-26::MANGA": {
+  "nuvelliteSeriesId": "ser_tatsuki-fujimoto-before-chainsaw-man-22-26",
+  "kkiTitle": "Tatsuki Fujimoto Before Chainsaw Man 22-26",
+  "kkiMedium": "MANGA",
+  "decision": "MATCHED",
+  "reason": "author-mismatch",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_the-rising-of-the-shield-hero-manga::The Rising of the Shield Hero::MANGA": {
+  "nuvelliteSeriesId": "ser_the-rising-of-the-shield-hero-manga",
+  "kkiTitle": "The Rising of the Shield Hero",
+  "kkiMedium": "MANGA",
+  "decision": "MATCHED",
+  "reason": "author-mismatch",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_horimiya-a-piece-of-memories-special::Horimiya - A Piece of Memories::MANGA": {
+  "nuvelliteSeriesId": "ser_horimiya-a-piece-of-memories-special",
+  "kkiTitle": "Horimiya - A Piece of Memories",
+  "kkiMedium": "MANGA",
+  "decision": "MATCHED",
+  "reason": "substring-extra-words",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_tatsuki-fujimoto-before-chainsaw-man::Tatsuki Fujimoto Before Chainsaw Man 17-21::MANGA": {
+  "nuvelliteSeriesId": "ser_tatsuki-fujimoto-before-chainsaw-man",
+  "kkiTitle": "Tatsuki Fujimoto Before Chainsaw Man 17-21",
+  "kkiMedium": "MANGA",
+  "decision": "MATCHED",
+  "reason": "author-mismatch",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_the-apothecary-diaries-ln::The Apothecary Diaries::LIGHT_NOVEL": {
+  "nuvelliteSeriesId": "ser_the-apothecary-diaries-ln",
+  "kkiTitle": "The Apothecary Diaries",
+  "kkiMedium": "LIGHT_NOVEL",
+  "decision": "MATCHED",
+  "reason": "substring-extra-words",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_the-summer-hikaru-died-ln::The Summer Hikaru Died::LIGHT_NOVEL": {
+  "nuvelliteSeriesId": "ser_the-summer-hikaru-died-ln",
+  "kkiTitle": "The Summer Hikaru Died",
+  "kkiMedium": "LIGHT_NOVEL",
+  "decision": "MATCHED",
+  "reason": "author-mismatch",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_blindside::Blindside - Horror Anthology Comic::MANGA": {
+  "nuvelliteSeriesId": "ser_blindside",
+  "kkiTitle": "Blindside - Horror Anthology Comic",
+  "kkiMedium": "MANGA",
+  "decision": "MATCHED",
+  "reason": "substring-extra-words",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_gyo-complete::Gyo::MANGA": {
+  "nuvelliteSeriesId": "ser_gyo-complete",
+  "kkiTitle": "Gyo",
+  "kkiMedium": "MANGA",
+  "decision": "MATCHED",
+  "reason": "short-title-inexact",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_lunar-leg::Lunar Legend Tsukihime::MANGA": {
+  "nuvelliteSeriesId": "ser_lunar-leg",
+  "kkiTitle": "Lunar Legend Tsukihime",
+  "kkiMedium": "MANGA",
+  "decision": "MATCHED",
+  "reason": "substring-extra-words",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_frieren-ln::Frieren: After “The End” -Prelude-::LIGHT_NOVEL": {
+  "nuvelliteSeriesId": "ser_frieren-ln",
+  "kkiTitle": "Frieren: After “The End” -Prelude-",
+  "kkiMedium": "LIGHT_NOVEL",
+  "decision": "MATCHED",
+  "reason": "author-mismatch",
+  "reviewedAt": "2026-10-12"
+ },
+ "ser_cosmos::Cosmos::MANGA": {
+  "nuvelliteSeriesId": "ser_cosmos",
+  "kkiTitle": "Cosmos",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=53.3 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_makeine---heroine-yang-patah-hati-ternyata-banyak-manga::Makeine : Heroine yang Patah Hati Ternyata Banyak!::LIGHT_NOVEL": {
+  "nuvelliteSeriesId": "ser_makeine---heroine-yang-patah-hati-ternyata-banyak-manga",
+  "kkiTitle": "Makeine : Heroine yang Patah Hati Ternyata Banyak!",
+  "kkiMedium": "LIGHT_NOVEL",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: explicit medium suffix mismatch",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_detektif-conan-ln::Detektif Conan::MANGA": {
+  "nuvelliteSeriesId": "ser_detektif-conan-ln",
+  "kkiTitle": "Detektif Conan",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: explicit medium suffix mismatch",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_record-of-ragnarok---the-leg::Record of Ragnarok::MANGA": {
+  "nuvelliteSeriesId": "ser_record-of-ragnarok---the-leg",
+  "kkiTitle": "Record of Ragnarok",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=47.5 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_samurai::Samurai X::MANGA": {
+  "nuvelliteSeriesId": "ser_samurai",
+  "kkiTitle": "Samurai X",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=40.3 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_super-dragon-ball-heroes::Dragon Ball Super::MANGA": {
+  "nuvelliteSeriesId": "ser_super-dragon-ball-heroes",
+  "kkiTitle": "Dragon Ball Super",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=48.1 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_anay-nay::N::MANGA": {
+  "nuvelliteSeriesId": "ser_anay-nay",
+  "kkiTitle": "N",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_city-hunter::City::MANGA": {
+  "nuvelliteSeriesId": "ser_city-hunter",
+  "kkiTitle": "City",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=24.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_clover::Black Clover::MANGA": {
+  "nuvelliteSeriesId": "ser_clover",
+  "kkiTitle": "Black Clover",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=20.7 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_doraemon-nobitas-space-heroes::Heroes::MANGA": {
+  "nuvelliteSeriesId": "ser_doraemon-nobitas-space-heroes",
+  "kkiTitle": "Heroes",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=33.3 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_gundala-remastered::Red::MANGA": {
+  "nuvelliteSeriesId": "ser_gundala-remastered",
+  "kkiTitle": "Red",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_i-want-to::I Want To Eat Your Pancreass - Complete Edition::MANGA": {
+  "nuvelliteSeriesId": "ser_i-want-to",
+  "kkiTitle": "I Want To Eat Your Pancreass - Complete Edition",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=45.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_jagabumi::J::MANGA": {
+  "nuvelliteSeriesId": "ser_jagabumi",
+  "kkiTitle": "J",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_jojos-bizarre-adventure::Adventure::MANGA": {
+  "nuvelliteSeriesId": "ser_jojos-bizarre-adventure",
+  "kkiTitle": "Adventure",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=39.6 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_mission::Harlequin - Heart Mission::MANGA": {
+  "nuvelliteSeriesId": "ser_mission",
+  "kkiTitle": "Harlequin - Heart Mission",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=42.8 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_naruto-ln::Naruto::MANGA": {
+  "nuvelliteSeriesId": "ser_naruto-ln",
+  "kkiTitle": "Naruto",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: explicit medium suffix mismatch",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_one-piece-ln::+One::MANGA": {
+  "nuvelliteSeriesId": "ser_one-piece-ln",
+  "kkiTitle": "+One",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_one-piece-blue::+One::MANGA": {
+  "nuvelliteSeriesId": "ser_one-piece-blue",
+  "kkiTitle": "+One",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_one-piece-yellow::+One::MANGA": {
+  "nuvelliteSeriesId": "ser_one-piece-yellow",
+  "kkiTitle": "+One",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_orange-breeze-by-cherry::Cherry::MANGA": {
+  "nuvelliteSeriesId": "ser_orange-breeze-by-cherry",
+  "kkiTitle": "Cherry",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=51.4 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_paket-hai-miiko-1-3::1/3::MANGA": {
+  "nuvelliteSeriesId": "ser_paket-hai-miiko-1-3",
+  "kkiTitle": "1/3",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_paket-one-piece::+One::MANGA": {
+  "nuvelliteSeriesId": "ser_paket-one-piece",
+  "kkiTitle": "+One",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_re-living-my-life-to-save-you::My Life::MANGA": {
+  "nuvelliteSeriesId": "ser_re-living-my-life-to-save-you",
+  "kkiTitle": "My Life",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=51.9 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_scarlet::Vampiress of the Dawn ~Aglaiarden Scarlet Lily~::LIGHT_NOVEL": {
+  "nuvelliteSeriesId": "ser_scarlet",
+  "kkiTitle": "Vampiress of the Dawn ~Aglaiarden Scarlet Lily~",
+  "kkiMedium": "LIGHT_NOVEL",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=37.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_sinawang::N::MANGA": {
+  "nuvelliteSeriesId": "ser_sinawang",
+  "kkiTitle": "N",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_the-bad-guys-17::Bad Guy::MANGA": {
+  "nuvelliteSeriesId": "ser_the-bad-guys-17",
+  "kkiTitle": "Bad Guy",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=22.2 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_the-prince-series::Rin::MANGA": {
+  "nuvelliteSeriesId": "ser_the-prince-series",
+  "kkiTitle": "Rin",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_unkiss-my-best-fri::Kiss::MANGA": {
+  "nuvelliteSeriesId": "ser_unkiss-my-best-fri",
+  "kkiTitle": "Kiss",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=30.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_walijo::J::MANGA": {
+  "nuvelliteSeriesId": "ser_walijo",
+  "kkiTitle": "J",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_wild-police-story-first::IRS::MANGA": {
+  "nuvelliteSeriesId": "ser_wild-police-story-first",
+  "kkiTitle": "IRS",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_yoimachi-overlord::Overlord::MANGA": {
+  "nuvelliteSeriesId": "ser_yoimachi-overlord",
+  "kkiTitle": "Overlord",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=45.8 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_bandits-of-batavia::.hack//The Legend of The Twilight::MANGA": {
+  "nuvelliteSeriesId": "ser_bandits-of-batavia",
+  "kkiTitle": ".hack//The Legend of The Twilight",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=36.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_black-site::Black Clover 16.5 : Official Guidebook::MANGA": {
+  "nuvelliteSeriesId": "ser_black-site",
+  "kkiTitle": "Black Clover 16.5 : Official Guidebook",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=40.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_blue-lock-before-the-battle::The King's Beast::MANGA": {
+  "nuvelliteSeriesId": "ser_blue-lock-before-the-battle",
+  "kkiTitle": "The King's Beast",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=52.8 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-52-hoaks-gizi-fakta-di-balik-mitos-makanan-sehari-hari::180 Hari Lagi::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-52-hoaks-gizi-fakta-di-balik-mitos-makanan-sehari-hari",
+  "kkiTitle": "180 Hari Lagi",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=32.9 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-i-the-untold-story-perjalanan-kisah-jemaah-islamiyah::.hack//The Legend of The Twilight::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-i-the-untold-story-perjalanan-kisah-jemaah-islamiyah",
+  "kkiTitle": ".hack//The Legend of The Twilight",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=31.6 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-i-want-to::A Ticket to Heaven::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-i-want-to",
+  "kkiTitle": "A Ticket to Heaven",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=17.4 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-jago-membuat-video-gambar-dengan-ai-modal-hp-android::Ai Hime - Love and Secret::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-jago-membuat-video-gambar-dengan-ai-modal-hp-android",
+  "kkiTitle": "Ai Hime - Love and Secret",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=38.1 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-pemrograman-scratch-untuk-pemula::Untuk Dirimu yang Baru::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-pemrograman-scratch-untuk-pemula",
+  "kkiTitle": "Untuk Dirimu yang Baru",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=43.5 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-program-lengkap-database-pos-dengan-python::Absolute Love Program::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-program-lengkap-database-pos-dengan-python",
+  "kkiTitle": "Absolute Love Program",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=45.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-rahasia-celah-aplikasi-web-teknik-meretas-cara-mengatasinya::Kotaro Jurus Rahasia Kyokutan::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-rahasia-celah-aplikasi-web-teknik-meretas-cara-mengatasinya",
+  "kkiTitle": "Kotaro Jurus Rahasia Kyokutan",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=38.6 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-semua-bisa-menjadi-programmer-nodejs-basic::Hibiki: Kiat Menjadi Novelis::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-semua-bisa-menjadi-programmer-nodejs-basic",
+  "kkiTitle": "Hibiki: Kiat Menjadi Novelis",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=48.9 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-the-first-step-hacking-footprinting-scanning::.hack//The Legend of The Twilight::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-the-first-step-hacking-footprinting-scanning",
+  "kkiTitle": ".hack//The Legend of The Twilight",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=45.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-vulnerability-scanning-trik-mencari-kelemahan-website::Apa Salahnya Mencari Cinta di Dungeon?::LIGHT_NOVEL": {
+  "nuvelliteSeriesId": "ser_fs-vulnerability-scanning-trik-mencari-kelemahan-website",
+  "kkiTitle": "Apa Salahnya Mencari Cinta di Dungeon?",
+  "kkiMedium": "LIGHT_NOVEL",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=30.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_gundala-vs-sancaka::Cerita Spesial Detektif Conan - Detective Conan vs Men of the Black Organization::MANGA": {
+  "nuvelliteSeriesId": "ser_gundala-vs-sancaka",
+  "kkiTitle": "Cerita Spesial Detektif Conan - Detective Conan vs Men of the Black Organization",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=34.5 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_hai-miiko-30::30 Debut::MANGA": {
+  "nuvelliteSeriesId": "ser_hai-miiko-30",
+  "kkiTitle": "30 Debut",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=45.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_hai-miiko-best-selection::Best Blue::MANGA": {
+  "nuvelliteSeriesId": "ser_hai-miiko-best-selection",
+  "kkiTitle": "Best Blue",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=40.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_insomniacs-after-school::A Terrified Teacher At Ghost School!::MANGA": {
+  "nuvelliteSeriesId": "ser_insomniacs-after-school",
+  "kkiTitle": "A Terrified Teacher At Ghost School!",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=27.3 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_journal-of-terror::.hack//The Legend of The Twilight::MANGA": {
+  "nuvelliteSeriesId": "ser_journal-of-terror",
+  "kkiTitle": ".hack//The Legend of The Twilight",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=36.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-5-menit-sebelum-tayang::5 cm per Second::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-5-menit-sebelum-tayang",
+  "kkiTitle": "5 cm per Second",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=34.6 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-ghostys-comic::Akane's Heart::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-ghostys-comic",
+  "kkiTitle": "Akane's Heart",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=34.2 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-gundala::Crayon Shinchan Movie - Fast Asleep! The Great Assault On Dreamy World::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-gundala",
+  "kkiTitle": "Crayon Shinchan Movie - Fast Asleep! The Great Assault On Dreamy World",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=37.3 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-gundala-putra-petir---remastered-collection::Cute Twinkle Collection::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-gundala-putra-petir---remastered-collection",
+  "kkiTitle": "Cute Twinkle Collection",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=42.8 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-gundala-son-of-lightning::100 Blossoms of Love::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-gundala-son-of-lightning",
+  "kkiTitle": "100 Blossoms of Love",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=40.7 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-h2o-reborn-trilogy::Hitman Reborn!::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-h2o-reborn-trilogy",
+  "kkiTitle": "Hitman Reborn!",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=39.6 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-kill-starter::Kill Blue::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-kill-starter",
+  "kkiTitle": "Kill Blue",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=36.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-not-today-human-your-despair-our-delight::37,2 The Warmth of Your Love::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-not-today-human-your-despair-our-delight",
+  "kkiTitle": "37,2 The Warmth of Your Love",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=17.4 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-rajasa-and-the-flag-bearer::+C: Sword and Cornett::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-rajasa-and-the-flag-bearer",
+  "kkiTitle": "+C: Sword and Cornett",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=41.7 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-si-unis::Doraemon Movie: Dinosaurus Baru Nobita Si Kembar Kyu dan Myu::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-si-unis",
+  "kkiTitle": "Doraemon Movie: Dinosaurus Baru Nobita Si Kembar Kyu dan Myu",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=30.6 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_kumpulan-cerita-kakak-adik-saling-sayang::Cerita Spesial Detektif Conan - Detective Conan vs Men of the Black Organization::MANGA": {
+  "nuvelliteSeriesId": "ser_kumpulan-cerita-kakak-adik-saling-sayang",
+  "kkiTitle": "Cerita Spesial Detektif Conan - Detective Conan vs Men of the Black Organization",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=38.1 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_la-galigo::Hotel La Vien Rose::MANGA": {
+  "nuvelliteSeriesId": "ser_la-galigo",
+  "kkiTitle": "Hotel La Vien Rose",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=41.5 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_lay-lay-cat::A Magical Cat Store::MANGA": {
+  "nuvelliteSeriesId": "ser_lay-lay-cat",
+  "kkiTitle": "A Magical Cat Store",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=38.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_menguasai-statistik-di-era-digital-dengan-spss::Dalam Atap di Bawah Langit::MANGA": {
+  "nuvelliteSeriesId": "ser_menguasai-statistik-di-era-digital-dengan-spss",
+  "kkiTitle": "Dalam Atap di Bawah Langit",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=34.2 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_my-pre-wedding::A Bouquet for My Sleepless Knight::MANGA": {
+  "nuvelliteSeriesId": "ser_my-pre-wedding",
+  "kkiTitle": "A Bouquet for My Sleepless Knight",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=30.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_ohayo-tokyo::Tokyo Ghoul: Re - Limited Edition::MANGA": {
+  "nuvelliteSeriesId": "ser_ohayo-tokyo",
+  "kkiTitle": "Tokyo Ghoul: Re - Limited Edition",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=34.2 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_paket-box-shanaou-yoshitsune::Blue Box::MANGA": {
+  "nuvelliteSeriesId": "ser_paket-box-shanaou-yoshitsune",
+  "kkiTitle": "Blue Box",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=38.5 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_plants-vs-zombies::Cerita Spesial Detektif Conan - Detective Conan vs Men of the Black Organization::MANGA": {
+  "nuvelliteSeriesId": "ser_plants-vs-zombies",
+  "kkiTitle": "Cerita Spesial Detektif Conan - Detective Conan vs Men of the Black Organization",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=32.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_pretending-not-to-see::Born To Cook - Mister Ajikko The Next Generation::MANGA": {
+  "nuvelliteSeriesId": "ser_pretending-not-to-see",
+  "kkiTitle": "Born To Cook - Mister Ajikko The Next Generation",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=40.2 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_reon-and-friends::+C: Sword and Cornett Appendix::MANGA": {
+  "nuvelliteSeriesId": "ser_reon-and-friends",
+  "kkiTitle": "+C: Sword and Cornett Appendix",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=26.1 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_rumah-mice::Pembunuhan di Rumah Dekagon::MANGA": {
+  "nuvelliteSeriesId": "ser_rumah-mice",
+  "kkiTitle": "Pembunuhan di Rumah Dekagon",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=36.7 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_saint-seiya-final-edition::Detektif Conan The Movie Comics Edition: Count Down to Heaven::MANGA": {
+  "nuvelliteSeriesId": "ser_saint-seiya-final-edition",
+  "kkiTitle": "Detektif Conan The Movie Comics Edition: Count Down to Heaven",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=35.2 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_sakti-family-begins::Detektif Conan Akai Family Selection::MANGA": {
+  "nuvelliteSeriesId": "ser_sakti-family-begins",
+  "kkiTitle": "Detektif Conan Akai Family Selection",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=30.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_si-juki-x-black-jack::Black Alice::MANGA": {
+  "nuvelliteSeriesId": "ser_si-juki-x-black-jack",
+  "kkiTitle": "Black Alice",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=42.1 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_sri-asih-celestial-goddess::Ah My Goddess::MANGA": {
+  "nuvelliteSeriesId": "ser_sri-asih-celestial-goddess",
+  "kkiTitle": "Ah My Goddess",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=32.3 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_teman-rasa-pacar::100 Pacar yang Sangat, Sangat, Sangat, Sangat, Sangat, Sangat, Mencintaimu::MANGA": {
+  "nuvelliteSeriesId": "ser_teman-rasa-pacar",
+  "kkiTitle": "100 Pacar yang Sangat, Sangat, Sangat, Sangat, Sangat, Sangat, Mencintaimu",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=38.6 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_virgo-and-the-sparkling-season-ii::+C: Sword and Cornett::MANGA": {
+  "nuvelliteSeriesId": "ser_virgo-and-the-sparkling-season-ii",
+  "kkiTitle": "+C: Sword and Cornett",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=26.1 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_virgo-and-the-sparklings-season-ii::+C: Sword and Cornett::MANGA": {
+  "nuvelliteSeriesId": "ser_virgo-and-the-sparklings-season-ii",
+  "kkiTitle": "+C: Sword and Cornett",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=34.3 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_voices-of-a-distant-star::Fate/Grand Order - Epic of Remnant: Heretical Salem::MANGA": {
+  "nuvelliteSeriesId": "ser_voices-of-a-distant-star",
+  "kkiTitle": "Fate/Grand Order - Epic of Remnant: Heretical Salem",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=40.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_we-are-pharmacists::Anohana - The Flower We Saw That Day::MANGA": {
+  "nuvelliteSeriesId": "ser_we-are-pharmacists",
+  "kkiTitle": "Anohana - The Flower We Saw That Day",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=36.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_wild-police-story-last::The World's Cleanest First Love Story::MANGA": {
+  "nuvelliteSeriesId": "ser_wild-police-story-last",
+  "kkiTitle": "The World's Cleanest First Love Story",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=30.8 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_shaker::Milk Shake!::MANGA": {
+  "nuvelliteSeriesId": "ser_shaker",
+  "kkiTitle": "Milk Shake!",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=22.2 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_volt::Flower and Thunderbolt::MANGA": {
+  "nuvelliteSeriesId": "ser_volt",
+  "kkiTitle": "Flower and Thunderbolt",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=27.6 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-senior-bekalmu::Sensor::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-senior-bekalmu",
+  "kkiTitle": "Sensor",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=42.8 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_senior-bekalmu::Sensor::MANGA": {
+  "nuvelliteSeriesId": "ser_senior-bekalmu",
+  "kkiTitle": "Sensor",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=42.8 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-pengantar-pemrograman-javascript::Tari Tari::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-pengantar-pemrograman-javascript",
+  "kkiTitle": "Tari Tari",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=45.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_code-helix::Mix::MANGA": {
+  "nuvelliteSeriesId": "ser_code-helix",
+  "kkiTitle": "Mix",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_jugatsudo::Katsu!::MANGA": {
+  "nuvelliteSeriesId": "ser_jugatsudo",
+  "kkiTitle": "Katsu!",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=30.2 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-gastronomale::Mashle::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-gastronomale",
+  "kkiTitle": "Mashle",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=36.0 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-jagabumi::Mix::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-jagabumi",
+  "kkiTitle": "Mix",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: short-title-inexact with incompatible author",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_koloni-matahari-setengah-lingkar::+anima::MANGA": {
+  "nuvelliteSeriesId": "ser_koloni-matahari-setengah-lingkar",
+  "kkiTitle": "+anima",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=33.3 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_fs-pemrograman-oop-python-komplet::My Man::MANGA": {
+  "nuvelliteSeriesId": "ser_fs-pemrograman-oop-python-komplet",
+  "kkiTitle": "My Man",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: authorScore=37.5 < 55",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_makeine-heroine-yang-patah-hati-ternyata-banyak-manga::Makeine : Heroine yang Patah Hati Ternyata Banyak!::LIGHT_NOVEL": {
+  "nuvelliteSeriesId": "ser_makeine-heroine-yang-patah-hati-ternyata-banyak-manga",
+  "kkiTitle": "Makeine : Heroine yang Patah Hati Ternyata Banyak!",
+  "kkiMedium": "LIGHT_NOVEL",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: explicit medium suffix mismatch",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_tentang-suatu-tempat-di-wilayah-kinki-ln::Tentang Suatu Tempat di Wilayah Kinki::MANGA": {
+  "nuvelliteSeriesId": "ser_tentang-suatu-tempat-di-wilayah-kinki-ln",
+  "kkiTitle": "Tentang Suatu Tempat di Wilayah Kinki",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: explicit medium suffix mismatch",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_tentang-ziarah-yang-terkutuk-ln::Tentang Ziarah yang Terkutuk::MANGA": {
+  "nuvelliteSeriesId": "ser_tentang-ziarah-yang-terkutuk-ln",
+  "kkiTitle": "Tentang Ziarah yang Terkutuk",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: explicit medium suffix mismatch",
+  "reviewedAt": "2026-11-08"
+ },
+ "ser_frieren-after-the-ln::Frieren: After the End::MANGA": {
+  "nuvelliteSeriesId": "ser_frieren-after-the-ln",
+  "kkiTitle": "Frieren: After the End",
+  "kkiMedium": "MANGA",
+  "decision": "NOT_MATCH",
+  "reason": "auto-triage: explicit medium suffix mismatch",
+  "reviewedAt": "2026-11-08"
+ }
+}

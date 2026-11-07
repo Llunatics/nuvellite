@@ -1,4 +1,109 @@
 {
+ "ser_apa-salahnya-mencari-cinta-di-dungeon": {
+  "demographic": "Seinen",
+  "publisherJp": "SB Creative",
+  "volumesJp": "21",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/5t4m0lg/dungeon-ni-deai-o-motomeru-no-wa-machigatte-iru-darou-ka-novel",
+  "priceMin": "Rp125.000",
+  "priceMax": "Rp125.000",
+  "paperType": null,
+  "yearFirstVol": "2024",
+  "kkiTitle": "Apa Salahnya Mencari Cinta di Dungeon?",
+  "kkiPublisher": "Phoenix",
+  "matchScore": 100.0,
+  "matchMethod": "manual"
+ },
+ "ser_attack-on-titan-before-the-fall": {
+  "demographic": "Shounen",
+  "publisherJp": "Kodansha",
+  "volumesJp": "3",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/op0t6nj/shingeki-no-kyojin-before-the-fall-novel",
+  "priceMin": "Rp20.000",
+  "priceMax": "Rp42.000",
+  "paperType": null,
+  "yearFirstVol": "2015",
+  "kkiTitle": "Attack on Titan Before the Fall",
+  "kkiPublisher": "Level",
+  "matchScore": 100.0,
+  "matchMethod": "manual"
+ },
+ "ser_stand-by-me-doraemon": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp75.000",
+  "priceMax": "Rp75.000",
+  "paperType": null,
+  "yearFirstVol": "2023",
+  "kkiTitle": "Stand by Me Doraemon",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "manual"
+ },
+ "ser_tatsuki-fujimoto-before-chainsaw-man": {
+  "demographic": "Seinen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/2fnistt/fujimoto-tatsuki-tanpenshuu",
+  "priceMin": "Rp48.000",
+  "priceMax": "Rp48.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2025",
+  "kkiTitle": "Tatsuki Fujimoto Before Chainsaw Man 17-21",
+  "kkiPublisher": "Akasha",
+  "matchScore": 95.0,
+  "matchMethod": "manual"
+ },
+ "ser_the-rising-of-the-shield-hero-manga": {
+  "demographic": "Seinen",
+  "publisherJp": "Media Factory",
+  "volumesJp": "22",
+  "statusJp": "Hiatus",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/d3951ty/tate-no-yuusha-no-nariagari-novel",
+  "priceMin": "Rp115.000",
+  "priceMax": "Rp115.000",
+  "paperType": null,
+  "yearFirstVol": "2024",
+  "kkiTitle": "The Rising of the Shield Hero",
+  "kkiPublisher": "Phoenix",
+  "matchScore": 100.0,
+  "matchMethod": "manual"
+ },
+ "ser_the-summer-hikaru-died-ln": {
+  "demographic": "Seinen",
+  "publisherJp": "Kadokawa",
+  "volumesJp": "2",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/0lt44gt/hikaru-ga-shinda-natsu-novel",
+  "priceMin": "Rp85.000",
+  "priceMax": "Rp98.000",
+  "paperType": null,
+  "yearFirstVol": "2025",
+  "kkiTitle": "The Summer Hikaru Died",
+  "kkiPublisher": "Phoenix",
+  "matchScore": 95.0,
+  "matchMethod": "manual"
+ },
+ "ser_the-apothecary-diaries-ln": {
+  "demographic": "Seinen",
+  "publisherJp": "Shufunotomo",
+  "volumesJp": "16",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/zw7k3xp/kusuriya-no-hitorigoto-novel",
+  "priceMin": "Rp108.000",
+  "priceMax": "Rp118.000",
+  "paperType": null,
+  "yearFirstVol": "2026",
+  "kkiTitle": "The Apothecary Diaries",
+  "kkiPublisher": "Clover",
+  "matchScore": 95.0,
+  "matchMethod": "manual"
+ },
  "ser_100-pacar-yang-sangat-sangat-sangat-sangat-sangat-mencintaimu": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
@@ -11,7 +116,7 @@
   "yearFirstVol": "2025",
   "kkiTitle": "100 Pacar yang Sangat, Sangat, Sangat, Sangat, Sangat, Sangat, Mencintaimu",
   "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
+  "matchScore": 96.4,
   "matchMethod": "auto"
  },
  "ser_100-pacar-yang-sangat-sangat-sangat-sangat-sangat-sangat-mencintaimu": {
@@ -44,19 +149,19 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_20th-century-boys-the-complete": {
+ "ser_20th-century-boys-the-complete-edition": {
   "demographic": "Seinen",
   "publisherJp": "Shogakukan",
-  "volumesJp": "22",
+  "volumesJp": "11",
   "statusJp": "End",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/ktr1ti2/20-seiki-shounen",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "yearFirstVol": "2005",
-  "kkiTitle": "20th Century Boys",
+  "priceMin": "Rp158.000",
+  "priceMax": "Rp188.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2025",
+  "kkiTitle": "20th Century Boys Complete Edition",
   "kkiPublisher": "Level",
-  "matchScore": 90.0,
+  "matchScore": 96.3,
   "matchMethod": "auto"
  },
  "ser_5-cm-per-second": {
@@ -149,7 +254,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_ajin---demi-human": {
+ "ser_ajin-demi-human": {
   "demographic": "Seinen",
   "publisherJp": "Kodansha",
   "volumesJp": "17",
@@ -239,7 +344,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_alice-in-borderland---retry": {
+ "ser_alice-in-borderland-retry": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
   "volumesJp": "2",
@@ -281,7 +386,7 @@
   "yearFirstVol": "2024",
   "kkiTitle": "Alya Sometimes Hides Her Feeling in Russian",
   "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_arakawa-under-the-bridge": {
@@ -329,7 +434,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_attack-on-titan--no-regret": {
+ "ser_attack-on-titan-no-regret": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",
   "volumesJp": "2",
@@ -356,7 +461,7 @@
   "yearFirstVol": "2023",
   "kkiTitle": "Attack on Titan Bind Up Edition",
   "kkiPublisher": "Level",
-  "matchScore": 95.0,
+  "matchScore": 91.0,
   "matchMethod": "auto"
  },
  "ser_bakemonogatari": {
@@ -404,21 +509,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_before-dawn-and-the": {
-  "demographic": "Seinen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/bujoh6a/sekai-no-owari-to-yoakemae",
-  "priceMin": "Rp84.000",
-  "priceMax": "Rp84.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2026",
-  "kkiTitle": "Before Dawn and the End of the World",
-  "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
  "ser_black-butler": {
   "demographic": "Shounen",
   "publisherJp": "Square Enix",
@@ -449,36 +539,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_black-clover-165": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "38",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/w8nq9bw/black-clover",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2019",
-  "kkiTitle": "Black Clover",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
- "ser_black-jack-bind-up": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "12",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/yzpe1ei/black-jack",
-  "priceMin": "Rp85.000",
-  "priceMax": "Rp85.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2024",
-  "kkiTitle": "Black Jack Bind-Up Edition",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
  "ser_black-paradox": {
   "demographic": "Seinen",
   "publisherJp": "Shogakukan",
@@ -490,6 +550,36 @@
   "paperType": "Bookpaper",
   "yearFirstVol": "2024",
   "kkiTitle": "Black Paradox",
+  "kkiPublisher": "Akasha",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_bleach-cant-fear-your-own-world": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "3",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp108.000",
+  "priceMax": "Rp155.000",
+  "paperType": null,
+  "yearFirstVol": "2025",
+  "kkiTitle": "BLEACH Can't Fear Your Own World",
+  "kkiPublisher": "Clover",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_blindside-horror-anthology-comic": {
+  "demographic": "Josei",
+  "publisherJp": "Bunkasha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/vjydvdb/horror-anthology-comic-shikaku",
+  "priceMin": "Rp75.000",
+  "priceMax": "Rp75.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2025",
+  "kkiTitle": "Blindside - Horror Anthology Comic",
   "kkiPublisher": "Akasha",
   "matchScore": 100.0,
   "matchMethod": "auto"
@@ -524,22 +614,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_blue-lock": {
-  "demographic": "Shounen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "32",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/joxc7wz/blue-lock",
-  "priceMin": "Rp60.000",
-  "priceMax": "Rp60.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Blue Lock (PGI)",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
- "ser_blue-lock---episode-nagi": {
+ "ser_blue-lock-episode-nagi": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",
   "volumesJp": "8",
@@ -584,21 +659,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_bocchi-the-rock---drunk-hero-rock-story": {
-  "demographic": "Seinen",
-  "publisherJp": "Houbunsha",
-  "volumesJp": "8",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ej3cita/bocchi-the-rock",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2024",
-  "kkiTitle": "Bocchi the Rock!",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
  "ser_bono-bono": {
   "demographic": "Seinen",
   "publisherJp": "Takeshobo",
@@ -614,22 +674,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_bonobono": {
-  "demographic": "Seinen",
-  "publisherJp": "Takeshobo",
-  "volumesJp": "47",
-  "statusJp": "Stopped",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/f5m02k4/bonobono",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2020",
-  "kkiTitle": "Bono Bono",
-  "kkiPublisher": "Elex",
-  "matchScore": 94.1,
-  "matchMethod": "auto"
- },
- "ser_boruto---naruto-next-generation": {
+ "ser_boruto-naruto-next-generation": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "20",
@@ -644,7 +689,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_boruto---two-blue-vortex": {
+ "ser_boruto-two-blue-vortex": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "8",
@@ -687,36 +732,6 @@
   "kkiTitle": "Bungo Stray Dogs",
   "kkiPublisher": "Level",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_bungo-stray-dogs---dazai-chuya-usia-15-tahun": {
-  "demographic": "Seinen",
-  "publisherJp": "Kadokawa",
-  "volumesJp": "28",
-  "statusJp": "Hiatus",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=87668",
-  "priceMin": "Rp50.000",
-  "priceMax": "Rp50.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2022",
-  "kkiTitle": "Bungo Stray Dogs",
-  "kkiPublisher": "Level",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_bungo-stray-dogs-dazai-chuya": {
-  "demographic": "Seinen",
-  "publisherJp": "Kadokawa",
-  "volumesJp": "28",
-  "statusJp": "Hiatus",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=87668",
-  "priceMin": "Rp50.000",
-  "priceMax": "Rp50.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2022",
-  "kkiTitle": "Bungo Stray Dogs",
-  "kkiPublisher": "Level",
-  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_bungou-stray-dogs": {
@@ -779,19 +794,19 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_chinmi-other-story": {
+ "ser_chinmi-other-story-chinmi-seiren": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",
   "volumesJp": "4",
   "statusJp": "Ongoing",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/qy9gnbs/tekken-chinmi-gaiden",
-  "priceMin": "Rp4.500",
+  "priceMin": "Rp45.000",
   "priceMax": "Rp45.000",
   "paperType": "Bookpaper",
   "yearFirstVol": "2025",
-  "kkiTitle": "Chinmi Other Story: Chinmi & Tan Tan",
+  "kkiTitle": "Chinmi Other Story: Chinmi Shiefan",
   "kkiPublisher": "Elex",
-  "matchScore": 90.0,
+  "matchScore": 92.3,
   "matchMethod": "auto"
  },
  "ser_chion-and-the-cat-temple": {
@@ -821,7 +836,7 @@
   "yearFirstVol": "2020",
   "kkiTitle": "Chiruran, Shinsengumi Requiem",
   "kkiPublisher": "Akasha",
-  "matchScore": 95.0,
+  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_chiruran-shinsengumi-requiem": {
@@ -869,6 +884,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_city-hunter-complete-edition": {
+  "demographic": "Shounen",
+  "publisherJp": "Tokuma Shoten",
+  "volumesJp": "32",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/n5pb3ho/city-hunter",
+  "priceMin": "Rp58.000",
+  "priceMax": "Rp69.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2020",
+  "kkiTitle": "City Hunter (Complete Edition)",
+  "kkiPublisher": "Akasha",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
  "ser_city-hunter-rebirth": {
   "demographic": "Shounen",
   "publisherJp": "Tokuma Shoten",
@@ -911,22 +941,37 @@
   "yearFirstVol": "2024",
   "kkiTitle": "Classroom of the Elite",
   "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_conan": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "2",
+ "ser_classroom-of-the-elite-2nd-year-manga": {
+  "demographic": "Seinen",
+  "publisherJp": "Media Factory",
+  "volumesJp": "4",
   "statusJp": "End",
-  "mangaupdatesUrl": null,
-  "priceMin": "Rp100.000",
-  "priceMax": "Rp100.000",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/trbjtb2/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-2-nensei-hen",
+  "priceMin": "Rp65.000",
+  "priceMax": "Rp65.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2026",
+  "kkiTitle": "Classroom of the Elite 2nd Year",
+  "kkiPublisher": "Phoenix",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_classroom-of-the-elite-2nd-year-ln": {
+  "demographic": "Seinen",
+  "publisherJp": "Media Factory",
+  "volumesJp": "12+3",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/r82th6h/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-2-nensei-hen-novel",
+  "priceMin": "Rp98.000",
+  "priceMax": "Rp98.000",
   "paperType": null,
-  "yearFirstVol": "2025",
-  "kkiTitle": "Detektif Conan Movie - The Scarlet Bullet",
-  "kkiPublisher": "Elex",
-  "matchScore": 90.0,
+  "yearFirstVol": "2026",
+  "kkiTitle": "Classroom of the Elite 2nd Year",
+  "kkiPublisher": "Phoenix",
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_daily-lives-of-high-school-boys": {
@@ -941,7 +986,7 @@
   "yearFirstVol": "2020",
   "kkiTitle": "Daily Lives of Highschool Boys",
   "kkiPublisher": "Elex",
-  "matchScore": 98.4,
+  "matchScore": 97.3,
   "matchMethod": "auto"
  },
  "ser_dandadan": {
@@ -1019,6 +1064,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_delicious-in-dungeon-14-end": {
+  "demographic": "Seinen",
+  "publisherJp": "Enterbrain",
+  "volumesJp": "14",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/8rowciu/dungeon-meshi",
+  "priceMin": "Rp45.000",
+  "priceMax": "Rp45.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2023",
+  "kkiTitle": "Delicious in Dungeon",
+  "kkiPublisher": "Elex",
+  "matchScore": 90.9,
+  "matchMethod": "auto"
+ },
  "ser_demon-slayer-kimetsu-no-yaiba": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
@@ -1034,7 +1094,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_detektif-conan-manga": {
+ "ser_detektif-conan": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
   "volumesJp": "105",
@@ -1045,6 +1105,216 @@
   "paperType": "Bookpaper",
   "yearFirstVol": null,
   "kkiTitle": "Detektif Conan",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-crimson-love-letter": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp70.000",
+  "priceMax": "Rp70.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2019",
+  "kkiTitle": "Detektif Conan Movie: The Crimson Love Letter",
+  "kkiPublisher": "Elex",
+  "matchScore": 96.8,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-crossroad-in-the-ancient-capital-ln": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp70.000",
+  "priceMax": "Rp70.000",
+  "paperType": null,
+  "yearFirstVol": "2022",
+  "kkiTitle": "Detektif Conan: Crossroad in The Ancient Capital",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-crossroad-in-the-ancient-capital-movie": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "HVS",
+  "yearFirstVol": "2012",
+  "kkiTitle": "Detektif Conan Movie: Crossroad of the Ancient Capital",
+  "kkiPublisher": "Elex",
+  "matchScore": 97.1,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-private-eye-in-the-distant-sea-first": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp80.000",
+  "priceMax": "Rp80.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2022",
+  "kkiTitle": "Detektif Conan Movie: Private Eye in the Distant Sea",
+  "kkiPublisher": "GPU",
+  "matchScore": 96.3,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-private-eye-in-the-distant-sea-last": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp80.000",
+  "priceMax": "Rp80.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2022",
+  "kkiTitle": "Detektif Conan Movie: Private Eye in the Distant Sea",
+  "kkiPublisher": "GPU",
+  "matchScore": 96.9,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-the-darkest-nightmare": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp65.000",
+  "priceMax": "Rp65.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2018",
+  "kkiTitle": "Detektif Conan Movie: The Darkest Nightmare",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-the-fist-of-blue-sapphire": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp80.000",
+  "priceMax": "Rp80.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2021",
+  "kkiTitle": "Detektif Conan Movie: The Fist of Blue Sapphire",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-the-last-wizard-of-the-century": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "HVS",
+  "yearFirstVol": "2011",
+  "kkiTitle": "Detektif Conan Movie: The Last Wizard of the Century",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-the-lost-ship-in-the-sky": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp55.000",
+  "priceMax": "Rp55.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2015",
+  "kkiTitle": "Detektif Conan Movie: The Lost Ship in the Sky",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-the-raven-chaser-ln": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp95.000",
+  "priceMax": "Rp95.000",
+  "paperType": null,
+  "yearFirstVol": "2026",
+  "kkiTitle": "Detektif Conan: The Raven Chaser",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-the-raven-chaser-movie": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp50.000",
+  "priceMax": "Rp55.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2015",
+  "kkiTitle": "Detektif Conan Movie: The Raven Chaser",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-the-time-bomb-skyscraper": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "HVS",
+  "yearFirstVol": "2011",
+  "kkiTitle": "Detektif Conan Movie: The Time Bombed Skyscraper",
+  "kkiPublisher": "Elex",
+  "matchScore": 97.8,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-zero-the-enforcer-first": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp80.000",
+  "priceMax": "Rp80.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2020",
+  "kkiTitle": "Detektif Conan Movie: Zero the Enforcer",
+  "kkiPublisher": "Elex",
+  "matchScore": 95.2,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-zero-the-enforcer": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp80.000",
+  "priceMax": "Rp80.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2020",
+  "kkiTitle": "Detektif Conan Movie: Zero the Enforcer",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
   "matchMethod": "auto"
@@ -1094,34 +1364,19 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_detektif-conan-tantangan-dari-conan": {
+ "ser_detektif-conan-spesial": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
-  "volumesJp": "105",
+  "volumesJp": "48",
   "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/3xfm8ig/meitantei-conan",
+  "mangaupdatesUrl": null,
   "priceMin": null,
-  "priceMax": "Rp50.000",
+  "priceMax": "Rp40.000",
   "paperType": "Bookpaper",
-  "yearFirstVol": null,
-  "kkiTitle": "Detektif Conan",
+  "yearFirstVol": "2001",
+  "kkiTitle": "Detektif Conan Spesial",
   "kkiPublisher": "Elex",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_detektif-conan-the": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "105",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/3xfm8ig/meitantei-conan",
-  "priceMin": null,
-  "priceMax": "Rp50.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": null,
-  "kkiTitle": "Detektif Conan",
-  "kkiPublisher": "Elex",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_detektif-conan-zeros-tea-time": {
@@ -1135,6 +1390,96 @@
   "paperType": "Bookpaper",
   "yearFirstVol": "2020",
   "kkiTitle": "Detektif Conan Zero's Tea Time",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-conan-vs-kaito-kid-the-gathering-of-the-detectives-shinichi-kudo-vs-kaito-kid": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp102.000",
+  "priceMax": "Rp102.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2023",
+  "kkiTitle": "Detektif Conan: Conan VS Kaito Kid - The Gathering of the Detectives! Shinichi Kudo VS Kaito Kid",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-confrontation-with-the-black-organization": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp52.800",
+  "priceMax": "Rp52.800",
+  "paperType": null,
+  "yearFirstVol": "2018",
+  "kkiTitle": "Detektif Conan: Confrontation With The Black Organization",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-makoto-kyogoku-selection": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp55.000",
+  "priceMax": "Rp55.000",
+  "paperType": "Koran",
+  "yearFirstVol": "2022",
+  "kkiTitle": "Detektif Conan: Makoto Kyogoku Selection",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-private-eyes-requiem": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp60.000",
+  "priceMax": "Rp60.000",
+  "paperType": null,
+  "yearFirstVol": "2021",
+  "kkiTitle": "Detektif Conan: The Private Eyes` Requiem",
+  "kkiPublisher": "Elex",
+  "matchScore": 96.4,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-strategy-above-the-depths": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp70.000",
+  "priceMax": "Rp70.000",
+  "paperType": null,
+  "yearFirstVol": "2022",
+  "kkiTitle": "Detektif Conan: Strategy Above The Depths",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_detektif-conan-the-legend-of-the-buried-treasure-of-koshu": {
+  "demographic": "Shounen",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp56.800",
+  "priceMax": "Rp56.800",
+  "paperType": null,
+  "yearFirstVol": "2018",
+  "kkiTitle": "Detektif Conan: The Legend of the Buried Treasure of Koshu",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
   "matchMethod": "auto"
@@ -1229,6 +1574,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_doraemon-nobita-and-the-last-haven-animal-adventure": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp65.000",
+  "priceMax": "Rp65.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2025",
+  "kkiTitle": "Movie Doraemon Nobita and the Last Haven Animal Adventure",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
  "ser_doraemon-nobitas-sky-utopia-ln": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
@@ -1241,7 +1601,7 @@
   "yearFirstVol": "2026",
   "kkiTitle": "Doraemon Nobita`s Sky Utopia",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_doraemon-nobitas-sky-utopia-movie": {
@@ -1274,37 +1634,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_doraemon-movie": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": null,
-  "priceMin": "Rp65.000",
-  "priceMax": "Rp65.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Doraemon Movie - Nobita's Chronicle of the Moon Exploration",
-  "kkiPublisher": "Elex",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_doraemon-nobita-and-the-last-haven-animal-adventure": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": null,
-  "priceMin": "Rp65.000",
-  "priceMax": "Rp65.000",
-  "paperType": "HVS",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Movie Doraemon Nobita and the Last Haven Animal Adventure",
-  "kkiPublisher": "Elex",
-  "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_doraemon-nobitas-mermaid-leg": {
+ "ser_doraemon-nobitas-mermaid-legend-ln": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
   "volumesJp": "1",
@@ -1316,37 +1646,22 @@
   "yearFirstVol": "2026",
   "kkiTitle": "Doraemon Nobita`s Mermaid Legend",
   "kkiPublisher": "Elex",
-  "matchScore": 95.1,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_doraemon-petualangan": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "24",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/v3mh1f8/daichouhen-doraemon",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2024",
-  "kkiTitle": "Doraemon Petualangan (Bookpaper)",
-  "kkiPublisher": "Elex",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_doraemon-story": {
+ "ser_doraemon-nobitas-mermaid-legend-movie": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
   "volumesJp": "1",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/d73fqhx/doraemon-monogatari-fujiko-f-fujio-sensei-no-senaka",
-  "priceMin": "Rp25.000",
-  "priceMax": "Rp25.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2019",
-  "kkiTitle": "Doraemon Story -Fujiko F Fujio Figure-",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp60.000",
+  "priceMax": "Rp60.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2026",
+  "kkiTitle": "Movie Story Doraemon: Nobita`s Mermaid Legend",
   "kkiPublisher": "Elex",
-  "matchScore": 90.0,
+  "matchScore": 95.2,
   "matchMethod": "auto"
  },
  "ser_dr-stone": {
@@ -1391,7 +1706,7 @@
   "yearFirstVol": "2025",
   "kkiTitle": "Dragon Ball Ultimate Edition",
   "kkiPublisher": "Level",
-  "matchScore": 95.0,
+  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_drama-queen": {
@@ -1436,7 +1751,7 @@
   "yearFirstVol": "2024",
   "kkiTitle": "86 [Eighty Six]",
   "kkiPublisher": "Clover",
-  "matchScore": 95.0,
+  "matchScore": 91.9,
   "matchMethod": "auto"
  },
  "ser_even-a-replica-can-fall-in-love": {
@@ -1514,7 +1829,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_fategrand-order--turas-realta": {
+ "ser_fategrand-order-turas-realta": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",
   "volumesJp": "22",
@@ -1556,7 +1871,7 @@
   "yearFirstVol": "2023",
   "kkiTitle": "Fate/Type Redline : Strange Strory of the Imperial Capital Holy Grail",
   "kkiPublisher": "Akasha",
-  "matchScore": 99.2,
+  "matchScore": 98.7,
   "matchMethod": "auto"
  },
  "ser_fight-ippo": {
@@ -1619,7 +1934,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_frieren-manga": {
+ "ser_frieren-after-the-end": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
   "volumesJp": "15",
@@ -1631,10 +1946,10 @@
   "yearFirstVol": "2022",
   "kkiTitle": "Frieren: After the End",
   "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_frieren-after-the": {
+ "ser_frieren-after-the-manga": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
   "volumesJp": "15",
@@ -1646,97 +1961,7 @@
   "yearFirstVol": "2022",
   "kkiTitle": "Frieren: After the End",
   "kkiPublisher": "M&C!",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
- "ser_fs-ive-been-killing-slimes-for-300-years": {
-  "demographic": "Shounen",
-  "publisherJp": "Square Enix",
-  "volumesJp": "17",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/jdwrt9d/slime-taoshite-300-nen-shiranai-uchi-ni-level-max-ni-nattemashita",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2021",
-  "kkiTitle": "I've Been Killing Slimes for 300 Years and Maxed Out My Level",
-  "kkiPublisher": "Elex",
-  "matchScore": 91.4,
-  "matchMethod": "auto"
- },
- "ser_fs-level-comic-20th-century-boys-the-complete-edition": {
-  "demographic": "Seinen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "22",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ktr1ti2/20-seiki-shounen",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "yearFirstVol": "2005",
-  "kkiTitle": "20th Century Boys",
-  "kkiPublisher": "Level",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_fs-lofty-flower-fall-for-me-03-of-04-bind-up-edition": {
-  "demographic": "Shounen",
-  "publisherJp": "Square Enix",
-  "volumesJp": "8",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/0wa68dj/takane-no-hana-nara-ochitekoi",
-  "priceMin": "Rp75.000",
-  "priceMax": "Rp75.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Lofty Flower, Fall For Me!! - Bind Up Edition",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
- "ser_fs-mission-yozakura-family": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "29",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=156047",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2023",
-  "kkiTitle": "Mission : Yozakura Family",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
- "ser_fs-regarding-reincarnated-to-slime": {
-  "demographic": "Shounen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "33",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/04gtb06/tensei-shitara-slime-datta-ken",
-  "priceMin": "Rp25.000",
-  "priceMax": "Rp32.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2018",
-  "kkiTitle": "Regarding Reincarnated as Slime",
-  "kkiPublisher": "Elex",
-  "matchScore": 92.3,
-  "matchMethod": "auto"
- },
- "ser_fs-tokyo-aliens": {
-  "demographic": "Shounen",
-  "publisherJp": "Square Enix",
-  "volumesJp": "13",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ku5pz85/tokyo-aliens",
-  "priceMin": "Rp55.000",
-  "priceMax": "Rp55.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Tokyo Aliens",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 93.3,
   "matchMethod": "auto"
  },
  "ser_fujiwara-is-almost-right": {
@@ -1814,21 +2039,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_gimai-seikatsu": {
-  "demographic": "Shounen",
-  "publisherJp": "Media Factory",
-  "volumesJp": "18+1",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ru8m2yl/gimai-seikatsu-novel",
-  "priceMin": "Rp98.000",
-  "priceMax": "Rp98.000",
-  "paperType": null,
-  "yearFirstVol": "2025",
-  "kkiTitle": "Gimai Seikatsu ~Hari-hariku Bersama Saki~",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
  "ser_girls-last-tour": {
   "demographic": "Seinen",
   "publisherJp": "Shinchosha",
@@ -1841,7 +2051,7 @@
   "yearFirstVol": "2024",
   "kkiTitle": "Girls Last Tour",
   "kkiPublisher": "Elex",
-  "matchScore": 96.8,
+  "matchScore": 94.7,
   "matchMethod": "auto"
  },
  "ser_goblin-slayer": {
@@ -1872,21 +2082,6 @@
   "kkiTitle": "Gokurakugai",
   "kkiPublisher": "Phoenix",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_gokushufudo": {
-  "demographic": "Seinen",
-  "publisherJp": "Shinchosha",
-  "volumesJp": "17",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/a2iznkp/gokushufudou",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2020",
-  "kkiTitle": "Gokushufudo - The Way of House Husband",
-  "kkiPublisher": "Level",
-  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_goodbye-eri": {
@@ -1934,64 +2129,19 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_hai-miiko-cilik": {
-  "demographic": "Shojo",
+ "ser_gyo-complete-edition": {
+  "demographic": "Seinen",
   "publisherJp": "Shogakukan",
-  "volumesJp": "1",
+  "volumesJp": "2",
   "statusJp": "End",
-  "mangaupdatesUrl": null,
-  "priceMin": "Rp30.000",
-  "priceMax": "Rp30.000",
-  "paperType": "HVS",
-  "yearFirstVol": "2012",
-  "kkiTitle": "Hai, Miiko Cilik! +30 Halaman Warna",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_hai-miiko": {
-  "demographic": "Shojo",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": null,
-  "priceMin": "Rp30.000",
-  "priceMax": "Rp30.000",
-  "paperType": "HVS",
-  "yearFirstVol": "2012",
-  "kkiTitle": "Hai, Miiko Cilik! +30 Halaman Warna",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_haikyu": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "45",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ul2du3n/haikyu",
-  "priceMin": "Rp25.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2016",
-  "kkiTitle": "Haikyu!! Fly High Volleyball!",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_haikyu-the": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": null,
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": null,
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/39lfn9b/gyo",
   "priceMin": "Rp89.000",
   "priceMax": "Rp89.000",
-  "paperType": null,
-  "yearFirstVol": "2025",
-  "kkiTitle": "Haikyu! the Novel",
-  "kkiPublisher": "Clover",
-  "matchScore": 90.0,
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2023",
+  "kkiTitle": "Gyo Complete Edition - 2 in 1",
+  "kkiPublisher": "M&C!",
+  "matchScore": 90.9,
   "matchMethod": "auto"
  },
  "ser_haikyu-fly-high-volleyball": {
@@ -2036,7 +2186,7 @@
   "yearFirstVol": "2024",
   "kkiTitle": "Hanako Si Arwah Penasaran (Terbit Ulang)",
   "kkiPublisher": "Elex",
-  "matchScore": 96.2,
+  "matchScore": 97.4,
   "matchMethod": "auto"
  },
  "ser_happiness": {
@@ -2059,7 +2209,7 @@
   "publisherJp": "Akita Shoten",
   "volumesJp": "12",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://mncgramedia.id/books/6596/hear-the-voice-of-the-dead-01",
+  "mangaupdatesUrl": null,
   "priceMin": "Rp78.000",
   "priceMax": "Rp78.000",
   "paperType": "Bookpaper",
@@ -2104,7 +2254,7 @@
   "publisherJp": "Shogakukan",
   "volumesJp": "1",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://www.shogakukan.co.jp/books/09453146",
+  "mangaupdatesUrl": null,
   "priceMin": "Rp118.000",
   "priceMax": "Rp118.000",
   "paperType": null,
@@ -2141,7 +2291,7 @@
   "yearFirstVol": "2025",
   "kkiTitle": "Holoearth Chronicles Side: E - Kisah Fantasi Yamato",
   "kkiPublisher": "M&C!",
-  "matchScore": 97.9,
+  "matchScore": 98.5,
   "matchMethod": "auto"
  },
  "ser_honey-come-honey": {
@@ -2189,6 +2339,36 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_horimiya-a-piece-of-memories": {
+  "demographic": "Shounen",
+  "publisherJp": "Square Enix",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/uu6yf6n/horimiya",
+  "priceMin": "Rp50.000",
+  "priceMax": "Rp50.000",
+  "paperType": "Koran",
+  "yearFirstVol": "2025",
+  "kkiTitle": "Horimiya - A Piece of Memories",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_horimiya-a-piece-of-memories-special-edition": {
+  "demographic": "Shounen",
+  "publisherJp": "Square Enix",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/uu6yf6n/horimiya",
+  "priceMin": "Rp98.000",
+  "priceMax": "Rp98.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2024",
+  "kkiTitle": "Horimiya - A Piece of Memories Special Edition",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
  "ser_hunter-x-hunter": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
@@ -2219,6 +2399,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_i-parry-everything": {
+  "demographic": "Shounen",
+  "publisherJp": "Earth Star",
+  "volumesJp": "9",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/qhee1o6/i-will-parry-everything-to-become-the-greatest-adventurer-novel",
+  "priceMin": "Rp115.000",
+  "priceMax": "Rp115.000",
+  "paperType": null,
+  "yearFirstVol": "2026",
+  "kkiTitle": "I \"Parry\" Everything",
+  "kkiPublisher": "Clover",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
  "ser_i-sold-my-life-for-ten-thousand-yen-per-year": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
@@ -2234,19 +2429,19 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_ive-been-killing-slimes-for-300-years": {
+ "ser_i-want-to-end-this-love-game": {
   "demographic": "Shounen",
-  "publisherJp": "Square Enix",
-  "volumesJp": "17",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "9",
   "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/jdwrt9d/slime-taoshite-300-nen-shiranai-uchi-ni-level-max-ni-nattemashita",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/6t8o7q6/aishiteru-game-wo-owarasetai",
   "priceMin": "Rp45.000",
   "priceMax": "Rp45.000",
   "paperType": "Bookpaper",
-  "yearFirstVol": "2021",
-  "kkiTitle": "I've Been Killing Slimes for 300 Years and Maxed Out My Level",
+  "yearFirstVol": "2025",
+  "kkiTitle": "I Want to End this Love Game",
   "kkiPublisher": "Elex",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_ichi-the-witch": {
@@ -2324,7 +2519,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_ito-junji": {
+ "ser_ito-junji-best-of-best-short-story-collection": {
   "demographic": "Seinen",
   "publisherJp": "Shogakukan",
   "volumesJp": "1",
@@ -2336,22 +2531,7 @@
   "yearFirstVol": "2021",
   "kkiTitle": "Ito Junji - Best of Best Short Story Collection",
   "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_ito-junji-compilation": {
-  "demographic": "Seinen",
-  "publisherJp": "Asahi Sonorama",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=5500",
-  "priceMin": "Rp85.000",
-  "priceMax": "Rp85.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2023",
-  "kkiTitle": "Ito Junji Compilation 1: Tomie Part 1",
-  "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_ito-junji-compilation-tomie-part": {
@@ -2366,11 +2546,11 @@
   "yearFirstVol": "2023",
   "kkiTitle": "Ito Junji Compilation 1: Tomie Part 1",
   "kkiPublisher": "Akasha",
-  "matchScore": 95.0,
+  "matchScore": 96.1,
   "matchMethod": "auto"
  },
- "ser_ito-junjis-selected-collection": {
-  "demographic": "Seinen",
+ "ser_ito-junjis-selected-collection-crooked": {
+  "demographic": "Josei",
   "publisherJp": "Asahi Shinbunsha",
   "volumesJp": "1",
   "statusJp": "End",
@@ -2379,9 +2559,9 @@
   "priceMax": "Rp105.000",
   "paperType": "Bookpaper",
   "yearFirstVol": "2025",
-  "kkiTitle": "Ito Junji's Selected Collection - Shiver",
+  "kkiTitle": "Ito's Junji Selected Collection - Crooked",
   "kkiPublisher": "Akasha",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_jigokuraku": {
@@ -2579,7 +2759,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_kanata-kakeru---run-into-the-horizon": {
+ "ser_kanata-kakeru-run-into-the-horizon": {
   "demographic": "Seinen",
   "publisherJp": "Shogakukan",
   "volumesJp": "10",
@@ -2609,7 +2789,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_karada-sagashi---another": {
+ "ser_karada-sagashi-another": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "3",
@@ -2684,21 +2864,6 @@
   "matchScore": 96.2,
   "matchMethod": "auto"
  },
- "ser_kindaichi-37-tahun": {
-  "demographic": "Seinen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "16",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/pn94okm/kindaichi-37-sai-no-jikenbo",
-  "priceMin": "Rp42.000",
-  "priceMax": "Rp42.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2020",
-  "kkiTitle": "Detektif Kindaichi 37 Tahun",
-  "kkiPublisher": "Elex",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
  "ser_kindergarten-wars": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
@@ -2726,7 +2891,7 @@
   "yearFirstVol": "2021",
   "kkiTitle": "The King's Beast",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 91.2,
   "matchMethod": "auto"
  },
  "ser_kiteretsu-daihyakka": {
@@ -2786,7 +2951,7 @@
   "yearFirstVol": "2015",
   "kkiTitle": "Komikus Shojo Nozaki Special Edition",
   "kkiPublisher": "Elex",
-  "matchScore": 96.0,
+  "matchScore": 96.9,
   "matchMethod": "auto"
  },
  "ser_konosuba-gods-blessing-on-this-wonderful-world": {
@@ -2817,21 +2982,6 @@
   "kkiTitle": "Kubo Won't Let Me Be Invisible",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_kung-fu-boy-legends": {
-  "demographic": "Shounen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "29",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/oir2424/tekken-chinmi-legends",
-  "priceMin": "Rp18.500",
-  "priceMax": "Rp32.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2010",
-  "kkiTitle": "Kungfu Boy Legends",
-  "kkiPublisher": "Elex",
-  "matchScore": 97.3,
   "matchMethod": "auto"
  },
  "ser_kungfu-boy-legends": {
@@ -2891,7 +3041,7 @@
   "yearFirstVol": "2017",
   "kkiTitle": "Legenda Naga III",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 91.2,
   "matchMethod": "auto"
  },
  "ser_legenda-naga-iii": {
@@ -2921,7 +3071,7 @@
   "yearFirstVol": "2021",
   "kkiTitle": "Kanojo Okarishimasu",
   "kkiPublisher": "Level",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_love-judgement": {
@@ -2936,7 +3086,22 @@
   "yearFirstVol": "2022",
   "kkiTitle": "SC: Love Judgement",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 93.8,
+  "matchMethod": "auto"
+ },
+ "ser_lunar-legend-tsukihime": {
+  "demographic": "Shounen",
+  "publisherJp": "Kadokawa",
+  "volumesJp": "10",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/7s905mh/shingetsutan-tsukihime",
+  "priceMin": "Rp55.000",
+  "priceMax": "Rp55.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2024",
+  "kkiTitle": "Lunar Legend Tsukihime",
+  "kkiPublisher": "Akasha",
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_lycoris-recoil": {
@@ -2954,12 +3119,12 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_lycoris-recoil--recovery-days": {
+ "ser_lycoris-recoil-recovery-days": {
   "demographic": "Seinen",
   "publisherJp": "ASCII Media Works",
   "volumesJp": "1",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://lycoris-recoil.fandom.com/wiki/Lycoris_Recoil:_Recovery_Days",
+  "mangaupdatesUrl": null,
   "priceMin": "Rp108.000",
   "priceMax": "Rp108.000",
   "paperType": null,
@@ -2974,7 +3139,7 @@
   "publisherJp": "ASCII Media Works",
   "volumesJp": "1",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://lycoris-recoil.fandom.com/wiki/Lycoris_Recoil:_Ordinary_days",
+  "mangaupdatesUrl": null,
   "priceMin": "Rp108.000",
   "priceMax": "Rp108.000",
   "paperType": null,
@@ -2984,7 +3149,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_makeine": {
+ "ser_makeine-heroine-yang-patah-hati-ternyata-banyak-manga": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
   "volumesJp": "6",
@@ -2996,10 +3161,10 @@
   "yearFirstVol": "2026",
   "kkiTitle": "Makeine – Heroine yang Patah Hati Terlalu Banyak!",
   "kkiPublisher": "Phoenix",
-  "matchScore": 90.0,
+  "matchScore": 92.5,
   "matchMethod": "auto"
  },
- "ser_makeine---heroine-yang-patah-hati-ternyata-banyak-ln": {
+ "ser_makeine-heroine-yang-patah-hati-ternyata-banyak-ln": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
   "volumesJp": "9+1",
@@ -3011,7 +3176,7 @@
   "yearFirstVol": "2026",
   "kkiTitle": "Makeine : Heroine yang Patah Hati Ternyata Banyak!",
   "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_mao": {
@@ -3059,7 +3224,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_master-keaton-special": {
+ "ser_master-keaton-special-edition": {
   "demographic": "Seinen",
   "publisherJp": "Shogakukan",
   "volumesJp": "12",
@@ -3071,7 +3236,7 @@
   "yearFirstVol": "2026",
   "kkiTitle": "Master Keaton Special Edition",
   "kkiPublisher": "Level",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_medalist": {
@@ -3176,7 +3341,7 @@
   "yearFirstVol": "2020",
   "kkiTitle": "Mob Psycho 100",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_mob-psycho-100": {
@@ -3239,22 +3404,7 @@
   "matchScore": 90.5,
   "matchMethod": "auto"
  },
- "ser_mushoku-tensei": {
-  "demographic": "Seinen",
-  "publisherJp": "Media Factory",
-  "volumesJp": "26",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ktz8j0a/mushoku-tensei-isekai-ittara-honki-dasu-novel",
-  "priceMin": "Rp115.000",
-  "priceMax": "Rp115.000",
-  "paperType": null,
-  "yearFirstVol": "2024",
-  "kkiTitle": "Mushoku Tensei - Jobless Reincarnation",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_mushoku-tensei---jobless-reincarnation": {
+ "ser_mushoku-tensei-jobless-reincarnation-manga": {
   "demographic": "Seinen",
   "publisherJp": "Media Factory",
   "volumesJp": "24",
@@ -3269,7 +3419,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_mushoku-tensei-jobless-reincarnation": {
+ "ser_mushoku-tensei-jobless-reincarnation-ln": {
   "demographic": "Seinen",
   "publisherJp": "Media Factory",
   "volumesJp": "26",
@@ -3344,7 +3494,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_namaku-miiko-4-in": {
+ "ser_namaku-miiko": {
   "demographic": "Shojo",
   "publisherJp": "Shogakukan",
   "volumesJp": "4",
@@ -3356,10 +3506,10 @@
   "yearFirstVol": "2003",
   "kkiTitle": "Namaku Miiko!",
   "kkiPublisher": "M&C!",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_naruto-manga": {
+ "ser_naruto": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "72",
@@ -3374,7 +3524,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_naruto---sasukes-story---the-uchiha-and-the-heavenly-stardust": {
+ "ser_naruto-sasukes-story-the-uchiha-and-the-heavenly-stardust": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "2",
@@ -3389,37 +3539,52 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_naruto-bind-up": {
+ "ser_naruto-guardians-of-the-crescent-moon-kingdom": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
-  "volumesJp": "72",
+  "volumesJp": "1",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/7z3yqqk/naruto",
-  "priceMin": null,
-  "priceMax": "Rp25.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2004",
-  "kkiTitle": "Naruto",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp75.000",
+  "priceMax": "Rp75.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2015",
+  "kkiTitle": "Naruto The Movie: Guardians Of The Crescent Moon Kingdom",
   "kkiPublisher": "Elex",
-  "matchScore": 90.0,
+  "matchScore": 97.5,
   "matchMethod": "auto"
  },
- "ser_naruto-bind-up-edition": {
+ "ser_naruto-legend-of-the-stone-of-gelel": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
-  "volumesJp": "36",
+  "volumesJp": "2",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/7z3yqqk/naruto",
-  "priceMin": "Rp99.000",
-  "priceMax": "Rp99.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2024",
-  "kkiTitle": "Naruto Bind Up Edition",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp45.000",
+  "priceMax": "Rp45.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2016",
+  "kkiTitle": "Naruto The Movie: Legend Of The Stone Of Gelel",
   "kkiPublisher": "Elex",
-  "matchScore": 100.0,
+  "matchScore": 96.9,
   "matchMethod": "auto"
  },
- "ser_naruto-konohas-story---the-steam-ninja-scrolls": {
+ "ser_naruto-ninja-clash-in-the-land-of-snow": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "2",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp45.000",
+  "priceMax": "Rp60.000",
+  "paperType": "HVS",
+  "yearFirstVol": "2016",
+  "kkiTitle": "Naruto The Movie: Ninja Clash In The Land Of Snow",
+  "kkiPublisher": "Elex",
+  "matchScore": 97.1,
+  "matchMethod": "auto"
+ },
+ "ser_naruto-konohas-story-the-steam-ninja-scrolls": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "2",
@@ -3434,34 +3599,49 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_naruto-the-ninja-clash-in-the-land-of-snow": {
+ "ser_naruto-official-animation-book-hiden-douga-emaki": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
-  "volumesJp": "2",
+  "volumesJp": "1",
   "statusJp": "End",
   "mangaupdatesUrl": null,
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp60.000",
+  "priceMin": "Rp50.000",
+  "priceMax": "Rp50.000",
   "paperType": "HVS",
   "yearFirstVol": "2016",
-  "kkiTitle": "Naruto The Movie: Ninja Clash In The Land Of Snow",
+  "kkiTitle": "Naruto Official Animation Book: Hiden - Douga Emaki",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_neon-genesis-evangelion": {
+ "ser_naruto-chronicle-of-the-tunderclap-the-day-the-wolf-howled": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp80.000",
+  "priceMax": "Rp80.000",
+  "paperType": null,
+  "yearFirstVol": "2022",
+  "kkiTitle": "Naruto: Chronicle of The Tunderclap - The Day The Wolf Howled",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_neon-genesis-evangelion-collectors-edition": {
   "demographic": "Seinen",
   "publisherJp": "Kadokawa",
-  "volumesJp": "14",
+  "volumesJp": "7",
   "statusJp": "End",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/jgjdahb/shin-seiki-evangelion",
-  "priceMin": null,
-  "priceMax": "Rp20.000",
-  "paperType": "Koran",
-  "yearFirstVol": null,
-  "kkiTitle": "Neon Genesis Evangelion",
-  "kkiPublisher": "M&C!",
-  "matchScore": 100.0,
+  "priceMin": "Rp110.000",
+  "priceMax": "Rp110.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2023",
+  "kkiTitle": "Neon Genesis Evangelion - Colector's Edition",
+  "kkiPublisher": "Akasha",
+  "matchScore": 98.8,
   "matchMethod": "auto"
  },
  "ser_new-crayon-shinchan": {
@@ -3479,7 +3659,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_new-doraemon": {
+ "ser_new-doraemon-nobita-dalam-dunia-misteri": {
   "demographic": "Shounen",
   "publisherJp": null,
   "volumesJp": null,
@@ -3491,22 +3671,7 @@
   "yearFirstVol": null,
   "kkiTitle": "New Doraemon Movie: Nobita Dalam Dunia Misteri",
   "kkiPublisher": null,
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_new-kobochan": {
-  "demographic": "Shounen",
-  "publisherJp": "Houbunsha",
-  "volumesJp": "58",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/8smst4t/shin-kobo-chan",
-  "priceMin": null,
-  "priceMax": "Rp25.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2011",
-  "kkiTitle": "New Kobo Chan",
-  "kkiPublisher": "Elex",
-  "matchScore": 96.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_nues-exorcist": {
@@ -3539,7 +3704,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_one-piece-manga": {
+ "ser_one-piece": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "111",
@@ -3565,6 +3730,21 @@
   "paperType": "Koran",
   "yearFirstVol": "2019",
   "kkiTitle": "One Piece Blue Deep Characters World",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_one-piece-blue-grand-data-file": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/dqqbhrd/one-piece-databook",
+  "priceMin": "Rp30.000",
+  "priceMax": "Rp30.000",
+  "paperType": "Koran",
+  "yearFirstVol": "2015",
+  "kkiTitle": "One Piece Blue Grand Data File",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
   "matchMethod": "auto"
@@ -3612,6 +3792,66 @@
   "kkiTitle": "One Piece Red Grand Characters",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_one-piece-yellow-grand-elements": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/dqqbhrd/one-piece-databook",
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "yearFirstVol": "2017",
+  "kkiTitle": "One Piece Yellow Grand Elements",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_one-piece-clockwork-island-adventure": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp75.000",
+  "priceMax": "Rp75.000",
+  "paperType": null,
+  "yearFirstVol": "2022",
+  "kkiTitle": "One Piece: Clockwork Island Adventure",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_one-piece-loguetown-arc": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp75.000",
+  "priceMax": "Rp75.000",
+  "paperType": null,
+  "yearFirstVol": "2022",
+  "kkiTitle": "One Piece: Loguetown Arc",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_one-piece-the-adventure-of-deadend": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp70.000",
+  "priceMax": "Rp70.000",
+  "paperType": null,
+  "yearFirstVol": "2022",
+  "kkiTitle": "One Piece: Dead End Adventure The Movie",
+  "kkiPublisher": "Elex",
+  "matchScore": 91.7,
   "matchMethod": "auto"
  },
  "ser_one-punch-man": {
@@ -3704,22 +3944,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_os-komikus-shojo-nozaki-anthology": {
-  "demographic": "Shounen",
-  "publisherJp": "Square Enix",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/n0erbiv/gekkan-shoujo-nozaki-kun-anthology",
-  "priceMin": "Rp25.000",
-  "priceMax": "Rp25.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2017",
-  "kkiTitle": "Komikus Shojo Nozaki Anthology",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.2,
-  "matchMethod": "auto"
- },
- "ser_oshi-no-ko": {
+ "ser_oshi-no-ko-anak-idola": {
   "demographic": "Seinen",
   "publisherJp": "Shueisha",
   "volumesJp": "16",
@@ -3731,7 +3956,7 @@
   "yearFirstVol": "2022",
   "kkiTitle": "Oshi no Ko: Anak Idola",
   "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_otherworldly-izakaya-nobu": {
@@ -3776,67 +4001,7 @@
   "yearFirstVol": "2024",
   "kkiTitle": "Overlord",
   "kkiPublisher": "Phoenix",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_paket-bleach": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "74",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/wm47jwz/bleach",
-  "priceMin": null,
-  "priceMax": "Rp30.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2007",
-  "kkiTitle": "BLEACH",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_paket-bleach-13-18": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "74",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/wm47jwz/bleach",
-  "priceMin": null,
-  "priceMax": "Rp30.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2007",
-  "kkiTitle": "BLEACH",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_paket-box-bleach-25-30": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "74",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/wm47jwz/bleach",
-  "priceMin": null,
-  "priceMax": "Rp30.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2007",
-  "kkiTitle": "BLEACH",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_paket-death-note": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "12",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=41",
-  "priceMin": "Rp15.000",
-  "priceMax": null,
-  "paperType": "Koran",
-  "yearFirstVol": "2007",
-  "kkiTitle": "Death Note",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_paman-dari-dunia-lain": {
@@ -3867,21 +4032,6 @@
   "kkiTitle": "Papa and Daddy's Home Cooking",
   "kkiPublisher": "M&C!",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_papa-and-daddys-homecooking": {
-  "demographic": "Seinen",
-  "publisherJp": "Shinchosha",
-  "volumesJp": "13",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/t32bfg5/papa-to-oyaji-no-uchi-gohan",
-  "priceMin": "Rp25.000",
-  "priceMax": "Rp48.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2018",
-  "kkiTitle": "Papa and Daddy's Home Cooking",
-  "kkiPublisher": "M&C!",
-  "matchScore": 98.2,
   "matchMethod": "auto"
  },
  "ser_parasite-in-love": {
@@ -4034,6 +4184,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_record-of-ragnarok-the-legend-of-lu-bu": {
+  "demographic": "Seinen",
+  "publisherJp": "Tokuma Shoten",
+  "volumesJp": "7",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/rg6ic40/shuumatsu-no-valkyrie-ibun-ryo-fu-housen-hishouden",
+  "priceMin": "Rp48.000",
+  "priceMax": "Rp48.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2025",
+  "kkiTitle": "Record of Ragnarok - The Legend of Lu Bu",
+  "kkiPublisher": "Akasha",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
  "ser_regarding-reincarnated-as-slime": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",
@@ -4061,7 +4226,7 @@
   "yearFirstVol": "2018",
   "kkiTitle": "Regarding Reincarnated as Slime",
   "kkiPublisher": "Elex",
-  "matchScore": 93.5,
+  "matchScore": 94.9,
   "matchMethod": "auto"
  },
  "ser_rooster-fighter": {
@@ -4139,22 +4304,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_sakamoto-days-24": {
-  "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "21",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series.html?id=174038",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2023",
-  "kkiTitle": "Sakamoto Days",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
-  "matchMethod": "auto"
- },
- "ser_samurai-8---the-tale-of-hachimaru": {
+ "ser_samurai-8-the-tale-of-hachimaru": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "5",
@@ -4169,17 +4319,17 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_samurai-x": {
-  "demographic": null,
+ "ser_samurai-x-another-story": {
+  "demographic": "Shounen",
   "publisherJp": "Shueisha",
-  "volumesJp": null,
-  "statusJp": null,
-  "mangaupdatesUrl": null,
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "yearFirstVol": null,
-  "kkiTitle": "Samurai X",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/xt2y0we/rurouni-kenshin-uramaku-honoo-o-suberu",
+  "priceMin": "Rp88.000",
+  "priceMax": "Rp88.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2025",
+  "kkiTitle": "Samurai X - Another Story",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
   "matchMethod": "auto"
@@ -4199,7 +4349,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_sasuke-uchihas-no-sharingan-leg": {
+ "ser_sasuke-uchihas-no-sharingan-legend": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "3",
@@ -4211,10 +4361,10 @@
   "yearFirstVol": "2018",
   "kkiTitle": "Sasuke Uchihas's Sharingan Legend",
   "kkiPublisher": "Elex",
-  "matchScore": 92.3,
+  "matchScore": 94.1,
   "matchMethod": "auto"
  },
- "ser_sasuke-uchihass-sharingan-leg": {
+ "ser_sasuke-uchihass-sharingan-legend": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "3",
@@ -4226,7 +4376,7 @@
   "yearFirstVol": "2018",
   "kkiTitle": "Sasuke Uchihas's Sharingan Legend",
   "kkiPublisher": "Elex",
-  "matchScore": 95.2,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_say-hello-to-black-jack": {
@@ -4286,7 +4436,7 @@
   "yearFirstVol": "2026",
   "kkiTitle": "Seeds of Anxiety Plus (2 in 1)",
   "kkiPublisher": "Level",
-  "matchScore": 95.0,
+  "matchScore": 91.2,
   "matchMethod": "auto"
  },
  "ser_sensor": {
@@ -4316,7 +4466,7 @@
   "yearFirstVol": "2016",
   "kkiTitle": "Seraph of the End",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 91.8,
   "matchMethod": "auto"
  },
  "ser_seven-deadly-sins": {
@@ -4364,21 +4514,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_shangrila-frontier": {
-  "demographic": "Shounen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "26",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/qpff7if/shangri-la-frontier",
-  "priceMin": "Rp65.000",
-  "priceMax": "Rp65.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2024",
-  "kkiTitle": "Shangri-La Frontier",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 97.3,
-  "matchMethod": "auto"
- },
  "ser_she-is-more-ordinary-than-i-expected": {
   "demographic": "Shounen",
   "publisherJp": "Square Enix",
@@ -4409,7 +4544,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_shin-masked-rider---shocker-side": {
+ "ser_shin-masked-rider-shocker-side": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
   "volumesJp": "8",
@@ -4429,7 +4564,7 @@
   "publisherJp": "Akita Shoten",
   "volumesJp": "2",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://www.amazon.co.jp/%E3%81%97%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E7%A0%94%E7%A9%B6%E4%BC%9A-1-%E5%B0%91%E5%B9%B4%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9-%E4%B8%8D%E7%9F%A5%E7%81%AB%E5%BB%BA%E8%A8%AD/dp/4253296211",
+  "mangaupdatesUrl": null,
   "priceMin": "Rp56.000",
   "priceMax": "Rp56.000",
   "paperType": "Bookpaper",
@@ -4454,19 +4589,19 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_slam-dunk": {
+ "ser_silver-spoon-15": {
   "demographic": "Shounen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "24",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "15",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/pklldyu/slam-dunk",
-  "priceMin": null,
-  "priceMax": null,
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/dxb09a9/gin-no-saji",
+  "priceMin": "Rp22.500",
+  "priceMax": "Rp28.000",
   "paperType": "Koran",
-  "yearFirstVol": null,
-  "kkiTitle": "Slam Dunk (Deluxe)",
+  "yearFirstVol": "2014",
+  "kkiTitle": "Silver Spoon",
   "kkiPublisher": "Elex",
-  "matchScore": 90.0,
+  "matchScore": 93.0,
   "matchMethod": "auto"
  },
  "ser_smile-at-the-runway": {
@@ -4526,7 +4661,7 @@
   "yearFirstVol": "2024",
   "kkiTitle": "So I'm a Spider, So What?",
   "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_soloist-in-a-cage": {
@@ -4559,7 +4694,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_star-dust--dont-worry-be-happy": {
+ "ser_star-dust-dont-worry-be-happy": {
   "demographic": "Shojo",
   "publisherJp": "Shueisha",
   "volumesJp": "4",
@@ -4589,22 +4724,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_sword-art-online": {
-  "demographic": "Shounen",
-  "publisherJp": "ASCII Media Works",
-  "volumesJp": "29",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/h4jzh9x/sword-art-online-novel",
-  "priceMin": "Rp98.000",
-  "priceMax": "Rp115.000",
-  "paperType": null,
-  "yearFirstVol": "2021",
-  "kkiTitle": "Sword Art Online",
-  "kkiPublisher": "Clover",
-  "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_sword-art-online-the---ordinal-scale": {
+ "ser_sword-art-online-ordinal-scale": {
   "demographic": "Shounen",
   "publisherJp": "Kadokawa",
   "volumesJp": "5",
@@ -4616,7 +4736,7 @@
   "yearFirstVol": "2024",
   "kkiTitle": "Sword Art Online The Movie - Ordinal Scale",
   "kkiPublisher": "M&C!",
-  "matchScore": 100.0,
+  "matchScore": 96.5,
   "matchMethod": "auto"
  },
  "ser_tamons-b-side": {
@@ -4664,7 +4784,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_teka-teki-rumah-aneh---hen-na-ie": {
+ "ser_teka-teki-rumah-aneh-hen-na-ie": {
   "demographic": "Seinen",
   "publisherJp": "Ichijinsha",
   "volumesJp": "6",
@@ -4694,7 +4814,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_tentang-suatu-tempat-di-wilayah-kinki": {
+ "ser_tentang-suatu-tempat-di-wilayah-kinki-manga": {
   "demographic": "Seinen",
   "publisherJp": "ASCII Media Works",
   "volumesJp": "2",
@@ -4709,7 +4829,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_tentang-ziarah-yang-terkutuk": {
+ "ser_tentang-ziarah-yang-terkutuk-manga": {
   "demographic": "Seinen",
   "publisherJp": "Media Factory",
   "volumesJp": "2",
@@ -4754,7 +4874,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_the-art-of-junji-ito": {
+ "ser_the-art-of-junji-ito-twisted-visions": {
   "demographic": "Seinen",
   "publisherJp": "Asahi Shinbunsha",
   "volumesJp": "1",
@@ -4766,7 +4886,7 @@
   "yearFirstVol": "2023",
   "kkiTitle": "The Art of Junji Ito: Twisted Visions",
   "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_the-black-detective": {
@@ -4901,10 +5021,10 @@
   "yearFirstVol": "2024",
   "kkiTitle": "The Eminence in Shadow",
   "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_the-fragrant-flower-blooms-with-dignity---kaoru-rin": {
+ "ser_the-fragrant-flower-blooms-with-dignity-kaoru-rin": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",
   "volumesJp": "23",
@@ -4919,22 +5039,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_the-garden-of-words": {
-  "demographic": "Seinen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/zi5vver/kotonoha-no-niwa",
-  "priceMin": "Rp55.000",
-  "priceMax": "Rp55.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2024",
-  "kkiTitle": "The Garden of Words (Terbit Ulang)",
-  "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
- "ser_the-heroic-leg": {
+ "ser_the-heroic-legend-of-arslan": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",
   "volumesJp": "23",
@@ -4946,7 +5051,7 @@
   "yearFirstVol": "2015",
   "kkiTitle": "The Heroic Legend of Arslan",
   "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_the-hitmans-fave": {
@@ -4977,21 +5082,6 @@
   "kkiTitle": "The Ice Guy and His Cool Female Colleague",
   "kkiPublisher": "Akasha",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_the-liminal-zone---season": {
-  "demographic": "Josei",
-  "publisherJp": "Asahi Shinbunsha",
-  "volumesJp": "2",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/x0izxy6/genkai-chitai",
-  "priceMin": "Rp70.000",
-  "priceMax": "Rp70.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2024",
-  "kkiTitle": "The Liminal Zone",
-  "kkiPublisher": "Akasha",
-  "matchScore": 95.0,
   "matchMethod": "auto"
  },
  "ser_the-misfit-of-demon-king-academy": {
@@ -5054,6 +5144,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_the-promised-neverland-20": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "20",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/qwxz22l/yakusoku-no-neverland",
+  "priceMin": "Rp28.000",
+  "priceMax": "Rp35.000",
+  "paperType": "Koran",
+  "yearFirstVol": "2019",
+  "kkiTitle": "The Promised Neverland",
+  "kkiPublisher": "Elex",
+  "matchScore": 95.8,
+  "matchMethod": "auto"
+ },
  "ser_the-promised-neverland-surat-dari-norman": {
   "demographic": "Shounen",
   "publisherJp": "Shueisha",
@@ -5096,7 +5201,37 @@
   "yearFirstVol": "2024",
   "kkiTitle": "The Rising of the Shield Hero",
   "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_the-secret-scroll-of-confrontation-naruto-character-official-data-book": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp28.000",
+  "priceMax": "Rp28.000",
+  "paperType": "Koran",
+  "yearFirstVol": "2015",
+  "kkiTitle": "The Secret Scroll Of Confrontation: Naruto Character Official Data Book",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_the-secret-scroll-of-fighting-naruto-character-official-data-book": {
+  "demographic": "Shounen",
+  "publisherJp": "Shueisha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": null,
+  "priceMin": "Rp40.000",
+  "priceMax": "Rp40.000",
+  "paperType": "Koran",
+  "yearFirstVol": "2017",
+  "kkiTitle": "The Secret Scroll Of Fighting: Naruto Character Official Data Book",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_the-shape-of-voice": {
@@ -5156,7 +5291,7 @@
   "yearFirstVol": "2022",
   "kkiTitle": "Theory of Mistaken Destiny",
   "kkiPublisher": "Elex",
-  "matchScore": 95.0,
+  "matchScore": 95.3,
   "matchMethod": "auto"
  },
  "ser_they-are-looking-at-me": {
@@ -5189,21 +5324,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_tokyo-ghoul": {
-  "demographic": "Seinen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "14",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/c2hzbxv/toukyou-ghoul",
-  "priceMin": "Rp31.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2016",
-  "kkiTitle": "Tokyo Ghoul",
-  "kkiPublisher": "M&C!",
-  "matchScore": 100.0,
-  "matchMethod": "auto"
- },
  "ser_tokyo-revengers": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",
@@ -5224,14 +5344,29 @@
   "publisherJp": "Kodansha",
   "volumesJp": "1",
   "statusJp": "End",
-  "mangaupdatesUrl": "https://kc.kodansha.co.jp/product?item=0000350955",
+  "mangaupdatesUrl": null,
   "priceMin": "Rp50.000",
   "priceMax": "Rp50.000",
   "paperType": "Bookpaper",
   "yearFirstVol": "2024",
   "kkiTitle": "Tokyo Revengers Character Book: Heaven & Earth",
   "kkiPublisher": "Level",
-  "matchScore": 95.6,
+  "matchScore": 97.0,
+  "matchMethod": "auto"
+ },
+ "ser_unkiss-my-best-friend-i-dont-want-to": {
+  "demographic": "Shojo",
+  "publisherJp": "Shogakukan",
+  "volumesJp": "6",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/hx8g9jd/osananajimi-to-kiss-shitakunakunai",
+  "priceMin": "Rp25.000",
+  "priceMax": "Rp28.000",
+  "paperType": "Koran",
+  "yearFirstVol": "2019",
+  "kkiTitle": "Unkiss My Best Friend, I Don't Want To",
+  "kkiPublisher": "M&C!",
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
  "ser_untuk-dirimu-yang-baru": {
@@ -5277,21 +5412,6 @@
   "kkiTitle": "Uzumaki",
   "kkiPublisher": "Akasha",
   "matchScore": 100.0,
-  "matchMethod": "auto"
- },
- "ser_vagabond-bind-up": {
-  "demographic": "Seinen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "37",
-  "statusJp": "Hiatus",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/su6blie/vagabond",
-  "priceMin": null,
-  "priceMax": "Rp22.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2005",
-  "kkiTitle": "Vagabond",
-  "kkiPublisher": "Level",
-  "matchScore": 90.0,
   "matchMethod": "auto"
  },
  "ser_versus": {
@@ -5396,7 +5516,7 @@
   "yearFirstVol": "2026",
   "kkiTitle": "Who Killed The Brave? Chapter of Prophecy",
   "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
+  "matchScore": 99.1,
   "matchMethod": "auto"
  },
  "ser_wind-breaker": {
@@ -5444,21 +5564,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_wotakoi": {
-  "demographic": "Josei",
-  "publisherJp": "Ichijinsha",
-  "volumesJp": "11",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ff8xqtk/wotaku-ni-koi-wa-muzukashii",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp59.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2021",
-  "kkiTitle": "Wotakoi: Love Is Hard for Otaku",
-  "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
-  "matchMethod": "auto"
- },
  "ser_wotakoi-love-is-hard-for-otaku": {
   "demographic": "Josei",
   "publisherJp": "Ichijinsha",
@@ -5474,7 +5579,22 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_yashahime-princess-half--demon": {
+ "ser_wotakoi-love-is-hard-for-otaku-comic-anthology": {
+  "demographic": "Josei",
+  "publisherJp": "Ichijinsha",
+  "volumesJp": "1",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/vm9a5ut/wotaku-ni-koi-wa-muzukashii-comic-anthology",
+  "priceMin": "Rp70.000",
+  "priceMax": "Rp70.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2021",
+  "kkiTitle": "Wotakoi: Love is Hard for Otaku - Comic Anthology",
+  "kkiPublisher": "Akasha",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
+ "ser_yashahime-princess-half-demon": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",
   "volumesJp": "7",
@@ -5489,7 +5609,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_yomi-no-tsugai---pair-of-the-underworld": {
+ "ser_yomi-no-tsugai-pair-of-the-underworld": {
   "demographic": "Shounen",
   "publisherJp": "Square Enix",
   "volumesJp": "9",
@@ -5519,7 +5639,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_yoshinozuikara---bagai-katak-dalam-tempurung": {
+ "ser_yoshinozuikara-bagai-katak-dalam-tempurung": {
   "demographic": "Shounen",
   "publisherJp": "Square Enix",
   "volumesJp": "3",
@@ -5609,21 +5729,6 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_youth-x-machinegun-aoharu-x-kikanju": {
-  "demographic": "Shounen",
-  "publisherJp": "Square Enix",
-  "volumesJp": "18",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ye8sk71/aoharu-x-kikanjuu",
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp45.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2022",
-  "kkiTitle": "Youth x Machine Gun - Aoharu x Kikanjuu",
-  "kkiPublisher": "Elex",
-  "matchScore": 97.2,
-  "matchMethod": "auto"
- },
  "ser_yowamushi-pedal-go": {
   "demographic": "Shounen",
   "publisherJp": "Akita Shoten",
@@ -5639,7 +5744,7 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_yuru-camp": {
+ "ser_yuru-camp-kemah-santai-gadis-sma": {
   "demographic": "Seinen",
   "publisherJp": "Houbunsha",
   "volumesJp": "18",
@@ -5651,20 +5756,20 @@
   "yearFirstVol": "2026",
   "kkiTitle": "Yuru Camp - Kemah Santai Gadis SMA",
   "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
+  "matchScore": 100.0,
   "matchMethod": "auto"
  },
- "ser_yuyu-hakusho": {
+ "ser_yuyu-hakusho-premium": {
   "demographic": "Shounen",
-  "publisherJp": null,
-  "volumesJp": null,
-  "statusJp": null,
-  "mangaupdatesUrl": null,
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "yearFirstVol": "2006",
-  "kkiTitle": "Yuyu Hakusho",
+  "publisherJp": "Shueisha",
+  "volumesJp": "12",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/ss3rlmi/yu-yu-hakusho",
+  "priceMin": "Rp85.000",
+  "priceMax": "Rp85.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2025",
+  "kkiTitle": "YuYu Hakusho Premium",
   "kkiPublisher": "Elex",
   "matchScore": 100.0,
   "matchMethod": "auto"
@@ -5683,200 +5788,5 @@
   "kkiPublisher": "Level",
   "matchScore": 100.0,
   "matchMethod": "auto"
- },
- "ser_apa-salahnya-mencari-cinta-di-dungeon": {
-  "demographic": "Seinen",
-  "publisherJp": "SB Creative",
-  "volumesJp": "21",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/5t4m0lg/dungeon-ni-deai-o-motomeru-no-wa-machigatte-iru-darou-ka-novel",
-  "priceMin": "Rp125.000",
-  "priceMax": "Rp125.000",
-  "paperType": null,
-  "yearFirstVol": "2024",
-  "kkiTitle": "Apa Salahnya Mencari Cinta di Dungeon?",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 100.0,
-  "matchMethod": "manual"
- },
- "ser_attack-on-titan-before-the-fall": {
-  "demographic": "Shounen",
-  "publisherJp": "Kodansha",
-  "volumesJp": "3",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/op0t6nj/shingeki-no-kyojin-before-the-fall-novel",
-  "priceMin": "Rp20.000",
-  "priceMax": "Rp42.000",
-  "paperType": null,
-  "yearFirstVol": "2015",
-  "kkiTitle": "Attack on Titan Before the Fall",
-  "kkiPublisher": "Level",
-  "matchScore": 100.0,
-  "matchMethod": "manual"
- },
- "ser_stand-by-me-doraemon": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "2",
-  "statusJp": "End",
-  "mangaupdatesUrl": null,
-  "priceMin": "Rp75.000",
-  "priceMax": "Rp75.000",
-  "paperType": null,
-  "yearFirstVol": "2023",
-  "kkiTitle": "Stand by Me Doraemon",
-  "kkiPublisher": "Elex",
-  "matchScore": 100.0,
-  "matchMethod": "manual"
- },
- "ser_tatsuki-fujimoto-before-chainsaw-man-22-26": {
-  "demographic": "Seinen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/2fnistt/fujimoto-tatsuki-tanpenshuu",
-  "priceMin": "Rp48.000",
-  "priceMax": "Rp48.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Tatsuki Fujimoto Before Chainsaw Man 22-26",
-  "kkiPublisher": "Akasha",
-  "matchScore": 100.0,
-  "matchMethod": "manual"
- },
- "ser_tatsuki-fujimoto-before-chainsaw-man": {
-  "demographic": "Seinen",
-  "publisherJp": "Shueisha",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/2fnistt/fujimoto-tatsuki-tanpenshuu",
-  "priceMin": "Rp48.000",
-  "priceMax": "Rp48.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Tatsuki Fujimoto Before Chainsaw Man 17-21",
-  "kkiPublisher": "Akasha",
-  "matchScore": 95.0,
-  "matchMethod": "manual"
- },
- "ser_the-rising-of-the-shield-hero-manga": {
-  "demographic": "Seinen",
-  "publisherJp": "Media Factory",
-  "volumesJp": "22",
-  "statusJp": "Hiatus",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/d3951ty/tate-no-yuusha-no-nariagari-novel",
-  "priceMin": "Rp115.000",
-  "priceMax": "Rp115.000",
-  "paperType": null,
-  "yearFirstVol": "2024",
-  "kkiTitle": "The Rising of the Shield Hero",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 100.0,
-  "matchMethod": "manual"
- },
- "ser_the-summer-hikaru-died-ln": {
-  "demographic": "Seinen",
-  "publisherJp": "Kadokawa",
-  "volumesJp": "2",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/0lt44gt/hikaru-ga-shinda-natsu-novel",
-  "priceMin": "Rp85.000",
-  "priceMax": "Rp98.000",
-  "paperType": null,
-  "yearFirstVol": "2025",
-  "kkiTitle": "The Summer Hikaru Died",
-  "kkiPublisher": "Phoenix",
-  "matchScore": 95.0,
-  "matchMethod": "manual"
- },
- "ser_frieren-ln": {
-  "demographic": "Shounen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "2",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/9ptzg09/shousetsu-sousou-no-frieren-zensou-novel",
-  "priceMin": "Rp85.000",
-  "priceMax": "Rp85.000",
-  "paperType": null,
-  "yearFirstVol": "2026",
-  "kkiTitle": "Frieren: After “The End” -Prelude-",
-  "kkiPublisher": "Clover",
-  "matchScore": 85.5,
-  "matchMethod": "manual"
- },
- "ser_horimiya-a-piece-of-memories-special": {
-  "demographic": "Shounen",
-  "publisherJp": "Square Enix",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/uu6yf6n/horimiya",
-  "priceMin": "Rp50.000",
-  "priceMax": "Rp50.000",
-  "paperType": "Koran",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Horimiya - A Piece of Memories",
-  "kkiPublisher": "Elex",
-  "matchScore": 95.0,
-  "matchMethod": "manual"
- },
- "ser_the-apothecary-diaries-ln": {
-  "demographic": "Seinen",
-  "publisherJp": "Shufunotomo",
-  "volumesJp": "16",
-  "statusJp": "Ongoing",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/zw7k3xp/kusuriya-no-hitorigoto-novel",
-  "priceMin": "Rp108.000",
-  "priceMax": "Rp118.000",
-  "paperType": null,
-  "yearFirstVol": "2026",
-  "kkiTitle": "The Apothecary Diaries",
-  "kkiPublisher": "Clover",
-  "matchScore": 95.0,
-  "matchMethod": "manual"
- },
- "ser_blindside": {
-  "demographic": "Josei",
-  "publisherJp": "Bunkasha",
-  "volumesJp": "1",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/vjydvdb/horror-anthology-comic-shikaku",
-  "priceMin": "Rp75.000",
-  "priceMax": "Rp75.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2025",
-  "kkiTitle": "Blindside - Horror Anthology Comic",
-  "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
-  "matchMethod": "manual"
- },
- "ser_lunar-leg": {
-  "demographic": "Shounen",
-  "publisherJp": "Kadokawa",
-  "volumesJp": "10",
-  "statusJp": "End",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/7s905mh/shingetsutan-tsukihime",
-  "priceMin": "Rp55.000",
-  "priceMax": "Rp55.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2024",
-  "kkiTitle": "Lunar Legend Tsukihime",
-  "kkiPublisher": "Akasha",
-  "matchScore": 90.0,
-  "matchMethod": "manual"
- },
- "ser_gyo-complete": {
-  "demographic": "Seinen",
-  "publisherJp": "Shogakukan",
-  "volumesJp": "2",
-  "statusJp": "End",
-  "mangaupdatesUrl": null,
-  "priceMin": "Rp40.000",
-  "priceMax": "Rp40.000",
-  "paperType": "Bookpaper",
-  "yearFirstVol": "2018",
-  "kkiTitle": "Gyo",
-  "kkiPublisher": "M&C!",
-  "matchScore": 90.0,
-  "matchMethod": "manual"
  }
 }
