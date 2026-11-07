@@ -1,19 +1,9 @@
 #!/usr/bin/env python3
 """
 Offline catalog repair — applies the recurring pipeline's consistency steps
-(franchise separation + aliases, duplicate-listing merge, edition
-consolidation, series reconstruction) to the existing catalog.json WITHOUT
-touching the network.
-
-This is the same code path run_sync() uses (steps 5/5b/5c/6); it exists so
-data drift that accumulated while those steps lived only in one-time audit
-scripts can be repaired deterministically and re-verified by the test suite.
-
-Usage:
-    python3 scripts/repair-catalog.py [--catalog src/data/catalog.json] [--no-backup]
-
-The script always regenerates src/data/catalog-listing.json via
-scripts/split-catalog.py afterwards.
+(legacy sweep + volume/series re-parse, franchise separation + aliases,
+duplicate-listing merge, edition consolidation, series reconstruction, and
+orphan snapshot pruning) to the existing catalog.json WITHOUT touching the network.
 """
 
 import argparse
@@ -33,7 +23,6 @@ _spec = importlib.util.spec_from_file_location(
 _sync = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_sync)
 
-# split-catalog.py is hyphenated, so load it via importlib too.
 _split_spec = importlib.util.spec_from_file_location(
     "split_catalog", os.path.join(SCRIPT_DIR, "split-catalog.py"))
 _split_mod = importlib.util.module_from_spec(_split_spec)
@@ -64,20 +53,30 @@ def main():
 
     print(f"[repair] books in: {len(all_books)}, series in: {len(existing_series_map)}")
 
+    all_books, purged_ids = _sync.sweep_legacy_books(all_books)
     _sync.apply_franchise_separation(all_books)
     all_books, dupes_merged = _sync.merge_duplicate_listings(all_books, price_snapshot_map)
     all_books = _sync.consolidate_editions(all_books, price_snapshot_map)
     new_series_list = _sync.reconstruct_series(all_books, existing_series_map)
 
+    surviving_book_ids = {b["id"] for b in all_books}
+    clean_snapshots = [
+        snap for bid, snaps in price_snapshot_map.items()
+        if bid in surviving_book_ids
+        for snap in snaps
+    ]
+
     catalog["books"] = all_books
     catalog["series"] = new_series_list
+    catalog["priceSnapshots"] = clean_snapshots
     catalog["lastUpdated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
     with open(catalog_path, "w", encoding="utf-8") as f:
         json.dump(catalog, f, ensure_ascii=False, indent=2)
 
-    print(f"[repair] books out: {len(all_books)}, series out: {len(new_series_list)}, "
-          f"duplicate listings merged: {dupes_merged}")
+    print(f"[repair] books out: {len(all_books)} (purged: {len(purged_ids)}), "
+          f"series out: {len(new_series_list)}, duplicate listings merged: {dupes_merged}, "
+          f"snapshots kept: {len(clean_snapshots)}")
 
     split_catalog()
     print("[repair] done — run `npx vitest run` to verify")
