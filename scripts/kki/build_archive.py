@@ -1,25 +1,21 @@
 #!/usr/bin/env python3
 """
 Build the KKI archive catalog: src/data/kki-archive.json.
-
-Archive = KKI series with NO counterpart in Nuvellite (from
-kki-unmatched.json produced by match_kki.py). These are mostly old /
-out-of-print series that never appear on gramedia.com.
-
-Each entry carries series-level data straight from the KKI sheets plus an
-optional `mu` block filled later by mu_enrich.py (cover, EN description,
-ID translation). Entries without MU data still render fine.
-
-Output is deterministic (sorted by title) so the file diffs cleanly.
+Preserves MU enrichment and Pranala covers across rebuilds using both entry_id
+and a fallback (medium, normalized_title) key so slug shifts never orphan data.
+Also sanitizes mangaupdatesUrl and pranala fields.
 """
 
 import json
 import re
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 KKI_DIR = REPO / "scripts" / "kki"
 DATA_DIR = REPO / "src" / "data"
+sys.path.insert(0, str(KKI_DIR))
+from url_utils import sanitize_http_url, sanitize_mu_url
 
 
 def slugify(title: str) -> str:
@@ -30,6 +26,10 @@ def slugify(title: str) -> str:
     return s[:80] or "tanpa-judul"
 
 
+def norm_key(medium: str, title: str) -> str:
+    return f"{medium}::{slugify(title)}"
+
+
 def main():
     unmatched_path = KKI_DIR / "kki-unmatched.json"
     if not unmatched_path.exists():
@@ -37,36 +37,41 @@ def main():
 
     unmatched = json.load(open(unmatched_path, encoding="utf-8"))
 
-    # keep existing MU enrichment AND pranala covers across rebuilds.
-    # BUG fixed 2026-10-24: pranalaCover was NOT preserved here, so every
-    # Tue/Fri sync wiped all publisher-store covers, and the incremental
-    # pranala run (30/run) could never accumulate — the real reason
-    # archive covers stayed blank for weeks despite "successful" syncs.
     old_mu = {}
     old_pranala = {}
     archive_path = DATA_DIR / "kki-archive.json"
     if archive_path.exists():
         for e in json.load(open(archive_path, encoding="utf-8")):
+            nk = norm_key(e.get("medium", "MANGA"), e.get("title", ""))
             if e.get("mu"):
                 old_mu[e["id"]] = e["mu"]
-            if e.get("pranalaCover"):
-                old_pranala[e["id"]] = (
-                    e["pranalaCover"], e.get("pranalaCoverSource"))
+                old_mu[nk] = e["mu"]
+            if e.get("pranalaCover") or e.get("pranalaStatus"):
+                pdata = (
+                    e.get("pranalaCover"),
+                    e.get("pranalaCoverSource"),
+                    e.get("pranalaStatus"),
+                )
+                old_pranala[e["id"]] = pdata
+                old_pranala[nk] = pdata
 
     seen_slugs = set()
     archive = []
     for r in unmatched:
         title = r["title"].strip()
+        medium = "LIGHT_NOVEL" if r["medium"] == "LIGHT_NOVEL" else "MANGA"
         base_slug = slugify(title)
         slug = base_slug
+        if slug in seen_slugs and medium == "LIGHT_NOVEL" and f"{base_slug}-ln" not in seen_slugs:
+            slug = f"{base_slug}-ln"
         n = 2
         while slug in seen_slugs:
             slug = f"{base_slug}-{n}"
             n += 1
         seen_slugs.add(slug)
 
-        medium = "LIGHT_NOVEL" if r["medium"] == "LIGHT_NOVEL" else "MANGA"
         entry_id = f"kki_{slug}"
+        nk = norm_key(medium, title)
         entry = {
             "id": entry_id,
             "slug": slug,
@@ -85,14 +90,21 @@ def main():
             "volumesJp": r["volumes_jp"] or None,
             "statusJp": r["status_jp"] or None,
             "publisherJp": r["publisher_jp"] or None,
-            "mangaupdatesUrl": r["mangaupdates_url"] or None,
-            "pranala": r.get("pranala") or None,
+            "mangaupdatesUrl": sanitize_mu_url(r.get("mangaupdates_url")),
+            "pranala": sanitize_http_url(r.get("pranala")),
             "notes": r["notes"] or None,
         }
-        if entry_id in old_mu:
-            entry["mu"] = old_mu[entry_id]
-        if entry_id in old_pranala:
-            entry["pranalaCover"], entry["pranalaCoverSource"] = old_pranala[entry_id]
+        mu_val = old_mu.get(entry_id) or old_mu.get(nk)
+        if mu_val:
+            entry["mu"] = mu_val
+        pr_val = old_pranala.get(entry_id) or old_pranala.get(nk)
+        if pr_val:
+            cov, src, st = pr_val
+            if cov:
+                entry["pranalaCover"] = cov
+                entry["pranalaCoverSource"] = src
+            if st:
+                entry["pranalaStatus"] = st
         archive.append(entry)
 
     archive.sort(key=lambda e: e["title"].lower())
@@ -101,7 +113,8 @@ def main():
         json.dump(archive, f, ensure_ascii=False, indent=1)
 
     with_mu = sum(1 for e in archive if e.get("mu", {}).get("status") == "ok")
-    print(f"archive entries: {len(archive)} (with MU data: {with_mu})")
+    with_pr = sum(1 for e in archive if e.get("pranalaCover"))
+    print(f"archive entries: {len(archive)} (MU ok: {with_mu}, Pranala cover: {with_pr})")
 
 
 if __name__ == "__main__":

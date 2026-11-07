@@ -2,23 +2,15 @@
 """
 KKI <-> Nuvellite series matcher.
 
-Fuzzy-matches Nuvellite series (from catalog-listing.json) against the
-Komunitas Kolektor Komik Indonesia (KKI) spreadsheet database
-(manga + light novel tabs).
-
-Outputs:
-  - src/data/kki-enrichment.json        keyed by Nuvellite seriesId
-  - scripts/kki/kki-review-queue.json   ambiguous matches for manual review
-  - scripts/kki/kki-unmatched.json      KKI rows with no Nuvellite counterpart
-                                        (archive candidates)
-
-Matching policy (conservative):
-  - normalize: lowercase, strip punctuation, collapse whitespace
-  - score = max(WRatio, token_sort_ratio) via rapidfuzz
-  - score >= 88  -> auto-match (same medium only)
-  - 70 <= score < 88 -> review queue (never auto-matched)
-  - score < 70  -> unmatched (archive candidate)
-  - cross-medium matches (manga<->LN) never auto-match -> review queue
+Fixes:
+1. Sanitizes mangaupdates_url and pranala at CSV load time via url_utils.
+2. Replaces unguarded fuzz.WRatio (which gave 85.5 to any pair sharing "of"/"the")
+   with token-overlap guarded scoring so unrelated titles never flood review_queue.
+3. Persists human/automated review decisions in scripts/kki/kki-review-decisions.json
+   (never overwritten when kki-review-queue.json is regenerated).
+4. Marks manual_keep matches in matched_kki_idx BEFORE building unmatched.
+5. Does NOT drop KKI archive series merely because they had a low-confidence
+   (<90) review queue candidate.
 """
 
 import csv
@@ -36,45 +28,55 @@ except ImportError:
 REPO = Path(__file__).resolve().parents[2]
 KKI_DIR = REPO / "scripts" / "kki"
 DATA_DIR = REPO / "src" / "data"
+sys.path.insert(0, str(KKI_DIR))
+from url_utils import sanitize_http_url, sanitize_mu_url
 
 AUTO_THRESHOLD = 90
-REVIEW_THRESHOLD = 70
-AUTHOR_THRESHOLD = 70      # min author fuzz for compatibility
-AUTHOR_STRONG_THRESHOLD = 85  # strong author match overrides substring guard
+REVIEW_THRESHOLD = 75
+AUTHOR_THRESHOLD = 70
+AUTHOR_STRONG_THRESHOLD = 85
 
 MANGA_CSV = KKI_DIR / "kki-manga.csv"
 LN_CSV = KKI_DIR / "kki-ln.csv"
+DECISIONS_JSON = KKI_DIR / "kki-review-decisions.json"
+LEGACY_LOG_JSON = KKI_DIR / "kki-review-log-2026-10-12.json"
 
-# words that, when they are the ONLY difference between two titles,
-# indicate an edition/variant rather than a different series
 EDITION_MARKERS = {
     "complete", "edition", "deluxe", "omnibus", "bind", "up", "bindup",
-    "vol", "volume", "best",
+    "vol", "volume", "best", "novel", "manga", "komik",
 }
 
-# words indicating a spin-off / compilation / side story — these mean a
-# DIFFERENT series even when the author matches (e.g. "Cerita Spesial Doraemon")
 SPINOFF_MARKERS = {
     "spesial", "special", "cerita", "kisah", "selection", "archives",
     "arsip", "vs", "tribute", "anthology", "antologi", "another",
-    "gaiden", "side", "secret",
+    "gaiden", "side", "secret", "movie", "petualangan",
 }
+
+STOPWORDS = {
+    "the", "of", "and", "in", "to", "a", "an", "for", "on", "at", "by",
+    "with", "from", "is", "are", "my", "our", "your", "no", "di", "dan",
+    "yang", "untuk", "dari", "ke", "dalam", "dengan", "sang", "si",
+    "story", "tale", "series", "collection", "edition", "new", "complete",
+    "komik", "manga", "novel", "light", "koloni", "akasha", "level",
+}
+
+PUBLISHER_IN_AUTHOR_RE = re.compile(
+    r"elex|m&c|gramedia|komputindo|publishing|publisher|phoenix|\bpgi\b|koloni|akasha|level comic|berbagai penulis|various authors",
+    re.IGNORECASE,
+)
 
 
 def normalize(title: str) -> str:
     t = (title or "").lower()
-    # drop common publisher prefixes that appear in either source
-    t = re.sub(r"^(level comic|akasha|koloni|komik|light novel)\s*:\s*", "", t)
+    t = re.sub(r"^(level comic|akasha|koloni|komik|light novel)\s*[:\-]?\s*", "", t)
+    t = re.sub(r"\(\s*novel\s*\)$", "", t).strip()
     t = re.sub(r"[^\w\s]", " ", t, flags=re.UNICODE)
     t = re.sub(r"\s+", " ", t).strip()
     return t
 
 
-# author strings that are actually publisher names -> treat as unverifiable
-PUBLISHER_IN_AUTHOR_RE = re.compile(
-    r"elex|m&c|gramedia|komputindo|publishing|publisher|phoenix|\bpgi\b|koloni|akasha|level comic",
-    re.IGNORECASE,
-)
+def content_tokens(norm_title: str) -> set[str]:
+    return {w for w in norm_title.split() if len(w) >= 2 and w not in STOPWORDS and not w.isdigit()}
 
 
 def is_person_author(a: str) -> bool:
@@ -84,39 +86,50 @@ def is_person_author(a: str) -> bool:
 
 def normalize_author(a: str) -> str:
     t = (a or "").lower()
-    t = re.sub(r"\b(cerita|gambar|story|art)\s*:", " ", t)
+    t = re.sub(r"\b(cerita|gambar|story|art|original|penulis|ilustrator)\s*:", " ", t)
     t = re.sub(r"[^\w\s]", " ", t, flags=re.UNICODE)
     t = re.sub(r"\s+", " ", t).strip()
     return t
 
 
 def author_score(nuv_author: str, kki_author: str) -> float:
-    """0-100. Returns -1 when either side is missing/not a person name
-    (publisher names in the author field are unverifiable)."""
     if not is_person_author(nuv_author) or not is_person_author(kki_author):
         return -1.0
     na, ka = normalize_author(nuv_author), normalize_author(kki_author)
     if not na or not ka:
         return -1.0
-    # token overlap: every significant token of the shorter name should
-    # appear in the longer one ("gosho aoyama" vs "aoyama gosho")
     na_tokens = [w for w in na.split() if len(w) > 2]
     ka_tokens = [w for w in ka.split() if len(w) > 2]
     if na_tokens and ka_tokens:
         short, long = (na_tokens, ka_tokens) if len(na_tokens) <= len(ka_tokens) else (ka_tokens, na_tokens)
         overlap = sum(1 for w in short if w in long) / len(short)
         if overlap >= 0.5:
-            return max(85.0, fuzz.WRatio(na, ka))
+            return max(85.0, float(fuzz.WRatio(na, ka)))
     return float(fuzz.WRatio(na, ka))
 
 
-def score_titles(a: str, b: str) -> float:
-    na, nb = normalize(a), normalize(b)
+def score_titles(na: str, nb: str, ta: set[str], tb: set[str]) -> float:
+    """Compute title similarity without stopword partial_ratio hallucinations."""
     if not na or not nb:
         return 0.0
     if na == nb:
         return 100.0
-    return max(fuzz.WRatio(na, nb), fuzz.token_sort_ratio(na, nb))
+    # Require at least one shared content token (or prefix match on >=5 char token)
+    if ta and tb:
+        shared = ta & tb
+        if not shared:
+            has_prefix = any(
+                (len(w1) >= 5 and len(w2) >= 5 and (w1.startswith(w2) or w2.startswith(w1)))
+                for w1 in ta for w2 in tb
+            )
+            if not has_prefix:
+                return float(fuzz.token_sort_ratio(na, nb)) * 0.7
+    tsr = float(fuzz.token_sort_ratio(na, nb))
+    tset = float(fuzz.token_set_ratio(na, nb))
+    # Cap token_set_ratio contribution when lengths differ sharply so 1-word overlaps don't hit 90+
+    len_ratio = min(len(na), len(nb)) / max(len(na), len(nb))
+    weighted_set = tset * (0.65 + 0.35 * len_ratio)
+    return max(tsr, weighted_set)
 
 
 def load_kki_rows(path: Path, medium: str):
@@ -128,6 +141,11 @@ def load_kki_rows(path: Path, medium: str):
                      or r.get("Judul Light Novel yang Terbit di Indonesia") or "").strip()
             if not title:
                 continue
+            raw_mu = (r.get("MangaUpdates") or "").strip()
+            raw_pranala = (r.get("Pranala") or "").strip()
+            clean_mu = sanitize_mu_url(raw_mu)
+            clean_pranala = sanitize_http_url(raw_pranala)
+            # If MangaUpdates column had a non-MU publisher/wiki URL and Pranala is empty, keep as reference note, not MU URL
             rows.append({
                 "title": title,
                 "author": (r.get("Pengarang") or "").strip(),
@@ -143,8 +161,8 @@ def load_kki_rows(path: Path, medium: str):
                 "volumes_jp": (r.get("Vol. di JPN") or "").strip(),
                 "status_jp": (r.get("Status di JPN") or "").strip(),
                 "publisher_jp": (r.get("Penerbit di JPN") or "").strip(),
-                "mangaupdates_url": (r.get("MangaUpdates") or "").strip(),
-                "pranala": (r.get("Pranala") or "").strip(),
+                "mangaupdates_url": clean_mu or "",
+                "pranala": clean_pranala or "",
                 "notes": (r.get("Keterangan/Catatan") or "").strip(),
                 "medium": medium,
             })
@@ -173,6 +191,34 @@ def build_enrichment(kki_row: dict) -> dict:
     }
 
 
+def load_persistent_decisions() -> dict:
+    """Load persistent human/automated review decisions keyed by 'sid::kkiTitle::kkiMedium'."""
+    decisions = {}
+    if DECISIONS_JSON.exists():
+        try:
+            decisions = json.loads(DECISIONS_JSON.read_text(encoding="utf-8"))
+        except Exception:
+            decisions = {}
+    # Seed from legacy log if not yet imported
+    for log_path in (LEGACY_LOG_JSON, KKI_DIR / "kki-review-queue.json"):
+        if log_path.exists():
+            try:
+                for q in json.loads(log_path.read_text(encoding="utf-8")):
+                    dec = q.get("reviewDecision")
+                    if dec in ("MATCHED", "NOT_MATCH"):
+                        key = f"{q.get('nuvelliteSeriesId')}::{q.get('kkiTitle')}::{q.get('kkiMedium')}"
+                        decisions.setdefault(key, {
+                            "nuvelliteSeriesId": q.get("nuvelliteSeriesId"),
+                            "kkiTitle": q.get("kkiTitle"),
+                            "kkiMedium": q.get("kkiMedium"),
+                            "decision": dec,
+                            "reviewedAt": q.get("reviewedAt") or "2026-10-12",
+                        })
+            except Exception:
+                pass
+    return decisions
+
+
 def main():
     manga_rows = load_kki_rows(MANGA_CSV, "MANGA")
     ln_rows = load_kki_rows(LN_CSV, "LIGHT_NOVEL")
@@ -181,15 +227,24 @@ def main():
     nuv_series = load_nuvellite_series()
     print(f"Nuvellite series: {len(nuv_series)}")
 
-    # precompute normalized KKI titles
     for r in manga_rows + ln_rows:
         r["_norm"] = normalize(r["title"])
+        r["_tokens"] = content_tokens(r["_norm"])
 
     enrichment = {}
     review_queue = []
-    matched_kki_idx = set()  # (medium, idx)
+    matched_kki_idx = set()
 
-    # Preserve manual matches from previous runs (human-reviewed, never overwrite)
+    decisions = load_persistent_decisions()
+    rejected_pairs = {
+        (d["nuvelliteSeriesId"], d["kkiTitle"], d["kkiMedium"])
+        for d in decisions.values() if d.get("decision") == "NOT_MATCH"
+    }
+    approved_by_sid = {
+        d["nuvelliteSeriesId"]: d
+        for d in decisions.values() if d.get("decision") == "MATCHED"
+    }
+
     existing_enrich_path = DATA_DIR / "kki-enrichment.json"
     manual_keep = {}
     if existing_enrich_path.exists():
@@ -200,55 +255,73 @@ def main():
                     manual_keep[sid] = e
         except Exception as ex:
             print(f"WARN: could not load existing enrichment: {ex}")
-    # Load already-reviewed (NOT_MATCH) decisions so they are not re-queued
-    reviewed_not_match = set()
-    for log_name in ("kki-review-queue.json",):
-        p = KKI_DIR / log_name
-        if p.exists():
-            try:
-                for q in json.loads(p.read_text(encoding="utf-8")):
-                    if q.get("reviewDecision") == "NOT_MATCH":
-                        reviewed_not_match.add(q.get("nuvelliteSeriesId"))
-            except Exception:
-                pass
+
+    # Apply approved decisions from persistent store into manual_keep
+    for sid, dec in approved_by_sid.items():
+        if sid in manual_keep:
+            continue
+        target_title = (dec.get("kkiTitle") or "").strip().lower()
+        target_med = dec.get("kkiMedium")
+        pool = manga_rows if target_med == "MANGA" else ln_rows
+        for r in pool:
+            if r["title"].strip().lower() == target_title:
+                e = build_enrichment(r)
+                e["matchScore"] = 100.0
+                e["matchMethod"] = "manual"
+                manual_keep[sid] = e
+                break
+
+    # Pre-mark manual_keep in matched_kki_idx BEFORE matching and BEFORE building unmatched!
+    active_sids = {s["id"] for s in nuv_series}
+    for sid, e in list(manual_keep.items()):
+        if sid not in active_sids:
+            continue
+        enrichment[sid] = e
+        kt = (e.get("kkiTitle") or "").strip().lower()
+        for medium, pool in (("MANGA", manga_rows), ("LIGHT_NOVEL", ln_rows)):
+            for i, r in enumerate(pool):
+                if r["title"].strip().lower() == kt:
+                    matched_kki_idx.add((medium, i))
+                    break
 
     for s in nuv_series:
         sid = s["id"]
-        # Skip human-reviewed decisions: manual matches are kept, NOT_MATCH are not re-queued
-        if sid in manual_keep or sid in reviewed_not_match:
+        if sid in enrichment:
             continue
         sname = s.get("name") or ""
-        stype = s.get("type")  # MANGA | LIGHT_NOVEL
+        stype = s.get("type")
         snorm = normalize(sname)
+        stokens = content_tokens(snorm)
 
         candidates = manga_rows if stype == "MANGA" else ln_rows
         other = ln_rows if stype == "MANGA" else manga_rows
 
-        best = None  # (score, row, row_idx, medium, cross)
+        best = None
         for medium_label, pool in (("same", candidates), ("cross", other)):
             for i, r in enumerate(pool):
-                sc = score_titles(snorm, r["_norm"])
-                # cheap prefilter via normalized equality already handled; score all
+                if (sid, r["title"], r["medium"]) in rejected_pairs:
+                    continue
+                sc = score_titles(snorm, r["_norm"], stokens, r["_tokens"])
                 if best is None or sc > best[0]:
                     best = (sc, r, i, r["medium"], medium_label == "cross")
 
         if best is None:
             continue
         sc, row, idx, medium, cross = best
+        if sc < REVIEW_THRESHOLD:
+            continue
 
         na, nb = snorm, row["_norm"]
-        # guard: very short titles must match exactly (avoids "N" == "Anay-Nay")
         short_exact_only = min(len(na), len(nb)) <= 3 and na != nb
 
-        # author signal (-1 = unverifiable, e.g. publisher name in author field)
         asc = author_score(s.get("author") or "", row["author"])
         author_ok = asc < 0 or asc >= AUTHOR_THRESHOLD
         author_strong = asc >= AUTHOR_STRONG_THRESHOLD
 
-        # substring guard: one title inside the other with meaningful extra
-        # words usually means a different (spin-off/compilation) series.
-        # A strong author match overrides this, EXCEPT when the extra words
-        # are spin-off indicators ("Cerita Spesial Doraemon" != "Doraemon").
+        # If score < 90 and authors clearly conflict (< 60), it's a coincidental word overlap, not a review candidate
+        if sc < AUTO_THRESHOLD and 0 <= asc < 60:
+            continue
+
         substring_extra = False
         if na != nb and (na in nb or nb in na):
             longer = nb if len(nb) > len(na) else na
@@ -265,7 +338,7 @@ def main():
             enrichment[sid]["matchScore"] = round(sc, 1)
             enrichment[sid]["matchMethod"] = "auto"
             matched_kki_idx.add((medium, idx))
-        elif sc >= REVIEW_THRESHOLD:
+        else:
             reason = "cross-medium" if cross else "score-below-auto"
             if short_exact_only:
                 reason = "short-title-inexact"
@@ -287,38 +360,18 @@ def main():
                 "crossMedium": cross,
                 "reason": reason,
             })
-        # else: no match -> KKI side handled below
 
-    # unmatched KKI rows -> archive candidates
+    # Unmatched KKI rows -> archive candidates.
+    # Never drop KKI rows just because they appeared in review_queue!
     unmatched = []
     for medium, pool in (("MANGA", manga_rows), ("LIGHT_NOVEL", ln_rows)):
         for i, r in enumerate(pool):
             if (medium, i) in matched_kki_idx:
                 continue
-            # also exclude rows that appear in review queue (ambiguous, not confirmed absent)
-            in_review = any(
-                q["kkiTitle"] == r["title"] and q["kkiMedium"] == medium
-                for q in review_queue
-            )
-            if in_review:
-                continue
             r_out = {k: v for k, v in r.items() if not k.startswith("_")}
             unmatched.append(r_out)
 
-    # sort review queue by score desc
     review_queue.sort(key=lambda q: -q["score"])
-
-    # Re-attach preserved manual matches (human-reviewed, never auto-overwritten)
-    for sid, e in manual_keep.items():
-        enrichment[sid] = e
-        # mark their KKI rows as matched so they don't leak into the archive
-        # (best-effort: match by title)
-        kt = (e.get("kkiTitle") or "").strip().lower()
-        for medium, pool in (("MANGA", manga_rows), ("LIGHT_NOVEL", ln_rows)):
-            for i, r in enumerate(pool):
-                if r["title"].strip().lower() == kt:
-                    matched_kki_idx.add((medium, i))
-                    break
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     with open(DATA_DIR / "kki-enrichment.json", "w", encoding="utf-8") as f:
@@ -327,8 +380,10 @@ def main():
         json.dump(review_queue, f, ensure_ascii=False, indent=1)
     with open(KKI_DIR / "kki-unmatched.json", "w", encoding="utf-8") as f:
         json.dump(unmatched, f, ensure_ascii=False, indent=1)
+    with open(DECISIONS_JSON, "w", encoding="utf-8") as f:
+        json.dump(decisions, f, ensure_ascii=False, indent=1)
 
-    print(f"auto-matched (enrichment): {len(enrichment)}")
+    print(f"matched (enrichment): {len(enrichment)} (manual: {len(manual_keep)})")
     print(f"review queue: {len(review_queue)}")
     print(f"unmatched KKI rows (archive candidates): {len(unmatched)}")
 
