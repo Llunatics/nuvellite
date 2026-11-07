@@ -152,34 +152,18 @@ def parse_title_smart(title):
                 # 4. Delimited volume: "<Series Name> <Vol> - <Subtitle>"
                 m_delim = re.search(r'^(.*?\S)\s+(\d{1,3})\s*[\-–—:]\s*(.*)$', t_work)
                 if m_delim:
-                    left_words = m_delim.group(1).strip()
-                    tokens = left_words.split()
-                    last_token = tokens[-1].lower() if tokens else ''
-                    if last_token in TITLE_COUNTER_WORDS:
-                        if len(tokens) >= 2 and re.match(r'^\d+$', tokens[-2]):
-                            vol = int(m_delim.group(2))
-                            sname = left_words
-                        else:
-                            sname = f'{left_words} {m_delim.group(2)}'
-                    else:
-                        vol = int(m_delim.group(2))
-                        sname = left_words
+                    # A delimited number is the volume, even after a counter
+                    # word ("Seven Days 02 - ..."): Gramedia's dominant
+                    # convention, and the behaviour the test suite locks in.
+                    vol = int(m_delim.group(2))
+                    sname = m_delim.group(1).strip()
                 else:
                     # 5. Trailing number: "<Series Name> <Vol>"
                     m_end = re.search(r'^(.*?\S)\s+(\d{1,3})$', t_work)
                     if m_end:
-                        left_words = m_end.group(1).strip()
-                        tokens = left_words.split()
-                        last_token = tokens[-1].lower() if tokens else ''
-                        if last_token in TITLE_COUNTER_WORDS:
-                            if len(tokens) >= 2 and re.match(r'^\d+$', tokens[-2]):
-                                vol = int(m_end.group(2))
-                                sname = left_words
-                            else:
-                                sname = f'{left_words} {m_end.group(2)}'
-                        else:
-                            vol = int(m_end.group(2))
-                            sname = left_words
+                        # Trailing number is the volume (see delimited branch).
+                        vol = int(m_end.group(2))
+                        sname = m_end.group(1).strip()
                     else:
                         sname = t_work
 

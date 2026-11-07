@@ -88,38 +88,18 @@ export function parseTitleSmart(title: string): ParsedTitleResult {
         // 4. Check delimited format: "Series Name 3 - Subtitle"
         const mDelim = tWork.match(/^(.*?\S)\s+(\d{1,3})\s*[\-–—:]\s*(.*)$/);
         if (mDelim) {
-          const leftWords = mDelim[1].trim();
-          const tokens = leftWords.split(/\s+/);
-          const lastToken = (tokens[tokens.length - 1] || '').toLowerCase();
-          if (TITLE_COUNTER_WORDS.has(lastToken)) {
-            if (tokens.length >= 2 && /^\d+$/.test(tokens[tokens.length - 2])) {
-              vol = parseInt(mDelim[2], 10);
-              sname = leftWords;
-            } else {
-              sname = `${leftWords} ${mDelim[2]}`;
-            }
-          } else {
-            vol = parseInt(mDelim[2], 10);
-            sname = leftWords;
-          }
+          // A delimited number is the volume, even after a counter word
+          // ("Seven Days 02 - ..."): Gramedia's dominant convention, and
+          // the behaviour the test suite locks in.
+          vol = parseInt(mDelim[2], 10);
+          sname = mDelim[1].trim();
         } else {
           // 5. Check trailing volume number: "Series Name 03"
           const mEnd = tWork.match(/^(.*?\S)\s+(\d{1,3})$/);
           if (mEnd) {
-            const leftWords = mEnd[1].trim();
-            const tokens = leftWords.split(/\s+/);
-            const lastToken = (tokens[tokens.length - 1] || '').toLowerCase();
-            if (TITLE_COUNTER_WORDS.has(lastToken)) {
-              if (tokens.length >= 2 && /^\d+$/.test(tokens[tokens.length - 2])) {
-                vol = parseInt(mEnd[2], 10);
-                sname = leftWords;
-              } else {
-                sname = `${leftWords} ${mEnd[2]}`;
-              }
-            } else {
-              vol = parseInt(mEnd[2], 10);
-              sname = leftWords;
-            }
+            // Trailing number is the volume (see delimited branch).
+            vol = parseInt(mEnd[2], 10);
+            sname = mEnd[1].trim();
           } else {
             sname = tWork;
           }

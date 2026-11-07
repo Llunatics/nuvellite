@@ -125,6 +125,13 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     }
 
     franchiseMediums[canonSlug].add(medium);
+    // Also register the medium under the pre-alias slug: a medium alias
+    // (e.g. Conan MOVIE -> detektif-conan-the) must not split one franchise
+    // into single-medium groups, or the manga side loses its -manga series.
+    if (canonSlug !== slug) {
+      if (!franchiseMediums[slug]) franchiseMediums[slug] = new Set();
+      franchiseMediums[slug].add(medium);
+    }
   }
 
   const processedBooks: Book[] = books.map((b) => {
