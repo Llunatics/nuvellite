@@ -196,14 +196,16 @@ describe('Series Deduplication & Merchandise Isolation', () => {
     }
   });
 
-  it('should consolidate Attack on Titan Bind Up into a single 11-volume series', () => {
+  it('should consolidate Attack on Titan Bind Up into a single 12-volume series', () => {
+    // Volume count follows the catalog: vol. 12 (ISBN 9786230080562)
+    // was released 2026-11-02, after this test was first written at 11.
     const seriesList = getAllSeries();
     const aotBindUp = seriesList.find((s) => s.id === 'ser_attack-on-titan-bind-up');
     expect(aotBindUp).toBeDefined();
-    expect(aotBindUp?.totalVolumes).toBe(11);
+    expect(aotBindUp?.totalVolumes).toBe(12);
 
     const books = getBooksBySeries(aotBindUp!.id);
-    expect(books).toHaveLength(11);
+    expect(books).toHaveLength(12);
   });
 
   it('should correctly distinguish Conan Manga, Novel, and Movie series without duplicate names', () => {
