@@ -3,18 +3,39 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { CoverImage } from '../books/cover-image';
-import { Series, Book } from '@/lib/types';
+import { Series } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
 import { Layers, Search, BookOpen, X, ArrowRight, ChevronDown } from 'lucide-react';
 
 const PAGE_SIZE = 60;
 
-interface SeriesDirectoryViewProps {
-  allSeries: Series[];
-  allBooks: Book[];
+/**
+ * Slim directory DTO: the page ships ~3,200 series to the client, so it
+ * passes only the fields the directory renders/filters on. Archive series
+ * in particular must not embed their full KKI entry (enrichment blobs
+ * included) — only the first-volume year is displayed.
+ */
+export interface DirectorySeries {
+  id: string;
+  slug: string;
+  name: string;
+  publisherId: string;
+  publisherName: string;
+  author?: string;
+  type: Series['type'];
+  status: Series['status'];
+  totalVolumes: number;
+  coverImage?: string;
+  isArchive?: boolean;
+  archiveYearFirstVol?: number | string | null;
 }
 
-export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryViewProps) {
+interface SeriesDirectoryViewProps {
+  allSeries: DirectorySeries[];
+  bindUpSeriesIds: string[];
+}
+
+export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirectoryViewProps) {
   const { ownedItems, isLoaded } = useCollection();
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -26,14 +47,8 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
   const [editionFilter, setEditionFilter] = useState<'ALL' | 'ONESHOT' | 'SHORT' | 'BINDUP'>('ALL');
   const sentinelRef = useRef<HTMLDivElement>(null);
 
-  // Series IDs that have bind-up editions
-  const bindUpSeriesIds = useMemo(() => {
-    const set = new Set<string>();
-    for (const b of allBooks) {
-      if (b.isBindUp && b.seriesId) set.add(b.seriesId);
-    }
-    return set;
-  }, [allBooks]);
+  // Series IDs that have bind-up editions (computed server-side)
+  const bindUpSeriesIdSet = useMemo(() => new Set(bindUpSeriesIds), [bindUpSeriesIds]);
 
   // Map seriesId -> Set of owned book IDs
   const ownedSeriesMap = useMemo(() => {
@@ -131,7 +146,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         // Edition: oneshot (1 vol) / short series (2-4 vol) / has bind-up
         if (editionFilter === 'ONESHOT' && s.totalVolumes !== 1) return false;
         if (editionFilter === 'SHORT' && (s.totalVolumes < 2 || s.totalVolumes > 4)) return false;
-        if (editionFilter === 'BINDUP' && !bindUpSeriesIds.has(s.id)) return false;
+        if (editionFilter === 'BINDUP' && !bindUpSeriesIdSet.has(s.id)) return false;
         // Search Query (name, author, publisher)
         if (q) {
           const matchName = s.name.toLowerCase().includes(q);
@@ -150,7 +165,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
         }
         return a.name.localeCompare(b.name);
       });
-  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy, editionFilter, bindUpSeriesIds]);
+  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy, editionFilter, bindUpSeriesIdSet]);
 
   // Reset pagination when filters change
   useEffect(() => {
@@ -369,9 +384,9 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
                         <span className="text-[9px] text-editorial-muted line-clamp-2 leading-tight px-1">
                           {series.name}
                         </span>
-                        {series.isArchive && series.archiveEntry?.yearFirstVol && (
+                        {series.isArchive && series.archiveYearFirstVol && (
                           <span className="mt-1 text-[8px] font-mono text-editorial-muted">
-                            {series.archiveEntry.yearFirstVol}
+                            {series.archiveYearFirstVol}
                           </span>
                         )}
                       </div>
@@ -391,7 +406,7 @@ export function SeriesDirectoryView({ allSeries, allBooks }: SeriesDirectoryView
                           Arsip
                         </span>
                       )}
-                      {bindUpSeriesIds.has(series.id) && (
+                      {bindUpSeriesIdSet.has(series.id) && (
                         <span className="px-1.5 py-0.5 rounded text-[8px] font-mono font-medium uppercase bg-black/60 backdrop-blur-sm border border-emerald-500/30 text-emerald-300">
                           Bind-Up
                         </span>
