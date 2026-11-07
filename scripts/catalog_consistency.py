@@ -1,14 +1,32 @@
 #!/usr/bin/env python3
 """
 Catalog consistency primitives — shared by audit scripts and the sync pipeline.
-
-Mirrors src/lib/series-consistency.ts. Both implementations must stay in sync:
-same normalization rules, same validation thresholds.
+Reads canonical rules and aliases from src/data/domain-rules.json (shared with TS).
 """
 
+import json
+import os
 import re
+from collections import defaultdict
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+RULES_PATH = os.path.join(SCRIPT_DIR, '..', 'src', 'data', 'domain-rules.json')
+
+with open(RULES_PATH, 'r', encoding='utf-8') as _f:
+    DOMAIN_RULES = json.load(_f)
 
 SUSPICIOUS_DISCOUNT_THRESHOLD = 0.90
+
+SERIES_BASE_ALIASES = {
+    k: tuple(v)
+    for k, v in DOMAIN_RULES.get('seriesAliases', {}).get('baseAliases', {}).items()
+}
+
+SERIES_MEDIUM_ALIASES = {
+    tuple(k.split('::', 1)): tuple(v)
+    for k, v in DOMAIN_RULES.get('seriesAliases', {}).get('mediumAliases', {}).items()
+    if '::' in k
+}
 
 
 def normalize_series_name(name):
@@ -17,7 +35,7 @@ def normalize_series_name(name):
     n = re.sub(r'^(light novel|level comic|komik|akasha|lc)\s*:\s*', '', n)
     n = re.sub(r'^\(lc\)\s*', '', n)
     n = re.sub(r'\s*\(\s*omnibus\s*\)\s*', ' ', n)
-    n = re.sub(r'\s*\bbind[\s-]?up\b', ' ', n)
+    n = re.sub(r'\s*\bbind[\s-]?up(?:\s+edition)?\b', ' ', n)
     n = re.sub(r'\s*\bomnibus\b', ' ', n)
     n = re.sub(r'\s*\bcomplete\s+edition\b', ' ', n)
     n = re.sub(r'\s*\bedisi\s+koleksi\b', ' ', n)
@@ -66,15 +84,18 @@ def validate_price(current_price, original_price):
 _JUNK_TITLE_PATTERNS = [
     (re.compile(r'^bundling\b', re.I), 'bundling SKU'),
     (re.compile(r'^(komik\s+)?satuan$', re.I), 'satuan placeholder'),
-    (re.compile(r'^paket$', re.I), 'paket placeholder'),
-    (re.compile(r'hunter hat', re.I), 'hunter hat junk'),
+    (re.compile(r'^paket(\s|$)', re.I), 'paket bundle SKU'),
+    (re.compile(r'hunter hat', re.I), 'hunter hat junk (witch hat atelier is exempt)'),
+    (re.compile(r'^fs-[a-z0-9]', re.I), 'flash-sale non-manga SKU'),
 ]
 
 
 def detect_junk_title(title):
-    """Return junk reason or None. 'Witch Hat Atelier' is exempt."""
+    """Return junk reason or None. 'Witch Hat Atelier' and volume-range Paket are exempt."""
     t = (title or '').strip()
     if re.search(r'witch hat atelier', t, re.I):
+        return None
+    if re.match(r'^paket\b', t, re.I) and re.search(r'\d+\s*-\s*\d+', t):
         return None
     for pattern, reason in _JUNK_TITLE_PATTERNS:
         if pattern.search(t):
@@ -87,7 +108,6 @@ def find_duplicate_series(series_list):
     Group series by normalized name. Returns {normalized: [series...]}
     for groups with 2+ members (potential duplicates).
     """
-    from collections import defaultdict
     groups = defaultdict(list)
     for s in series_list:
         key = normalize_series_name(s.get('name'))
@@ -96,64 +116,14 @@ def find_duplicate_series(series_list):
     return {k: v for k, v in groups.items() if len(v) > 1}
 
 
-# ---------------------------------------------------------------------------
-# Canonical franchise aliases.
-#
-# Durable encoding of the 2026-10-12 consistency audit's series merges.
-# The audit fixed these as one-time DATA edits, so later auto-syncs re-split
-# them as soon as the vendor feed drifted (regressions observed 2026-10-15..20:
-# Conan movie split again, Bungo Stray Dogs BEAST split again, display name
-# 'Detektif Conan The Movie' decayed to 'Detektif Conan The').
-#
-# The sync pipeline MUST apply these on every run (see auto-sync-catalog.py
-# step 5). The TypeScript mirror lives in src/lib/series-consistency.ts and
-# the TS consolidator (src/lib/data/deduplicator.ts) applies the same rules.
-# ---------------------------------------------------------------------------
-
-# base_slug -> (canonical_base_slug, canonical_display_name)
-# Applied right after clean_base_franchise().
-SERIES_BASE_ALIASES = {
-    # 'Bungo Stray Dogs BEAST' (spin-off line) consolidates into the main
-    # 'Bungo Stray Dogs' series per the 2026-10-12 audit + series-tracker test.
-    'bungo-stray-dogs-beast': ('bungo-stray-dogs', 'Bungo Stray Dogs'),
-    # New-format 'Cerita Spesial Doraemon Edisi <subtitle>' titles keep the
-    # full subtitle as series name; the canonical series is 'Cerita Spesial
-    # Doraemon' (old ' - Edisi ...' titles parsed to the short name).
-    'cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek': (
-        'cerita-spesial-doraemon', 'Cerita Spesial Doraemon'),
-    # Vendor typo (found 2026-10-20): 'Naruto - Sasukess Story - ...'
-    # (double s) is the same 2-volume Elex manga as "Naruto - Sasuke's
-    # Story - ..."; vol 1 was shelved under the correct spelling, vol 2
-    # under the typo.
-    'naruto---sasukess-story---the-uchiha-and-the-heavenly-stardust': (
-        'naruto---sasukes-story---the-uchiha-and-the-heavenly-stardust',
-        "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust"),
-}
-
-# (base_slug, medium) -> (canonical_base_slug, canonical_display_name)
-# Applied after the per-franchise medium set is computed, before the
-# medium-separated series id/display name is assigned.
-SERIES_MEDIUM_ALIASES = {
-    # Both 'Detektif Conan Movie: ...' (base 'detektif-conan', medium MOVIE)
-    # and 'Detektif Conan The Movie: ...' (base 'detektif-conan-the') are the
-    # same movie line; canonical id ser_detektif-conan-the per the 2026-10-12
-    # audit + series-tracker test.
-    ('detektif-conan', 'MOVIE'): ('detektif-conan-the', 'Detektif Conan The Movie'),
-    # PGI Re:Zero LN vendor-title drift (found 2026-10-20): older feed used
-    # 'Re:Zero : Starting Life in Another World NN' (colon form), newer feed
-    # uses 'Light Novel: Re:Zero - Starting Life in Another World - NN'
-    # (dash form). Same LIGHT_NOVEL line; canonical id
-    # ser_rezero---starting-life-in-another-world (vols 1-5 were split from
-    # vols 6/21-23).
-    ('rezero-starting-life-in-another-world', 'LIGHT_NOVEL'): (
-        'rezero---starting-life-in-another-world',
-        'Re:Zero - Starting Life in Another World'),
-}
-
-
 def resolve_base_alias(base_slug):
     """Return (canonical_base_slug, canonical_display_name|None)."""
-    hit = SERIES_BASE_ALIASES.get(base_slug or '')
+    slug = base_slug or ''
+    hit = SERIES_BASE_ALIASES.get(slug)
+    if hit:
+        return hit
+    collapsed = re.sub(r'-+', '-', slug)
+    hit = SERIES_BASE_ALIASES.get(collapsed)
     if hit:
         return hit
     return base_slug, None
@@ -161,7 +131,13 @@ def resolve_base_alias(base_slug):
 
 def resolve_medium_alias(base_slug, medium):
     """Return (canonical_base_slug, canonical_display_name|None)."""
-    hit = SERIES_MEDIUM_ALIASES.get((base_slug or '', medium or ''))
+    slug = base_slug or ''
+    med = medium or ''
+    hit = SERIES_MEDIUM_ALIASES.get((slug, med))
+    if hit:
+        return hit
+    collapsed = re.sub(r'-+', '-', slug)
+    hit = SERIES_MEDIUM_ALIASES.get((collapsed, med))
     if hit:
         return hit
     return base_slug, None
