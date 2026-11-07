@@ -105,6 +105,17 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [spotlightPaused, setSpotlightPaused] = useState(false);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    const pubParam = params.get('publisher');
+    if (pubParam && publishers.some((p) => p.id === pubParam)) {
+      setPubFilter(pubParam);
+    } else if (pubParam === 'all') {
+      setPubFilter('ALL');
+    }
+  }, [publishers]);
+
   // Auto-advance the spotlight showcase; pauses while the user hovers it.
   useEffect(() => {
     if (spotlightBooks.length <= 1 || spotlightPaused) return;

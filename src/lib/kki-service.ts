@@ -2,16 +2,15 @@ import enrichmentData from '@/data/kki-enrichment.json';
 import archiveData from '@/data/kki-archive.json';
 import type { KkiEnrichment, KkiArchiveEntry, Series } from './types';
 import { getAllSeries } from './catalog-service';
+import { normalizeSeriesName } from './series-consistency';
 
 const enrichment = enrichmentData as unknown as Record<string, KkiEnrichment>;
 const archive = archiveData as unknown as KkiArchiveEntry[];
 
-/** KKI enrichment for a Nuvellite series, if matched. */
 export function getKkiEnrichment(seriesId: string): KkiEnrichment | undefined {
   return enrichment[seriesId];
 }
 
-/** How many Nuvellite series carry KKI enrichment. */
 export function getKkiEnrichmentCount(): number {
   return Object.keys(enrichment).length;
 }
@@ -23,7 +22,6 @@ export interface ArchiveFilters {
   hasMu?: boolean;
 }
 
-/** Full archive list (series-level, sorted by title). */
 export function getArchiveEntries(filters: ArchiveFilters = {}): KkiArchiveEntry[] {
   const q = (filters.query || '').toLowerCase().trim();
   return archive.filter((e) => {
@@ -47,7 +45,6 @@ export function getArchiveCount(): number {
   return archive.length;
 }
 
-/** Distinct publishers in the archive (for filter dropdown). */
 export function getArchivePublishers(): string[] {
   const set = new Set<string>();
   for (const e of archive) {
@@ -56,10 +53,6 @@ export function getArchivePublishers(): string[] {
   return [...set].sort((a, b) => a.localeCompare(b));
 }
 
-/**
- * Adapt a KKI archive entry to the Series shape for the unified catalog.
- * Archive entries are series-level (no per-volume books on Gramedia).
- */
 export function archiveEntryToSeries(e: KkiArchiveEntry): Series {
   const vols = parseInt(e.volumesId || '', 10);
   return {
@@ -75,27 +68,41 @@ export function archiveEntryToSeries(e: KkiArchiveEntry): Series {
     totalVolumes: Number.isFinite(vols) ? vols : 0,
     latestVolume: 0,
     availableVolumes: [],
-    coverImage: e.mu?.status === 'ok' ? e.mu.cover : (e.pranalaCover || undefined),
+    coverImage: e.mu?.status === 'ok' ? e.mu.cover : e.pranalaCover || undefined,
     description: e.mu?.descriptionId || e.mu?.descriptionEn || undefined,
     isArchive: true,
     archiveEntry: e,
   };
 }
 
-/**
- * Unified catalog: regular Gramedia series + KKI archive entries as one list.
- * Regular series win on slug collision (canonical entries take precedence).
- */
 export function getUnifiedSeries(): Series[] {
   const regular = getAllSeries();
-  const regularSlugs = new Set(regular.map((s) => s.slug.toLowerCase()));
+  const regularSlugs = new Set<string>();
+  const regularMedTitleKeys = new Set<string>();
+
+  for (const s of regular) {
+    const sl = s.slug.toLowerCase();
+    regularSlugs.add(sl);
+    regularSlugs.add(sl.replace(/-(manga|ln|movie)$/, ''));
+    regularMedTitleKeys.add(`${s.type}::${normalizeSeriesName(s.name)}`);
+    const enr = enrichment[s.id];
+    if (enr?.kkiTitle) {
+      regularMedTitleKeys.add(`${s.type}::${normalizeSeriesName(enr.kkiTitle)}`);
+    }
+  }
+
   const archiveSeries = archive
-    .filter((e) => !regularSlugs.has(e.slug.toLowerCase()))
+    .filter((e) => {
+      if (regularSlugs.has(e.slug.toLowerCase())) return false;
+      const key = `${e.medium}::${normalizeSeriesName(e.title)}`;
+      if (regularMedTitleKeys.has(key)) return false;
+      return true;
+    })
     .map(archiveEntryToSeries);
-  return [...regular, ...archiveSeries];
+
+  return [...regular, ...archiveSeries].sort((a, b) => a.name.localeCompare(b.name));
 }
 
-/** Find an archive entry adapted as Series by slug (undefined if not an archive slug). */
 export function getArchiveSeriesBySlug(slug: string): Series | undefined {
   const entry = getArchiveEntryBySlug(slug);
   return entry ? archiveEntryToSeries(entry) : undefined;

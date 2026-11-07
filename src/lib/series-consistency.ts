@@ -1,30 +1,17 @@
-/**
- * Series consistency utilities — canonical normalization for duplicate
- * detection, price validation, and title sanity checks.
- *
- * Mirrors scripts/catalog_consistency.py. Both implementations must stay
- * in sync: same normalization rules, same validation thresholds.
- */
+import domainRules from '@/data/domain-rules.json';
 
-/** Publisher/store prefixes stripped before normalization. */
 const PREFIX_PATTERN = /^(light novel|level comic|komik|akasha|lc)\s*:\s*/i;
 const LC_PREFIX_PATTERN = /^\(lc\)\s*/i;
 
-/** Edition markers stripped (bind-up, omnibus, etc.). */
 const EDITION_PATTERNS = [
   /\s*\(\s*omnibus\s*\)\s*/gi,
-  /\s*\bbind[\s-]?up\b/gi,
+  /\s*\bbind[\s-]?up(?:\s+edition)?\b/gi,
   /\s*\bomnibus\b/gi,
   /\s*\bcomplete\s+edition\b/gi,
   /\s*\bedisi\s+koleksi\b/gi,
   /\s*\b[2-9]\s*in\s*1\b/gi,
 ];
 
-/**
- * Canonical series-name normalization for duplicate detection.
- * "Gokushufudo - The Way of House Husband" -> "gokushufudo the way of house husband"
- * "Bungo Stray Dogs BEAST" -> "bungo stray dogs beast"
- */
 export function normalizeSeriesName(name: string | null | undefined): string {
   let n = (name || '').toLowerCase();
   n = n.replace(PREFIX_PATTERN, '');
@@ -38,10 +25,6 @@ export function normalizeSeriesName(name: string | null | undefined): string {
   return n;
 }
 
-/**
- * Returns true when two series names refer to the same series
- * (after canonical normalization).
- */
 export function isDuplicateSeriesName(a: string, b: string): boolean {
   const na = normalizeSeriesName(a);
   const nb = normalizeSeriesName(b);
@@ -51,20 +34,12 @@ export function isDuplicateSeriesName(a: string, b: string): boolean {
 export interface PriceValidation {
   valid: boolean;
   issues: string[];
-  /** Corrected values when auto-fixable (currentPrice > originalPrice swap). */
   fixedCurrent?: number;
   fixedOriginal?: number;
 }
 
-/** Discounts above this are flagged as suspicious (likely data error). */
 export const SUSPICIOUS_DISCOUNT_THRESHOLD = 0.9;
 
-/**
- * Validate a book's price fields. Returns issues and auto-fix suggestions.
- * - currentPrice must not exceed originalPrice (auto-fixable by swap)
- * - discount >90% is suspicious (not auto-fixed, needs review)
- * - negative/zero prices are invalid
- */
 export function validatePrice(
   currentPrice: number | null | undefined,
   originalPrice: number | null | undefined
@@ -81,7 +56,6 @@ export function validatePrice(
   }
   if (cp > 0 && op > 0 && cp > op) {
     issues.push(`currentPrice (${cp}) exceeds originalPrice (${op})`);
-    // Auto-fix: swap (original is the higher SRP)
     fixedCurrent = op;
     fixedOriginal = cp;
   }
@@ -102,106 +76,48 @@ export function validatePrice(
   };
 }
 
-/** Junk title patterns (mirrors auto-sync-catalog.py classify_book). */
 const JUNK_TITLE_PATTERNS: Array<{ pattern: RegExp; reason: string }> = [
   { pattern: /^bundling\b/i, reason: 'bundling SKU' },
   { pattern: /^(komik\s+)?satuan$/i, reason: 'satuan placeholder' },
   { pattern: /^paket$/i, reason: 'paket placeholder' },
+  { pattern: /^paket\s+/i, reason: 'paket bundle SKU' },
+  { pattern: /^fs-[a-z0-9]/i, reason: 'flash-sale non-manga SKU' },
   {
     pattern: /hunter hat/i,
     reason: 'hunter hat junk (witch hat atelier is exempt)',
   },
 ];
 
-/**
- * Returns the junk reason when a book title is a known non-book product,
- * or null when the title looks legitimate.
- * "Witch Hat Atelier" must NOT match (negative guard).
- */
 export function detectJunkTitle(title: string): string | null {
   const t = (title || '').trim();
   if (/witch hat atelier/i.test(t)) return null;
+  if (/^paket\b/i.test(t) && /\d+\s*-\s*\d+/.test(t)) return null;
   for (const { pattern, reason } of JUNK_TITLE_PATTERNS) {
     if (pattern.test(t)) return reason;
   }
   return null;
 }
 
-// ---------------------------------------------------------------------------
-// Canonical franchise aliases.
-//
-// TypeScript mirror of scripts/catalog_consistency.py (SERIES_BASE_ALIASES /
-// SERIES_MEDIUM_ALIASES). Durable encoding of the 2026-10-12 audit's series
-// merges — applied by the sync pipeline on every run so vendor-feed drift
-// cannot re-split them. Keep both implementations in sync.
-// ---------------------------------------------------------------------------
+export const SERIES_BASE_ALIASES: Record<string, [string, string]> =
+  domainRules.seriesAliases.baseAliases as unknown as Record<string, [string, string]>;
 
-/** base_slug -> [canonical_base_slug, canonical_display_name] */
-export const SERIES_BASE_ALIASES: Record<string, [string, string]> = {
-  // 'Bungo Stray Dogs BEAST' consolidates into 'Bungo Stray Dogs'.
-  'bungo-stray-dogs-beast': ['bungo-stray-dogs', 'Bungo Stray Dogs'],
-  // New-format 'Cerita Spesial Doraemon Edisi <subtitle>' titles keep the
-  // full subtitle as series name; the canonical series is the short name.
-  'cerita-spesial-doraemon-edisi-musik-yang-bergema-dungtek': [
-    'cerita-spesial-doraemon',
-    'Cerita Spesial Doraemon',
-  ],
-  // Vendor typo: 'Naruto - Sasukess Story - ...' (double s) is the same
-  // 2-volume Elex manga as 'Naruto - Sasuke's Story - ...'. Found 2026-10-20:
-  // vol 1 shelved under the correct spelling, vol 2 under the typo.
-  //
-  // NOTE on slug forms: the Python pipeline's clean_slug does NOT collapse
-  // repeated dashes, so production base slugs look like
-  // 'naruto---sasukess-story---...' (triple dash, as in the real catalog).
-  // The TS cleanSlug() collapses them to single dashes. Both forms are
-  // registered here so the alias resolves whichever implementation computes
-  // the base slug; the Python table keeps the triple-dash (production) form.
-  'naruto---sasukess-story---the-uchiha-and-the-heavenly-stardust': [
-    'naruto---sasukes-story---the-uchiha-and-the-heavenly-stardust',
-    "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust",
-  ],
-  'naruto-sasukess-story-the-uchiha-and-the-heavenly-stardust': [
-    'naruto-sasukes-story-the-uchiha-and-the-heavenly-stardust',
-    "Naruto - Sasuke's Story - The Uchiha and the Heavenly Stardust",
-  ],
-};
+export const SERIES_MEDIUM_ALIASES: Record<string, [string, string]> =
+  domainRules.seriesAliases.mediumAliases as unknown as Record<string, [string, string]>;
 
-/** "base_slug::medium" -> [canonical_base_slug, canonical_display_name] */
-export const SERIES_MEDIUM_ALIASES: Record<string, [string, string]> = {
-  // Both 'Detektif Conan Movie: ...' and 'Detektif Conan The Movie: ...'
-  // are the same movie line; canonical id ser_detektif-conan-the.
-  'detektif-conan::MOVIE': ['detektif-conan-the', 'Detektif Conan The Movie'],
-  // PGI's Re:Zero LN vendor titles drifted: older feed used
-  // 'Re:Zero : Starting Life in Another World NN' (colon form), newer feed
-  // uses 'Light Novel: Re:Zero - Starting Life in Another World - NN'
-  // (dash form). Same LIGHT_NOVEL line; canonical id
-  // ser_rezero---starting-life-in-another-world (found 2026-10-20: vols 1-5
-  // split from vols 6/21-23).
-  //
-  // Slug-form note (see SERIES_BASE_ALIASES): the Python pipeline produces
-  // triple-dash slugs; the TS cleanSlug() collapses them. Both key forms
-  // are registered; values keep the production (triple-dash) form.
-  'rezero-starting-life-in-another-world::LIGHT_NOVEL': [
-    'rezero---starting-life-in-another-world',
-    'Re:Zero - Starting Life in Another World',
-  ],
-  'rezero---starting-life-in-another-world::LIGHT_NOVEL': [
-    'rezero---starting-life-in-another-world',
-    'Re:Zero - Starting Life in Another World',
-  ],
-};
-
-/** Resolve a base franchise slug through SERIES_BASE_ALIASES. */
 export function resolveBaseAlias(baseSlug: string): [string, string | null] {
-  const hit = SERIES_BASE_ALIASES[baseSlug || ''];
+  const slug = baseSlug || '';
+  const hit = SERIES_BASE_ALIASES[slug] || SERIES_BASE_ALIASES[slug.replace(/-+/g, '-')];
   return hit ? [hit[0], hit[1]] : [baseSlug, null];
 }
 
-/** Resolve a (base_slug, medium) pair through SERIES_MEDIUM_ALIASES. */
 export function resolveMediumAlias(
   baseSlug: string,
   medium: string
 ): [string, string | null] {
-  const hit = SERIES_MEDIUM_ALIASES[`${baseSlug || ''}::${medium || ''}`];
+  const slug = baseSlug || '';
+  const med = medium || '';
+  const hit =
+    SERIES_MEDIUM_ALIASES[`${slug}::${med}`] ||
+    SERIES_MEDIUM_ALIASES[`${slug.replace(/-+/g, '-')}::${med}`];
   return hit ? [hit[0], hit[1]] : [baseSlug, null];
 }

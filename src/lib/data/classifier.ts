@@ -1,104 +1,40 @@
-import { BookCategory, BookFormat, ClassificationResult, ClassificationStatus } from '../types';
+import domainRules from '@/data/domain-rules.json';
+import { BookCategory, BookFormat, ClassificationResult } from '../types';
+import { detectJunkTitle } from '../series-consistency';
 
-// Negative signals: Items that MUST BE REJECTED unconditionally
-const MERCHANDISE_REGEX = /\b(acrylic|akrilik|standee|keychain|key\s*ring|gantungan\s*kunci|tote\s*bag|totebag|sling\s*bag|backpack|tas|pouch|dompet|tumbler|mug|gelas|cushion|bantal|mousepad|desk\s*mat|tapestry|stickers?|stikers?|poker-|amulet|eye\s*mask|figures?|figurine|plush|boneka|monopoly|pin\s*badge|badge|lanyard|washi\s*tape|postcards?|poster|art\s*print|clear\s*file|clear\s*folder|5-layer\s*folder|folder|card\s*pack|booster\s*pack|kartu\s*koleksi|tarot|flash\s*card|reflection\s*card|t-?shirt|kaos|stationary|stationery|binder|notebook|buku\s*tulis|memo\s*pad|pencil\s*case|kotak\s*pensil|canvas|kanvas|merchandise|merch|origami)\b/i;
+const MERCHANDISE_REGEX =
+  /\b(acrylic|akrilik|standee|keychain|key\s*ring|gantungan\s*kunci|tote\s*bag|totebag|sling\s*bag|backpack|tas|pouch|dompet|tumbler|mug|gelas|cushion|bantal|mousepad|desk\s*mat|tapestry|stickers?|stikers?|poker-|amulet|eye\s*mask|figures?|figurine|plush|boneka|monopoly|pin\s*badge|badge|lanyard|washi\s*tape|postcards?|poster|art\s*print|clear\s*file|clear\s*folder|5-layer\s*folder|folder|card\s*pack|booster\s*pack|kartu\s*koleksi|tarot|flash\s*card|reflection\s*card|t-?shirt|kaos|stationary|stationery|binder|notebook|buku\s*tulis|memo\s*pad|pencil\s*case|kotak\s*pensil|canvas|kanvas|merchandise|merch|origami)\b/i;
 
-// Craft supplies (not books). Absolute when the title starts with the "Clover" craft brand; otherwise only on non-comic store category.
-const CRAFT_SUPPLY_REGEX = /\b(balon|balloon|confetti|benang|rajut|hakpen|kawat|foil|payet|manik|flanel|jarum|artificial|lilin|tali|goni|rami|krep|karton|paperbag|washi|terompet|kancing|kokot|peniti|pinset|gunting|rantai|mote|serbuk|miniatur|polaroid|scrapbook|scrapbooking|newspaper|masking|flower\s*tape|sticky|snow\s*spray|wood|jump\s*ring|fancy\s*banner|memo|deco\s*paper|putik|pita|bunga|daun|wol|jeruk|but+ons?|bot+ons?|wooden)\b/i;
+const CRAFT_SUPPLY_REGEX =
+  /\b(balon|balloon|confetti|benang|rajut|hakpen|kawat|foil|payet|manik|flanel|jarum|artificial|lilin|tali|goni|rami|krep|karton|paperbag|washi|terompet|kancing|kokot|peniti|pinset|gunting|rantai|mote|serbuk|miniatur|polaroid|scrapbook|scrapbooking|newspaper|masking|flower\s*tape|sticky|snow\s*spray|wood|jump\s*ring|fancy\s*banner|memo|deco\s*paper|putik|pita|bunga|daun|wol|jeruk|but+ons?|bot+ons?|wooden)\b/i;
 
-const NON_BOOK_NON_MANGA_REGEX = /\b(ensiklopedia|encyclopedia|atlas|kamus|dictionary|puzzles?|games?|teka-teki|paint\s*by\s*number|coloring\s*book|coloring|mewarnai|ilustrasi|buku\s*aktivitas|board\s*book|pop-up|lift\s*the\s*flap|funtastic|saintis\s*cilik|seek\s*&\s*find|buku\s*interaktif|buku\s*pintar|aku\s*jadi\s*pintar|siap\s*sekolah|top\s*paud|paud|my\s*first\s*book|pinkfong|bebefinn|uwa\s*and\s*friends|cocomelon|dr\.\s*robot\s*teo|alphabet\s*writing|menulis\s*alfabet|cepat\s*membaca|metode\s*bapatja|pandai\s*membaca|buku\s*anak|cerita\s*sains|koding\s*pertamaku|parenting|fiqih|hadits|sholat|khotbah|doa\s*harian|doa\b|hijrah|buku\s*resep|resep\b|resep\s+masakan?|resep\s+kue|buku\s*masak|diet|kesehatan|kedokteran|medis|hukum\s*pidana|hukum\s*perdata|hukum\s*dan\s*keadilan|kuhp|kuhap|investasi|saham|reksadana|crypto|keuangan|finansial|akuntansi|perpajakan|bisnis|manajemen|marketing|leadership|kepemimpinan|barakah|mindset|strategi|strategic|psikologi|psikolog|self\s*improvement|self-help|self[-\s]?healing|self[-\s]?love|therapy|terapi|journaling|motivasi|motivation|sukses|kesuksesan|filsafat|filosofi|sejarah\s*indonesia|soal\s*utbk|cpns|toefl|ielts|matematika|fisika|kimia|biologi|biografi|memoar|autobiografi|geronimo\s*stilton|thea\s*stilton|catstronauts|story\s*orchestra|start\s*with\s*why|ego\s*is\s*the\s*enemy|daring\s*greatly|dare\s*to\s*lead|burnout|the\s*idiot|the\s*four\s*agreements|the\s*patriarchs|principles:\s*your\s*guided\s*journal|memoirs\s*from\s*the\s*women|teenlit|romance\s*novel|international\s*classics?|penguin\s*books?)\b/i;
+const NON_BOOK_NON_MANGA_REGEX =
+  /\b(ensiklopedia|encyclopedia|atlas|kamus|dictionary|puzzles?|games?|teka-teki|paint\s*by\s*number|coloring\s*book|coloring|mewarnai|ilustrasi|buku\s*aktivitas|board\s*book|pop-up|lift\s*the\s*flap|funtastic|saintis\s*cilik|seek\s*&\s*find|buku\s*interaktif|buku\s*pintar|aku\s*jadi\s*pintar|siap\s*sekolah|top\s*paud|paud|my\s*first\s*book|pinkfong|bebefinn|uwa\s*and\s*friends|cocomelon|dr\.\s*robot\s*teo|alphabet\s*writing|menulis\s*alfabet|cepat\s*membaca|metode\s*bapatja|pandai\s*membaca|buku\s*anak|cerita\s*sains|koding\s*pertamaku|parenting|fiqih|hadits|sholat|khotbah|doa\s*harian|doa\b|hijrah|buku\s*resep|resep\b|resep\s+masakan?|resep\s+kue|buku\s*masak|diet|kesehatan|kedokteran|medis|hukum\s*pidana|hukum\s*perdata|hukum\s*dan\s*keadilan|kuhp|kuhap|investasi|saham|reksadana|crypto|keuangan|finansial|akuntansi|perpajakan|bisnis|manajemen|marketing|leadership|kepemimpinan|barakah|mindset|strategi|strategic|psikologi|psikolog|self\s*improvement|self-help|self[-\s]?healing|self[-\s]?love|therapy|terapi|journaling|motivasi|motivation|sukses|kesuksesan|filsafat|filosofi|sejarah\s*indonesia|soal\s*utbk|cpns|toefl|ielts|matematika|fisika|kimia|biologi|biografi|memoar|autobiografi|geronimo\s*stilton|thea\s*stilton|catstronauts|story\s*orchestra|start\s*with\s*why|ego\s*is\s*the\s*enemy|daring\s*greatly|dare\s*to\s*lead|burnout|the\s*idiot|the\s*four\s*agreements|the\s*patriarchs|principles:\s*your\s*guided\s*journal|memoirs\s*from\s*the\s*women|teenlit|romance\s*novel|international\s*classics?|penguin\s*books?)\b/i;
 
-const DISALLOWED_PUBLISHERS = [
-  'water lily literary', 'penguin', 'bentang', 'puffin', 'harpercollins',
-  'knopf', 'vintage', 'simon & schuster', 'hachette', 'scholastic',
-  'oxford', 'cambridge', 'gpu', 'gramedia pustaka utama', 'mizan', 'republika',
-  'wordsworth', 'little, brown'
-];
+const DISALLOWED_PUBLISHERS = domainRules.classification.disallowedPublishers;
+const DISALLOWED_CATEGORIES = domainRules.classification.disallowedCategorySegments;
+const EXPLICIT_FORMAT_TOKENS = domainRules.classification.explicitFormatTokens;
+const COMIC_CATEGORY_SEGMENTS = domainRules.classification.comicCategorySegments;
+const KNOWN_NON_MANGA_SERIES = domainRules.classification.knownNonMangaFragments;
+const VERIFIED_LIGHT_NOVEL_FRAGMENTS = domainRules.classification.verifiedLightNovelFragments;
+const PGI_PROSE_NOVEL_FRAGMENTS = domainRules.classification.pgiProseNovelFragments;
 
-const DISALLOWED_CATEGORIES = [
-  'self-improvement', 'pengembangan-diri', 'pengembangan-diri-1',
-  'bisnis', 'bisnis-ekonomi', 'manajemen', 'marketing',
-  'kepemimpinan', 'kepemimpinan-1',
-  'keuangan', 'investasi', 'saham', 'akuntansi', 'perbankan',
-  'agama', 'islam', 'kristen', 'katolik', 'hindu', 'buddha', 'ritual--praktik',
-  'parenting', 'keluarga',
-  'kesehatan', 'kedokteran', 'medis', 'diet', 'kebugaran',
-  'hukum', 'politik', 'sejarah',
-  'resep', 'masakan', 'kuliner', 'kue',
-  'masak', 'kamus',
-  'psikologi', 'filsafat',
-  'pendidikan', 'pelajaran', 'utbk', 'cpns',
-  'novel-15', 'teenlit', 'fiksi-remaja',
-  'jurnal-diari', 'mewarnai', 'permainan-aktivitas',
-  'kepercayaan-diri', 'motivasi',
-  'cerita-anak', 'dongeng',
-  'novel-terjemahan', 'sastra',
-  'fiksi-teenlit', 'fiksi-sastra',
-  'stationery', 'stationery-sekolah-kantor', 'alat-tulis',
-  'hobi', 'desain', 'arsitektur',
-  'travel', 'perjalanan',
-  'biografi', 'memoar',
-  'arsitektur', 'komputer-teknologi', 'nonfiksi-anak-remaja',
-  'fiksi-sastra', 'pengembangan-diri-karir', 'international-books',
-];
-
-// Explicit format tokens in the TITLE that prove manga/LN even when the
-// store category is odd or missing (the store miscategorizes real releases,
-// e.g. a light novel filed under "buku-anak").
-const EXPLICIT_FORMAT_TOKENS = [
-  'light novel', 'light-novel', '(novel)', 'the novel',
-  'komik', 'manga', 'manhwa', 'manhua',
-  'level comic', 'lc:', 'lc :',
-  'akasha', 'koloni', 'movie story',
-];
-
-const COMIC_CATEGORY_SEGMENTS = ['komik', 'manga', 'light-novel'];
-
-// Verified non-manga / non-LN series that the store miscategorizes as comic.
-const KNOWN_NON_MANGA_SERIES = [
-  'ther melian', // Indonesian fantasy NOVEL tetralogy by Shienny M.S. (Elex)
-  // Verified non-manga/non-LN books found in the Elex feed (2026-10-11 audit).
-  'capcut', // CapCut tutorial books
-  'chip war', // Chris Miller nonfiction (translated)
-  'excel survival kit', // Excel tutorial
-  'hack the human', // cybersecurity nonfiction
-  'kebijakan publik', // public policy nonfiction
-  'letters from gaza', // nonfiction
-  'lintas sejarah', // history
-  'memahami jepang', // history
-  'republik rakyat china', // history/politics
-  'tip & trik content creator', // creator tutorial
-  'pemrograman web', // programming tutorial (7 in 1 Pemrograman Web - Elex)
-  'sebuah kota, sebuah umpama', // poetry collection
-  'para perasuk', // filmmaking book
-  'jalan kehormatan', // history (NOT Samurai 8/X manga)
-  'miaow', // classic Spanish novel shelved under PGI
-];
-
-// Titles verified (2026-10-11) to be LIGHT NOVELS despite lacking a
-// "Light Novel" title token. NOTE: do NOT add PGI franchises here assuming
-// "no token = novel" — PGI publishes both manga and novels for dual-medium
-// franchises (Kinki/Ziarah manga versions verified; catalog holds the manga).
-const VERIFIED_LIGHT_NOVEL_FRAGMENTS = [
-  'ingatan untuk menyelamatkanmu', // m&c! novel (380pp, Novel category)
-];
-
-// PGI prose novels (verified 2026-11-07; mirrors is_pgi_prose_novel in
-// scripts/auto-sync-catalog.py): PGI's prose-novel line (e.g. Sesuji's
-// Kinki/Ziarah novels) is shelved by Gramedia under "buku/fiksi-sastra/...",
-// not the comic/LN shelves, and carries no "Light Novel" title token. The
-// NUMBERED listings of these franchises are the manga adaptations.
-const PGI_PROSE_NOVEL_FRAGMENTS = [
-  'tentang suatu tempat di wilayah kinki',
-  'tentang ziarah yang terkutuk',
-];
-
-function isPgiProseNovelTitle(title: string): boolean {
+export function isPgiProseNovelTitle(title: string): boolean {
   const t = (title || '').trim().toLowerCase();
   if (t.startsWith('novel:')) return true;
   return PGI_PROSE_NOVEL_FRAGMENTS.some(
     (f) => t.includes(f) && !/\bvol\.?\s*\d/.test(t) && !/\s\d{1,2}$/.test(t)
   );
+}
+
+export function isPgiReZeroLn(title: string, pubId?: string): boolean {
+  if ((pubId || '').toLowerCase() !== 'pub_pgi') return false;
+  const t = (title || '').toLowerCase();
+  if (!t.includes('re:zero') && !t.includes('rezero') && !t.includes('re zero')) return false;
+  if (['frozen bond', 'chapter', 'komik', 'manga', 'truth of zero'].some((k) => t.includes(k))) {
+    return false;
+  }
+  return true;
 }
 
 function categorySegments(raw: string | undefined): string[] {
@@ -132,42 +68,30 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
   const positiveSignals: string[] = [];
   const negativeSignals: string[] = [];
 
-  // Store category segments (computed first: they can override title signals —
-  // the store files real manga under odd titles/categories).
   const catSegs = categorySegments(input.categorySlugs);
   const hasExplicitFormatToken = EXPLICIT_FORMAT_TOKENS.some((tok) => tLower.includes(tok));
   const hasComicCategory = catSegs.some(
-    (s) => COMIC_CATEGORY_SEGMENTS.includes(s) || s.startsWith('komik-') || s.startsWith('manga-') || s.startsWith('light-novel')
+    (s) =>
+      COMIC_CATEGORY_SEGMENTS.includes(s) ||
+      s.startsWith('komik-') ||
+      s.startsWith('manga-') ||
+      s.startsWith('light-novel')
   );
 
-  // 1. NEGATIVE SIGNALS (Highest Priority)
-  // Merchandise is an absolute reject. Other non-manga/non-LN title patterns
-  // are skipped when the store category proves comic.
   if (MERCHANDISE_REGEX.test(title)) {
     negativeSignals.push(`Judul mengandung istilah merchandise: ${title.match(MERCHANDISE_REGEX)?.[0]}`);
   }
-  // Merchandise author credit (e.g. "Merchandise Gerai Kompas"): precise,
-  // never collides with real manga authors. Catches items like
-  // "Hunter Hat Press Ssst X Gerai Kompas" whose title evades MERCHANDISE_REGEX
-  // ("Witch Hat Atelier" is real manga, so "hat" alone must NOT be blocked).
   const authorLower = (input.author || '').toLowerCase();
   if (authorLower.includes('merchandise')) {
     negativeSignals.push('Kredit author adalah merchandise (produk non-buku)');
   }
-  // Generic placeholder titles ("Satuan" / "Komik Satuan"): no real manga/LN
-  // is titled exactly this.
-  if (tLower === 'satuan' || tLower === 'komik satuan') {
-    negativeSignals.push('Judul placeholder generik (satuan)');
-  }
-  // Bundle SKUs ("Bundling Komik - JBA8", ...): no legitimate series starts
-  // with "bundling" (verified against catalog 2026-10-12).
-  if (tLower.startsWith('bundling')) {
-    negativeSignals.push('Produk bundle SKU (bukan buku)');
+  const junkReason = detectJunkTitle(title);
+  if (junkReason) {
+    negativeSignals.push(`Produk non-buku / bundle SKU: ${junkReason}`);
   }
   if (!hasComicCategory && NON_BOOK_NON_MANGA_REGEX.test(title)) {
     negativeSignals.push(`Judul terdeteksi non-manga/non-LN: ${title.match(NON_BOOK_NON_MANGA_REGEX)?.[0]}`);
   }
-  // Qanza is m&c!'s Islamic children-book imprint (never manga / light novel).
   if (tLower.startsWith('qanza')) {
     negativeSignals.push('Imprint Qanza (buku anak non-manga/non-LN)');
   }
@@ -190,13 +114,6 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     }
   }
 
-  // Disallowed STORE category gate (Gramedia `category_slugs`, e.g.
-  // "buku/agama/islam/..."). Skipped when the title itself proves manga/LN
-  // format, or when the category itself carries a comic segment — the store
-  // miscategorizes real releases often enough that category alone must not
-  // convict when format evidence contradicts it.
-  // PGI prose novels live on Gramedia's "fiksi-sastra" (prose fiction)
-  // shelf — that shelf must not convict PGI's own novel line.
   const isPgi = pubId === 'pub_pgi' || pubName.includes('phoenix gramedia');
   const isPgiProseShelf = isPgi && catSegs.includes('fiksi-sastra');
   if (!hasExplicitFormatToken && !hasComicCategory) {
@@ -209,7 +126,6 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     }
   }
 
-  // If negative signals are present, reject immediately
   if (negativeSignals.length > 0) {
     return {
       status: 'REJECTED',
@@ -219,16 +135,14 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     };
   }
 
-  // 2. POSITIVE SIGNALS - Generic, data-driven rules (No hardcoded titles!)
   let isLN = false;
   let isManga = false;
 
   const specs = input.specs || {};
-  const imprint = (specs['Imprint'] || specs['Penerbit'] || '').toLowerCase();
+  const imprint = (specs['Imprint'] || specs['imprint'] || specs['Penerbit'] || '').toLowerCase();
 
-  // Imprint and publisher signals
   if (pubId === 'pub_elex' || pubName.includes('elex')) {
-    if (tLower.includes('level comic') || tLower.includes('lc:') || tLower.includes('lc :')) {
+    if (tLower.includes('level comic') || tLower.includes('lc:') || tLower.includes('lc :') || imprint.includes('level')) {
       positiveSignals.push('Imprint resmi Level Comics (Elex)');
       isManga = true;
     }
@@ -239,11 +153,11 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
   }
 
   if (pubId === 'pub_mnc' || pubName.includes('m&c')) {
-    if (tLower.includes('akasha')) {
+    if (tLower.includes('akasha') || imprint.includes('akasha')) {
       positiveSignals.push('Imprint resmi Akasha (m&c!)');
       isManga = true;
     }
-    if (tLower.includes('koloni')) {
+    if (tLower.includes('koloni') || imprint.includes('koloni')) {
       positiveSignals.push('Imprint resmi Koloni (m&c!)');
       isManga = true;
     }
@@ -257,40 +171,46 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     }
   }
 
-  const hasVolumeNumbering = /\b(?:vol\.?|volume|jilid|ep\.?|episode|#)\s*\d+/i.test(title) || /\s+\d{1,3}$/.test(title);
+  const hasVolumeNumbering =
+    /(?:\b(?:vol\.?|volume|jilid|ep\.?|episode)|#)\s*\d+/i.test(title) || /\s+\d{1,3}$/.test(title);
 
-  if (pubId === 'pub_pgi' || pubName.includes('phoenix gramedia') || pubName.includes('pgi')) {
-    // PGI Re:Zero is LN-only (verified 2026-10-12): PGI never published a
-    // Re:Zero manga; the "Re:Zero : Starting Life in Another World" books
-    // are LN vols despite lacking the "Light Novel:" prefix.
-    if (tLower.includes('re:zero') || tLower.includes('rezero')) {
+  if (isPgi || pubName.includes('pgi')) {
+    if (isPgiReZeroLn(title, 'pub_pgi')) {
       positiveSignals.push('Re:Zero PGI adalah Light Novel (verifikasi 2026-10-12)');
       isLN = true;
-    } else if (tLower.includes('light novel') || tLower.includes('light-novel') || catSlugs.includes('light-novel') || tLower.includes('(novel)') || tLower.includes('the novel')) {
+    } else if (
+      tLower.includes('light novel') ||
+      tLower.includes('light-novel') ||
+      catSlugs.includes('light-novel') ||
+      tLower.includes('(novel)') ||
+      tLower.includes('the novel')
+    ) {
       positiveSignals.push('Rilisan resmi Light Novel PGI / KADOKAWA');
       isLN = true;
     } else if (tLower.includes('manga') || tLower.includes('komik') || catSlugs.includes('manga') || catSlugs.includes('komik')) {
       positiveSignals.push('Rilisan resmi Manga PGI / KADOKAWA');
       isManga = true;
     } else if (isPgiProseShelf || isPgiProseNovelTitle(title)) {
-      // PGI prose novels (verified 2026-11-07): Sesuji's Kinki/Ziarah novels.
       positiveSignals.push('Novel prosa resmi PGI (rak fiksi-sastra / judul terverifikasi)');
       isLN = true;
     } else if (hasVolumeNumbering) {
-      // PGI release with volume structure is Manga if no Light Novel token is present
       positiveSignals.push('Rilisan resmi berlisensi PGI / KADOKAWA');
       isManga = true;
     }
   }
 
-  // Format tokens
-  if (tLower.includes('light novel') || tLower.includes('(novel)') || tLower.includes('the novel') || catSlugs.includes('light-novel') || (isLN && !isManga)) {
+  if (
+    tLower.includes('light novel') ||
+    tLower.includes('(novel)') ||
+    tLower.includes('the novel') ||
+    catSlugs.includes('light-novel') ||
+    (isLN && !isManga)
+  ) {
     positiveSignals.push('Token format Light Novel dalam judul/kategori');
     isLN = true;
     isManga = false;
   }
 
-  // Verified novels without a title token (publisher-agnostic).
   if (!isLN && VERIFIED_LIGHT_NOVEL_FRAGMENTS.some((f) => tLower.includes(f))) {
     positiveSignals.push('Judul novel terverifikasi (tanpa token Light Novel)');
     isLN = true;
@@ -304,16 +224,13 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     }
   }
 
-  // Volume or series structure
   if (hasVolumeNumbering) {
     positiveSignals.push('Struktur penomoran volume resmi terdeteksi');
   }
 
-  // Determine classification and confidence
   const category: BookCategory = isLN ? 'Light Novel' : 'Manga';
   const format: BookFormat = isLN ? 'LIGHT_NOVEL' : 'MANGA';
 
-  // Calculate confidence score
   let confidence = 0.5;
   if (positiveSignals.length >= 2) {
     confidence = 0.95;
@@ -334,7 +251,6 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     };
   }
 
-  // Fail-safe quarantine: False Positive > False Negative
   return {
     status: 'REVIEW_REQUIRED',
     confidence,

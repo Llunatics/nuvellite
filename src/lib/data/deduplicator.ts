@@ -1,24 +1,11 @@
+import domainRules from '@/data/domain-rules.json';
 import { Book, BookEdition, Series, BookFormat } from '../types';
-import { parseTitleSmart } from './volume-parser';
+import { isPgiProseNovelTitle, isPgiReZeroLn } from './classifier';
 import { resolveBaseAlias, resolveMediumAlias } from '../series-consistency';
 
-// PGI prose novels (verified 2026-11-07; mirrors is_pgi_prose_novel in
-// scripts/auto-sync-catalog.py): Sesuji's "Tentang Suatu Tempat di Wilayah
-// Kinki" and "Tentang Ziarah yang Terkutuk" prose editions carry no
-// "Light Novel" token, but they are novels. The NUMBERED listings of these
-// franchises are the manga adaptations and must stay MANGA.
-const PGI_PROSE_NOVEL_FRAGMENTS = [
-  'tentang suatu tempat di wilayah kinki',
-  'tentang ziarah yang terkutuk',
-];
+const VERIFIED_LIGHT_NOVEL_FRAGMENTS = domainRules.classification.verifiedLightNovelFragments;
 
-export function isPgiProseNovelTitle(title: string): boolean {
-  const t = (title || '').trim().toLowerCase();
-  if (t.startsWith('novel:')) return true;
-  return PGI_PROSE_NOVEL_FRAGMENTS.some(
-    (f) => t.includes(f) && !/\bvol\.?\s*\d/.test(t) && !/\s\d{1,2}$/.test(t)
-  );
-}
+export { isPgiProseNovelTitle };
 
 export function cleanSlug(text: string): string {
   const slug = String(text || '')
@@ -27,18 +14,28 @@ export function cleanSlug(text: string): string {
     .replace(/[\s_]+/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
-  // Normalize common irregular plurals
   return slug.replace(/\bfeeling\b/g, 'feelings');
 }
 
 export function cleanBaseFranchise(name: string): { slug: string; canonicalName: string } {
-  let n = (name || '').replace(/\(.*?\)|\[.*?\]/g, '').trim();
+  const raw = (name || '').trim();
+  let n = raw
+    .replace(/\((?:novel|light\s*novel|manga|komik|omnibus|bind[\s-]?up(?:\s+edition)?|tamat|end)\)/gi, '')
+    .trim();
+  const nNoBrackets = n.replace(/\(.*?\)|\[.*?\]/g, '').trim();
+  if (nNoBrackets.length >= 2 && !/^\d+$/.test(nNoBrackets)) {
+    n = nNoBrackets;
+  } else {
+    n = n.replace(/[\[\]()]/g, ' ');
+  }
+  n = n.replace(/\bThe\s+Movie\s+Story\b|\bThe\s+Movie\b/gi, '').trim();
   n = n.replace(/\b(?:Novel|Light\s*Novel|Manga|Komik|Movie\s*Story|Movie)\b/gi, '').trim();
-  n = n.replace(/\b(?:New Edition|Deluxe Edition|Special Set|Limited Edition|Tamat|End)\b/gi, '').trim();
-  n = n.replace(/^[:\-–—]+|[:\-–—]+$/g, '').trim();
+  n = n.replace(/\b(?:New Edition|Deluxe Edition|Special Set|Limited Edition)\b/gi, '').trim();
+  n = n.replace(/(?:[\-–—:+]\s*|\(\s*)\b(?:Tamat|End)\b\s*\)?$/gi, '').trim();
+  n = n.replace(/^[:\-–—]+|[:\-–—]+$/g, '').replace(/\s+/g, ' ').trim();
 
-  const slug = cleanSlug(n);
-  return { slug, canonicalName: n || name };
+  const slug = cleanSlug(n) || cleanSlug(raw);
+  return { slug, canonicalName: n || raw };
 }
 
 export interface ConsolidateOptions {
@@ -55,26 +52,44 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
   const { books, existingSeriesMap = {} } = options;
 
   function determineBookMedium(b: Book): 'LIGHT_NOVEL' | 'MOVIE' | 'MANGA' {
-    const tLower = (b.title || '').toLowerCase();
+    const title = (b.title || '').trim();
+    const tLower = title.toLowerCase();
+    const catSlugs = ((b as any).categorySlugs || '').toLowerCase();
+    const imprint = (b.imprint || '').toLowerCase();
+
+    const hasLNToken =
+      /\b(?:light[\s-]*novel|the\s+novel)\b|\(novel\)/i.test(title) ||
+      catSlugs.includes('light-novel') ||
+      b.genres?.some((g) => g.toLowerCase().includes('light novel') || g.toLowerCase() === 'novel');
+
+    // Explicit LN token wins over 'movie' (e.g. "Light Novel One Piece: ... The Movie")
+    if (hasLNToken) {
+      return 'LIGHT_NOVEL';
+    }
+
+    if (VERIFIED_LIGHT_NOVEL_FRAGMENTS.some((f) => tLower.includes(f))) {
+      return 'LIGHT_NOVEL';
+    }
+
     if (tLower.includes('movie') || tLower.includes('movie story')) {
       return 'MOVIE';
     }
 
-    const hasLNToken = /\b(?:light\s*novel|\(novel\))\b/i.test(b.title) ||
-      b.genres?.some(g => g.toLowerCase().includes('light novel') || g.toLowerCase() === 'novel');
-    const isCloverNovel = b.publisherId === 'pub_mnc' && (
-      tLower.includes('clover') ||
-      b.genres?.some(g => g.toLowerCase().includes('novel') || g.toLowerCase().includes('fiksi ilmiah'))
-    );
-
-    // For PGI (Phoenix Gramedia): Light Novels always explicitly include "Light Novel" or "(Novel)" in the title.
-    // PGI Manga releases do NOT contain "Light Novel" in title (e.g. "The Eminence in Shadow 14").
     if (b.publisherId === 'pub_pgi') {
-      if (isPgiProseNovelTitle(b.title || '')) return 'LIGHT_NOVEL';
-      return hasLNToken ? 'LIGHT_NOVEL' : 'MANGA';
+      if (isPgiReZeroLn(title, b.publisherId)) return 'LIGHT_NOVEL';
+      if (isPgiProseNovelTitle(title) || catSlugs.includes('fiksi-sastra')) return 'LIGHT_NOVEL';
+      return 'MANGA';
     }
 
-    if (hasLNToken || isCloverNovel) {
+    const isCloverNovel =
+      b.publisherId === 'pub_mnc' &&
+      (tLower.startsWith('clover') ||
+        imprint.includes('clover') ||
+        catSlugs.includes('novel-6') ||
+        tLower.startsWith('eighty six') ||
+        b.genres?.some((g) => g.toLowerCase().includes('novel') || g.toLowerCase().includes('fiksi ilmiah')));
+
+    if (isCloverNovel) {
       return 'LIGHT_NOVEL';
     }
 
@@ -85,7 +100,6 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     return 'MANGA';
   }
 
-  // 1. Identify all mediums per base franchise
   const franchiseMediums: Record<string, Set<string>> = {};
   const franchiseCanonicalNames: Record<string, string> = {};
 
@@ -100,16 +114,19 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     const { slug, name } = baseOf(sname);
     if (!slug) continue;
 
-    if (!franchiseMediums[slug]) {
-      franchiseMediums[slug] = new Set();
-      franchiseCanonicalNames[slug] = name;
+    const medium = determineBookMedium(b);
+    const [canonSlug, mediumAliasName] = resolveMediumAlias(slug, medium);
+
+    if (!franchiseMediums[canonSlug]) {
+      franchiseMediums[canonSlug] = new Set();
+      franchiseCanonicalNames[canonSlug] = mediumAliasName ?? name;
+    } else if (mediumAliasName) {
+      franchiseCanonicalNames[canonSlug] = mediumAliasName;
     }
 
-    const medium = determineBookMedium(b);
-    franchiseMediums[slug].add(medium);
+    franchiseMediums[canonSlug].add(medium);
   }
 
-  // 2. Assign medium-separated series IDs and titles
   const processedBooks: Book[] = books.map((b) => {
     const sname = b.seriesName || b.title;
     const { slug: rawSlug } = baseOf(sname);
@@ -126,7 +143,7 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     if (hasMultipleMediums) {
       if (medium === 'LIGHT_NOVEL') {
         sid = `ser_${baseSlug}-ln`;
-        sDisplay = `${baseName} (Novel)`;
+        sDisplay = baseName.toLowerCase().endsWith('(novel)') ? baseName : `${baseName} (Novel)`;
         category = 'Light Novel';
       } else if (medium === 'MOVIE') {
         sid = `ser_${baseSlug}-movie`;
@@ -138,9 +155,6 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
         category = 'Manga';
       }
     } else {
-      // Single-medium franchise: keep the medium token in the display name
-      // (cleanBaseFranchise strips 'Movie', which used to decay
-      // 'Detektif Conan The Movie' into 'Detektif Conan The').
       if (medium === 'MOVIE' && !sDisplay.endsWith('Movie')) {
         sDisplay = `${sDisplay} Movie`;
       }
@@ -156,7 +170,10 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     };
   });
 
-  // 3. Edition & Set Consolidation (group by seriesId + volume)
+  // 3. Edition & Set Consolidation
+  const SPECIAL_EDITION_RE =
+    /\b(?:special\s+set|birthday\s+set|limited\s+edition|complete\s+set|box\s+set|bundling(?:\s+set)?)\b/i;
+
   const seriesVolMap = new Map<string, Book[]>();
   for (const b of processedBooks) {
     const key = `${b.seriesId || 'none'}__vol_${b.volume ?? 'novol'}`;
@@ -171,11 +188,8 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     if (bList.length === 1) {
       canonicalBooks.push(bList[0]);
     } else {
-      // Find regular edition as primary
-      const regular = bList.find((b) => {
-        const t = b.title.toLowerCase();
-        return !['special set', 'birthday set', 'limited edition', 'bundling', 'complete set', 'bonus'].some((k) => t.includes(k));
-      }) || bList[0];
+      const regular =
+        bList.find((b) => !SPECIAL_EDITION_RE.test(b.title || '')) || bList[0];
 
       const editions: BookEdition[] = [];
       for (const b of bList) {
@@ -183,7 +197,7 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
         let edType: BookEdition['editionType'] = 'REGULAR';
         const t = b.title.toLowerCase();
 
-        if (t.includes('special set') || t.includes('special')) {
+        if (t.includes('special set')) {
           edName = 'Special Set';
           edType = 'SPECIAL_SET';
         } else if (t.includes('birthday set')) {
@@ -192,7 +206,7 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
         } else if (t.includes('complete set') || t.includes('box set')) {
           edName = 'Complete Set';
           edType = 'BUNDLE';
-        } else if (t.includes('limited')) {
+        } else if (t.includes('limited edition') || /[\-–—(]\s*limited\b/i.test(b.title)) {
           edName = 'Limited Edition';
           edType = 'LIMITED';
         }
@@ -219,7 +233,6 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     }
   }
 
-  // Deduplicate books with identical title and seriesId
   const seenTitles = new Set<string>();
   const dedupedCanonical: Book[] = [];
   for (const b of canonicalBooks) {
@@ -246,39 +259,40 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     const pubId = sample.publisherId;
     const pubName = sample.publisherName;
 
-    const vols = bList.map((b) => b.volume).filter((v): v is number => v !== null && v !== undefined);
+    const vols = bList
+      .map((b) => b.volume)
+      .filter((v): v is number => typeof v === 'number' && v > 0);
     const availVols = Array.from(new Set(vols)).sort((a, b) => a - b);
     const latestVol = availVols.length > 0 ? Math.max(...availVols) : 1;
+    const totalVols = availVols.length > 0 ? Math.max(availVols.length, latestVol) : bList.length;
 
     const ex = existingSeriesMap[sid];
-    let totalVols = availVols.length > 0 ? Math.max(availVols.length, latestVol, bList.length) : bList.length;
-    let finalLatest = latestVol;
-    let finalAvail = availVols;
-
-    if (ex && ex.totalVolumes) {
-      totalVols = Math.max(ex.totalVolumes, latestVol);
-      finalLatest = Math.max(ex.latestVolume || 0, latestVol);
-      finalAvail = Array.from(new Set([...(ex.availableVolumes || []), ...availVols])).sort((a, b) => a - b);
-    }
+    const hasEndMarker = bList.some((b) =>
+      /(?:[\-–—:+]\s*|\(\s*)\b(?:Tamat|End)\b/i.test(b.title || '')
+    );
+    const status: Series['status'] =
+      hasEndMarker || ex?.status === 'COMPLETED' ? 'COMPLETED' : 'ONGOING';
 
     const cover = bList.find((b) => Boolean(b.coverImage))?.coverImage || ex?.coverImage || '';
     const author = sample.authors?.[0] || ex?.author || 'Berbagai Penulis';
     const sType = cat === 'Light Novel' || sid.endsWith('-ln') ? 'LIGHT_NOVEL' : 'MANGA';
 
-    // Find missing volumes in known sequence
     const missingVolumes: number[] = [];
-    if (finalAvail.length > 0 && finalLatest > 1) {
-      const availSet = new Set(finalAvail);
-      for (let v = 1; v <= finalLatest; v++) {
+    if (availVols.length > 0 && latestVol > 1) {
+      const availSet = new Set(availVols);
+      for (let v = 1; v <= latestVol; v++) {
         if (!availSet.has(v)) {
           missingVolumes.push(v);
         }
       }
     }
 
-    const sDesc = bList.find((b) => (b.synopsis?.length || 0) > 50)?.synopsis?.split('\n\nPilihan Edisi & Set Resmi:')[0]
-      || ex?.description
-      || `Diterbitkan resmi oleh ${pubName}.`;
+    const sDesc =
+      bList
+        .find((b) => (b.synopsis?.length || 0) > 50)
+        ?.synopsis?.split('\n\nPilihan Edisi & Set Resmi:')[0] ||
+      ex?.description ||
+      `Diterbitkan resmi oleh ${pubName}.`;
 
     seriesList.push({
       id: sid,
@@ -289,10 +303,10 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
       publisherName: pubName,
       author,
       type: sType,
-      status: 'ONGOING',
+      status,
       totalVolumes: totalVols,
-      latestVolume: finalLatest,
-      availableVolumes: finalAvail,
+      latestVolume: latestVol,
+      availableVolumes: availVols,
       missingVolumes,
       coverImage: cover,
       description: sDesc,

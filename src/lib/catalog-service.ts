@@ -1,3 +1,4 @@
+import domainRules from '@/data/domain-rules.json';
 import listingData from '@/data/catalog-listing.json';
 import fullCatalogData from '@/data/catalog.json';
 import { Book, Series, Publisher, CatalogData } from './types';
@@ -28,24 +29,7 @@ function ensurePriceSnapshotsInitialized(): void {
 // scripts/auto-sync-catalog.py and src/lib/data/classifier.ts). Last line
 // of defence at render time: even if a bad entry is reintroduced into the
 // data files by an old script, it can never reach the public catalog again.
-const KNOWN_NON_MANGA_FRAGMENTS = [
-  'ther melian',
-  'capcut',
-  'chip war',
-  'excel survival kit',
-  'hack the human',
-  'kebijakan publik',
-  'letters from gaza',
-  'lintas sejarah',
-  'memahami jepang',
-  'republik rakyat china',
-  'tip & trik content creator',
-  'pemrograman web',
-  'sebuah kota, sebuah umpama',
-  'para perasuk',
-  'jalan kehormatan',
-  'miaow',
-];
+const KNOWN_NON_MANGA_FRAGMENTS = domainRules.classification.knownNonMangaFragments;
 
 // Filter out any quarantined or non-manga/non-LN items from public catalog
 const publicBooks: Book[] = (listing.books || []).filter((b) => {
@@ -119,7 +103,7 @@ export function getBooksByPublisher(pubSlugOrId: string): Book[] {
 }
 
 export function getAllSeries(): Series[] {
-  return publicSeries.sort((a, b) => a.name.localeCompare(b.name));
+  return [...publicSeries].sort((a, b) => a.name.localeCompare(b.name));
 }
 
 /**
