@@ -125582,14 +125582,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_shiboyugi_menantang_permainan_maut_demi_sesuap_nasi_2_special_set_init",
-      "bookId": "pub_light_novel_shiboyugi_menantang_permainan_maut_demi_sesuap_nasi_2_special_set",
-      "price": 275000,
-      "availability": "PREORDER",
-      "observedAt": "2026-08-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_level_comic_dandadan_14_init",
       "bookId": "pub_level_comic_dandadan_14",
       "price": 45000,
@@ -127275,30 +127267,6 @@
       "price": 72000,
       "availability": "PREORDER",
       "observedAt": "2026-06-17",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_shaman_king_complete_edition_09_1_init",
-      "bookId": "pub_shaman_king_complete_edition_09_1",
-      "price": 80000,
-      "availability": "PREORDER",
-      "observedAt": "2026-05-21",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_shaman_king_complete_edition_13_1_init",
-      "bookId": "pub_shaman_king_complete_edition_13_1",
-      "price": 10000,
-      "availability": "PREORDER",
-      "observedAt": "2026-05-21",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_shaman_king_complete_edition_14_1_init",
-      "bookId": "pub_shaman_king_complete_edition_14_1",
-      "price": 10000,
-      "availability": "PREORDER",
-      "observedAt": "2026-05-21",
       "source": "gramedia_api"
     },
     {
@@ -136014,14 +135982,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_miaow_init",
-      "bookId": "pub_miaow",
-      "price": 368000,
-      "availability": "PREORDER",
-      "observedAt": "2025-01-15",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_haikyu_fly_high_volleyball_39_init",
       "bookId": "pub_haikyu_fly_high_volleyball_39",
       "price": 28800,
@@ -140110,14 +140070,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_paket_bundling_kaguya_sama_oshi_no_ko_init",
-      "bookId": "pub_paket_bundling_kaguya_sama_oshi_no_ko",
-      "price": 83700,
-      "availability": "PREORDER",
-      "observedAt": "2023-03-17",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_mieruko_chan_the_girl_that_sees_01_init",
       "bookId": "pub_mieruko_chan_the_girl_that_sees_01",
       "price": 43200,
@@ -142566,14 +142518,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_i_sold_my_life_for_ten_thousand_yen_per_year_02_of_03_init",
-      "bookId": "pub_i_sold_my_life_for_ten_thousand_yen_per_year_02_of_03",
-      "price": 25200,
-      "availability": "PREORDER",
-      "observedAt": "2020-11-25",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_komi_sulit_berkomunikasi_06_init",
       "bookId": "pub_komi_sulit_berkomunikasi_06",
       "price": 28800,
@@ -144642,16 +144586,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_tip_trik_content_creator_ai_init",
-      "bookId": "pub_tip_trik_content_creator_ai",
-      "price": 108000,
-      "currentPrice": 108000,
-      "originalPrice": 108000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-09-28",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_18_eighteen_03_of_03_end_init",
       "bookId": "pub_18_eighteen_03_of_03_end",
       "price": 45000,
@@ -144669,16 +144603,6 @@
       "originalPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-09-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_excel_survival_kit_panduan_praktis_menguasai_excel_untuk_dunia_kerja_init",
-      "bookId": "pub_excel_survival_kit_panduan_praktis_menguasai_excel_untuk_dunia_kerja",
-      "price": 118000,
-      "currentPrice": 118000,
-      "originalPrice": 118000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-09-22",
       "source": "gramedia_api"
     },
     {
@@ -144710,16 +144634,6 @@
       "previousPrice": 40500,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-01",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_hack_the_human_init",
-      "bookId": "pub_hack_the_human",
-      "price": 108000,
-      "currentPrice": 108000,
-      "originalPrice": 108000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-09-07",
       "source": "gramedia_api"
     },
     {
@@ -144866,16 +144780,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_para_perasuk_the_art_and_craft_of_filmmaking_init",
-      "bookId": "pub_para_perasuk_the_art_and_craft_of_filmmaking",
-      "price": 148000,
-      "currentPrice": 148000,
-      "originalPrice": 148000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-08-21",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_master_keaton_special_edition_02_1790885551",
       "bookId": "pub_master_keaton_special_edition_02",
       "price": 138000,
@@ -144983,16 +144887,6 @@
       "previousPrice": 40500,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-01",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_capcut_from_basic_to_magic_init",
-      "bookId": "pub_capcut_from_basic_to_magic",
-      "price": 118000,
-      "currentPrice": 118000,
-      "originalPrice": 118000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-08-13",
       "source": "gramedia_api"
     },
     {
@@ -145236,16 +145130,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_lintas_sejarah_etnis_tionghoa_di_malang_dari_singhasari_sampai_reformasi_init",
-      "bookId": "pub_lintas_sejarah_etnis_tionghoa_di_malang_dari_singhasari_sampai_reformasi",
-      "price": 115000,
-      "currentPrice": 115000,
-      "originalPrice": 115000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-07-16",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_atelier_of_witch_hat_06_2026_1790885551",
       "bookId": "pub_atelier_of_witch_hat_06_2026",
       "price": 36000,
@@ -145378,16 +145262,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_sebuah_kota_sebuah_umpama_init",
-      "bookId": "pub_sebuah_kota_sebuah_umpama",
-      "price": 78000,
-      "currentPrice": 78000,
-      "originalPrice": 78000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-07-01",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_level_comic_choujin_x_03_1790885551",
       "bookId": "pub_level_comic_choujin_x_03",
       "price": 56250,
@@ -145453,16 +145327,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_letters_from_gaza_suara_mereka_dari_masamasa_yang_luar_biasa_init",
-      "bookId": "pub_letters_from_gaza_suara_mereka_dari_masamasa_yang_luar_biasa",
-      "price": 108000,
-      "currentPrice": 108000,
-      "originalPrice": 108000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-06-24",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_dragon_ball_ultimate_05_1790885551",
       "bookId": "pub_dragon_ball_ultimate_05",
       "price": 134400,
@@ -145471,26 +145335,6 @@
       "previousPrice": 151200,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-01",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_kebijakan_publik_untuk_pemimpin_indonesia_init",
-      "bookId": "pub_kebijakan_publik_untuk_pemimpin_indonesia",
-      "price": 112500,
-      "currentPrice": 112500,
-      "originalPrice": 150000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-06-17",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_capcut_next_level_dari_pemula_sampai_profesional_init",
-      "bookId": "pub_capcut_next_level_dari_pemula_sampai_profesional",
-      "price": 73500,
-      "currentPrice": 73500,
-      "originalPrice": 98000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-06-17",
       "source": "gramedia_api"
     },
     {
@@ -145815,16 +145659,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_chip_war_pertarungan_untuk_teknologi_paling_krusial_di_dunia_init",
-      "bookId": "pub_chip_war_pertarungan_untuk_teknologi_paling_krusial_di_dunia",
-      "price": 190000,
-      "currentPrice": 190000,
-      "originalPrice": 190000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-05-25",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_hunter_x_hunter_38_1790885551",
       "bookId": "pub_hunter_x_hunter_38",
       "price": 36000,
@@ -145851,16 +145685,6 @@
       "price": 70000,
       "currentPrice": 70000,
       "originalPrice": 70000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-21",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_ive_been_killing_slimes_for_300_years_06_2_init",
-      "bookId": "pub_ive_been_killing_slimes_for_300_years_06_2",
-      "price": 45000,
-      "currentPrice": 45000,
-      "originalPrice": 45000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-05-21",
       "source": "gramedia_api"
@@ -148129,17 +147953,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_eighty_six_ep_4__under_pressure__merchandise_1790885551",
-      "bookId": "pub_eighty_six_ep_4__under_pressure__merchandise",
-      "price": 188000,
-      "currentPrice": 188000,
-      "originalPrice": 188000,
-      "previousPrice": 94000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-01",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_shaker__segelas_koktail_waktu_init",
       "bookId": "pub_shaker__segelas_koktail_waktu",
       "price": 52500,
@@ -148382,26 +148195,6 @@
       "originalPrice": 65000,
       "availability": "AVAILABLE",
       "observedAt": "2026-06-09",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -151102,50 +150895,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_lintas_sejarah_etnis_tionghoa_di_malang_dari_singhasari_sampai_reformasi_1790942484",
-      "bookId": "pub_lintas_sejarah_etnis_tionghoa_di_malang_dari_singhasari_sampai_reformasi",
-      "price": 92000,
-      "currentPrice": 92000,
-      "originalPrice": 115000,
-      "previousPrice": 115000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-10-02",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_sebuah_kota_sebuah_umpama_1790942484",
-      "bookId": "pub_sebuah_kota_sebuah_umpama",
-      "price": 62400,
-      "currentPrice": 62400,
-      "originalPrice": 78000,
-      "previousPrice": 78000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-10-02",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_letters_from_gaza_suara_mereka_dari_masamasa_yang_luar_biasa_1790942484",
-      "bookId": "pub_letters_from_gaza_suara_mereka_dari_masamasa_yang_luar_biasa",
-      "price": 86400,
-      "currentPrice": 86400,
-      "originalPrice": 108000,
-      "previousPrice": 108000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-10-02",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_chip_war_pertarungan_untuk_teknologi_paling_krusial_di_dunia_1790942484",
-      "bookId": "pub_chip_war_pertarungan_untuk_teknologi_paling_krusial_di_dunia",
-      "price": 152000,
-      "currentPrice": 152000,
-      "originalPrice": 190000,
-      "previousPrice": 190000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-10-02",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_apothecary_diaries_vol_02__maomao_special_package_1790942484",
       "bookId": "pub_light_novel_the_apothecary_diaries_vol_02__maomao_special_package",
       "price": 94400,
@@ -151362,186 +151111,6 @@
       "previousPrice": 30000,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-06",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_komik_satuan_init",
-      "bookId": "pub_komik_satuan",
-      "price": 10000,
-      "currentPrice": 10000,
-      "originalPrice": 10000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_jba8_init",
-      "bookId": "pub_bundling_komik_jba8",
-      "price": 90000,
-      "currentPrice": 90000,
-      "originalPrice": 90000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_14_jba7_init",
-      "bookId": "pub_bundling_komik_14_jba7",
-      "price": 45000,
-      "currentPrice": 45000,
-      "originalPrice": 45000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_13_jba6_init",
-      "bookId": "pub_bundling_komik_13_jba6",
-      "price": 90000,
-      "currentPrice": 90000,
-      "originalPrice": 90000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_16_jba9_init",
-      "bookId": "pub_bundling_komik_16_jba9",
-      "price": 50000,
-      "currentPrice": 50000,
-      "originalPrice": 50000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_12_nbu7_init",
-      "bookId": "pub_bundling_komik_12_nbu7",
-      "price": 110000,
-      "currentPrice": 110000,
-      "originalPrice": 110000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_17_jba10_init",
-      "bookId": "pub_bundling_komik_17_jba10",
-      "price": 40000,
-      "currentPrice": 40000,
-      "originalPrice": 40000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_11_nbu6_init",
-      "bookId": "pub_bundling_komik_11_nbu6",
-      "price": 95000,
-      "currentPrice": 95000,
-      "originalPrice": 95000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_9_nbu4_init",
-      "bookId": "pub_bundling_komik_9_nbu4",
-      "price": 55000,
-      "currentPrice": 55000,
-      "originalPrice": 55000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_8_nbu3_init",
-      "bookId": "pub_bundling_komik_8_nbu3",
-      "price": 65000,
-      "currentPrice": 65000,
-      "originalPrice": 65000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_7_jba5_init",
-      "bookId": "pub_bundling_komik_7_jba5",
-      "price": 75000,
-      "currentPrice": 75000,
-      "originalPrice": 75000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_6_jba4_init",
-      "bookId": "pub_bundling_komik_6_jba4",
-      "price": 30000,
-      "currentPrice": 30000,
-      "originalPrice": 30000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_4_jba2_init",
-      "bookId": "pub_bundling_komik_4_jba2",
-      "price": 125000,
-      "currentPrice": 125000,
-      "originalPrice": 125000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_5_jba3_init",
-      "bookId": "pub_bundling_komik_5_jba3",
-      "price": 90000,
-      "currentPrice": 90000,
-      "originalPrice": 90000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_3_jba1_init",
-      "bookId": "pub_bundling_komik_3_jba1",
-      "price": 95000,
-      "currentPrice": 95000,
-      "originalPrice": 95000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_2_nbu2_init",
-      "bookId": "pub_bundling_komik_2_nbu2",
-      "price": 160000,
-      "currentPrice": 160000,
-      "originalPrice": 160000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_10_nbu_5_init",
-      "bookId": "pub_bundling_komik_10_nbu_5",
-      "price": 135000,
-      "currentPrice": 135000,
-      "originalPrice": 135000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_1_nbu1_init",
-      "bookId": "pub_bundling_komik_1_nbu1",
-      "price": 100000,
-      "currentPrice": 100000,
-      "originalPrice": 100000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-08",
       "source": "gramedia_api"
     },
     {
@@ -152369,16 +151938,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_hunter_hat_press_ssst_x_gerai_kompas_init",
-      "bookId": "pub_hunter_hat_press_ssst_x_gerai_kompas",
-      "price": 179000,
-      "currentPrice": 179000,
-      "originalPrice": 179000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-11",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_haikyu_fly_high_volleyball_38_1791720911",
       "bookId": "pub_haikyu_fly_high_volleyball_38",
       "price": 9600,
@@ -152420,17 +151979,6 @@
       "previousPrice": 26250,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-11",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bundling_komik_3_jba1_1791779913",
-      "bookId": "pub_bundling_komik_3_jba1",
-      "price": 110000,
-      "currentPrice": 110000,
-      "originalPrice": 110000,
-      "previousPrice": 95000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-12",
       "source": "gramedia_api"
     },
     {
@@ -156081,36 +155629,6 @@
       "source": "backfill"
     },
     {
-      "id": "snap_pub_level_comic_gokushufudo_the_way_of_house_husband_07_init",
-      "bookId": "pub_level_comic_gokushufudo_the_way_of_house_husband_07",
-      "price": 26000,
-      "currentPrice": 26000,
-      "originalPrice": 40000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2022-11-26",
-      "source": "backfill"
-    },
-    {
-      "id": "snap_pub_level_comic_gokushufudo_the_way_of_house_husband_4_init",
-      "bookId": "pub_level_comic_gokushufudo_the_way_of_house_husband_4",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 40000,
-      "availability": "AVAILABLE",
-      "observedAt": "2021-11-03",
-      "source": "backfill"
-    },
-    {
-      "id": "snap_pub_lc_gokushufudo_the_way_of_house_husband_06_init",
-      "bookId": "pub_lc_gokushufudo_the_way_of_house_husband_06",
-      "price": 26000,
-      "currentPrice": 26000,
-      "originalPrice": 40000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2022-08-30",
-      "source": "backfill"
-    },
-    {
       "id": "snap_pub_edens_zero_01_init",
       "bookId": "pub_edens_zero_01",
       "price": 28000,
@@ -156991,26 +156509,6 @@
       "source": "backfill"
     },
     {
-      "id": "snap_pub_i_sold_my_life_for_ten_thousand_yen_per_year_01_of_03_init",
-      "bookId": "pub_i_sold_my_life_for_ten_thousand_yen_per_year_01_of_03",
-      "price": 20800,
-      "currentPrice": 20800,
-      "originalPrice": 32000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2020-09-09",
-      "source": "backfill"
-    },
-    {
-      "id": "snap_pub_i_sold_my_life_for_ten_thousand_yen_per_year_03_of_03_init",
-      "bookId": "pub_i_sold_my_life_for_ten_thousand_yen_per_year_03_of_03",
-      "price": 18200,
-      "currentPrice": 18200,
-      "originalPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2021-02-17",
-      "source": "backfill"
-    },
-    {
       "id": "snap_pub_la_galigo_jilid_2_init",
       "bookId": "pub_la_galigo_jilid_2",
       "price": 144000,
@@ -157463,16 +156961,6 @@
       "originalPrice": 108000,
       "availability": "AVAILABLE",
       "observedAt": "2026-08-06",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -249518,26 +249006,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -253498,26 +252966,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -254264,16 +253712,6 @@
       "previousPrice": 28000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-20",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_34_1_init",
-      "bookId": "pub_black_butler_34_1",
-      "price": 45000,
-      "currentPrice": 45000,
-      "originalPrice": 45000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-20",
       "source": "gramedia_api"
     },
     {
@@ -255833,26 +255271,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -256442,26 +255860,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -256991,26 +256389,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -258383,26 +257761,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -258967,26 +258325,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -259568,26 +258906,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -260097,26 +259415,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -263655,26 +262953,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -265418,26 +264696,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -265969,26 +265227,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -266947,26 +266185,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -269846,26 +269064,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -270429,26 +269627,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -273831,26 +273009,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -288709,26 +287867,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -289399,16 +288537,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_blue_lock_04_2_init",
-      "bookId": "pub_blue_lock_04_2",
-      "price": 45000,
-      "currentPrice": 45000,
-      "originalPrice": 45000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_level_comic_giant_killing_56_init",
       "bookId": "pub_lc_giant_killing_56",
       "price": 10000,
@@ -289556,26 +288684,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -290334,26 +289442,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -292780,26 +291868,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -309529,26 +308597,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -310105,26 +309153,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -310615,26 +309643,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -311122,26 +310130,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -311687,26 +310675,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -313021,26 +311989,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -317692,26 +316640,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -318232,26 +317160,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -320593,26 +319501,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -321938,26 +320826,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -322448,26 +321316,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -322829,16 +321677,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_blue_lock_07_2_init",
-      "bookId": "pub_blue_lock_07_2",
-      "price": 45000,
-      "currentPrice": 45000,
-      "originalPrice": 45000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_mob_psycho_100_13_1_init",
       "bookId": "pub_mob_psycho_100_13",
       "price": 10000,
@@ -322977,26 +321815,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -323553,26 +322371,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -324061,26 +322859,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -324602,26 +323380,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -325171,26 +323929,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -325690,26 +324428,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -326266,26 +324984,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -326876,26 +325574,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -327405,26 +326083,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -327940,26 +326598,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 160200,
@@ -328469,26 +327107,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 346500,
-      "currentPrice": 346500,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 256500,
-      "currentPrice": 256500,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -329045,26 +327663,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -340753,26 +339351,6 @@
       "previousPrice": 58500,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-31",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -360527,26 +359105,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -361081,26 +359639,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -361632,26 +360170,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -362196,26 +360714,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -362769,26 +361267,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -363333,26 +361811,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -363861,26 +362319,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -364417,26 +362855,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -364945,26 +363363,6 @@
       "previousPrice": 65000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-04",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -365556,26 +363954,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -366084,26 +364462,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -366735,26 +365093,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -367332,26 +365670,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -367882,26 +366200,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -368570,26 +366868,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -369134,26 +367412,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -369651,26 +367909,6 @@
       "originalPrice": 295000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
       "source": "gramedia_api"
     },
     {
@@ -370273,26 +368511,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
       "bookId": "pub_light_novel_the_summer_hikaru_died_2_1",
       "price": 178000,
@@ -370655,66 +368873,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_i_want_to_end_this_love_game_05_init",
-      "bookId": "pub_i_want_to_end_this_love_game_05",
-      "price": 45000,
-      "currentPrice": 45000,
-      "originalPrice": 45000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-10-12",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_kariage_kun_65_2_init",
-      "bookId": "pub_kariage_kun_65_2",
-      "price": 20000,
-      "currentPrice": 20000,
-      "originalPrice": 40000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-08-10",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_mob_psycho_100_10_1_init",
-      "bookId": "pub_mob_psycho_100_10_1",
-      "price": 10000,
-      "currentPrice": 10000,
-      "originalPrice": 10000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_lc_fight_ippo_128_1_init",
-      "bookId": "pub_lc_fight_ippo_128_1",
-      "price": 10000,
-      "currentPrice": 10000,
-      "originalPrice": 10000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_level_comic_fight_ippo_130_1_init",
-      "bookId": "pub_level_comic_fight_ippo_130_1",
-      "price": 35000,
-      "currentPrice": 35000,
-      "originalPrice": 35000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_new_kobochan_40_1_init",
-      "bookId": "pub_new_kobochan_40_1",
-      "price": 25000,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-29",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_kayachan_nggak_menakutkan_kok_vol_1_1794048673",
       "bookId": "pub_kayachan_nggak_menakutkan_kok_vol_1",
       "price": 37500,
@@ -370723,26 +368881,6 @@
       "previousPrice": 50000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-07",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_who_killed_the_brave_chapter_of_the_brave_special_set_init",
-      "bookId": "pub_light_novel_who_killed_the_brave_chapter_of_the_brave_special_set",
-      "price": 270000,
-      "currentPrice": 270000,
-      "originalPrice": 270000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-12-16",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_the_summer_hikaru_died_9_special_set_init",
-      "bookId": "pub_the_summer_hikaru_died_9_special_set",
-      "price": 295000,
-      "currentPrice": 295000,
-      "originalPrice": 295000,
-      "availability": "AVAILABLE",
-      "observedAt": "2026-11-14",
       "source": "gramedia_api"
     },
     {
@@ -370756,116 +368894,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_reliving_my_life_to_save_you_vol_1_special_set_init",
-      "bookId": "pub_reliving_my_life_to_save_you_vol_1_special_set",
-      "price": 159000,
-      "currentPrice": 159000,
-      "originalPrice": 159000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-23",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_birthday_set",
-      "price": 365000,
-      "currentPrice": 365000,
-      "originalPrice": 365000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-21",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_8_special_set",
-      "price": 265000,
-      "currentPrice": 265000,
-      "originalPrice": 265000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-21",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_in_the_clear_moonlit_dusk_5_special_set_init",
-      "bookId": "pub_in_the_clear_moonlit_dusk_5_special_set",
-      "price": 221000,
-      "currentPrice": 221000,
-      "originalPrice": 260000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-09-30",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set_init",
-      "bookId": "pub_tentang_kita_yang_bertolak_belakang_vol_8_special_set_special_set",
-      "price": 225250,
-      "currentPrice": 225250,
-      "originalPrice": 265000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-09-11",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_phantom_busters_vol_5_special_set_init",
-      "bookId": "pub_phantom_busters_vol_5_special_set",
-      "price": 229500,
-      "currentPrice": 229500,
-      "originalPrice": 270000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-09-03",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set_init",
-      "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai__special_set",
-      "price": 233750,
-      "currentPrice": 233750,
-      "originalPrice": 275000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-08-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_the_summer_hikaru_died_8__special_set_init",
-      "bookId": "pub_the_summer_hikaru_died_8__special_set",
-      "price": 250750,
-      "currentPrice": 250750,
-      "originalPrice": 295000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-07-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_complete_set",
-      "price": 385000,
-      "currentPrice": 385000,
-      "originalPrice": 385000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feelings_in_russian_7_special_set",
-      "price": 285000,
-      "currentPrice": 285000,
-      "originalPrice": 285000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_the_summer_hikaru_died_2_special_set_init",
-      "bookId": "pub_light_novel_the_summer_hikaru_died_2_special_set",
-      "price": 178000,
-      "currentPrice": 178000,
-      "originalPrice": 178000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-04-22",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_novel_tentang_ziarah_yang_terkutuk_init",
       "bookId": "pub_novel_tentang_ziarah_yang_terkutuk",
       "price": 108000,
@@ -370873,96 +368901,6 @@
       "originalPrice": 108000,
       "availability": "AVAILABLE",
       "observedAt": "2026-02-13",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_blue_lock_28__special_set_init",
-      "bookId": "pub_blue_lock_28__special_set",
-      "price": 270000,
-      "currentPrice": 270000,
-      "originalPrice": 270000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-09",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set_init",
-      "bookId": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_3__special_set",
-      "price": 250000,
-      "currentPrice": 250000,
-      "originalPrice": 250000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-01-14",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_the_summer_hikaru_died_7__special_set_init",
-      "bookId": "pub_the_summer_hikaru_died_7__special_set",
-      "price": 230000,
-      "currentPrice": 230000,
-      "originalPrice": 230000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-01-08",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_phantom_busters_vol_1__special_set_init",
-      "bookId": "pub_phantom_busters_vol_1__special_set",
-      "price": 270000,
-      "currentPrice": 270000,
-      "originalPrice": 270000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-12-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_blue_lock_27__special_set_init",
-      "bookId": "pub_blue_lock_27__special_set",
-      "price": 270000,
-      "currentPrice": 270000,
-      "originalPrice": 270000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-12-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_blue_lock_26__special_set_init",
-      "bookId": "pub_blue_lock_26__special_set",
-      "price": 270000,
-      "currentPrice": 270000,
-      "originalPrice": 270000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-12-24",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_6__special_set",
-      "price": 250000,
-      "currentPrice": 250000,
-      "originalPrice": 250000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-12-11",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bungo_stray_dogs_beast_4__special_set_init",
-      "bookId": "pub_bungo_stray_dogs_beast_4__special_set",
-      "price": 250000,
-      "currentPrice": 250000,
-      "originalPrice": 250000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-12-09",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_gokurakugai_vol_4__special_set_init",
-      "bookId": "pub_gokurakugai_vol_4__special_set",
-      "price": 250000,
-      "currentPrice": 250000,
-      "originalPrice": 250000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-11-24",
       "source": "gramedia_api"
     },
     {
@@ -370977,16 +368915,6 @@
       "source": "gramedia_api"
     },
     {
-      "id": "snap_pub_blue_lock_25__special_set_init",
-      "bookId": "pub_blue_lock_25__special_set",
-      "price": 270000,
-      "currentPrice": 270000,
-      "originalPrice": 270000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-09-23",
-      "source": "gramedia_api"
-    },
-    {
       "id": "snap_pub_tentang_suatu_tempat_di_wilayah_kinki_init",
       "bookId": "pub_tentang_suatu_tempat_di_wilayah_kinki",
       "price": 129000,
@@ -370994,226 +368922,6 @@
       "originalPrice": 129000,
       "availability": "AVAILABLE",
       "observedAt": "2025-09-15",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_who_killed_the_brave__special_set_init",
-      "bookId": "pub_light_novel_who_killed_the_brave__special_set",
-      "price": 210000,
-      "currentPrice": 210000,
-      "originalPrice": 210000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-09-02",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_bungo_stray_dogs_beast_1__special_set_init",
-      "bookId": "pub_bungo_stray_dogs_beast_1__special_set",
-      "price": 220000,
-      "currentPrice": 220000,
-      "originalPrice": 220000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-08-26",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_gokurakugai_vol_3__special_set_init",
-      "bookId": "pub_gokurakugai_vol_3__special_set",
-      "price": 250000,
-      "currentPrice": 250000,
-      "originalPrice": 250000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-07-30",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__complete_set",
-      "price": 350000,
-      "currentPrice": 350000,
-      "originalPrice": 350000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-07-30",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set_init",
-      "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_5__special_set",
-      "price": 212500,
-      "currentPrice": 212500,
-      "originalPrice": 250000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-07-30",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_the_summer_hikaru_died_1___special_set_init",
-      "bookId": "pub_light_novel_the_summer_hikaru_died_1___special_set",
-      "price": 250000,
-      "currentPrice": 250000,
-      "originalPrice": 250000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-07-23",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_the_summer_hikaru_died_6__special_set_init",
-      "bookId": "pub_the_summer_hikaru_died_6__special_set",
-      "price": 212500,
-      "currentPrice": 212500,
-      "originalPrice": 250000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-07-23",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_classroom_of_the_elite_03__special_set_init",
-      "bookId": "pub_light_novel_classroom_of_the_elite_03__special_set",
-      "price": 250000,
-      "currentPrice": 250000,
-      "originalPrice": 250000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2025-06-05",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_lc_fight_ippo_129_1_init",
-      "bookId": "pub_lc_fight_ippo_129_1",
-      "price": 35000,
-      "currentPrice": 35000,
-      "originalPrice": 35000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_level_comic_fight_ippo_136_1_init",
-      "bookId": "pub_level_comic_fight_ippo_136_1",
-      "price": 35000,
-      "currentPrice": 35000,
-      "originalPrice": 35000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_level_comic_fight_ippo_137_1_init",
-      "bookId": "pub_level_comic_fight_ippo_137_1",
-      "price": 35000,
-      "currentPrice": 35000,
-      "originalPrice": 35000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_level_comic_fight_ippo_138_1_init",
-      "bookId": "pub_level_comic_fight_ippo_138_1",
-      "price": 35000,
-      "currentPrice": 35000,
-      "originalPrice": 35000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_level_comic_fight_ippo_135_1_init",
-      "bookId": "pub_level_comic_fight_ippo_135_1",
-      "price": 35000,
-      "currentPrice": 35000,
-      "originalPrice": 35000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_mob_psycho_100_01_1_init",
-      "bookId": "pub_mob_psycho_100_01_1",
-      "price": 40000,
-      "currentPrice": 40000,
-      "originalPrice": 40000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-19",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_mob_psycho_100_vol_2_init",
-      "bookId": "pub_mob_psycho_100_vol_2",
-      "price": 40000,
-      "currentPrice": 40000,
-      "originalPrice": 40000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-19",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_mob_psycho_100_11_1_init",
-      "bookId": "pub_mob_psycho_100_11_1",
-      "price": 10000,
-      "currentPrice": 10000,
-      "originalPrice": 10000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-21",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_mob_psycho_100_vol_9_init",
-      "bookId": "pub_mob_psycho_100_vol_9",
-      "price": 10000,
-      "currentPrice": 10000,
-      "originalPrice": 10000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-22",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_mob_psycho_100_13_1_init",
-      "bookId": "pub_mob_psycho_100_13_1",
-      "price": 10000,
-      "currentPrice": 10000,
-      "originalPrice": 10000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-29",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_ruler_of_the_land_89_1_init",
-      "bookId": "pub_ruler_of_the_land_89_1",
-      "price": 32000,
-      "currentPrice": 32000,
-      "originalPrice": 32000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-02-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_one_piece_01_init",
-      "bookId": "pub_one_piece_01",
-      "price": 16000,
-      "currentPrice": 16000,
-      "originalPrice": 32000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2021-06-01",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_light_novel_one_piece_the_adventure_of_deadend_the_movie_init",
-      "bookId": "pub_light_novel_one_piece_the_adventure_of_deadend_the_movie",
-      "price": 21500,
-      "currentPrice": 21500,
-      "originalPrice": 43000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2022-11-26",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_level_comic_giant_killing_56_init",
-      "bookId": "pub_level_comic_giant_killing_56",
-      "price": 10000,
-      "currentPrice": 10000,
-      "originalPrice": 10000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-05-29",
       "source": "gramedia_api"
     },
     {
@@ -371225,16 +368933,6 @@
       "previousPrice": 16000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-07",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_detektif_conan_movie_the_fist_of_blue_sapphire_first_init",
-      "bookId": "pub_detektif_conan_movie_the_fist_of_blue_sapphire_first",
-      "price": 40000,
-      "currentPrice": 40000,
-      "originalPrice": 80000,
-      "availability": "AVAILABLE",
-      "observedAt": "2021-11-03",
       "source": "gramedia_api"
     },
     {
