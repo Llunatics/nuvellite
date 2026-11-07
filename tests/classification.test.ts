@@ -235,6 +235,35 @@ describe('Multi-Signal Classification Engine', () => {
     });
     expect(kinkiManga.category).toBe('Manga');
 
+    // ...but the PROSE novels of the same franchises are Light Novels
+    // (verified 2026-11-07: PGI publishes both; Gramedia shelves the novels
+    // under buku/fiksi-sastra/horor, the numbered listings are the manga).
+    const kinkiNovel = classifyProduct({
+      title: 'Tentang Suatu Tempat di Wilayah Kinki',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+      categorySlugs: 'buku/fiksi-sastra/horor',
+    });
+    expect(kinkiNovel.status).toBe('ACCEPTED');
+    expect(kinkiNovel.category).toBe('Light Novel');
+
+    const ziarahNovel = classifyProduct({
+      title: 'Novel: Tentang Ziarah yang Terkutuk',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+      categorySlugs: 'buku/fiksi-sastra/horor',
+    });
+    expect(ziarahNovel.status).toBe('ACCEPTED');
+    expect(ziarahNovel.category).toBe('Light Novel');
+
+    const ziarahManga = classifyProduct({
+      title: 'Tentang Ziarah yang Terkutuk 1',
+      publisherId: 'pub_pgi',
+      publisherName: 'Phoenix Gramedia Indonesia',
+      categorySlugs: 'buku/komik/manga/horor-1',
+    });
+    expect(ziarahManga.category).toBe('Manga');
+
     // PGI's Re-Living is the manga adaptation (sellers list "Komik", PGI URL
     // has no novel- prefix); the franchise novel is m&c!'s Ingatan... above.
     const reliving = classifyProduct({

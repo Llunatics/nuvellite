@@ -2,6 +2,24 @@ import { Book, BookEdition, Series, BookFormat } from '../types';
 import { parseTitleSmart } from './volume-parser';
 import { resolveBaseAlias, resolveMediumAlias } from '../series-consistency';
 
+// PGI prose novels (verified 2026-11-07; mirrors is_pgi_prose_novel in
+// scripts/auto-sync-catalog.py): Sesuji's "Tentang Suatu Tempat di Wilayah
+// Kinki" and "Tentang Ziarah yang Terkutuk" prose editions carry no
+// "Light Novel" token, but they are novels. The NUMBERED listings of these
+// franchises are the manga adaptations and must stay MANGA.
+const PGI_PROSE_NOVEL_FRAGMENTS = [
+  'tentang suatu tempat di wilayah kinki',
+  'tentang ziarah yang terkutuk',
+];
+
+export function isPgiProseNovelTitle(title: string): boolean {
+  const t = (title || '').trim().toLowerCase();
+  if (t.startsWith('novel:')) return true;
+  return PGI_PROSE_NOVEL_FRAGMENTS.some(
+    (f) => t.includes(f) && !/\bvol\.?\s*\d/.test(t) && !/\s\d{1,2}$/.test(t)
+  );
+}
+
 export function cleanSlug(text: string): string {
   const slug = String(text || '')
     .toLowerCase()
@@ -52,6 +70,7 @@ export function consolidateCatalog(options: ConsolidateOptions): ConsolidationRe
     // For PGI (Phoenix Gramedia): Light Novels always explicitly include "Light Novel" or "(Novel)" in the title.
     // PGI Manga releases do NOT contain "Light Novel" in title (e.g. "The Eminence in Shadow 14").
     if (b.publisherId === 'pub_pgi') {
+      if (isPgiProseNovelTitle(b.title || '')) return 'LIGHT_NOVEL';
       return hasLNToken ? 'LIGHT_NOVEL' : 'MANGA';
     }
 

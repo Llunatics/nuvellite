@@ -290,6 +290,44 @@ VERIFIED_LIGHT_NOVEL_FRAGMENTS = (
     'ingatan untuk menyelamatkanmu',  # m&c! novel (380pp, Novel category)
 )
 
+# PGI prose novels (verified 2026-11-07): besides manga/LN, PGI publishes
+# PROSE novels under its own novel line. Gramedia shelves them under
+# "buku/fiksi-sastra/..." (prose fiction), NOT the comic/LN shelves, so the
+# disallowed-category gate used to reject them outright. Verified examples:
+# Sesuji's "Tentang Suatu Tempat di Wilayah Kinki" and "Tentang Ziarah yang
+# Terkutuk" — PGI's own publication list files both as novels, the user owns
+# physical copies, and the manga synopses themselves state the novel "sudah
+# diterbitkan di PGI". Both franchises ALSO have numbered manga adaptations
+# ("... Vol. 1-3" / "... 1-2") which must stay MANGA — hence the
+# no-volume-marker condition on the title fragments below.
+PGI_PROSE_NOVEL_FRAGMENTS = (
+    'tentang suatu tempat di wilayah kinki',
+    'tentang ziarah yang terkutuk',
+)
+
+def is_pgi_prose_novel(title, pub_id, cat_slugs=''):
+    """True when a PGI listing is one of PGI's prose novels (no LN token).
+
+    Signals (any one is enough):
+    - Gramedia shelves it under "fiksi-sastra" (the prose-fiction shelf) —
+      the durable signal for future PGI prose novels (a full PGI feed scan
+      on 2026-11-07 found only prose novels/LN on that shelf, no nonfiction);
+    - the title carries the store's own "Novel:" format prefix; or
+    - the title is a verified prose-novel franchise (above) with NO volume
+      marker — the numbered listings of those franchises are the manga.
+    """
+    if pub_id != 'pub_pgi':
+        return False
+    t = (title or '').strip().lower()
+    if 'fiksi-sastra' in _category_segments(cat_slugs):
+        return True
+    if t.startswith('novel:'):
+        return True
+    for frag in PGI_PROSE_NOVEL_FRAGMENTS:
+        if frag in t and not re.search(r'\bvol\.?\s*\d|\s\d{1,2}$', t):
+            return True
+    return False
+
 def determine_book_medium(b):
     title = (b.get('title') or '').strip()
     t_lower = title.lower()
@@ -316,6 +354,11 @@ def determine_book_medium(b):
         # Re:Zero manga; the 5 "Re:Zero : Starting Life in Another World" books
         # are LN vols 1-5 despite lacking the "Light Novel:" prefix.
         if 're:zero' in t_lower or 'rezero' in t_lower:
+            return 'LIGHT_NOVEL'
+        # PGI prose novels (Sesuji's Kinki/Ziarah, verified 2026-11-07):
+        # prose editions carry no "Light Novel" token, but they are novels,
+        # not manga. See is_pgi_prose_novel().
+        if is_pgi_prose_novel(title, pub_id):
             return 'LIGHT_NOVEL'
         return 'LIGHT_NOVEL' if has_ln_token else 'MANGA'
 
@@ -345,6 +388,10 @@ def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None, au
     cat = (cat_slugs or '').lower()
     segs = _category_segments(cat)
     authors_lower = (authors or '').lower()
+    # PGI prose novels (Gramedia "fiksi-sastra" shelf / verified titles):
+    # a positive format signal for PGI's novel line, exempt from the
+    # non-manga title-pattern and disallowed-category gates below.
+    pgi_prose = is_pgi_prose_novel(t, pub_id, cat_slugs)
 
     # 1. Merchandise: absolute reject, regardless of category.
     if MERCHANDISE_REGEX.search(t):
@@ -394,7 +441,7 @@ def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None, au
     #    Applied even when the category is unknown: positive junk evidence
     #    in the title is enough to reject (2026-10-11: junk like "Excel
     #    Survival Kit" and "Chip War" slipped in with empty category slugs).
-    if not has_comic_cat and not has_explicit_token:
+    if not has_comic_cat and not has_explicit_token and not pgi_prose:
         if NON_MANGA_LN_REGEX.search(t):
             return 'REJECT', None, 'Matched non-manga/non-LN title pattern'
 
@@ -403,6 +450,11 @@ def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None, au
     if not has_explicit_token:
         for s in segs:
             if s in DISALLOWED_CATEGORY_SEGMENTS:
+                # "fiksi-sastra" is Gramedia's prose-fiction shelf: it must
+                # not convict PGI's own prose-novel line (verified
+                # 2026-11-07 — Sesuji's Kinki/Ziarah novels live there).
+                if s == 'fiksi-sastra' and pgi_prose:
+                    continue
                 return 'REJECT', None, f'Matched disallowed store category: {s}'
 
     # 3. Type determination (manga vs light novel)
@@ -420,7 +472,7 @@ def classify_book(title, pub_id, cat_slugs='', existing_cat=None, specs=None, au
     )
 
     if pub_id == 'pub_pgi':
-        is_ln = has_ln_token
+        is_ln = has_ln_token or pgi_prose
     else:
         is_ln = has_ln_token or is_clover
 

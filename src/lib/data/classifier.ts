@@ -83,6 +83,24 @@ const VERIFIED_LIGHT_NOVEL_FRAGMENTS = [
   'ingatan untuk menyelamatkanmu', // m&c! novel (380pp, Novel category)
 ];
 
+// PGI prose novels (verified 2026-11-07; mirrors is_pgi_prose_novel in
+// scripts/auto-sync-catalog.py): PGI's prose-novel line (e.g. Sesuji's
+// Kinki/Ziarah novels) is shelved by Gramedia under "buku/fiksi-sastra/...",
+// not the comic/LN shelves, and carries no "Light Novel" title token. The
+// NUMBERED listings of these franchises are the manga adaptations.
+const PGI_PROSE_NOVEL_FRAGMENTS = [
+  'tentang suatu tempat di wilayah kinki',
+  'tentang ziarah yang terkutuk',
+];
+
+function isPgiProseNovelTitle(title: string): boolean {
+  const t = (title || '').trim().toLowerCase();
+  if (t.startsWith('novel:')) return true;
+  return PGI_PROSE_NOVEL_FRAGMENTS.some(
+    (f) => t.includes(f) && !/\bvol\.?\s*\d/.test(t) && !/\s\d{1,2}$/.test(t)
+  );
+}
+
 function categorySegments(raw: string | undefined): string[] {
   return (raw || '')
     .toLowerCase()
@@ -177,8 +195,13 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
   // format, or when the category itself carries a comic segment — the store
   // miscategorizes real releases often enough that category alone must not
   // convict when format evidence contradicts it.
+  // PGI prose novels live on Gramedia's "fiksi-sastra" (prose fiction)
+  // shelf — that shelf must not convict PGI's own novel line.
+  const isPgi = pubId === 'pub_pgi' || pubName.includes('phoenix gramedia');
+  const isPgiProseShelf = isPgi && catSegs.includes('fiksi-sastra');
   if (!hasExplicitFormatToken && !hasComicCategory) {
     for (const dc of DISALLOWED_CATEGORIES) {
+      if (dc === 'fiksi-sastra' && isPgiProseShelf) continue;
       if (catSegs.includes(dc)) {
         negativeSignals.push(`Kategori toko termasuk kategori terlarang: ${dc}`);
         break;
@@ -249,6 +272,10 @@ export function classifyProduct(input: ClassificationInput): ClassificationResul
     } else if (tLower.includes('manga') || tLower.includes('komik') || catSlugs.includes('manga') || catSlugs.includes('komik')) {
       positiveSignals.push('Rilisan resmi Manga PGI / KADOKAWA');
       isManga = true;
+    } else if (isPgiProseShelf || isPgiProseNovelTitle(title)) {
+      // PGI prose novels (verified 2026-11-07): Sesuji's Kinki/Ziarah novels.
+      positiveSignals.push('Novel prosa resmi PGI (rak fiksi-sastra / judul terverifikasi)');
+      isLN = true;
     } else if (hasVolumeNumbering) {
       // PGI release with volume structure is Manga if no Light Novel token is present
       positiveSignals.push('Rilisan resmi berlisensi PGI / KADOKAWA');
