@@ -1,24 +1,16 @@
 #!/usr/bin/env python3
 """
-KKI sync orchestrator — idempotent, safe to re-run.
+KKI sync orchestrator — idempotent, fault-tolerant, and safe to re-run.
 
 Pipeline:
   1. Download fresh CSVs from the KKI Google Sheets
-     (gid 1781960306 = manga, gid 640933522 = light novel)
-  2. match_kki.py      -> kki-enrichment.json + review queue + unmatched
-  3. build_archive.py  -> kki-archive.json (preserves existing MU data)
-  4. mu_enrich.py      -> MU cover/description/translation for NEW entries
-                         only (skips already-enriched; graceful on 429)
-
-Usage:
-  python3 scripts/sync-kki.py                 # full sync, MU enrich all new
-  python3 scripts/sync-kki.py --skip-mu       # data only, no MU scraping
-  python3 scripts/sync-kki.py --mu-limit 20   # MU enrich at most 20 new entries
-  python3 scripts/sync-kki.py --retry-blocked # also retry MU-blocked entries
-
-After sync, rebuild the Next.js site to pick up the new JSON data.
-MU enrichment is intentionally incremental: translation APIs are
-rate-limited, so each run tops up the cache (kki-translations.json).
+  2. resolve_review.py -> import CSV/log review decisions into kki-review-decisions.json
+  3. match_kki.py      -> kki-enrichment.json + review queue + unmatched
+  4. resolve_review.py -> auto-triage any new unambiguous false-positives & re-run match_kki.py
+  5. build_archive.py  -> kki-archive.json (preserves existing MU & Pranala data)
+  6. mu_enrich.py      -> MU cover/description/translation (circuit-breaks on 429)
+  7. mu_cover_bulk.py  -> Polite cover-only MU fetch (circuit-breaks on 429)
+  8. pranala_cover.py  -> Publisher og:image fallback (always runs even if MU was 429-blocked)
 """
 
 import argparse
@@ -47,15 +39,18 @@ def download_csvs():
         print(f"  {len(data)//1024} KB")
 
 
-def run_step(name: str, *args: str):
+def run_step(name: str, *args: str, allow_non_zero: bool = False) -> int:
     print(f"\n=== {name} ===")
     r = subprocess.run([sys.executable, *args], cwd=REPO)
-    if r.returncode != 0:
+    if r.returncode != 0 and not allow_non_zero:
         raise SystemExit(f"step failed: {name} (exit {r.returncode})")
+    return r.returncode
 
 
 def main():
     ap = argparse.ArgumentParser(description="Sync KKI database into Nuvellite")
+    ap.add_argument("--skip-download", action="store_true",
+                    help="use existing local CSVs without downloading from Google Sheets")
     ap.add_argument("--skip-mu", action="store_true",
                     help="skip MangaUpdates enrichment")
     ap.add_argument("--mu-limit", type=int, default=0,
@@ -64,8 +59,13 @@ def main():
                     help="retry MU entries previously marked blocked")
     args = ap.parse_args()
 
-    download_csvs()
+    if not args.skip_download:
+        download_csvs()
+
+    run_step("sync review decisions", str(KKI_DIR / "resolve_review.py"))
     run_step("match KKI <-> Nuvellite", str(KKI_DIR / "match_kki.py"))
+    run_step("auto-triage review queue", str(KKI_DIR / "resolve_review.py"))
+    run_step("re-match KKI after triage", str(KKI_DIR / "match_kki.py"))
     run_step("build archive", str(KKI_DIR / "build_archive.py"))
 
     if not args.skip_mu:
@@ -76,30 +76,20 @@ def main():
             mu_args += ["--all"]
         if args.retry_blocked:
             mu_args += ["--retry-blocked"]
-        run_step("MU enrichment (incremental)", *mu_args)
+        run_step("MU enrichment (incremental)", *mu_args, allow_non_zero=True)
 
-    # Cover-only MU bulk fetch (no translation bottleneck): mu_enrich.py
-    # also translates descriptions via MyMemory and is therefore capped
-    # at ~30/run, while cover fetching alone is fast. Ultra-polite
-    # (1 worker, 3s delay) because MangaUpdates 429-blocks this network
-    # on bursts; on 429 the script stops gracefully and retries next run.
-    if not args.skip_mu:
         mu_cover_args = [str(KKI_DIR / "mu_cover_bulk.py"),
                          "--workers", "1", "--delay", "3"]
         if args.mu_limit:
             mu_cover_args += ["--limit", str(args.mu_limit)]
         else:
             mu_cover_args += ["--limit", "150"]
-        run_step("MU cover-only bulk fetch (polite)", *mu_cover_args)
+        if args.retry_blocked:
+            mu_cover_args += ["--retry-blocked"]
+        run_step("MU cover-only bulk fetch (polite)", *mu_cover_args, allow_non_zero=True)
 
-    # Pranala og:image cover fallback (incremental). Runs even when
-    # --skip-mu: publisher store pages are reachable from this network.
-    # --all is deliberate: the backlog (950+ entries) is what kept covers
-    # blank for weeks; once it is drained, later runs are incremental
-    # (only new entries) and fast. build_archive.py now preserves
-    # pranalaCover across rebuilds, so results finally accumulate.
     pranala_args = [str(KKI_DIR / "pranala_cover.py"), "--all"]
-    run_step("Pranala cover fallback (incremental)", *pranala_args)
+    run_step("Pranala cover fallback (incremental)", *pranala_args, allow_non_zero=True)
 
     print("\nSync complete. Rebuild the site (npm run build) to apply.")
     print("Review queue: scripts/kki/kki-review-queue.json")

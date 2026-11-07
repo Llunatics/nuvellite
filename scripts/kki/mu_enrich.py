@@ -2,25 +2,15 @@
 """
 MangaUpdates enrichment for KKI archive entries.
 
-Fetches cover image URL + English description from a MangaUpdates series
-page, then auto-translates the description to Indonesian (cached).
-
-Translation: MyMemory free API (no key needed), chunked to ~400 chars,
-1s delay between chunks, results cached in kki-translations.json keyed by
-sha1(english_text) — never re-translates the same text. MyMemory anonymous
-is rate-limited (~5000 chars/day), so enrichment is intentionally
-incremental: each sync run tops up the cache. On translation failure the
-English description is kept and translation is retried next run.
-
-Network policy:
-  - 1.5s delay between MU requests, browser-like UA
-  - on HTTP 429 / block: record mu_status="blocked" and continue
-    (enrichment is retried on the next sync run)
-
-Usage:
-  python3 mu_enrich.py --limit 50        # enrich first 50 pending entries
-  python3 mu_enrich.py --all             # enrich all pending entries
-  python3 mu_enrich.py --retry-blocked   # retry entries marked blocked
+Fixes:
+1. Validates every URL with sanitize_mu_url() and wraps Request construction
+   inside try/except so dirty cells (like "いのちの火" on "Api Kehidupan")
+   are marked status="invalid-url" and never crash the run.
+2. Circuit breaker: stops immediately after 3 consecutive HTTP 429 responses
+   instead of looping over hundreds of blocked entries.
+3. Saves archive & translation cache incrementally every 15 entries.
+4. Skips terminal statuses ("ok", "invalid-url", "parse-empty", "fetch-failed")
+   unless explicitly retried.
 """
 
 import argparse
@@ -29,6 +19,7 @@ import json
 import re
 import sys
 import time
+import urllib.parse
 import urllib.request
 import urllib.error
 from pathlib import Path
@@ -40,22 +31,26 @@ DATA_DIR = REPO / "src" / "data"
 ARCHIVE_JSON = DATA_DIR / "kki-archive.json"
 TRANSLATION_CACHE = KKI_DIR / "kki-translations.json"
 
+sys.path.insert(0, str(KKI_DIR))
+from url_utils import sanitize_mu_url
+
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 DELAY_S = 1.5
+MAX_CONSECUTIVE_429 = 3
 
 
 def fetch(url: str, timeout: int = 25) -> str | None:
-    req = urllib.request.Request(url, headers={
-        "User-Agent": UA,
-        "Accept": "text/html,application/xhtml+xml",
-        "Accept-Language": "en-US,en;q=0.9",
-    })
     try:
+        req = urllib.request.Request(url, headers={
+            "User-Agent": UA,
+            "Accept": "text/html,application/xhtml+xml",
+            "Accept-Language": "en-US,en;q=0.9",
+        })
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             if resp.status != 200:
                 return None
-            return resp.read().decode("utf-8", errors="replace")
+            return resp.read(500_000).decode("utf-8", errors="replace")
     except urllib.error.HTTPError as e:
         if e.code == 429:
             return "BLOCKED"
@@ -65,23 +60,17 @@ def fetch(url: str, timeout: int = 25) -> str | None:
 
 
 def parse_mu_page(html: str) -> dict:
-    """Extract cover image URL and English description from MU series HTML."""
     out = {"cover": None, "description_en": None}
-
-    # cover: MU series pages show the cover in the sidebar
-    # typical: <img ... src="https://cdn.mangaupdates.com/image/...">
     m = re.search(
         r'<img[^>]+src="(https://cdn\.mangaupdates\.com[^"]+)"[^>]*>',
         html)
     if m:
         out["cover"] = m.group(1)
     else:
-        # fallback: any mangaupdates image
-        m = re.search(r'(https://cdn\.mangaupdates\.com/images/[^"\s]+)', html)
+        m = re.search(r'(https://cdn\.mangaupdates\.com/image[s]?/[^"\s]+)', html)
         if m:
             out["cover"] = m.group(1)
 
-    # description: inside <div class="sContent"> ... </div>
     m = re.search(
         r'<div class="sContent"[^>]*>(.*?)</div>',
         html, re.DOTALL | re.IGNORECASE)
@@ -90,7 +79,6 @@ def parse_mu_page(html: str) -> dict:
         desc = re.sub(r"<[^>]+>", "", desc)
         desc = unescape(desc).strip()
         desc = re.sub(r"\n{3,}", "\n\n", desc)
-        # strip common trailing junk
         desc = re.sub(r"\s*\[.*?\]\s*$", "", desc).strip()
         if len(desc) > 20:
             out["description_en"] = desc
@@ -98,20 +86,17 @@ def parse_mu_page(html: str) -> dict:
 
 
 def translate_id(text_en: str, cache: dict) -> str | None:
-    """Translate EN->ID via MyMemory (free, no key). Cached by text hash."""
     key = hashlib.sha1(text_en.encode("utf-8")).hexdigest()[:16]
     if key in cache:
         return cache[key]["id"]
 
-    # MyMemory anonymous: ~500 chars per query, 5000 chars/day.
-    # Chunk on sentence boundaries; cache makes this progressive.
-    import urllib.parse
     sentences = re.split(r"(?<=[.!?])\s+", text_en)
     chunks, cur = [], ""
     for s in sentences:
         if len(cur) + len(s) + 1 > 400:
-            chunks.append(cur)
-            cur = s
+            if cur:
+                chunks.append(cur)
+            cur = s[:400]
         else:
             cur = (cur + " " + s).strip() if cur else s
     if cur:
@@ -121,22 +106,19 @@ def translate_id(text_en: str, cache: dict) -> str | None:
     try:
         for c in chunks:
             q = urllib.parse.quote(c)
-            url = ("https://api.mymemory.translated.net/get"
-                   f"?q={q}&langpair=en|id")
+            url = f"https://api.mymemory.translated.net/get?q={q}&langpair=en|id"
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=20) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
             if str(data.get("responseStatus")) != "200":
-                raise RuntimeError(f"MyMemory status {data.get('responseStatus')}: "
-                                   f"{data.get('responseDetails')}")
+                raise RuntimeError(f"MyMemory status {data.get('responseStatus')}")
             translated = data["responseData"]["translatedText"]
-            # MyMemory sometimes returns the query back or "MYMEMORY WARNING"
             if "MYMEMORY WARNING" in translated or not translated.strip():
-                raise RuntimeError("MyMemory warning/empty")
+                raise RuntimeError("MyMemory quota warning/empty")
             out_parts.append(translated)
-            time.sleep(1.0)  # be nice to the free API
+            time.sleep(1.0)
     except Exception as e:
-        print(f"  translate failed: {e}", file=sys.stderr)
+        print(f"  translate skipped: {e}", file=sys.stderr)
         return None
 
     translated = " ".join(out_parts)
@@ -145,55 +127,84 @@ def translate_id(text_en: str, cache: dict) -> str | None:
     return translated
 
 
+def save_state(archive, cache):
+    with open(ARCHIVE_JSON, "w", encoding="utf-8") as f:
+        json.dump(archive, f, ensure_ascii=False, indent=1)
+    with open(TRANSLATION_CACHE, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=1)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--retry-blocked", action="store_true")
+    ap.add_argument("--retry-failed", action="store_true")
     args = ap.parse_args()
 
     if not ARCHIVE_JSON.exists():
-        print("kki-archive.json not found — run build_archive.py first",
-              file=sys.stderr)
+        print("kki-archive.json not found — run build_archive.py first", file=sys.stderr)
         sys.exit(1)
 
     archive = json.load(open(ARCHIVE_JSON, encoding="utf-8"))
-    cache = json.load(open(TRANSLATION_CACHE, encoding="utf-8")) \
-        if TRANSLATION_CACHE.exists() else {}
+    cache = json.load(open(TRANSLATION_CACHE, encoding="utf-8")) if TRANSLATION_CACHE.exists() else {}
 
     pending = []
+    invalid_cleaned = 0
     for e in archive:
-        mu = e.get("mu", {})
-        status = mu.get("status")
-        if not e.get("mangaupdatesUrl"):
+        raw_url = e.get("mangaupdatesUrl")
+        if not raw_url:
             continue
-        if status == "ok":
+        clean_url = sanitize_mu_url(raw_url)
+        if not clean_url:
+            e["mangaupdatesUrl"] = None
+            e["mu"] = {"status": "invalid-url", "fetchedAt": time.strftime("%Y-%m-%d")}
+            invalid_cleaned += 1
+            continue
+        e["mangaupdatesUrl"] = clean_url
+        mu = e.get("mu") or {}
+        status = mu.get("status")
+        if status in ("ok", "invalid-url"):
             continue
         if status == "blocked" and not args.retry_blocked:
             continue
+        if status in ("fetch-failed", "parse-empty") and not args.retry_failed:
+            continue
         pending.append(e)
+
+    if invalid_cleaned:
+        print(f"cleaned {invalid_cleaned} invalid MangaUpdates URLs")
+        save_state(archive, cache)
 
     if args.limit:
         pending = pending[:args.limit]
     elif not args.all:
-        print(f"{len(pending)} pending. Use --limit N or --all.", file=sys.stderr)
-        sys.exit(2)
+        print(f"{len(pending)} pending. Use --limit N or --all.")
+        return 0
 
     print(f"enriching {len(pending)} entries...")
     ok = blocked = failed = 0
-    for i, e in enumerate(pending):
+    consecutive_429 = 0
+
+    for i, e in enumerate(pending, 1):
         url = e["mangaupdatesUrl"]
-        print(f"[{i+1}/{len(pending)}] {e['title'][:50]}")
+        print(f"[{i}/{len(pending)}] {e['title'][:50]}")
         html = fetch(url)
         if html == "BLOCKED":
             e["mu"] = {"status": "blocked", "fetchedAt": time.strftime("%Y-%m-%d")}
             blocked += 1
-            print("  -> 429 blocked, marked for retry")
+            consecutive_429 += 1
+            print(f"  -> 429 blocked ({consecutive_429}/{MAX_CONSECUTIVE_429})")
+            if consecutive_429 >= MAX_CONSECUTIVE_429:
+                print("  !! Circuit breaker triggered (MangaUpdates 429) — stopping MU step gracefully.")
+                break
         elif not html:
             e["mu"] = {"status": "fetch-failed", "fetchedAt": time.strftime("%Y-%m-%d")}
             failed += 1
+            consecutive_429 = 0
             print("  -> fetch failed")
         else:
+            consecutive_429 = 0
             parsed = parse_mu_page(html)
             mu = {"status": "ok", "fetchedAt": time.strftime("%Y-%m-%d")}
             if parsed["cover"]:
@@ -209,17 +220,16 @@ def main():
             else:
                 ok += 1
             e["mu"] = mu
-            print(f"  -> cover={'yes' if parsed['cover'] else 'no'}, "
-                  f"desc={'yes' if parsed['description_en'] else 'no'}")
+            print(f"  -> cover={'yes' if parsed['cover'] else 'no'}, desc={'yes' if parsed['description_en'] else 'no'}")
+
+        if i % 15 == 0:
+            save_state(archive, cache)
         time.sleep(DELAY_S)
 
-    json.dump(archive, open(ARCHIVE_JSON, "w", encoding="utf-8"),
-              ensure_ascii=False, indent=1)
-    json.dump(cache, open(TRANSLATION_CACHE, "w", encoding="utf-8"),
-              ensure_ascii=False, indent=1)
+    save_state(archive, cache)
     print(f"done: ok={ok} blocked={blocked} failed={failed}")
-    print(f"translation cache entries: {len(cache)}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
