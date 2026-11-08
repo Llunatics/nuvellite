@@ -23,7 +23,7 @@ interface LibraryViewProps {
   allSeries: Series[];
 }
 
-export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
+export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
   const {
     items,
     ownedItems,
@@ -399,6 +399,34 @@ export function LibraryView({ allBooks, allSeries }: LibraryViewProps) {
           )}
         </div>
       )}
+    </div>
+  );
+});
+
+export function LibraryViewSkeleton() {
+  return (
+    <div className="space-y-8 animate-pulse">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/[0.04] pb-6">
+        <div className="space-y-2">
+          <div className="h-4 w-28 bg-white/[0.05] rounded" />
+          <div className="h-8 w-60 bg-white/[0.08] rounded" />
+          <div className="h-3.5 w-72 bg-white/[0.04] rounded" />
+        </div>
+        <div className="flex gap-2">
+          <div className="h-8 w-20 bg-white/[0.05] rounded-full" />
+          <div className="h-8 w-20 bg-white/[0.05] rounded-full" />
+        </div>
+      </div>
+      <div className="flex gap-2">
+        <div className="h-8 w-24 bg-white/[0.06] rounded-full" />
+        <div className="h-8 w-24 bg-white/[0.06] rounded-full" />
+        <div className="h-8 w-24 bg-white/[0.06] rounded-full" />
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
+        {Array.from({ length: 12 }).map((_, i) => (
+          <div key={i} className="aspect-[3/4.2] rounded-2xl bg-white/[0.04]" />
+        ))}
+      </div>
     </div>
   );
 }

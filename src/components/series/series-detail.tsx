@@ -38,7 +38,7 @@ interface VolumeSlot {
   book?: Book;
 }
 
-export function SeriesDetail({ series, books, kkiEnrichment, hasBindUp }: SeriesDetailProps) {
+export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kkiEnrichment, hasBindUp }: SeriesDetailProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const [activeTab, setActiveTab] = useState<'ALL' | 'MISSING' | 'SPECIAL'>('ALL');
   const [selectedSlot, setSelectedSlot] = useState<VolumeSlot | null>(null);
@@ -112,6 +112,12 @@ export function SeriesDetail({ series, books, kkiEnrichment, hasBindUp }: Series
   const gapSlots = useMemo(() => {
     return volumeMatrix.filter((s) => s.state === 'UNKNOWN_GAP');
   }, [volumeMatrix]);
+
+  // §5.5 Volume Matrix Drawer Live Sync: derive active slot from live volumeMatrix state
+  const activeSlot = useMemo(() => {
+    if (!selectedSlot) return null;
+    return volumeMatrix.find((s) => s.volNum === selectedSlot.volNum) ?? selectedSlot;
+  }, [selectedSlot, volumeMatrix]);
 
   return (
     <div className="space-y-12 pb-16">
@@ -303,44 +309,44 @@ export function SeriesDetail({ series, books, kkiEnrichment, hasBindUp }: Series
               )}
 
               {/* Contextual Drawer for Selected Volume in Matrix */}
-              {selectedSlot && (
+              {activeSlot && (
                 <div className="mt-3 p-4 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 animate-in fade-in duration-150">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-mono font-bold text-editorial-title">
-                        Volume {selectedSlot.volNum}
+                        Volume {activeSlot.volNum}
                       </span>
                       <span
                         className={`px-2 py-0.5 rounded-full text-[9px] font-mono font-semibold ${
-                          selectedSlot.state === 'OWNED'
+                          activeSlot.state === 'OWNED'
                             ? 'bg-emerald-500/20 text-emerald-400'
-                            : selectedSlot.state === 'UPCOMING'
+                            : activeSlot.state === 'UPCOMING'
                             ? 'bg-amber-500/20 text-amber-400'
-                            : selectedSlot.state === 'UNKNOWN_GAP'
+                            : activeSlot.state === 'UNKNOWN_GAP'
                             ? 'bg-rose-500/20 text-rose-400'
                             : 'bg-white/10 text-editorial-muted'
                         }`}
                       >
-                        {selectedSlot.state === 'OWNED' && 'Sudah Dimiliki'}
-                        {selectedSlot.state === 'RELEASED' && 'Sudah Rilis (Belum Dimiliki)'}
-                        {selectedSlot.state === 'UPCOMING' && 'Pra-Pesan / Segera Terbit'}
-                        {selectedSlot.state === 'UNKNOWN_GAP' && 'Nomor Terlewati di Data Sumber'}
+                        {activeSlot.state === 'OWNED' && 'Sudah Dimiliki'}
+                        {activeSlot.state === 'RELEASED' && 'Sudah Rilis (Belum Dimiliki)'}
+                        {activeSlot.state === 'UPCOMING' && 'Pra-Pesan / Segera Terbit'}
+                        {activeSlot.state === 'UNKNOWN_GAP' && 'Nomor Terlewati di Data Sumber'}
                       </span>
                     </div>
 
-                    {selectedSlot.book ? (
+                    {activeSlot.book ? (
                       <div className="text-xs text-editorial-muted space-y-0.5">
-                        <p className="text-editorial-title font-medium">{selectedSlot.book.title}</p>
+                        <p className="text-editorial-title font-medium">{activeSlot.book.title}</p>
                         <div className="flex items-center gap-2 text-[11px] font-mono text-editorial-faint">
-                          <span>Harga: {formatRupiah(selectedSlot.book.currentPrice)}</span>
-                          {selectedSlot.book.releaseDate && (
+                          <span>Harga: {formatRupiah(activeSlot.book.currentPrice)}</span>
+                          {activeSlot.book.releaseDate && (
                             <>
                               <span>•</span>
-                              <span>Rilis: {formatDateWIB(selectedSlot.book.releaseDate)}</span>
+                              <span>Rilis: {formatDateWIB(activeSlot.book.releaseDate)}</span>
                             </>
                           )}
                           <span>•</span>
-                          <span>{selectedSlot.book.publisherShortName}</span>
+                          <span>{activeSlot.book.publisherShortName}</span>
                         </div>
                       </div>
                     ) : (
@@ -351,18 +357,18 @@ export function SeriesDetail({ series, books, kkiEnrichment, hasBindUp }: Series
                   </div>
 
                   <div className="flex items-center gap-2 shrink-0">
-                    {selectedSlot.book && (
+                    {activeSlot.book && (
                       <>
                         <button
                           type="button"
-                          onClick={() => toggleOwned(selectedSlot.book!.id, series.id)}
+                          onClick={() => toggleOwned(activeSlot.book!.id, series.id)}
                           className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 active:scale-95 ${
-                            isLoaded && isOwned(selectedSlot.book.id)
+                            isLoaded && isOwned(activeSlot.book.id)
                               ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
                               : 'bg-white/[0.08] hover:bg-white/[0.12] text-editorial-title'
                           }`}
                         >
-                          {isLoaded && isOwned(selectedSlot.book.id) ? (
+                          {isLoaded && isOwned(activeSlot.book.id) ? (
                             <>
                               <Check className="w-3.5 h-3.5" />
                               <span>Dimiliki</span>
@@ -376,11 +382,11 @@ export function SeriesDetail({ series, books, kkiEnrichment, hasBindUp }: Series
                         </button>
 
                         <Link
-                          href={`/books/${selectedSlot.book.slug}`}
+                          href={`/books/${activeSlot.book.slug}`}
                           className="px-3 py-1.5 rounded-full bg-white text-black text-xs font-medium hover:bg-slate-100 transition-all flex items-center gap-1"
                         >
                           <span>Buka Detail</span>
-                          <ExternalLink className="w-3 h-3" />
+                          <ExternalLink className="w-3.5 h-3.5" />
                         </Link>
                       </>
                     )}
@@ -461,6 +467,30 @@ export function SeriesDetail({ series, books, kkiEnrichment, hasBindUp }: Series
             ))}
           </div>
         )}
+      </div>
+    </div>
+  );
+});
+
+export function SeriesDetailSkeleton() {
+  return (
+    <div className="space-y-12 pb-16 animate-pulse">
+      <div className="h-4 w-28 bg-white/[0.05] rounded" />
+      <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 lg:p-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="lg:col-span-4 xl:col-span-3 aspect-[3/4.2] w-48 sm:w-56 mx-auto lg:mx-0 rounded-2xl bg-white/[0.06]" />
+          <div className="lg:col-span-8 xl:col-span-9 space-y-4">
+            <div className="h-4 w-32 bg-white/[0.06] rounded" />
+            <div className="h-8 w-64 bg-white/[0.08] rounded" />
+            <div className="h-4 w-48 bg-white/[0.05] rounded" />
+            <div className="h-20 w-full bg-white/[0.04] rounded mt-4" />
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-6">
+        {Array.from({ length: 12 }).map((_, i) => (
+          <div key={i} className="aspect-[3/4.2] rounded-2xl bg-white/[0.04]" />
+        ))}
       </div>
     </div>
   );

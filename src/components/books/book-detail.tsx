@@ -30,7 +30,7 @@ interface BookDetailProps {
   priceSummary: PriceSummary;
 }
 
-export function BookDetail({ book, seriesSiblings, recommendations, priceSummary }: BookDetailProps) {
+export const BookDetail = React.memo(function BookDetail({ book, seriesSiblings, recommendations, priceSummary }: BookDetailProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const [isSynopsisExpanded, setIsSynopsisExpanded] = useState(false);
 
@@ -51,6 +51,12 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
   const { preview: synopsisPreview, isLong: isSynopsisLong } = useMemo(
     () => getSynopsisPreview(cleanedSynopsis, 260),
     [cleanedSynopsis]
+  );
+
+  // Other volumes in this series (§5.6)
+  const otherVolumes = useMemo(
+    () => seriesSiblings.filter((s) => s.id !== book.id),
+    [seriesSiblings, book.id]
   );
 
   return (
@@ -376,11 +382,11 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
       </div>
 
       {/* 4. Related Releases (Neighboring volumes in same series) */}
-      {seriesSiblings.length > 1 && (
+      {otherVolumes.length > 0 && (
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-white/[0.04] pb-3">
             <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title">
-              Volume Lain dalam Seri Ini ({seriesSiblings.length} buku)
+              Volume Lain dalam Seri Ini ({otherVolumes.length} buku)
             </h2>
             {book.seriesId && (
               <Link
@@ -393,7 +399,7 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
-            {seriesSiblings.map((sibling) => (
+            {otherVolumes.map((sibling) => (
               <ReleaseCard key={sibling.id} book={sibling} />
             ))}
           </div>
@@ -466,4 +472,4 @@ export function BookDetail({ book, seriesSiblings, recommendations, priceSummary
       </div>
     </div>
   );
-}
+});

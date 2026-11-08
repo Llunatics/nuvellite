@@ -13,7 +13,7 @@ interface ReleaseCardProps {
   variant?: 'standard' | 'compact';
 }
 
-export function ReleaseCard({ book, variant = 'standard' }: ReleaseCardProps) {
+export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'standard' }: ReleaseCardProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const owned = isLoaded && isOwned(book.id);
   const wishlisted = isLoaded && isWishlisted(book.id);
@@ -226,4 +226,4 @@ export function ReleaseCard({ book, variant = 'standard' }: ReleaseCardProps) {
       </div>
     </div>
   );
-}
+});

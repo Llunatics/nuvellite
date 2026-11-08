@@ -162,12 +162,37 @@ export function getBindUpGroupForSeriesSlug(slug: string): BindUpSeriesGroup | u
 
 export function getSeriesBySlug(slug: string): Series | undefined {
   const cleanSlug = slug.toLowerCase().replace(/^ser_/, '');
-  return publicSeries.find(
+  const direct = publicSeries.find(
     (s) =>
       s.slug.toLowerCase() === cleanSlug ||
       s.id.toLowerCase() === slug.toLowerCase() ||
       s.id.toLowerCase() === `ser_${cleanSlug}`
   );
+  if (direct) return direct;
+
+  if (cleanSlug.endsWith('-manga')) {
+    const baseSlug = cleanSlug.replace(/-manga$/, '');
+    return publicSeries.find(
+      (s) =>
+        (s.slug.toLowerCase() === baseSlug ||
+          s.id.toLowerCase() === baseSlug ||
+          s.id.toLowerCase() === `ser_${baseSlug}`) &&
+        s.type === 'MANGA'
+    );
+  }
+
+  if (cleanSlug.endsWith('-ln')) {
+    const baseSlug = cleanSlug.replace(/-ln$/, '');
+    return publicSeries.find(
+      (s) =>
+        (s.slug.toLowerCase() === baseSlug ||
+          s.id.toLowerCase() === baseSlug ||
+          s.id.toLowerCase() === `ser_${baseSlug}`) &&
+        s.type === 'LIGHT_NOVEL'
+    );
+  }
+
+  return undefined;
 }
 
 export function getPublishers(): Publisher[] {
@@ -265,3 +290,32 @@ export function getRelatedReleases(book: Book, limit = 6) {
 export function getYouMayAlsoLike(book: Book, limit = 6) {
   return getYouMayAlsoLikeInternal(book, publicBooks, limit);
 }
+
+export type CanonicalSeriesStatus = 'ONGOING' | 'COMPLETED' | 'HIATUS' | 'DROPPED' | 'UNRELEASED';
+
+/**
+ * Normalizes series and book status case-insensitively (§5.1).
+ * Maps real vendor variations ("Ongoing", "Completed", "Tamat", "Hiatus", "Dropped", "Unreleased")
+ * so valid items are never misclassified as unreleased or archived.
+ */
+export function normalizeStatus(rawStatus?: string | null): CanonicalSeriesStatus {
+  const s = (rawStatus || '').toLowerCase().trim();
+  switch (s) {
+    case 'ongoing':
+    case 'berjalan':
+      return 'ONGOING';
+    case 'completed':
+    case 'tamat':
+    case 'complete':
+      return 'COMPLETED';
+    case 'hiatus':
+      return 'HIATUS';
+    case 'dropped':
+      return 'DROPPED';
+    case 'unreleased':
+      return 'UNRELEASED';
+    default:
+      return 'ONGOING';
+  }
+}
+

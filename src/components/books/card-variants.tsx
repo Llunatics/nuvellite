@@ -13,7 +13,7 @@ interface FeaturedReleaseCardProps {
   book: Book;
 }
 
-export function FeaturedReleaseCard({ book }: FeaturedReleaseCardProps) {
+export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ book }: FeaturedReleaseCardProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const owned = isLoaded && isOwned(book.id);
   const wishlisted = isLoaded && isWishlisted(book.id);
@@ -178,14 +178,14 @@ export function FeaturedReleaseCard({ book }: FeaturedReleaseCardProps) {
       </div>
     </div>
   );
-}
+});
 
 interface SeriesProgressionCardProps {
   series: Series;
   ownedCount: number;
 }
 
-export function SeriesProgressionCard({ series, ownedCount }: SeriesProgressionCardProps) {
+export const SeriesProgressionCard = React.memo(function SeriesProgressionCard({ series, ownedCount }: SeriesProgressionCardProps) {
   const percent = series.totalVolumes > 0 ? Math.min(100, Math.round((ownedCount / series.totalVolumes) * 100)) : 0;
 
   return (
@@ -236,4 +236,4 @@ export function SeriesProgressionCard({ series, ownedCount }: SeriesProgressionC
       </div>
     </Link>
   );
-}
+});

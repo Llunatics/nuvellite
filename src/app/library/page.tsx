@@ -1,5 +1,6 @@
+import { Suspense } from 'react';
 import { getAllBooks, getAllSeries } from '@/lib/catalog-service';
-import { LibraryView } from '@/components/library/library-view';
+import { LibraryView, LibraryViewSkeleton } from '@/components/library/library-view';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -13,7 +14,9 @@ export default function LibraryPage() {
 
   return (
     <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6">
-      <LibraryView allBooks={allBooks} allSeries={allSeries} />
+      <Suspense fallback={<LibraryViewSkeleton />}>
+        <LibraryView allBooks={allBooks} allSeries={allSeries} />
+      </Suspense>
     </div>
   );
 }

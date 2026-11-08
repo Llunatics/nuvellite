@@ -452,3 +452,24 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb-hover);
 }
+
+/* Lightweight CSS-only transitions for page and card entrances */
+@keyframes fadeInEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-entrance {
+  animation: fadeInEntrance 300ms ease-out forwards;
+}
+
+.transition-entrance {
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+

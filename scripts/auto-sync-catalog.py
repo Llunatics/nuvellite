@@ -548,7 +548,8 @@ def merge_duplicate_listings(all_books, price_snapshot_map=None):
         if b.get('seriesId'):
             pub_counts[b['seriesId']][b.get('publisherId')] += 1
     for sid, counts in pub_counts.items():
-        series_pub_majority[sid] = counts.most_common(1)[0][0]
+        if counts and len(counts.most_common(1)) > 0:
+            series_pub_majority[sid] = counts.most_common(1)[0][0]
 
     groups = defaultdict(list)
     for b in all_books:
@@ -560,10 +561,12 @@ def merge_duplicate_listings(all_books, price_snapshot_map=None):
     dropped_ids = set()
     merged = []
     for key, b_list in groups.items():
+        if not b_list:
+            continue
         if len(b_list) == 1:
             merged.append(b_list[0])
             continue
-        sid = key[0]
+        sid = key[0] if (key and len(key) > 0) else ''
         majority_pub = series_pub_majority.get(sid)
 
         def rank(b):
@@ -574,6 +577,8 @@ def merge_duplicate_listings(all_books, price_snapshot_map=None):
             )
 
         ordered = sorted(b_list, key=rank)
+        if not ordered:
+            continue
         keep = ordered[0]
         folded_slugs = set(keep.get('foldedVariantSlugs') or [])
         for dup in ordered[1:]:
@@ -643,18 +648,22 @@ def consolidate_editions(all_books, price_snapshot_map=None):
             title_groups[_edition_base_title(b.get('title'))].append(b)
 
         for tkey, t_list in title_groups.items():
+            if not t_list:
+                continue
             if len(t_list) == 1:
                 single = t_list[0]
                 if len(single.get('availableEditions') or []) > 1:
-                    ed_names = ', '.join(e['name'] for e in single['availableEditions'])
+                    ed_names = ', '.join(e['name'] for e in single['availableEditions'] if isinstance(e, dict) and 'name' in e)
                     single['synopsis'] = (single.get('synopsis') or '') + f"\n\nPilihan Edisi & Set Resmi: {ed_names}"
                 canonical_books.append(single)
                 continue
 
             regular = next(
                 (b for b in t_list if not _SPECIAL_EDITION_REGEX.search(b.get('title') or '')),
-                t_list[0],
+                t_list[0] if len(t_list) > 0 else None,
             )
+            if not regular:
+                continue
             editions = []
             seen_ed_urls = set()
             # Preserve previously stored editions if any
@@ -729,10 +738,12 @@ def reconstruct_series(all_books, existing_series_map):
 
     new_series_list = []
     for sid, b_list in series_groups.items():
+        if not b_list:
+            continue
         sample = b_list[0]
-        cat = sample['category']
-        pub_id = sample['publisherId']
-        pub_name = sample['publisherName']
+        cat = sample.get('category', 'Manga')
+        pub_id = sample.get('publisherId', '')
+        pub_name = sample.get('publisherName', '')
 
         vols = [b['volume'] for b in b_list if isinstance(b.get('volume'), int) and b['volume'] > 0]
         avail_vols = sorted(list(set(vols))) if vols else []
@@ -756,13 +767,14 @@ def reconstruct_series(all_books, existing_series_map):
         if not cover and ex:
             cover = ex.get('coverImage', '')
 
-        author = sample.get('authors', ['Berbagai Penulis'])[0]
+        author_list = sample.get('authors')
+        author = author_list[0] if (isinstance(author_list, list) and len(author_list) > 0) else 'Berbagai Penulis'
         if (not author or author in ('Various Authors', 'Berbagai Penulis')) and ex:
             author = ex.get('author', author)
 
         first_vol = next((b for b in b_list if b.get('volume') == 1 and len(b.get('synopsis', '')) > 50), None)
         if not first_vol:
-            first_vol = next((b for b in b_list if len(b.get('synopsis', '')) > 50), b_list[0])
+            first_vol = next((b for b in b_list if len(b.get('synopsis', '')) > 50), b_list[0] if len(b_list) > 0 else {})
         s_desc = (first_vol.get('synopsis') or f"Diterbitkan resmi oleh {pub_name}.")
         s_desc = s_desc.split('\n\nPilihan Edisi & Set Resmi:')[0]
 
@@ -889,26 +901,27 @@ def run_sync(catalog_path):
 
     # 2. Sequence gap discovery for missing/OOS volumes
     try:
-        gap_products = discover_sequence_gaps(existing_books_map.values(), adapters[0])
-        print(f"     Discovered {len(gap_products)} candidate products from gap search.")
-        for item in gap_products:
-            slug = item.get('slug')
-            title = (item.get('title') or item.get('name') or '').strip()
-            if not slug or not title or slug in accepted_products:
-                continue
+        if adapters and len(adapters) > 0:
+            gap_products = discover_sequence_gaps(existing_books_map.values(), adapters[0])
+            print(f"     Discovered {len(gap_products)} candidate products from gap search.")
+            for item in gap_products:
+                slug = item.get('slug')
+                title = (item.get('title') or item.get('name') or '').strip()
+                if not slug or not title or slug in accepted_products:
+                    continue
 
-            status, cat, reason = classify_book(
-                title, adapters[0].publisher_id,
-                cat_slugs=item.get('category_slugs') or '',
-                authors=item.get('author') or '',
-                stage='feed',
-            )
-            if status == 'REJECT':
-                rejected_count += 1
-                continue
+                status, cat, reason = classify_book(
+                    title, adapters[0].publisher_id,
+                    cat_slugs=item.get('category_slugs') or '',
+                    authors=item.get('author') or '',
+                    stage='feed',
+                )
+                if status == 'REJECT':
+                    rejected_count += 1
+                    continue
 
-            accepted_products[slug] = (item, adapters[0], cat)
-            total_products_fetched += 1
+                accepted_products[slug] = (item, adapters[0], cat)
+                total_products_fetched += 1
     except Exception as e:
         print(f"     [ERROR in gap discovery]: {e}")
 
@@ -930,6 +943,8 @@ def run_sync(catalog_path):
     refresh_snapshots = []
 
     def refresh_price_task(slug):
+        if not adapters:
+            return slug, None
         adapter = adapters[0]
         try:
             specs = adapter.fetch_product_specs(slug)
@@ -1040,7 +1055,15 @@ def run_sync(catalog_path):
             or (ex.get('releaseDate') if ex else None)
             or adapter.parse_indonesian_date(item.get('release_date'))
         )
-        cover = sp.get('coverImage') or (item.get('image') if isinstance(item.get('image'), str) else '')
+        cover = (
+            sp.get('coverImage')
+            or sp.get('coverUrl')
+            or sp.get('image')
+            or (item.get('coverImage') if isinstance(item.get('coverImage'), str) else '')
+            or (item.get('coverUrl') if isinstance(item.get('coverUrl'), str) else '')
+            or (item.get('image') if isinstance(item.get('image'), str) else '')
+            or ''
+        )
         isbn = sp.get('isbn13') or ''
         synopsis = sp.get('synopsis') or ''
         cat_slugs = sp.get('category_slugs') or (ex.get('categorySlugs') if ex else '') or item.get('category_slugs') or ''

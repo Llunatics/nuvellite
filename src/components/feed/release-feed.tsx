@@ -24,7 +24,7 @@ interface ReleaseFeedProps {
   publishers: Publisher[];
 }
 
-export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
+export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
   // Curated spotlight items: the 5 newest releases with a cover and price.
   // NOTE: do NOT require `synopsis` here. The homepage feed uses the
   // lightweight listing data, which strips synopsis (see split-catalog.py),
@@ -548,6 +548,35 @@ export function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
         )}
       </section>
 
+    </div>
+  );
+});
+
+export function ReleaseFeedSkeleton() {
+  return (
+    <div className="space-y-16 animate-pulse">
+      {/* Hero Showcase Skeleton */}
+      <div className="aspect-[21/9] min-h-[300px] w-full rounded-3xl bg-white/[0.03] border border-white/[0.05]" />
+
+      {/* Rails Skeleton */}
+      <div className="space-y-6">
+        <div className="h-6 w-48 bg-white/[0.06] rounded" />
+        <div className="flex gap-4 overflow-hidden">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="w-[180px] shrink-0 aspect-[3/4.2] rounded-2xl bg-white/[0.04]" />
+          ))}
+        </div>
+      </div>
+
+      {/* Grid Skeleton */}
+      <div className="space-y-6">
+        <div className="h-6 w-36 bg-white/[0.06] rounded" />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+          {Array.from({ length: 12 }).map((_, i) => (
+            <div key={i} className="aspect-[3/4.2] rounded-2xl bg-white/[0.04]" />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

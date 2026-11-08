@@ -1,6 +1,7 @@
+import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { getSeriesBySlug, getBooksBySeries, getBindUpGroupForSeriesSlug } from '@/lib/catalog-service';
-import { SeriesDetail } from '@/components/series/series-detail';
+import { SeriesDetail, SeriesDetailSkeleton } from '@/components/series/series-detail';
 import { ArchiveSeriesDetail } from '@/components/series/archive-series-detail';
 import { getKkiEnrichment, getArchiveSeriesBySlug } from '@/lib/kki-service';
 import type { Metadata } from 'next';
@@ -38,12 +39,14 @@ export default async function SeriesDetailPage({ params }: PageProps) {
     const bindUpGroup = getBindUpGroupForSeriesSlug(series.slug);
     return (
       <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6">
-        <SeriesDetail
-          series={series}
-          books={books}
-          kkiEnrichment={kkiEnrichment}
-          hasBindUp={!!bindUpGroup}
-        />
+        <Suspense fallback={<SeriesDetailSkeleton />}>
+          <SeriesDetail
+            series={series}
+            books={books}
+            kkiEnrichment={kkiEnrichment}
+            hasBindUp={!!bindUpGroup}
+          />
+        </Suspense>
       </div>
     );
   }

@@ -52,8 +52,12 @@ def split_catalog():
         print(f"ERROR: catalog.json not found at {CATALOG_PATH}")
         sys.exit(1)
 
-    with open(CATALOG_PATH, "r", encoding="utf-8") as f:
-        catalog = json.load(f)
+    try:
+        with open(CATALOG_PATH, "r", encoding="utf-8") as f:
+            catalog = json.load(f)
+    except Exception as e:
+        print(f"ERROR: Failed to load catalog JSON at {CATALOG_PATH}: {e}")
+        sys.exit(1)
 
     full_size = os.path.getsize(CATALOG_PATH)
     books = catalog.get("books", [])
@@ -61,15 +65,23 @@ def split_catalog():
     publishers = catalog.get("publishers", [])
 
     listing_books = []
-    for book in books:
-        listing_book = {}
-        for field in LISTING_BOOK_FIELDS:
-            # Keep explicit nulls (e.g. volume: null for one-shots): the
-            # frontend Book type is `number | null`, and dropping the key
-            # surfaces `undefined` instead, breaking that contract.
-            if field in book:
-                listing_book[field] = book[field]
-        listing_books.append(listing_book)
+    for idx, book in enumerate(books):
+        try:
+            if not isinstance(book, dict):
+                print(f"WARNING: Skipping malformed book record at index {idx}: {book}")
+                continue
+            listing_book = {}
+            for field in LISTING_BOOK_FIELDS:
+                # Keep explicit nulls (e.g. volume: null for one-shots): the
+                # frontend Book type is `number | null`, and dropping the key
+                # surfaces `undefined` instead, breaking that contract.
+                if field in book:
+                    listing_book[field] = book[field]
+            listing_books.append(listing_book)
+        except Exception as err:
+            offending_id = book.get("id") if isinstance(book, dict) else f"index_{idx}"
+            print(f"ERROR: Processing failure on book {offending_id}: {err}")
+            sys.exit(1)
 
     book_ids = {b["id"] for b in listing_books if "id" in b}
     clean_snapshots = [
