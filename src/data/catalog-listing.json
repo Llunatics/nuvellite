@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-07T21:41:44.000Z",
+  "lastUpdated": "2026-11-08T04:50:17.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -1943,7 +1943,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/lx6vxlmx52.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 40500,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
@@ -20952,40 +20952,6 @@
       ],
       "classificationStatus": "ACCEPTED",
       "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-105-2"
-    },
-    {
-      "id": "pub_detektif_conan_spesial_49_1",
-      "slug": "detektif-conan-spesial-49-1",
-      "title": "Detektif Conan Spesial 49",
-      "originalTitle": "Detektif Conan Spesial",
-      "isbn13": "9786230071942",
-      "volume": 49,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/zit1itv6kn.png",
-      "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "currentPrice": 45000,
-      "originalPrice": 45000,
-      "releaseDate": "2026-02-19",
-      "isWednesdayRelease": false,
-      "seriesId": "ser_detektif-conan-spesial",
-      "seriesName": "Detektif Conan Spesial",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null,
-      "authors": [
-        "Aoyama Gosho"
-      ],
-      "genres": [
-        "Manga",
-        "Misteri & Detektif"
-      ],
-      "classificationStatus": "ACCEPTED",
-      "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-spesial-49-1"
     },
     {
       "id": "pub_qed_iff_24_1",
@@ -60441,8 +60407,8 @@
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/1/29/p8pfqfmk9g7zsxtnwhgpwq.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 29250,
-      "originalPrice": 45000,
+      "currentPrice": 32180,
+      "originalPrice": 49500,
       "releaseDate": "2023-02-10",
       "isWednesdayRelease": false,
       "seriesId": "ser_the-cold-sato-is-only-sweet-to-me",
@@ -61091,7 +61057,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/1/6/bkgf6hjpxbatpvvwwuttt4.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 22500,
       "originalPrice": 45000,
       "releaseDate": "2023-01-06",
@@ -64154,40 +64120,6 @@
       ],
       "classificationStatus": "ACCEPTED",
       "gramediaUrl": "https://www.gramedia.com/products/youth-x-machinegun-aoharu-x-kikanju-02"
-    },
-    {
-      "id": "pub_black_butler_vol_31",
-      "slug": "black-butler-vol-31",
-      "title": "Black Butler Vol. 31",
-      "originalTitle": "Black Butler",
-      "isbn13": "9786230032264",
-      "volume": 31,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/722010266_caver_Black_Butler_31.jpg",
-      "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "currentPrice": 14000,
-      "originalPrice": 28000,
-      "releaseDate": "2022-04-15",
-      "isWednesdayRelease": false,
-      "seriesId": "ser_black-butler",
-      "seriesName": "Black Butler",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null,
-      "authors": [
-        "Yana Toboso"
-      ],
-      "genres": [
-        "Manga",
-        "Komik"
-      ],
-      "classificationStatus": "ACCEPTED",
-      "gramediaUrl": "https://www.gramedia.com/products/black-butler-vol-31"
     },
     {
       "id": "pub_demon_slayer_kimetsu_no_yaiba_09",
@@ -67650,40 +67582,6 @@
       "gramediaUrl": "https://www.gramedia.com/products/level-comic-kanojo-okarishimasu-03"
     },
     {
-      "id": "pub_black_butler_30",
-      "slug": "black-butler-30",
-      "title": "Black Butler 30",
-      "originalTitle": "Black Butler",
-      "isbn13": "9786230026782",
-      "volume": 30,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/9786230026782_caver_Black_Butler_30.jpg",
-      "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "currentPrice": 14000,
-      "originalPrice": 28000,
-      "releaseDate": "2021-06-23",
-      "isWednesdayRelease": true,
-      "seriesId": "ser_black-butler",
-      "seriesName": "Black Butler",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null,
-      "authors": [
-        "Yana Toboso"
-      ],
-      "genres": [
-        "Manga",
-        "Komik"
-      ],
-      "classificationStatus": "ACCEPTED",
-      "gramediaUrl": "https://www.gramedia.com/products/black-butler-30"
-    },
-    {
       "id": "pub_level_comic_attack_on_titan_30",
       "slug": "level-comic-attack-on-titan-30",
       "title": "Level Comic: Attack on Titan 30",
@@ -68690,7 +68588,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230024504_cover_the_promised_neverland__17.jpg",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "currentPrice": 16000,
       "originalPrice": 32000,
       "releaseDate": "2021-04-07",
@@ -69842,40 +69740,6 @@
       ],
       "classificationStatus": "ACCEPTED",
       "gramediaUrl": "https://www.gramedia.com/products/the-black-detective-01"
-    },
-    {
-      "id": "pub_black_butler_29",
-      "slug": "black-butler-29",
-      "title": "Black Butler Vol.29",
-      "originalTitle": "Black Butler",
-      "isbn13": "9786230020865",
-      "volume": 29,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/9786230020865_caver_Black_Butler_29.jpg",
-      "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "currentPrice": 14000,
-      "originalPrice": 28000,
-      "releaseDate": "2020-11-11",
-      "isWednesdayRelease": true,
-      "seriesId": "ser_black-butler",
-      "seriesName": "Black Butler",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null,
-      "authors": [
-        "Yana Toboso"
-      ],
-      "genres": [
-        "Manga",
-        "Komik"
-      ],
-      "classificationStatus": "ACCEPTED",
-      "gramediaUrl": "https://www.gramedia.com/products/black-butler-29"
     },
     {
       "id": "pub_level_comic_bakemonogatari_04",
@@ -73793,40 +73657,6 @@
       "gramediaUrl": "https://www.gramedia.com/products/moriarty-the-patriot-2"
     },
     {
-      "id": "pub_black_butler_27",
-      "slug": "black-butler-27",
-      "title": "Black Butler 27",
-      "originalTitle": "Black Butler",
-      "isbn13": "9786020486444",
-      "volume": 27,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/9786020486444_caver_Black_Butler_27.jpg",
-      "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "currentPrice": 12500,
-      "originalPrice": 25000,
-      "releaseDate": "2018-11-28",
-      "isWednesdayRelease": true,
-      "seriesId": "ser_black-butler",
-      "seriesName": "Black Butler",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null,
-      "authors": [
-        "Yana Toboso"
-      ],
-      "genres": [
-        "Manga",
-        "Komik"
-      ],
-      "classificationStatus": "ACCEPTED",
-      "gramediaUrl": "https://www.gramedia.com/products/black-butler-27"
-    },
-    {
       "id": "pub_moriarty_the_patriot_1",
       "slug": "moriarty-the-patriot-1",
       "title": "Moriarty the Patriot 1",
@@ -74170,40 +74000,6 @@
       ],
       "classificationStatus": "ACCEPTED",
       "gramediaUrl": "https://www.gramedia.com/products/my-hero-academia-05"
-    },
-    {
-      "id": "pub_black_butler_26",
-      "slug": "black-butler-26",
-      "title": "Black Butler 26",
-      "originalTitle": "Black Butler",
-      "isbn13": "9786020461137",
-      "volume": 26,
-      "category": "Manga",
-      "format": "MANGA",
-      "publisherId": "pub_elex",
-      "publisherName": "Elex Media Komputindo",
-      "publisherShortName": "Elex Media",
-      "coverImage": "https://cdn.gramedia.com/uploads/items/9786020461137-_Black-Butler.jpg",
-      "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "currentPrice": 12500,
-      "originalPrice": 25000,
-      "releaseDate": "2018-05-30",
-      "isWednesdayRelease": true,
-      "seriesId": "ser_black-butler",
-      "seriesName": "Black Butler",
-      "isBindUp": false,
-      "bindUpKind": null,
-      "bindUpLabel": null,
-      "authors": [
-        "Yana Toboso"
-      ],
-      "genres": [
-        "Manga",
-        "Komik"
-      ],
-      "classificationStatus": "ACCEPTED",
-      "gramediaUrl": "https://www.gramedia.com/products/black-butler-26"
     },
     {
       "id": "pub_kungfu_boy_legends_22",
@@ -87011,7 +86807,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/3nataa8gkt.jpg",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 37500,
+      "currentPrice": 50000,
       "originalPrice": 50000,
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
@@ -87440,7 +87236,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/20c6k2aaz1.jfif",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 33750,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-10-28",
       "isWednesdayRelease": true,
@@ -87473,7 +87269,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/r39u7oet9-.jpg",
       "status": "PUBLISHED",
       "availability": "AVAILABLE",
-      "currentPrice": 33750,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-10-20",
       "isWednesdayRelease": false,
@@ -87506,7 +87302,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/aoctaa9rvg.jpg",
       "status": "PUBLISHED",
       "availability": "AVAILABLE",
-      "currentPrice": 33750,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-10-20",
       "isWednesdayRelease": false,
@@ -87539,7 +87335,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ecn6x0oauz.jpg",
       "status": "PUBLISHED",
       "availability": "AVAILABLE",
-      "currentPrice": 48750,
+      "currentPrice": 65000,
       "originalPrice": 65000,
       "releaseDate": "2026-10-20",
       "isWednesdayRelease": false,
@@ -88851,6 +88647,74 @@
       ],
       "classificationStatus": "ACCEPTED",
       "gramediaUrl": "https://www.gramedia.com/products/mob-psycho-100-vol-9"
+    },
+    {
+      "id": "pub_detektif_conan_spesial_46",
+      "slug": "detektif-conan-spesial-46",
+      "title": "Detektif Conan Spesial 46",
+      "originalTitle": "Detektif Conan Spesial",
+      "isbn13": "9786230045783",
+      "volume": 46,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "imprint": null,
+      "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/3/23/horwdb7mqnk29kagj8dmcd.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 20000,
+      "originalPrice": 40000,
+      "releaseDate": "2023-03-23",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_detektif-conan-spesial",
+      "seriesName": "Detektif Conan Spesial",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Aoyama Gosho"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-spesial-46"
+    },
+    {
+      "id": "pub_detektif_conan_spesial_49",
+      "slug": "detektif-conan-spesial-49",
+      "title": "Detektif Conan Spesial 49",
+      "originalTitle": "Detektif Conan Spesial",
+      "isbn13": "9786230071942",
+      "volume": 49,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "imprint": null,
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/9ceanc6i9d.png",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "releaseDate": "2025-08-22",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_detektif-conan-spesial",
+      "seriesName": "Detektif Conan Spesial",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Aoyama Gosho"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-spesial-49"
     },
     {
       "id": "pub_akasha_mountain_ghost_stories",
@@ -92546,7 +92410,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/6nsesuserr.jpg",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 37500,
+      "currentPrice": 50000,
       "originalPrice": 50000,
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
@@ -92612,7 +92476,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/x60e6ohz7i.jpg",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 36000,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
@@ -92645,7 +92509,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/eikvox7-zi.jpg",
       "status": "PUBLISHED",
       "availability": "AVAILABLE",
-      "currentPrice": 33750,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-10-20",
       "isWednesdayRelease": false,
@@ -92860,6 +92724,40 @@
       ],
       "classificationStatus": "ACCEPTED",
       "gramediaUrl": "https://www.gramedia.com/products/novel-tentang-ziarah-yang-terkutuk"
+    },
+    {
+      "id": "pub_light_novel_detektif_conan_shinichi_kudo_and_the_kyoto_shin",
+      "slug": "light-novel-detektif-conan-shinichi-kudo-and-the-kyoto-shin",
+      "title": "Light Novel Detektif Conan: Special Case Shinichi Kudo and the Kyoto Shinsengumi Murder Case",
+      "originalTitle": "Detektif Conan: Special Case Shinichi Kudo and the Kyoto Shinsengumi Murder Case",
+      "isbn13": "9786020496672",
+      "volume": null,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "imprint": null,
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786020496672_Shinichi_Kudo.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 34400,
+      "originalPrice": 68800,
+      "releaseDate": "2019-04-03",
+      "isWednesdayRelease": true,
+      "seriesId": "ser_detektif-conan-special-case-shinichi-kudo-and-the-kyoto-shinsengumi-murder-case",
+      "seriesName": "Detektif Conan: Special Case Shinichi Kudo and the Kyoto Shinsengumi Murder Case",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Aoyama Gosho"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/light-novel-detektif-conan-shinichi-kudo-and-the-kyoto-shin"
     }
   ],
   "series": [
@@ -93763,12 +93661,7 @@
       "totalVolumes": 35,
       "latestVolume": 35,
       "availableVolumes": [
-        26,
-        27,
         28,
-        29,
-        30,
-        31,
         32,
         33,
         34,
@@ -93799,7 +93692,12 @@
         22,
         23,
         24,
-        25
+        25,
+        26,
+        27,
+        29,
+        30,
+        31
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/clbur61l1r.jpg",
       "description": "“Saya akan menemani anda sampai Brighton.” Setelah mengetahui kebenaran tentang keluarga Phantomhive dan Sirkus Bahtera Nuh, Snake kehilangan tujuan hidupnya saat menjalankan misi... Seekor ular kelabu kusam meliuk-liuk di samping anak lelaki yang mimpinya pupus saat mengembara demi mencari sebuah keluarga. Inilah komik butler paling tanpa harapan sedunia, dipersembahkan untuk anda...\n\nSelling Point:\n\nSeri Black Butler yang terkenal dengan tema gothic-nya yang memukau! Komik best seller di Jepang yang telah diproduksi menjadi drama cd, anime, musical, dan video game. Pada tahun 2009 telah terjual lebih dari satu juta kopi di seluruh Jepang.\n\nBlack Butler dibuat oleh Yana Toboso dan diterbitkan tahun 2006 yang kemudian diadaptasi menjadi anime tahun 2008 dengan 24 episode dalam season pertama. Bercerita tentang seorang anak bernama Ciel Phantomhive yang hidup di manor megah bersama kedua orangtuanya. Berlatarkan era Victoria di London, Ciel mendapati manor tempat tinggalnya hangus terbakar bersamaan dengan orang tua serta anjing peliharaan saat ulang tahunnya ke 10. Ia kemudian diculik dan dijual untuk dijadikan persembahan sebagai pelengkap ritual pemanggilan iblis.\n\nSetelah sebulan terperangkap dan menderita, ia membuat perjanjian dengan sang Iblis. Sang Iblis berjanji akan membalas dendam kedua orang tuanya serta menjadi pelayan Ciel dan pelindungnya. Namun sebagai gantinya, Ciel harus bersedia menyerahkan jiwanya. Ciel kembali ke kediamannya dan bertemu Sebastian. Keduanya memulai perjalanannya memecahkan kasus-kasus yang melibatkan dunia bawah tanah untuk menghapus keresahan hati sang Ratu. Selain itu, keduanya juga menunggu pembunuh yang membunuh kedua orang tuanya untuk datang dan dibalaskan dendamnya.\n\n****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
@@ -95422,6 +95320,7 @@
       "totalVolumes": 49,
       "latestVolume": 49,
       "availableVolumes": [
+        46,
         47,
         48,
         49
@@ -95471,11 +95370,10 @@
         42,
         43,
         44,
-        45,
-        46
+        45
       ],
-      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/zit1itv6kn.png",
-      "description": "Seekor kucing liar yang bisa bicara tiba-tiba muncul di Kota Beika!? Kelompok detektif cilik pun langsung menyelidikinya dan yang mereka temukan adalah seekor kucing hitam dengan kalung yang dilengkapi kecerdasan buatan dan bisa bicara! Gara-gara pertemuan dengan kucing misterius itu, Conan dkk terlibat dengan sebuah kasus. Apakah mereka bisa menemukan pelaku sebenarnya dari kasus itu? **** Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang. Komik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca. Manga Detective Conan pertama kali diserialkan dalam edisi kelima Weekly Shōnen Sunday pada tahun 1994, ditulis dan digambar oleh Gosho Aoyama, dan telah muncul di sana sejak itu. Tankoubon pertama juga diterbitkan oleh Shogakukan pada Juni 1994; itu telah mencapai 100 volume yang diterbitkan pada 18 Oktober 2021, dan berlanjut hingga hari ini. Manga ini sangat populer di Jepang; tankoubon telah menerima banyak tempat pertama dalam daftar buku terlaris."
+      "coverImage": "https://cdn.gramedia.com/uploads/products/6anax-ilde.jpg",
+      "description": "”Ichikoro”, streamer bergenre misteri nomor satu di dunia mengirimkan surat tantangan kepada Kid The Phantom Thief. Setelah bertemu dengan Ichikoro, Conan dan kawan-kawan pun kemudian terlibat dengan beberapa kejadian. Ketika akhirnya rentetan kejadian itu terhubung, terkuaklah fakta tentang siapa dalang di balik semua itu.\n\n****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nManga Detective Conan pertama kali diserialkan dalam edisi kelima Weekly Shōnen Sunday pada tahun 1994, ditulis dan digambar oleh Gosho Aoyama, dan telah muncul di sana sejak itu. Tankoubon pertama juga diterbitkan oleh Shogakukan pada Juni 1994; itu telah mencapai 100 volume yang diterbitkan pada 18 Oktober 2021, dan berlanjut hingga hari ini. Manga ini sangat populer di Jepang; tankoubon telah menerima banyak tempat pertama dalam daftar buku terlaris."
     },
     {
       "id": "ser_detektif-conan-tantangan-dari-conan-edisi-kunci-jawaban",
@@ -95544,6 +95442,23 @@
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230026454_LN_Detektif_Conan_The_Private_Eyes_Requiem.jpg",
       "description": "Detektif Conan merupakan sebuah komik seri manga detektif Jepang yang ditulis dan diilustrasikan oleh Aoyama Gosho. Komik ini diserialisasikan dalam majalah manga shōnen Weekly Shōnen Sunday yang diterbitkan oleh Shogakukan sejak Januari 1994, dengan bab-babnya dikumpulkan dalam beberapa volume tankōbon.\n\nSinopsis Buku\n\nDetektif Conan adalah serial anime terkenal karya Aoyama Gosho. Anime yang tayang sejak tahun 90-an ini masih berlangsung hingga sekarang. Sinopsis Detective Conan mengisahkan tentang dunia kejahatan dan seorang detektif muda yang masih duduk di bangku sekolah menengah. Para pecinta kartun era 2000-an tentunya tidak asing dengan detektif misterius asal Jepang, Detektif Conan. Detektif ini merupakan sebuah seri anime kartun Jepang yang bergenre misteri. Meskipun bergenre misteri, namun seri anime ini tidak terlalu berat, sehingga dapat dinikmati oleh anak-anak hingga orang dewasa.\n\n***\n\nConan, dkk. datang ke Miracle Land, tempat yang ditunjuk klien yang meminta mereka melakukan investigasi. Free pass ID berbentuk jam tangan yang diberikan kepada mereka semua di sana ternyata dipasangi bom dan akan meledak jika mereka tidak dapat memecahkan kasus dalam waktu dua belas jam! Conan pun memulai investigasi demi menyelamatkan Ran dan kelompok detektif cilik yang tidak tahu apa-apa. Di tengah penyelidikan, dia bertemu dengan Heiji Hattori dan Saguru Hakuba yang memakai ID yang sama. Bahkan Kaito Kid pun muncul…!!\n\nInformasi Lain:\n\nJudul Buku: Detektif Conan: Private Eyes' Requiem\n\nFormat: Soft Cover\n\nTebal: 168 halaman\n\nTanggal Terbit: 2 Juni 2021\n\nPenerbit: Elex Media Komputindo\n\nBerat: 0.15 kg\n\nLebar: 12 cm\n\nPanjang: 18 cm\n\nISBN: 9786230026454"
+    },
+    {
+      "id": "ser_detektif-conan-special-case-shinichi-kudo-and-the-kyoto-shinsengumi-murder-case",
+      "slug": "detektif-conan-special-case-shinichi-kudo-and-the-kyoto-shinsengumi-murder-case",
+      "name": "Detektif Conan: Special Case Shinichi Kudo and the Kyoto Shinsengumi Murder Case",
+      "originalTitle": "Detektif Conan: Special Case Shinichi Kudo and the Kyoto Shinsengumi Murder Case",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "author": "Aoyama Gosho",
+      "type": "LIGHT_NOVEL",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [],
+      "missingVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/items/9786020496672_Shinichi_Kudo.jpg",
+      "description": "Dalam “Light Novel Detektif Conan: Special Case Shinichi Kudo and the Kyoto Shinsengumi Murder Case” ini menceritakan tentang adanya surat ancaman yang ditujukan kepada para pemain sebuah drama sejarah!! Akhirnya, sebuah kasus pun terjadi di sebuah lokasi yang juga dihadiri oleh Shinichi Kudo, Heiji Hattori, dan juga Kogoro Mouri!!\n\nSiapakah di antara mereka bertiga yang akhirnya berhasil memecahkan trik kejahatan yang kelihatan mustahil tersebut?\n\nDetektif Conan merupakan animasi asal Jepang yang mendunia dengan cerita-cerita misteri yang menegangkan. Komik ini juga memiliki versi novelnya yang sampai saat ini sudah ada belasan judul light novel, dan “Shinichi Kudo and the Kyoto Shinsengumi Murder Case” merupakan volume ke 10.\n\nBeberapa judul light novel lainnya adalah:\n\n1: The Legend of the Buried Treasure of Koshu\n\n2: Murder Symphony\n\n3: A Challenge Letter to Shinichi Kudo: Prologue Until Goodbye\n\n4: Shinichi Kudo Returns: Confrontation with the Black\n\n5: The Witch of Ejinbara\n\n6: A Challenge Letter to Shinichi Kudo: The Mystery of the Legendary Bird\n\n7: A Challenge Letter to Shinichi Kudo: Murder in the Court\n\n8: A Challenge Letter to Shinichi Kudo: Love Formula Murder Cae\n\n9: A Challenge Letter to SHinichi Kudo: Showdown! Shinichi Kudo vs Heiji Hattori\n\nTentang Buku:\n\nJudul: Light Novel Detektif Conan: Special Case Shinichi Kudo and the Kyoto Shinsengumi Murder Case\n\nPenulis: Aoyama Gosho\n\nPenerbit: Elex Media Komputindo\n\nISBN: 9786020496672\n\nJumlah Halaman:  250 halaman\n\nBerat: 0,1 kg\n\nLebar: 18 cm\n\nPanjang: 12 cm"
     },
     {
       "id": "ser_detektif-conan-strategy-above-the-depths",
@@ -112744,6 +112659,17 @@
       "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_spy_x_family_16_1794113417",
+      "bookId": "pub_spy_x_family_16",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
       "source": "gramedia_api"
     },
     {
@@ -152443,25 +152369,6 @@
       "currentPrice": 50000,
       "originalPrice": 50000,
       "previousPrice": 50000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-11-07",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_detektif_conan_spesial_49_1_init",
-      "bookId": "pub_detektif_conan_spesial_49_1",
-      "price": 45000,
-      "availability": "PREORDER",
-      "observedAt": "2026-02-19",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_detektif_conan_spesial_49_1_1794087113",
-      "bookId": "pub_detektif_conan_spesial_49_1",
-      "price": 45000,
-      "currentPrice": 45000,
-      "originalPrice": 45000,
-      "previousPrice": 45000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-07",
       "source": "gramedia_api_refresh"
@@ -254161,6 +254068,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_the_cold_sato_is_only_sweet_to_me_02_1794113209",
+      "bookId": "pub_the_cold_sato_is_only_sweet_to_me_02",
+      "price": 32180,
+      "currentPrice": 32180,
+      "originalPrice": 49500,
+      "previousPrice": 29250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_akasha_chainsaw_man_01_init",
       "bookId": "pub_akasha_chainsaw_man_01",
       "price": 43200,
@@ -255938,6 +255856,17 @@
       "previousPrice": 22500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-07",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_my_hero_academia_23_1794113211",
+      "bookId": "pub_my_hero_academia_23",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 45000,
+      "previousPrice": 22500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
       "source": "gramedia_api_refresh"
     },
     {
@@ -265036,102 +264965,6 @@
       "originalPrice": 45000,
       "previousPrice": 27000,
       "availability": "AVAILABLE",
-      "observedAt": "2026-10-31",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_vol_31_init",
-      "bookId": "pub_black_butler_vol_31",
-      "price": 25200,
-      "availability": "PREORDER",
-      "observedAt": "2022-04-15",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_vol_31_1790885551",
-      "bookId": "pub_black_butler_vol_31",
-      "price": 8400,
-      "currentPrice": 8400,
-      "originalPrice": 28000,
-      "previousPrice": 25200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-01",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_vol_31_1792098508",
-      "bookId": "pub_black_butler_vol_31",
-      "price": 25200,
-      "currentPrice": 25200,
-      "originalPrice": 28000,
-      "previousPrice": 8400,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-15",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_vol_31_1792183347",
-      "bookId": "pub_black_butler_vol_31",
-      "price": 19600,
-      "currentPrice": 19600,
-      "originalPrice": 28000,
-      "previousPrice": 25200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-16",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_vol_31_1792354701",
-      "bookId": "pub_black_butler_vol_31",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 19600,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_vol_31_1792412712",
-      "bookId": "pub_black_butler_vol_31",
-      "price": 25200,
-      "currentPrice": 25200,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-19",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_vol_31_1792789781",
-      "bookId": "pub_black_butler_vol_31",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 25200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-23",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_vol_31_1792873435",
-      "bookId": "pub_black_butler_vol_31",
-      "price": 8400,
-      "currentPrice": 8400,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-24",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_vol_31_1793480951",
-      "bookId": "pub_black_butler_vol_31",
-      "price": 14000,
-      "currentPrice": 14000,
-      "originalPrice": 28000,
-      "previousPrice": 8400,
-      "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-31",
       "source": "gramedia_api_refresh"
     },
@@ -276487,113 +276320,6 @@
       "source": "gramedia_api_refresh"
     },
     {
-      "id": "snap_pub_black_butler_30_init",
-      "bookId": "pub_black_butler_30",
-      "price": 25200,
-      "availability": "PREORDER",
-      "observedAt": "2021-06-23",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_30_1790885551",
-      "bookId": "pub_black_butler_30",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 25200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-01",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_30_1791779913",
-      "bookId": "pub_black_butler_30",
-      "price": 25200,
-      "currentPrice": 25200,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-12",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_30_1792183347",
-      "bookId": "pub_black_butler_30",
-      "price": 19600,
-      "currentPrice": 19600,
-      "originalPrice": 28000,
-      "previousPrice": 25200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-16",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_30_1792354701",
-      "bookId": "pub_black_butler_30",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 19600,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_30_1792412712",
-      "bookId": "pub_black_butler_30",
-      "price": 25200,
-      "currentPrice": 25200,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-19",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_30_1792789809",
-      "bookId": "pub_black_butler_30",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 25200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-23",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_30_1792873451",
-      "bookId": "pub_black_butler_30",
-      "price": 8400,
-      "currentPrice": 8400,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-24",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_30_1793465954",
-      "bookId": "pub_black_butler_30",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 8400,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-31",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_30_1793480970",
-      "bookId": "pub_black_butler_30",
-      "price": 14000,
-      "currentPrice": 14000,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-31",
-      "source": "gramedia_api_refresh"
-    },
-    {
       "id": "snap_pub_level_comic_attack_on_titan_30_init",
       "bookId": "pub_level_comic_attack_on_titan_30",
       "price": 27000,
@@ -279897,6 +279623,17 @@
       "previousPrice": 32000,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-31",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_the_promised_neverland_17_1794113245",
+      "bookId": "pub_the_promised_neverland_17",
+      "price": 16000,
+      "currentPrice": 16000,
+      "originalPrice": 32000,
+      "previousPrice": 16000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-08",
       "source": "gramedia_api_refresh"
     },
     {
@@ -283568,113 +283305,6 @@
       "previousPrice": 14000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-07",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_29_init",
-      "bookId": "pub_black_butler_29",
-      "price": 25200,
-      "availability": "PREORDER",
-      "observedAt": "2020-11-11",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_29_1790885551",
-      "bookId": "pub_black_butler_29",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 25200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-01",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_29_1791779913",
-      "bookId": "pub_black_butler_29",
-      "price": 25200,
-      "currentPrice": 25200,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-12",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_29_1792183347",
-      "bookId": "pub_black_butler_29",
-      "price": 19600,
-      "currentPrice": 19600,
-      "originalPrice": 28000,
-      "previousPrice": 25200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-16",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_29_1792354701",
-      "bookId": "pub_black_butler_29",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 19600,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_29_1792412712",
-      "bookId": "pub_black_butler_29",
-      "price": 25200,
-      "currentPrice": 25200,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-19",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_29_1792789823",
-      "bookId": "pub_black_butler_29",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 25200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-23",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_29_1792873461",
-      "bookId": "pub_black_butler_29",
-      "price": 18200,
-      "currentPrice": 18200,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-24",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_29_1793465965",
-      "bookId": "pub_black_butler_29",
-      "price": 28000,
-      "currentPrice": 28000,
-      "originalPrice": 28000,
-      "previousPrice": 18200,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-31",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_29_1793480983",
-      "bookId": "pub_black_butler_29",
-      "price": 14000,
-      "currentPrice": 14000,
-      "originalPrice": 28000,
-      "previousPrice": 28000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-31",
       "source": "gramedia_api_refresh"
     },
     {
@@ -297011,113 +296641,6 @@
       "source": "gramedia_api_refresh"
     },
     {
-      "id": "snap_pub_black_butler_27_init",
-      "bookId": "pub_black_butler_27",
-      "price": 22500,
-      "availability": "PREORDER",
-      "observedAt": "2018-11-28",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_27_1790885551",
-      "bookId": "pub_black_butler_27",
-      "price": 25000,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
-      "previousPrice": 22500,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-01",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_27_1791779913",
-      "bookId": "pub_black_butler_27",
-      "price": 22500,
-      "currentPrice": 22500,
-      "originalPrice": 25000,
-      "previousPrice": 25000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-12",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_27_1792183347",
-      "bookId": "pub_black_butler_27",
-      "price": 18750,
-      "currentPrice": 18750,
-      "originalPrice": 25000,
-      "previousPrice": 22500,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-16",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_27_1792354701",
-      "bookId": "pub_black_butler_27",
-      "price": 25000,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
-      "previousPrice": 18750,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_27_1792412712",
-      "bookId": "pub_black_butler_27",
-      "price": 22500,
-      "currentPrice": 22500,
-      "originalPrice": 25000,
-      "previousPrice": 25000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-19",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_27_1792789844",
-      "bookId": "pub_black_butler_27",
-      "price": 25000,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
-      "previousPrice": 22500,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-23",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_27_1792873477",
-      "bookId": "pub_black_butler_27",
-      "price": 16250,
-      "currentPrice": 16250,
-      "originalPrice": 25000,
-      "previousPrice": 25000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-24",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_27_1793465985",
-      "bookId": "pub_black_butler_27",
-      "price": 25000,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
-      "previousPrice": 16250,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-31",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_27_1793481005",
-      "bookId": "pub_black_butler_27",
-      "price": 12500,
-      "currentPrice": 12500,
-      "originalPrice": 25000,
-      "previousPrice": 25000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-31",
-      "source": "gramedia_api_refresh"
-    },
-    {
       "id": "snap_pub_moriarty_the_patriot_1_init",
       "bookId": "pub_moriarty_the_patriot_1",
       "price": 28800,
@@ -298371,113 +297894,6 @@
       "originalPrice": 45000,
       "previousPrice": 45000,
       "availability": "AVAILABLE",
-      "observedAt": "2026-10-31",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_26_init",
-      "bookId": "pub_black_butler_26",
-      "price": 22500,
-      "availability": "PREORDER",
-      "observedAt": "2018-05-30",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_26_1790885551",
-      "bookId": "pub_black_butler_26",
-      "price": 25000,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
-      "previousPrice": 22500,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-01",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_26_1791779913",
-      "bookId": "pub_black_butler_26",
-      "price": 22500,
-      "currentPrice": 22500,
-      "originalPrice": 25000,
-      "previousPrice": 25000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-12",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_26_1792183347",
-      "bookId": "pub_black_butler_26",
-      "price": 17500,
-      "currentPrice": 17500,
-      "originalPrice": 25000,
-      "previousPrice": 22500,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-16",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_26_1792354701",
-      "bookId": "pub_black_butler_26",
-      "price": 25000,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
-      "previousPrice": 17500,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-18",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_26_1792412712",
-      "bookId": "pub_black_butler_26",
-      "price": 22500,
-      "currentPrice": 22500,
-      "originalPrice": 25000,
-      "previousPrice": 25000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-19",
-      "source": "gramedia_api"
-    },
-    {
-      "id": "snap_pub_black_butler_26_1792789845",
-      "bookId": "pub_black_butler_26",
-      "price": 25000,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
-      "previousPrice": 22500,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-23",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_26_1792873479",
-      "bookId": "pub_black_butler_26",
-      "price": 16250,
-      "currentPrice": 16250,
-      "originalPrice": 25000,
-      "previousPrice": 25000,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-24",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_26_1793465987",
-      "bookId": "pub_black_butler_26",
-      "price": 25000,
-      "currentPrice": 25000,
-      "originalPrice": 25000,
-      "previousPrice": 16250,
-      "availability": "OUT_OF_STOCK",
-      "observedAt": "2026-10-31",
-      "source": "gramedia_api_refresh"
-    },
-    {
-      "id": "snap_pub_black_butler_26_1793481007",
-      "bookId": "pub_black_butler_26",
-      "price": 12500,
-      "currentPrice": 12500,
-      "originalPrice": 25000,
-      "previousPrice": 25000,
-      "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-31",
       "source": "gramedia_api_refresh"
     },
@@ -317233,6 +316649,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_cerita_spesial_doraemon_edisi_musik_yang_bergema_dungtek_1794113417",
+      "bookId": "pub_cerita_spesial_doraemon_edisi_musik_yang_bergema_dungtek",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "previousPrice": 37500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_blue_box_14_init",
       "bookId": "pub_blue_box_14",
       "price": 45000,
@@ -317347,6 +316774,17 @@
       "previousPrice": 50000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kayachan_nggak_menakutkan_kok_vol_1_1794113417",
+      "bookId": "pub_kayachan_nggak_menakutkan_kok_vol_1",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "previousPrice": 37500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
       "source": "gramedia_api"
     },
     {
@@ -336499,6 +335937,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_chinmi_other_story_chinmi_seiren_1794113417",
+      "bookId": "pub_chinmi_other_story_chinmi_seiren",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 36000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_insect_girl_02_init",
       "bookId": "pub_insect_girl_02",
       "price": 55000,
@@ -336745,6 +336194,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_black_clover_29_1794113417",
+      "bookId": "pub_black_clover_29",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_the_cute_british_girl_next_door_and_her_sister_2_init",
       "bookId": "pub_the_cute_british_girl_next_door_and_her_sister_2",
       "price": 45000,
@@ -336774,6 +336234,17 @@
       "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_cute_british_girl_next_door_and_her_sister_2_1794113417",
+      "bookId": "pub_the_cute_british_girl_next_door_and_her_sister_2",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
       "source": "gramedia_api"
     },
     {
@@ -336831,6 +336302,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_a_terrified_teacher_at_ghoul_school_12_1794113417",
+      "bookId": "pub_a_terrified_teacher_at_ghoul_school_12",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_chinmi_other_story_chinmi_goku_init",
       "bookId": "pub_chinmi_other_story_chinmi_goku",
       "price": 45000,
@@ -336863,6 +336345,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_chinmi_other_story_chinmi_goku_1794113417",
+      "bookId": "pub_chinmi_other_story_chinmi_goku",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_detektif_conan_premium_35_init",
       "bookId": "pub_detektif_conan_premium_35",
       "price": 65000,
@@ -336892,6 +336385,17 @@
       "previousPrice": 65000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-07",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_35_1794113417",
+      "bookId": "pub_detektif_conan_premium_35",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 48750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
       "source": "gramedia_api"
     },
     {
@@ -338357,6 +337861,36 @@
       "originalPrice": 10000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-05-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_spesial_46_init",
+      "bookId": "pub_detektif_conan_spesial_46",
+      "price": 20000,
+      "currentPrice": 20000,
+      "originalPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2023-03-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_spesial_49_init",
+      "bookId": "pub_detektif_conan_spesial_49",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2025-08-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_detektif_conan_shinichi_kudo_and_the_kyoto_shin_init",
+      "bookId": "pub_light_novel_detektif_conan_shinichi_kudo_and_the_kyoto_shin",
+      "price": 34400,
+      "currentPrice": 34400,
+      "originalPrice": 68800,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2019-04-03",
       "source": "gramedia_api"
     }
   ]
