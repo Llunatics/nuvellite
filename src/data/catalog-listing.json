@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-08T04:50:17.000Z",
+  "lastUpdated": "2026-11-08T12:59:23.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -382,7 +382,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ab5axivv30.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "originalPrice": 45000,
       "releaseDate": "2026-09-11",
       "isWednesdayRelease": false,
@@ -553,7 +553,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/9yrg1t4ngi.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 50000,
+      "currentPrice": 40000,
       "originalPrice": 50000,
       "releaseDate": "2026-09-07",
       "isWednesdayRelease": false,
@@ -1806,7 +1806,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/2ec-6--55z.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 45000,
+      "currentPrice": 36000,
       "originalPrice": 45000,
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
@@ -86741,7 +86741,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/p637844o8-.jpg",
       "status": "PUBLISHED",
       "availability": "AVAILABLE",
-      "currentPrice": 45000,
+      "currentPrice": 36000,
       "originalPrice": 45000,
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
@@ -87236,7 +87236,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/20c6k2aaz1.jfif",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 45000,
+      "currentPrice": 33750,
       "originalPrice": 45000,
       "releaseDate": "2026-10-28",
       "isWednesdayRelease": true,
@@ -88428,7 +88428,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/t4a712s1as.jfif",
       "status": "PREORDER",
       "availability": "AVAILABLE",
-      "currentPrice": 45000,
+      "currentPrice": 33750,
       "originalPrice": 45000,
       "releaseDate": "2026-11-04",
       "isWednesdayRelease": true,
@@ -109285,6 +109285,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_kagurabachi_07_1794142763",
+      "bookId": "pub_kagurabachi_07",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_vagabond_bind_up_vol_03_init",
       "bookId": "pub_vagabond_bind_up_vol_03",
       "price": 138000,
@@ -109476,6 +109487,17 @@
       "previousPrice": 40000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-06",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_bungo_stray_dogs_19_1794142763",
+      "bookId": "pub_level_comic_bungo_stray_dogs_19",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
       "source": "gramedia_api"
     },
     {
@@ -112426,6 +112448,17 @@
       "previousPrice": 36000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-06",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_42_2026_1794142763",
+      "bookId": "pub_one_piece_42_2026",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
       "source": "gramedia_api"
     },
     {
@@ -316702,6 +316735,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_one_piece_43_2026_1794142763",
+      "bookId": "pub_one_piece_43_2026",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_regarding_reincarnated_to_slime_21_init",
       "bookId": "pub_regarding_reincarnated_to_slime_21",
       "price": 35000,
@@ -336205,6 +336249,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_black_clover_29_1794142763",
+      "bookId": "pub_black_clover_29",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_the_cute_british_girl_next_door_and_her_sister_2_init",
       "bookId": "pub_the_cute_british_girl_next_door_and_her_sister_2",
       "price": 45000,
@@ -336612,6 +336667,17 @@
       "previousPrice": 33750,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-06",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sakamoto_days_24_1794142763",
+      "bookId": "pub_sakamoto_days_24",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-08",
       "source": "gramedia_api"
     },
     {
