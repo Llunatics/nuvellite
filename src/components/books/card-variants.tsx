@@ -23,7 +23,6 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
       {/* Subtle Ambient Cover Glow */}
       {book.coverImage && (
         <div
-          className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none"
           style={{ backgroundImage: `url(${book.coverImage})` }}
         />
       )}
@@ -230,7 +229,7 @@ export const SeriesProgressionCard = React.memo(function SeriesProgressionCard({
 
       <div className="w-full h-1 rounded-full bg-surface-sunken overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-accent to-emerald-400 transition-all duration-300 rounded-full"
+          className="h-full bg-accent transition-all duration-300 rounded-full"
           style={{ width: `${percent}%` }}
         />
       </div>

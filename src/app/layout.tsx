@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Newsreader, JetBrains_Mono } from 'next/font/google';
+import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/header';
 import { MobileNav } from '@/components/layout/mobile-nav';
@@ -8,13 +8,6 @@ import { Footer } from '@/components/layout/footer';
 const sansFont = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
-  display: 'swap',
-});
-
-const editorialFont = Newsreader({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  variable: '--font-editorial',
   display: 'swap',
 });
 
@@ -56,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${sansFont.variable} ${editorialFont.variable} ${monoFont.variable} dark`}>
+    <html lang="id" className={`${sansFont.variable} ${monoFont.variable} dark`}>
       <body className="min-h-screen bg-background text-editorial-body selection:bg-accent/20 selection:text-accent flex flex-col">
         <Header />
         <main className="flex-1 pb-20 sm:pb-12">{children}</main>

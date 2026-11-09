@@ -447,7 +447,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
                 {ownedCount > 0 && (
                   <div className="w-full h-1 rounded-full bg-surface-sunken overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-accent to-emerald-400 transition-all duration-300 rounded-full"
+                      className="h-full bg-accent transition-all duration-300 rounded-full"
                       style={{ width: `${percent}%` }}
                     />
                   </div>

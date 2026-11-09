@@ -5,14 +5,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BookOpen, Calendar, Layers, BookMarked } from 'lucide-react';
 import { useCollection } from '@/hooks/use-collection';
-import { useTheme, ACCENT_THEMES } from '@/hooks/use-theme';
 
 export function MobileNav() {
   const pathname = usePathname();
   const { ownedItems, isLoaded } = useCollection();
-  const { accent } = useTheme();
-
-  const currentThemeColor = ACCENT_THEMES.find((t) => t.id === accent)?.color || '#E11D48';
 
   const tabs = [
     { href: '/', label: 'Katalog', icon: BookOpen, active: pathname === '/' },
@@ -44,10 +40,7 @@ export function MobileNav() {
             <div className="relative">
               <Icon className="w-4 h-4 transition-transform" />
               {tab.badge !== undefined && (
-                <span
-                  className="absolute -top-1 -right-2 min-w-3.5 h-3.5 px-0.5 rounded-full text-white text-[8px] font-mono font-bold flex items-center justify-center shadow-xs"
-                  style={{ backgroundColor: currentThemeColor }}
-                >
+                <span className="absolute -top-1 -right-2 min-w-3.5 h-3.5 px-0.5 rounded-full bg-accent text-zinc-950 text-[8px] font-mono font-bold flex items-center justify-center shadow-xs">
                   {tab.badge}
                 </span>
               )}

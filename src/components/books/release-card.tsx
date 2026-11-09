@@ -111,7 +111,7 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
           />
 
           {/* Subtle Ambient Vignette on Cover for Depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10 pointer-events-none" />
+          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
         </Link>
 
         {/* Floating Top Left: Format Capsule Badge */}
