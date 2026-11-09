@@ -28,7 +28,16 @@ export default async function BookDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const seriesSiblings = book.seriesId ? getBooksBySeries(book.seriesId) : [];
+  // Full volume list (sorted by volume ascending) drives the prev/next
+  // stepper; siblings exclude the current book itself (Round 2, Block 4).
+  const allSeriesBooks = book.seriesId ? getBooksBySeries(book.seriesId) : [];
+  const currentIndex = allSeriesBooks.findIndex((b) => b.id === book.id);
+  const prevBook = currentIndex > 0 ? allSeriesBooks[currentIndex - 1] : null;
+  const nextBook =
+    currentIndex >= 0 && currentIndex < allSeriesBooks.length - 1
+      ? allSeriesBooks[currentIndex + 1]
+      : null;
+  const seriesSiblings = allSeriesBooks.filter((b) => b.id !== book.id);
   const recommendations = getYouMayAlsoLike(book, 6);
   const priceSummary = getPriceSummary(book);
 
@@ -37,6 +46,8 @@ export default async function BookDetailPage({ params }: PageProps) {
       <BookDetail
         book={book}
         seriesSiblings={seriesSiblings}
+        prevBook={prevBook}
+        nextBook={nextBook}
         recommendations={recommendations}
         priceSummary={priceSummary}
       />
