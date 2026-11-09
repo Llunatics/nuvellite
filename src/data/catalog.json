@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-08T21:52:27.000Z",
+  "lastUpdated": "2026-11-09T05:01:58.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -495,7 +495,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-11",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 45000,
       "authors": [
         "Takeru Hokazono"
       ],
@@ -691,7 +691,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-07",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 50000,
       "authors": [
         "Kafka Asagiri"
       ],
@@ -2097,7 +2097,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
-      "currentPrice": 36000,
+      "currentPrice": 45000,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -100869,7 +100869,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
-      "currentPrice": 36000,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
@@ -101424,7 +101424,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-28",
       "isWednesdayRelease": true,
-      "currentPrice": 33750,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "authors": [
         "Yuki TABATA"
@@ -102790,7 +102790,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-11-04",
       "isWednesdayRelease": true,
-      "currentPrice": 33750,
+      "currentPrice": 45000,
       "originalPrice": 45000,
       "authors": [
         "Yuto Suzuki"
@@ -124519,6 +124519,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_kagurabachi_07_1794200518",
+      "bookId": "pub_kagurabachi_07",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_vagabond_bind_up_vol_03_init",
       "bookId": "pub_vagabond_bind_up_vol_03",
       "price": 138000,
@@ -124721,6 +124732,17 @@
       "previousPrice": 50000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_bungo_stray_dogs_19_1794200518",
+      "bookId": "pub_level_comic_bungo_stray_dogs_19",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
       "source": "gramedia_api"
     },
     {
@@ -127682,6 +127704,17 @@
       "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_42_2026_1794200518",
+      "bookId": "pub_one_piece_42_2026",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 36000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
       "source": "gramedia_api"
     },
     {
@@ -331969,6 +332002,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_one_piece_43_2026_1794200518",
+      "bookId": "pub_one_piece_43_2026",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 36000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_regarding_reincarnated_to_slime_21_init",
       "bookId": "pub_regarding_reincarnated_to_slime_21",
       "price": 35000,
@@ -351483,6 +351527,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_black_clover_29_1794200518",
+      "bookId": "pub_black_clover_29",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_the_cute_british_girl_next_door_and_her_sister_2_init",
       "bookId": "pub_the_cute_british_girl_next_door_and_her_sister_2",
       "price": 45000,
@@ -351901,6 +351956,17 @@
       "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sakamoto_days_24_1794200518",
+      "bookId": "pub_sakamoto_days_24",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
       "source": "gramedia_api"
     },
     {
@@ -353185,6 +353251,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1794200518",
+      "startedAt": "2026-11-09T04:52:19.000Z",
+      "finishedAt": "2026-11-09T05:01:58.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1516,
+      "productsAccepted": 1316,
+      "productsRejected": 618,
+      "productsUpdated": 849,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 579316,
+      "success": true
+    },
+    {
       "id": "sync_1794174747",
       "startedAt": "2026-11-08T21:44:05.000Z",
       "finishedAt": "2026-11-08T21:52:27.000Z",
@@ -353562,26 +353648,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 531717,
-      "success": true
-    },
-    {
-      "id": "sync_1793631671",
-      "startedAt": "2026-11-02T14:52:59.000Z",
-      "finishedAt": "2026-11-02T15:01:11.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1548,
-      "productsAccepted": 1288,
-      "productsRejected": 449,
-      "productsUpdated": 1046,
-      "productsInserted": 57,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 492017,
       "success": true
     }
   ]
