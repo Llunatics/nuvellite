@@ -34,28 +34,24 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
           className="relative aspect-[3/4.2] w-44 sm:w-56 lg:w-64 xl:w-72 shrink-0 book-cover-elevated overflow-hidden group block"
           tabIndex={-1}
         >
-          {book.coverImage ? (
-            <CoverImage
-              src={book.coverImage}
-              alt={book.title}
-              width={224}
-              height={313}
-              sizes="(max-width: 640px) 176px, 224px"
-              priority
-              imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
-              fallbackIconClassName="w-12 h-12 text-editorial-faint"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center bg-surface-sunken">
-              <BookOpen className="w-12 h-12 text-editorial-faint" />
-            </div>
-          )}
+          <CoverImage
+            src={book.coverImage}
+            alt={book.title}
+            width={224}
+            height={313}
+            sizes="(max-width: 640px) 176px, 224px"
+            priority
+            imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
+            fallbackIconClassName="w-12 h-12 text-editorial-faint"
+          />
 
           {/* Floating Cover Badges */}
           <div className="absolute top-2.5 left-2.5">
             <span
-              className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase bg-black/60 backdrop-blur-md border border-white/10 ${
-                book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
+              className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase ${
+                book.category === 'Light Novel'
+                  ? 'border border-white/20 bg-zinc-900 text-zinc-100'
+                  : 'border border-white/10 bg-zinc-950/90 text-zinc-200'
               }`}
             >
               {book.category}
@@ -194,20 +190,14 @@ export const SeriesProgressionCard = React.memo(function SeriesProgressionCard({
     >
       <div className="flex items-center gap-3">
         <div className="relative aspect-[3/4] w-12 rounded-xl overflow-hidden bg-surface-sunken shrink-0 cover-depth">
-          {series.coverImage ? (
-            <CoverImage
-              src={series.coverImage}
-              alt={series.name}
-              width={48}
-              height={64}
-              imgClassName="w-full h-full object-cover"
-              fallbackIconClassName="w-5 h-5 text-editorial-faint"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <Layers className="w-5 h-5 text-editorial-faint" />
-            </div>
-          )}
+          <CoverImage
+            src={series.coverImage}
+            alt={series.name}
+            width={48}
+            height={64}
+            imgClassName="w-full h-full object-cover"
+            fallbackIconClassName="w-5 h-5 text-editorial-faint"
+          />
         </div>
 
         <div className="flex-1 min-w-0">

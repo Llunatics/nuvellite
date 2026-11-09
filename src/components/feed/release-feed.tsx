@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useCallback, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useCallback, useEffect, useDeferredValue } from 'react';
 import Link from 'next/link';
 import {
   BookOpen,
@@ -36,9 +36,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     return [...initialBooks]
       .filter((b) => b.coverImage && b.currentPrice > 0 && !b.isSetVariant)
       .sort((a, b) => {
-        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-        if (dateB !== dateA) return dateB - dateA;
+        const byDate = (b.releaseDate || '').localeCompare(a.releaseDate || '');
+        if (byDate !== 0) return byDate;
         return (b.volume ?? 0) - (a.volume ?? 0);
       })
       .slice(0, 5);
@@ -65,9 +64,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     return [...initialBooks]
       .filter((b) => b.category === 'Manga' && b.coverImage && !b.isSetVariant)
       .sort((a, b) => {
-        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-        if (dateB !== dateA) return dateB - dateA;
+        const byDate = (b.releaseDate || '').localeCompare(a.releaseDate || '');
+        if (byDate !== 0) return byDate;
         return (b.volume ?? 0) - (a.volume ?? 0);
       })
       .slice(0, 18);
@@ -77,9 +75,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     return [...initialBooks]
       .filter((b) => b.category === 'Light Novel' && b.coverImage && !b.isSetVariant)
       .sort((a, b) => {
-        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-        if (dateB !== dateA) return dateB - dateA;
+        const byDate = (b.releaseDate || '').localeCompare(a.releaseDate || '');
+        if (byDate !== 0) return byDate;
         return (b.volume ?? 0) - (a.volume ?? 0);
       })
       .slice(0, 18);
@@ -101,9 +98,11 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'RELEASED' | 'PREORDER'>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearchQuery = useDeferredValue(searchQuery);
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [spotlightPaused, setSpotlightPaused] = useState(false);
+  const spotlightResumeRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -150,8 +149,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
         if (pubFilter !== 'ALL' && book.publisherId !== pubFilter) return false;
         if (statusFilter === 'RELEASED' && !(book.status === 'RELEASED' || book.status === 'PUBLISHED')) return false;
         if (statusFilter === 'PREORDER' && !(book.status === 'PREORDER' || book.status === 'ANNOUNCED')) return false;
-        if (searchQuery.trim()) {
-          const q = searchQuery.toLowerCase().trim();
+        if (deferredSearchQuery.trim()) {
+          const q = deferredSearchQuery.toLowerCase().trim();
           const matchTitle = book.title.toLowerCase().includes(q);
           const matchSeries = book.seriesName?.toLowerCase().includes(q);
           const matchAuthor = Array.isArray(book.authors) && book.authors.some((a) => {
@@ -174,21 +173,19 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           return b.currentPrice - a.currentPrice;
         }
         // latest
-        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-        return dateB - dateA;
+        return (b.releaseDate || '').localeCompare(a.releaseDate || '');
       });
-  }, [initialBooks, formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
+  }, [initialBooks, formatFilter, pubFilter, statusFilter, deferredSearchQuery, sortBy]);
 
-  // Reset visible count when filters change
+  // Reset visible count when filters change (in an effect, not during render)
   const prevFilterKey = useRef('');
-  const filterKey = `${formatFilter}-${pubFilter}-${statusFilter}-${searchQuery}-${sortBy}`;
-  if (filterKey !== prevFilterKey.current) {
-    prevFilterKey.current = filterKey;
-    if (visibleCount !== PAGE_SIZE) {
+  const filterKey = `${formatFilter}-${pubFilter}-${statusFilter}-${deferredSearchQuery}-${sortBy}`;
+  useEffect(() => {
+    if (filterKey !== prevFilterKey.current) {
+      prevFilterKey.current = filterKey;
       setVisibleCount(PAGE_SIZE);
     }
-  }
+  }, [filterKey]);
 
   const visibleBooks = useMemo(() => filteredBooks.slice(0, visibleCount), [filteredBooks, visibleCount]);
   const hasMore = visibleCount < filteredBooks.length;
@@ -252,7 +249,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >
-          <FeaturedReleaseCard book={activeSpotlight} />
+          <FeaturedReleaseCard key={activeSpotlight.id} book={activeSpotlight} />
 
           {/* Minimal Spotlight Pagination */}
           {spotlightBooks.length > 1 && (
@@ -265,7 +262,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
                     setActiveSpotlightIdx(idx);
                     // Let the user linger on their pick before auto-advance resumes.
                     setSpotlightPaused(true);
-                    setTimeout(() => setSpotlightPaused(false), 12000);
+                    if (spotlightResumeRef.current) clearTimeout(spotlightResumeRef.current);
+                    spotlightResumeRef.current = setTimeout(() => setSpotlightPaused(false), 12000);
                   }}
                   className={`h-1 rounded-full transition-all duration-300 ${
                     activeSpotlightIdx === idx ? 'w-6 bg-white' : 'w-2 bg-white/20 hover:bg-white/40'

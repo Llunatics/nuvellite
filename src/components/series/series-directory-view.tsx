@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useDeferredValue } from 'react';
 import Link from 'next/link';
 import { CoverImage } from '../books/cover-image';
 import { Series } from '@/lib/types';
@@ -39,6 +39,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
   const { ownedItems, isLoaded } = useCollection();
 
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearchQuery = useDeferredValue(searchQuery);
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'MANGA' | 'LIGHT_NOVEL'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'COMPLETED' | 'ONGOING'>('ALL');
@@ -132,7 +133,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
 
   // Filtered & Sorted Series
   const filteredSeries = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim();
+    const q = deferredSearchQuery.toLowerCase().trim();
     const pubIds = resolvePubFilter(pubFilter);
 
     return allSeries
@@ -165,7 +166,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
         }
         return a.name.localeCompare(b.name);
       });
-  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy, editionFilter, bindUpSeriesIdSet]);
+  }, [allSeries, formatFilter, pubFilter, statusFilter, deferredSearchQuery, sortBy, editionFilter, bindUpSeriesIdSet]);
 
   // Reset pagination when filters change
   useEffect(() => {

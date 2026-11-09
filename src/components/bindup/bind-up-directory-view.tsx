@@ -33,21 +33,14 @@ function CoverThumb({
 }) {
   return (
     <div className={`relative shrink-0 aspect-[3/4.2] rounded-xl overflow-hidden bg-surface-sunken cover-depth ${className}`}>
-      {group.coverImage ? (
-        <CoverImage
-          src={group.coverImage}
-          alt={group.displayName}
-          width={176}
-          height={234}
-          imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
-          fallbackIconClassName={iconClassName}
-        />
-      ) : (
-        <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-surface-elevated/40">
-          <BookCopy className={`${iconClassName} text-editorial-faint mb-1`} />
-          <span className="text-[9px] text-editorial-muted line-clamp-2">{group.displayName}</span>
-        </div>
-      )}
+      <CoverImage
+        src={group.coverImage}
+        alt={group.displayName}
+        width={176}
+        height={234}
+        imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
+        fallbackIconClassName={iconClassName}
+      />
     </div>
   );
 }

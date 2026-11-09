@@ -113,9 +113,7 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
         if (sortBy === 'price_high') {
           return b.currentPrice - a.currentPrice;
         }
-        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-        return dateB - dateA;
+        return (b.releaseDate || '').localeCompare(a.releaseDate || '');
       });
   }, [rawResults, formatFilter, pubFilter, sortBy]);
 

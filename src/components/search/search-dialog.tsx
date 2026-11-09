@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Search, X, BookOpen, ArrowRight, Layers, Building2, Sparkles, Hash } from 'lucide-react';
 import { searchCatalog, getAllSeries, getPublishers } from '@/lib/catalog-service';
 import { getUnifiedSeries } from '@/lib/kki-service';
+import { CoverImage } from '@/components/books/cover-image';
 import { formatRupiah } from '@/lib/formatters';
 
 interface SearchDialogProps {
@@ -173,13 +174,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                       >
                         <div className="flex items-center gap-3 min-w-0 flex-1">
                           <div className="relative aspect-[3/4] w-9 rounded-lg overflow-hidden bg-surface-sunken shrink-0 cover-depth">
-                            {s.coverImage ? (
-                              <img src={s.coverImage} alt={s.name} className="w-full h-full object-cover" />
-                            ) : (
-                              <div className="w-full h-full flex items-center justify-center">
-                                <Layers className="w-4 h-4 text-editorial-faint" />
-                              </div>
-                            )}
+                            <CoverImage src={s.coverImage} alt={s.name} width={36} height={48} />
                           </div>
                           <div className="min-w-0 flex-1">
                             <span className="text-xs font-medium text-editorial-title group-hover:text-accent transition-colors truncate block">
@@ -219,13 +214,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                       >
                         <div className="flex items-center gap-3 min-w-0 flex-1">
                           <div className="relative aspect-[3/4] w-9 rounded-lg overflow-hidden bg-surface-sunken shrink-0 cover-depth">
-                            {book.coverImage ? (
-                              <img src={book.coverImage} alt={book.title} className="w-full h-full object-cover" />
-                            ) : (
-                              <div className="w-full h-full flex items-center justify-center">
-                                <BookOpen className="w-4 h-4 text-editorial-faint" />
-                              </div>
-                            )}
+                            <CoverImage src={book.coverImage} alt={book.title} width={36} height={48} />
                           </div>
 
                           <div className="min-w-0 flex-1">
