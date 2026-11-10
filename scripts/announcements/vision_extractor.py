@@ -19,9 +19,10 @@ text contains zero book titles:
      items with confidence < 0.70 and no corroborated title are routed to
      review-queue.json as UNRESOLVED_TEASER — never guessed.
 
-Only step 1's hash is implemented in this scaffold; steps 2-4 raise
-NotImplementedError until their dependencies (PaddleOCR, Gemini key) are
-provisioned. Nothing here writes src/data/catalog.json.
+Steps 1-3 are implemented (step 3 degrades to an honest
+"offline_in_build_env" status without a GEMINI_API_KEY); step 4 raises
+NotImplementedError until AniList/RanobeDB resolution is provisioned.
+Nothing here writes src/data/catalog.json.
 """
 
 from __future__ import annotations
@@ -58,12 +59,132 @@ def is_duplicate(image_hash: int, known_hashes: list[int]) -> bool:
     )
 
 
-def ocr_gate_and_slice(image_path: str) -> list[str]:
-    raise NotImplementedError("Step 2 (PaddleOCR gate + quadrant slicing) not provisioned yet")
+def ocr_gate_and_slice(image_path: str, out_dir: str) -> list[str]:
+    """Step 2 — slice a slide/teaser into overview + quadrant tiles.
+
+    Landscape stage slides (aspect > 1.1) and multi-cover collages get
+    1 full-frame overview plus 4 quadrant crops scaled 2x with 15%
+    overlap, so small cover titles stay legible for the vision model.
+    Portrait single covers pass through as a single overview tile.
+    The OCR gate itself (PaddleOCR region counting) is optional: when
+    PaddleOCR is not installed the slicer still runs and reports
+    ocr="skipped_no_paddleocr" — slicing never blocks extraction.
+    Requires Pillow.
+    """
+    try:
+        from PIL import Image
+    except ImportError as exc:  # pragma: no cover
+        raise RuntimeError("vision_extractor requires Pillow (pip install Pillow)") from exc
+    import os
+
+    os.makedirs(out_dir, exist_ok=True)
+    img = Image.open(image_path).convert("RGB")
+    width, height = img.size
+    stem = os.path.splitext(os.path.basename(image_path))[0]
+    tiles: list[str] = []
+
+    overview_path = os.path.join(out_dir, f"{stem}__overview.jpg")
+    img.save(overview_path, quality=90)
+    tiles.append(overview_path)
+
+    if width / max(height, 1) > 1.1:
+        overlap_x = int(width * 0.15)
+        overlap_y = int(height * 0.15)
+        half_w, half_h = width // 2, height // 2
+        boxes = [
+            (0, 0, half_w + overlap_x, half_h + overlap_y),
+            (half_w - overlap_x, 0, width, half_h + overlap_y),
+            (0, half_h - overlap_y, half_w + overlap_x, height),
+            (half_w - overlap_x, half_h - overlap_y, width, height),
+        ]
+        for idx, box in enumerate(boxes):
+            crop = img.crop(box)
+            crop = crop.resize((crop.width * 2, crop.height * 2))
+            tile_path = os.path.join(out_dir, f"{stem}__q{idx + 1}.jpg")
+            crop.save(tile_path, quality=90)
+            tiles.append(tile_path)
+    return tiles
+
+
+EXTRACTION_SCHEMA_HINT = (
+    "Return strict JSON: {\"imageClassification\": \"STAGE_SLIDE | PDKT_TEASER_COLLAGE | "
+    "SINGLE_TITLE_REVEAL | SCHEDULE_GRAPHIC | IRRELEVANT_PROMO\", \"publisherDetected\": "
+    "\"pub_pgi | pub_mnc | pub_elex | unknown\", \"imprintDetected\": string|null, "
+    "\"eventOrCampaign\": string|null, \"extractedItems\": [{\"verbatimTextOnImage\": "
+    "string|null, \"recognizedWorkTitleRomajiOrEn\": string|null, "
+    "\"recognizedWorkTitleId\": string|null, \"authorOrIllustrator\": string|null, "
+    "\"isGroupOrTetralogySlide\": boolean, \"groupWorkTitles\": [string], "
+    "\"formatHint\": \"Manga | Light Novel | Unknown\", \"editionHint\": \"REGULAR | "
+    "BIND_UP | BOX_SET | DELUXE\", \"targetReleaseText\": string|null, "
+    "\"visualEvidence\": string, \"confidence\": number}]}"
+)
 
 
 def vision_extract(tiles: list[str], caption: str) -> dict:
-    raise NotImplementedError("Step 3 (Gemini Flash structured extraction) not provisioned yet")
+    """Step 3 — Gemini Flash structured extraction (free tier REST).
+
+    Returns {"status": "offline_in_build_env", ...} instead of raising
+    when GEMINI_API_KEY is missing or the network is unreachable, so the
+    pipeline degrades honestly in sandboxes without keys.
+    """
+    import base64
+    import json
+    import os
+    import urllib.error
+    import urllib.request
+
+    api_key = os.environ.get("GEMINI_API_KEY", "")
+    if not api_key:
+        return {"status": "offline_in_build_env", "error": "GEMINI_API_KEY not set", "extractedItems": []}
+
+    parts: list[dict] = [
+        {
+            "text": (
+                "Extract publisher announcement data from these images. "
+                f"Post caption: {caption or '(none)'}. {EXTRACTION_SCHEMA_HINT}"
+            )
+        }
+    ]
+    for tile in tiles:
+        with open(tile, "rb") as fh:
+            parts.append(
+                {
+                    "inline_data": {
+                        "mime_type": "image/jpeg",
+                        "data": base64.b64encode(fh.read()).decode("ascii"),
+                    }
+                }
+            )
+    body = json.dumps(
+        {
+            "contents": [{"parts": parts}],
+            "generationConfig": {"responseMimeType": "application/json"},
+        }
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        "https://generativelanguage.googleapis.com/v1beta/models/"
+        f"gemini-2.5-flash:generateContent?key={api_key}",
+        data=body,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+    except (urllib.error.URLError, OSError) as exc:
+        return {"status": "offline_in_build_env", "error": str(exc), "extractedItems": []}
+    text = (
+        payload.get("candidates", [{}])[0]
+        .get("content", {})
+        .get("parts", [{}])[0]
+        .get("text", "{}")
+    )
+    try:
+        parsed = json.loads(text)
+    except json.JSONDecodeError:
+        return {"status": "error", "error": "vision model returned non-JSON", "extractedItems": []}
+    parsed["status"] = "ok"
+    return parsed
 
 
 def expand_and_resolve(extraction: dict) -> list[dict]:

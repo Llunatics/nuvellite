@@ -15,10 +15,10 @@ Deterministic parts implemented here:
   * health ledger writes to src/data/announcements-health.json with adapter
     failure isolation.
 
-The network adapters (Perpusnas ISBN, publisher WP REST / catalogs,
-instaloader/RSS bridges, KAORI RSS, Wikipedia diff) and the vision pipeline
-(vision_extractor.py) plug in where marked TODO. This script NEVER writes
-src/data/catalog.json and never invokes repair-catalog.py.
+The polling adapters live in wikipedia_adapter.py, kaori_adapter.py and
+perpusnas_adapter.py; the vision pipeline in vision_extractor.py. This
+script NEVER writes src/data/catalog.json and never invokes
+repair-catalog.py.
 """
 
 import argparse
@@ -129,17 +129,45 @@ def merge_candidate(candidate: dict) -> str:
 def run_poll() -> int:
     """Scheduled polling entry point (GitHub Actions, S5.6).
 
-    Adapter implementations are TODO; the ledger honestly records the
-    scaffold status per adapter instead of pretending a sync happened.
+    Runs the implemented Tier 1A/2 adapters with failure isolation: each
+    adapter reports its own status ("ok" / "offline_in_build_env" /
+    "error") into the health ledger, and one dead source never blocks the
+    others. Sightings are printed for the Actions log; turning sightings
+    into announcement records goes through merge_candidate (dedupe +
+    human-confirm queue) once an adapter's extraction is verified.
     """
+    sys.path.insert(0, str(HERE))
+    import kaori_adapter
+    import perpusnas_adapter
+    import wikipedia_adapter
+
+    runners = {
+        "tier1a_perpusnas_isbn": perpusnas_adapter.run,
+        "tier2_kaori_rss": kaori_adapter.run,
+        "tier2_wikipedia_id_diff": wikipedia_adapter.run,
+    }
     health = load_json(HEALTH_PATH, {"adapters": []})
     now = datetime.now(timezone.utc).isoformat()
-    for adapter in health.get("adapters", []):
-        adapter["lastRunAt"] = now
-        adapter["lastStatus"] = "scaffold_not_implemented"
+    by_id = {a.get("id"): a for a in health.get("adapters", [])}
+    for adapter_id, runner in runners.items():
+        try:
+            outcome = runner()
+            status = outcome.get("status", "error")
+            sightings = outcome.get("sightings", [])
+        except Exception as exc:  # failure isolation, belt and braces
+            status, sightings = "error", []
+            outcome = {"error": str(exc)}
+        entry = by_id.setdefault(adapter_id, {"id": adapter_id, "consecutiveFailures": 0})
+        entry["lastRunAt"] = now
+        entry["lastStatus"] = status
+        entry["lastSightings"] = len(sightings)
+        entry["consecutiveFailures"] = (
+            0 if status == "ok" else int(entry.get("consecutiveFailures", 0)) + 1
+        )
+        print(f"poll {adapter_id}: {status} ({len(sightings)} sightings)")
+    health["adapters"] = list(by_id.values())
     health["lastRunAt"] = now
     save_json(HEALTH_PATH, health)
-    print("poll: adapters are scaffolded but not implemented yet; health ledger updated")
     return 0
 
 
@@ -154,9 +182,11 @@ def main() -> int:
         return run_poll()
     if not args.url and not args.image:
         parser.error("provide --url, --image, or --poll")
-    # TODO(S5.2/S5.3): fetch the post, run vision_extractor on the image,
-    # build a candidate record, then merge_candidate(candidate).
-    print("drop ingestion scaffold: fetch + vision extraction not implemented yet")
+    # The building blocks exist (adapters + vision_extractor + the
+    # merge_candidate dedupe/queue logic above); assembling the one-off
+    # drop path (fetch post -> vision_extract -> candidate -> merge) is
+    # the remaining wiring step.
+    print("drop ingestion: building blocks ready; drop assembly not wired yet")
     print(f"  url={args.url!r} image={args.image!r}")
     return 0
 
