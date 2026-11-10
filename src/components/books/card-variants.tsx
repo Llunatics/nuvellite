@@ -19,13 +19,7 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
   const wishlisted = isLoaded && isWishlisted(book.id);
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl">
-      {/* Subtle Ambient Cover Glow */}
-      {book.coverImage && (
-        <div
-          style={{ backgroundImage: `url(${book.coverImage})` }}
-        />
-      )}
+    <div className="relative overflow-hidden rounded-xl border border-white/[0.08] bg-surface p-6 sm:p-8">
 
       <div className="relative z-10 flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
         {/* Large Visual Anchor Book Cover */}
@@ -45,34 +39,6 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
             fallbackIconClassName="w-12 h-12 text-editorial-faint"
           />
 
-          {/* Floating Cover Badges */}
-          <div className="absolute top-2.5 left-2.5">
-            <span
-              className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase ${
-                book.category === 'Light Novel'
-                  ? 'border border-white/20 bg-zinc-900 text-zinc-100'
-                  : 'border border-white/10 bg-zinc-950/90 text-zinc-200'
-              }`}
-            >
-              {book.category}
-            </span>
-          </div>
-
-          {book.volume !== null && book.volume !== undefined && (
-            <div className="absolute top-2.5 right-2.5">
-              <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/60 backdrop-blur-md border border-white/10 text-white/90">
-                Vol. {book.volume}
-              </span>
-            </div>
-          )}
-
-          {book.status === 'PREORDER' && (
-            <div className="absolute bottom-2.5 left-2.5">
-              <span className="px-2.5 py-0.5 rounded-full text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white shadow-md">
-                PRE-ORDER
-              </span>
-            </div>
-          )}
         </Link>
 
         {/* Editorial Content */}

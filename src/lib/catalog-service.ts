@@ -1,25 +1,11 @@
 import domainRules from '@/data/domain-rules.json';
 import listingData from '@/data/catalog-listing.json';
 import { Book, Series, Publisher, CatalogData } from './types';
-import { getPriceSummary as getPriceSummaryInternal, initializePriceSnapshots } from './data/price-service';
 import { getRelatedReleases as getRelatedReleasesInternal, getYouMayAlsoLike as getYouMayAlsoLikeInternal } from './data/recommendation-service';
 import { groupBindUpBooks, BindUpSeriesGroup, normalizeBindUpSeriesName } from './data/bind-up';
 
 // Listing data (lightweight, no synopsis/heavy fields) — used for grids, cards, search
 const listing = listingData as unknown as CatalogData;
-
-// Lazy singleton: seed the price snapshot registry from listing data once,
-// before any getPriceSummary() call. Without this the registry stays empty
-// and every book reports "Stabil (0%)" with fabricated data.
-let priceSnapshotsInitialized = false;
-function ensurePriceSnapshotsInitialized(): void {
-  if (priceSnapshotsInitialized) return;
-  priceSnapshotsInitialized = true;
-  const snapshots = (listing as CatalogData).priceSnapshots || [];
-  if (snapshots.length > 0) {
-    initializePriceSnapshots(snapshots);
-  }
-}
 
 // Verified non-manga/non-LN fragments (mirrors KNOWN_NON_MANGA_SERIES in
 // scripts/auto-sync-catalog.py and src/lib/data/classifier.ts). Last line
@@ -242,11 +228,6 @@ export function searchCatalog(query: string, limit?: number): Book[] {
   });
 
   return limit && limit > 0 ? results.slice(0, limit) : results;
-}
-
-export function getPriceSummary(book: Book) {
-  ensurePriceSnapshotsInitialized();
-  return getPriceSummaryInternal(book.id, book.currentPrice, book.releaseDate, book.originalPrice);
 }
 
 export function getRelatedReleases(book: Book, limit = 6) {

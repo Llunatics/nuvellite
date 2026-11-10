@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
-import { getBookBySlug, getBooksBySeries, getPriceSummary, getYouMayAlsoLike } from '@/lib/catalog-service';
+import { getBookBySlug, getBooksBySeries, getYouMayAlsoLike } from '@/lib/catalog-service';
+import { getPriceSummary } from '@/lib/catalog-detail-service';
 import { getBookDetailBySlug } from '@/lib/catalog-detail-service';
 import { BookDetail } from '@/components/books/book-detail';
 import type { Metadata } from 'next';

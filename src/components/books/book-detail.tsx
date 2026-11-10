@@ -95,12 +95,30 @@ export const BookDetail = React.memo(function BookDetail({
     <div className="space-y-10 pb-16">
       {/* Zone 1 — Context bar with volume stepper */}
       <div className="flex items-center justify-between gap-4 border-b border-white/[0.08] pb-3 mb-2 text-xs font-mono">
-        <Link
-          href={book.seriesId ? `/series/${book.seriesId.replace(/^ser_/, '')}` : '/'}
-          className="text-editorial-muted hover:text-editorial-title transition-colors truncate"
-        >
-          ← {book.seriesName || 'Katalog'}
-        </Link>
+        {book.seriesId && book.seriesName ? (
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 truncate">
+            <Link
+              href="/"
+              className="text-editorial-muted hover:text-editorial-title transition-colors shrink-0"
+            >
+              Katalog
+            </Link>
+            <span className="text-editorial-faint" aria-hidden>/</span>
+            <Link
+              href={`/series/${book.seriesId.replace(/^ser_/, '')}`}
+              className="text-editorial-muted hover:text-editorial-title transition-colors truncate"
+            >
+              {book.seriesName}
+            </Link>
+          </nav>
+        ) : (
+          <Link
+            href="/"
+            className="text-editorial-muted hover:text-editorial-title transition-colors truncate"
+          >
+            ← Katalog Utama
+          </Link>
+        )}
         {(prevBook || nextBook) && (
           <div className="flex items-center gap-3 shrink-0">
             {prevBook && (

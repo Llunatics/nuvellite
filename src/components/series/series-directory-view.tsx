@@ -273,6 +273,15 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
         <p className="text-[13px] text-editorial-muted font-sans">
           {allSeries.length.toLocaleString('id-ID')} seri — termasuk arsip terbitan lama yang ditandai badge Arsip.
         </p>
+
+        <div className="pt-1">
+          <Link
+            href="/bind-up"
+            className="inline-flex items-center gap-1.5 border border-white/[0.08] px-2.5 py-1 font-mono text-[11px] text-editorial-muted transition-colors hover:border-accent hover:text-accent"
+          >
+            Direktori Edisi Bind-Up &amp; Omnibus →
+          </Link>
+        </div>
       </section>
 
       {/* 2. Symmetrical Search & Filter Command Bar */}

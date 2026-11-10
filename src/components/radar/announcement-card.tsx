@@ -94,7 +94,11 @@ export function AnnouncementCard({
               title={s.evidenceNote ?? s.sourceLabel}
               className="inline-flex items-center gap-1 border border-white/[0.08] px-1.5 py-0.5 font-mono text-[10px] text-zinc-300 transition-colors hover:border-accent hover:text-accent"
             >
-              {s.sourceLabel} <span aria-hidden>↗</span>
+              {s.sourceLabel}
+              {s.isProfileFallbackUrl
+                ? ' (Profil Resmi — Tautan Pos Spesifik Belum Diarsipkan)'
+                : ''}{' '}
+              <span aria-hidden>↗</span>
             </a>
           ))}
         </footer>

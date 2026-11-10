@@ -2,6 +2,10 @@ import domainRules from '@/data/domain-rules.json';
 import fullCatalogData from '@/data/catalog.json';
 import { Book, CatalogData } from './types';
 import { cleanStorySynopsis } from './data/synopsis-cleaner';
+import {
+  getPriceSummary as getPriceSummaryInternal,
+  initializePriceSnapshots,
+} from './data/price-service';
 
 /**
  * Server-only book detail loader (Round 2, Block 5).
@@ -52,4 +56,33 @@ export function getBookDetailBySlug(slug: string): Book | undefined {
   // points, spec blocks) that the UI strips at render; strip them here too
   // so every consumer of detail data gets the clean story text.
   return { ...book, synopsis: cleanStorySynopsis(book.synopsis) };
+}
+
+// Lazy singleton: seed the price snapshot registry from the FULL catalog
+// once, before any getPriceSummary() call. Without this the registry stays
+// empty and every book reports "Stabil (0%)" with fabricated data. This
+// lives here (server-only) since Round 2 F-02: catalog-listing.json no
+// longer carries priceSnapshots into the client graph.
+let priceSnapshotsInitialized = false;
+function ensurePriceSnapshotsInitialized(): void {
+  if (priceSnapshotsInitialized) return;
+  priceSnapshotsInitialized = true;
+  const snapshots = full.priceSnapshots || [];
+  if (snapshots.length > 0) {
+    initializePriceSnapshots(snapshots);
+  }
+}
+
+/**
+ * Price history summary for the book detail page — server-side only
+ * (its only caller is src/app/books/[slug]/page.tsx).
+ */
+export function getPriceSummary(book: Book) {
+  ensurePriceSnapshotsInitialized();
+  return getPriceSummaryInternal(
+    book.id,
+    book.currentPrice,
+    book.releaseDate,
+    book.originalPrice,
+  );
 }

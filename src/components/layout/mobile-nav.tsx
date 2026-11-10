@@ -32,7 +32,7 @@ export function MobileNav() {
           <Link
             key={tab.href}
             href={tab.href}
-            className={`relative flex-1 flex flex-col items-center justify-center py-1.5 px-2 rounded-full transition-all duration-200 active:scale-95 ${
+            className={`relative flex-1 min-w-0 flex flex-col items-center justify-center py-1.5 px-1 rounded-full transition-all duration-200 active:scale-95 ${
               tab.active
                 ? 'bg-white/[0.08] text-editorial-title font-semibold shadow-xs'
                 : 'text-editorial-muted hover:text-editorial-title'
@@ -46,7 +46,7 @@ export function MobileNav() {
                 </span>
               )}
             </div>
-            <span className="text-[10px] tracking-tight mt-0.5">
+            <span className="text-[9.5px] tracking-tight mt-0.5 max-w-full truncate">
               {tab.label}
             </span>
           </Link>

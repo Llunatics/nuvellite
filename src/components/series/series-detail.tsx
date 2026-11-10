@@ -181,30 +181,20 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
         </Link>
       </div>
 
-      {/* 2. Series Editorial Header */}
-      <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
-        <div className="relative z-10 flex flex-col md:flex-row gap-8 lg:gap-10 items-start">
+      {/* 2. Series Editorial Header — unboxed, directly on the canvas (F-01) */}
+      <div className="border-b border-white/[0.08] pb-8">
+        <div className="flex flex-col md:flex-row gap-8 lg:gap-10 items-start">
           {/* Series Cover */}
-          <div className="relative aspect-[3/4.2] w-40 sm:w-48 shrink-0 book-cover-elevated overflow-hidden bg-surface-sunken">
-            <CoverImage
-              src={series.coverImage}
-              alt={series.name}
-              width={192}
-              height={256}
-              imgClassName="w-full h-full object-cover"
-              fallbackIconClassName="w-8 h-8 text-editorial-faint"
-            />
-
-            <div className="absolute top-2.5 left-2.5">
-              <span
-                className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase ${
-                  series.type === 'LIGHT_NOVEL'
-                    ? 'border border-white/20 bg-zinc-900 text-zinc-100'
-                    : 'border border-white/10 bg-zinc-950/90 text-zinc-200'
-                }`}
-              >
-                {series.type === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga'}
-              </span>
+          <div className="aspect-[3/4.2] w-40 sm:w-48 shrink-0 border border-white/[0.08] rounded-lg bg-zinc-950 p-1.5">
+            <div className="w-full h-full overflow-hidden">
+              <CoverImage
+                src={series.coverImage}
+                alt={series.name}
+                width={192}
+                height={256}
+                imgClassName="w-full h-full object-cover"
+                fallbackIconClassName="w-8 h-8 text-editorial-faint"
+              />
             </div>
           </div>
 
@@ -213,6 +203,8 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
             <div>
               <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-editorial-muted mb-2">
                 <span className="font-semibold text-editorial-title">{series.publisherName}</span>
+                <span className="text-editorial-faint/60">•</span>
+                <span>{series.type === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga'}</span>
                 <span className="text-editorial-faint/60">•</span>
                 <span
                   className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono uppercase font-semibold ${
@@ -564,9 +556,9 @@ export function SeriesDetailSkeleton() {
   return (
     <div className="space-y-12 pb-16 animate-pulse">
       <div className="h-4 w-28 bg-white/[0.05] rounded" />
-      <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 lg:p-12">
+      <div className="border-b border-white/[0.08] pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-4 xl:col-span-3 aspect-[3/4.2] w-48 sm:w-56 mx-auto lg:mx-0 rounded-2xl bg-white/[0.06]" />
+          <div className="lg:col-span-4 xl:col-span-3 aspect-[3/4.2] w-48 sm:w-56 mx-auto lg:mx-0 rounded-lg border border-white/[0.06] bg-white/[0.03]" />
           <div className="lg:col-span-8 xl:col-span-9 space-y-4">
             <div className="h-4 w-32 bg-white/[0.06] rounded" />
             <div className="h-8 w-64 bg-white/[0.08] rounded" />

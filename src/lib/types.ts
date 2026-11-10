@@ -263,6 +263,12 @@ export interface AnnouncementSourceEvidence {
   sourceLabel: string;
   /** Mandatory verified clickable URL. */
   url: string;
+  /**
+   * True when `url` is an account/site root rather than a direct post or
+   * article permalink (the specific post is not archived at a stable URL).
+   * The UI labels these transparently (Round 2 F-04).
+   */
+  isProfileFallbackUrl?: boolean;
   /** YYYY-MM-DD */
   observedAt: string;
   evidenceKind:
