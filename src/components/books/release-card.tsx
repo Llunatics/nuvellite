@@ -109,9 +109,6 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
             sizes="(max-width: 640px) 160px, (max-width: 1024px) 190px, 220px"
             imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
           />
-
-          {/* Subtle Ambient Vignette on Cover for Depth */}
-          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
         </Link>
 
         {/* Floating Top Left: Format Capsule Badge */}

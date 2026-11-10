@@ -22,46 +22,50 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
     <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl">
       {/* Ambient cover glow (Round 3, D.2) */}
       <div
-        className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none"
+        className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none -z-10"
         style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
+        aria-hidden="true"
       />
 
       <div className="relative z-10 flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
-        {/* Large Visual Anchor Book Cover */}
-        <Link
-          href={`/books/${book.slug}`}
-          className="relative aspect-[3/4.2] w-48 sm:w-56 lg:w-64 xl:w-72 shrink-0 book-cover-elevated rounded-2xl overflow-hidden group block"
-          tabIndex={-1}
-        >
-          <CoverImage
-            src={book.coverImage}
-            alt={book.title}
-            width={224}
-            height={313}
-            sizes="(max-width: 640px) 176px, 224px"
-            priority
-            imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
-            fallbackIconClassName="w-12 h-12 text-editorial-faint"
+        {/* Cover column with ambient glow strictly behind cover container */}
+        <div className="relative shrink-0 z-0">
+          <div
+            className="absolute -inset-4 bg-cover bg-center rounded-full blur-3xl opacity-15 pointer-events-none -z-10"
+            style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
+            aria-hidden="true"
           />
-          {/* Floating cover badges (Round 3, D.2 / S-05) */}
-          <span
-            className={`absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase bg-black/60 backdrop-blur-md border border-white/10 ${
-              book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
-            }`}
+          <Link
+            href={`/books/${book.slug}`}
+            className="relative z-10 aspect-[3/4.2] w-48 sm:w-56 lg:w-64 xl:w-72 shrink-0 bg-zinc-900 overflow-hidden rounded-2xl shadow-2xl group block"
+            tabIndex={-1}
           >
-            {book.category}
-          </span>
-          {book.volume !== null && book.volume !== undefined && (
-            <span className="absolute top-2.5 right-2.5 z-10 px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/60 backdrop-blur-md border border-white/10 text-zinc-100">
-              Vol. {book.volume}
+            <CoverImage
+              src={book.coverImage}
+              alt={book.title}
+              width={224}
+              height={313}
+              sizes="(max-width: 640px) 176px, 224px"
+              priority
+              imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
+              fallbackIconClassName="w-12 h-12 text-editorial-faint"
+            />
+            {/* Floating cover badges (Round 3, D.2 / S-05) */}
+            <span className="absolute top-2.5 left-2.5 z-10 backdrop-blur-md bg-black/65 text-white border border-white/15 rounded-full px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider">
+              {book.category}
             </span>
-          )}
-          {book.status === 'PREORDER' && (
-            <span className="absolute bottom-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
-              Pre-Order
-            </span>
-          )}
-        </Link>
+            {book.volume !== null && book.volume !== undefined && (
+              <span className="absolute top-2.5 right-2.5 z-10 backdrop-blur-md bg-black/65 text-white border border-white/15 rounded-full px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider">
+                Vol. {book.volume}
+              </span>
+            )}
+            {book.status === 'PREORDER' && (
+              <span className="absolute bottom-2.5 left-2.5 z-10 backdrop-blur-md bg-accent text-white border border-white/15 rounded-full px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider">
+                Pre-Order
+              </span>
+            )}
+          </Link>
+        </div>
 
         {/* Editorial Content */}
         <div className="flex-1 space-y-5 text-left w-full">

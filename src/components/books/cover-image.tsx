@@ -135,7 +135,7 @@ export function CoverImage({
         onLoad={() => setLoaded(true)}
         onError={() => setFailed(true)}
         data-loaded={loaded ? 'true' : 'false'}
-        className={`${imgClassName} nuv-cover-img`}
+        className={`${imgClassName} nuv-cover-img opacity-100 brightness-100`}
       />
     </div>
   );
