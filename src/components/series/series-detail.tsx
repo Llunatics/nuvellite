@@ -27,7 +27,7 @@ interface SeriesDetailProps {
   series: Series;
   books: Book[];
   kkiEnrichment?: KkiEnrichment;
-  hasBindUp?: boolean;
+  crossLink?: { href: string; label: string } | null;
 }
 
 type VolumeState = 'OWNED' | 'RELEASED' | 'UPCOMING' | 'UNKNOWN_GAP';
@@ -38,10 +38,11 @@ interface VolumeSlot {
   book?: Book;
 }
 
-export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kkiEnrichment, hasBindUp }: SeriesDetailProps) {
+export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kkiEnrichment, crossLink }: SeriesDetailProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const [activeTab, setActiveTab] = useState<'ALL' | 'MISSING' | 'SPECIAL'>('ALL');
   const [selectedSlot, setSelectedSlot] = useState<VolumeSlot | null>(null);
+  const [expandedGapRuns, setExpandedGapRuns] = useState<Set<string>>(new Set());
 
   // Sort books by volume number
   const sortedBooks = useMemo(() => {
@@ -81,9 +82,16 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
     const volMap = new Map<number, Book>();
     let maxVol = 0;
 
+    const isVariant = (b: Book) =>
+      b.isSetVariant || (b.editionType && b.editionType !== 'REGULAR') || !Number.isInteger(b.volume ?? 0);
     for (const b of sortedBooks) {
       if (typeof b.volume === 'number' && b.volume > 0) {
-        volMap.set(b.volume, b);
+        const existing = volMap.get(b.volume);
+        // Only overwrite when the new book is owned, or the stored entry was
+        // a special/decimal variant that a regular volume should replace.
+        if (!existing || (isLoaded && isOwned(b.id)) || (isVariant(existing) && !isVariant(b))) {
+          volMap.set(b.volume, b);
+        }
         if (b.volume > maxVol) maxVol = b.volume;
       }
     }
@@ -113,6 +121,47 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
     return volumeMatrix.filter((s) => s.state === 'UNKNOWN_GAP');
   }, [volumeMatrix]);
 
+  // Render list for the matrix: when there are many gaps, long contiguous
+  // UNKNOWN_GAP runs collapse into a single expandable summary chip instead
+  // of a wall of individual red buttons (Block 6).
+  type MatrixItem =
+    | { kind: 'slot'; slot: VolumeSlot }
+    | { kind: 'gaprun'; start: number; end: number; count: number };
+  const matrixItems = useMemo<MatrixItem[]>(() => {
+    if (gapSlots.length <= 12) {
+      return volumeMatrix.map((slot) => ({ kind: 'slot' as const, slot }));
+    }
+    const items: MatrixItem[] = [];
+    let i = 0;
+    while (i < volumeMatrix.length) {
+      const slot = volumeMatrix[i];
+      if (slot.state === 'UNKNOWN_GAP') {
+        let j = i;
+        while (j + 1 < volumeMatrix.length && volumeMatrix[j + 1].state === 'UNKNOWN_GAP') j++;
+        const runLength = j - i + 1;
+        if (runLength >= 5) {
+          items.push({ kind: 'gaprun', start: slot.volNum, end: volumeMatrix[j].volNum, count: runLength });
+        } else {
+          for (let k = i; k <= j; k++) items.push({ kind: 'slot', slot: volumeMatrix[k] });
+        }
+        i = j + 1;
+      } else {
+        items.push({ kind: 'slot', slot });
+        i++;
+      }
+    }
+    return items;
+  }, [volumeMatrix, gapSlots.length]);
+
+  const toggleGapRun = (key: string) => {
+    setExpandedGapRuns((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  };
+
   // §5.5 Volume Matrix Drawer Live Sync: derive active slot from live volumeMatrix state
   const activeSlot = useMemo(() => {
     if (!selectedSlot) return null;
@@ -134,36 +183,24 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
 
       {/* 2. Series Editorial Header */}
       <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
-        {/* Subtle Ambient Glow */}
-        {series.coverImage && (
-          <div
-            style={{ backgroundImage: `url(${series.coverImage})` }}
-          />
-        )}
-
         <div className="relative z-10 flex flex-col md:flex-row gap-8 lg:gap-10 items-start">
           {/* Series Cover */}
           <div className="relative aspect-[3/4.2] w-40 sm:w-48 shrink-0 book-cover-elevated overflow-hidden bg-surface-sunken">
-            {series.coverImage ? (
-              <CoverImage
-                src={series.coverImage}
-                alt={series.name}
-                width={192}
-                height={256}
-                imgClassName="w-full h-full object-cover"
-                fallbackIconClassName="w-8 h-8 text-editorial-faint"
-              />
-            ) : (
-              <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center">
-                <Layers className="w-8 h-8 text-editorial-faint mb-2" />
-                <span className="text-[11px] text-editorial-muted">{series.name}</span>
-              </div>
-            )}
+            <CoverImage
+              src={series.coverImage}
+              alt={series.name}
+              width={192}
+              height={256}
+              imgClassName="w-full h-full object-cover"
+              fallbackIconClassName="w-8 h-8 text-editorial-faint"
+            />
 
             <div className="absolute top-2.5 left-2.5">
               <span
-                className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase bg-black/60 backdrop-blur-md border border-white/10 ${
-                  series.type === 'LIGHT_NOVEL' ? 'text-amber-300' : 'text-sky-300'
+                className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase ${
+                  series.type === 'LIGHT_NOVEL'
+                    ? 'border border-white/20 bg-zinc-900 text-zinc-100'
+                    : 'border border-white/10 bg-zinc-950/90 text-zinc-200'
                 }`}
               >
                 {series.type === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga'}
@@ -180,7 +217,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                 <span
                   className={`px-2.5 py-0.5 rounded-full text-[9px] font-mono uppercase font-semibold ${
                     series.status === 'COMPLETED'
-                      ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/25'
+                      ? 'bg-accent/15 text-accent border border-accent/25'
                       : 'bg-white/[0.06] text-editorial-title border border-white/10'
                   }`}
                 >
@@ -190,12 +227,12 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                 <span>{sortedBooks.length} Volume Terdata</span>
               </div>
 
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-editorial font-normal text-editorial-title tracking-tight leading-[1.15]">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-sans font-semibold text-editorial-title tracking-tight leading-[1.15]">
                 {series.name}
               </h1>
 
               {series.originalTitle && series.originalTitle !== series.name && (
-                <p className="text-xs sm:text-sm text-editorial-muted italic font-editorial mt-1">
+                <p className="text-xs sm:text-sm text-editorial-muted mt-1">
                   {series.originalTitle}
                 </p>
               )}
@@ -214,15 +251,14 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
 
               {kkiEnrichment && <KkiDataBlock enrichment={kkiEnrichment} />}
 
-              {hasBindUp && (
+              {crossLink && (
                 <div className="mt-4">
                   <Link
-                    href="/bind-up"
+                    href={crossLink.href}
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.1] text-editorial-title transition-all active:scale-95"
                   >
                     <BookOpen className="w-3.5 h-3.5" />
-                    <span>Lihat Edisi Bind-Up</span>
-                    <ArrowLeft className="w-3.5 h-3.5 rotate-180" />
+                    <span>{crossLink.label}</span>
                   </Link>
                 </div>
               )}
@@ -232,7 +268,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
             <div className="pt-4 border-t border-white/[0.06] space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs">
                 <span className="font-mono text-editorial-title font-medium flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
                   <span>Progres Kelengkapan Koleksi</span>
                 </span>
                 <span className="font-mono text-xs text-editorial-muted">
@@ -255,25 +291,78 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                     <span>SEKUENS VOLUME &amp; STATUS:</span>
                     <div className="flex items-center gap-3">
                       <span className="flex items-center gap-1">
-                        <span className="text-emerald-400 font-bold">●</span> Dimiliki
+                        <span className="text-accent font-bold">●</span> Dimiliki
                       </span>
                       <span className="flex items-center gap-1">
                         <span className="text-editorial-muted font-bold">○</span> Terbit
                       </span>
                       <span className="flex items-center gap-1">
-                        <span className="text-amber-400 font-bold">◌</span> Pra-pesan
+                        <span className="text-red-400 font-bold">◌</span> Pra-pesan
                       </span>
                       {gapSlots.length > 0 && (
                         <span className="flex items-center gap-1">
-                          <span className="text-rose-400/80 font-bold">—</span> Gap Katalog
+                          <span className="text-red-400/80 font-bold">—</span> Gap Katalog
                         </span>
                       )}
                     </div>
                   </div>
 
-                  {/* Volume Matrix Chips */}
+                  {/* Volume Matrix Chips (long gap runs collapse into one chip) */}
                   <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                    {volumeMatrix.map((slot) => {
+                    {matrixItems.map((item) => {
+                      if (item.kind === 'gaprun') {
+                        const runKey = `${item.start}-${item.end}`;
+                        const isExpanded = expandedGapRuns.has(runKey);
+                        if (isExpanded) {
+                          return (
+                            <React.Fragment key={runKey}>
+                              {volumeMatrix
+                                .filter((s) => s.volNum >= item.start && s.volNum <= item.end)
+                                .map((slot) => {
+                                  const isSelected = selectedSlot?.volNum === slot.volNum;
+                                  return (
+                                    <button
+                                      key={slot.volNum}
+                                      type="button"
+                                      onClick={() => setSelectedSlot(slot)}
+                                      className={`min-w-7 h-7 px-1.5 rounded-lg text-xs font-mono transition-all flex items-center justify-center gap-1 active:scale-95 ${
+                                        isSelected
+                                          ? 'ring-1 ring-accent text-accent bg-accent/10'
+                                          : 'bg-red-500/10 text-red-300 border border-red-500/25 hover:bg-red-500/20'
+                                      }`}
+                                      title={`Vol. ${slot.volNum} (${slot.state}) - Klik untuk informasi`}
+                                    >
+                                      <span className="text-[10px]">—</span>
+                                      <span className="font-semibold">{slot.volNum}</span>
+                                    </button>
+                                  );
+                                })}
+                              <button
+                                type="button"
+                                onClick={() => toggleGapRun(runKey)}
+                                className="h-7 px-2 rounded-lg text-[10px] font-mono bg-white/[0.04] text-editorial-muted border border-white/[0.08] hover:bg-white/[0.08] transition-all active:scale-95"
+                              >
+                                Ringkas ↑
+                              </button>
+                            </React.Fragment>
+                          );
+                        }
+                        return (
+                          <button
+                            key={runKey}
+                            type="button"
+                            onClick={() => toggleGapRun(runKey)}
+                            className="h-7 px-2.5 rounded-lg text-[11px] font-mono bg-red-500/10 text-red-300 border border-red-500/25 border-dashed hover:bg-red-500/20 transition-all flex items-center gap-1.5 active:scale-95"
+                            title={`${item.count} volume belum ada di katalog — klik untuk lihat`}
+                          >
+                            <span>—</span>
+                            <span className="font-semibold">Vol. {item.start}–{item.end}</span>
+                            <span className="text-red-300/70">(Arsip Lama · Klik untuk lihat)</span>
+                          </button>
+                        );
+                      }
+
+                      const slot = item.slot;
                       const isSelected = selectedSlot?.volNum === slot.volNum;
                       return (
                         <button
@@ -282,13 +371,13 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                           onClick={() => setSelectedSlot(slot)}
                           className={`min-w-7 h-7 px-1.5 rounded-lg text-xs font-mono transition-all flex items-center justify-center gap-1 active:scale-95 ${
                             isSelected
-                              ? 'ring-2 ring-white text-white bg-white/20'
+                              ? 'ring-1 ring-accent text-accent bg-accent/10'
                               : slot.state === 'OWNED'
-                              ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/25'
+                              ? 'bg-accent/15 text-accent border border-accent/30 hover:bg-accent/25'
                               : slot.state === 'UPCOMING'
-                              ? 'bg-amber-500/15 text-amber-300 border border-amber-500/30 border-dashed hover:bg-amber-500/25'
+                              ? 'bg-red-500/10 text-red-300 border border-red-500/30 border-dashed hover:bg-red-500/20'
                               : slot.state === 'UNKNOWN_GAP'
-                              ? 'bg-rose-500/10 text-rose-300 border border-rose-500/25 hover:bg-rose-500/20'
+                              ? 'bg-red-500/10 text-red-300 border border-red-500/25 hover:bg-red-500/20'
                               : 'bg-white/[0.04] text-editorial-body border border-white/[0.08] hover:bg-white/[0.08]'
                           }`}
                           title={`Vol. ${slot.volNum} (${slot.state}) - Klik untuk informasi`}
@@ -318,11 +407,11 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                       <span
                         className={`px-2 py-0.5 rounded-full text-[9px] font-mono font-semibold ${
                           activeSlot.state === 'OWNED'
-                            ? 'bg-emerald-500/20 text-emerald-400'
+                            ? 'bg-accent/20 text-accent'
                             : activeSlot.state === 'UPCOMING'
-                            ? 'bg-amber-500/20 text-amber-400'
+                            ? 'bg-red-500/20 text-red-400'
                             : activeSlot.state === 'UNKNOWN_GAP'
-                            ? 'bg-rose-500/20 text-rose-400'
+                            ? 'bg-red-500/20 text-red-400'
                             : 'bg-white/10 text-editorial-muted'
                         }`}
                       >
@@ -363,7 +452,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                           onClick={() => toggleOwned(activeSlot.book!.id, series.id)}
                           className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 active:scale-95 ${
                             isLoaded && isOwned(activeSlot.book.id)
-                              ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                              ? 'bg-accent/20 text-accent border border-accent/30'
                               : 'bg-white/[0.08] hover:bg-white/[0.12] text-editorial-title'
                           }`}
                         >
@@ -453,7 +542,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
       <div>
         {displayedBooks.length === 0 ? (
           <div className="py-20 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-2">
-            <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto" />
+            <CheckCircle2 className="w-8 h-8 text-accent mx-auto" />
             <h3 className="text-sm font-medium text-editorial-title">
               Seluruh volume pada kategori ini telah terpenuhi
             </h3>

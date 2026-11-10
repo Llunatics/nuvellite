@@ -13,6 +13,7 @@ import {
   FilterX,
 } from 'lucide-react';
 import { Book, Publisher } from '@/lib/types';
+import { loadPersistedViewState, savePersistedViewState, syncUrlQuery } from '@/lib/filter-persistence';
 import { ReleaseCard } from '@/components/books/release-card';
 import { FeaturedReleaseCard } from '@/components/books/card-variants';
 import { useCollection } from '@/hooks/use-collection';
@@ -102,6 +103,9 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [spotlightPaused, setSpotlightPaused] = useState(false);
+  const hydratedRef = useRef(false);
+  const suppressFilterResetRef = useRef(false);
+  const pendingScrollRef = useRef<number | null>(null);
   const spotlightResumeRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -114,6 +118,47 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       setPubFilter('ALL');
     }
   }, [publishers]);
+
+  // Hydrate filters from the URL and restore pagination + scroll position
+  // saved before navigating away (Block 6). Runs once on mount.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const format = params.get('format');
+    if (format === 'Manga' || format === 'Light Novel') setFormatFilter(format);
+    const status = params.get('status');
+    if (status === 'RELEASED' || status === 'PREORDER') setStatusFilter(status);
+    const sort = params.get('sort');
+    if (sort === 'latest' || sort === 'title' || sort === 'price_low' || sort === 'price_high') {
+      setSortBy(sort);
+    }
+    const q = params.get('q');
+    if (q) setSearchQuery(q);
+
+    const persisted = loadPersistedViewState(window.location.pathname);
+    if (persisted?.visibleCount && persisted.visibleCount > PAGE_SIZE) {
+      suppressFilterResetRef.current = true;
+      setVisibleCount(persisted.visibleCount);
+    }
+    if (persisted?.scrollY) pendingScrollRef.current = persisted.scrollY;
+    hydratedRef.current = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Sync filters back into the URL (debounced 200ms, replaceState only)
+  useEffect(() => {
+    if (!hydratedRef.current) return;
+    const timer = setTimeout(() => {
+      const params = new URLSearchParams();
+      if (formatFilter !== 'ALL') params.set('format', formatFilter);
+      if (pubFilter !== 'ALL') params.set('publisher', pubFilter);
+      if (statusFilter !== 'ALL') params.set('status', statusFilter);
+      if (sortBy !== 'latest') params.set('sort', sortBy);
+      const q = searchQuery.trim();
+      if (q) params.set('q', q);
+      syncUrlQuery(params);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [formatFilter, pubFilter, statusFilter, sortBy, searchQuery]);
 
   // Auto-advance the spotlight showcase; pauses while the user hovers it.
   useEffect(() => {
@@ -183,19 +228,38 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   useEffect(() => {
     if (filterKey !== prevFilterKey.current) {
       prevFilterKey.current = filterKey;
+      if (suppressFilterResetRef.current) {
+        suppressFilterResetRef.current = false;
+        return;
+      }
       setVisibleCount(PAGE_SIZE);
     }
   }, [filterKey]);
 
   const visibleBooks = useMemo(() => filteredBooks.slice(0, visibleCount), [filteredBooks, visibleCount]);
+
+  useEffect(() => {
+    if (pendingScrollRef.current != null && visibleBooks.length > 0) {
+      const y = pendingScrollRef.current;
+      pendingScrollRef.current = null;
+      requestAnimationFrame(() => window.scrollTo(0, y));
+    }
+  }, [visibleBooks]);
   const hasMore = visibleCount < filteredBooks.length;
 
   const loadMore = useCallback(() => {
     setVisibleCount((prev) => Math.min(prev + PAGE_SIZE, filteredBooks.length));
   }, [filteredBooks.length]);
 
+  const persistViewState = () => {
+    savePersistedViewState(window.location.pathname, {
+      visibleCount,
+      scrollY: window.scrollY,
+    });
+  };
+
   return (
-    <div className="space-y-16 sm:space-y-20">
+    <div className="space-y-16 sm:space-y-20" onClickCapture={persistViewState}>
       {/* 1. HERO EDITORIAL INTRODUCTION */}
       <section className="space-y-4 pt-2 sm:pt-4 lg:pt-8">
         <div className="max-w-3xl lg:max-w-4xl space-y-3 lg:space-y-5">
