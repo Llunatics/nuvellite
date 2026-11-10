@@ -342,58 +342,49 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
 
   return (
     <div className="space-y-14 sm:space-y-20" onClickCapture={persistViewState}>
-      {/* 1. HERO EDITORIAL INTRODUCTION */}
-      <section className="pt-1 sm:pt-1.5">
-        <div className="max-w-3xl lg:max-w-4xl space-y-2 sm:space-y-2.5">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-xs shrink-0" />
-            <span>Katalog Indonesia</span>
-          </div>
-
-          <h1 className="font-editorial text-2xl sm:text-4xl lg:text-5xl font-normal text-editorial-title tracking-tight leading-[1.12]">
-            Pelacak Manga &amp; Light Novel.
-          </h1>
-
-          <p className="text-xs sm:text-sm text-editorial-body leading-[1.6] max-w-2xl font-sans">
-            Katalog manga &amp; light novel terbitan resmi Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia.
-            Cek jadwal terbit mingguan, edisi bind-up, dan koleksi bukumu.
-          </p>
-
-          {/* Archive Stats Strip */}
-          <dl className="pt-0.5 flex flex-wrap items-center gap-x-3 sm:gap-x-5 gap-y-1 text-xs font-mono text-editorial-muted">
-            <div className="flex items-baseline gap-1.5">
-              <dt className="sr-only">Judul terarsip</dt>
-              <dd className="font-semibold text-editorial-title">
-                {archiveStats.titles.toLocaleString('id-ID')}
-              </dd>
-              <dd>judul terarsip</dd>
-            </div>
-            <span aria-hidden="true" className="text-editorial-faint/50">/</span>
-            <div className="flex items-baseline gap-1.5">
-              <dt className="sr-only">Seri</dt>
-              <dd className="font-semibold text-editorial-title">
-                {archiveStats.series.toLocaleString('id-ID')}
-              </dd>
-              <dd>seri</dd>
-            </div>
-            <span aria-hidden="true" className="text-editorial-faint/50">/</span>
-            <div className="flex items-baseline gap-1.5">
-              <dt className="sr-only">Penerbit</dt>
-              <dd className="font-semibold text-editorial-title">
-                {archiveStats.publishers.toLocaleString('id-ID')}
-              </dd>
-              <dd>penerbit</dd>
-            </div>
-          </dl>
+      {/* 1. TOP-OF-PAGE ULTRA-SLIM MASTHEAD STRIP */}
+      <div
+        data-testid="hero-masthead-strip"
+        className="mx-auto w-full max-w-5xl flex flex-wrap items-center justify-between gap-x-4 gap-y-1 pt-0.5 pb-2.5 text-[11px] font-mono text-editorial-muted"
+      >
+        <div className="inline-flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+          <span className="text-editorial-title font-medium">Katalog Indonesia</span>
         </div>
-      </section>
+
+        <dl className="flex flex-wrap items-center gap-x-2.5 sm:gap-x-3.5 gap-y-1 text-[11px] font-mono text-editorial-muted">
+          <div className="flex items-baseline gap-1">
+            <dt className="sr-only">Judul terarsip</dt>
+            <dd className="font-semibold text-editorial-title">
+              {archiveStats.titles.toLocaleString('id-ID')}
+            </dd>
+            <dd>judul terarsip</dd>
+          </div>
+          <span aria-hidden="true" className="text-editorial-faint/50">/</span>
+          <div className="flex items-baseline gap-1">
+            <dt className="sr-only">Seri</dt>
+            <dd className="font-semibold text-editorial-title">
+              {archiveStats.series.toLocaleString('id-ID')}
+            </dd>
+            <dd>seri</dd>
+          </div>
+          <span aria-hidden="true" className="text-editorial-faint/50">/</span>
+          <div className="flex items-baseline gap-1">
+            <dt className="sr-only">Penerbit</dt>
+            <dd className="font-semibold text-editorial-title">
+              {archiveStats.publishers.toLocaleString('id-ID')}
+            </dd>
+            <dd>penerbit</dd>
+          </div>
+        </dl>
+      </div>
 
       {/* 2. CURATED SPOTLIGHT SHOWCASE */}
       {activeSpotlight && (
         <section
           ref={featuredSectionRef}
           data-testid="featured-showcase-card"
-          className="relative z-10 !mt-5 sm:!mt-5 will-change-[transform,opacity] origin-top"
+          className="relative z-10 !mt-2 sm:!mt-2.5 will-change-[transform,opacity] origin-top"
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >
@@ -527,31 +518,40 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           the catalog hero leads the page again, not the announcements) */}
       {radarShelf}
 
-      {/* 5. MAIN CATALOG ARCHIVE & COHESIVE CONTROLS */}
-      <section ref={catalogRef} className="space-y-8 pt-4 scroll-mt-28">
-        {/* Section Heading & Result Counter */}
-        <div className="flex items-end justify-between gap-4 border-b border-white/[0.06] pb-4 mb-6">
-          <div className="min-w-0 flex-1">
-            <h2 className="font-editorial text-2xl sm:text-3xl font-normal tracking-tight text-editorial-title leading-[1.15]">
-              Seluruh Katalog
-            </h2>
-            <p className="mt-1.5 text-xs font-mono text-editorial-muted">
-              {filteredBooks.length.toLocaleString('id-ID')} buku terdata
+      {/* 5. MAIN CATALOG ARCHIVE & EDITORIAL IDENTITY */}
+      <section ref={catalogRef} className="space-y-6 pt-4 scroll-mt-28">
+        <div
+          data-testid="editorial-identity-banner"
+          className="rounded-3xl border border-white/[0.06] bg-surface/50 p-5 sm:p-7 flex flex-col lg:flex-row lg:items-end justify-between gap-4"
+        >
+          <div className="space-y-2.5 max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[10px] font-mono uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+              <span>Arsip &amp; Direktori Utama</span>
+            </div>
+            <h1 className="font-editorial text-2xl sm:text-3xl lg:text-4xl font-normal text-editorial-title tracking-tight leading-[1.12]">
+              Pelacak Manga &amp; Light Novel.
+            </h1>
+            <p className="text-xs sm:text-sm text-editorial-body leading-[1.65]">
+              Katalog manga &amp; light novel terbitan resmi Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia. Cek jadwal terbit mingguan, edisi bind-up, dan koleksi bukumu.
             </p>
           </div>
 
-          {hasActiveFilters && (
-            <div className="shrink-0 flex items-center gap-3 pl-2">
+          <div className="flex items-center justify-between lg:flex-col lg:items-end gap-2 pt-2 lg:pt-0 border-t lg:border-t-0 border-white/[0.05] shrink-0">
+            <p className="text-xs text-editorial-muted font-mono">
+              Menampilkan <span className="text-editorial-title font-semibold">{filteredBooks.length.toLocaleString('id-ID')}</span> judul terdaftar
+            </p>
+            {hasActiveFilters && (
               <button
                 type="button"
                 onClick={resetFilters}
-                className="shrink-0 whitespace-nowrap text-xs font-mono text-accent hover:underline flex items-center gap-1.5 py-1"
+                className="text-xs font-mono text-accent hover:underline inline-flex items-center gap-1.5"
               >
                 <FilterX className="w-3.5 h-3.5" />
                 <span>Bersihkan Filter</span>
               </button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
 
         {/* Symmetrical Search & Filter Control Console */}
