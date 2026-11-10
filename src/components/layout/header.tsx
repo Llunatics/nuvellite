@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
-import { Search, BookMarked } from 'lucide-react';
-import { useCollection } from '@/hooks/use-collection';
+import { Search } from 'lucide-react';
+import { ProfileMenu } from '@/components/layout/profile-menu';
 
 // Lazy-loaded so visitors who never open search never download or parse the
 // search dialog (and its catalog data graph) on initial page load (Block 5).
@@ -16,7 +16,6 @@ const SearchDialog = dynamic(
 
 export function Header() {
   const pathname = usePathname();
-  const { ownedItems, isLoaded } = useCollection();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -50,27 +49,17 @@ export function Header() {
     { href: '/calendar', label: 'Kalender', active: pathname.startsWith('/calendar') },
     { href: '/series', label: 'Seri', active: pathname.startsWith('/series') },
     { href: '/radar', label: 'Radar', active: pathname.startsWith('/radar') },
-    {
-      href: '/library',
-      label: 'Koleksi',
-      active: pathname.startsWith('/library'),
-      badge: isLoaded && ownedItems.length > 0 ? ownedItems.length : undefined,
-    },
   ];
 
   return (
     <>
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 pointer-events-none ${
-          isScrolled ? 'pt-3 sm:pt-3.5 px-3 sm:px-6' : 'pt-5 sm:pt-7 px-4 sm:px-8'
+          isScrolled ? 'pt-3 sm:pt-3.5 px-3 sm:px-6' : 'pt-4 sm:pt-5 px-3 sm:px-6'
         }`}
       >
         <div
-          className={`max-w-6xl mx-auto h-14 sm:h-16 rounded-full px-4 sm:px-6 flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition ${
-            isScrolled
-              ? 'liquid-glass-pill shadow-2xl'
-              : 'integrated-nav'
-          }`}
+          className="max-w-6xl mx-auto h-14 sm:h-16 rounded-full px-4 sm:px-6 flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition liquid-glass-pill shadow-2xl"
         >
           {/* Brand Identity */}
           <div className="flex items-center gap-7 shrink-0">
@@ -94,11 +83,6 @@ export function Header() {
                   }`}
                 >
                   <span>{link.label}</span>
-                  {link.badge !== undefined && (
-                    <span className="min-w-4 h-4 px-1 rounded-full bg-accent text-zinc-950 text-[8px] font-mono font-bold flex items-center justify-center shadow-xs">
-                      {link.badge}
-                    </span>
-                  )}
                 </Link>
               ))}
             </nav>
@@ -121,6 +105,8 @@ export function Header() {
                 ⌘K
               </kbd>
             </button>
+
+            <ProfileMenu />
 
           </div>
         </div>
