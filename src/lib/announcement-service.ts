@@ -139,27 +139,27 @@ export function stateBadge(
     case 'SPOTTED':
       return {
         label: 'TERPANTAU · 1 SUMBER',
-        className: 'border-dashed border-zinc-700 text-zinc-400',
+        className: 'bg-white/[0.04] text-editorial-muted border-dashed border-white/15',
       };
     case 'CORROBORATED':
       return {
         label: `TERKONFIRMASI · ${n} SUMBER`,
-        className: 'border-zinc-500 text-zinc-200',
+        className: 'bg-amber-500/15 text-amber-500 border-amber-500/30',
       };
     case 'OFFICIALLY_CONFIRMED':
       return {
         label: 'RESMI PENERBIT',
-        className: 'border-white/30 text-white',
+        className: 'bg-emerald-500/15 text-emerald-500 border-emerald-500/30',
       };
     case 'DATED_ISBN':
       return {
         label: 'TERJADWAL · ISBN',
-        className: 'border-accent text-accent',
+        className: 'bg-accent/15 text-accent border-accent/30',
       };
     case 'RELEASED_GRADUATED':
-      return { label: 'SUDAH TERBIT', className: 'border-zinc-600 text-zinc-400' };
+      return { label: 'SUDAH TERBIT', className: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20' };
     case 'STALE_HOLD':
-      return { label: 'BELUM ADA KABAR', className: 'border-zinc-800 text-zinc-500' };
+      return { label: 'BELUM ADA KABAR', className: 'bg-white/[0.03] text-editorial-faint border-white/10' };
   }
 }
 

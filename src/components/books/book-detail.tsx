@@ -142,19 +142,41 @@ export const BookDetail = React.memo(function BookDetail({
         )}
       </div>
 
-      {/* Zone 2 — Unboxed hero: cover + inline actions | identity */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-start">
+      {/* Zone 2 — Soft glass hero card (Round 3, E.1): cover + inline actions | identity */}
+      <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-5 sm:p-8 lg:p-10 shadow-2xl backdrop-blur-xl">
+        <div
+          className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none"
+          style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
+        />
+      <div className="relative grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-start">
         {/* Cover & Actions Column */}
         <div className="w-full md:col-span-4 flex flex-col items-center md:items-start">
-          <div className="relative aspect-[3/4.2] w-40 sm:w-56 md:w-full max-w-[260px] rounded-lg border border-white/[0.08] bg-zinc-950 p-1.5 overflow-hidden mx-auto md:mx-0">
+          <div className="relative aspect-[3/4.2] w-44 sm:w-56 md:w-full max-w-[260px] rounded-2xl overflow-hidden book-cover-elevated mx-auto md:mx-0">
             <CoverImage
               src={book.coverImage}
               alt={book.title}
               width={280}
               height={392}
               priority
-              imgClassName="w-full h-full object-cover rounded-[4px]"
+              imgClassName="w-full h-full object-cover"
             />
+            <span
+              className={`absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase bg-black/60 backdrop-blur-md border border-white/10 ${
+                book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
+              }`}
+            >
+              {book.category}
+            </span>
+            {book.volume !== null && book.volume !== undefined && (
+              <span className="absolute top-2.5 right-2.5 z-10 px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/60 backdrop-blur-md border border-white/10 text-zinc-100">
+                Vol. {book.volume}
+              </span>
+            )}
+            {book.status === 'PREORDER' && (
+              <span className="absolute bottom-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
+                Pre-Order
+              </span>
+            )}
           </div>
 
           {/* Action bar — inline beneath the cover on every viewport, so it
@@ -164,7 +186,7 @@ export const BookDetail = React.memo(function BookDetail({
               href={gramediaProductUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full text-xs font-medium bg-white text-black hover:bg-zinc-200 transition-all active:scale-[0.98]"
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full text-xs font-medium bg-[rgb(var(--editorial-title))] text-[rgb(var(--bg-rgb))] hover:opacity-90 transition-all active:scale-[0.98]"
             >
               <ShoppingBag className="w-3.5 h-3.5 shrink-0" />
               <span className="truncate">Beli di Gramedia</span>
@@ -214,20 +236,20 @@ export const BookDetail = React.memo(function BookDetail({
               {book.isBindUp && (
                 <Link
                   href="/bind-up"
-                  className="px-2 py-0.5 border border-accent/40 text-accent text-[10px] uppercase tracking-wider hover:bg-accent/10 transition-colors"
+                  className="px-2 py-0.5 rounded-full border border-accent/40 text-accent text-[10px] uppercase tracking-wider hover:bg-accent/10 transition-colors"
                   title={`Edisi ${book.bindUpLabel || 'bind-up'}: beberapa volume original dalam satu buku`}
                 >
                   {book.bindUpLabel || 'BIND-UP'}
                 </Link>
               )}
               {book.status === 'PREORDER' && (
-                <span className="px-2 py-0.5 border border-red-500/40 text-red-400 text-[10px] uppercase tracking-wider">
+                <span className="px-2 py-0.5 rounded-full bg-accent text-white text-[10px] font-semibold uppercase tracking-wider">
                   PRE-ORDER
                 </span>
               )}
             </div>
 
-            <h1 className="text-2xl sm:text-4xl font-sans font-semibold text-editorial-title tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-editorial font-normal text-editorial-title tracking-tight leading-tight">
               {book.title}
             </h1>
 
@@ -239,13 +261,13 @@ export const BookDetail = React.memo(function BookDetail({
           </div>
 
           {/* Zone 3 — Unified 4-cell hairline data ledger */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 border-y border-white/[0.08] py-4 my-6 gap-y-4 sm:gap-y-0 sm:divide-x sm:divide-white/[0.08] font-mono">
+          <div className="grid grid-cols-2 sm:grid-cols-4 rounded-2xl bg-white/[0.03] border border-white/[0.06] p-4 my-6 gap-4 font-mono">
             <div className="pr-4">
               <span className="text-[10px] text-editorial-faint uppercase tracking-wider block mb-1.5">
                 Harga
               </span>
               <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                <span className="text-lg font-semibold text-zinc-100 tabular-nums">
+                <span className="text-lg font-semibold text-editorial-title tabular-nums">
                   {formatRupiah(book.currentPrice)}
                 </span>
                 {discountPercent !== null && (
@@ -253,7 +275,7 @@ export const BookDetail = React.memo(function BookDetail({
                     <span className="text-xs text-editorial-faint line-through tabular-nums">
                       {formatRupiah(book.originalPrice!)}
                     </span>
-                    <span className="text-xs font-semibold text-red-400">-{discountPercent}%</span>
+                    <span className="text-xs font-semibold text-[rgb(var(--semantic-red-rgb))]">-{discountPercent}%</span>
                   </>
                 )}
               </div>
@@ -263,7 +285,7 @@ export const BookDetail = React.memo(function BookDetail({
               <span className="text-[10px] text-editorial-faint uppercase tracking-wider block mb-1.5">
                 Tanggal Terbit
               </span>
-              <span className="text-xs text-zinc-200 tabular-nums flex items-center gap-1.5">
+              <span className="text-xs text-editorial-title tabular-nums flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5 text-editorial-faint shrink-0" />
                 {book.releaseDate ? formatDateWIB(book.releaseDate) : '—'}
               </span>
@@ -273,7 +295,7 @@ export const BookDetail = React.memo(function BookDetail({
               <span className="text-[10px] text-editorial-faint uppercase tracking-wider block mb-1.5">
                 Pengarang
               </span>
-              <span className="font-sans text-xs text-zinc-200 block truncate" title={authorDisplay}>
+              <span className="font-sans text-xs text-editorial-title block truncate" title={authorDisplay}>
                 {authorDisplay}
               </span>
             </div>
@@ -282,7 +304,7 @@ export const BookDetail = React.memo(function BookDetail({
               <span className="text-[10px] text-editorial-faint uppercase tracking-wider block mb-1.5">
                 ISBN-13
               </span>
-              <span className="text-xs text-zinc-200 tabular-nums block truncate">
+              <span className="text-xs text-editorial-title tabular-nums block truncate">
                 {book.isbn13 || 'Belum tercatat'}
               </span>
             </div>
@@ -290,7 +312,7 @@ export const BookDetail = React.memo(function BookDetail({
 
           {/* Available Editions & Special Sets */}
           {book.availableEditions && book.availableEditions.length > 1 && (
-            <div className="border border-white/[0.08] p-4 space-y-3">
+            <div className="rounded-2xl bg-white/[0.02] border border-white/[0.06] p-4 space-y-3">
               <div className="flex items-center justify-between">
                 <h3 className="text-[11px] font-mono uppercase tracking-wider text-editorial-muted font-semibold flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5" />
@@ -304,7 +326,7 @@ export const BookDetail = React.memo(function BookDetail({
                 {book.availableEditions.map((edition, idx) => (
                   <div
                     key={idx}
-                    className="p-3 border border-white/[0.06] flex items-center justify-between gap-3"
+                    className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center justify-between gap-3"
                   >
                     <div className="min-w-0">
                       <span className="text-xs font-medium text-editorial-title block truncate">
@@ -321,7 +343,7 @@ export const BookDetail = React.memo(function BookDetail({
                         href={edition.gramediaUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="shrink-0 px-2.5 py-1 border border-white/[0.12] hover:bg-white/[0.06] text-editorial-title text-[11px] font-mono flex items-center gap-1 transition-colors"
+                        className="shrink-0 px-2.5 py-1 rounded-full border border-white/[0.12] hover:bg-white/[0.06] text-editorial-title text-[11px] font-mono flex items-center gap-1 transition-colors"
                       >
                         <span>Beli</span>
                         <ExternalLink className="w-3 h-3" />
@@ -340,19 +362,19 @@ export const BookDetail = React.memo(function BookDetail({
             </h3>
             {cleanedSynopsis ? (
               !isSynopsisLong ? (
-                <p className="max-w-[65ch] text-sm leading-[1.7] text-zinc-300 whitespace-pre-line">
+                <p className="max-w-[65ch] text-sm leading-[1.7] text-editorial-body whitespace-pre-line">
                   {cleanedSynopsis}
                 </p>
               ) : (
                 <div className="space-y-2">
                   {!isSynopsisExpanded && (
-                    <p className="max-w-[65ch] text-sm leading-[1.7] text-zinc-300 whitespace-pre-line line-clamp-4">
+                    <p className="max-w-[65ch] text-sm leading-[1.7] text-editorial-body whitespace-pre-line line-clamp-4">
                       {cleanedSynopsis}
                     </p>
                   )}
                   <div className="nuv-collapse-grid" data-open={isSynopsisExpanded ? 'true' : 'false'}>
                     <div className="nuv-collapse-inner">
-                      <p className="max-w-[65ch] text-sm leading-[1.7] text-zinc-300 whitespace-pre-line">
+                      <p className="max-w-[65ch] text-sm leading-[1.7] text-editorial-body whitespace-pre-line">
                         {cleanedSynopsis}
                       </p>
                     </div>
@@ -378,7 +400,7 @@ export const BookDetail = React.memo(function BookDetail({
             <div className="pt-1">
               <Link
                 href={`/series/${book.seriesId!.replace('ser_', '')}`}
-                className="inline-flex items-center gap-2 px-4 py-2 border border-white/[0.08] hover:border-white/[0.16] text-editorial-title hover:text-accent transition-all text-xs font-medium"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.08] hover:border-white/[0.16] text-editorial-title hover:text-accent transition-all text-xs font-medium"
               >
                 <Layers className="w-3.5 h-3.5 text-accent" />
                 <span>Lihat seluruh volume seri &quot;{book.seriesName}&quot;</span>
@@ -387,12 +409,13 @@ export const BookDetail = React.memo(function BookDetail({
           )}
         </div>
       </div>
+      </div>
 
       {/* Zone 5 — Price history (heading only when there is real history) */}
       <div className="space-y-4">
         {hasPriceHistory && (
           <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
-            <h2 className="text-lg sm:text-xl font-sans font-semibold text-editorial-title">
+            <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight">
               Riwayat Harga
             </h2>
             <span className="text-[11px] font-mono text-editorial-faint">
@@ -407,7 +430,7 @@ export const BookDetail = React.memo(function BookDetail({
       {seriesSiblings.length > 0 && (
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
-            <h2 className="text-lg sm:text-xl font-sans font-semibold text-editorial-title">
+            <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight">
               Volume Lain di Seri Ini ({seriesSiblings.length})
             </h2>
             {book.seriesId && (
@@ -444,7 +467,7 @@ export const BookDetail = React.memo(function BookDetail({
       {recommendations.length > 0 && (
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
-            <h2 className="text-lg sm:text-xl font-sans font-semibold text-editorial-title flex items-center gap-2">
+            <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-accent" />
               <span>Judul Serupa</span>
             </h2>

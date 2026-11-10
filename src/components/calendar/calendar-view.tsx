@@ -230,7 +230,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
                 <span
                   className={`text-xs sm:text-sm font-mono w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center rounded-full ${
                     isToday
-                      ? 'bg-accent text-black font-semibold'
+                      ? 'bg-accent text-white font-semibold'
                       : has
                         ? 'text-editorial-title'
                         : 'text-editorial-faint'

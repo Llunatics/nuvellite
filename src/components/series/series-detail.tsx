@@ -182,20 +182,29 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
       </div>
 
       {/* 2. Series Editorial Header — unboxed, directly on the canvas (F-01) */}
-      <div className="border-b border-white/[0.08] pb-8">
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-10 items-start">
+      <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-5 sm:p-8 lg:p-10 shadow-2xl backdrop-blur-xl">
+        <div
+          className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none"
+          style={{ backgroundImage: series.coverImage ? `url(${series.coverImage})` : undefined }}
+        />
+        <div className="relative flex flex-col md:flex-row gap-8 lg:gap-10 items-start">
           {/* Series Cover */}
-          <div className="aspect-[3/4.2] w-40 sm:w-48 shrink-0 border border-white/[0.08] rounded-lg bg-zinc-950 p-1.5">
-            <div className="w-full h-full overflow-hidden">
-              <CoverImage
-                src={series.coverImage}
-                alt={series.name}
-                width={192}
-                height={256}
-                imgClassName="w-full h-full object-cover"
-                fallbackIconClassName="w-8 h-8 text-editorial-faint"
-              />
-            </div>
+          <div className="relative aspect-[3/4.2] w-40 sm:w-48 shrink-0 rounded-2xl overflow-hidden book-cover-elevated">
+            <CoverImage
+              src={series.coverImage}
+              alt={series.name}
+              width={192}
+              height={256}
+              imgClassName="w-full h-full object-cover"
+              fallbackIconClassName="w-8 h-8 text-editorial-faint"
+            />
+            <span
+              className={`absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase bg-black/60 backdrop-blur-md border border-white/10 ${
+                series.type === 'LIGHT_NOVEL' ? 'text-amber-300' : 'text-sky-300'
+              }`}
+            >
+              {series.type === 'LIGHT_NOVEL' ? 'Light Novel' : 'Manga'}
+            </span>
           </div>
 
           {/* Series Editorial Information */}
@@ -219,7 +228,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                 <span>{sortedBooks.length} Volume Terdata</span>
               </div>
 
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-sans font-semibold text-editorial-title tracking-tight leading-[1.15]">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-editorial font-normal text-editorial-title tracking-tight leading-[1.15]">
                 {series.name}
               </h1>
 
@@ -271,7 +280,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
               {/* Minimal Progress Bar */}
               <div className="w-full h-1.5 rounded-full bg-surface-sunken overflow-hidden">
                 <div
-                  className="h-full bg-accent transition-all duration-500 rounded-full"
+                  className="h-full bg-gradient-to-r from-accent to-emerald-400 transition-all duration-500 rounded-full"
                   style={{ width: `${progressPercent}%` }}
                 />
               </div>
@@ -558,7 +567,7 @@ export function SeriesDetailSkeleton() {
       <div className="h-4 w-28 bg-white/[0.05] rounded" />
       <div className="border-b border-white/[0.08] pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-4 xl:col-span-3 aspect-[3/4.2] w-48 sm:w-56 mx-auto lg:mx-0 rounded-lg border border-white/[0.06] bg-white/[0.03]" />
+          <div className="lg:col-span-4 xl:col-span-3 aspect-[3/4.2] w-48 sm:w-56 mx-auto lg:mx-0 rounded-3xl border border-white/[0.06] bg-white/[0.03]" />
           <div className="lg:col-span-8 xl:col-span-9 space-y-4">
             <div className="h-4 w-32 bg-white/[0.06] rounded" />
             <div className="h-8 w-64 bg-white/[0.08] rounded" />

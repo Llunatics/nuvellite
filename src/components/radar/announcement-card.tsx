@@ -33,10 +33,10 @@ export function AnnouncementCard({
 }) {
   const a = view.announcement;
   return (
-    <article className="border border-white/[0.08] bg-zinc-950 p-4 flex flex-col gap-3">
+    <article className="rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.06] hover:border-white/[0.10] p-4 flex flex-col gap-3 transition-colors min-w-0">
       <div className="flex items-center justify-between gap-3">
         <span
-          className={`inline-flex items-center border px-2 py-0.5 font-mono text-[10px] tracking-wider ${view.badgeClassName}`}
+          className={`inline-flex items-center rounded-full border px-2.5 py-0.5 font-mono text-[9.5px] tracking-wider ${view.badgeClassName}`}
         >
           {view.badgeLabel}
         </span>
@@ -46,7 +46,7 @@ export function AnnouncementCard({
       </div>
 
       <div className="flex gap-3">
-        <div className="w-14 h-20 shrink-0 overflow-hidden border border-white/[0.08] bg-zinc-900">
+        <div className="w-16 aspect-[3/4.2] shrink-0 overflow-hidden rounded-xl cover-depth">
           <CoverImage
             src={a.coverImage}
             alt={a.title}
@@ -73,7 +73,7 @@ export function AnnouncementCard({
             {a.expectedReleaseWindow ? ` · ${a.expectedReleaseWindow}` : ''}
           </p>
           {a.eventOrCampaign && (
-            <p className="mt-1 inline-block border border-white/[0.08] px-1.5 py-0.5 font-mono text-[10px] text-zinc-400">
+            <p className="mt-1 inline-block rounded-full border border-white/[0.08] px-2 py-0.5 font-mono text-[10px] text-editorial-muted break-words max-w-full">
               {a.eventOrCampaign}
             </p>
           )}
@@ -92,7 +92,7 @@ export function AnnouncementCard({
               target="_blank"
               rel="noopener noreferrer"
               title={s.evidenceNote ?? s.sourceLabel}
-              className="inline-block max-w-full break-words border border-white/[0.08] px-1.5 py-0.5 font-mono text-[10px] text-zinc-300 transition-colors hover:border-accent hover:text-accent"
+              className="inline-block max-w-full break-words rounded-full border border-white/[0.08] px-2 py-0.5 font-mono text-[10px] text-editorial-body transition-colors hover:border-accent hover:text-accent"
             >
               {s.sourceLabel}
               {s.isProfileFallbackUrl

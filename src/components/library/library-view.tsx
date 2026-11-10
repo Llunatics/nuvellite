@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { Book, Series } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
+import { useProfile } from '@/hooks/use-profile';
 import { ReleaseCard } from '@/components/books/release-card';
 import { SeriesProgressionCard } from '@/components/books/card-variants';
 import {
@@ -33,6 +34,7 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
     importJSON,
     clearAll,
   } = useCollection();
+  const { profile } = useProfile();
 
   const [activeTab, setActiveTab] = useState<'OWNED' | 'WISHLIST' | 'SERIES' | 'MISSING'>('OWNED');
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel'>('ALL');
@@ -125,7 +127,7 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
               <BookMarked className="w-3 h-3 text-accent shrink-0" />
-              <span>Rak Buku Lokal</span>
+              <span>Rak Buku Lokal{profile ? ` • ${profile.name}` : ''}</span>
             </div>
 
             <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
@@ -222,7 +224,7 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
       {/* 2. Tabs & Format Filter Toolbar */}
       <div className="space-y-2 text-xs">
         {/* Navigation Pills — full width, equal columns */}
-        <div className="flex items-stretch gap-1 p-1 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+        <div className="grid grid-cols-2 sm:flex items-stretch gap-1 p-1 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
           <button
             type="button"
             onClick={() => setActiveTab('OWNED')}
