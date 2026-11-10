@@ -5,27 +5,31 @@ import { join } from 'node:path';
 const root = join(__dirname, '..');
 const read = (p: string) => readFileSync(join(root, p), 'utf8');
 
-describe('Round 3.5 — Llunevie-Form Featured Showcase (Block R3.5-1)', () => {
+describe('Round 3.6 — Upright Single-Cover Featured Showcase (Block R3.6-1)', () => {
   const cardCode = read('src/components/books/card-variants.tsx');
 
-  it('FeaturedReleaseCard has Llunevie cover-forward single-card architecture', () => {
+  it('FeaturedReleaseCard has dual-zone showcase architecture with max-w-5xl and tall media well', () => {
     expect(cardCode).toContain('data-testid="featured-release-card"');
-    expect(cardCode).toContain('max-w-3xl');
+    expect(cardCode).toContain('max-w-5xl');
     expect(cardCode).toContain('rounded-[28px] sm:rounded-[32px]');
     expect(cardCode).toContain('data-testid="featured-media-stage"');
-    expect(cardCode).toContain('h-[220px] sm:h-[256px]');
+    expect(cardCode).toContain('h-[284px] sm:h-[320px] md:h-[400px] lg:h-[428px]');
     expect(cardCode).toContain('blur-2xl');
   });
 
-  it('renders fanned companion covers when spotlightBooks has at least 3 items', () => {
-    expect(cardCode).toContain('hasFan = spotlightBooks.length >= 3');
-    expect(cardCode).toContain('-rotate-6');
-    expect(cardCode).toContain('rotate-6');
+  it('renders single upright cover without fanned companion covers (zero rotation)', () => {
+    expect(cardCode).toContain('data-testid="featured-upright-cover"');
+    expect(cardCode).not.toContain('-rotate-6');
+    expect(cardCode).not.toContain('rotate-6');
+    expect(cardCode).not.toContain('hasFan');
+    expect(cardCode).not.toContain('prevBook');
+    expect(cardCode).not.toContain('nextBook');
     expect(cardCode).toContain('data-testid="featured-carousel-dots"');
   });
 
-  it('renders clean single-line meta with zero bullet dots', () => {
+  it('renders clean single-line meta with zero bullet dots and dedicated author line', () => {
     expect(cardCode).toContain('data-testid="featured-meta-line"');
+    expect(cardCode).toContain('data-testid="featured-author-line"');
     // Ensure no bullet \u2022 characters in the meta line block
     const metaBlock = cardCode.substring(
       cardCode.indexOf('data-testid="featured-meta-line"'),
@@ -36,7 +40,7 @@ describe('Round 3.5 — Llunevie-Form Featured Showcase (Block R3.5-1)', () => {
   });
 });
 
-describe('Round 3.5 — Compositor-Driven 60fps Scroll Dismissal (Block R3.5-2)', () => {
+describe('Round 3.6 — Compositor Dismissal & Hero Relocation (Block R3.6-2)', () => {
   const feedCode = read('src/components/feed/release-feed.tsx');
 
   it('release-feed contains zero setState on scroll and zero marginBottom reflow', () => {
@@ -54,9 +58,10 @@ describe('Round 3.5 — Compositor-Driven 60fps Scroll Dismissal (Block R3.5-2)'
     expect(feedCode).toContain('target.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`');
   });
 
-  it('has tightened hero intro spacing and balanced section gaps', () => {
-    expect(feedCode).toContain('max-w-3xl lg:max-w-4xl space-y-2 sm:space-y-2.5');
-    expect(feedCode).toContain('!mt-5');
+  it('has slim masthead strip and relocated editorial identity banner', () => {
+    expect(feedCode).toContain('data-testid="hero-masthead-strip"');
+    expect(feedCode).toContain('data-testid="editorial-identity-banner"');
+    expect(feedCode).toContain('!mt-2 sm:!mt-2.5');
     expect(feedCode).toContain('!mt-10 sm:!mt-14');
   });
 });
