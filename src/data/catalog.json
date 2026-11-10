@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-10T01:23:52.000Z",
+  "lastUpdated": "2026-11-10T14:36:34.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -495,7 +495,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-11",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Takeru Hokazono"
       ],
@@ -691,7 +691,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-07",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 40000,
       "authors": [
         "Kafka Asagiri"
       ],
@@ -2097,7 +2097,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 36000,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -7484,7 +7484,7 @@
         "Komik"
       ],
       "isbn13": "9786347574688",
-      "synopsis": "Phantom Busters terancam bubar!? Jika dalam jangka waktu tertentu Phanbus tidak berhasil mendapatkan guru pembimbing, mereka akan digabung dengan Klub Penelitian Okultisme yang super aneh!? Saat mereka kebingungan dan tidak tahu lagi harus berbuat apa, tiba-tiba guru chunibyo yang mengaku pernah menyelamatkan dunia ditugaskan di sekolah Mogari dkk…!?\n\nKeunggulan Buku:\n\n- Peringkat 2 di daftar rekomendasi pegawai toko buku 2025, peringkat 4 di polling Anime Japan 2025, serta dua kali masuk nominasi Next Manga Award (peringkat 19 pada 2024 dan 14 pada 2025).\n\n- Cerita komedi sekelompok pelajar remaja berlatar Kamakura yang fresh dan kekinian.\n\n- Banyak yg menantikan animenya.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "synopsis": "Phantom Busters terancam bubar!? Jika dalam jangka waktu tertentu Phanbus tidak berhasil mendapatkan guru pembimbing, mereka akan digabung dengan Klub Penelitian Okultisme yang super aneh!? Saat mereka kebingungan dan tidak tahu lagi harus berbuat apa, tiba-tiba guru chunibyo yang mengaku pernah menyelamatkan dunia ditugaskan di sekolah Mogari dkk…!?\n\nKeunggulan Buku:\n\n- Peringkat 2 di daftar rekomendasi pegawai toko buku 2025, peringkat 4 di polling Anime Japan 2025, serta dua kali masuk nominasi Next Manga Award (peringkat 19 pada 2024 dan 14 pada 2025).\n\n- Cerita komedi sekelompok pelajar remaja berlatar Kamakura yang fresh dan kekinian.\n\n- Banyak yg menantikan animenya.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nPilihan Edisi & Set Resmi: Regular, Special Set",
       "gramediaUrl": "https://www.gramedia.com/products/phantom-busters-vol-4",
       "author": "Neoshoco",
       "format": "MANGA",
@@ -7496,7 +7496,22 @@
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null,
-      "categorySlugs": "buku/komik/manga/komedi"
+      "categorySlugs": "buku/komik/manga/komedi",
+      "availableEditions": [
+        {
+          "name": "Regular",
+          "price": 65000,
+          "gramediaUrl": "https://www.gramedia.com/products/phantom-busters-vol-4"
+        },
+        {
+          "name": "Special Set",
+          "price": 270000,
+          "gramediaUrl": "https://www.gramedia.com/products/phantom-busters-vol-4-special-set"
+        }
+      ],
+      "foldedVariantSlugs": [
+        "phantom-busters-vol-4-special-set"
+      ]
     },
     {
       "id": "pub_light_novel_aku_dimanjakan_tetanggaku_yang_seperti_malaikat_4",
@@ -9315,7 +9330,7 @@
         "Komik"
       ],
       "isbn13": "9786347574145",
-      "synopsis": "Alma terlibat dalam pertarungan sengit melawan Utsuro, manusia yang jadi maga setelah tewas kehabisan darah. Tapi Alma menyadari sesuatu tentang bilah pisau cinta melenceng yang Utsuro ayunkan padanya!\n\nKemudian datanglah permohonan pengungkapan kasus kematian misterius yang menimpa sebuah perusahaan jasa pembongkaran. Tao dan Alma yang menduga adanya hubungan antara kasus tersebut dengan kasus mayat janggal mendatangi wastu tempat kejadian. Namun di sana, mereka bertemu seseorang…\n\nKeunggulan Buku:\n\n- Mengambil tema aksi dan supernatural yang dibalut dengan ilustrasi memukau membuat komik ini menarik untuk dibaca.\n\n- Desain karakter unik dan menawan yang sangat memanjakan mata, serta watak para tokoh yang mudah disukai banyak kalangan.\n\n- Menempati posisi ke-9 di Next Manga Award 2023, posisi ke-5 Recommended Comics of 2024 Chosen by Nationwide Bookstore Employees, dan posisi ke-7 Best Selling New Manga 2022.\n\n- Menjadi salah satu judul komik yang adaptasi animasinya sangat ditunggu para pembaca.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "synopsis": "Alma terlibat dalam pertarungan sengit melawan Utsuro, manusia yang jadi maga setelah tewas kehabisan darah. Tapi Alma menyadari sesuatu tentang bilah pisau cinta melenceng yang Utsuro ayunkan padanya!\n\nKemudian datanglah permohonan pengungkapan kasus kematian misterius yang menimpa sebuah perusahaan jasa pembongkaran. Tao dan Alma yang menduga adanya hubungan antara kasus tersebut dengan kasus mayat janggal mendatangi wastu tempat kejadian. Namun di sana, mereka bertemu seseorang…\n\nKeunggulan Buku:\n\n- Mengambil tema aksi dan supernatural yang dibalut dengan ilustrasi memukau membuat komik ini menarik untuk dibaca.\n\n- Desain karakter unik dan menawan yang sangat memanjakan mata, serta watak para tokoh yang mudah disukai banyak kalangan.\n\n- Menempati posisi ke-9 di Next Manga Award 2023, posisi ke-5 Recommended Comics of 2024 Chosen by Nationwide Bookstore Employees, dan posisi ke-7 Best Selling New Manga 2022.\n\n- Menjadi salah satu judul komik yang adaptasi animasinya sangat ditunggu para pembaca.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nPilihan Edisi & Set Resmi: Regular, Special Set",
       "gramediaUrl": "https://www.gramedia.com/products/gokurakugai-vol-5",
       "author": "Yuto Sano",
       "format": "MANGA",
@@ -9327,7 +9342,22 @@
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null,
-      "categorySlugs": "buku/komik/manga/petualangan"
+      "categorySlugs": "buku/komik/manga/petualangan",
+      "availableEditions": [
+        {
+          "name": "Regular",
+          "price": 65000,
+          "gramediaUrl": "https://www.gramedia.com/products/gokurakugai-vol-5"
+        },
+        {
+          "name": "Special Set",
+          "price": 250,
+          "gramediaUrl": "https://www.gramedia.com/products/gokurakugai-vol-5-special-set"
+        }
+      ],
+      "foldedVariantSlugs": [
+        "gokurakugai-vol-5-special-set"
+      ]
     },
     {
       "id": "pub_qed_iff_27",
@@ -15493,7 +15523,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 75000,
       "isBindUp": true,
       "bindUpKind": "CURATED",
@@ -17933,7 +17963,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -97109,7 +97139,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2019-04-03",
       "isWednesdayRelease": false,
       "currentPrice": 26000,
@@ -100869,7 +100899,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 36000,
       "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
@@ -101424,7 +101454,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-28",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 33750,
       "originalPrice": 45000,
       "authors": [
         "Yuki TABATA"
@@ -102372,7 +102402,7 @@
       "genres": [
         "Manga"
       ],
-      "isbn13": "",
+      "isbn13": "9786023395989",
       "synopsis": "Takeshi Aiza berkembang pesat karena persaingannya dengan Kousei Arima.\n\nDi mata semua orang, Aiza adalah nomor 1! Mereka yakin Aiza akan mengalahkan Arima di kompetisi musik Maihou.\n\nDi kompetisi tersebut, Arima membawakan lagu pilihan The Well-Tempered Clavier Book 1 No. 15 dan Etude Op.25-5.\n\nNamun, tiba-tiba Arima tidak bisa mendengar suara pianonya!?\n\n****\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar lewat lembaran buku? Membaca bukan hanya kegiatan rutin, tetapi juga petualangan tak terbatas ke dalam imajinasi dan pengetahuan.\n\nMembaca mengasah pikiran, membuka wawasan, dan memperkaya kosakata. Ini adalah pintu menuju dunia di luar kita yang tak terbatas.\n\nTetapkan waktu khusus untuk membaca setiap hari. Dari membaca sebelum tidur hingga menyempatkan waktu di pagi hari, kebiasaan membaca dapat dibentuk dengan konsistensi.\n\nPilih buku sesuai minat dan level literasi. Mulailah dengan buku yang sesuai dengan keinginan dan kemampuan membaca.\n\nTemukan tempat yang tenang dan nyaman untuk membaca. Lampu yang cukup, kursi yang nyaman, dan sedikit musik pelataran bisa menciptakan pengalaman membaca yang lebih baik.\n\nBuat catatan atau jurnal tentang buku yang telah Anda baca. Tuliskan pemikiran, kesan, dan pelajaran yang Anda dapatkan.",
       "gramediaUrl": "https://www.gramedia.com/products/your-lie-in-april-vol-4",
       "classificationStatus": "ACCEPTED",
@@ -102790,7 +102820,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-11-04",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 33750,
       "originalPrice": 45000,
       "authors": [
         "Yuto Suzuki"
@@ -124591,6 +124621,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_kagurabachi_07_1794321394",
+      "bookId": "pub_kagurabachi_07",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-10",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_vagabond_bind_up_vol_03_init",
       "bookId": "pub_vagabond_bind_up_vol_03",
       "price": 138000,
@@ -124824,6 +124865,17 @@
       "currentPrice": 50000,
       "originalPrice": 50000,
       "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_bungo_stray_dogs_19_1794321394",
+      "bookId": "pub_level_comic_bungo_stray_dogs_19",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-10",
       "source": "gramedia_api"
@@ -127818,6 +127870,17 @@
       "currentPrice": 45000,
       "originalPrice": 45000,
       "previousPrice": 36000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_42_2026_1794321394",
+      "bookId": "pub_one_piece_42_2026",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-10",
       "source": "gramedia_api"
@@ -152814,6 +152877,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_slam_dunk_new_edition_08_1794320892",
+      "bookId": "pub_slam_dunk_new_edition_08",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 75000,
+      "previousPrice": 37500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-10",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_slam_dunk_new_edition_07_init",
       "bookId": "pub_slam_dunk_new_edition_07",
       "price": 67500,
@@ -156409,6 +156483,17 @@
       "previousPrice": 24000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-07",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_moriarty_the_patriot_20_1794320899",
+      "bookId": "pub_moriarty_the_patriot_20",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "previousPrice": 24000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-10",
       "source": "gramedia_api_refresh"
     },
     {
@@ -332206,6 +332291,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_one_piece_43_2026_1794321394",
+      "bookId": "pub_one_piece_43_2026",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-10",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_regarding_reincarnated_to_slime_21_init",
       "bookId": "pub_regarding_reincarnated_to_slime_21",
       "price": 35000,
@@ -347986,6 +348082,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_dragon_ball_super_volume_2_1794321242",
+      "bookId": "pub_dragon_ball_super_volume_2",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "previousPrice": 26000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-10",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_dragon_ball_super_vol_3_init",
       "bookId": "pub_dragon_ball_super_vol_3",
       "price": 30000,
@@ -351786,6 +351893,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_black_clover_29_1794321394",
+      "bookId": "pub_black_clover_29",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-10",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_the_cute_british_girl_next_door_and_her_sister_2_init",
       "bookId": "pub_the_cute_british_girl_next_door_and_her_sister_2",
       "price": 45000,
@@ -352235,6 +352353,17 @@
       "currentPrice": 45000,
       "originalPrice": 45000,
       "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sakamoto_days_24_1794321394",
+      "bookId": "pub_sakamoto_days_24",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-10",
       "source": "gramedia_api"
@@ -353531,6 +353660,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1794321394",
+      "startedAt": "2026-11-10T14:25:09.000Z",
+      "finishedAt": "2026-11-10T14:36:34.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 622,
+      "productsUpdated": 845,
+      "productsInserted": 4,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 684840,
+      "success": true
+    },
+    {
       "id": "sync_1794273832",
       "startedAt": "2026-11-10T01:13:37.000Z",
       "finishedAt": "2026-11-10T01:23:52.000Z",
@@ -353908,26 +354057,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 550699,
-      "success": true
-    },
-    {
-      "id": "sync_1793747163",
-      "startedAt": "2026-11-03T22:56:43.000Z",
-      "finishedAt": "2026-11-03T23:06:03.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1522,
-      "productsAccepted": 1262,
-      "productsRejected": 449,
-      "productsUpdated": 1025,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 559950,
       "success": true
     }
   ]
