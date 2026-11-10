@@ -95,6 +95,30 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     }
   };
 
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mediaQuery.matches) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const progress = Math.min(1, Math.max(0, window.scrollY / 260));
+          setScrollProgress(progress);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   // Filter States
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
@@ -262,7 +286,17 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   return (
     <div className="space-y-16 sm:space-y-20" onClickCapture={persistViewState}>
       {/* 1. HERO EDITORIAL INTRODUCTION */}
-      <section className="space-y-4 pt-2 sm:pt-4 lg:pt-8">
+      <section
+        className="space-y-4 pt-2 sm:pt-4 lg:pt-8 transition-transform ease-out will-change-transform"
+        style={
+          scrollProgress > 0
+            ? {
+                transform: `translate3d(0, ${scrollProgress * 18}px, 0) scale(${1 - scrollProgress * 0.035})`,
+                opacity: 1 - scrollProgress * 0.45,
+              }
+            : undefined
+        }
+      >
         <div className="max-w-3xl lg:max-w-4xl space-y-3 lg:space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-xs shrink-0" />
@@ -310,7 +344,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       {/* 2. CURATED SPOTLIGHT SHOWCASE */}
       {activeSpotlight && (
         <section
-          className="space-y-3"
+          className="relative z-10 space-y-3"
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >

@@ -79,7 +79,7 @@ describe('Round 3 — profile menu + 4-tab navbar (S-06)', () => {
 describe('Round 3 — catalog hero restored (S-03, S-05)', () => {
   it('featured card is a glass card with ambient glow + floating badges', () => {
     const card = read('src/components/books/card-variants.tsx');
-    expect(card).toContain('rounded-3xl');
+    expect(card).toContain('rounded-[28px]');
     expect(card).toContain('blur-3xl');
     expect(card).toContain('SOROTAN UTAMA');
     expect(card).toContain('bg-accent text-white');

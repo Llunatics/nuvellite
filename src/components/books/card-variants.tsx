@@ -19,7 +19,7 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
   const wishlisted = isLoaded && isWishlisted(book.id);
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl">
+    <div className="relative z-10 overflow-hidden rounded-[28px] border border-white/[0.07] bg-surface/85 backdrop-blur-2xl px-5 py-6 sm:p-8 lg:p-10 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.6)]">
       {/* Ambient cover glow (Round 3, D.2) */}
       <div
         className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none -z-10"
@@ -27,9 +27,9 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
         aria-hidden="true"
       />
 
-      <div className="relative z-10 flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[260px_1fr] gap-8 lg:gap-12 items-center">
         {/* Cover column with ambient glow strictly behind cover container */}
-        <div className="relative shrink-0 z-0">
+        <div className="relative shrink-0 z-0 mx-auto md:mx-0 w-[196px] sm:w-[220px] md:w-[240px]">
           <div
             className="absolute -inset-4 bg-cover bg-center rounded-full blur-3xl opacity-15 pointer-events-none -z-10"
             style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
@@ -37,15 +37,15 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
           />
           <Link
             href={`/books/${book.slug}`}
-            className="relative z-10 aspect-[3/4.2] w-48 sm:w-56 lg:w-64 xl:w-72 shrink-0 bg-zinc-900 overflow-hidden rounded-2xl shadow-2xl group block"
+            className="relative z-10 aspect-[2/3] w-full bg-zinc-900 overflow-hidden rounded-2xl shadow-2xl group block"
             tabIndex={-1}
           >
             <CoverImage
               src={book.coverImage}
               alt={book.title}
-              width={224}
-              height={313}
-              sizes="(max-width: 640px) 176px, 224px"
+              width={240}
+              height={360}
+              sizes="(max-width: 640px) 196px, (max-width: 768px) 220px, 240px"
               priority
               imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
               fallbackIconClassName="w-12 h-12 text-editorial-faint"
@@ -68,10 +68,10 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
         </div>
 
         {/* Editorial Content */}
-        <div className="flex-1 space-y-5 text-left w-full">
-          <div className="space-y-3">
+        <div className="flex-1 text-left w-full">
+          <div>
             {/* Meta Row */}
-            <div className="flex flex-wrap items-center gap-2.5 text-xs font-mono text-editorial-muted">
+            <div className="mt-5 md:mt-0 flex flex-wrap items-center gap-2 text-xs font-mono text-editorial-muted">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-accent/10 text-accent text-[9px] font-semibold tracking-wider uppercase border border-accent/20">
                 <Sparkles className="w-3 h-3" />
                 <span>SOROTAN UTAMA</span>
@@ -87,79 +87,78 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
             </div>
 
             {/* Title */}
-            <Link href={`/books/${book.slug}`} className="block">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-editorial font-normal text-editorial-title hover:text-accent transition-colors leading-[1.15] tracking-tight">
+            <Link href={`/books/${book.slug}`} className="block mt-3">
+              <h2 className="font-editorial text-2xl sm:text-3xl lg:text-4xl font-normal tracking-tight text-editorial-title hover:text-accent transition-colors leading-[1.15]">
                 {book.title}
               </h2>
             </Link>
 
             {book.authors?.length > 0 && (
-              <p className="text-xs text-editorial-muted font-sans">
+              <p className="mt-1.5 text-sm text-editorial-body font-sans">
                 Karya <span className="text-editorial-title font-medium">{book.authors.join(', ')}</span>
               </p>
             )}
           </div>
 
           {book.synopsis && (
-            <p className="text-xs sm:text-sm text-editorial-body/90 line-clamp-3 leading-relaxed font-sans max-w-2xl">
+            <p className="mt-3 text-xs sm:text-sm text-editorial-body/90 line-clamp-3 leading-relaxed font-sans max-w-2xl">
               {cleanStorySynopsis(book.synopsis)}
             </p>
           )}
 
-          {/* Pricing & Actions */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <div>
-              <span className="text-[9px] font-mono uppercase tracking-widest text-editorial-faint font-medium block">
-                {book.originalPrice && book.originalPrice > book.currentPrice ? 'Harga Promo' : 'Harga Normal'}
+          {/* Pricing */}
+          <div className="mt-4">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-editorial-muted font-medium block">
+              {book.originalPrice && book.originalPrice > book.currentPrice ? 'HARGA PROMO' : 'HARGA NORMAL'}
+            </span>
+            <div className="flex items-baseline gap-2 mt-0.5">
+              <span className="font-mono text-2xl sm:text-3xl font-bold text-editorial-title tracking-tight">
+                {formatRupiah(book.currentPrice)}
               </span>
-              <div className="flex items-baseline gap-2 mt-0.5">
-                <span className="text-2xl sm:text-3xl font-mono font-bold text-editorial-title tracking-tight">
-                  {formatRupiah(book.currentPrice)}
+              {book.originalPrice && book.originalPrice > book.currentPrice && (
+                <span className="text-xs font-mono text-editorial-faint line-through">
+                  {formatRupiah(book.originalPrice)}
                 </span>
-                {book.originalPrice && book.originalPrice > book.currentPrice && (
-                  <span className="text-xs font-mono text-editorial-faint line-through">
-                    {formatRupiah(book.originalPrice)}
-                  </span>
-                )}
-              </div>
+              )}
             </div>
+          </div>
 
-            <div className="flex items-center gap-2.5 ml-auto sm:ml-4">
-              <Link
-                href={`/books/${book.slug}`}
-                className="px-5 py-2.5 rounded-full bg-[rgb(var(--editorial-title))] text-[rgb(var(--bg-rgb))] hover:opacity-90 text-xs font-medium shadow-md transition-all flex items-center gap-2 active:scale-95"
-              >
-                <span>Detail Buku</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+          {/* Actions */}
+          <div className="mt-5 flex flex-wrap items-center gap-2.5">
+            <Link
+              href={`/books/${book.slug}`}
+              className="rounded-full bg-white text-zinc-950 font-semibold px-5 py-2.5 text-sm hover:bg-zinc-200 transition-colors inline-flex items-center gap-2 shadow-md active:scale-95"
+            >
+              <span>Detail Buku</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
 
-              <button
-                type="button"
-                onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
-                className={`px-4 py-2.5 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 active:scale-95 ${
-                  owned
-                    ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                    : 'bg-white/[0.06] hover:bg-white/[0.1] text-editorial-muted hover:text-editorial-title border border-white/[0.08]'
-                }`}
-              >
-                {owned ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Plus className="w-3.5 h-3.5" />}
-                <span>{owned ? 'Dimiliki' : 'Koleksi'}</span>
-              </button>
+            <button
+              type="button"
+              onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
+              className={`rounded-full px-4 py-2.5 text-sm font-medium transition-colors inline-flex items-center gap-1.5 active:scale-95 border ${
+                owned
+                  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30 font-semibold'
+                  : 'bg-white/[0.06] hover:bg-white/[0.1] text-editorial-body hover:text-editorial-title border-white/[0.08]'
+              }`}
+            >
+              {owned ? <Check className="w-4 h-4 text-emerald-400" /> : <Plus className="w-4 h-4" />}
+              <span>{owned ? 'Dimiliki' : '+ Koleksi'}</span>
+            </button>
 
-              <button
-                type="button"
-                onClick={() => toggleWishlist(book.id, book.seriesId || undefined)}
-                className={`w-9 h-9 rounded-full flex items-center justify-center transition-all active:scale-95 ${
-                  wishlisted
-                    ? 'bg-accent/20 text-accent border border-accent/40'
-                    : 'bg-white/[0.06] hover:bg-white/[0.1] text-editorial-muted hover:text-editorial-title border border-white/[0.08]'
-                }`}
-                aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
-                title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
-              >
-                <Bookmark className={`w-4 h-4 ${wishlisted ? 'fill-current' : ''}`} />
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => toggleWishlist(book.id, book.seriesId || undefined)}
+              className={`h-10 w-10 rounded-full flex items-center justify-center transition-colors active:scale-95 border ${
+                wishlisted
+                  ? 'bg-accent/20 text-accent border-accent/40 shadow-xs'
+                  : 'bg-white/[0.06] hover:bg-white/[0.1] text-editorial-muted hover:text-editorial-title border-white/[0.08]'
+              }`}
+              aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+              title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+            >
+              <Bookmark className={`w-4 h-4 ${wishlisted ? 'fill-current' : ''}`} />
+            </button>
           </div>
         </div>
       </div>
