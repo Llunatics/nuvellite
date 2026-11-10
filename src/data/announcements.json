@@ -113,6 +113,15 @@
         "evidenceKind": "NEWS_REPORT",
         "evidenceNote": "Reportase Comifuro 23 Day 1 oleh Nippon Club (liputan acara & panel penerbit; URL terverifikasi 10 Nov 2026).",
         "id": "src_tetralogy_nipponclub_cf23"
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "KAORI Nusantara — Liputan Utama Comifuro 23",
+        "url": "https://www.kaorinusantara.or.id/newsline/248051/comic-frontier-23-hadir-kembali-semarakkan-budaya-doujinshi-di-indonesia",
+        "observedAt": "2026-11-02",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Liputan utama KAORI Nusantara atas Comifuro 23, acara tempat panel PGI mengumumkan slate ini (URL terverifikasi 10 Nov 2026).",
+        "id": "src_tetralogy_kaori_cf23"
       }
     ],
     "state": "CORROBORATED",
@@ -163,6 +172,15 @@
         "evidenceKind": "NEWS_REPORT",
         "evidenceNote": "Reportase Comifuro 23 Day 1 oleh Nippon Club (liputan acara & panel penerbit; URL terverifikasi 10 Nov 2026).",
         "id": "src_billy-bat_nipponclub_cf23"
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "KAORI Nusantara — Liputan Utama Comifuro 23",
+        "url": "https://www.kaorinusantara.or.id/newsline/248051/comic-frontier-23-hadir-kembali-semarakkan-budaya-doujinshi-di-indonesia",
+        "observedAt": "2026-11-02",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Liputan utama KAORI Nusantara atas Comifuro 23, acara tempat panel PGI mengumumkan slate ini (URL terverifikasi 10 Nov 2026).",
+        "id": "src_billy-bat_kaori_cf23"
       }
     ],
     "state": "CORROBORATED",
@@ -211,6 +229,15 @@
         "evidenceKind": "NEWS_REPORT",
         "evidenceNote": "Reportase Comifuro 23 Day 1 oleh Nippon Club (liputan acara & panel penerbit; URL terverifikasi 10 Nov 2026).",
         "id": "src_nippon-sangoku_nipponclub_cf23"
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "KAORI Nusantara — Liputan Utama Comifuro 23",
+        "url": "https://www.kaorinusantara.or.id/newsline/248051/comic-frontier-23-hadir-kembali-semarakkan-budaya-doujinshi-di-indonesia",
+        "observedAt": "2026-11-02",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Liputan utama KAORI Nusantara atas Comifuro 23, acara tempat panel PGI mengumumkan slate ini (URL terverifikasi 10 Nov 2026).",
+        "id": "src_nippon-sangoku_kaori_cf23"
       }
     ],
     "state": "CORROBORATED",

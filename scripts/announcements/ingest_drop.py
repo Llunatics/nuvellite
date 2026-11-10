@@ -171,24 +171,170 @@ def run_poll() -> int:
     return 0
 
 
+PUBLISHERS = {
+    "pgi": ("pub_pgi", "PGI"),
+    "mnc": ("pub_mnc", "m&c!"),
+    "elex": ("pub_elex", "Elex Media"),
+}
+HASH_REGISTRY_PATH = HERE / "processed-images.json"
+
+
+def _slugify(text: str) -> str:
+    return normalize_series_name(text)
+
+
+def build_candidate(
+    *,
+    title: str,
+    publisher_key: str,
+    category: str,
+    confidence: float,
+    url: str | None,
+    event: str | None,
+    author: str | None = None,
+    original_title: str | None = None,
+    cover_image: str | None = None,
+    release_text: str | None = None,
+    evidence_note: str | None = None,
+) -> dict:
+    publisher_id, short_name = PUBLISHERS[publisher_key]
+    slug = _slugify(title)
+    today = date.today().isoformat()
+    source = {
+        "id": f"src_drop_{slug}"[:64],
+        "tier": "TIER_3_COMMUNITY_EVENT",
+        "sourceLabel": "Manual drop (ingest_drop.py)",
+        "url": url or "",
+        "observedAt": today,
+        "evidenceKind": "STAGE_SLIDE",
+        "evidenceNote": evidence_note or "Dropped via ingest_drop.py CLI",
+    }
+    return {
+        "id": f"ann_{publisher_id.removeprefix('pub_')}_{slug}"[:80],
+        "slug": slug,
+        "title": title,
+        "originalTitle": original_title,
+        "authors": [author] if author else [],
+        "publisherId": publisher_id,
+        "publisherShortName": short_name,
+        "category": category,
+        "editionKind": "REGULAR",
+        "state": "SPOTTED",
+        "confidence": confidence,
+        "eventOrCampaign": event,
+        "expectedReleaseWindow": release_text,
+        "coverImage": cover_image,
+        "firstSeenAt": today,
+        "lastUpdatedAt": today,
+        "sources": [source] if url else [],
+    }
+
+
+def run_drop(args) -> int:
+    """One-off drop assembly: image/title -> extract -> resolve -> merge.
+
+    a) dHash the image and check the local hash registry: a near-duplicate
+       of an already-processed image appends its source to the existing
+       record instead of re-running extraction.
+    b) Slice + Gemini-extract when an API key is configured; otherwise fall
+       back to the manual --title override.
+    c) Resolve AniList aliases per candidate, then merge_candidate routes
+       each record to announcements.json or the human-confirm queue.
+    """
+    sys.path.insert(0, str(HERE))
+    import vision_extractor
+
+    if not args.title and not args.image:
+        print("error: a drop needs --title and/or --image", file=sys.stderr)
+        return 2
+
+    registry: dict = load_json(HASH_REGISTRY_PATH, {})
+    if args.image:
+        image_hash = vision_extractor.dhash(args.image)
+        for known_hash, record_id in registry.items():
+            if vision_extractor.hamming_distance(image_hash, int(known_hash)) <= (
+                vision_extractor.HAMMING_DEDUPE_THRESHOLD
+            ):
+                print(f"duplicate image (hamming<={vision_extractor.HAMMING_DEDUPE_THRESHOLD}) "
+                      f"of {record_id}; skipping extraction")
+                return 0
+        registry[str(image_hash)] = args.title or "pending"
+
+    candidates: list[dict] = []
+    extraction_status = "manual"
+    if args.image and not args.title:
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tiles = vision_extractor.ocr_gate_and_slice(args.image, tmp)
+            extraction = vision_extractor.vision_extract(tiles, args.caption or "")
+        extraction_status = extraction.get("status", "error")
+        if extraction_status == "ok":
+            for cand in vision_extractor.expand_and_resolve(extraction):
+                candidates.append(
+                    build_candidate(
+                        title=cand["title"],
+                        publisher_key=args.publisher,
+                        category="Light Novel" if cand.get("formatHint") == "Light Novel" else "Manga",
+                        confidence=cand["confidence"],
+                        url=args.url,
+                        event=args.event,
+                        author=cand.get("author"),
+                        original_title=cand.get("originalTitle"),
+                        cover_image=cand.get("coverImage"),
+                        release_text=cand.get("targetReleaseText"),
+                        evidence_note=cand.get("visualEvidence"),
+                    )
+                )
+    if not candidates:
+        # Offline / no-key path (or explicit manual title): resolve aliases
+        # (graceful None offline) and build a single candidate. Default
+        # confidence is low on purpose — it routes to the review queue.
+        aliases = vision_extractor.resolve_work_aliases(
+            args.title or "",
+            medium="LIGHT_NOVEL" if args.category == "Light Novel" else "MANGA",
+        )
+        candidates.append(
+            build_candidate(
+                title=args.title or "Untitled drop",
+                publisher_key=args.publisher,
+                category=args.category,
+                confidence=args.confidence,
+                url=args.url,
+                event=args.event,
+                author=args.author,
+                original_title=aliases.get("romaji"),
+                cover_image=aliases.get("coverImage"),
+                evidence_note=f"Manual drop; extraction={extraction_status}",
+            )
+        )
+
+    for candidate in candidates:
+        outcome = merge_candidate(candidate)
+        print(f"drop {candidate['id']}: {outcome} (confidence {candidate['confidence']})")
+    save_json(HASH_REGISTRY_PATH, registry)
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", help="Source post URL for a manual drop")
     parser.add_argument("--image", help="Local image path (stage photo / PDKT teaser)")
+    parser.add_argument("--title", help="Manual title override (offline drops)")
+    parser.add_argument("--publisher", choices=sorted(PUBLISHERS), default="pgi")
+    parser.add_argument("--category", choices=("Manga", "Light Novel"), default="Manga")
+    parser.add_argument("--event", help="Event/campaign label, e.g. 'Comifuro 23'")
+    parser.add_argument("--author", help="Author/illustrator name")
+    parser.add_argument("--caption", help="Post caption accompanying an image drop")
+    parser.add_argument("--confidence", type=float, default=0.5)
     parser.add_argument("--poll", action="store_true", help="Run the scheduled polling pass")
     args = parser.parse_args()
 
     if args.poll:
         return run_poll()
-    if not args.url and not args.image:
-        parser.error("provide --url, --image, or --poll")
-    # The building blocks exist (adapters + vision_extractor + the
-    # merge_candidate dedupe/queue logic above); assembling the one-off
-    # drop path (fetch post -> vision_extract -> candidate -> merge) is
-    # the remaining wiring step.
-    print("drop ingestion: building blocks ready; drop assembly not wired yet")
-    print(f"  url={args.url!r} image={args.image!r}")
-    return 0
+    if not args.url and not args.image and not args.title:
+        parser.error("provide --url, --image, --title, or --poll")
+    return run_drop(args)
 
 
 if __name__ == "__main__":

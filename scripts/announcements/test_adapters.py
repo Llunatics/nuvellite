@@ -141,6 +141,88 @@ class TestVisionExtractor(unittest.TestCase):
         outcome = vision_extractor.vision_extract([], "caption")
         self.assertEqual(outcome["status"], "offline_in_build_env")
 
+    def test_resolve_work_aliases_parses_graphql(self):
+        import io
+        import urllib.request
+        from unittest import mock
+
+        payload = json.dumps(
+            {
+                "data": {
+                    "Media": {
+                        "id": 12345,
+                        "title": {"romaji": "Billy Bat", "english": "Billy Bat", "native": "ビリーバット"},
+                        "synonyms": ["BILLY BAT"],
+                        "coverImage": {"large": "https://example.com/billy.jpg"},
+                    }
+                }
+            }
+        ).encode("utf-8")
+
+        class FakeResponse(io.BytesIO):
+            status = 200
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *exc):
+                return False
+
+        with mock.patch.object(urllib.request, "urlopen", return_value=FakeResponse(payload)):
+            aliases = vision_extractor.resolve_work_aliases("Billy Bat")
+        self.assertEqual(aliases["anilistId"], 12345)
+        self.assertEqual(aliases["native"], "ビリーバット")
+        self.assertEqual(aliases["coverImage"], "https://example.com/billy.jpg")
+
+    def test_resolve_work_aliases_offline_fallback(self):
+        import urllib.error
+        import urllib.request
+        from unittest import mock
+
+        with mock.patch.object(
+            urllib.request, "urlopen", side_effect=urllib.error.URLError("offline")
+        ):
+            aliases = vision_extractor.resolve_work_aliases("Billy Bat")
+        self.assertIsNone(aliases["anilistId"])
+        self.assertEqual(aliases["synonyms"], [])
+
+    def test_expand_and_resolve_tetralogy(self):
+        from unittest import mock
+
+        extraction = {
+            "extractedItems": [
+                {
+                    "isGroupOrTetralogySlide": True,
+                    "groupWorkTitles": ["Title A", "Title B"],
+                    "formatHint": "Light Novel",
+                    "confidence": 0.9,
+                    "authorOrIllustrator": "Mei Hachimoku",
+                },
+                {
+                    "isGroupOrTetralogySlide": False,
+                    "recognizedWorkTitleRomajiOrEn": "Teaser X",
+                    "formatHint": "Manga",
+                    "confidence": 0.5,
+                },
+            ]
+        }
+        with mock.patch.object(
+            vision_extractor,
+            "resolve_work_aliases",
+            side_effect=lambda title, medium="MANGA": {
+                "anilistId": 1,
+                "romaji": title,
+                "english": None,
+                "native": None,
+                "synonyms": [],
+                "coverImage": None,
+            },
+        ):
+            candidates = vision_extractor.expand_and_resolve(extraction)
+        self.assertEqual(len(candidates), 3)
+        self.assertFalse(candidates[0]["unresolved"])
+        self.assertTrue(candidates[2]["unresolved"])  # 0.5 < 0.70 ceiling
+
 
 if __name__ == "__main__":
     unittest.main()
