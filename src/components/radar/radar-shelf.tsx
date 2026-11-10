@@ -10,12 +10,12 @@ export function RadarShelf({ views }: { views: AnnouncementView[] }) {
   return (
     <section className="mb-10">
       <div className="mb-4 flex items-end justify-between gap-4">
-        <h2 className="font-sans text-lg font-semibold text-zinc-50">
+        <h2 className="font-editorial text-xl sm:text-2xl font-normal text-editorial-title tracking-tight">
           Radar Lisensi &amp; Pengumuman Baru
         </h2>
         <Link
           href="/radar"
-          className="shrink-0 font-mono text-xs text-zinc-400 transition-colors hover:text-accent"
+          className="shrink-0 font-mono text-xs text-editorial-muted transition-colors hover:text-accent"
         >
           Semua Pengumuman →
         </Link>

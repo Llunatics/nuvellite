@@ -98,20 +98,20 @@ export function CoverImage({
     const initials = extractInitials(alt);
     if (isCompact) {
       return (
-        <div className="w-full h-full flex items-center justify-center bg-zinc-900 border border-white/[0.08] select-none">
-          <span className="font-mono text-[10px] font-semibold tracking-wider text-zinc-400">
+        <div className="w-full h-full flex items-center justify-center bg-surface-sunken border border-white/[0.08] select-none">
+          <span className="font-mono text-[10px] font-semibold tracking-wider text-editorial-muted">
             {initials}
           </span>
         </div>
       );
     }
     return (
-      <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-zinc-950 border border-white/[0.08] select-none">
+      <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-surface-sunken border border-white/[0.08] select-none">
         <span className="block h-px w-6 bg-white/20 mb-2.5" aria-hidden="true" />
-        <span className="font-mono text-lg font-semibold tracking-wider text-zinc-200 leading-none">
+        <span className="font-mono text-lg font-semibold tracking-wider text-editorial-title leading-none">
           {initials}
         </span>
-        <span className="text-[10px] text-zinc-500 line-clamp-3 leading-snug mt-2 px-1 font-sans">
+        <span className="text-[10px] text-editorial-faint line-clamp-3 leading-snug mt-2 px-1 font-sans">
           {alt}
         </span>
       </div>
@@ -119,7 +119,7 @@ export function CoverImage({
   }
 
   return (
-    <div className="relative w-full h-full overflow-hidden bg-zinc-900/60">
+    <div className="relative w-full h-full overflow-hidden bg-surface-sunken">
       {!loaded && <div aria-hidden="true" className="absolute inset-0 cover-skeleton-flat" />}
       <Image
         ref={imgRef}

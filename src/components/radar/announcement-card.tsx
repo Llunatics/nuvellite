@@ -40,7 +40,7 @@ export function AnnouncementCard({
         >
           {view.badgeLabel}
         </span>
-        <span className="font-mono text-[11px] text-zinc-500">
+        <span className="font-mono text-[11px] text-editorial-faint">
           {formatDateId(a.firstSeenAt)}
         </span>
       </div>
@@ -56,18 +56,18 @@ export function AnnouncementCard({
           />
         </div>
         <div className="min-w-0">
-          <h3 className="font-sans font-semibold text-zinc-50 leading-snug">
+          <h3 className="font-sans font-semibold text-editorial-title leading-snug">
             {a.title}
           </h3>
           {a.originalTitle && (
-            <p className="text-xs text-zinc-500 truncate" title={a.originalTitle}>
+            <p className="text-xs text-editorial-faint truncate" title={a.originalTitle}>
               {a.originalTitle}
             </p>
           )}
-          <p className="mt-1 text-xs text-zinc-400">
+          <p className="mt-1 text-xs text-editorial-muted">
             {a.authors.length > 0 ? a.authors.join(', ') : '—'}
           </p>
-          <p className="text-xs text-zinc-500">
+          <p className="text-xs text-editorial-faint">
             {a.publisherShortName}
             {a.imprint ? ` · ${a.imprint}` : ''} · {a.category}
             {a.expectedReleaseWindow ? ` · ${a.expectedReleaseWindow}` : ''}
@@ -82,7 +82,7 @@ export function AnnouncementCard({
 
       {!compact && (
         <footer className="flex flex-wrap items-center gap-1.5 border-t border-white/[0.06] pt-3">
-          <span className="font-mono text-[10px] uppercase tracking-wider text-zinc-500">
+          <span className="font-mono text-[10px] uppercase tracking-wider text-editorial-faint">
             Sumber:
           </span>
           {a.sources.map((s) => (

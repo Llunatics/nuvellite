@@ -23,9 +23,10 @@ const PAGE_SIZE = 36;
 interface ReleaseFeedProps {
   initialBooks: Book[];
   publishers: Publisher[];
+  radarShelf?: React.ReactNode;
 }
 
-export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
+export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publishers, radarShelf }: ReleaseFeedProps) {
   // Curated spotlight items: the 5 newest releases with a cover and price.
   // NOTE: do NOT require `synopsis` here. The homepage feed uses the
   // lightweight listing data, which strips synopsis (see split-catalog.py),
@@ -451,6 +452,10 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           </div>
         </section>
       )}
+
+      {/* 4b. RADAR SHELF (Round 3: below the rails, per the D.3 heading order —
+          the catalog hero leads the page again, not the announcements) */}
+      {radarShelf}
 
       {/* 5. MAIN CATALOG ARCHIVE & COHESIVE CONTROLS */}
       <section ref={catalogRef} className="space-y-8 pt-4 scroll-mt-28">
