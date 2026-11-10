@@ -6,7 +6,7 @@ export default function RadarLoading() {
         <div className="mt-3 h-8 w-72 max-w-full border border-white/[0.06] bg-white/[0.03]" />
         <div className="mt-3 h-4 w-[65ch] max-w-full border border-white/[0.06] bg-white/[0.03]" />
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}

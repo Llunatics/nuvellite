@@ -20,7 +20,7 @@ export function RadarShelf({ views }: { views: AnnouncementView[] }) {
           Semua Pengumuman →
         </Link>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {views.map((v) => (
           <AnnouncementCard key={v.announcement.id} view={v} compact />
         ))}

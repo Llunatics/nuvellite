@@ -54,7 +54,7 @@ export function RadarList({
       </label>
 
       {visible.length > 0 ? (
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {visible.map((v) => (
             <AnnouncementCard key={v.announcement.id} view={v} />
           ))}
@@ -70,7 +70,7 @@ export function RadarList({
           <h2 className="font-mono text-xs uppercase tracking-wider text-zinc-500">
             Sudah Terbit
           </h2>
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {graduated.map((v) => (
               <AnnouncementCard key={v.announcement.id} view={v} />
             ))}
@@ -94,7 +94,7 @@ export function RadarList({
             </span>
           </button>
           {showStale && (
-            <div className="grid gap-4 border-t border-white/[0.06] p-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 border-t border-white/[0.06] p-4 sm:grid-cols-2 xl:grid-cols-3">
               {stale.map((v) => (
                 <AnnouncementCard key={v.announcement.id} view={v} />
               ))}
