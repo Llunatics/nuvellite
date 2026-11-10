@@ -77,12 +77,12 @@ describe('Round 3 — profile menu + 4-tab navbar (S-06)', () => {
 });
 
 describe('Round 3 — catalog hero restored (S-03, S-05)', () => {
-  it('featured card is a glass card with ambient glow + floating badges', () => {
+  it('featured card is a glass card with ambient glow + status pill', () => {
     const card = read('src/components/books/card-variants.tsx');
     expect(card).toContain('rounded-[28px]');
-    expect(card).toContain('blur-3xl');
-    expect(card).toContain('SOROTAN UTAMA');
-    expect(card).toContain('bg-accent text-white');
+    expect(card).toContain('blur-2xl');
+    expect(card).toContain('Sorotan Utama');
+    expect(card).toContain('bg-accent text-zinc-950');
   });
 
   it('radar state badges use the Round 3 palette, DATED_ISBN on accent', () => {

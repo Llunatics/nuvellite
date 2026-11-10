@@ -13,17 +13,17 @@ describe('Round 3.4 — Featured Showcase Scroll Physics (Block R3.4-1)', () => 
   const headerCode = read('src/components/layout/header.tsx');
   const globalsCss = read('src/app/globals.css');
 
-  it('release-feed uses coupled-kinematics law (collapsePx locked to visualBottomRise)', () => {
-    expect(feedCode).toContain('maxTranslateUp');
-    expect(feedCode).toContain('maxScaleReduction');
-    expect(feedCode).toContain('visualBottomRise = eased * maxTranslateUp + cardH * (eased * maxScaleReduction)');
-    expect(feedCode).toContain('collapsePx = Math.round(visualBottomRise)');
+  it('release-feed uses compositor-driven 60fps scroll dismissal without layout reflow', () => {
+    expect(feedCode).toContain('travelRange = 480');
+    expect(feedCode).toContain('0.5 * (1 - Math.cos(Math.PI * progress))');
+    expect(feedCode).toContain('translate3d(0, ${translateY}px, 0) scale(${scale})');
     expect(feedCode).toContain('data-testid="featured-showcase-card"');
   });
 
-  it('spotlight pagination dots live inside transform/clipped stage and fade early', () => {
-    expect(feedCode).toContain('dotsOpacity = Math.max(0, Number((1 - eased * 1.6).toFixed(3)))');
-    expect(feedCode).toContain('style={{ opacity: dismissState.dotsOpacity }}');
+  it('spotlight carousel dots are integrated inside media well in FeaturedReleaseCard', () => {
+    const cardCode = read('src/components/books/card-variants.tsx');
+    expect(cardCode).toContain('data-testid="featured-carousel-dots"');
+    expect(cardCode).toContain('data-testid="featured-media-stage"');
   });
 
   it('scrolled header includes solid top mask strip to prevent content peek', () => {
