@@ -10,7 +10,7 @@ import { RadarList } from '@/components/radar/radar-list';
 export const metadata: Metadata = {
   title: 'Radar Lisensi — Nuvellite',
   description:
-    'Pengumuman lisensi manga & light novel baru dari PGI, m&c!, dan Elex Media, lengkap dengan bukti sumbernya.',
+    'Pengumuman lisensi manga & light novel baru dari PGI, m&c!, dan Elex Media, lengkap dengan tautan sumbernya.',
 };
 
 export default function RadarPage() {
@@ -31,7 +31,7 @@ export default function RadarPage() {
           Pengumuman Baru dari Penerbit
         </h1>
         <p className="mt-4 sm:mt-5 max-w-2xl text-sm sm:text-base text-editorial-body leading-[1.7] font-sans">
-          Lisensi manga &amp; light novel yang diumumkan PGI, m&amp;c!, dan Elex Media — dari panggung Comifuro, teaser PDKT, sampai pendaftaran ISBN, lengkap dengan tautan bukti sumbernya.
+          Lisensi manga &amp; light novel yang diumumkan PGI, m&amp;c!, dan Elex Media — dari panggung Comifuro, teaser PDKT, sampai pendaftaran ISBN, lengkap dengan tautan sumbernya.
         </p>
       </header>
 

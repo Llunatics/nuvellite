@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ChevronDown, Check } from 'lucide-react';
-import { AnnouncementCard, type AnnouncementView } from './announcement-card';
+import { RadarCard, type AnnouncementView } from './announcement-card';
 
 const PUBLISHER_OPTIONS = [
   { value: 'ALL', label: 'Semua' },
@@ -121,11 +121,14 @@ export function RadarList({
         </div>
       </div>
 
-      {/* Main Announcement Feed (Calm Editorial Feed Container) */}
+      {/* Main Announcement Feed (Responsive Card Grid) */}
       {visible.length > 0 ? (
-        <div className="divide-y divide-white/[0.06] rounded-3xl border border-white/[0.06] bg-surface/50 backdrop-blur-xl px-5 sm:px-8">
+        <div
+          data-testid="radar-card-grid"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5"
+        >
           {visible.map((v) => (
-            <AnnouncementCard key={v.announcement.id} view={v} />
+            <RadarCard key={v.announcement.id} item={v.announcement} view={v} />
           ))}
         </div>
       ) : (
@@ -140,9 +143,9 @@ export function RadarList({
           <h2 className="font-mono text-xs uppercase tracking-wider text-editorial-muted">
             Sudah Terbit
           </h2>
-          <div className="divide-y divide-white/[0.06] rounded-3xl border border-white/[0.06] bg-surface/50 backdrop-blur-xl px-5 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
             {visibleGraduated.map((v) => (
-              <AnnouncementCard key={v.announcement.id} view={v} />
+              <RadarCard key={v.announcement.id} item={v.announcement} view={v} />
             ))}
           </div>
         </section>
@@ -165,9 +168,9 @@ export function RadarList({
             </span>
           </button>
           {showStale && (
-            <div className="divide-y divide-white/[0.06] border-t border-white/[0.06] px-5 sm:px-8">
+            <div className="p-4 sm:p-6 border-t border-white/[0.06] grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
               {visibleStale.map((v) => (
-                <AnnouncementCard key={v.announcement.id} view={v} />
+                <RadarCard key={v.announcement.id} item={v.announcement} view={v} />
               ))}
             </div>
           )}

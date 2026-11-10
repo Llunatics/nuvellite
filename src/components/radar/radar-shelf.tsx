@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { AnnouncementCard, type AnnouncementView } from './announcement-card';
+import { RadarCard, type AnnouncementView } from './announcement-card';
 
 /**
- * Homepage shelf: compact 4-card strip above the catalog,
+ * Homepage shelf: 4-card grid above the catalog,
  * corroborated-or-stronger records only, with a link to the full /radar.
  */
 export function RadarShelf({ views }: { views: AnnouncementView[] }) {
@@ -33,9 +33,9 @@ export function RadarShelf({ views }: { views: AnnouncementView[] }) {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
         {views.slice(0, 4).map((v) => (
-          <AnnouncementCard key={v.announcement.id} view={v} compact />
+          <RadarCard key={v.announcement.id} item={v.announcement} view={v} />
         ))}
       </div>
     </section>

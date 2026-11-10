@@ -106,7 +106,7 @@ export function CoverImage({
       );
     }
     return (
-      <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-surface-sunken border border-white/[0.08] select-none">
+      <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-gradient-to-b from-surface-elevated/90 to-surface-sunken border border-white/[0.07] select-none">
         <span className="block h-px w-6 bg-white/20 mb-2.5" aria-hidden="true" />
         <span className="font-mono text-lg font-semibold tracking-wider text-editorial-title leading-none">
           {initials}
