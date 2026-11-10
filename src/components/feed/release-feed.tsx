@@ -273,8 +273,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           </h1>
 
           <p className="text-sm sm:text-base lg:text-lg text-editorial-body leading-relaxed max-w-2xl lg:max-w-3xl font-sans">
-            Arsip lengkap terbitan Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia.
-            Pantau rilis mingguan, varian kanonikal, riwayat harga, dan kelengkapan koleksi Anda.
+            Katalog manga &amp; light novel terbitan resmi Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia.
+            Cek jadwal terbit mingguan, edisi bind-up, dan koleksi bukumu.
           </p>
 
           {/* Archive Stats Strip */}
@@ -349,7 +349,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
                 Rilisan Manga Terbaru
               </h2>
               <span className="text-[11px] font-mono text-editorial-faint hidden sm:inline">
-                {mangaHighlights.length} rilisan terkini
+                {mangaHighlights.length} buku terbaru
               </span>
             </div>
 
@@ -405,7 +405,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
                 Rilisan Light Novel Terbaru
               </h2>
               <span className="text-[11px] font-mono text-editorial-faint hidden sm:inline">
-                {lnHighlights.length} rilisan terkini
+                {lnHighlights.length} buku terbaru
               </span>
             </div>
 
@@ -461,7 +461,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
               Seluruh Katalog
             </h2>
             <p className="text-xs text-editorial-muted mt-1 font-mono">
-              Menampilkan {filteredBooks.length.toLocaleString('id-ID')} judul terdaftar
+              {filteredBooks.length.toLocaleString('id-ID')} buku terdata
             </p>
           </div>
 
@@ -486,7 +486,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Saring judul, seri, pengarang..."
+              placeholder="Cari judul, seri, atau pengarang..."
               className="w-full h-10 pl-10 pr-9 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.06] border border-white/[0.06] focus:border-white/[0.15] text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all text-xs"
             />
             {searchQuery && (
@@ -576,9 +576,9 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
         {filteredBooks.length === 0 ? (
           <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
             <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
-            <h3 className="text-sm font-medium text-editorial-title">Tidak ada buku yang sesuai kriteria</h3>
+            <h3 className="text-sm font-medium text-editorial-title">Buku yang dicari belum ketemu</h3>
             <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-              Coba gunakan kata kunci berbeda atau bersihkan filter yang sedang aktif.
+              Coba ganti kata kunci atau reset filter yang aktif.
             </p>
             <button
               type="button"

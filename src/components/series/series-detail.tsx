@@ -221,7 +221,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                       : 'bg-white/[0.06] text-editorial-title border border-white/10'
                   }`}
                 >
-                  {series.status === 'COMPLETED' ? 'Tamat / Complete' : 'Ongoing'}
+                  {series.status === 'COMPLETED' ? 'Tamat' : 'Berjalan'}
                 </span>
                 <span className="text-editorial-faint/60">•</span>
                 <span>{sortedBooks.length} Volume Terdata</span>
@@ -269,7 +269,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs">
                 <span className="font-mono text-editorial-title font-medium flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                  <span>Progres Kelengkapan Koleksi</span>
+                  <span>Koleksi Seri Ini</span>
                 </span>
                 <span className="font-mono text-xs text-editorial-muted">
                   <strong className="text-editorial-title font-semibold">{ownedBookIds.size}</strong> dari {sortedBooks.length} Volume ({progressPercent}%)
@@ -288,7 +288,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
               {volumeMatrix.length > 0 && (
                 <div className="space-y-2 pt-2">
                   <div className="flex flex-wrap items-center justify-between gap-2 text-[10px] font-mono text-editorial-faint">
-                    <span>SEKUENS VOLUME &amp; STATUS:</span>
+                    <span>DAFTAR VOLUME:</span>
                     <div className="flex items-center gap-3">
                       <span className="flex items-center gap-1">
                         <span className="text-accent font-bold">●</span> Dimiliki
@@ -297,11 +297,11 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                         <span className="text-editorial-muted font-bold">○</span> Terbit
                       </span>
                       <span className="flex items-center gap-1">
-                        <span className="text-red-400 font-bold">◌</span> Pra-pesan
+                        <span className="text-red-400 font-bold">◌</span> Pre-order
                       </span>
                       {gapSlots.length > 0 && (
                         <span className="flex items-center gap-1">
-                          <span className="text-red-400/80 font-bold">—</span> Gap Katalog
+                          <span className="text-red-400/80 font-bold">—</span> Belum Terdata
                         </span>
                       )}
                     </div>
@@ -417,8 +417,8 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                       >
                         {activeSlot.state === 'OWNED' && 'Sudah Dimiliki'}
                         {activeSlot.state === 'RELEASED' && 'Sudah Rilis (Belum Dimiliki)'}
-                        {activeSlot.state === 'UPCOMING' && 'Pra-Pesan / Segera Terbit'}
-                        {activeSlot.state === 'UNKNOWN_GAP' && 'Nomor Terlewati di Data Sumber'}
+                        {activeSlot.state === 'UPCOMING' && 'Pre-order / Segera Terbit'}
+                        {activeSlot.state === 'UNKNOWN_GAP' && 'Belum Terdata di Katalog'}
                       </span>
                     </div>
 
@@ -439,7 +439,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                       </div>
                     ) : (
                       <p className="text-xs text-editorial-muted">
-                        Nomor volume ini belum ditemukan pada database Gramedia Indonesia.
+                        Volume ini belum tercatat di katalog Gramedia.
                       </p>
                     )}
                   </div>
@@ -519,7 +519,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                 : 'text-editorial-muted hover:text-editorial-title'
             }`}
           >
-            Belum Anda Miliki ({missingFromCollection.length})
+            Belum Dimiliki ({missingFromCollection.length})
           </button>
         )}
 
@@ -544,9 +544,9 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
           <div className="py-20 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-2">
             <CheckCircle2 className="w-8 h-8 text-accent mx-auto" />
             <h3 className="text-sm font-medium text-editorial-title">
-              Seluruh volume pada kategori ini telah terpenuhi
+              Semua volume di tab ini sudah terkumpul
             </h3>
-            <p className="text-xs text-editorial-muted">Koleksi seri ini sudah lengkap di perpustakaan Anda.</p>
+            <p className="text-xs text-editorial-muted">Koleksi untuk seri ini sudah lengkap.</p>
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">

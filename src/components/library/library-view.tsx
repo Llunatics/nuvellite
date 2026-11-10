@@ -133,7 +133,7 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
             </h1>
 
             <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
-              Koleksi Anda tersimpan aman secara lokal di perangkat ini tanpa login akun.
+              Koleksi tersimpan aman secara lokal di perangkat ini, tanpa perlu login.
               Cadangkan data ke format JSON dan pulihkan kapan saja.
             </p>
           </div>
@@ -303,9 +303,9 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
           {ownedBooks.length === 0 ? (
             <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
               <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
-              <h3 className="text-sm font-medium text-editorial-title">Koleksi Anda masih kosong</h3>
+              <h3 className="text-sm font-medium text-editorial-title">Belum ada buku di koleksi</h3>
               <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-                Tambahkan buku yang sudah Anda miliki dari katalog dengan menekan tombol tanda plus pada kartu buku.
+                Tekan tombol (+) di kartu buku untuk menandai volume yang sudah dimiliki.
               </p>
               <Link
                 href="/"
@@ -330,9 +330,9 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
           {wishlistBooks.length === 0 ? (
             <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
               <Bookmark className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
-              <h3 className="text-sm font-medium text-editorial-title">Wishlist Anda masih kosong</h3>
+              <h3 className="text-sm font-medium text-editorial-title">Belum ada buku di wishlist</h3>
               <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-                Simpan komik atau light novel impian Anda dengan menekan ikon bookmark pada kartu buku.
+                Tekan ikon bookmark di kartu buku untuk menyimpan judul incaran.
               </p>
             </div>
           ) : (
@@ -352,7 +352,7 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
               <Layers className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
               <h3 className="text-sm font-medium text-editorial-title">Belum ada seri yang terlacak</h3>
               <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-                Saat Anda menandai kepemilikan volume, seri buku tersebut akan otomatis terlacak di sini.
+                Seri muncul di sini setelah ada volume yang ditandai dimiliki.
               </p>
             </div>
           ) : (
@@ -377,9 +377,9 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
           {missingBooks.length === 0 ? (
             <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
               <Sparkles className="w-10 h-10 text-emerald-400 mx-auto stroke-1" />
-              <h3 className="text-sm font-medium text-editorial-title">Koleksi seri Anda lengkap!</h3>
+              <h3 className="text-sm font-medium text-editorial-title">Koleksi serimu lengkap!</h3>
               <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-                Tidak ada nomor volume yang terlewat dari seri yang sedang Anda ikuti.
+                Tidak ada volume yang terlewat dari seri yang kamu ikuti.
               </p>
             </div>
           ) : (
@@ -387,7 +387,7 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
               <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300 font-sans">
                 <span className="font-semibold">Daftar Volume Terlewat: </span>
                 <span>
-                  Berikut adalah nomor volume yang telah terbit namun belum Anda miliki pada seri yang sedang Anda ikuti.
+                  Volume yang sudah terbit tapi belum ada di koleksimu.
                 </span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">

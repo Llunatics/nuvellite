@@ -145,13 +145,13 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
             </div>
           ) : matchedBooks.length === 0 && matchedSeries.length === 0 && matchedPublishers.length === 0 ? (
             <div className="py-12 text-center text-xs text-editorial-faint space-y-2">
-              <p>Tidak ditemukan hasil cepat untuk &quot;{query}&quot;</p>
+              <p>Belum ketemu hasil cepat untuk &quot;{query}&quot;</p>
               <button
                 type="button"
                 onClick={handleGoToSearch}
                 className="text-accent underline font-semibold text-xs inline-flex items-center gap-1"
               >
-                <span>Buka halaman pencarian mendalam</span>
+                <span>Cari lebih lengkap untuk &quot;{query}&quot;</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>
@@ -162,7 +162,7 @@ export function SearchDialog({ isOpen, onClose }: SearchDialogProps) {
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-1.5 px-2 text-[10px] font-mono uppercase tracking-wider text-editorial-faint font-semibold">
                     <Layers className="w-3.5 h-3.5 text-accent" />
-                    <span>Seri Kanonikal ({matchedSeries.length})</span>
+                    <span>Seri ({matchedSeries.length})</span>
                   </div>
                   <div className="space-y-1">
                     {matchedSeries.map((s) => (

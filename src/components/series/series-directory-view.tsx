@@ -407,8 +407,8 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
       {filteredSeries.length === 0 ? (
         <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
           <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
-          <h3 className="text-sm font-medium text-editorial-title">Tidak ada seri yang sesuai kriteria</h3>
-          <p className="text-xs text-editorial-muted">Coba ubah kata kunci atau bersihkan filter pencarian.</p>
+          <h3 className="text-sm font-medium text-editorial-title">Seri yang dicari belum ketemu</h3>
+          <p className="text-xs text-editorial-muted">Coba ganti kata kunci atau reset filter.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6">

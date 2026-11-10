@@ -216,8 +216,8 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
           <span className="font-mono">omnibus</span>, <span className="font-mono">complete edition</span>,{' '}
           <span className="font-mono">ultimate</span>, <span className="font-mono">2-in-1 / 3-in-1</span>,{' '}
           <span className="font-mono">trilogi</span>, dan <span className="font-mono">edisi koleksi</span>.
-          Begitu penerbit merilis edisi bind-up baru, ia otomatis terflag dan muncul di direktori ini pada
-          sinkronisasi berikutnya. Edisi bundel biasa (complete set / box set) dan cetak ulang premium
+          Setiap ada rilisan bind-up baru dari penerbit, otomatis masuk ke daftar ini saat katalog
+          diperbarui. Edisi bundel biasa (complete set / box set) dan cetak ulang premium
           sengaja tidak dihitung sebagai bind-up.
         </p>
       </section>

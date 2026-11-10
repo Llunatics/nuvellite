@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Koleksi & Wishlist Saya — nuvellite',
-  description: 'Kelola koleksi komik dan light novel pribadi Anda serta deteksi volume yang belum Anda miliki.',
+  description: 'Kelola koleksi komik dan light novel pribadimu serta deteksi volume yang belum dimiliki.',
 };
 
 export default function LibraryPage() {

@@ -48,7 +48,7 @@ export const BookDetail = React.memo(function BookDetail({
   const owned = isLoaded && isOwned(book.id);
   const wishlisted = isLoaded && isWishlisted(book.id);
 
-  const authorDisplay = (Array.isArray(book.authors) ? book.authors : []).join(', ') || 'Berbagai Penulis';
+  const authorDisplay = (Array.isArray(book.authors) ? book.authors : []).join(', ') || '—';
   const gramediaProductUrl = book.gramediaUrl || `https://www.gramedia.com/products/${book.slug}`;
 
   const hasDistinctSeries = Boolean(
@@ -256,7 +256,7 @@ export const BookDetail = React.memo(function BookDetail({
                 Pengarang
               </span>
               <span className="font-sans text-xs text-zinc-200 block truncate" title={authorDisplay}>
-                {authorDisplay === 'Berbagai Penulis' ? '—' : authorDisplay}
+                {authorDisplay}
               </span>
             </div>
 
@@ -350,7 +350,7 @@ export const BookDetail = React.memo(function BookDetail({
               )
             ) : (
               <p className="text-sm text-editorial-faint">
-                Belum ada sinopsis yang tercatat untuk rilis ini.
+                Belum ada sinopsis untuk volume ini.
               </p>
             )}
           </div>
@@ -390,7 +390,7 @@ export const BookDetail = React.memo(function BookDetail({
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
             <h2 className="text-lg sm:text-xl font-sans font-semibold text-editorial-title">
-              Volume Lain dalam Seri Ini ({seriesSiblings.length} buku)
+              Volume Lain di Seri Ini ({seriesSiblings.length})
             </h2>
             {book.seriesId && (
               <Link
@@ -428,10 +428,10 @@ export const BookDetail = React.memo(function BookDetail({
           <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
             <h2 className="text-lg sm:text-xl font-sans font-semibold text-editorial-title flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-accent" />
-              <span>Rekomendasi Terkait</span>
+              <span>Judul Serupa</span>
             </h2>
             <span className="text-[11px] font-mono text-editorial-faint">
-              Genre &amp; penerbit serupa
+              Genre &amp; penerbit sejenis
             </span>
           </div>
 
