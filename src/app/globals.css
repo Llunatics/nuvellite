@@ -386,6 +386,37 @@
   box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 0 var(--liquid-glass-highlight);
 }
 
+/* Liquid Glass Dock (Round 3.2 MobileNav) */
+.liquid-glass-dock {
+  background: linear-gradient(
+    180deg,
+    rgba(26, 31, 44, 0.58) 0%,
+    rgba(13, 16, 24, 0.72) 100%
+  );
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow:
+    0 20px 44px -10px rgba(0, 0, 0, 0.65),
+    0 4px 14px -2px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.04);
+}
+
+.light .liquid-glass-dock {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.76) 0%,
+    rgba(244, 247, 252, 0.88) 100%
+  );
+  border: 1px solid rgba(15, 23, 42, 0.09);
+  box-shadow:
+    0 18px 38px -10px rgba(15, 23, 42, 0.14),
+    0 4px 12px -2px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 0 rgba(15, 23, 42, 0.04);
+}
+
 /* Cover Image Depth */
 .cover-depth {
   box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5), 0 4px 10px -2px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);

@@ -15,27 +15,52 @@ export function MobileNav() {
     { href: '/radar', label: 'Radar', icon: Radar, active: pathname.startsWith('/radar') },
   ];
 
+  const activeIndex = Math.max(0, tabs.findIndex((t) => t.active));
+
   return (
-    <nav className="md:hidden fixed bottom-4 inset-x-4 max-w-sm mx-auto z-40 liquid-glass-pill rounded-full p-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.45)] border border-white/[0.07] [.light_&]:border-black/[0.07] backdrop-blur-2xl flex items-center justify-between">
-      {tabs.map((tab) => {
-        const Icon = tab.icon;
-        return (
-          <Link
-            key={tab.href}
-            href={tab.href}
-            className={`relative flex-1 min-w-0 flex flex-col items-center justify-center py-2 px-2 rounded-full transition-all duration-150 active:scale-95 border border-transparent ${
-              tab.active
-                ? 'bg-white/[0.09] [.light_&]:bg-black/[0.07] text-editorial-title font-semibold shadow-xs'
-                : 'text-editorial-muted hover:text-editorial-title'
-            }`}
-          >
-            <Icon className="w-4 h-4 transition-transform" />
-            <span className="text-[10.5px] font-sans tracking-tight mt-0.5 max-w-full truncate">
-              {tab.label}
-            </span>
-          </Link>
-        );
-      })}
-    </nav>
+    <>
+      <div
+        aria-hidden="true"
+        className="md:hidden pointer-events-none fixed inset-x-0 bottom-0 z-30 h-24 bg-gradient-to-t from-background via-background/80 to-transparent"
+      />
+      <nav
+        aria-label="Navigasi Bawah"
+        className="md:hidden fixed bottom-4 inset-x-5 max-w-[348px] mx-auto z-40 h-[58px] rounded-full p-1.5 liquid-glass-dock"
+      >
+        <div className="relative grid grid-cols-4 h-full w-full items-center">
+          <span
+            aria-hidden="true"
+            data-testid="mobile-nav-active-pill"
+            className="pointer-events-none absolute inset-y-0 left-0 w-1/4 rounded-full bg-gradient-to-b from-white/[0.15] to-white/[0.06] border border-white/[0.12] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.22),0_4px_12px_rgba(0,0,0,0.25)] [.light_&]:from-slate-900/[0.08] [.light_&]:to-slate-900/[0.03] [.light_&]:border-slate-900/[0.08] [.light_&]:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.9)] transition-transform duration-[350ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+            style={{
+              transform: `translate3d(${activeIndex * 100}%, 0, 0)`,
+            }}
+          />
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <Link
+                key={tab.href}
+                href={tab.href}
+                className="relative z-10 flex flex-col items-center justify-center h-full rounded-full select-none transition-colors duration-200 active:scale-95"
+              >
+                <Icon
+                  className={`w-[17px] h-[17px] transition-all duration-[250ms] ${
+                    tab.active ? 'text-accent scale-105' : 'text-editorial-muted'
+                  }`}
+                />
+                <span
+                  className={`text-[10px] tracking-tight mt-0.5 leading-none ${
+                    tab.active ? 'text-editorial-title font-semibold' : 'text-editorial-muted font-medium'
+                  }`}
+                >
+                  {tab.label}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
+    </>
   );
 }
