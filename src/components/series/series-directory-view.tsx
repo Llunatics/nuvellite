@@ -7,7 +7,22 @@ import { CoverImage } from '../books/cover-image';
 import { Series } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
 import { loadPersistedViewState, savePersistedViewState, syncUrlQuery } from '@/lib/filter-persistence';
-import { Layers, Search, BookOpen, X, ArrowRight, ChevronDown, SlidersHorizontal, Check } from 'lucide-react';
+import { Layers, Search, BookOpen, X, ArrowRight, ChevronDown, ChevronLeft, ChevronRight, SlidersHorizontal, Check } from 'lucide-react';
+
+function getSeriesMonogram(name: string): string {
+  const clean = name.replace(/^[^a-zA-Z0-9]+/, '');
+  const words = clean.split(/[^a-zA-Z0-9]+/).filter(Boolean);
+  if (words.length >= 2) {
+    return (words[0][0] + words[1][0]).toUpperCase();
+  }
+  if (words.length === 1 && words[0].length >= 2) {
+    return words[0].slice(0, 2).toUpperCase();
+  }
+  if (words.length === 1 && words[0].length === 1) {
+    return words[0].toUpperCase();
+  }
+  return '';
+}
 
 const PAGE_SIZE = 60;
 
@@ -49,6 +64,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [editionFilter, setEditionFilter] = useState<'ALL' | 'REGULAR' | 'BINDUP' | 'ONESHOT' | 'SHORT'>('ALL');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [activeFilterGroup, setActiveFilterGroup] = useState<string | null>(null);
   const sentinelRef = useRef<HTMLDivElement>(null);
   const hydratedRef = useRef(false);
   const suppressResetRef = useRef(false);
@@ -204,15 +220,130 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
     setSortBy('name');
   };
 
+  const filterGroups = useMemo(() => [
+    {
+      id: 'format',
+      label: 'Format',
+      currentValueLabel: formatFilter === 'ALL' ? 'Semua' : formatFilter === 'MANGA' ? 'Manga' : 'Light Novel',
+      isNonDefault: formatFilter !== 'ALL',
+      title: 'Pilih Format',
+      currentValue: formatFilter,
+      setter: (val: string) => setFormatFilter(val as any),
+      options: [
+        { value: 'ALL', label: 'Semua' },
+        { value: 'MANGA', label: 'Manga' },
+        { value: 'LIGHT_NOVEL', label: 'Light Novel' },
+      ],
+    },
+    {
+      id: 'edition',
+      label: 'Jenis Edisi',
+      currentValueLabel:
+        editionFilter === 'ALL'
+          ? 'Semua Edisi'
+          : editionFilter === 'REGULAR'
+          ? 'Edisi Reguler'
+          : editionFilter === 'BINDUP'
+          ? 'Bind-Up & Omnibus'
+          : editionFilter === 'ONESHOT'
+          ? 'Oneshot (1 vol)'
+          : 'Seri Pendek (2–4 vol)',
+      isNonDefault: editionFilter !== 'ALL',
+      title: 'Pilih Jenis Edisi',
+      currentValue: editionFilter,
+      setter: (val: string) => setEditionFilter(val as any),
+      options: [
+        { value: 'ALL', label: 'Semua Edisi' },
+        { value: 'REGULAR', label: 'Edisi Reguler' },
+        { value: 'BINDUP', label: 'Bind-Up & Omnibus' },
+        { value: 'ONESHOT', label: 'Oneshot (1 vol)' },
+        { value: 'SHORT', label: 'Seri Pendek (2–4 vol)' },
+      ],
+    },
+    {
+      id: 'status',
+      label: 'Status Seri',
+      currentValueLabel:
+        statusFilter === 'ALL'
+          ? 'Semua Status'
+          : statusFilter === 'ONGOING'
+          ? 'Berlangsung'
+          : statusFilter === 'COMPLETED'
+          ? 'Tamat'
+          : 'Arsip Lama',
+      isNonDefault: statusFilter !== 'ALL',
+      title: 'Pilih Status Seri',
+      currentValue: statusFilter,
+      setter: (val: string) => setStatusFilter(val as any),
+      options: [
+        { value: 'ALL', label: 'Semua Status' },
+        { value: 'ONGOING', label: 'Berlangsung' },
+        { value: 'COMPLETED', label: 'Tamat' },
+        { value: 'ARCHIVE', label: 'Arsip Lama' },
+      ],
+    },
+    {
+      id: 'publisher',
+      label: 'Penerbit',
+      currentValueLabel: getPublisherLabel(pubFilter),
+      isNonDefault: pubFilter !== 'ALL',
+      title: 'Pilih Penerbit',
+      currentValue: pubFilter,
+      setter: (val: string) => setPubFilter(val),
+      options: [
+        { value: 'ALL', label: 'Semua Penerbit' },
+        ...publishers.groups.flatMap((g) => [
+          { value: g.id, label: g.name },
+          ...(g.subs || []).map((sub) => ({
+            value: sub.id,
+            label: `${g.name.split(' ')[0]} (${sub.name})`,
+          })),
+        ]),
+        ...(publishers.othersCount > 0
+          ? [{ value: 'OTHERS', label: `Lainnya (${publishers.othersCount} penerbit)` }]
+          : []),
+      ],
+    },
+    {
+      id: 'sort',
+      label: 'Urutkan',
+      currentValueLabel:
+        sortBy === 'name'
+          ? 'Judul (A–Z)'
+          : sortBy === 'volumes_high'
+          ? 'Volume Terbanyak'
+          : sortBy === 'volumes_low'
+          ? 'Volume Sedikit'
+          : 'Rilisan Terbaru',
+      isNonDefault: sortBy !== 'name',
+      title: 'Urutkan Berdasarkan',
+      currentValue: sortBy,
+      setter: (val: string) => setSortBy(val as any),
+      options: [
+        { value: 'name', label: 'Judul (A–Z)' },
+        { value: 'volumes_high', label: 'Volume Terbanyak' },
+        { value: 'volumes_low', label: 'Volume Sedikit' },
+      ],
+    },
+  ], [formatFilter, editionFilter, statusFilter, pubFilter, sortBy, publishers]);
+
+  const activeGroupConfig = filterGroups.find((g) => g.id === activeFilterGroup);
+
   // Close filter sheet on Escape key
   useEffect(() => {
     if (!isFilterOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsFilterOpen(false);
+      if (e.key === 'Escape') {
+        if (activeFilterGroup !== null) {
+          setActiveFilterGroup(null);
+        } else {
+          setIsFilterOpen(false);
+        }
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isFilterOpen]);
+  }, [isFilterOpen, activeFilterGroup]);
 
   // Hydrate filters from the URL and restore pagination + scroll position
   // saved before navigating away (Block 6). Runs once on mount.
@@ -328,13 +459,19 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
           Daftar lengkap seri komik dan light novel dari Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia — {allSeries.length.toLocaleString('id-ID')} seri terdaftar termasuk arsip terbitan lama.
         </p>
 
-        <div className="mt-6 sm:mt-7">
+        <div className="pt-2">
           <Link
             href="/bind-up"
-            className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] hover:bg-white/[0.09] border border-white/[0.07] px-4 py-2 text-xs font-medium text-editorial-body hover:text-editorial-title transition-colors"
+            data-testid="series-bindup-link"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-editorial-body hover:text-editorial-title active:text-editorial-title underline decoration-transparent hover:decoration-accent active:decoration-accent focus-visible:decoration-accent decoration-2 underline-offset-4 transition-all duration-200"
           >
             <span>Direktori Edisi Bind-Up &amp; Omnibus</span>
-            <span aria-hidden="true" className="text-accent">→</span>
+            <span
+              aria-hidden="true"
+              className="text-accent transition-transform duration-200 group-hover:translate-x-0.5"
+            >
+              →
+            </span>
           </Link>
         </div>
       </section>
@@ -483,223 +620,134 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
       {isFilterOpen && createPortal(
         <div
           className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4 animate-in fade-in duration-150"
-          onClick={() => setIsFilterOpen(false)}
+          onClick={() => {
+            setIsFilterOpen(false);
+            setActiveFilterGroup(null);
+          }}
         >
           <div
             role="dialog"
             aria-modal="true"
             aria-label="Filter Direktori Seri"
-            className="w-full sm:max-w-xl max-h-[85vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl border-t sm:border border-white/[0.08] bg-surface/95 backdrop-blur-2xl p-6 shadow-2xl flex flex-col gap-5 text-xs text-editorial-title"
+            data-testid="series-filter-sheet"
+            className="w-full sm:max-w-md max-h-[85vh] overflow-hidden rounded-t-3xl sm:rounded-3xl border-t sm:border border-white/[0.09] bg-surface/95 backdrop-blur-2xl p-5 sm:p-6 shadow-2xl flex flex-col text-xs text-editorial-title"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Sheet Header */}
-            <div className="flex items-center justify-between pb-3 border-b border-white/[0.06]">
-              <div className="flex items-center gap-2">
-                <SlidersHorizontal className="h-4 w-4 text-accent" />
-                <h2 className="font-editorial text-lg font-medium text-editorial-title">
-                  Filter Direktori Seri
-                </h2>
-              </div>
-              <button
-                type="button"
-                onClick={() => setIsFilterOpen(false)}
-                className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title bg-white/[0.04] hover:bg-white/[0.08] transition-colors"
-                aria-label="Tutup filter"
+            {activeGroupConfig ? (
+              /* Stage 2 — Per-Group Choice Popup */
+              <div
+                data-testid={`filter-group-popup-${activeGroupConfig.id}`}
+                className="flex flex-col h-full animate-in fade-in zoom-in-95 duration-200"
               >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            {/* 1. Format */}
-            <div className="space-y-2">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-editorial-muted font-semibold block">
-                Format
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { id: 'ALL', label: 'Semua' },
-                  { id: 'MANGA', label: 'Manga' },
-                  { id: 'LIGHT_NOVEL', label: 'Light Novel' },
-                ].map((opt) => (
+                {/* Popup Header */}
+                <div className="flex items-center justify-between pb-3 border-b border-white/[0.06] mb-3">
                   <button
-                    key={opt.id}
                     type="button"
-                    onClick={() => setFormatFilter(opt.id as any)}
-                    className={`rounded-full px-4 py-2 text-xs font-medium transition-colors ${
-                      formatFilter === opt.id
-                        ? 'bg-accent text-zinc-950 font-semibold shadow-xs'
-                        : 'bg-white/[0.05] hover:bg-white/[0.09] text-editorial-body hover:text-editorial-title border border-white/[0.07]'
-                    }`}
+                    data-testid="filter-popup-back"
+                    onClick={() => setActiveFilterGroup(null)}
+                    className="inline-flex items-center gap-1.5 text-xs font-medium text-editorial-body hover:text-editorial-title py-1 px-2 rounded-lg hover:bg-white/[0.05] transition-colors"
                   >
-                    {opt.label}
+                    <ChevronLeft className="w-4 h-4" />
+                    <span>Kembali</span>
                   </button>
-                ))}
-              </div>
-            </div>
+                  <h3 className="font-editorial text-base font-medium text-editorial-title">
+                    {activeGroupConfig.title}
+                  </h3>
+                  <div className="w-16" />
+                </div>
 
-            {/* 2. Jenis Edisi */}
-            <div className="space-y-2">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-editorial-muted font-semibold block">
-                Jenis Edisi
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { id: 'ALL', label: 'Semua Edisi' },
-                  { id: 'REGULAR', label: 'Edisi Reguler' },
-                  { id: 'BINDUP', label: 'Bind-Up & Omnibus' },
-                  { id: 'ONESHOT', label: 'Oneshot (1 vol)' },
-                  { id: 'SHORT', label: 'Seri Pendek (2–4 vol)' },
-                ].map((opt) => (
-                  <button
-                    key={opt.id}
-                    type="button"
-                    onClick={() => setEditionFilter(opt.id as any)}
-                    className={`rounded-full px-4 py-2 text-xs font-medium transition-colors ${
-                      editionFilter === opt.id
-                        ? 'bg-accent text-zinc-950 font-semibold shadow-xs'
-                        : 'bg-white/[0.05] hover:bg-white/[0.09] text-editorial-body hover:text-editorial-title border border-white/[0.07]'
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* 3. Status Seri */}
-            <div className="space-y-2">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-editorial-muted font-semibold block">
-                Status Seri
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { id: 'ALL', label: 'Semua Status' },
-                  { id: 'ONGOING', label: 'Berlangsung' },
-                  { id: 'COMPLETED', label: 'Tamat' },
-                  { id: 'ARCHIVE', label: 'Arsip Lama' },
-                ].map((opt) => (
-                  <button
-                    key={opt.id}
-                    type="button"
-                    onClick={() => setStatusFilter(opt.id as any)}
-                    className={`rounded-full px-4 py-2 text-xs font-medium transition-colors ${
-                      statusFilter === opt.id
-                        ? 'bg-accent text-zinc-950 font-semibold shadow-xs'
-                        : 'bg-white/[0.05] hover:bg-white/[0.09] text-editorial-body hover:text-editorial-title border border-white/[0.07]'
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* 4. Penerbit */}
-            <div className="space-y-2">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-editorial-muted font-semibold block">
-                Penerbit
-              </span>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  onClick={() => setPubFilter('ALL')}
-                  className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors ${
-                    pubFilter === 'ALL'
-                      ? 'bg-accent text-zinc-950 font-semibold shadow-xs'
-                      : 'bg-white/[0.05] hover:bg-white/[0.09] text-editorial-body hover:text-editorial-title border border-white/[0.07]'
-                  }`}
-                >
-                  Semua Penerbit
-                </button>
-                {publishers.groups.map((g) => (
-                  <React.Fragment key={g.id}>
-                    <button
-                      type="button"
-                      onClick={() => setPubFilter(g.id)}
-                      className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors ${
-                        pubFilter === g.id
-                          ? 'bg-accent text-zinc-950 font-semibold shadow-xs'
-                          : 'bg-white/[0.05] hover:bg-white/[0.09] text-editorial-body hover:text-editorial-title border border-white/[0.07]'
-                      }`}
-                    >
-                      {g.name}
-                    </button>
-                    {g.subs?.map((sub) => (
+                {/* Options List */}
+                <div className="space-y-1 max-h-[60vh] overflow-y-auto py-1">
+                  {activeGroupConfig.options.map((opt) => {
+                    const selected = opt.value === activeGroupConfig.currentValue;
+                    return (
                       <button
-                        key={sub.id}
+                        key={opt.value}
                         type="button"
-                        onClick={() => setPubFilter(sub.id)}
-                        className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors ${
-                          pubFilter === sub.id
-                            ? 'bg-accent text-zinc-950 font-semibold shadow-xs'
-                            : 'bg-white/[0.05] hover:bg-white/[0.09] text-editorial-body hover:text-editorial-title border border-white/[0.07]'
+                        data-testid={`filter-option-${activeGroupConfig.id}-${opt.value}`}
+                        onClick={() => {
+                          activeGroupConfig.setter(opt.value);
+                          setActiveFilterGroup(null);
+                        }}
+                        className={`w-full flex items-center justify-between gap-3 rounded-xl px-4 py-3 text-left text-sm transition-colors ${
+                          selected
+                            ? 'bg-accent/12 text-editorial-title font-medium border border-accent/25'
+                            : 'text-editorial-body hover:bg-white/[0.04] hover:text-editorial-title border border-transparent'
                         }`}
                       >
-                        {g.name.split(' ')[0]} ({sub.name})
+                        <span>{opt.label}</span>
+                        {selected && <Check className="w-4 h-4 text-accent shrink-0" />}
                       </button>
-                    ))}
-                  </React.Fragment>
-                ))}
-                {publishers.othersCount > 0 && (
+                    );
+                  })}
+                </div>
+              </div>
+            ) : (
+              /* Stage 1 — Compact Filter Sheet */
+              <div className="flex flex-col gap-5 animate-in fade-in duration-150">
+                {/* Sheet Header */}
+                <div className="flex items-center justify-between pb-3 border-b border-white/[0.06]">
+                  <div className="flex items-center gap-2">
+                    <SlidersHorizontal className="h-4 w-4 text-accent" />
+                    <h2 className="font-editorial text-lg font-medium text-editorial-title">
+                      Filter Direktori Seri
+                    </h2>
+                  </div>
                   <button
                     type="button"
-                    onClick={() => setPubFilter('OTHERS')}
-                    className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors ${
-                      pubFilter === 'OTHERS'
-                        ? 'bg-accent text-zinc-950 font-semibold shadow-xs'
-                        : 'bg-white/[0.05] hover:bg-white/[0.09] text-editorial-body hover:text-editorial-title border border-white/[0.07]'
-                    }`}
+                    onClick={() => setIsFilterOpen(false)}
+                    className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title bg-white/[0.04] hover:bg-white/[0.08] transition-colors"
+                    aria-label="Tutup filter"
                   >
-                    Lainnya ({publishers.othersCount} penerbit)
+                    <X className="w-4 h-4" />
                   </button>
-                )}
-              </div>
-            </div>
+                </div>
 
-            {/* 5. Urutkan Berdasarkan */}
-            <div className="space-y-2">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-editorial-muted font-semibold block">
-                Urutkan Berdasarkan
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { id: 'name', label: 'Judul (A–Z)' },
-                  { id: 'volumes_high', label: 'Volume Terbanyak' },
-                  { id: 'volumes_low', label: 'Volume Sedikit' },
-                ].map((opt) => (
+                {/* 5 Filter Group Rows */}
+                <div className="divide-y divide-white/[0.06] rounded-2xl border border-white/[0.07] bg-white/[0.02] overflow-hidden">
+                  {filterGroups.map((group) => (
+                    <button
+                      key={group.id}
+                      type="button"
+                      data-testid={`filter-group-row-${group.id}`}
+                      onClick={() => setActiveFilterGroup(group.id)}
+                      className="w-full flex items-center justify-between gap-4 px-4 py-3.5 text-left hover:bg-white/[0.04] active:bg-white/[0.07] transition-colors"
+                    >
+                      <span className="text-sm font-medium text-editorial-title">{group.label}</span>
+                      <span className="inline-flex items-center gap-2 text-xs font-mono text-editorial-muted min-w-0">
+                        <span className={`truncate max-w-[170px] ${group.isNonDefault ? 'text-accent font-medium' : ''}`}>
+                          {group.currentValueLabel}
+                        </span>
+                        <ChevronRight className="w-4 h-4 text-editorial-faint shrink-0" />
+                      </span>
+                    </button>
+                  ))}
+                </div>
+
+                {/* Sheet Footer */}
+                <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between gap-3">
                   <button
-                    key={opt.id}
                     type="button"
-                    onClick={() => setSortBy(opt.id as any)}
-                    className={`rounded-full px-4 py-2 text-xs font-medium transition-colors ${
-                      sortBy === opt.id
-                        ? 'bg-accent text-zinc-950 font-semibold shadow-xs'
-                        : 'bg-white/[0.05] hover:bg-white/[0.09] text-editorial-body hover:text-editorial-title border border-white/[0.07]'
+                    onClick={resetFilters}
+                    disabled={activeFilterCount === 0}
+                    className={`px-5 py-2.5 rounded-full text-xs font-medium transition-colors ${
+                      activeFilterCount === 0
+                        ? 'text-editorial-faint cursor-not-allowed opacity-50'
+                        : 'text-editorial-muted hover:text-editorial-title bg-white/[0.04] hover:bg-white/[0.08]'
                     }`}
                   >
-                    {opt.label}
+                    Reset
                   </button>
-                ))}
+                  <button
+                    type="button"
+                    onClick={() => setIsFilterOpen(false)}
+                    className="rounded-full bg-accent text-zinc-950 font-semibold px-6 py-2 text-xs sm:text-sm hover:brightness-110 active:scale-95 transition-all shadow-md"
+                  >
+                    Selesai
+                  </button>
+                </div>
               </div>
-            </div>
-
-            {/* Sheet Footer */}
-            <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between gap-3">
-              <button
-                type="button"
-                onClick={resetFilters}
-                className="px-5 py-2.5 rounded-full text-xs font-medium text-editorial-muted hover:text-editorial-title bg-white/[0.04] hover:bg-white/[0.08] transition-colors"
-              >
-                Reset Filter
-              </button>
-              <button
-                type="button"
-                onClick={() => setIsFilterOpen(false)}
-                className="rounded-full bg-accent text-zinc-950 font-semibold px-6 py-2.5 text-xs transition-colors hover:brightness-110 active:scale-95 shadow-md"
-              >
-                Terapkan
-              </button>
-            </div>
+            )}
           </div>
         </div>,
         document.body
@@ -721,12 +769,13 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
               series.totalVolumes > 0
                 ? Math.min(100, Math.round((ownedCount / series.totalVolumes) * 100))
                 : 0;
+            const monogram = getSeriesMonogram(series.name);
 
             return (
               <Link
                 key={series.id}
                 href={`/series/${series.slug}`}
-                className="group flex flex-col p-4 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] hover:border-white/[0.08] transition-all duration-200 space-y-3"
+                className="group flex flex-col p-4 sm:p-5 rounded-2xl border border-white/[0.06] bg-surface/60 hover:bg-surface/90 transition-all duration-200"
               >
                 <div className="flex gap-4 items-start">
                   {/* Series Cover */}
@@ -742,15 +791,13 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
                       />
                     ) : (
                       <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-surface-elevated/80 border border-white/[0.06] rounded-xl select-none">
-                        <span className="font-editorial text-lg text-editorial-title leading-none mb-1">
-                          {series.name
-                            .split(/\s+/)
-                            .filter(Boolean)
-                            .slice(0, 2)
-                            .map((w) => w[0])
-                            .join('')
-                            .toUpperCase()}
-                        </span>
+                        {monogram ? (
+                          <span className="font-editorial text-lg text-editorial-title leading-none mb-1">
+                            {monogram}
+                          </span>
+                        ) : (
+                          <Layers className="w-5 h-5 text-editorial-faint mb-1" />
+                        )}
                         <span className="text-[9px] text-editorial-muted line-clamp-2 leading-tight px-0.5">
                           {series.name}
                         </span>
@@ -770,7 +817,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
                   </div>
 
                   {/* Metadata */}
-                  <div className="flex-1 min-w-0 space-y-1">
+                  <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-1.5 text-[9px] font-mono text-editorial-faint">
                       <span className="font-semibold text-editorial-muted truncate max-w-[120px]">{series.publisherName}</span>
                       <span>•</span>
@@ -789,17 +836,17 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
                       )}
                     </div>
 
-                    <h3 className="text-xs sm:text-[13px] font-medium text-editorial-title group-hover:text-accent transition-colors line-clamp-2 leading-snug tracking-tight">
+                    <h3 className="mt-1.5 text-xs sm:text-[13px] font-medium text-editorial-title group-hover:text-accent transition-colors line-clamp-2 leading-snug tracking-tight">
                       {series.name}
                     </h3>
 
                     {series.author && (
-                      <p className="text-[11px] text-editorial-faint truncate font-sans">
+                      <p className="mt-1.5 text-[11px] text-editorial-faint truncate font-sans">
                         {series.author}
                       </p>
                     )}
 
-                    <div className="pt-1 flex items-baseline justify-between text-[11px] font-mono text-editorial-muted">
+                    <div className="mt-2.5 flex items-baseline justify-between text-[11px] font-mono text-editorial-muted">
                       <span>{series.totalVolumes} Volume</span>
                       {ownedCount > 0 && (
                         <span className="text-emerald-400 font-medium">
@@ -812,7 +859,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
 
                 {/* Progress bar if user owns items */}
                 {ownedCount > 0 && (
-                  <div className="w-full h-1 rounded-full bg-surface-sunken overflow-hidden">
+                  <div className="w-full h-1 rounded-full bg-surface-sunken overflow-hidden mt-3">
                     <div
                       className="h-full bg-accent transition-all duration-300 rounded-full"
                       style={{ width: `${percent}%` }}
