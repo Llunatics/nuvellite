@@ -19,13 +19,18 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
   const wishlisted = isLoaded && isWishlisted(book.id);
 
   return (
-    <div className="relative overflow-hidden rounded-xl border border-white/[0.08] bg-surface p-6 sm:p-8">
+    <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl">
+      {/* Ambient cover glow (Round 3, D.2) */}
+      <div
+        className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none"
+        style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
+      />
 
       <div className="relative z-10 flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
         {/* Large Visual Anchor Book Cover */}
         <Link
           href={`/books/${book.slug}`}
-          className="relative aspect-[3/4.2] w-44 sm:w-56 lg:w-64 xl:w-72 shrink-0 book-cover-elevated overflow-hidden group block"
+          className="relative aspect-[3/4.2] w-48 sm:w-56 lg:w-64 xl:w-72 shrink-0 book-cover-elevated rounded-2xl overflow-hidden group block"
           tabIndex={-1}
         >
           <CoverImage
@@ -38,7 +43,24 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
             imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
             fallbackIconClassName="w-12 h-12 text-editorial-faint"
           />
-
+          {/* Floating cover badges (Round 3, D.2 / S-05) */}
+          <span
+            className={`absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase bg-black/60 backdrop-blur-md border border-white/10 ${
+              book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
+            }`}
+          >
+            {book.category}
+          </span>
+          {book.volume !== null && book.volume !== undefined && (
+            <span className="absolute top-2.5 right-2.5 z-10 px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/60 backdrop-blur-md border border-white/10 text-zinc-100">
+              Vol. {book.volume}
+            </span>
+          )}
+          {book.status === 'PREORDER' && (
+            <span className="absolute bottom-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
+              Pre-Order
+            </span>
+          )}
         </Link>
 
         {/* Editorial Content */}
@@ -101,7 +123,7 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
             <div className="flex items-center gap-2.5 ml-auto sm:ml-4">
               <Link
                 href={`/books/${book.slug}`}
-                className="px-5 py-2.5 rounded-full bg-white text-black hover:bg-slate-100 text-xs font-medium shadow-md transition-all flex items-center gap-2 active:scale-95"
+                className="px-5 py-2.5 rounded-full bg-[rgb(var(--editorial-title))] text-[rgb(var(--bg-rgb))] hover:opacity-90 text-xs font-medium shadow-md transition-all flex items-center gap-2 active:scale-95"
               >
                 <span>Detail Buku</span>
                 <ArrowRight className="w-3.5 h-3.5" />

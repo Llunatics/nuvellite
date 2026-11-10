@@ -117,10 +117,8 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
         {/* Floating Top Left: Format Capsule Badge */}
         <div className="absolute top-2 left-2 z-10 pointer-events-none">
           <span
-            className={`px-2 py-0.5 rounded-full text-[8.5px] font-mono font-medium tracking-wide uppercase ${
-              book.category === 'Light Novel'
-                ? 'border border-white/20 bg-zinc-900 text-zinc-100'
-                : 'border border-white/10 bg-zinc-950/90 text-zinc-200'
+            className={`px-2 py-0.5 rounded-full text-[8.5px] font-mono font-medium tracking-wide uppercase border border-white/10 bg-black/75 ${
+              book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
             }`}
           >
             {book.category}
@@ -130,7 +128,7 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
         {/* Floating Top Right: Volume Capsule Badge */}
         {book.volume !== null && book.volume !== undefined && (
           <div className="absolute top-2 right-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-zinc-950/90 border border-white/10 text-zinc-100">
+            <span className="px-2 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/75 border border-white/10 text-zinc-100">
               Vol. {book.volume}
             </span>
           </div>
@@ -139,7 +137,7 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
         {/* Status indicator: Preorder / Out of stock */}
         {book.status === 'PREORDER' && (
           <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-bold uppercase tracking-wider bg-zinc-950/85 border border-red-500/40 text-red-400">
+            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
               PRE-ORDER
             </span>
           </div>
@@ -163,7 +161,7 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
             }}
             className={`w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all active:scale-90 ${
               wishlisted
-                ? 'bg-accent text-zinc-950 shadow-md'
+                ? 'bg-accent text-white shadow-md'
                 : 'bg-black/60 hover:bg-black/80 text-white/80 hover:text-white border border-white/15'
             }`}
             aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
@@ -180,7 +178,7 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
             }}
             className={`w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all active:scale-90 ${
               owned
-                ? 'bg-accent text-zinc-950 shadow-md'
+                ? 'bg-accent text-white shadow-md'
                 : 'bg-black/60 hover:bg-black/80 text-white/80 hover:text-white border border-white/15'
             }`}
             aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}

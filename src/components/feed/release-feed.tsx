@@ -264,7 +264,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       <section className="space-y-4 pt-2 sm:pt-4 lg:pt-8">
         <div className="max-w-3xl lg:max-w-4xl space-y-3 lg:space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-xs shrink-0" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-xs shrink-0" />
             <span>Katalog Indonesia</span>
           </div>
 
