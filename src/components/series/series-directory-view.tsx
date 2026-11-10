@@ -630,14 +630,14 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
             aria-modal="true"
             aria-label="Filter Direktori Seri"
             data-testid="series-filter-sheet"
-            className="w-full sm:max-w-md max-h-[85vh] overflow-hidden rounded-t-3xl sm:rounded-3xl border-t sm:border border-white/[0.09] bg-surface/95 backdrop-blur-2xl p-5 sm:p-6 shadow-2xl flex flex-col text-xs text-editorial-title"
+            className="w-full sm:max-w-md max-h-[85vh] overflow-hidden rounded-t-3xl sm:rounded-3xl border-t sm:border glass-popover p-5 sm:p-6 flex flex-col text-xs text-editorial-title"
             onClick={(e) => e.stopPropagation()}
           >
             {activeGroupConfig ? (
               /* Stage 2 — Per-Group Choice Popup */
               <div
                 data-testid={`filter-group-popup-${activeGroupConfig.id}`}
-                className="flex flex-col h-full animate-in fade-in zoom-in-95 duration-200"
+                className="glass-popover rounded-2xl p-3 flex flex-col h-full animate-in fade-in zoom-in-95 duration-200"
               >
                 {/* Popup Header */}
                 <div className="flex items-center justify-between pb-3 border-b border-white/[0.06] mb-3">

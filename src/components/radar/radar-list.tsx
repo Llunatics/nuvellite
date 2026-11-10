@@ -49,9 +49,9 @@ export function RadarList({
   const visibleStale = filterItems(stale);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col">
       {/* Controls Bar: Item count on left, single publisher filter button + popup on right */}
-      <div className="relative flex items-center justify-between gap-4 border-y border-white/[0.06] py-3.5 my-6">
+      <div className="relative flex items-center justify-between gap-4 border-y border-white/[0.06] py-3.5 mt-6 mb-6">
         <p className="text-xs font-mono text-editorial-muted">
           Menampilkan <span className="text-editorial-title font-semibold">{visible.length}</span> pengumuman
         </p>
@@ -89,7 +89,7 @@ export function RadarList({
               <div
                 role="listbox"
                 data-testid="radar-publisher-popup"
-                className="absolute right-0 top-full mt-2 z-50 w-56 rounded-2xl border border-white/[0.09] bg-surface/95 backdrop-blur-2xl p-1.5 shadow-2xl space-y-0.5"
+                className="absolute right-0 top-full mt-2 z-50 w-56 rounded-2xl glass-popover p-1.5 space-y-0.5"
               >
                 {PUBLISHER_OPTIONS.map((opt) => {
                   const activeOpt = selectedPublisher === opt.value;
@@ -136,7 +136,7 @@ export function RadarList({
 
       {/* Graduated Section ("Sudah Terbit") */}
       {visibleGraduated.length > 0 && (
-        <section className="flex flex-col gap-3 pt-4">
+        <section className="flex flex-col gap-3 mt-8">
           <h2 className="font-mono text-xs uppercase tracking-wider text-editorial-muted">
             Sudah Terbit
           </h2>
@@ -150,7 +150,7 @@ export function RadarList({
 
       {/* Stale Section ("Arsip Pengumuman Lama") */}
       {stale.length > 0 && (
-        <section className="rounded-3xl border border-white/[0.06] bg-surface/50 overflow-hidden">
+        <section className="rounded-3xl border border-white/[0.06] bg-surface/50 overflow-hidden mt-8">
           <button
             type="button"
             onClick={() => setShowStale((v) => !v)}

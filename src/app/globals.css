@@ -400,6 +400,25 @@
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
+/* Opaque Frosted Popovers (Round 3.3) */
+.glass-popover {
+  background-color: rgba(16, 19, 27, 0.95);
+  background-image: none;
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.65);
+}
+
+.light .glass-popover {
+  background-color: rgba(255, 255, 255, 0.96);
+  background-image: none;
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid rgba(15, 23, 42, 0.09);
+  box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.14);
+}
+
 /* Cover Image Depth */
 .cover-depth {
   box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5), 0 4px 10px -2px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);

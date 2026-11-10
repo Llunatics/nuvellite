@@ -23,7 +23,7 @@ export default function RadarPage() {
 
   return (
     <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8 nuv-view-enter">
-      <header className="pt-4 pb-8 border-b border-white/[0.06] mb-8">
+      <header className="pt-4">
         <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
           RADAR LISENSI
         </p>
