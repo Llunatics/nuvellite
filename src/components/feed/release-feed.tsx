@@ -96,120 +96,74 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   };
 
   const featuredSectionRef = useRef<HTMLElement>(null);
-  const featuredInnerRef = useRef<HTMLDivElement>(null);
-  const cardHeightRef = useRef<number>(520);
-
-  const [dismissState, setDismissState] = useState<{
-    opacity: number;
-    dotsOpacity: number;
-    transform: string;
-    marginBottom: string;
-    pointerEvents: 'auto' | 'none';
-  }>({
-    opacity: 1,
-    dotsOpacity: 1,
-    transform: 'translate3d(0, 0px, 0) scale(1)',
-    marginBottom: '0px',
-    pointerEvents: 'auto',
-  });
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const innerEl = featuredInnerRef.current;
-    if (!innerEl) return;
+    const el = featuredSectionRef.current;
+    if (!el) return;
 
-    const measure = () => {
-      const h = innerEl.offsetHeight;
-      if (h > 0) cardHeightRef.current = h;
+    const resetStyles = () => {
+      el.style.opacity = '1';
+      el.style.transform = 'translate3d(0, 0px, 0) scale(1)';
+      el.style.pointerEvents = 'auto';
     };
-    measure();
 
-    const ro = new ResizeObserver(measure);
-    ro.observe(innerEl);
-    return () => ro.disconnect();
-  }, [activeSpotlightIdx]);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (mq.matches) {
-      setDismissState({
-        opacity: 1,
-        dotsOpacity: 1,
-        transform: 'translate3d(0, 0px, 0) scale(1)',
-        marginBottom: '0px',
-        pointerEvents: 'auto',
-      });
+      resetStyles();
       return;
     }
 
     let rafId = 0;
+    let lastScrollY = -1;
+
     const updateCardDismissal = () => {
-      const sectionEl = featuredSectionRef.current;
-      if (!sectionEl) return;
+      rafId = 0;
+      const target = featuredSectionRef.current;
+      if (!target) return;
 
       const scrollY = window.scrollY || window.pageYOffset || 0;
+      if (scrollY === lastScrollY) return;
+      lastScrollY = scrollY;
+
       if (scrollY <= 4) {
-        setDismissState({
-          opacity: 1,
-          dotsOpacity: 1,
-          transform: 'translate3d(0, 0px, 0) scale(1)',
-          marginBottom: '0px',
-          pointerEvents: 'auto',
-        });
+        target.style.opacity = '1';
+        target.style.transform = 'translate3d(0, 0px, 0) scale(1)';
+        target.style.pointerEvents = 'auto';
         return;
       }
 
-      const isDesktop = window.innerWidth >= 768;
-      const cardH = cardHeightRef.current || (isDesktop ? 390 : 540);
-
-      // Start scroll-linked swipe-away once the user scrolls into the showcase:
-      const startScroll = isDesktop ? 40 : 110;
-      const travelRange = isDesktop ? 300 : 340;
+      // Long, gradual 480px scroll runway starting at scrollY = 40px:
+      const startScroll = 40;
+      const travelRange = 480;
       const rawProgress = (scrollY - startScroll) / travelRange;
       const progress = Math.min(1, Math.max(0, rawProgress));
 
-      // Smoothstep easing (C1 continuous)
-      const eased = progress * progress * (3 - 2 * progress);
+      // Cosine smoothstep easing: C-infinity smooth, zero derivative at both ends
+      // Max derivative is pi/2 (~1.5708) at p = 0.5, so across any 40px scroll step
+      // (delta_p = 40/480 = 0.0833), max step-to-step delta_opacity is 0.1309 (< 0.15).
+      const eased = 0.5 * (1 - Math.cos(Math.PI * progress));
 
-      // Upward swipe translation and top-anchored scale reduction
-      const maxTranslateUp = isDesktop ? 120 : 150;
-      const maxScaleReduction = 0.08;
+      const opacity = Math.max(0, Number((1 - eased).toFixed(4)));
+      const translateY = Number((-eased * 56).toFixed(2));
+      const scale = Number((1 - eased * 0.06).toFixed(4));
 
-      const translateY = Number((-eased * maxTranslateUp).toFixed(1));
-      const scale = Number((1 - eased * maxScaleReduction).toFixed(4));
-
-      // Visual bottom of the card rises by exactly:
-      //   eased * maxTranslateUp + cardH * (1 - scale)
-      // By setting collapsePx strictly equal to this exact visual bottom rise,
-      // the gap between the Featured card's visible bottom edge and the top of
-      // "Rilisan Manga Terbaru" remains CONSTANT (>= 32px) at every scrollY!
-      const visualBottomRise = eased * maxTranslateUp + cardH * (eased * maxScaleReduction);
-      const collapsePx = Math.round(visualBottomRise);
-
-      // Opacity reaches 0 smoothly at progress = 1
-      const opacity = Math.max(0, Number((1 - Math.pow(eased, 0.92)).toFixed(3)));
-      const dotsOpacity = Math.max(0, Number((1 - eased * 1.6).toFixed(3)));
-
-      setDismissState({
-        opacity,
-        dotsOpacity,
-        transform: `translate3d(0, ${translateY}px, 0) scale(${scale})`,
-        marginBottom: `${collapsePx === 0 ? 0 : -collapsePx}px`,
-        pointerEvents: opacity < 0.15 ? 'none' : 'auto',
-      });
+      target.style.opacity = String(opacity);
+      target.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`;
+      target.style.pointerEvents = opacity < 0.12 ? 'none' : 'auto';
     };
 
     const onScroll = () => {
-      cancelAnimationFrame(rafId);
-      rafId = requestAnimationFrame(updateCardDismissal);
+      if (rafId === 0) {
+        rafId = window.requestAnimationFrame(updateCardDismissal);
+      }
     };
 
     updateCardDismissal();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll, { passive: true });
     return () => {
-      cancelAnimationFrame(rafId);
+      if (rafId !== 0) window.cancelAnimationFrame(rafId);
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
     };
@@ -389,24 +343,24 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   return (
     <div className="space-y-14 sm:space-y-20" onClickCapture={persistViewState}>
       {/* 1. HERO EDITORIAL INTRODUCTION */}
-      <section className="space-y-4 pt-1 lg:pt-2">
+      <section className="space-y-3 pt-1 sm:pt-2">
         <div className="max-w-3xl lg:max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-xs shrink-0" />
             <span>Katalog Indonesia</span>
           </div>
 
-          <h1 className="mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.12]">
+          <h1 className="mt-3 sm:mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.12]">
             Pelacak Manga &amp; Light Novel.
           </h1>
 
-          <p className="mt-4 sm:mt-5 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
             Katalog manga &amp; light novel terbitan resmi Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia.
             Cek jadwal terbit mingguan, edisi bind-up, dan koleksi bukumu.
           </p>
 
           {/* Archive Stats Strip */}
-          <dl className="mt-6 sm:mt-7 flex flex-wrap items-center gap-x-3 sm:gap-x-5 gap-y-2.5 text-xs font-mono text-editorial-muted">
+          <dl className="mt-4 sm:mt-5 pt-1 flex flex-wrap items-center gap-x-3 sm:gap-x-5 gap-y-2.5 text-xs font-mono text-editorial-muted">
             <div className="flex items-baseline gap-1.5">
               <dt className="sr-only">Judul terarsip</dt>
               <dd className="font-semibold text-editorial-title">
@@ -439,31 +393,23 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
         <section
           ref={featuredSectionRef}
           data-testid="featured-showcase-card"
-          style={{
-            opacity: dismissState.opacity,
-            transform: dismissState.transform,
-            marginBottom: dismissState.marginBottom,
-            pointerEvents: dismissState.pointerEvents,
-          }}
-          className="relative z-10 !mt-8 sm:!mt-10 will-change-[transform,opacity] origin-top"
+          className="relative z-10 !mt-5 sm:!mt-6 will-change-[transform,opacity] origin-top"
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >
-          <div ref={featuredInnerRef} className="origin-top will-change-[transform,opacity]">
-            <FeaturedReleaseCard
-              key={activeSpotlight.id}
-              book={activeSpotlight}
-              spotlightBooks={spotlightBooks}
-              activeIndex={activeSpotlightIdx}
-              onSelectIndex={handleSelectSpotlight}
-            />
-          </div>
+          <FeaturedReleaseCard
+            key={activeSpotlight.id}
+            book={activeSpotlight}
+            spotlightBooks={spotlightBooks}
+            activeIndex={activeSpotlightIdx}
+            onSelectIndex={handleSelectSpotlight}
+          />
         </section>
       )}
 
       {/* 3. MANGA HIGHLIGHT RAIL */}
       {mangaHighlights.length > 0 && (
-        <section className="space-y-5">
+        <section className="space-y-5 !mt-10 sm:!mt-14">
           <div className="flex items-end justify-between gap-4 border-b border-white/[0.06] pb-4 mb-6">
             <div className="min-w-0 flex-1">
               <h2 className="font-editorial text-2xl sm:text-3xl font-normal tracking-tight text-editorial-title leading-[1.15]">
