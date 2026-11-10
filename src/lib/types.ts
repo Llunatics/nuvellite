@@ -301,6 +301,7 @@ export interface PublisherAnnouncement {
   expectedReleaseWindow?: string;
   isbn13?: string;
   coverImage?: string;
+  coverUrl?: string | null;
   matchedSeriesSlug?: string;
   graduatedBookSlug?: string;
   /** YYYY-MM-DD */

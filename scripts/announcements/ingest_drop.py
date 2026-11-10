@@ -98,6 +98,8 @@ def merge_candidate(candidate: dict) -> str:
     for existing in announcements:
         if record_cluster_key(existing) != key:
             continue
+        if candidate.get("coverUrl") and not existing.get("coverUrl"):
+            existing["coverUrl"] = candidate["coverUrl"]
         known_urls = {s.get("url") for s in existing.get("sources", [])}
         added = [s for s in candidate.get("sources", []) if s.get("url") not in known_urls]
         if added:
@@ -194,6 +196,7 @@ def build_candidate(
     author: str | None = None,
     original_title: str | None = None,
     cover_image: str | None = None,
+    cover_url: str | None = None,
     release_text: str | None = None,
     evidence_note: str | None = None,
 ) -> dict:
@@ -209,6 +212,7 @@ def build_candidate(
         "evidenceKind": "STAGE_SLIDE",
         "evidenceNote": evidence_note or "Dropped via ingest_drop.py CLI",
     }
+    resolved_cover = cover_url or cover_image
     return {
         "id": f"ann_{publisher_id.removeprefix('pub_')}_{slug}"[:80],
         "slug": slug,
@@ -223,7 +227,8 @@ def build_candidate(
         "confidence": confidence,
         "eventOrCampaign": event,
         "expectedReleaseWindow": release_text,
-        "coverImage": cover_image,
+        "coverImage": resolved_cover,
+        "coverUrl": resolved_cover,
         "firstSeenAt": today,
         "lastUpdatedAt": today,
         "sources": [source] if url else [],
@@ -282,6 +287,7 @@ def run_drop(args) -> int:
                         author=cand.get("author"),
                         original_title=cand.get("originalTitle"),
                         cover_image=cand.get("coverImage"),
+                        cover_url=cand.get("coverUrl") or cand.get("coverImage"),
                         release_text=cand.get("targetReleaseText"),
                         evidence_note=cand.get("visualEvidence"),
                     )
@@ -305,6 +311,7 @@ def run_drop(args) -> int:
                 author=args.author,
                 original_title=aliases.get("romaji"),
                 cover_image=aliases.get("coverImage"),
+                cover_url=aliases.get("coverUrl") or aliases.get("coverImage"),
                 evidence_note=f"Manual drop; extraction={extraction_status}",
             )
         )

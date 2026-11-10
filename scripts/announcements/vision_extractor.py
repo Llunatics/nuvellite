@@ -193,7 +193,7 @@ query ($search: String, $format: MediaFormat) {
     id
     title { romaji english native }
     synonyms
-    coverImage { large }
+    coverImage { extraLarge large }
   }
 }
 """
@@ -205,6 +205,7 @@ _ALIASES_FALLBACK = {
     "native": None,
     "synonyms": [],
     "coverImage": None,
+    "coverUrl": None,
 }
 
 
@@ -244,13 +245,15 @@ def resolve_work_aliases(title: str, medium: str = "MANGA", timeout: int = 8) ->
                 data = json.loads(resp.read().decode("utf-8"))
                 media = (data.get("data") or {}).get("Media") or {}
                 title_obj = media.get("title") or {}
+                cover_obj = media.get("coverImage") or {}
                 return {
                     "anilistId": media.get("id"),
                     "romaji": title_obj.get("romaji"),
                     "english": title_obj.get("english"),
                     "native": title_obj.get("native"),
                     "synonyms": list(media.get("synonyms") or []),
-                    "coverImage": (media.get("coverImage") or {}).get("large"),
+                    "coverImage": cover_obj.get("large"),
+                    "coverUrl": cover_obj.get("large") or cover_obj.get("extraLarge"),
                 }
     except Exception:
         pass
@@ -286,6 +289,7 @@ def expand_and_resolve(extraction: dict) -> list[dict]:
                     "anilistId": aliases.get("anilistId"),
                     "synonyms": aliases.get("synonyms", []),
                     "coverImage": aliases.get("coverImage"),
+                    "coverUrl": aliases.get("coverUrl") or aliases.get("coverImage"),
                     "author": item.get("authorOrIllustrator"),
                     "formatHint": item.get("formatHint"),
                     "editionHint": item.get("editionHint"),

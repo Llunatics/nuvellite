@@ -173,6 +173,7 @@ class TestVisionExtractor(unittest.TestCase):
         self.assertEqual(aliases["anilistId"], 12345)
         self.assertEqual(aliases["native"], "ビリーバット")
         self.assertEqual(aliases["coverImage"], "https://example.com/billy.jpg")
+        self.assertEqual(aliases["coverUrl"], "https://example.com/billy.jpg")
 
     def test_resolve_work_aliases_offline_fallback(self):
         import urllib.error
@@ -184,6 +185,7 @@ class TestVisionExtractor(unittest.TestCase):
         ):
             aliases = vision_extractor.resolve_work_aliases("Billy Bat")
         self.assertIsNone(aliases["anilistId"])
+        self.assertIsNone(aliases["coverUrl"])
         self.assertEqual(aliases["synonyms"], [])
 
     def test_expand_and_resolve_tetralogy(self):
