@@ -43,7 +43,7 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({
   return (
     <article
       data-testid="featured-release-card"
-      className="relative mx-auto w-full max-w-3xl overflow-hidden rounded-[28px] sm:rounded-[32px] border border-white/[0.08] bg-surface/90 backdrop-blur-xl p-4 sm:p-6 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.65)]"
+      className="relative mx-auto w-full max-w-3xl overflow-hidden rounded-[28px] sm:rounded-[32px] border border-white/[0.08] bg-surface/90 backdrop-blur-xl p-4 sm:p-5 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.65)]"
     >
       {/* 1. Top Monospace Eyebrow Strip (Llunevie Header Pattern) */}
       <div className="flex items-center justify-between gap-3 border-b border-white/[0.06] pb-3 mb-3.5 text-[10px] font-mono uppercase tracking-[0.14em]">
@@ -175,15 +175,15 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({
         {/* Single One-Line Meta (Zero "•" Bullet Dots Flanking Publisher Name) */}
         <div
           data-testid="featured-meta-line"
-          className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs font-mono text-editorial-muted"
+          className="mt-1.5 flex items-center gap-x-2.5 text-xs font-mono text-editorial-muted truncate"
         >
-          <span className="font-semibold text-editorial-title">
+          <span className="font-semibold text-editorial-title shrink-0">
             {book.publisherName}
           </span>
           {book.authors && book.authors.length > 0 && (
             <>
               <span className="h-3 w-px bg-white/15 shrink-0" aria-hidden="true" />
-              <span className="truncate max-w-[180px] sm:max-w-xs">
+              <span className="truncate max-w-[140px] sm:max-w-xs">
                 Karya {book.authors.join(', ')}
               </span>
             </>

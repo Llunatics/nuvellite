@@ -343,24 +343,24 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   return (
     <div className="space-y-14 sm:space-y-20" onClickCapture={persistViewState}>
       {/* 1. HERO EDITORIAL INTRODUCTION */}
-      <section className="space-y-3 pt-1 sm:pt-2">
-        <div className="max-w-3xl lg:max-w-4xl">
+      <section className="pt-1 sm:pt-1.5">
+        <div className="max-w-3xl lg:max-w-4xl space-y-2 sm:space-y-2.5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-xs shrink-0" />
             <span>Katalog Indonesia</span>
           </div>
 
-          <h1 className="mt-3 sm:mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.12]">
+          <h1 className="font-editorial text-2xl sm:text-4xl lg:text-5xl font-normal text-editorial-title tracking-tight leading-[1.12]">
             Pelacak Manga &amp; Light Novel.
           </h1>
 
-          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
+          <p className="text-xs sm:text-sm text-editorial-body leading-[1.6] max-w-2xl font-sans">
             Katalog manga &amp; light novel terbitan resmi Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia.
             Cek jadwal terbit mingguan, edisi bind-up, dan koleksi bukumu.
           </p>
 
           {/* Archive Stats Strip */}
-          <dl className="mt-4 sm:mt-5 pt-1 flex flex-wrap items-center gap-x-3 sm:gap-x-5 gap-y-2.5 text-xs font-mono text-editorial-muted">
+          <dl className="pt-0.5 flex flex-wrap items-center gap-x-3 sm:gap-x-5 gap-y-1 text-xs font-mono text-editorial-muted">
             <div className="flex items-baseline gap-1.5">
               <dt className="sr-only">Judul terarsip</dt>
               <dd className="font-semibold text-editorial-title">
@@ -393,7 +393,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
         <section
           ref={featuredSectionRef}
           data-testid="featured-showcase-card"
-          className="relative z-10 !mt-5 sm:!mt-6 will-change-[transform,opacity] origin-top"
+          className="relative z-10 !mt-5 sm:!mt-5 will-change-[transform,opacity] origin-top"
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >
