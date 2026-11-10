@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo, useRef, useEffect, useDeferredValue } from 'react';
 import Link from 'next/link';
+import { createPortal } from 'react-dom';
 import { CoverImage } from '../books/cover-image';
 import { Series } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
@@ -479,7 +480,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
       </div>
 
       {/* 3. Liquid-Glass Filter Sheet / Modal */}
-      {isFilterOpen && (
+      {isFilterOpen && createPortal(
         <div
           className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4 animate-in fade-in duration-150"
           onClick={() => setIsFilterOpen(false)}
@@ -700,7 +701,8 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* 4. Series Cards Grid */}
