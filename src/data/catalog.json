@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-08T12:59:23.000Z",
+  "lastUpdated": "2026-11-09T15:29:50.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -2788,7 +2788,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-27",
       "isWednesdayRelease": false,
-      "currentPrice": 53100,
+      "currentPrice": 59000,
       "authors": [
         "Saka Mikami"
       ],
@@ -2804,7 +2804,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 59000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -15493,7 +15493,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 75000,
       "isBindUp": true,
       "bindUpKind": "CURATED",
@@ -78427,7 +78427,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 42000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -97109,7 +97109,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2019-04-03",
       "isWednesdayRelease": false,
       "currentPrice": 26000,
@@ -101387,7 +101387,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-28",
       "isWednesdayRelease": true,
-      "currentPrice": 55000,
+      "currentPrice": 41250,
       "originalPrice": 55000,
       "authors": [
         "Norimitsu Kaihou (Nitroplus), Sadoru Chiba"
@@ -103104,6 +103104,44 @@
       "isbn13": "9786230071942",
       "synopsis": "Seekor kucing liar yang bisa bicara tiba-tiba muncul di Kota Beika!? Kelompok detektif cilik pun langsung menyelidikinya dan yang mereka temukan adalah seekor kucing hitam dengan kalung yang dilengkapi kecerdasan buatan dan bisa bicara! Gara-gara pertemuan dengan kucing misterius itu, Conan dkk terlibat dengan sebuah kasus. Apakah mereka bisa menemukan pelaku sebenarnya dari kasus itu?\n\n****\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\n\nManga Detective Conan pertama kali diserialkan dalam edisi kelima Weekly Shōnen Sunday pada tahun 1994, ditulis dan digambar oleh Gosho Aoyama, dan telah muncul di sana sejak itu. Tankoubon pertama juga diterbitkan oleh Shogakukan pada Juni 1994; itu telah mencapai 100 volume yang diterbitkan pada 18 Oktober 2021, dan berlanjut hingga hari ini. Manga ini sangat populer di Jepang; tankoubon telah menerima banyak tempat pertama dalam daftar buku terlaris.",
       "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-spesial-49",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from Elex Media",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_atelier_of_witch_hat_12",
+      "slug": "atelier-of-witch-hat-12",
+      "title": "Atelier of Witch Hat 12",
+      "originalTitle": "Atelier of Witch Hat",
+      "seriesId": "ser_atelier-of-witch-hat",
+      "seriesName": "Atelier of Witch Hat",
+      "volume": 12,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "imprint": null,
+      "categorySlugs": "buku/komik/manga/fantasi-1",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/tiih3c-5-9.jfif",
+      "status": "PREORDER",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-25",
+      "isWednesdayRelease": true,
+      "currentPrice": 98000,
+      "originalPrice": 98000,
+      "authors": [
+        "Kamome Shirahama"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786230080173",
+      "synopsis": "Kegembiraan atas kesuksesan performa Coco di Pawai Malam Perak ternyata hanya seumur jagung, akibat kemunculan mendadak monster raksasa di tengah kota Ezrest. Saat warga terjerumus dalam pusaran kekacauan, bukan hanya Pasukan Penjaga Sihir, bahkan sang Raja dan Penyihir Bijak pun turun tangan membendung kerusakan. Di sisi lain, demi menyelamatkan Kustas dan Dagda, Coco akhirnya mengungkapkan rahasianya kepada Qiflee, namun....\n\nSelling Point:\n\n- Karya Kamome Shirahama (https://twitter.com/shirahamakamome), komikus dan ilustrator yang juga menggambar untuk cover komik Amerika, antara lain Marvel, DC Comics, dan Star Wars.\n\n- Atelier of Witch Hat menjadi salah satu nominasi penghargaan Manga Taisho 2018 dan Kodansha Manga Award Ke-42 kategori Best General Manga.\n\n- Komik ini juga telah diterbitkan di Amerika, Perancis, Korea, Jerman, dan berbagai negara lainnya.\n\n- Komik fantasi yang mengangkat tema \"belajar sihir\" mungkin sudah banyak beredar di pasaran, namun Atelier of Witch Hat ini juga didukung oleh world building yang kokoh, karakter yang memikat, dan gambar yang memanjakan mata.\n\n- Telah diangkat menjadi serial animasi TV pada April 2026 dan akan memasuki musim kedua!",
+      "gramediaUrl": "https://www.gramedia.com/products/atelier-of-witch-hat-12",
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from Elex Media",
@@ -108579,8 +108617,8 @@
       "author": "Kamome Shirahama",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 11,
-      "latestVolume": 11,
+      "totalVolumes": 12,
+      "latestVolume": 12,
       "availableVolumes": [
         1,
         2,
@@ -108592,7 +108630,8 @@
         8,
         9,
         10,
-        11
+        11,
+        12
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/6r-77222t2.jpg",
@@ -124519,6 +124558,28 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_kagurabachi_07_1794200518",
+      "bookId": "pub_kagurabachi_07",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kagurabachi_07_1794238190",
+      "bookId": "pub_kagurabachi_07",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_vagabond_bind_up_vol_03_init",
       "bookId": "pub_vagabond_bind_up_vol_03",
       "price": 138000,
@@ -124721,6 +124782,28 @@
       "previousPrice": 50000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_bungo_stray_dogs_19_1794200518",
+      "bookId": "pub_level_comic_bungo_stray_dogs_19",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_bungo_stray_dogs_19_1794238190",
+      "bookId": "pub_level_comic_bungo_stray_dogs_19",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
       "source": "gramedia_api"
     },
     {
@@ -127685,6 +127768,28 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_one_piece_42_2026_1794200518",
+      "bookId": "pub_one_piece_42_2026",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 36000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_42_2026_1794238190",
+      "bookId": "pub_one_piece_42_2026",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_hai_miiko_38_reguler_init",
       "bookId": "pub_hai_miiko_38_reguler",
       "price": 28800,
@@ -129745,6 +129850,17 @@
       "previousPrice": 59000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-01",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_fragrant_flower_blooms_with_dignity_kaoru_rin_16_1794238190",
+      "bookId": "pub_the_fragrant_flower_blooms_with_dignity_kaoru_rin_16",
+      "price": 59000,
+      "currentPrice": 59000,
+      "originalPrice": 59000,
+      "previousPrice": 53100,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
       "source": "gramedia_api"
     },
     {
@@ -152629,6 +152745,17 @@
       "previousPrice": 37500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-07",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_slam_dunk_new_edition_08_1794237773",
+      "bookId": "pub_slam_dunk_new_edition_08",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 75000,
+      "previousPrice": 37500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
       "source": "gramedia_api_refresh"
     },
     {
@@ -289477,6 +289604,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_kindaichi_37_tahun_06_1794237981",
+      "bookId": "pub_kindaichi_37_tahun_06",
+      "price": 21000,
+      "currentPrice": 21000,
+      "originalPrice": 42000,
+      "previousPrice": 21000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_lc_attack_on_titan_06_1_init",
       "bookId": "pub_lc_attack_on_titan_06_1",
       "price": 27000,
@@ -331969,6 +332107,28 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_one_piece_43_2026_1794200518",
+      "bookId": "pub_one_piece_43_2026",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 36000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_43_2026_1794238190",
+      "bookId": "pub_one_piece_43_2026",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_regarding_reincarnated_to_slime_21_init",
       "bookId": "pub_regarding_reincarnated_to_slime_21",
       "price": 35000,
@@ -347738,6 +347898,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_dragon_ball_super_volume_2_1794238054",
+      "bookId": "pub_dragon_ball_super_volume_2",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "previousPrice": 26000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_dragon_ball_super_vol_3_init",
       "bookId": "pub_dragon_ball_super_vol_3",
       "price": 30000,
@@ -351385,6 +351556,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_akasha_schoollive_vol_1_1794238190",
+      "bookId": "pub_akasha_schoollive_vol_1",
+      "price": 41250,
+      "currentPrice": 41250,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_black_clover_29_init",
       "bookId": "pub_black_clover_29",
       "price": 45000,
@@ -351480,6 +351662,28 @@
       "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_clover_29_1794200518",
+      "bookId": "pub_black_clover_29",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_black_clover_29_1794238190",
+      "bookId": "pub_black_clover_29",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
       "source": "gramedia_api"
     },
     {
@@ -351901,6 +352105,28 @@
       "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-08",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sakamoto_days_24_1794200518",
+      "bookId": "pub_sakamoto_days_24",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sakamoto_days_24_1794238190",
+      "bookId": "pub_sakamoto_days_24",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-09",
       "source": "gramedia_api"
     },
     {
@@ -353181,9 +353407,79 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2019-04-03",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_atelier_of_witch_hat_12_init",
+      "bookId": "pub_atelier_of_witch_hat_12",
+      "price": 98000,
+      "currentPrice": 98000,
+      "originalPrice": 98000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-25",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1794238190",
+      "startedAt": "2026-11-09T15:20:42.000Z",
+      "finishedAt": "2026-11-09T15:29:50.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1517,
+      "productsAccepted": 1317,
+      "productsRejected": 618,
+      "productsUpdated": 849,
+      "productsInserted": 3,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 548393,
+      "success": true
+    },
+    {
+      "id": "sync_1794200518",
+      "startedAt": "2026-11-09T04:52:19.000Z",
+      "finishedAt": "2026-11-09T05:01:58.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1516,
+      "productsAccepted": 1316,
+      "productsRejected": 618,
+      "productsUpdated": 849,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 579316,
+      "success": true
+    },
+    {
+      "id": "sync_1794174747",
+      "startedAt": "2026-11-08T21:44:05.000Z",
+      "finishedAt": "2026-11-08T21:52:27.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1516,
+      "productsAccepted": 1316,
+      "productsRejected": 618,
+      "productsUpdated": 849,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 502261,
+      "success": true
+    },
     {
       "id": "sync_1794142763",
       "startedAt": "2026-11-08T12:50:05.000Z",
@@ -353522,66 +353818,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 575371,
-      "success": true
-    },
-    {
-      "id": "sync_1793666633",
-      "startedAt": "2026-11-03T00:35:02.000Z",
-      "finishedAt": "2026-11-03T00:43:53.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1521,
-      "productsAccepted": 1261,
-      "productsRejected": 449,
-      "productsUpdated": 1024,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 531717,
-      "success": true
-    },
-    {
-      "id": "sync_1793631671",
-      "startedAt": "2026-11-02T14:52:59.000Z",
-      "finishedAt": "2026-11-02T15:01:11.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1548,
-      "productsAccepted": 1288,
-      "productsRejected": 449,
-      "productsUpdated": 1046,
-      "productsInserted": 57,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 492017,
-      "success": true
-    },
-    {
-      "id": "sync_1793595113",
-      "startedAt": "2026-11-02T04:41:25.000Z",
-      "finishedAt": "2026-11-02T04:51:53.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1548,
-      "productsAccepted": 1288,
-      "productsRejected": 445,
-      "productsUpdated": 1055,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 627580,
       "success": true
     }
   ]

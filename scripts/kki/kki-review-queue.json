@@ -112,20 +112,6 @@
   "reason": "score-below-auto"
  },
  {
-  "nuvelliteSeriesId": "ser_detektif-conan-toru-amuro-selection",
-  "nuvelliteTitle": "Detektif Conan: Toru Amuro Selection",
-  "nuvelliteType": "MANGA",
-  "nuvelliteAuthor": "Aoyama Gosho",
-  "kkiTitle": "Detektif Conan: Toru Amuro Selection - Zero`s Mystery",
-  "kkiMedium": "LIGHT_NOVEL",
-  "kkiAuthor": "Aoyama Gosho, Saji Sakai",
-  "kkiPublisher": "Elex",
-  "score": 89.5,
-  "authorScore": 90.0,
-  "crossMedium": true,
-  "reason": "cross-medium"
- },
- {
   "nuvelliteSeriesId": "ser_the-liminal-zone-season",
   "nuvelliteTitle": "The Liminal Zone - Season",
   "nuvelliteType": "MANGA",
@@ -309,7 +295,7 @@
  },
  {
   "nuvelliteSeriesId": "ser_ive-been-killing-slimes-for-300-years",
-  "nuvelliteTitle": "I`ve Been Killing Slimes for 300 Years",
+  "nuvelliteTitle": "I've been Killing Slimes for 300 Years",
   "nuvelliteType": "MANGA",
   "nuvelliteAuthor": "Shiba Yuusuke",
   "kkiTitle": "I've Been Killing Slimes for 300 Years and Maxed Out My Level",
@@ -401,6 +387,20 @@
   "kkiAuthor": "Fujiko F. Fujio",
   "kkiPublisher": "",
   "score": 86.2,
+  "authorScore": 100.0,
+  "crossMedium": false,
+  "reason": "score-below-auto"
+ },
+ {
+  "nuvelliteSeriesId": "ser_lofty-flower-fall-for-me",
+  "nuvelliteTitle": "Lofty Flower, Fall For Me!!",
+  "nuvelliteType": "MANGA",
+  "nuvelliteAuthor": "Natsume Ayano",
+  "kkiTitle": "Lofty Flower, Fall For Me!! - Bind Up Edition",
+  "kkiMedium": "MANGA",
+  "kkiAuthor": "Natsume Ayano",
+  "kkiPublisher": "Elex",
+  "score": 86.0,
   "authorScore": 100.0,
   "crossMedium": false,
   "reason": "score-below-auto"
@@ -500,34 +500,6 @@
   "kkiPublisher": "Elex",
   "score": 84.7,
   "authorScore": 95.0,
-  "crossMedium": false,
-  "reason": "score-below-auto"
- },
- {
-  "nuvelliteSeriesId": "ser_detektif-conan-dead-or-alive-selection",
-  "nuvelliteTitle": "Detektif Conan Dead or Alive Selection",
-  "nuvelliteType": "MANGA",
-  "nuvelliteAuthor": "Aoyama Gosho",
-  "kkiTitle": "Detektif Conan: FBI Selection",
-  "kkiMedium": "MANGA",
-  "kkiAuthor": "Aoyama Gosho",
-  "kkiPublisher": "Elex",
-  "score": 83.8,
-  "authorScore": 100.0,
-  "crossMedium": false,
-  "reason": "score-below-auto"
- },
- {
-  "nuvelliteSeriesId": "ser_detektif-conan-secret-archives",
-  "nuvelliteTitle": "Detektif Conan Secret Archives",
-  "nuvelliteType": "MANGA",
-  "nuvelliteAuthor": "Aoyama Gosho",
-  "kkiTitle": "Detektif Conan Secret Archives 1 Shinichi Kudo & Ran Mouri",
-  "kkiMedium": "MANGA",
-  "kkiAuthor": "Aoyama Gosho",
-  "kkiPublisher": "Elex",
-  "score": 83.8,
-  "authorScore": 100.0,
   "crossMedium": false,
   "reason": "score-below-auto"
  },
@@ -700,20 +672,6 @@
   "reason": "score-below-auto"
  },
  {
-  "nuvelliteSeriesId": "ser_pretending-not-to-see-dark-urban-legend",
-  "nuvelliteTitle": "Pretending Not To See - Dark Urban Legend",
-  "nuvelliteType": "MANGA",
-  "nuvelliteAuthor": "Ryo Azuki",
-  "kkiTitle": "Dark Urban Legend",
-  "kkiMedium": "MANGA",
-  "kkiAuthor": "Ryo Azuki",
-  "kkiPublisher": "Elex",
-  "score": 80.3,
-  "authorScore": 100.0,
-  "crossMedium": false,
-  "reason": "score-below-auto"
- },
- {
   "nuvelliteSeriesId": "ser_sword-art-online-007-mothers-rosario",
   "nuvelliteTitle": "Sword Art Online 007 Mother’s Rosario",
   "nuvelliteType": "LIGHT_NOVEL",
@@ -812,20 +770,6 @@
   "reason": "score-below-auto"
  },
  {
-  "nuvelliteSeriesId": "ser_detektif-conan-vs-kid-the-phantom-thief",
-  "nuvelliteTitle": "Detektif Conan vs Kid the Phantom Thief",
-  "nuvelliteType": "MANGA",
-  "nuvelliteAuthor": "Aoyama Gosho",
-  "kkiTitle": "Detektif Conan",
-  "kkiMedium": "MANGA",
-  "kkiAuthor": "Aoyama Gosho",
-  "kkiPublisher": "Elex",
-  "score": 77.6,
-  "authorScore": 100.0,
-  "crossMedium": false,
-  "reason": "substring-extra-words"
- },
- {
   "nuvelliteSeriesId": "ser_gimai-seikatsu",
   "nuvelliteTitle": "Gimai Seikatsu",
   "nuvelliteType": "LIGHT_NOVEL",
@@ -880,20 +824,6 @@
   "authorScore": 90.0,
   "crossMedium": true,
   "reason": "cross-medium"
- },
- {
-  "nuvelliteSeriesId": "ser_detektif-conan-the-jet-black-mystery-train",
-  "nuvelliteTitle": "Detektif Conan: The Jet-Black Mystery Train",
-  "nuvelliteType": "MANGA",
-  "nuvelliteAuthor": "Aoyama Gosho",
-  "kkiTitle": "Detektif Conan",
-  "kkiMedium": "MANGA",
-  "kkiAuthor": "Aoyama Gosho",
-  "kkiPublisher": "Elex",
-  "score": 76.7,
-  "authorScore": 100.0,
-  "crossMedium": false,
-  "reason": "score-below-auto"
  },
  {
   "nuvelliteSeriesId": "ser_wild-police-story-first",
