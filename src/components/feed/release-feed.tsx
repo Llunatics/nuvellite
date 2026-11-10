@@ -95,43 +95,102 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     }
   };
 
-  const featuredCardWrapperRef = useRef<HTMLDivElement>(null);
-  const [dismissStyle, setDismissStyle] = useState<{
+  const featuredSectionRef = useRef<HTMLElement>(null);
+  const featuredInnerRef = useRef<HTMLDivElement>(null);
+  const cardHeightRef = useRef<number>(480);
+
+  const [dismissState, setDismissState] = useState<{
     opacity: number;
     transform: string;
+    marginBottom: string;
     pointerEvents: 'auto' | 'none';
   }>({
     opacity: 1,
     transform: 'translate3d(0, 0px, 0) scale(1)',
+    marginBottom: '0px',
     pointerEvents: 'auto',
   });
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+    const innerEl = featuredInnerRef.current;
+    if (!innerEl) return;
+
+    const measure = () => {
+      const h = innerEl.offsetHeight;
+      if (h > 0) cardHeightRef.current = h;
+    };
+    measure();
+
+    const ro = new ResizeObserver(measure);
+    ro.observe(innerEl);
+    return () => ro.disconnect();
+  }, [activeSpotlightIdx]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mq.matches) return;
+    if (mq.matches) {
+      setDismissState({
+        opacity: 1,
+        transform: 'translate3d(0, 0px, 0) scale(1)',
+        marginBottom: '0px',
+        pointerEvents: 'auto',
+      });
+      return;
+    }
 
     let rafId = 0;
     const updateCardDismissal = () => {
-      const el = featuredCardWrapperRef.current;
-      if (!el) return;
-      const rect = el.getBoundingClientRect();
+      const sectionEl = featuredSectionRef.current;
+      if (!sectionEl) return;
+
+      const scrollY = window.scrollY || window.pageYOffset || 0;
+      if (scrollY <= 4) {
+        setDismissState({
+          opacity: 1,
+          transform: 'translate3d(0, 0px, 0) scale(1)',
+          marginBottom: '0px',
+          pointerEvents: 'auto',
+        });
+        return;
+      }
+
       const viewportH = window.innerHeight || 844;
-        // Start dismissing smoothly as the card scrolls up toward the sticky header zone
-        const triggerTop = Math.min(360, viewportH * 0.45);
-        const travelRange = Math.max(260, viewportH * 0.35);
-        const rawProgress = (triggerTop - rect.top) / travelRange;
-        const progress = Math.min(1, Math.max(0, rawProgress));
+      const isDesktop = window.innerWidth >= 768;
+      const cardH = cardHeightRef.current || (isDesktop ? 400 : 540);
+      const sectionTop = sectionEl.offsetTop || (isDesktop ? 300 : 320);
 
-      // Smooth cubic-bezier-like easing
+      // Ensure the user can see the entire card before dismissal begins:
+      // On mobile (where sectionTop + cardH > viewportH), start dismissing only after
+      // the bottom of the card has entered comfortable viewing range.
+      const overflowBelowFold = Math.max(0, sectionTop + cardH - viewportH + 48);
+      const startScroll = isDesktop
+        ? Math.max(40, sectionTop - 140)
+        : Math.max(140, overflowBelowFold + 60);
+
+      const travelRange = Math.max(260, Math.round(cardH * 0.65));
+      const rawProgress = (scrollY - startScroll) / travelRange;
+      const progress = Math.min(1, Math.max(0, rawProgress));
+
+      // Smoothstep easing: C1 continuous at 0 and 1
       const eased = progress * progress * (3 - 2 * progress);
-      const opacity = Math.max(0, Number((1 - eased * 1.08).toFixed(3)));
-      const translateY = Number((-eased * 44).toFixed(1));
-      const scale = Number((1 - eased * 0.065).toFixed(4));
 
-      setDismissStyle({
+      const opacity = Math.max(0, Number((1 - eased).toFixed(3)));
+      const translateY = Number((-eased * 40).toFixed(1));
+      const scale = Number((1 - eased * 0.055).toFixed(4));
+
+      // Collapse the card's occupied layout space in lockstep with its fade
+      // so the section below ("Rilisan Manga Terbaru") rises smoothly to close the gap.
+      // Cap collapse at cardH * 0.72 so document scrollHeight always stays comfortably
+      // taller than scrollY and never triggers bottom-of-page scroll clamping.
+      const maxCollapse = Math.round(cardH * 0.72);
+      const collapsePx = Math.round(eased * maxCollapse);
+
+      setDismissState({
         opacity,
         transform: `translate3d(0, ${translateY}px, 0) scale(${scale})`,
+        marginBottom: `${-collapsePx}px`,
         pointerEvents: opacity < 0.15 ? 'none' : 'auto',
       });
     };
@@ -316,9 +375,9 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   };
 
   return (
-    <div className="space-y-16 sm:space-y-24" onClickCapture={persistViewState}>
+    <div className="space-y-14 sm:space-y-20" onClickCapture={persistViewState}>
       {/* 1. HERO EDITORIAL INTRODUCTION */}
-      <section className="space-y-4 pt-2 sm:pt-4 lg:pt-8">
+      <section className="space-y-4 pt-1 lg:pt-2">
         <div className="max-w-3xl lg:max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-xs shrink-0" />
@@ -366,37 +425,39 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       {/* 2. CURATED SPOTLIGHT SHOWCASE */}
       {activeSpotlight && (
         <section
-          ref={featuredCardWrapperRef}
+          ref={featuredSectionRef}
           data-testid="featured-showcase-card"
-          style={dismissStyle}
-          className="relative z-10 space-y-3 will-change-[transform,opacity] origin-top"
+          style={dismissState}
+          className="relative z-10 !mt-8 sm:!mt-10 will-change-[transform,opacity] origin-top"
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >
-          <FeaturedReleaseCard key={activeSpotlight.id} book={activeSpotlight} />
+          <div ref={featuredInnerRef} className="space-y-3">
+            <FeaturedReleaseCard key={activeSpotlight.id} book={activeSpotlight} />
 
-          {/* Minimal Spotlight Pagination */}
-          {spotlightBooks.length > 1 && (
-            <div className="flex items-center justify-center gap-1.5 pt-1">
-              {spotlightBooks.map((_, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => {
-                    setActiveSpotlightIdx(idx);
-                    // Let the user linger on their pick before auto-advance resumes.
-                    setSpotlightPaused(true);
-                    if (spotlightResumeRef.current) clearTimeout(spotlightResumeRef.current);
-                    spotlightResumeRef.current = setTimeout(() => setSpotlightPaused(false), 12000);
-                  }}
-                  className={`h-1 rounded-full transition-all duration-300 ${
-                    activeSpotlightIdx === idx ? 'w-6 bg-white' : 'w-2 bg-white/20 hover:bg-white/40'
-                  }`}
-                  aria-label={`Pilih sorotan ${idx + 1}`}
-                />
-              ))}
-            </div>
-          )}
+            {/* Minimal Spotlight Pagination */}
+            {spotlightBooks.length > 1 && (
+              <div className="flex items-center justify-center gap-1.5 pt-1">
+                {spotlightBooks.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => {
+                      setActiveSpotlightIdx(idx);
+                      // Let the user linger on their pick before auto-advance resumes.
+                      setSpotlightPaused(true);
+                      if (spotlightResumeRef.current) clearTimeout(spotlightResumeRef.current);
+                      spotlightResumeRef.current = setTimeout(() => setSpotlightPaused(false), 12000);
+                    }}
+                    className={`h-1 rounded-full transition-all duration-300 ${
+                      activeSpotlightIdx === idx ? 'w-6 bg-white' : 'w-2 bg-white/20 hover:bg-white/40'
+                    }`}
+                    aria-label={`Pilih sorotan ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
         </section>
       )}
 

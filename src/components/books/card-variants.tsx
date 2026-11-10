@@ -19,7 +19,7 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
   const wishlisted = isLoaded && isWishlisted(book.id);
 
   return (
-    <div className="relative z-10 overflow-hidden rounded-[28px] border border-white/[0.07] bg-surface/85 backdrop-blur-2xl px-5 py-6 sm:p-8 lg:p-10 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.6)]">
+    <div className="relative z-10 overflow-hidden rounded-[28px] border border-white/[0.07] bg-surface/85 backdrop-blur-2xl p-5 sm:p-6 lg:p-7 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.6)]">
       {/* Ambient cover glow (Round 3, D.2) */}
       <div
         className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none -z-10"
@@ -27,9 +27,9 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
         aria-hidden="true"
       />
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[260px_1fr] gap-8 lg:gap-12 items-center">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-[216px_1fr] lg:grid-cols-[224px_1fr] gap-6 lg:gap-8 items-center">
         {/* Cover column with ambient glow strictly behind cover container */}
-        <div className="relative shrink-0 z-0 mx-auto md:mx-0 w-[200px] sm:w-[228px] lg:w-[256px]">
+        <div className="relative shrink-0 z-0 mx-auto md:mx-0 w-[192px] sm:w-[216px] lg:w-[224px]">
           <div
             className="absolute -inset-4 bg-cover bg-center rounded-full blur-3xl opacity-15 pointer-events-none -z-10"
             style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
@@ -42,9 +42,9 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
             <CoverImage
               src={book.coverImage}
               alt={book.title}
-              width={256}
-              height={384}
-              sizes="(max-width: 640px) 200px, (max-width: 1024px) 228px, 256px"
+              width={224}
+              height={336}
+              sizes="(max-width: 640px) 192px, (max-width: 1024px) 216px, 224px"
               priority
               imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/cover:scale-[1.03]"
               fallbackIconClassName="w-12 h-12 text-editorial-faint"
@@ -121,7 +121,7 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
           )}
 
           {/* Pricing & Actions Bar */}
-          <div className="mt-6 pt-5 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
+          <div className="mt-5 pt-4 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
             {/* Pricing */}
             <div>
               <span className="font-mono text-[10px] uppercase tracking-widest text-editorial-muted font-medium block">
