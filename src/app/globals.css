@@ -402,7 +402,7 @@
 
 /* Opaque Frosted Popovers (Round 3.3) */
 .glass-popover {
-  background-color: rgba(16, 19, 27, 0.95);
+  background-color: rgba(14, 17, 24, 0.98);
   background-image: none;
   backdrop-filter: blur(24px) saturate(150%);
   -webkit-backdrop-filter: blur(24px) saturate(150%);
@@ -411,7 +411,7 @@
 }
 
 .light .glass-popover {
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: rgba(255, 255, 255, 0.98);
   background-image: none;
   backdrop-filter: blur(24px) saturate(150%);
   -webkit-backdrop-filter: blur(24px) saturate(150%);

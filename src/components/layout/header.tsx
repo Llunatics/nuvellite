@@ -57,7 +57,7 @@ export function Header() {
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 pointer-events-none ${
           isScrolled
-            ? 'px-3 sm:px-6 pt-2.5 pb-1.5 bg-gradient-to-b from-background via-background/85 to-transparent'
+            ? "px-3 sm:px-6 pt-2.5 pb-1.5 bg-gradient-to-b from-background via-background/85 to-transparent before:content-[''] before:block before:pointer-events-none before:fixed before:inset-x-0 before:top-0 before:h-3 before:bg-background before:z-[-1]"
             : 'px-4 sm:px-6 pt-3 pb-2 bg-transparent'
         }`}
       >

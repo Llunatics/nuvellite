@@ -97,15 +97,17 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
 
   const featuredSectionRef = useRef<HTMLElement>(null);
   const featuredInnerRef = useRef<HTMLDivElement>(null);
-  const cardHeightRef = useRef<number>(480);
+  const cardHeightRef = useRef<number>(520);
 
   const [dismissState, setDismissState] = useState<{
     opacity: number;
+    dotsOpacity: number;
     transform: string;
     marginBottom: string;
     pointerEvents: 'auto' | 'none';
   }>({
     opacity: 1,
+    dotsOpacity: 1,
     transform: 'translate3d(0, 0px, 0) scale(1)',
     marginBottom: '0px',
     pointerEvents: 'auto',
@@ -133,6 +135,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     if (mq.matches) {
       setDismissState({
         opacity: 1,
+        dotsOpacity: 1,
         transform: 'translate3d(0, 0px, 0) scale(1)',
         marginBottom: '0px',
         pointerEvents: 'auto',
@@ -149,6 +152,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       if (scrollY <= 4) {
         setDismissState({
           opacity: 1,
+          dotsOpacity: 1,
           transform: 'translate3d(0, 0px, 0) scale(1)',
           marginBottom: '0px',
           pointerEvents: 'auto',
@@ -156,41 +160,42 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
         return;
       }
 
-      const viewportH = window.innerHeight || 844;
       const isDesktop = window.innerWidth >= 768;
-      const cardH = cardHeightRef.current || (isDesktop ? 400 : 540);
-      const sectionTop = sectionEl.offsetTop || (isDesktop ? 300 : 320);
+      const cardH = cardHeightRef.current || (isDesktop ? 390 : 540);
 
-      // Ensure the user can see the entire card before dismissal begins:
-      // On mobile (where sectionTop + cardH > viewportH), start dismissing only after
-      // the bottom of the card has entered comfortable viewing range.
-      const overflowBelowFold = Math.max(0, sectionTop + cardH - viewportH + 48);
-      const startScroll = isDesktop
-        ? Math.max(40, sectionTop - 140)
-        : Math.max(140, overflowBelowFold + 60);
-
-      const travelRange = Math.max(260, Math.round(cardH * 0.65));
+      // Start scroll-linked swipe-away once the user scrolls into the showcase:
+      const startScroll = isDesktop ? 40 : 110;
+      const travelRange = isDesktop ? 300 : 340;
       const rawProgress = (scrollY - startScroll) / travelRange;
       const progress = Math.min(1, Math.max(0, rawProgress));
 
-      // Smoothstep easing: C1 continuous at 0 and 1
+      // Smoothstep easing (C1 continuous)
       const eased = progress * progress * (3 - 2 * progress);
 
-      const opacity = Math.max(0, Number((1 - eased).toFixed(3)));
-      const translateY = Number((-eased * 40).toFixed(1));
-      const scale = Number((1 - eased * 0.055).toFixed(4));
+      // Upward swipe translation and top-anchored scale reduction
+      const maxTranslateUp = isDesktop ? 120 : 150;
+      const maxScaleReduction = 0.08;
 
-      // Collapse the card's occupied layout space in lockstep with its fade
-      // so the section below ("Rilisan Manga Terbaru") rises smoothly to close the gap.
-      // Cap collapse at cardH * 0.72 so document scrollHeight always stays comfortably
-      // taller than scrollY and never triggers bottom-of-page scroll clamping.
-      const maxCollapse = Math.round(cardH * 0.72);
-      const collapsePx = Math.round(eased * maxCollapse);
+      const translateY = Number((-eased * maxTranslateUp).toFixed(1));
+      const scale = Number((1 - eased * maxScaleReduction).toFixed(4));
+
+      // Visual bottom of the card rises by exactly:
+      //   eased * maxTranslateUp + cardH * (1 - scale)
+      // By setting collapsePx strictly equal to this exact visual bottom rise,
+      // the gap between the Featured card's visible bottom edge and the top of
+      // "Rilisan Manga Terbaru" remains CONSTANT (>= 32px) at every scrollY!
+      const visualBottomRise = eased * maxTranslateUp + cardH * (eased * maxScaleReduction);
+      const collapsePx = Math.round(visualBottomRise);
+
+      // Opacity reaches 0 smoothly at progress = 1
+      const opacity = Math.max(0, Number((1 - Math.pow(eased, 0.92)).toFixed(3)));
+      const dotsOpacity = Math.max(0, Number((1 - eased * 1.6).toFixed(3)));
 
       setDismissState({
         opacity,
+        dotsOpacity,
         transform: `translate3d(0, ${translateY}px, 0) scale(${scale})`,
-        marginBottom: `${-collapsePx}px`,
+        marginBottom: `${collapsePx === 0 ? 0 : -collapsePx}px`,
         pointerEvents: opacity < 0.15 ? 'none' : 'auto',
       });
     };
@@ -427,17 +432,25 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
         <section
           ref={featuredSectionRef}
           data-testid="featured-showcase-card"
-          style={dismissState}
+          style={{
+            opacity: dismissState.opacity,
+            transform: dismissState.transform,
+            marginBottom: dismissState.marginBottom,
+            pointerEvents: dismissState.pointerEvents,
+          }}
           className="relative z-10 !mt-8 sm:!mt-10 will-change-[transform,opacity] origin-top"
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >
-          <div ref={featuredInnerRef} className="space-y-3">
+          <div ref={featuredInnerRef} className="space-y-3 origin-top will-change-[transform,opacity]">
             <FeaturedReleaseCard key={activeSpotlight.id} book={activeSpotlight} />
 
             {/* Minimal Spotlight Pagination */}
             {spotlightBooks.length > 1 && (
-              <div className="flex items-center justify-center gap-1.5 pt-1">
+              <div
+                style={{ opacity: dismissState.dotsOpacity }}
+                className="flex items-center justify-center gap-1.5 pt-1 transition-opacity duration-150"
+              >
                 {spotlightBooks.map((_, idx) => (
                   <button
                     key={idx}
