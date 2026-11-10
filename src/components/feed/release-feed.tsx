@@ -290,6 +290,13 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     return () => clearInterval(timer);
   }, [spotlightBooks.length, spotlightPaused]);
 
+  const handleSelectSpotlight = useCallback((idx: number) => {
+    setActiveSpotlightIdx(idx);
+    setSpotlightPaused(true);
+    if (spotlightResumeRef.current) clearTimeout(spotlightResumeRef.current);
+    spotlightResumeRef.current = setTimeout(() => setSpotlightPaused(false), 12000);
+  }, []);
+
   const handleViewAll = (format: 'Manga' | 'Light Novel') => {
     setFormatFilter(format);
     if (catalogRef.current) {
@@ -442,34 +449,14 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >
-          <div ref={featuredInnerRef} className="space-y-3 origin-top will-change-[transform,opacity]">
-            <FeaturedReleaseCard key={activeSpotlight.id} book={activeSpotlight} />
-
-            {/* Minimal Spotlight Pagination */}
-            {spotlightBooks.length > 1 && (
-              <div
-                style={{ opacity: dismissState.dotsOpacity }}
-                className="flex items-center justify-center gap-1.5 pt-1 transition-opacity duration-150"
-              >
-                {spotlightBooks.map((_, idx) => (
-                  <button
-                    key={idx}
-                    type="button"
-                    onClick={() => {
-                      setActiveSpotlightIdx(idx);
-                      // Let the user linger on their pick before auto-advance resumes.
-                      setSpotlightPaused(true);
-                      if (spotlightResumeRef.current) clearTimeout(spotlightResumeRef.current);
-                      spotlightResumeRef.current = setTimeout(() => setSpotlightPaused(false), 12000);
-                    }}
-                    className={`h-1 rounded-full transition-all duration-300 ${
-                      activeSpotlightIdx === idx ? 'w-6 bg-white' : 'w-2 bg-white/20 hover:bg-white/40'
-                    }`}
-                    aria-label={`Pilih sorotan ${idx + 1}`}
-                  />
-                ))}
-              </div>
-            )}
+          <div ref={featuredInnerRef} className="origin-top will-change-[transform,opacity]">
+            <FeaturedReleaseCard
+              key={activeSpotlight.id}
+              book={activeSpotlight}
+              spotlightBooks={spotlightBooks}
+              activeIndex={activeSpotlightIdx}
+              onSelectIndex={handleSelectSpotlight}
+            />
           </div>
         </section>
       )}

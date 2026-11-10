@@ -6,181 +6,258 @@ import { CoverImage } from './cover-image';
 import { Book, Series } from '@/lib/types';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
-import { cleanStorySynopsis } from '@/lib/data/synopsis-cleaner';
-import { Bookmark, Check, Plus, BookOpen, Sparkles, Layers, ArrowRight } from 'lucide-react';
+import { Bookmark, Check, Plus, Sparkles } from 'lucide-react';
 
-interface FeaturedReleaseCardProps {
+export interface FeaturedReleaseCardProps {
   book: Book;
+  spotlightBooks?: Book[];
+  activeIndex?: number;
+  onSelectIndex?: (index: number) => void;
 }
 
-export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ book }: FeaturedReleaseCardProps) {
+export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({
+  book,
+  spotlightBooks = [],
+  activeIndex = 0,
+  onSelectIndex,
+}: FeaturedReleaseCardProps) {
   const { isOwned, isWishlisted, toggleOwned, toggleWishlist, isLoaded } = useCollection();
   const owned = isLoaded && isOwned(book.id);
   const wishlisted = isLoaded && isWishlisted(book.id);
 
-  return (
-    <div className="relative z-10 overflow-hidden rounded-[28px] border border-white/[0.07] bg-surface/85 backdrop-blur-2xl p-5 sm:p-6 lg:p-7 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.6)]">
-      {/* Ambient cover glow (Round 3, D.2) */}
-      <div
-        className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none -z-10"
-        style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
-        aria-hidden="true"
-      />
+  const hasMultiple = spotlightBooks.length > 1;
+  const hasFan = spotlightBooks.length >= 3;
+  const prevIdx = hasFan ? (activeIndex - 1 + spotlightBooks.length) % spotlightBooks.length : -1;
+  const nextIdx = hasFan ? (activeIndex + 1) % spotlightBooks.length : -1;
+  const prevBook = prevIdx >= 0 ? spotlightBooks[prevIdx] : null;
+  const nextBook = nextIdx >= 0 ? spotlightBooks[nextIdx] : null;
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-[216px_1fr] lg:grid-cols-[224px_1fr] gap-6 lg:gap-8 items-center">
-        {/* Cover column with ambient glow strictly behind cover container */}
-        <div className="relative shrink-0 z-0 mx-auto md:mx-0 w-[192px] sm:w-[216px] lg:w-[224px]">
+  const rightEyebrow = [
+    book.category,
+    book.volume !== null && book.volume !== undefined ? `Vol. ${book.volume}` : null,
+    book.status === 'PREORDER' ? 'Pre-Order' : null,
+  ]
+    .filter(Boolean)
+    .join(' · ');
+
+  return (
+    <article
+      data-testid="featured-release-card"
+      className="relative mx-auto w-full max-w-3xl overflow-hidden rounded-[28px] sm:rounded-[32px] border border-white/[0.08] bg-surface/90 backdrop-blur-xl p-4 sm:p-6 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.65)]"
+    >
+      {/* 1. Top Monospace Eyebrow Strip (Llunevie Header Pattern) */}
+      <div className="flex items-center justify-between gap-3 border-b border-white/[0.06] pb-3 mb-3.5 text-[10px] font-mono uppercase tracking-[0.14em]">
+        <span className="inline-flex items-center gap-1.5 font-semibold text-accent shrink-0">
+          <Sparkles className="w-3 h-3 shrink-0" />
+          <span>Sorotan Utama</span>
+        </span>
+        <span className="text-editorial-muted truncate">
+          {rightEyebrow}
+        </span>
+      </div>
+
+      {/* 2. Dominant Full-Width Cover-Forward Media Well */}
+      <div
+        data-testid="featured-media-stage"
+        className="relative w-full h-[220px] sm:h-[256px] rounded-2xl overflow-hidden bg-surface-sunken border border-white/[0.06] flex items-center justify-center select-none"
+      >
+        {/* Atmospheric Cover Aura Inside Media Well (Behind Covers) */}
+        {book.coverImage && (
           <div
-            className="absolute -inset-4 bg-cover bg-center rounded-full blur-3xl opacity-15 pointer-events-none -z-10"
-            style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
             aria-hidden="true"
+            className="absolute inset-0 bg-cover bg-center blur-2xl scale-125 opacity-30 pointer-events-none"
+            style={{ backgroundImage: `url(${book.coverImage})` }}
           />
-          <Link
-            href={`/books/${book.slug}`}
-            className="group/cover relative block aspect-[2/3] w-full rounded-2xl overflow-hidden book-cover-elevated focus-visible:ring-2 focus-visible:ring-accent"
+        )}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/25 pointer-events-none"
+        />
+
+        {/* Left Fanned Companion Cover (Previous Spotlight Book) */}
+        {prevBook && (
+          <button
+            type="button"
+            onClick={() => onSelectIndex?.(prevIdx)}
+            aria-label={`Lihat sorotan sebelumnya: ${prevBook.title}`}
+            className="absolute z-10 w-[108px] sm:w-[128px] aspect-[2/3] -translate-x-[74px] sm:-translate-x-[104px] translate-y-3 -rotate-6 scale-[0.88] opacity-50 hover:opacity-80 transition-all duration-500 ease-out rounded-xl overflow-hidden shadow-xl border border-white/10 focus-visible:outline-none"
           >
             <CoverImage
-              src={book.coverImage}
-              alt={book.title}
-              width={224}
-              height={336}
-              sizes="(max-width: 640px) 192px, (max-width: 1024px) 216px, 224px"
-              priority
-              imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/cover:scale-[1.03]"
-              fallbackIconClassName="w-12 h-12 text-editorial-faint"
+              src={prevBook.coverImage}
+              alt={prevBook.title}
+              width={128}
+              height={192}
+              sizes="128px"
+              imgClassName="w-full h-full object-cover"
             />
-            {/* Floating cover badges (Round 3, D.2 / S-05) */}
-            <span className="absolute top-2.5 left-2.5 z-10 backdrop-blur-md bg-black/65 text-white border border-white/15 rounded-full px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider">
-              {book.category}
+          </button>
+        )}
+
+        {/* Center Dominant Book Cover (Active Spotlight Book — 100% True Brightness) */}
+        <Link
+          href={`/books/${book.slug}`}
+          className="group/cover relative z-20 block w-[132px] sm:w-[156px] aspect-[2/3] rounded-xl overflow-hidden bg-surface-sunken shadow-[0_20px_44px_rgba(0,0,0,0.75)] ring-1 ring-white/15 transition-transform duration-300 ease-out hover:scale-[1.03]"
+        >
+          <CoverImage
+            src={book.coverImage}
+            alt={book.title}
+            width={156}
+            height={234}
+            sizes="(max-width: 640px) 132px, 156px"
+            priority
+            imgClassName="w-full h-full object-cover"
+          />
+        </Link>
+
+        {/* Right Fanned Companion Cover (Next Spotlight Book) */}
+        {nextBook && (
+          <button
+            type="button"
+            onClick={() => onSelectIndex?.(nextIdx)}
+            aria-label={`Lihat sorotan berikutnya: ${nextBook.title}`}
+            className="absolute z-10 w-[108px] sm:w-[128px] aspect-[2/3] translate-x-[74px] sm:translate-x-[104px] translate-y-3 rotate-6 scale-[0.88] opacity-50 hover:opacity-80 transition-all duration-500 ease-out rounded-xl overflow-hidden shadow-xl border border-white/10 focus-visible:outline-none"
+          >
+            <CoverImage
+              src={nextBook.coverImage}
+              alt={nextBook.title}
+              width={128}
+              height={192}
+              sizes="128px"
+              imgClassName="w-full h-full object-cover"
+            />
+          </button>
+        )}
+
+        {/* Bottom-Left Status Pill Inside Media Well */}
+        {book.status === 'PREORDER' && (
+          <div className="absolute bottom-2.5 left-3 z-30 pointer-events-none">
+            <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold uppercase tracking-wider bg-accent text-zinc-950 shadow-md">
+              PRE-ORDER
             </span>
-            {book.volume !== null && book.volume !== undefined && (
-              <span className="absolute top-2.5 right-2.5 z-10 backdrop-blur-md bg-black/65 text-white border border-white/15 rounded-full px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider">
-                Vol. {book.volume}
+          </div>
+        )}
+
+        {/* Bottom-Right Integrated Spotlight Carousel Dots Inside Media Well */}
+        {hasMultiple && (
+          <div
+            data-testid="featured-carousel-dots"
+            className="absolute bottom-2.5 right-3 z-30 flex items-center gap-1.5 rounded-full bg-black/55 backdrop-blur-md px-2.5 py-1.5 border border-white/10"
+          >
+            {spotlightBooks.map((item, idx) => (
+              <button
+                key={item.id || idx}
+                type="button"
+                onClick={() => onSelectIndex?.(idx)}
+                aria-label={`Pilih sorotan ${idx + 1}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  activeIndex === idx
+                    ? 'w-5 bg-accent'
+                    : 'w-1.5 bg-white/35 hover:bg-white/60'
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* 3. Calm Editorial & Action Stack Below the Media Well */}
+      <div className="pt-3.5 sm:pt-4">
+        {/* Title (Clickable to Book Detail) */}
+        <Link
+          href={`/books/${book.slug}`}
+          className="group/title block focus-visible:outline-none"
+        >
+          <h2 className="font-editorial text-xl sm:text-2xl lg:text-[26px] font-normal text-editorial-title group-hover/title:text-accent transition-colors duration-200 leading-[1.18] tracking-tight line-clamp-2">
+            {book.title}
+          </h2>
+        </Link>
+
+        {/* Single One-Line Meta (Zero "•" Bullet Dots Flanking Publisher Name) */}
+        <div
+          data-testid="featured-meta-line"
+          className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs font-mono text-editorial-muted"
+        >
+          <span className="font-semibold text-editorial-title">
+            {book.publisherName}
+          </span>
+          {book.authors && book.authors.length > 0 && (
+            <>
+              <span className="h-3 w-px bg-white/15 shrink-0" aria-hidden="true" />
+              <span className="truncate max-w-[180px] sm:max-w-xs">
+                Karya {book.authors.join(', ')}
               </span>
-            )}
-            {book.status === 'PREORDER' && (
-              <span className="absolute bottom-2.5 left-2.5 z-10 backdrop-blur-md bg-accent text-white border border-white/15 rounded-full px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider">
-                Pre-Order
+            </>
+          )}
+          {book.releaseDate && (
+            <>
+              <span className="h-3 w-px bg-white/15 shrink-0" aria-hidden="true" />
+              <span className="shrink-0">
+                {formatDateWIB(book.releaseDate)}
               </span>
-            )}
-          </Link>
+            </>
+          )}
         </div>
 
-        {/* Editorial Content */}
-        <div className="flex-1 text-left w-full">
+        {/* Bottom Price & Collection Actions Row */}
+        <div className="mt-3.5 pt-3 border-t border-white/[0.06] flex items-center justify-between gap-3">
           <div>
-            {/* Tier 1 — Eyebrow Badge (SOROTAN UTAMA) */}
-            <div className="flex items-center">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/12 text-accent text-[10px] font-mono font-semibold tracking-[0.12em] uppercase border border-accent/25">
-                <Sparkles className="w-3 h-3 shrink-0" />
-                <span>SOROTAN UTAMA</span>
+            <span className="block text-[9px] font-mono uppercase tracking-widest text-editorial-faint">
+              {book.originalPrice && book.originalPrice > book.currentPrice
+                ? 'Harga Promo'
+                : 'Harga Normal'}
+            </span>
+            <div className="flex items-baseline gap-2 mt-0.5">
+              <span className="text-xl sm:text-2xl font-mono font-bold text-editorial-title tracking-tight">
+                {formatRupiah(book.currentPrice)}
               </span>
-            </div>
-
-            {/* Tier 2 — Publisher & Date Line */}
-            <div
-              data-testid="featured-meta-line"
-              className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono"
-            >
-              <span className="font-semibold text-editorial-title">
-                {book.publisherName}
-              </span>
-              {book.releaseDate && (
-                <>
-                  <span className="h-3 w-px bg-white/15 shrink-0" aria-hidden="true" />
-                  <span className="text-editorial-muted">
-                    {formatDateWIB(book.releaseDate)}
-                  </span>
-                </>
+              {book.originalPrice && book.originalPrice > book.currentPrice && (
+                <span className="text-xs font-mono text-editorial-faint line-through">
+                  {formatRupiah(book.originalPrice)}
+                </span>
               )}
             </div>
-
-            {/* Title */}
-            <div className="mt-2.5">
-              <Link
-                href={`/books/${book.slug}`}
-                className="group/title inline-block focus-visible:outline-none"
-              >
-                <h2 className="font-editorial text-2xl sm:text-3xl lg:text-4xl font-normal text-editorial-title group-hover/title:text-accent transition-colors duration-200 leading-[1.18] tracking-tight">
-                  {book.title}
-                </h2>
-              </Link>
-            </div>
-
-            {book.authors?.length > 0 && (
-              <p className="mt-3 text-xs sm:text-sm text-editorial-muted">
-                Karya <span className="text-editorial-title font-medium">{book.authors.join(', ')}</span>
-              </p>
-            )}
           </div>
 
-          {book.synopsis && (
-            <p className="mt-4 text-xs sm:text-sm text-editorial-body/90 line-clamp-3 leading-[1.65] font-sans max-w-2xl">
-              {cleanStorySynopsis(book.synopsis)}
-            </p>
-          )}
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              type="button"
+              onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
+              className={`inline-flex items-center gap-1.5 rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm font-medium transition-all duration-200 active:scale-95 ${
+                owned
+                  ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                  : 'bg-white/[0.07] hover:bg-white/[0.12] text-editorial-title border border-white/[0.09]'
+              }`}
+            >
+              {owned ? (
+                <>
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Dimiliki</span>
+                </>
+              ) : (
+                <>
+                  <Plus className="w-4 h-4 text-accent shrink-0" />
+                  <span>Koleksi</span>
+                </>
+              )}
+            </button>
 
-          {/* Pricing & Actions Bar */}
-          <div className="mt-5 pt-4 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
-            {/* Pricing */}
-            <div>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-editorial-muted font-medium block">
-                {book.originalPrice && book.originalPrice > book.currentPrice ? 'HARGA PROMO' : 'HARGA NORMAL'}
-              </span>
-              <div className="flex items-baseline gap-2 mt-0.5">
-                <span className="font-mono text-2xl sm:text-3xl font-bold text-editorial-title tracking-tight">
-                  {formatRupiah(book.currentPrice)}
-                </span>
-                {book.originalPrice && book.originalPrice > book.currentPrice && (
-                  <span className="text-xs font-mono text-editorial-faint line-through">
-                    {formatRupiah(book.originalPrice)}
-                  </span>
-                )}
-              </div>
-            </div>
-
-            {/* Actions */}
-            <div className="flex items-center gap-3">
-              <button
-                type="button"
-                onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
-                className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs sm:text-sm font-medium transition-all duration-200 active:scale-95 ${
-                  owned
-                    ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
-                    : 'bg-white/[0.07] hover:bg-white/[0.12] text-editorial-title border border-white/[0.09]'
-                }`}
-              >
-                {owned ? (
-                  <>
-                    <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>Dimiliki</span>
-                  </>
-                ) : (
-                  <>
-                    <Plus className="w-4 h-4 text-accent shrink-0" />
-                    <span>Koleksi</span>
-                  </>
-                )}
-              </button>
-
-              <button
-                type="button"
-                onClick={() => toggleWishlist(book.id, book.seriesId || undefined)}
-                className={`h-10 w-10 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95 border ${
-                  wishlisted
-                    ? 'bg-accent/20 text-accent border-accent/40 shadow-xs'
-                    : 'bg-white/[0.07] hover:bg-white/[0.12] text-editorial-muted hover:text-editorial-title border-white/[0.09]'
-                }`}
-                aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
-                title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
-              >
-                <Bookmark className={`w-4 h-4 ${wishlisted ? 'fill-current' : ''}`} />
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => toggleWishlist(book.id, book.seriesId || undefined)}
+              className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95 ${
+                wishlisted
+                  ? 'bg-accent/20 text-accent border border-accent/40'
+                  : 'bg-white/[0.07] hover:bg-white/[0.12] text-editorial-muted hover:text-editorial-title border border-white/[0.09]'
+              }`}
+              aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+              title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+            >
+              <Bookmark className={`w-4 h-4 ${wishlisted ? 'fill-current' : ''}`} />
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 });
 
