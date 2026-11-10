@@ -123,11 +123,11 @@ export function AnnouncementCard({
       className={
         compact
           ? 'rounded-2xl border border-white/[0.06] bg-surface/60 p-5 flex flex-col justify-between gap-3 transition-colors hover:border-white/[0.12] min-w-0'
-          : 'py-6 sm:py-7 first:pt-6 last:pb-6 flex flex-col gap-3 min-w-0'
+          : 'py-7 sm:py-8 first:pt-6 last:pb-6 flex flex-col gap-3 min-w-0'
       }
     >
       {/* Row 1 — Status Dot + Verification Label & Date */}
-      <div className="flex items-center justify-between gap-2">
+      <div className="flex items-center justify-between gap-3">
         <StatusBadge state={view.state} label={view.badgeLabel} />
         <span className="font-mono text-xs text-editorial-muted">
           {formatDateId(a.firstSeenAt)}
@@ -135,8 +135,8 @@ export function AnnouncementCard({
       </div>
 
       <div className="flex gap-4 sm:gap-5 items-start">
-        {/* Cover thumbnail or compact badge (NEVER a black initials box) */}
-        {a.coverImage ? (
+        {/* Cover thumbnail only when coverImage exists (zero circular avatar bubbles) */}
+        {a.coverImage && (
           <div className="w-16 sm:w-20 aspect-[2/3] shrink-0 overflow-hidden rounded-xl shadow-md bg-surface-sunken">
             <CoverImage
               src={a.coverImage}
@@ -147,25 +147,21 @@ export function AnnouncementCard({
               imgClassName="w-full h-full object-cover"
             />
           </div>
-        ) : (
-          <div className="h-10 w-10 shrink-0 rounded-2xl bg-accent/10 border border-accent/20 text-accent font-mono text-xs font-semibold flex items-center justify-center">
-            {a.category === 'Light Novel' ? 'LN' : 'MGA'}
-          </div>
         )}
 
         <div className="min-w-0 flex-1">
           {/* Row 2 — Primary Title & Original Title */}
-          <h3 className="font-editorial text-xl sm:text-2xl font-normal tracking-tight text-editorial-title leading-snug">
+          <h3 className="font-editorial text-xl sm:text-2xl font-normal tracking-tight text-editorial-title leading-[1.25]">
             {a.title}
           </h3>
           {a.originalTitle && a.originalTitle.toLowerCase() !== a.title.toLowerCase() && (
-            <p className="mt-0.5 text-xs italic text-editorial-muted line-clamp-1" title={a.originalTitle}>
+            <p className="mt-1.5 text-xs sm:text-[13px] italic text-editorial-muted leading-relaxed" title={a.originalTitle}>
               {a.originalTitle}
             </p>
           )}
 
           {/* Row 3 — Unified Metadata Line */}
-          <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-[13px] text-editorial-body">
+          <div className="mt-3.5 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs sm:text-[13px] text-editorial-body leading-relaxed">
             {metaItems.map((item, idx) => (
               <React.Fragment key={idx}>
                 {idx > 0 && <span aria-hidden="true" className="text-editorial-faint/50">·</span>}
@@ -176,7 +172,7 @@ export function AnnouncementCard({
 
           {/* Row 4 — Compact, Quiet Source Attribution */}
           {a.sources.length > 0 && (
-            <div className="mt-3.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs text-editorial-muted">
+            <div className="mt-4 pt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs text-editorial-muted">
               <span className="font-mono text-[10px] uppercase tracking-wider text-editorial-muted/70">
                 Bukti ({a.sources.length}):
               </span>

@@ -1,11 +1,28 @@
 'use client';
 
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
+import { ChevronDown, Check } from 'lucide-react';
 import { AnnouncementCard, type AnnouncementView } from './announcement-card';
+
+const PUBLISHER_OPTIONS = [
+  { value: 'ALL', label: 'Semua' },
+  { value: 'PGI', label: 'PGI' },
+  { value: 'm&c!', label: 'm&c!' },
+  { value: 'Elex Media', label: 'Elex Media' },
+];
+
+function matchPublisher(v: AnnouncementView, pub: string) {
+  if (pub === 'ALL') return true;
+  if (pub === 'PGI') return v.announcement.publisherShortName === 'PGI' || v.announcement.publisherId === 'pub_pgi';
+  if (pub === 'm&c!') return v.announcement.publisherShortName === 'm&c!' || v.announcement.publisherId === 'pub_mnc';
+  if (pub === 'Elex Media') return v.announcement.publisherShortName === 'Elex Media' || v.announcement.publisherId === 'pub_elex';
+  return v.announcement.publisherShortName === pub || v.announcement.publisherId === pub;
+}
 
 /**
  * /radar list: calm editorial feed layout.
- * Filter bar with publisher pills (left) and sleek rounded-full teaser toggle (right).
+ * Single right-aligned publisher filter button and popup.
  * Items rendered inside a seamless divide-y editorial container without heavy box cages.
  */
 export function RadarList({
@@ -17,18 +34,15 @@ export function RadarList({
   stale: AnnouncementView[];
   graduated: AnnouncementView[];
 }) {
-  const [showSpotted, setShowSpotted] = useState(false);
-  const [pubFilter, setPubFilter] = useState<'ALL' | 'pub_pgi' | 'pub_mnc' | 'pub_elex'>('ALL');
+  const [selectedPublisher, setSelectedPublisher] = useState<string>('ALL');
+  const [isPubPopupOpen, setIsPubPopupOpen] = useState(false);
   const [showStale, setShowStale] = useState(false);
 
-  const spottedCount = active.filter((v) => v.state === 'SPOTTED').length;
+  const selectedPublisherLabel =
+    PUBLISHER_OPTIONS.find((opt) => opt.value === selectedPublisher)?.label || 'Semua';
 
   const filterItems = (list: AnnouncementView[]) =>
-    list.filter((v) => {
-      if (!showSpotted && v.state === 'SPOTTED') return false;
-      if (pubFilter !== 'ALL' && v.announcement.publisherId !== pubFilter) return false;
-      return true;
-    });
+    list.filter((v) => matchPublisher(v, selectedPublisher));
 
   const visible = filterItems(active);
   const visibleGraduated = filterItems(graduated);
@@ -36,55 +50,75 @@ export function RadarList({
 
   return (
     <div className="flex flex-col gap-8">
-      {/* Controls Bar: Publisher Filter Pills (Left) + Teaser Toggle Pill (Right) */}
-      <div className="flex flex-wrap items-center justify-between gap-3 py-4 border-y border-white/[0.06]">
-        {/* Left side: subtle publisher filter pills */}
-        <div className="flex flex-wrap items-center gap-2">
-          {[
-            { id: 'ALL', label: 'Semua' },
-            { id: 'pub_pgi', label: 'PGI' },
-            { id: 'pub_mnc', label: 'm&c!' },
-            { id: 'pub_elex', label: 'Elex Media' },
-          ].map((p) => (
-            <button
-              key={p.id}
-              type="button"
-              onClick={() => setPubFilter(p.id as any)}
-              className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors ${
-                pubFilter === p.id
-                  ? 'bg-accent text-zinc-950 font-semibold shadow-xs'
-                  : 'bg-white/[0.03] hover:bg-white/[0.07] border border-white/[0.07] text-editorial-body hover:text-editorial-title'
-              }`}
-            >
-              {p.label}
-            </button>
-          ))}
-        </div>
+      {/* Controls Bar: Item count on left, single publisher filter button + popup on right */}
+      <div className="relative flex items-center justify-between gap-4 border-y border-white/[0.06] py-3.5 my-6">
+        <p className="text-xs font-mono text-editorial-muted">
+          Menampilkan <span className="text-editorial-title font-semibold">{visible.length}</span> pengumuman
+        </p>
 
-        {/* Right side: sleek rounded-full teaser toggle pill button */}
-        <button
-          type="button"
-          role="switch"
-          aria-checked={showSpotted}
-          onClick={() => setShowSpotted((v) => !v)}
-          className={`inline-flex items-center gap-2.5 rounded-full border px-3.5 py-1.5 text-xs font-medium transition-all ${
-            showSpotted
-              ? 'border-accent/40 bg-accent/10 text-editorial-title'
-              : 'border-white/[0.07] bg-white/[0.03] text-editorial-body hover:text-editorial-title'
-          }`}
-        >
-          <span
-            className={`h-2 w-2 rounded-full transition-colors ${
-              showSpotted ? 'bg-accent' : 'bg-white/25'
-            }`}
-          />
-          <span>Pantauan awal &amp; teaser</span>
-          {spottedCount > 0 && (
-            <span className="font-mono text-[11px] text-editorial-muted">
-              ({spottedCount})
+        <div className="relative ml-auto">
+          <button
+            type="button"
+            data-testid="radar-publisher-filter-trigger"
+            aria-haspopup="listbox"
+            aria-expanded={isPubPopupOpen}
+            onClick={() => setIsPubPopupOpen((v) => !v)}
+            className="inline-flex items-center gap-2 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] px-4 py-2 text-xs sm:text-sm font-medium text-editorial-title transition-all"
+          >
+            <span className="text-editorial-muted font-normal">Penerbit:</span>
+            <span className={selectedPublisher !== 'ALL' ? 'text-accent font-semibold' : ''}>
+              {selectedPublisherLabel}
             </span>
+            <ChevronDown
+              className={`w-3.5 h-3.5 text-editorial-muted transition-transform duration-200 ${
+                isPubPopupOpen ? 'rotate-180' : ''
+              }`}
+            />
+          </button>
+
+          {isPubPopupOpen && (
+            <>
+              {createPortal(
+                <div
+                  className="fixed inset-0 z-40"
+                  onClick={() => setIsPubPopupOpen(false)}
+                  aria-hidden="true"
+                />,
+                document.body
+              )}
+              <div
+                role="listbox"
+                data-testid="radar-publisher-popup"
+                className="absolute right-0 top-full mt-2 z-50 w-56 rounded-2xl border border-white/[0.09] bg-surface/95 backdrop-blur-2xl p-1.5 shadow-2xl space-y-0.5"
+              >
+                {PUBLISHER_OPTIONS.map((opt) => {
+                  const activeOpt = selectedPublisher === opt.value;
+                  return (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      role="option"
+                      aria-selected={activeOpt}
+                      data-testid={`radar-publisher-option-${opt.value}`}
+                      onClick={() => {
+                        setSelectedPublisher(opt.value);
+                        setIsPubPopupOpen(false);
+                      }}
+                      className={`w-full flex items-center justify-between gap-2 rounded-xl px-3.5 py-2.5 text-left text-xs sm:text-sm transition-colors ${
+                        activeOpt
+                          ? 'bg-accent/12 text-editorial-title font-semibold'
+                          : 'text-editorial-body hover:bg-white/[0.05] hover:text-editorial-title'
+                      }`}
+                    >
+                      <span>{opt.label}</span>
+                      {activeOpt && <Check className="w-4 h-4 text-accent shrink-0" />}
+                    </button>
+                  );
+                })}
+              </div>
+            </>
           )}
-        </button>
+        </div>
       </div>
 
       {/* Main Announcement Feed (Calm Editorial Feed Container) */}
