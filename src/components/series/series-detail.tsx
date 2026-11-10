@@ -169,7 +169,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
   }, [selectedSlot, volumeMatrix]);
 
   return (
-    <div className="space-y-12 pb-16">
+    <div className="space-y-12 sm:space-y-16 pb-16">
       {/* 1. Back Navigation */}
       <div>
         <Link
@@ -228,24 +228,24 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
                 <span>{sortedBooks.length} Volume Terdata</span>
               </div>
 
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-editorial font-normal text-editorial-title tracking-tight leading-[1.15]">
+              <h1 className="mt-3 text-2xl sm:text-4xl lg:text-5xl font-editorial font-normal text-editorial-title tracking-tight leading-[1.15]">
                 {series.name}
               </h1>
 
               {series.originalTitle && series.originalTitle !== series.name && (
-                <p className="text-xs sm:text-sm text-editorial-muted mt-1">
+                <p className="text-xs sm:text-sm text-editorial-muted mt-1.5">
                   {series.originalTitle}
                 </p>
               )}
 
               {series.author && (
-                <p className="text-xs text-editorial-muted mt-2 font-sans">
+                <p className="text-xs text-editorial-muted mt-2.5 font-sans">
                   Pengarang: <span className="text-editorial-title font-medium">{series.author}</span>
                 </p>
               )}
 
               {series.description && (
-                <p className="text-xs sm:text-sm text-editorial-body/90 mt-3 line-clamp-3 leading-relaxed max-w-2xl font-sans">
+                <p className="text-xs sm:text-sm text-editorial-body/90 mt-4 line-clamp-3 leading-[1.7] max-w-2xl font-sans">
                   {series.description}
                 </p>
               )}
@@ -550,7 +550,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
             <p className="text-xs text-editorial-muted">Koleksi untuk seri ini sudah lengkap.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-x-4 sm:gap-x-6 gap-y-9 sm:gap-y-12">
             {displayedBooks.map((book) => (
               <ReleaseCard key={book.id} book={book} />
             ))}

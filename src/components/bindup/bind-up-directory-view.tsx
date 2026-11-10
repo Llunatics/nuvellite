@@ -75,24 +75,24 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
   return (
     <div className="space-y-10 sm:space-y-12 pb-16">
       {/* 1. Header */}
-      <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
+      <section className="pt-2 sm:pt-4 border-b border-white/[0.06] pb-8 mb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
           <BookCopy className="w-3 h-3 text-accent shrink-0" />
           <span>Edisi Bind-Up &amp; Omnibus</span>
         </div>
 
-        <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
+        <h1 className="mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.12]">
           Bind-Up &amp; Omnibus Indonesia.
         </h1>
 
-        <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
+        <p className="mt-4 sm:mt-5 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
           Beberapa volume original digabung dalam satu buku tebal — hemat rak, hemat kantong.
           Direktori ini <span className="text-editorial-title font-medium">terdeteksi otomatis</span>: setiap ada
           rilisan bind-up baru dari Elex Media, m&amp;c!, atau Phoenix Gramedia Indonesia, ia langsung
           masuk ke sini tanpa perlu didaftarkan manual.
         </p>
 
-        <div className="flex flex-wrap gap-2 pt-1 text-[11px] font-mono text-editorial-muted">
+        <div className="mt-6 sm:mt-7 flex flex-wrap gap-2 text-[11px] font-mono text-editorial-muted">
           <span className="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
             {groups.length} seri
           </span>
@@ -173,21 +173,20 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
             {filtered.map((group) => {
               const href = group.seriesSlug ? `/series/${group.seriesSlug}` : undefined;
               const row = (
-                <div className="group flex items-center gap-3.5 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-white/[0.03] transition-colors">
-                  <CoverThumb group={group} className="w-11 sm:w-12 !rounded-lg" iconClassName="w-5 h-5" />
+                <div className="group flex items-center gap-5 p-5 sm:p-6 hover:bg-white/[0.03] transition-colors">
+                  <CoverThumb group={group} className="w-14 sm:w-16 !rounded-xl" iconClassName="w-6 h-6" />
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-sm font-medium text-editorial-title truncate">
-                      {group.displayName}
-                    </h3>
-                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 mt-1.5">
+                    <div className="flex flex-wrap items-center gap-2">
                       <LabelPill label={group.label} />
-                      <span className="text-[11px] font-mono text-editorial-muted">
-                        {group.volumeCount} vol
-                      </span>
-                      <span className="text-[11px] text-editorial-faint">·</span>
-                      <span className="text-[11px] text-editorial-muted truncate">
+                      <span className="text-[11px] font-mono text-editorial-muted truncate">
                         {group.publisherShortName}
                       </span>
+                    </div>
+                    <h3 className="mt-2 text-base sm:text-lg font-medium text-editorial-title truncate">
+                      {group.displayName}
+                    </h3>
+                    <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs font-mono text-editorial-muted">
+                      <span>{group.volumeCount} volume terbit dalam edisi bind-up</span>
                     </div>
                   </div>
                   <ChevronRight className="w-4 h-4 shrink-0 text-editorial-faint group-hover:text-editorial-title group-hover:translate-x-0.5 transition-all" />

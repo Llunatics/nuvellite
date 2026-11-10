@@ -19,97 +19,116 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
   const wishlisted = isLoaded && isWishlisted(book.id);
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl">
+    <div className="relative z-10 overflow-hidden rounded-[28px] border border-white/[0.07] bg-surface/85 backdrop-blur-2xl p-5 sm:p-6 lg:p-7 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.6)]">
       {/* Ambient cover glow (Round 3, D.2) */}
       <div
-        className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none"
+        className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-cover bg-center rounded-full blur-3xl opacity-10 pointer-events-none -z-10"
         style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
+        aria-hidden="true"
       />
 
-      <div className="relative z-10 flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
-        {/* Large Visual Anchor Book Cover */}
-        <Link
-          href={`/books/${book.slug}`}
-          className="relative aspect-[3/4.2] w-48 sm:w-56 lg:w-64 xl:w-72 shrink-0 book-cover-elevated rounded-2xl overflow-hidden group block"
-          tabIndex={-1}
-        >
-          <CoverImage
-            src={book.coverImage}
-            alt={book.title}
-            width={224}
-            height={313}
-            sizes="(max-width: 640px) 176px, 224px"
-            priority
-            imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
-            fallbackIconClassName="w-12 h-12 text-editorial-faint"
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-[216px_1fr] lg:grid-cols-[224px_1fr] gap-6 lg:gap-8 items-center">
+        {/* Cover column with ambient glow strictly behind cover container */}
+        <div className="relative shrink-0 z-0 mx-auto md:mx-0 w-[192px] sm:w-[216px] lg:w-[224px]">
+          <div
+            className="absolute -inset-4 bg-cover bg-center rounded-full blur-3xl opacity-15 pointer-events-none -z-10"
+            style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
+            aria-hidden="true"
           />
-          {/* Floating cover badges (Round 3, D.2 / S-05) */}
-          <span
-            className={`absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wide uppercase bg-black/60 backdrop-blur-md border border-white/10 ${
-              book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
-            }`}
+          <Link
+            href={`/books/${book.slug}`}
+            className="group/cover relative block aspect-[2/3] w-full rounded-2xl overflow-hidden book-cover-elevated focus-visible:ring-2 focus-visible:ring-accent"
           >
-            {book.category}
-          </span>
-          {book.volume !== null && book.volume !== undefined && (
-            <span className="absolute top-2.5 right-2.5 z-10 px-2.5 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/60 backdrop-blur-md border border-white/10 text-zinc-100">
-              Vol. {book.volume}
+            <CoverImage
+              src={book.coverImage}
+              alt={book.title}
+              width={224}
+              height={336}
+              sizes="(max-width: 640px) 192px, (max-width: 1024px) 216px, 224px"
+              priority
+              imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/cover:scale-[1.03]"
+              fallbackIconClassName="w-12 h-12 text-editorial-faint"
+            />
+            {/* Floating cover badges (Round 3, D.2 / S-05) */}
+            <span className="absolute top-2.5 left-2.5 z-10 backdrop-blur-md bg-black/65 text-white border border-white/15 rounded-full px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider">
+              {book.category}
             </span>
-          )}
-          {book.status === 'PREORDER' && (
-            <span className="absolute bottom-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full text-[8px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
-              Pre-Order
-            </span>
-          )}
-        </Link>
+            {book.volume !== null && book.volume !== undefined && (
+              <span className="absolute top-2.5 right-2.5 z-10 backdrop-blur-md bg-black/65 text-white border border-white/15 rounded-full px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider">
+                Vol. {book.volume}
+              </span>
+            )}
+            {book.status === 'PREORDER' && (
+              <span className="absolute bottom-2.5 left-2.5 z-10 backdrop-blur-md bg-accent text-white border border-white/15 rounded-full px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider">
+                Pre-Order
+              </span>
+            )}
+          </Link>
+        </div>
 
         {/* Editorial Content */}
-        <div className="flex-1 space-y-5 text-left w-full">
-          <div className="space-y-3">
-            {/* Meta Row */}
-            <div className="flex flex-wrap items-center gap-2.5 text-xs font-mono text-editorial-muted">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-accent/10 text-accent text-[9px] font-semibold tracking-wider uppercase border border-accent/20">
-                <Sparkles className="w-3 h-3" />
+        <div className="flex-1 text-left w-full">
+          <div>
+            {/* Tier 1 — Eyebrow Badge (SOROTAN UTAMA) */}
+            <div className="flex items-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/12 text-accent text-[10px] font-mono font-semibold tracking-[0.12em] uppercase border border-accent/25">
+                <Sparkles className="w-3 h-3 shrink-0" />
                 <span>SOROTAN UTAMA</span>
               </span>
-              <span className="text-editorial-faint/60">•</span>
-              <span className="font-semibold text-editorial-title">{book.publisherName}</span>
+            </div>
+
+            {/* Tier 2 — Publisher & Date Line */}
+            <div
+              data-testid="featured-meta-line"
+              className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono"
+            >
+              <span className="font-semibold text-editorial-title">
+                {book.publisherName}
+              </span>
               {book.releaseDate && (
                 <>
-                  <span className="text-editorial-faint/60">•</span>
-                  <span className="text-editorial-faint">{formatDateWIB(book.releaseDate)}</span>
+                  <span className="h-3 w-px bg-white/15 shrink-0" aria-hidden="true" />
+                  <span className="text-editorial-muted">
+                    {formatDateWIB(book.releaseDate)}
+                  </span>
                 </>
               )}
             </div>
 
             {/* Title */}
-            <Link href={`/books/${book.slug}`} className="block">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-editorial font-normal text-editorial-title hover:text-accent transition-colors leading-[1.15] tracking-tight">
-                {book.title}
-              </h2>
-            </Link>
+            <div className="mt-2.5">
+              <Link
+                href={`/books/${book.slug}`}
+                className="group/title inline-block focus-visible:outline-none"
+              >
+                <h2 className="font-editorial text-2xl sm:text-3xl lg:text-4xl font-normal text-editorial-title group-hover/title:text-accent transition-colors duration-200 leading-[1.18] tracking-tight">
+                  {book.title}
+                </h2>
+              </Link>
+            </div>
 
             {book.authors?.length > 0 && (
-              <p className="text-xs text-editorial-muted font-sans">
+              <p className="mt-3 text-xs sm:text-sm text-editorial-muted">
                 Karya <span className="text-editorial-title font-medium">{book.authors.join(', ')}</span>
               </p>
             )}
           </div>
 
           {book.synopsis && (
-            <p className="text-xs sm:text-sm text-editorial-body/90 line-clamp-3 leading-relaxed font-sans max-w-2xl">
+            <p className="mt-4 text-xs sm:text-sm text-editorial-body/90 line-clamp-3 leading-[1.65] font-sans max-w-2xl">
               {cleanStorySynopsis(book.synopsis)}
             </p>
           )}
 
-          {/* Pricing & Actions */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          {/* Pricing & Actions Bar */}
+          <div className="mt-5 pt-4 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
+            {/* Pricing */}
             <div>
-              <span className="text-[9px] font-mono uppercase tracking-widest text-editorial-faint font-medium block">
-                {book.originalPrice && book.originalPrice > book.currentPrice ? 'Harga Promo' : 'Harga Normal'}
+              <span className="font-mono text-[10px] uppercase tracking-widest text-editorial-muted font-medium block">
+                {book.originalPrice && book.originalPrice > book.currentPrice ? 'HARGA PROMO' : 'HARGA NORMAL'}
               </span>
               <div className="flex items-baseline gap-2 mt-0.5">
-                <span className="text-2xl sm:text-3xl font-mono font-bold text-editorial-title tracking-tight">
+                <span className="font-mono text-2xl sm:text-3xl font-bold text-editorial-title tracking-tight">
                   {formatRupiah(book.currentPrice)}
                 </span>
                 {book.originalPrice && book.originalPrice > book.currentPrice && (
@@ -120,35 +139,37 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 ml-auto sm:ml-4">
-              <Link
-                href={`/books/${book.slug}`}
-                className="px-5 py-2.5 rounded-full bg-[rgb(var(--editorial-title))] text-[rgb(var(--bg-rgb))] hover:opacity-90 text-xs font-medium shadow-md transition-all flex items-center gap-2 active:scale-95"
-              >
-                <span>Detail Buku</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-
+            {/* Actions */}
+            <div className="flex items-center gap-3">
               <button
                 type="button"
                 onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
-                className={`px-4 py-2.5 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 active:scale-95 ${
+                className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs sm:text-sm font-medium transition-all duration-200 active:scale-95 ${
                   owned
-                    ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                    : 'bg-white/[0.06] hover:bg-white/[0.1] text-editorial-muted hover:text-editorial-title border border-white/[0.08]'
+                    ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                    : 'bg-white/[0.07] hover:bg-white/[0.12] text-editorial-title border border-white/[0.09]'
                 }`}
               >
-                {owned ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Plus className="w-3.5 h-3.5" />}
-                <span>{owned ? 'Dimiliki' : 'Koleksi'}</span>
+                {owned ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Dimiliki</span>
+                  </>
+                ) : (
+                  <>
+                    <Plus className="w-4 h-4 text-accent shrink-0" />
+                    <span>Koleksi</span>
+                  </>
+                )}
               </button>
 
               <button
                 type="button"
                 onClick={() => toggleWishlist(book.id, book.seriesId || undefined)}
-                className={`w-9 h-9 rounded-full flex items-center justify-center transition-all active:scale-95 ${
+                className={`h-10 w-10 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95 border ${
                   wishlisted
-                    ? 'bg-accent/20 text-accent border border-accent/40'
-                    : 'bg-white/[0.06] hover:bg-white/[0.1] text-editorial-muted hover:text-editorial-title border border-white/[0.08]'
+                    ? 'bg-accent/20 text-accent border-accent/40 shadow-xs'
+                    : 'bg-white/[0.07] hover:bg-white/[0.12] text-editorial-muted hover:text-editorial-title border-white/[0.09]'
                 }`}
                 aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
                 title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}

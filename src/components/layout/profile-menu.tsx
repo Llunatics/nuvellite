@@ -100,8 +100,7 @@ export function ProfileMenu() {
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-[calc(100%+0.625rem)] z-50 w-[calc(100vw-1.5rem)] max-w-[300px] sm:w-80 rounded-3xl liquid-glass border border-white/[0.07] shadow-2xl p-2 nuv-view-enter"
-          style={{ backgroundColor: 'rgb(var(--surface-overlay-rgb))' }}
+          className="absolute right-0 top-[calc(100%+0.625rem)] z-50 w-[calc(100vw-1.5rem)] max-w-[300px] sm:w-80 rounded-3xl glass-popover p-2 nuv-view-enter"
         >
           {view === 'signin' ? (
             <div className="p-1.5">

@@ -109,9 +109,6 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
             sizes="(max-width: 640px) 160px, (max-width: 1024px) 190px, 220px"
             imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
           />
-
-          {/* Subtle Ambient Vignette on Cover for Depth */}
-          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
         </Link>
 
         {/* Floating Top Left: Format Capsule Badge */}
@@ -134,24 +131,23 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
           </div>
         )}
 
-        {/* Status indicator: Preorder / Out of stock */}
-        {book.status === 'PREORDER' && (
+        {/* Status indicator: Preorder (takes precedence) or Out of stock */}
+        {(book.status === 'PREORDER' || book.availability === 'OUT_OF_STOCK') && (
           <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
-              PRE-ORDER
-            </span>
-          </div>
-        )}
-        {book.availability === 'OUT_OF_STOCK' && (
-          <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-semibold uppercase tracking-wider bg-zinc-950/90 text-zinc-300 border border-white/10">
-              HABIS
-            </span>
+            {book.status === 'PREORDER' ? (
+              <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
+                PRE-ORDER
+              </span>
+            ) : (
+              <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-semibold uppercase tracking-wider bg-zinc-950/90 text-zinc-300 border border-white/10">
+                HABIS
+              </span>
+            )}
           </div>
         )}
 
-        {/* Floating Quick Action Overlays on Cover (Appear on Hover) */}
-        <div className="absolute bottom-2 right-2 z-20 flex items-center gap-1 opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-200">
+        {/* Floating Quick Action Overlays on Cover (Appear on Hover on Desktop) */}
+        <div className="absolute bottom-2 right-2 z-20 hidden sm:flex items-center gap-1 sm:opacity-0 sm:group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-200">
           <button
             type="button"
             onClick={(e) => {
@@ -190,10 +186,10 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
       </div>
 
       {/* 2. Editorial Typography & Metadata (Pure hierarchy, zero boxing) */}
-      <div className="pt-3 pb-1 flex-1 flex flex-col justify-between">
+      <div className="pt-3.5 pb-1 flex-1 flex flex-col justify-between">
         <div>
           {/* Publisher & Release Date */}
-          <div className="flex items-center justify-between text-[10px] font-mono text-editorial-faint mb-1">
+          <div className="flex items-center justify-between text-[10px] font-mono text-editorial-faint mb-1.5">
             <span className="font-medium text-editorial-muted truncate">
               {book.publisherShortName}
             </span>
@@ -206,14 +202,14 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
 
           {/* Book Title */}
           <Link href={`/books/${book.slug}`} className="block group-hover:text-accent transition-colors">
-            <h3 className="text-xs sm:text-[13px] font-medium text-editorial-title line-clamp-2 leading-snug tracking-tight">
+            <h3 className="text-[13px] sm:text-sm font-medium text-editorial-title line-clamp-2 leading-[1.35] tracking-tight">
               {book.title}
             </h3>
           </Link>
         </div>
 
         {/* Price & Discount */}
-        <div className="mt-2 pt-1 flex items-baseline gap-1.5">
+        <div className="mt-2.5 pt-1 flex items-baseline gap-1.5">
           <span className="text-[12px] sm:text-[13px] font-mono font-semibold text-editorial-title tracking-tight">
             {formatRupiah(book.currentPrice)}
           </span>

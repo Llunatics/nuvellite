@@ -18,6 +18,7 @@ import {
   ExternalLink,
   Sparkles,
   ShoppingBag,
+  ArrowRight,
 } from 'lucide-react';
 import { ReleaseCard } from './release-card';
 import { PriceChart } from '@/components/ui/price-chart';
@@ -92,7 +93,7 @@ export const BookDetail = React.memo(function BookDetail({
   }, [seriesSiblings, showAllSiblings, book.volume]);
 
   return (
-    <div className="space-y-10 pb-16">
+    <div className="space-y-12 sm:space-y-16 pb-16">
       {/* Zone 1 — Context bar with volume stepper */}
       <div className="flex items-center justify-between gap-4 border-b border-white/[0.08] pb-3 mb-2 text-xs font-mono">
         {book.seriesId && book.seriesName ? (
@@ -226,7 +227,7 @@ export const BookDetail = React.memo(function BookDetail({
 
         {/* Identity Column */}
         <div className="w-full md:col-span-8 space-y-6">
-          <div className="space-y-3">
+          <div>
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-editorial-muted">
               <span className="font-semibold text-editorial-title">{book.publisherShortName}</span>
               <span className="text-editorial-faint/60">•</span>
@@ -249,12 +250,12 @@ export const BookDetail = React.memo(function BookDetail({
               )}
             </div>
 
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-editorial font-normal text-editorial-title tracking-tight leading-tight">
+            <h1 className="mt-3 text-2xl sm:text-4xl lg:text-5xl font-editorial font-normal text-editorial-title tracking-tight leading-tight">
               {book.title}
             </h1>
 
             {showOriginalTitle && (
-              <p className="text-xs sm:text-sm text-editorial-muted">
+              <p className="mt-3 text-xs sm:text-sm text-editorial-muted">
                 Judul Asli: {book.originalTitle}
               </p>
             )}
@@ -362,19 +363,19 @@ export const BookDetail = React.memo(function BookDetail({
             </h3>
             {cleanedSynopsis ? (
               !isSynopsisLong ? (
-                <p className="max-w-[65ch] text-sm leading-[1.7] text-editorial-body whitespace-pre-line">
+                <p className="max-w-[65ch] text-sm leading-[1.75] text-editorial-body whitespace-pre-line">
                   {cleanedSynopsis}
                 </p>
               ) : (
                 <div className="space-y-2">
                   {!isSynopsisExpanded && (
-                    <p className="max-w-[65ch] text-sm leading-[1.7] text-editorial-body whitespace-pre-line line-clamp-4">
+                    <p className="max-w-[65ch] text-sm leading-[1.75] text-editorial-body whitespace-pre-line line-clamp-4">
                       {cleanedSynopsis}
                     </p>
                   )}
                   <div className="nuv-collapse-grid" data-open={isSynopsisExpanded ? 'true' : 'false'}>
                     <div className="nuv-collapse-inner">
-                      <p className="max-w-[65ch] text-sm leading-[1.7] text-editorial-body whitespace-pre-line">
+                      <p className="max-w-[65ch] text-sm leading-[1.75] text-editorial-body whitespace-pre-line">
                         {cleanedSynopsis}
                       </p>
                     </div>
@@ -414,13 +415,15 @@ export const BookDetail = React.memo(function BookDetail({
       {/* Zone 5 — Price history (heading only when there is real history) */}
       <div className="space-y-4">
         {hasPriceHistory && (
-          <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
-            <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight">
-              Riwayat Harga
-            </h2>
-            <span className="text-[11px] font-mono text-editorial-faint">
-              {priceSummary.snapshots.length} pencatatan
-            </span>
+          <div className="flex items-end justify-between gap-4 border-b border-white/[0.06] pb-4 mb-6">
+            <div className="min-w-0 flex-1">
+              <h2 className="font-editorial text-2xl sm:text-3xl font-normal tracking-tight text-editorial-title leading-[1.15]">
+                Riwayat Harga
+              </h2>
+              <p className="mt-1.5 text-xs font-mono text-editorial-muted">
+                {priceSummary.snapshots.length} pencatatan
+              </p>
+            </div>
           </div>
         )}
         <PriceChart summary={priceSummary} />
@@ -429,21 +432,29 @@ export const BookDetail = React.memo(function BookDetail({
       {/* Zone 6 — Sibling volumes (current book excluded, capped at 12) */}
       {seriesSiblings.length > 0 && (
         <div className="space-y-6">
-          <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
-            <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight">
-              Volume Lain di Seri Ini ({seriesSiblings.length})
-            </h2>
+          <div className="flex items-end justify-between gap-4 border-b border-white/[0.06] pb-4 mb-6">
+            <div className="min-w-0 flex-1">
+              <h2 className="font-editorial text-2xl sm:text-3xl font-normal tracking-tight text-editorial-title leading-[1.15]">
+                Volume Lain di Seri Ini
+              </h2>
+              <p className="mt-1.5 text-xs font-mono text-editorial-muted">
+                {seriesSiblings.length} volume
+              </p>
+            </div>
             {book.seriesId && (
-              <Link
-                href={`/series/${book.seriesId.replace('ser_', '')}`}
-                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors"
-              >
-                Halaman Seri →
-              </Link>
+              <div className="shrink-0 flex items-center gap-3 pl-2">
+                <Link
+                  href={`/series/${book.seriesId.replace('ser_', '')}`}
+                  className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 text-xs font-medium text-editorial-body hover:text-accent transition-colors py-1"
+                >
+                  <span>Halaman Seri</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-accent" />
+                </Link>
+              </div>
             )}
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-9 sm:gap-y-12">
             {visibleSiblings.map((sibling) => (
               <ReleaseCard key={sibling.id} book={sibling} />
             ))}
@@ -466,17 +477,19 @@ export const BookDetail = React.memo(function BookDetail({
       {/* Recommendations */}
       {recommendations.length > 0 && (
         <div className="space-y-6">
-          <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
-            <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-accent" />
-              <span>Judul Serupa</span>
-            </h2>
-            <span className="text-[11px] font-mono text-editorial-faint">
-              Genre &amp; penerbit sejenis
-            </span>
+          <div className="flex items-end justify-between gap-4 border-b border-white/[0.06] pb-4 mb-6">
+            <div className="min-w-0 flex-1">
+              <h2 className="font-editorial text-2xl sm:text-3xl font-normal tracking-tight text-editorial-title leading-[1.15] flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span>Judul Serupa</span>
+              </h2>
+              <p className="mt-1.5 text-xs font-mono text-editorial-muted">
+                Genre &amp; penerbit sejenis
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-9 sm:gap-y-12">
             {recommendations.map(({ book: recBook, explanation }) => (
               <div key={recBook.id} className="flex flex-col space-y-1.5">
                 <ReleaseCard book={recBook} />

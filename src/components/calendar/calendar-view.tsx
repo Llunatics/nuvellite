@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Book, Publisher } from '@/lib/types';
 import { CoverImage } from '@/components/books/cover-image';
-import { formatDateWIB, getDayNameWIB } from '@/lib/formatters';
+import { formatDateWIB, getDayNameWIB, formatRupiah } from '@/lib/formatters';
 import { Calendar as CalendarIcon, ChevronDown, ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
 
 interface CalendarViewProps {
@@ -111,17 +111,17 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
   return (
     <div className="space-y-8 sm:space-y-10 pb-16">
       {/* 1. Header */}
-      <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
+      <section className="pt-2 sm:pt-4 border-b border-white/[0.06] pb-8 mb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
           <CalendarIcon className="w-3 h-3 text-accent shrink-0" />
           <span>Radar Rilis</span>
         </div>
 
-        <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
+        <h1 className="mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.12]">
           Kalender Rilis.
         </h1>
 
-        <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
+        <p className="mt-4 sm:mt-5 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
           Jadwal terbit komik dan light novel di Indonesia dari Elex Media Komputindo,
           m&amp;c!, dan Phoenix Gramedia Indonesia. Tanggal bertitik punya rilisan —
           ketuk tanggalnya untuk melihat daftarnya.
@@ -129,7 +129,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
       </section>
 
       {/* 2. Controls */}
-      <div className="flex flex-col gap-2.5">
+      <div className="flex flex-col gap-3 mb-6">
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-1">
             <button
@@ -292,7 +292,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
           <div className="rounded-3xl border border-white/[0.04] bg-white/[0.015] divide-y divide-white/[0.04] overflow-hidden">
             {selectedBooks.map((book) => (
               <Link key={book.id} href={`/books/${book.slug}`} className="block group">
-                <div className="flex items-center gap-3.5 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-white/[0.03] transition-colors">
+                <div className="flex items-center gap-4 p-3.5 sm:p-4 hover:bg-white/[0.03] transition-colors">
                   <div className="relative w-11 sm:w-12 shrink-0 aspect-[3/4.2] rounded-lg overflow-hidden bg-surface-sunken cover-depth">
                     {book.coverImage ? (
                       <CoverImage
@@ -310,20 +310,23 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="text-sm font-medium text-editorial-title truncate">
-                      {book.title}
-                    </h4>
-                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 mt-1.5">
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-editorial-muted">
                       <span
                         className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono uppercase whitespace-nowrap border border-white/[0.08] bg-white/[0.03] ${
-                          book.category === 'Light Novel' ? 'text-amber-300/90' : 'text-lime-300/90'
+                          book.category === 'Light Novel' ? 'text-amber-300/90' : 'text-sky-300'
                         }`}
                       >
                         {book.category === 'Light Novel' ? 'LN' : 'Manga'}
                       </span>
-                      <span className="text-[11px] text-editorial-muted truncate">
+                      <span className="text-[11px] font-mono text-editorial-muted truncate">
                         {book.publisherShortName}
                       </span>
+                    </div>
+                    <h4 className="mt-1.5 text-sm font-medium text-editorial-title truncate">
+                      {book.title}
+                    </h4>
+                    <div className="mt-1.5 text-xs font-mono font-semibold text-editorial-title">
+                      {formatRupiah(book.currentPrice)}
                     </div>
                   </div>
                   <ChevronRight className="w-4 h-4 shrink-0 text-editorial-faint group-hover:text-editorial-title group-hover:translate-x-0.5 transition-all" />

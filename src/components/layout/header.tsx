@@ -21,12 +21,13 @@ export function Header() {
 
   // Scroll listener for integrated -> floating liquid glass transition
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      const scrolled = window.scrollY > 16;
+      setIsScrolled((prev) => (prev !== scrolled ? scrolled : prev));
     };
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   // Keyboard shortcut for Cmd/Ctrl + K or /
@@ -55,11 +56,19 @@ export function Header() {
     <>
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 pointer-events-none ${
-          isScrolled ? 'pt-3 sm:pt-3.5 px-3 sm:px-6' : 'pt-4 sm:pt-5 px-3 sm:px-6'
+          isScrolled
+            ? "px-3 sm:px-6 pt-2.5 pb-1.5 bg-gradient-to-b from-background via-background/85 to-transparent before:content-[''] before:block before:pointer-events-none before:fixed before:inset-x-0 before:top-0 before:h-3 before:bg-background before:z-[-1]"
+            : 'px-4 sm:px-6 pt-3 pb-2 bg-transparent'
         }`}
       >
         <div
-          className="max-w-6xl mx-auto h-14 sm:h-16 rounded-full px-4 sm:px-6 flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition liquid-glass-pill shadow-2xl"
+          data-testid="header-bar"
+          data-scrolled={isScrolled ? 'true' : 'false'}
+          className={`max-w-6xl mx-auto w-full flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            isScrolled
+              ? 'liquid-glass-pill rounded-full px-4 sm:px-5 py-2'
+              : 'bg-transparent border border-transparent shadow-none backdrop-blur-none rounded-none px-1 py-2'
+          }`}
         >
           {/* Brand Identity */}
           <div className="flex items-center gap-7 shrink-0">
@@ -94,7 +103,11 @@ export function Header() {
             <button
               type="button"
               onClick={() => setIsSearchOpen(true)}
-              className="flex items-center gap-2.5 px-4 py-2 rounded-full soft-glass hover:bg-white/[0.06] border border-white/[0.06] hover:border-white/[0.12] text-editorial-muted hover:text-editorial-title transition-all text-xs group active:scale-95"
+              className={`flex items-center gap-2.5 px-4 py-2 rounded-full border transition-all text-xs group active:scale-95 text-editorial-muted hover:text-editorial-title ${
+                isScrolled
+                  ? 'soft-glass hover:bg-white/[0.06] border-white/[0.06] hover:border-white/[0.12]'
+                  : 'bg-white/[0.03] border-white/[0.06] [.light_&]:bg-black/[0.03] [.light_&]:border-black/[0.06] hover:bg-white/[0.06]'
+              }`}
               aria-label="Cari judul, ISBN, pengarang, seri"
             >
               <Search className="w-4 h-4 text-editorial-muted group-hover:text-editorial-title transition-colors" />
