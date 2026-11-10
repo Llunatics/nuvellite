@@ -10,18 +10,18 @@ export default function RadarLoading() {
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="border border-white/[0.06] bg-white/[0.03] p-4"
+            className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 flex flex-col gap-3"
           >
             <div className="flex items-center justify-between">
-              <div className="h-5 w-32 bg-white/[0.04]" />
-              <div className="h-3 w-16 bg-white/[0.04]" />
+              <div className="h-5 w-24 rounded-full bg-white/[0.04]" />
+              <div className="h-3 w-16 rounded bg-white/[0.04]" />
             </div>
-            <div className="mt-3 flex gap-3">
-              <div className="h-20 w-14 shrink-0 bg-white/[0.04]" />
+            <div className="flex gap-3">
+              <div className="w-16 aspect-[3/4.2] shrink-0 rounded-xl bg-white/[0.04]" />
               <div className="flex-1 space-y-2">
-                <div className="h-4 w-3/4 bg-white/[0.04]" />
-                <div className="h-3 w-1/2 bg-white/[0.04]" />
-                <div className="h-3 w-2/3 bg-white/[0.04]" />
+                <div className="h-4 w-3/4 rounded bg-white/[0.04]" />
+                <div className="h-3 w-1/2 rounded bg-white/[0.04]" />
+                <div className="h-3 w-2/3 rounded bg-white/[0.04]" />
               </div>
             </div>
           </div>

@@ -46,7 +46,7 @@ export function PriceChart({ summary }: PriceChartProps) {
     <div className="space-y-4">
       {/* Stat Metrics */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-        <div className="p-3.5 border border-white/[0.06]">
+        <div className="p-3.5 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
           <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
             Harga Terkini
           </span>
@@ -55,7 +55,7 @@ export function PriceChart({ summary }: PriceChartProps) {
           </span>
         </div>
 
-        <div className="p-3.5 border border-white/[0.06]">
+        <div className="p-3.5 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
           <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
             {isDiscounted && originalPrice ? 'Harga Normal' : 'Harga Terendah'}
           </span>
@@ -64,7 +64,7 @@ export function PriceChart({ summary }: PriceChartProps) {
           </span>
         </div>
 
-        <div className="p-3.5 border border-white/[0.06]">
+        <div className="p-3.5 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
           <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
             {isDiscounted ? 'Harga Terendah' : 'Harga Tertinggi'}
           </span>
@@ -73,7 +73,7 @@ export function PriceChart({ summary }: PriceChartProps) {
           </span>
         </div>
 
-        <div className="p-3.5 border border-white/[0.06]">
+        <div className="p-3.5 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
           <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
             Perubahan Terakhir
           </span>
@@ -103,7 +103,7 @@ export function PriceChart({ summary }: PriceChartProps) {
       </div>
 
       {/* Line Chart */}
-      <div className="p-5 border border-white/[0.06] space-y-3">
+      <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-3">
         <div className="flex items-center justify-between text-xs text-editorial-muted">
           <span className="font-mono text-[11px]">Riwayat Fluktuasi Harga</span>
           <span className="font-mono text-[10px] text-editorial-faint">

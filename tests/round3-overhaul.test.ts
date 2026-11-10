@@ -91,4 +91,12 @@ describe('Round 3 — catalog hero restored (S-03, S-05)', () => {
     expect(service).toContain('bg-emerald-500/15 text-emerald-500');
     expect(service).toContain('bg-amber-500/15 text-amber-500');
   });
+
+  it('soft glass & squircle radii scale applies across detail & radar (S-03)', () => {
+    expect(read('src/components/books/book-detail.tsx')).toContain('rounded-3xl');
+    expect(read('src/components/series/series-detail.tsx')).toContain('rounded-3xl');
+    expect(read('src/components/ui/price-chart.tsx')).toContain('rounded-2xl');
+    expect(read('src/app/books/[slug]/loading.tsx')).toContain('rounded-3xl');
+    expect(read('src/app/radar/loading.tsx')).toContain('rounded-2xl');
+  });
 });

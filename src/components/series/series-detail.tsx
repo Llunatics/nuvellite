@@ -565,10 +565,10 @@ export function SeriesDetailSkeleton() {
   return (
     <div className="space-y-12 pb-16 animate-pulse">
       <div className="h-4 w-28 bg-white/[0.05] rounded" />
-      <div className="border-b border-white/[0.08] pb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-4 xl:col-span-3 aspect-[3/4.2] w-48 sm:w-56 mx-auto lg:mx-0 rounded-3xl border border-white/[0.06] bg-white/[0.03]" />
-          <div className="lg:col-span-8 xl:col-span-9 space-y-4">
+      <div className="relative overflow-hidden rounded-3xl bg-surface-elevated/40 border border-white/[0.06] p-5 sm:p-8 lg:p-10 shadow-2xl">
+        <div className="flex flex-col md:flex-row gap-8 lg:gap-10 items-start">
+          <div className="aspect-[3/4.2] w-40 sm:w-48 shrink-0 mx-auto md:mx-0 rounded-2xl border border-white/[0.06] bg-white/[0.03]" />
+          <div className="flex-1 space-y-4 w-full">
             <div className="h-4 w-32 bg-white/[0.06] rounded" />
             <div className="h-8 w-64 bg-white/[0.08] rounded" />
             <div className="h-4 w-48 bg-white/[0.05] rounded" />
