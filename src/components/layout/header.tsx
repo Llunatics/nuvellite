@@ -55,15 +55,18 @@ export function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 mx-auto w-full max-w-6xl transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] pointer-events-none ${
-          isScrolled ? 'px-3 sm:px-6 pt-2.5 pb-1.5' : 'px-4 sm:px-6 pt-3 pb-2'
+        className={`sticky top-0 z-40 w-full transition-all duration-300 pointer-events-none ${
+          isScrolled
+            ? 'px-3 sm:px-6 pt-2.5 pb-1.5 bg-gradient-to-b from-background via-background/85 to-transparent'
+            : 'px-4 sm:px-6 pt-3 pb-2 bg-transparent'
         }`}
       >
         <div
+          data-testid="header-bar"
           data-scrolled={isScrolled ? 'true' : 'false'}
-          className={`w-full flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          className={`max-w-6xl mx-auto w-full flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
             isScrolled
-              ? 'liquid-glass-pill rounded-full px-4 sm:px-5 py-2 shadow-[0_12px_36px_-8px_rgba(0,0,0,0.55)]'
+              ? 'liquid-glass-pill rounded-full px-4 sm:px-5 py-2'
               : 'bg-transparent border border-transparent shadow-none backdrop-blur-none rounded-none px-1 py-2'
           }`}
         >

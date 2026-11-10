@@ -377,44 +377,27 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), var(--soft-glass-highlight);
 }
 
-/* Liquid Glass Pill Navigation */
-.liquid-glass-pill {
-  background: var(--liquid-glass-bg);
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
-  border: 1px solid var(--liquid-glass-border);
-  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 0 var(--liquid-glass-highlight);
+/* Plain Frosted Glass Surface — Zero Gloss, Zero 3D, Zero Inset Rims */
+.liquid-glass-dock,
+.liquid-glass-pill,
+.floating-nav {
+  background-color: rgba(15, 17, 23, 0.74);
+  background-image: none;
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-/* Liquid Glass Dock (Round 3.2 MobileNav) */
-.liquid-glass-dock {
-  background: linear-gradient(
-    180deg,
-    rgba(26, 31, 44, 0.58) 0%,
-    rgba(13, 16, 24, 0.72) 100%
-  );
-  backdrop-filter: blur(28px) saturate(200%);
-  -webkit-backdrop-filter: blur(28px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  box-shadow:
-    0 20px 44px -10px rgba(0, 0, 0, 0.65),
-    0 4px 14px -2px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.22),
-    inset 0 -1px 0 0 rgba(255, 255, 255, 0.04);
-}
-
-.light .liquid-glass-dock {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.76) 0%,
-    rgba(244, 247, 252, 0.88) 100%
-  );
-  border: 1px solid rgba(15, 23, 42, 0.09);
-  box-shadow:
-    0 18px 38px -10px rgba(15, 23, 42, 0.14),
-    0 4px 12px -2px rgba(15, 23, 42, 0.06),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.95),
-    inset 0 -1px 0 0 rgba(15, 23, 42, 0.04);
+.light .liquid-glass-dock,
+.light .liquid-glass-pill,
+.light .floating-nav {
+  background-color: rgba(255, 255, 255, 0.80);
+  background-image: none;
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 /* Cover Image Depth */
@@ -590,13 +573,4 @@
 .light .group:hover .book-cover-elevated {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.2), 0 8px 16px -2px rgba(15, 23, 42, 0.1);
-}
-
-/* Velora/Linear-style Liquid Glass Pill Navigation */
-.liquid-glass-pill {
-  background: var(--liquid-glass-bg);
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
-  border: 1px solid var(--liquid-glass-border);
-  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 0 var(--liquid-glass-highlight);
 }
