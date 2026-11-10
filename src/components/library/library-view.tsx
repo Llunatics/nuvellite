@@ -222,9 +222,9 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
       </section>
 
       {/* 2. Tabs & Format Filter Toolbar */}
-      <div className="space-y-2 text-xs">
+      <div className="space-y-3 mb-8 text-xs">
         {/* Navigation Pills — full width, equal columns */}
-        <div className="grid grid-cols-2 sm:flex items-stretch gap-1 p-1 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+        <div className="grid grid-cols-2 sm:flex items-stretch gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
           <button
             type="button"
             onClick={() => setActiveTab('OWNED')}

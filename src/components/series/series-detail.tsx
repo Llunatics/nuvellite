@@ -169,7 +169,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
   }, [selectedSlot, volumeMatrix]);
 
   return (
-    <div className="space-y-12 pb-16">
+    <div className="space-y-12 sm:space-y-16 pb-16">
       {/* 1. Back Navigation */}
       <div>
         <Link
@@ -550,7 +550,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
             <p className="text-xs text-editorial-muted">Koleksi untuk seri ini sudah lengkap.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-x-4 sm:gap-x-6 gap-y-9 sm:gap-y-12">
             {displayedBooks.map((book) => (
               <ReleaseCard key={book.id} book={book} />
             ))}

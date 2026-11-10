@@ -173,21 +173,20 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
             {filtered.map((group) => {
               const href = group.seriesSlug ? `/series/${group.seriesSlug}` : undefined;
               const row = (
-                <div className="group flex items-center gap-3.5 sm:gap-4 px-4 sm:px-5 py-3.5 hover:bg-white/[0.03] transition-colors">
-                  <CoverThumb group={group} className="w-11 sm:w-12 !rounded-lg" iconClassName="w-5 h-5" />
+                <div className="group flex items-center gap-5 p-5 sm:p-6 hover:bg-white/[0.03] transition-colors">
+                  <CoverThumb group={group} className="w-14 sm:w-16 !rounded-xl" iconClassName="w-6 h-6" />
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-sm font-medium text-editorial-title truncate">
-                      {group.displayName}
-                    </h3>
-                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 mt-1.5">
+                    <div className="flex flex-wrap items-center gap-2">
                       <LabelPill label={group.label} />
-                      <span className="text-[11px] font-mono text-editorial-muted">
-                        {group.volumeCount} vol
-                      </span>
-                      <span className="text-[11px] text-editorial-faint">·</span>
-                      <span className="text-[11px] text-editorial-muted truncate">
+                      <span className="text-[11px] font-mono text-editorial-muted truncate">
                         {group.publisherShortName}
                       </span>
+                    </div>
+                    <h3 className="mt-2 text-base sm:text-lg font-medium text-editorial-title truncate">
+                      {group.displayName}
+                    </h3>
+                    <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs font-mono text-editorial-muted">
+                      <span>{group.volumeCount} volume terbit dalam edisi bind-up</span>
                     </div>
                   </div>
                   <ChevronRight className="w-4 h-4 shrink-0 text-editorial-faint group-hover:text-editorial-title group-hover:translate-x-0.5 transition-all" />
