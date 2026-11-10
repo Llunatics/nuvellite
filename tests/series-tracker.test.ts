@@ -4,8 +4,8 @@ import {
   getSeriesBySlug,
   getBooksBySeries,
   getAllBooks,
-  getBookDetailBySlug,
 } from '../src/lib/catalog-service';
+import { getBookDetailBySlug } from '../src/lib/catalog-detail-service';
 
 describe('Missing Volume Detector Logic', () => {
   it('should accurately detect missing volumes in a series', () => {

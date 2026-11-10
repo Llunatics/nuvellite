@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Book } from 'lucide-react';
-import { resolveCover } from '@/lib/get-book-cover';
+import Image from 'next/image';
 
 interface CoverImageProps {
   src?: string | null;
@@ -11,29 +10,47 @@ interface CoverImageProps {
   height: number;
   sizes?: string;
   priority?: boolean;
+  compact?: boolean;
   imgClassName?: string;
   fallbackIconClassName?: string;
 }
 
+function sanitizeSrc(raw?: string | null): string | undefined {
+  if (!raw || typeof raw !== 'string') return undefined;
+  const trimmed = raw.trim();
+  if (!trimmed || trimmed === 'null' || trimmed === 'undefined') return undefined;
+  if (trimmed.startsWith('https://') || trimmed.startsWith('http://') || trimmed.startsWith('/')) {
+    return trimmed;
+  }
+  return undefined;
+}
+
+function extractInitials(title: string): string {
+  const words = (title || '')
+    .replace(/^[^a-zA-Z0-9]+/, '')
+    .split(/\s+/)
+    .map((w) => w.replace(/^[^a-zA-Z0-9]+/, ''))
+    .filter(Boolean);
+  if (words.length === 0) return 'NV';
+  return words
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join('')
+    .toUpperCase();
+}
+
 /**
- * Cover image with robust loading and fallback states.
+ * Cover image with hydration-race-proof loading (Round 2, Block 3).
  *
- * ROOT CAUSE DIAGNOSIS (P0 Cover Image Bug, 2026-11-09):
- * With `images: { unoptimized: true }` in `next.config.mjs`, Next.js `<Image>`
- * renders as a plain HTML `<img>`. When images are served from browser cache
- * or during SSR hydration, the browser loads the asset before React attaches
- * event listeners, so `onLoad` does NOT reliably fire. The component was gating
- * visibility strictly on `loaded ? 'opacity-100' : 'opacity-0'`, permanently locking
- * cached or fast-loading images at `opacity-0` underneath an infinite shimmer overlay.
- *
- * FIX:
- * 1. Validate and canonicalize cover URLs via `resolveCover()`.
- * 2. Use `imgRef` and check `complete && naturalWidth > 0` on mount / src change
- *    so cached / preloaded / SSR-hydrated images are marked loaded immediately.
- * 3. Remove the hard `opacity-0` lockout that depended solely on `onLoad`.
- * 4. Add a robust `onError` handler rendering a designed visual fallback
- *    (book icon + initials + title).
- * 5. Display the shimmer only while the image is genuinely pending load.
+ * With `images: { unoptimized: true }`, <Image> renders a plain <img> whose
+ * native load event can fire before React hydration attaches onLoad, which
+ * used to trap covers at opacity-0 behind an infinite shimmer. This version:
+ * 1. Resets loaded/failed whenever src changes (spotlight rotations included).
+ * 2. Synchronously inspects img.complete && naturalWidth on mount/src change
+ *    so cached images appear instantly.
+ * 3. Falls back to a typographic initials cover on error or after a 9s hang
+ *    (e.g. a CDN 403/429), with referrerPolicy="no-referrer" to reduce
+ *    hotlink blocking.
  */
 export function CoverImage({
   src,
@@ -42,47 +59,59 @@ export function CoverImage({
   height,
   sizes,
   priority = false,
+  compact,
   imgClassName = 'w-full h-full object-cover',
-  fallbackIconClassName = 'w-6 h-6 text-editorial-faint',
 }: CoverImageProps) {
-  const resolvedSrc = resolveCover(src);
+  const normalizedSrc = sanitizeSrc(src);
+  const isCompact = compact ?? width <= 64;
+  const imgRef = useRef<HTMLImageElement | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
 
-  // Check if image is already completed in cache on mount or src change
+  // Reset state when src changes and synchronously inspect cached DOM image
   useEffect(() => {
-    if (!resolvedSrc) {
-      setLoaded(false);
+    setLoaded(false);
+    setFailed(false);
+
+    const el = imgRef.current;
+    if (el && el.complete) {
+      if (el.naturalWidth > 0) {
+        setLoaded(true);
+        return;
+      }
+      setFailed(true);
       return;
     }
-    const img = imgRef.current;
-    if (img && img.complete) {
-      if (img.naturalWidth > 0) {
-        setLoaded(true);
-        setFailed(false);
-      } else {
-        setFailed(true);
-      }
-    }
-  }, [resolvedSrc]);
 
-  if (!resolvedSrc || failed) {
-    const initials = alt
-      .split(/\s+/)
-      .filter(Boolean)
-      .slice(0, 2)
-      .map((w) => w[0])
-      .join('')
-      .toUpperCase();
+    if (!normalizedSrc) return;
+    const timer = setTimeout(() => {
+      setLoaded((prevLoaded) => {
+        if (!prevLoaded) setFailed(true);
+        return prevLoaded;
+      });
+    }, 9000);
+
+    return () => clearTimeout(timer);
+  }, [normalizedSrc]);
+
+  if (!normalizedSrc || failed) {
+    const initials = extractInitials(alt);
+    if (isCompact) {
+      return (
+        <div className="w-full h-full flex items-center justify-center bg-surface-sunken border border-white/[0.08] select-none">
+          <span className="font-mono text-[10px] font-semibold tracking-wider text-editorial-muted">
+            {initials}
+          </span>
+        </div>
+      );
+    }
     return (
-      <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-surface-elevated/60 border border-white/[0.06] select-none">
-        <Book className={`${fallbackIconClassName} mb-1.5 opacity-60`} aria-hidden="true" />
-        <span className="block h-px w-8 bg-white/20 mb-2" aria-hidden="true" />
-        <span className="font-editorial text-2xl text-editorial-title leading-none">
-          {initials || '—'}
+      <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-surface-sunken border border-white/[0.08] select-none">
+        <span className="block h-px w-6 bg-white/20 mb-2.5" aria-hidden="true" />
+        <span className="font-mono text-lg font-semibold tracking-wider text-editorial-title leading-none">
+          {initials}
         </span>
-        <span className="text-[10px] text-editorial-muted line-clamp-3 leading-snug mt-2 px-1">
+        <span className="text-[10px] text-editorial-faint line-clamp-3 leading-snug mt-2 px-1 font-sans">
           {alt}
         </span>
       </div>
@@ -90,34 +119,23 @@ export function CoverImage({
   }
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
-      {/* Shimmer placeholder shown only while genuinely pending load */}
-      {!loaded && !failed && (
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 cover-shimmer pointer-events-none z-10"
-        />
-      )}
-      <img
+    <div className="relative w-full h-full overflow-hidden bg-surface-sunken">
+      {!loaded && <div aria-hidden="true" className="absolute inset-0 cover-skeleton-flat" />}
+      <Image
         ref={imgRef}
-        src={resolvedSrc}
+        src={normalizedSrc}
         alt={alt}
         width={width}
         height={height}
         sizes={sizes}
-        loading={priority ? 'eager' : 'lazy'}
+        priority={priority}
+        loading={priority ? undefined : 'lazy'}
         decoding="async"
-        onLoad={() => {
-          setLoaded(true);
-          setFailed(false);
-        }}
-        onError={() => {
-          setFailed(true);
-          setLoaded(false);
-        }}
-        className={`${imgClassName} transition-opacity duration-300 ${
-          loaded ? 'opacity-100' : 'opacity-90'
-        }`}
+        referrerPolicy="no-referrer"
+        onLoad={() => setLoaded(true)}
+        onError={() => setFailed(true)}
+        data-loaded={loaded ? 'true' : 'false'}
+        className={`${imgClassName} nuv-cover-img`}
       />
     </div>
   );

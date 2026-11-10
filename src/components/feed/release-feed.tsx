@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useCallback, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useCallback, useEffect, useDeferredValue } from 'react';
 import Link from 'next/link';
 import {
   BookOpen,
@@ -13,6 +13,7 @@ import {
   FilterX,
 } from 'lucide-react';
 import { Book, Publisher } from '@/lib/types';
+import { loadPersistedViewState, savePersistedViewState, syncUrlQuery } from '@/lib/filter-persistence';
 import { ReleaseCard } from '@/components/books/release-card';
 import { FeaturedReleaseCard } from '@/components/books/card-variants';
 import { useCollection } from '@/hooks/use-collection';
@@ -22,9 +23,10 @@ const PAGE_SIZE = 36;
 interface ReleaseFeedProps {
   initialBooks: Book[];
   publishers: Publisher[];
+  radarShelf?: React.ReactNode;
 }
 
-export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publishers }: ReleaseFeedProps) {
+export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publishers, radarShelf }: ReleaseFeedProps) {
   // Curated spotlight items: the 5 newest releases with a cover and price.
   // NOTE: do NOT require `synopsis` here. The homepage feed uses the
   // lightweight listing data, which strips synopsis (see split-catalog.py),
@@ -36,9 +38,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     return [...initialBooks]
       .filter((b) => b.coverImage && b.currentPrice > 0 && !b.isSetVariant)
       .sort((a, b) => {
-        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-        if (dateB !== dateA) return dateB - dateA;
+        const byDate = (b.releaseDate || '').localeCompare(a.releaseDate || '');
+        if (byDate !== 0) return byDate;
         return (b.volume ?? 0) - (a.volume ?? 0);
       })
       .slice(0, 5);
@@ -65,9 +66,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     return [...initialBooks]
       .filter((b) => b.category === 'Manga' && b.coverImage && !b.isSetVariant)
       .sort((a, b) => {
-        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-        if (dateB !== dateA) return dateB - dateA;
+        const byDate = (b.releaseDate || '').localeCompare(a.releaseDate || '');
+        if (byDate !== 0) return byDate;
         return (b.volume ?? 0) - (a.volume ?? 0);
       })
       .slice(0, 18);
@@ -77,9 +77,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     return [...initialBooks]
       .filter((b) => b.category === 'Light Novel' && b.coverImage && !b.isSetVariant)
       .sort((a, b) => {
-        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-        if (dateB !== dateA) return dateB - dateA;
+        const byDate = (b.releaseDate || '').localeCompare(a.releaseDate || '');
+        if (byDate !== 0) return byDate;
         return (b.volume ?? 0) - (a.volume ?? 0);
       })
       .slice(0, 18);
@@ -101,9 +100,14 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'RELEASED' | 'PREORDER'>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearchQuery = useDeferredValue(searchQuery);
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [spotlightPaused, setSpotlightPaused] = useState(false);
+  const hydratedRef = useRef(false);
+  const suppressFilterResetRef = useRef(false);
+  const pendingScrollRef = useRef<number | null>(null);
+  const spotlightResumeRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -115,6 +119,47 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       setPubFilter('ALL');
     }
   }, [publishers]);
+
+  // Hydrate filters from the URL and restore pagination + scroll position
+  // saved before navigating away (Block 6). Runs once on mount.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const format = params.get('format');
+    if (format === 'Manga' || format === 'Light Novel') setFormatFilter(format);
+    const status = params.get('status');
+    if (status === 'RELEASED' || status === 'PREORDER') setStatusFilter(status);
+    const sort = params.get('sort');
+    if (sort === 'latest' || sort === 'title' || sort === 'price_low' || sort === 'price_high') {
+      setSortBy(sort);
+    }
+    const q = params.get('q');
+    if (q) setSearchQuery(q);
+
+    const persisted = loadPersistedViewState(window.location.pathname);
+    if (persisted?.visibleCount && persisted.visibleCount > PAGE_SIZE) {
+      suppressFilterResetRef.current = true;
+      setVisibleCount(persisted.visibleCount);
+    }
+    if (persisted?.scrollY) pendingScrollRef.current = persisted.scrollY;
+    hydratedRef.current = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Sync filters back into the URL (debounced 200ms, replaceState only)
+  useEffect(() => {
+    if (!hydratedRef.current) return;
+    const timer = setTimeout(() => {
+      const params = new URLSearchParams();
+      if (formatFilter !== 'ALL') params.set('format', formatFilter);
+      if (pubFilter !== 'ALL') params.set('publisher', pubFilter);
+      if (statusFilter !== 'ALL') params.set('status', statusFilter);
+      if (sortBy !== 'latest') params.set('sort', sortBy);
+      const q = searchQuery.trim();
+      if (q) params.set('q', q);
+      syncUrlQuery(params);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [formatFilter, pubFilter, statusFilter, sortBy, searchQuery]);
 
   // Auto-advance the spotlight showcase; pauses while the user hovers it.
   useEffect(() => {
@@ -150,8 +195,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
         if (pubFilter !== 'ALL' && book.publisherId !== pubFilter) return false;
         if (statusFilter === 'RELEASED' && !(book.status === 'RELEASED' || book.status === 'PUBLISHED')) return false;
         if (statusFilter === 'PREORDER' && !(book.status === 'PREORDER' || book.status === 'ANNOUNCED')) return false;
-        if (searchQuery.trim()) {
-          const q = searchQuery.toLowerCase().trim();
+        if (deferredSearchQuery.trim()) {
+          const q = deferredSearchQuery.toLowerCase().trim();
           const matchTitle = book.title.toLowerCase().includes(q);
           const matchSeries = book.seriesName?.toLowerCase().includes(q);
           const matchAuthor = Array.isArray(book.authors) && book.authors.some((a) => {
@@ -174,36 +219,53 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           return b.currentPrice - a.currentPrice;
         }
         // latest
-        const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-        const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-        return dateB - dateA;
+        return (b.releaseDate || '').localeCompare(a.releaseDate || '');
       });
-  }, [initialBooks, formatFilter, pubFilter, statusFilter, searchQuery, sortBy]);
+  }, [initialBooks, formatFilter, pubFilter, statusFilter, deferredSearchQuery, sortBy]);
 
-  // Reset visible count when filters change
+  // Reset visible count when filters change (in an effect, not during render)
   const prevFilterKey = useRef('');
-  const filterKey = `${formatFilter}-${pubFilter}-${statusFilter}-${searchQuery}-${sortBy}`;
-  if (filterKey !== prevFilterKey.current) {
-    prevFilterKey.current = filterKey;
-    if (visibleCount !== PAGE_SIZE) {
+  const filterKey = `${formatFilter}-${pubFilter}-${statusFilter}-${deferredSearchQuery}-${sortBy}`;
+  useEffect(() => {
+    if (filterKey !== prevFilterKey.current) {
+      prevFilterKey.current = filterKey;
+      if (suppressFilterResetRef.current) {
+        suppressFilterResetRef.current = false;
+        return;
+      }
       setVisibleCount(PAGE_SIZE);
     }
-  }
+  }, [filterKey]);
 
   const visibleBooks = useMemo(() => filteredBooks.slice(0, visibleCount), [filteredBooks, visibleCount]);
+
+  useEffect(() => {
+    if (pendingScrollRef.current != null && visibleBooks.length > 0) {
+      const y = pendingScrollRef.current;
+      pendingScrollRef.current = null;
+      requestAnimationFrame(() => window.scrollTo(0, y));
+    }
+  }, [visibleBooks]);
   const hasMore = visibleCount < filteredBooks.length;
 
   const loadMore = useCallback(() => {
     setVisibleCount((prev) => Math.min(prev + PAGE_SIZE, filteredBooks.length));
   }, [filteredBooks.length]);
 
+  const persistViewState = () => {
+    savePersistedViewState(window.location.pathname, {
+      visibleCount,
+      scrollY: window.scrollY,
+    });
+  };
+
   return (
-    <div className="space-y-16 sm:space-y-20">
+    <div className="space-y-16 sm:space-y-20" onClickCapture={persistViewState}>
       {/* 1. HERO EDITORIAL INTRODUCTION */}
       <section className="space-y-4 pt-2 sm:pt-4 lg:pt-8">
         <div className="max-w-3xl lg:max-w-4xl space-y-3 lg:space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-xs shrink-0" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-xs shrink-0" />
             <span>Katalog Indonesia</span>
           </div>
 
@@ -212,8 +274,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           </h1>
 
           <p className="text-sm sm:text-base lg:text-lg text-editorial-body leading-relaxed max-w-2xl lg:max-w-3xl font-sans">
-            Arsip lengkap terbitan Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia.
-            Pantau rilis mingguan, varian kanonikal, riwayat harga, dan kelengkapan koleksi Anda.
+            Katalog manga &amp; light novel terbitan resmi Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia.
+            Cek jadwal terbit mingguan, edisi bind-up, dan koleksi bukumu.
           </p>
 
           {/* Archive Stats Strip */}
@@ -252,7 +314,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >
-          <FeaturedReleaseCard book={activeSpotlight} />
+          <FeaturedReleaseCard key={activeSpotlight.id} book={activeSpotlight} />
 
           {/* Minimal Spotlight Pagination */}
           {spotlightBooks.length > 1 && (
@@ -265,7 +327,8 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
                     setActiveSpotlightIdx(idx);
                     // Let the user linger on their pick before auto-advance resumes.
                     setSpotlightPaused(true);
-                    setTimeout(() => setSpotlightPaused(false), 12000);
+                    if (spotlightResumeRef.current) clearTimeout(spotlightResumeRef.current);
+                    spotlightResumeRef.current = setTimeout(() => setSpotlightPaused(false), 12000);
                   }}
                   className={`h-1 rounded-full transition-all duration-300 ${
                     activeSpotlightIdx === idx ? 'w-6 bg-white' : 'w-2 bg-white/20 hover:bg-white/40'
@@ -287,7 +350,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
                 Rilisan Manga Terbaru
               </h2>
               <span className="text-[11px] font-mono text-editorial-faint hidden sm:inline">
-                {mangaHighlights.length} rilisan terkini
+                {mangaHighlights.length} buku terbaru
               </span>
             </div>
 
@@ -343,7 +406,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
                 Rilisan Light Novel Terbaru
               </h2>
               <span className="text-[11px] font-mono text-editorial-faint hidden sm:inline">
-                {lnHighlights.length} rilisan terkini
+                {lnHighlights.length} buku terbaru
               </span>
             </div>
 
@@ -390,6 +453,10 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
         </section>
       )}
 
+      {/* 4b. RADAR SHELF (Round 3: below the rails, per the D.3 heading order —
+          the catalog hero leads the page again, not the announcements) */}
+      {radarShelf}
+
       {/* 5. MAIN CATALOG ARCHIVE & COHESIVE CONTROLS */}
       <section ref={catalogRef} className="space-y-8 pt-4 scroll-mt-28">
         {/* Section Heading & Result Counter */}
@@ -399,7 +466,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
               Seluruh Katalog
             </h2>
             <p className="text-xs text-editorial-muted mt-1 font-mono">
-              Menampilkan {filteredBooks.length.toLocaleString('id-ID')} judul terdaftar
+              {filteredBooks.length.toLocaleString('id-ID')} buku terdata
             </p>
           </div>
 
@@ -424,7 +491,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Saring judul, seri, pengarang..."
+              placeholder="Cari judul, seri, atau pengarang..."
               className="w-full h-10 pl-10 pr-9 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.06] border border-white/[0.06] focus:border-white/[0.15] text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all text-xs"
             />
             {searchQuery && (
@@ -514,9 +581,9 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
         {filteredBooks.length === 0 ? (
           <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
             <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
-            <h3 className="text-sm font-medium text-editorial-title">Tidak ada buku yang sesuai kriteria</h3>
+            <h3 className="text-sm font-medium text-editorial-title">Buku yang dicari belum ketemu</h3>
             <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-              Coba gunakan kata kunci berbeda atau bersihkan filter yang sedang aktif.
+              Coba ganti kata kunci atau reset filter yang aktif.
             </p>
             <button
               type="button"

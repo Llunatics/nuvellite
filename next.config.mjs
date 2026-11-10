@@ -23,6 +23,11 @@ const nextConfig = {
     imageSizes: [48, 96, 144, 176, 208, 280],
     remotePatterns: [
       { protocol: 'https', hostname: 'cdn.gramedia.com' },
+      { protocol: 'https', hostname: 'image.gramedia.net' },
+      { protocol: 'https', hostname: 'www.gramedia.com' },
+      { protocol: 'https', hostname: 'media.mncgramedia.id' },
+      { protocol: 'https', hostname: 'www.mncgramedia.id' },
+      { protocol: 'https', hostname: 'cdn.mangaupdates.com' },
     ],
   },
 };

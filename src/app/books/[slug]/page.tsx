@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation';
-import { getBookBySlug, getBookDetailBySlug, getBooksBySeries, getPriceSummary, getYouMayAlsoLike } from '@/lib/catalog-service';
+import { getBookBySlug, getBooksBySeries, getYouMayAlsoLike } from '@/lib/catalog-service';
+import { getPriceSummary } from '@/lib/catalog-detail-service';
+import { getBookDetailBySlug } from '@/lib/catalog-detail-service';
 import { BookDetail } from '@/components/books/book-detail';
 import type { Metadata } from 'next';
 
@@ -27,15 +29,26 @@ export default async function BookDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const seriesSiblings = book.seriesId ? getBooksBySeries(book.seriesId) : [];
+  // Full volume list (sorted by volume ascending) drives the prev/next
+  // stepper; siblings exclude the current book itself (Round 2, Block 4).
+  const allSeriesBooks = book.seriesId ? getBooksBySeries(book.seriesId) : [];
+  const currentIndex = allSeriesBooks.findIndex((b) => b.id === book.id);
+  const prevBook = currentIndex > 0 ? allSeriesBooks[currentIndex - 1] : null;
+  const nextBook =
+    currentIndex >= 0 && currentIndex < allSeriesBooks.length - 1
+      ? allSeriesBooks[currentIndex + 1]
+      : null;
+  const seriesSiblings = allSeriesBooks.filter((b) => b.id !== book.id);
   const recommendations = getYouMayAlsoLike(book, 6);
   const priceSummary = getPriceSummary(book);
 
   return (
-    <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8">
+    <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8 nuv-view-enter">
       <BookDetail
         book={book}
         seriesSiblings={seriesSiblings}
+        prevBook={prevBook}
+        nextBook={nextBook}
         recommendations={recommendations}
         priceSummary={priceSummary}
       />

@@ -4,19 +4,23 @@
 
 @layer base {
   :root {
-    /* Obsidian Editorial Luxury Environment */
+    /* Design Language (Round 3): Obsidian & Alabaster liquid-glass editorial
+       system — dual mode (dark default + light), azure accent by default with
+       6 selectable accents, whisper borders, pill/squircle radii, serif
+       display type. Round 2's locked lime wireframe is superseded (S-01..S-03). */
     --bg-rgb: 9 10 14;
     --surface-rgb: 15 17 23;
     --surface-elevated-rgb: 22 25 34;
+    --surface-raised-rgb: 22 25 34;
     --surface-sunken-rgb: 6 7 10;
     --surface-overlay-rgb: 17 20 28;
 
-    /* Subtle Architectural Restrained Borders */
+    /* 1px architectural borders */
     --border-subtle: rgba(255, 255, 255, 0.05);
-    --border-medium: rgba(255, 255, 255, 0.10);
-    --border-bold: rgba(255, 255, 255, 0.18);
+    --border-medium: rgba(255, 255, 255, 0.09);
+    --border-bold: rgba(255, 255, 255, 0.16);
 
-    /* Editorial Typography Hierarchy */
+    /* Typography hierarchy (neutral zinc) */
     --editorial-title: #f8fafc;
     --editorial-body: #94a3b8;
     --editorial-muted: #64748b;
@@ -28,11 +32,11 @@
     --soft-glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
     --soft-glass-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
 
-    /* Material Level C: Premium Liquid Glass */
-    --liquid-glass-bg: rgba(14, 17, 24, 0.75);
-    --liquid-glass-bg-hover: rgba(20, 24, 34, 0.85);
+    /* Material Level C: Liquid Glass */
+    --liquid-glass-bg: rgba(14, 17, 24, 0.78);
+    --liquid-glass-bg-hover: rgba(20, 24, 34, 0.88);
     --liquid-glass-border: rgba(255, 255, 255, 0.07);
-    --liquid-glass-border-hover: rgba(255, 255, 255, 0.14);
+    --liquid-glass-border-hover: rgba(255, 255, 255, 0.12);
     --liquid-glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.10);
     --liquid-glass-rim: rgba(255, 255, 255, 0.03);
     --liquid-glass-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.7), 0 8px 16px -6px rgba(0, 0, 0, 0.45);
@@ -41,15 +45,29 @@
     --scrollbar-thumb: rgba(255, 255, 255, 0.12);
     --scrollbar-thumb-hover: rgba(255, 255, 255, 0.22);
 
-    /* Default Theme Accent: Vermilion */
-    --accent-rgb: 225 29 72;
-    --accent-strong-rgb: 244 63 94;
-    --accent-glow: rgba(225, 29, 72, 0.22);
+    /* Single locked accent: Lime #A3E635 (selection/active only) */
+    --accent-rgb: 14 165 233;
+    --accent-strong-rgb: 2 132 199;
+    --accent-glow: rgba(14, 165, 233, 0.22);
+    /* Semantic red: warnings, catalog gaps, destructive actions, discounts */
+    --semantic-red-rgb: 239 68 68;
     --gold-rgb: 212 175 55;
     --gold-glow: rgba(212, 175, 55, 0.18);
+
+    /* Motion tokens (Section 3.2 / Block 8) */
+    --motion-instant: 90ms;
+    --motion-fast: 140ms;
+    --motion-normal: 180ms;
+    --motion-expand: 200ms;
+    --duration-instant: 90ms;
+    --duration-fast: 140ms;
+    --duration-normal: 180ms;
+    --duration-panel: 220ms;
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-in-out-sharp: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Color Theme Overrides: Dark Mode */
+
   [data-accent="vermilion"] {
     --accent-rgb: 225 29 72;
     --accent-strong-rgb: 244 63 94;
@@ -86,6 +104,7 @@
     --bg-rgb: 248 249 252;
     --surface-rgb: 255 255 255;
     --surface-elevated-rgb: 241 245 249;
+    --surface-raised-rgb: 241 245 249;
     --surface-sunken-rgb: 238 242 246;
     --surface-overlay-rgb: 255 255 255;
 
@@ -113,13 +132,14 @@
     --liquid-glass-rim: rgba(0, 0, 0, 0.03);
     --liquid-glass-shadow: 0 20px 44px -12px rgba(15, 23, 42, 0.10), 0 8px 16px -6px rgba(15, 23, 42, 0.06);
 
+    --semantic-red-rgb: 220 38 38;
     --scrollbar-thumb: rgba(0, 0, 0, 0.15);
     --scrollbar-thumb-hover: rgba(0, 0, 0, 0.25);
 
-    /* Light Mode Default Accent */
-    --accent-rgb: 225 29 72;
-    --accent-strong-rgb: 190 18 60;
-    --accent-glow: rgba(225, 29, 72, 0.20);
+    /* Light Mode Default Accent (Round 3: azure) */
+    --accent-rgb: 2 132 199;
+    --accent-strong-rgb: 3 105 161;
+    --accent-glow: rgba(2, 132, 199, 0.20);
     --gold-rgb: 180 130 30;
     --gold-glow: rgba(180, 130, 30, 0.18);
   }
@@ -155,6 +175,7 @@
     --accent-glow: rgba(225, 29, 72, 0.20);
   }
 
+
   body {
     background-color: rgb(var(--bg-rgb));
     color: var(--editorial-body);
@@ -164,27 +185,6 @@
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
-    transition: background-color 0.25s ease, color 0.25s ease;
-  }
-
-  /* Atmospheric Background Glow */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 700px;
-    background: radial-gradient(
-      circle at 50% 0%,
-      rgba(var(--accent-rgb), 0.04) 0%,
-      rgba(var(--gold-rgb), 0.02) 45%,
-      transparent 70%
-    );
-    pointer-events: none;
-    z-index: 0;
-    transition: background 0.4s ease;
   }
 
   /* Refined keyboard focus: quiet accent ring instead of the default outline */
@@ -219,7 +219,87 @@
 }
 
 /* =========================================================================
-   3-TIER MATERIAL SYSTEM
+   MOTION SYSTEM (Section 3.2 / Block 8)
+   ========================================================================= */
+
+/* Native cross-document view transitions (progressive enhancement) */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: nuv-route-out var(--motion-fast) var(--ease-in-out-sharp) both;
+}
+
+::view-transition-new(root) {
+  animation: nuv-route-in var(--motion-normal) var(--ease-out-quart) both;
+}
+
+@keyframes nuv-route-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes nuv-route-in {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page / tab / filter content entry: subtle 2px settle, zero bounce */
+.nuv-view-enter {
+  animation: nuv-route-in var(--motion-normal) var(--ease-out-quart) both;
+}
+
+/* Deterministic collapse via grid-template-rows interpolation */
+.nuv-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--motion-expand) var(--ease-out-quart);
+}
+
+.nuv-collapse[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.nuv-collapse-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Alias used by the book-detail synopsis (Block 4 naming) */
+.nuv-collapse-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--motion-expand) var(--ease-out-quart);
+}
+
+.nuv-collapse-grid[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+/* Cover image reveal: instant when already loaded, 160ms fade on network load */
+.nuv-cover-img {
+  opacity: 0;
+  transition: opacity 160ms var(--ease-out-quart);
+}
+
+.nuv-cover-img[data-loaded="true"] {
+  opacity: 1;
+}
+
+/* Flat pulse skeleton (no gradient sweep) */
+.cover-skeleton-flat {
+  background-color: rgba(255, 255, 255, 0.04);
+  animation: nuv-flat-pulse 1.5s var(--ease-in-out-sharp) infinite;
+}
+
+@keyframes nuv-flat-pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.85; }
+}
+
+/* =========================================================================
+   MATERIAL SYSTEM
    ========================================================================= */
 
 /* Material Level A: Solid Editorial Surface */
@@ -297,40 +377,97 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), var(--soft-glass-highlight);
 }
 
-/* Cover Image Depth & Physical Bookshelf Elevation */
+/* Liquid Glass Pill Navigation */
+.liquid-glass-pill {
+  background: var(--liquid-glass-bg);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid var(--liquid-glass-border);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 0 var(--liquid-glass-highlight);
+}
+
+/* Cover Image Depth */
 .cover-depth {
   box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5), 0 4px 10px -2px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
 }
 
-/* Shimmer placeholder shown while a cover image loads (origin CDN is slow) */
+/* Flat loading placeholder for covers (replaces the old gradient shimmer) */
 .cover-shimmer {
-  background: linear-gradient(
-    100deg,
-    rgba(255, 255, 255, 0.03) 30%,
-    rgba(255, 255, 255, 0.09) 50%,
-    rgba(255, 255, 255, 0.03) 70%
-  );
-  background-size: 200% 100%;
-  animation: cover-shimmer-slide 1.4s ease-in-out infinite;
+  background-color: rgba(255, 255, 255, 0.04);
+  animation: nuv-flat-pulse 1.5s var(--ease-in-out-sharp) infinite;
 }
 
-@keyframes cover-shimmer-slide {
-  0% {
-    background-position: 180% 0;
+/* Architectural 1px card interaction (Section 3.2: replaces heavy shadow lift) */
+.book-cover-elevated {
+  position: relative;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-subtle);
+  transition:
+    border-color var(--motion-fast) var(--ease-out-quart),
+    transform var(--motion-fast) var(--ease-out-quart);
+}
+
+.group:hover .book-cover-elevated {
+  border-color: var(--border-bold);
+  transform: translateY(-2px);
+}
+
+/* Interactive card press/hover contract (Block 8, Section 3 table):
+   hover lifts 2px with a bolder 1px border in 140ms, press settles to
+   scale(0.99) in 90ms. No will-change at rest, no shadow animation. */
+.nuv-interactive-card {
+  transition:
+    border-color var(--motion-fast) var(--ease-out-quart),
+    transform var(--motion-fast) var(--ease-out-quart);
+}
+
+.nuv-interactive-card:hover {
+  border-color: var(--border-bold);
+  transform: translateY(-2px);
+}
+
+.nuv-interactive-card:active {
+  transform: scale(0.99);
+  transition-duration: var(--motion-instant);
+}
+
+/* Custom Refined Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Lightweight CSS-only transitions for page and card entrances */
+@keyframes fadeInEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
   }
-  100% {
-    background-position: -80% 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.light .cover-shimmer {
-  background: linear-gradient(
-    100deg,
-    rgba(15, 23, 42, 0.04) 30%,
-    rgba(15, 23, 42, 0.1) 50%,
-    rgba(15, 23, 42, 0.04) 70%
-  );
-  background-size: 200% 100%;
+.animate-entrance {
+  animation: fadeInEntrance 300ms ease-out forwards;
+}
+
+.transition-entrance {
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
 }
 
 /* Light-mode remap: hardcoded white/[n] overlays are designed for dark
@@ -393,7 +530,11 @@
   box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
 }
 
-/* Premium Physical Book Cover Presentation */
+
+.cover-depth {
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5), 0 4px 10px -2px rgba(0, 0, 0, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
 .book-cover-elevated {
   position: relative;
   border-radius: 0.875rem;
@@ -424,52 +565,3 @@
   border: 1px solid var(--liquid-glass-border);
   box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 0 var(--liquid-glass-highlight);
 }
-
-/* Subtle Specular Highlight */
-.specular-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-}
-
-.light .specular-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
-}
-
-/* Custom Refined Scrollbar */
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border-radius: 9999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
-}
-
-/* Lightweight CSS-only transitions for page and card entrances */
-@keyframes fadeInEntrance {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-entrance {
-  animation: fadeInEntrance 300ms ease-out forwards;
-}
-
-.transition-entrance {
-  transition: opacity 300ms ease-out, transform 300ms ease-out;
-}
-

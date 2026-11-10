@@ -1,21 +1,23 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
-import { Search, Moon, Sun, Palette, BookMarked, Sparkles } from 'lucide-react';
-import { useTheme, ACCENT_THEMES } from '@/hooks/use-theme';
-import { useCollection } from '@/hooks/use-collection';
-import { SearchDialog } from '@/components/search/search-dialog';
+import { Search } from 'lucide-react';
+import { ProfileMenu } from '@/components/layout/profile-menu';
+
+// Lazy-loaded so visitors who never open search never download or parse the
+// search dialog (and its catalog data graph) on initial page load (Block 5).
+const SearchDialog = dynamic(
+  () => import('@/components/search/search-dialog').then((m) => m.SearchDialog),
+  { ssr: false },
+);
 
 export function Header() {
   const pathname = usePathname();
-  const { toggleTheme, isDark, accent, setAccent, mounted } = useTheme();
-  const { ownedItems, isLoaded } = useCollection();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isPaletteOpen, setIsPaletteOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const paletteRef = useRef<HTMLDivElement>(null);
 
   // Scroll listener for integrated -> floating liquid glass transition
   useEffect(() => {
@@ -26,21 +28,6 @@ export function Header() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Close palette popover on outside click
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (paletteRef.current && !paletteRef.current.contains(e.target as Node)) {
-        setIsPaletteOpen(false);
-      }
-    }
-    if (isPaletteOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isPaletteOpen]);
 
   // Keyboard shortcut for Cmd/Ctrl + K or /
   useEffect(() => {
@@ -61,29 +48,18 @@ export function Header() {
     { href: '/', label: 'Katalog', active: pathname === '/' },
     { href: '/calendar', label: 'Kalender', active: pathname.startsWith('/calendar') },
     { href: '/series', label: 'Seri', active: pathname.startsWith('/series') },
-    {
-      href: '/library',
-      label: 'Koleksi',
-      active: pathname.startsWith('/library'),
-      badge: isLoaded && ownedItems.length > 0 ? ownedItems.length : undefined,
-    },
+    { href: '/radar', label: 'Radar', active: pathname.startsWith('/radar') },
   ];
-
-  const currentThemeColor = ACCENT_THEMES.find((t) => t.id === accent)?.color || '#E11D48';
 
   return (
     <>
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 pointer-events-none ${
-          isScrolled ? 'pt-3 sm:pt-3.5 px-3 sm:px-6' : 'pt-5 sm:pt-7 px-4 sm:px-8'
+          isScrolled ? 'pt-3 sm:pt-3.5 px-3 sm:px-6' : 'pt-4 sm:pt-5 px-3 sm:px-6'
         }`}
       >
         <div
-          className={`max-w-6xl mx-auto h-14 sm:h-16 rounded-full px-4 sm:px-6 flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition ${
-            isScrolled
-              ? 'liquid-glass-pill shadow-2xl'
-              : 'integrated-nav'
-          }`}
+          className="max-w-6xl mx-auto h-14 sm:h-16 rounded-full px-4 sm:px-6 flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition liquid-glass-pill shadow-2xl"
         >
           {/* Brand Identity */}
           <div className="flex items-center gap-7 shrink-0">
@@ -91,10 +67,7 @@ export function Header() {
               <span className="font-editorial text-[26px] sm:text-3xl font-semibold tracking-tight text-editorial-title group-hover:text-accent transition-colors leading-none">
                 nuvellite
               </span>
-              <span
-                className="w-2 h-2 rounded-full shadow-xs transition-transform group-hover:scale-125"
-                style={{ backgroundColor: currentThemeColor }}
-              />
+              <span className="w-2 h-2 rounded-full shadow-xs transition-transform group-hover:scale-125 bg-accent" />
             </Link>
 
             {/* Desktop Center Floating Pill Navigation */}
@@ -110,14 +83,6 @@ export function Header() {
                   }`}
                 >
                   <span>{link.label}</span>
-                  {link.badge !== undefined && (
-                    <span
-                      className="min-w-4 h-4 px-1 rounded-full text-white text-[8px] font-mono font-bold flex items-center justify-center shadow-xs"
-                      style={{ backgroundColor: currentThemeColor }}
-                    >
-                      {link.badge}
-                    </span>
-                  )}
                 </Link>
               ))}
             </nav>
@@ -141,82 +106,14 @@ export function Header() {
               </kbd>
             </button>
 
-            {/* Accent Color Palette Popover */}
-            <div className="relative" ref={paletteRef}>
-              <button
-                type="button"
-                onClick={() => setIsPaletteOpen((prev) => !prev)}
-                className="w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/[0.06] text-editorial-muted hover:text-editorial-title transition-all active:scale-95 border border-transparent hover:border-white/[0.06]"
-                aria-label="Pilih Warna Aksen"
-                title="Pilih Tema Aksen"
-              >
-                <span
-                  className="w-2.5 h-2.5 rounded-full shadow-xs ring-2 ring-white/10"
-                  style={{ backgroundColor: currentThemeColor }}
-                />
-              </button>
+            <ProfileMenu />
 
-              {isPaletteOpen && (
-                <div className="absolute right-0 mt-2 p-3 rounded-2xl liquid-glass border border-white/[0.08] shadow-2xl z-50 min-w-[180px] space-y-2 animate-in fade-in zoom-in-95 duration-150">
-                  <div className="flex items-center justify-between px-1">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint">
-                      Aksen Tema
-                    </span>
-                    <Sparkles className="w-3 h-3 text-editorial-faint" />
-                  </div>
-                  <div className="grid grid-cols-3 gap-1.5 pt-1">
-                    {ACCENT_THEMES.map((themeOption) => {
-                      const isSelected = accent === themeOption.id;
-                      return (
-                        <button
-                          key={themeOption.id}
-                          type="button"
-                          onClick={() => {
-                            setAccent(themeOption.id);
-                            setIsPaletteOpen(false);
-                          }}
-                          className={`flex flex-col items-center gap-1.5 p-2 rounded-xl transition-all ${
-                            isSelected
-                              ? 'bg-white/[0.08] border border-white/[0.12] shadow-xs'
-                              : 'hover:bg-white/[0.04] border border-transparent'
-                          }`}
-                          title={themeOption.label}
-                        >
-                          <span
-                            className="w-4 h-4 rounded-full shadow-xs transition-transform hover:scale-110 ring-1 ring-white/10"
-                            style={{ backgroundColor: themeOption.color }}
-                          />
-                          <span className="text-[10px] font-mono text-editorial-muted">
-                            {themeOption.label}
-                          </span>
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Dark / Light Toggle */}
-            <button
-              type="button"
-              onClick={toggleTheme}
-              className="w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/[0.06] text-editorial-muted hover:text-editorial-title transition-all active:scale-95 border border-transparent hover:border-white/[0.06]"
-              aria-label={isDark ? 'Beralih ke Mode Terang' : 'Beralih ke Mode Gelap'}
-              title={isDark ? 'Mode Terang' : 'Mode Gelap'}
-            >
-              {mounted && !isDark ? (
-                <Moon className="w-4 h-4 text-editorial-title" />
-              ) : (
-                <Sun className="w-4 h-4 text-amber-300/80 hover:text-amber-200" />
-              )}
-            </button>
           </div>
         </div>
       </header>
 
-      {/* Global Command Search Dialog */}
-      <SearchDialog isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      {/* Global Command Search Dialog (mounted only when opened) */}
+      {isSearchOpen && <SearchDialog isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />}
     </>
   );
 }

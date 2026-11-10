@@ -39,7 +39,7 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
           <div className="flex items-center gap-1.5 text-[9px] font-mono text-editorial-faint mb-0.5">
             <span className="font-semibold text-editorial-muted">{book.publisherShortName}</span>
             <span>•</span>
-            <span className={book.category === 'Light Novel' ? 'text-amber-300/90' : 'text-sky-300/90'}>
+            <span className="text-editorial-muted">
               {book.category}
             </span>
             {book.volume !== null && book.volume !== undefined && (
@@ -82,13 +82,13 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
             onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
             className={`w-7 h-7 rounded-full flex items-center justify-center transition-all active:scale-90 ${
               owned
-                ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-semibold'
+                ? 'bg-accent/15 text-accent border border-accent/30 font-semibold'
                 : 'text-editorial-muted hover:text-editorial-title hover:bg-white/[0.06]'
             }`}
             aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
             title={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
           >
-            {owned ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Plus className="w-3.5 h-3.5" />}
+            {owned ? <Check className="w-3.5 h-3.5 text-accent" /> : <Plus className="w-3.5 h-3.5" />}
           </button>
         </div>
       </div>
@@ -111,13 +111,13 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
           />
 
           {/* Subtle Ambient Vignette on Cover for Depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10 pointer-events-none" />
+          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
         </Link>
 
         {/* Floating Top Left: Format Capsule Badge */}
         <div className="absolute top-2 left-2 z-10 pointer-events-none">
           <span
-            className={`px-2 py-0.5 rounded-full text-[8.5px] font-mono font-medium tracking-wide uppercase bg-black/50 backdrop-blur-md border border-white/10 ${
+            className={`px-2 py-0.5 rounded-full text-[8.5px] font-mono font-medium tracking-wide uppercase border border-white/10 bg-black/75 ${
               book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
             }`}
           >
@@ -128,7 +128,7 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
         {/* Floating Top Right: Volume Capsule Badge */}
         {book.volume !== null && book.volume !== undefined && (
           <div className="absolute top-2 right-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/50 backdrop-blur-md border border-white/10 text-white/90">
+            <span className="px-2 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/75 border border-white/10 text-zinc-100">
               Vol. {book.volume}
             </span>
           </div>
@@ -137,14 +137,14 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
         {/* Status indicator: Preorder / Out of stock */}
         {book.status === 'PREORDER' && (
           <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-bold uppercase tracking-wider bg-accent text-white shadow-md">
+            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
               PRE-ORDER
             </span>
           </div>
         )}
         {book.availability === 'OUT_OF_STOCK' && (
           <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-semibold uppercase tracking-wider bg-black/70 backdrop-blur-sm text-slate-300 border border-white/10">
+            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-semibold uppercase tracking-wider bg-zinc-950/90 text-zinc-300 border border-white/10">
               HABIS
             </span>
           </div>
@@ -178,7 +178,7 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
             }}
             className={`w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all active:scale-90 ${
               owned
-                ? 'bg-emerald-500 text-white shadow-md'
+                ? 'bg-accent text-white shadow-md'
                 : 'bg-black/60 hover:bg-black/80 text-white/80 hover:text-white border border-white/15'
             }`}
             aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}

@@ -1,30 +1,11 @@
 import domainRules from '@/data/domain-rules.json';
 import listingData from '@/data/catalog-listing.json';
-import fullCatalogData from '@/data/catalog.json';
 import { Book, Series, Publisher, CatalogData } from './types';
-import { getPriceSummary as getPriceSummaryInternal, initializePriceSnapshots } from './data/price-service';
 import { getRelatedReleases as getRelatedReleasesInternal, getYouMayAlsoLike as getYouMayAlsoLikeInternal } from './data/recommendation-service';
 import { groupBindUpBooks, BindUpSeriesGroup, normalizeBindUpSeriesName } from './data/bind-up';
-import { cleanStorySynopsis } from './data/synopsis-cleaner';
 
 // Listing data (lightweight, no synopsis/heavy fields) — used for grids, cards, search
 const listing = listingData as unknown as CatalogData;
-
-// Full data — used only for single book detail pages (server-side)
-const full = fullCatalogData as unknown as CatalogData;
-
-// Lazy singleton: seed the price snapshot registry from listing data once,
-// before any getPriceSummary() call. Without this the registry stays empty
-// and every book reports "Stabil (0%)" with fabricated data.
-let priceSnapshotsInitialized = false;
-function ensurePriceSnapshotsInitialized(): void {
-  if (priceSnapshotsInitialized) return;
-  priceSnapshotsInitialized = true;
-  const snapshots = (listing as CatalogData).priceSnapshots || [];
-  if (snapshots.length > 0) {
-    initializePriceSnapshots(snapshots);
-  }
-}
 
 // Verified non-manga/non-LN fragments (mirrors KNOWN_NON_MANGA_SERIES in
 // scripts/auto-sync-catalog.py and src/lib/data/classifier.ts). Last line
@@ -54,29 +35,6 @@ export function getAllBooks(): Book[] {
 }
 
 /**
- * Get full book detail by slug — reads from the FULL catalog (with synopsis, editions, etc.)
- * Only use this for single book detail pages, not for listings.
- */
-export function getBookDetailBySlug(slug: string): Book | undefined {
-  const clean = slug.toLowerCase();
-  const fullBooks = (full.books || []).filter((b) => {
-    const cat = b.category;
-    if (cat !== 'Manga' && cat !== 'Light Novel') return false;
-    if (!['pub_elex', 'pub_mnc', 'pub_pgi'].includes(b.publisherId)) return false;
-    if (b.classificationStatus === 'REJECTED' || b.classificationStatus === 'REVIEW_REQUIRED') return false;
-    const titleLower = (b.title || '').toLowerCase();
-    if (KNOWN_NON_MANGA_FRAGMENTS.some((frag) => titleLower.includes(frag))) return false;
-    return true;
-  });
-  const book = fullBooks.find((b) => b.slug.toLowerCase() === clean || b.id.toLowerCase() === clean);
-  if (!book) return undefined;
-  // Stored synopses carry build-time trailers (edition markers, selling
-  // points, spec blocks) that the UI strips at render; strip them here too
-  // so every consumer of detail data gets the clean story text.
-  return { ...book, synopsis: cleanStorySynopsis(book.synopsis) };
-}
-
-/**
  * Get book by slug from listing data — used for metadata generation and lightweight lookups.
  */
 export function getBookBySlug(slug: string): Book | undefined {
@@ -92,9 +50,7 @@ export function getBooksBySeries(seriesId: string): Book[] {
       const volA = a.volume ?? 9999;
       const volB = b.volume ?? 9999;
       if (volA !== volB) return volA - volB;
-      const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-      const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-      return dateB - dateA;
+      return (b.releaseDate || '').localeCompare(a.releaseDate || '');
     });
 }
 
@@ -212,9 +168,7 @@ export function getWednesdayReleases(limit = 24): Book[] {
   return publicBooks
     .filter((b) => b.isWednesdayRelease)
     .sort((a, b) => {
-      const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-      const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-      return dateB - dateA;
+      return (b.releaseDate || '').localeCompare(a.releaseDate || '');
     })
     .slice(0, limit);
 }
@@ -222,9 +176,7 @@ export function getWednesdayReleases(limit = 24): Book[] {
 export function getRecentReleases(limit = 36): Book[] {
   return [...publicBooks]
     .sort((a, b) => {
-      const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-      const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-      return dateB - dateA;
+      return (b.releaseDate || '').localeCompare(a.releaseDate || '');
     })
     .slice(0, limit);
 }
@@ -276,11 +228,6 @@ export function searchCatalog(query: string, limit?: number): Book[] {
   });
 
   return limit && limit > 0 ? results.slice(0, limit) : results;
-}
-
-export function getPriceSummary(book: Book) {
-  ensurePriceSnapshotsInitialized();
-  return getPriceSummaryInternal(book.id, book.currentPrice, book.releaseDate, book.originalPrice);
 }
 
 export function getRelatedReleases(book: Book, limit = 6) {

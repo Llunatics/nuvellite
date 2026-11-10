@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Book, Publisher } from '@/lib/types';
 import { CoverImage } from '@/components/books/cover-image';
@@ -67,6 +67,18 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
   const [viewMonth, setViewMonth] = useState(() => Number(initial.slice(5, 7)) - 1);
 
   // Keep selection/month in sync when filters change the available days.
+  const prevDatedByDayRef = useRef(datedByDay);
+  useEffect(() => {
+    if (prevDatedByDayRef.current === datedByDay) return;
+    prevDatedByDayRef.current = datedByDay;
+    if (!datedByDay.has(selected)) {
+      const nextDay = nearestReleaseDay(datedByDay);
+      setSelected(nextDay);
+      setViewYear(Number(nextDay.slice(0, 4)));
+      setViewMonth(Number(nextDay.slice(5, 7)) - 1);
+    }
+  }, [datedByDay, selected]);
+
   const selectedBooks = datedByDay.get(selected) ?? [];
 
   const cells = useMemo(() => {
@@ -218,7 +230,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
                 <span
                   className={`text-xs sm:text-sm font-mono w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center rounded-full ${
                     isToday
-                      ? 'bg-accent text-black font-semibold'
+                      ? 'bg-accent text-white font-semibold'
                       : has
                         ? 'text-editorial-title'
                         : 'text-editorial-faint'
@@ -231,7 +243,7 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
                     <span
                       key={b.id}
                       className={`w-1.5 h-1.5 rounded-full ${
-                        b.category === 'Light Novel' ? 'bg-amber-300' : 'bg-lime-300'
+                        b.category === 'Light Novel' ? 'border border-zinc-300' : 'bg-zinc-300'
                       }`}
                     />
                   ))}
@@ -247,10 +259,10 @@ export function CalendarView({ books, publishers }: CalendarViewProps) {
         </div>
         <div className="flex items-center gap-4 pt-3 px-1 text-[10px] font-mono text-editorial-faint">
           <span className="inline-flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-lime-300" /> Manga
+            <span className="w-1.5 h-1.5 rounded-full bg-zinc-300" /> Manga
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-300" /> Light Novel
+            <span className="w-1.5 h-1.5 rounded-full border border-zinc-300" /> Light Novel
           </span>
         </div>
       </section>

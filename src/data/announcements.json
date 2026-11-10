@@ -1,0 +1,333 @@
+[
+  {
+    "authors": [
+      "Daken"
+    ],
+    "category": "Light Novel",
+    "confidence": 0.95,
+    "editionKind": "REGULAR",
+    "eventOrCampaign": "Pre-order Special Set (Gramedia)",
+    "expectedReleaseWindow": "Pre-order Special Set 2–14 Nov 2026",
+    "firstSeenAt": "2026-11-03",
+    "id": "ann_pgi_who-killed-the-brave_vol-3",
+    "lastUpdatedAt": "2026-11-10",
+    "originalTitle": "Yuusha Koroshi",
+    "publisherId": "pub_pgi",
+    "publisherShortName": "PGI",
+    "slug": "who-killed-the-brave-vol-3",
+    "sources": [
+      {
+        "evidenceKind": "OFFICIAL_POST",
+        "evidenceNote": "Artikel resmi Gramedia mengumumkan Vol. 3 dan pre-order Special Set 2–14 Nov 2026.",
+        "id": "src_wktb3_gramedia_blog",
+        "observedAt": "2026-11-03",
+        "sourceLabel": "Gramedia Blog (resmi)",
+        "tier": "TIER_1A_ISBN_WEB",
+        "url": "https://www.gramedia.com/blog/dunia-selamat-sang-pahlawan-malah-dituduh-pembunuh-mengupas-intrik-di-balik-who-killed-the-brave-vol-3/"
+      }
+    ],
+    "state": "OFFICIALLY_CONFIRMED",
+    "title": "Who Killed the Brave? Chapter of the Brave (Vol. 3)"
+  },
+  {
+    "authors": [
+      "Kuro Shirou"
+    ],
+    "category": "Light Novel",
+    "confidence": 0.9,
+    "editionKind": "REGULAR",
+    "expectedReleaseWindow": "Desember 2026",
+    "firstSeenAt": "2026-11-07",
+    "id": "ann_pgi_silent-hill-f_novel",
+    "lastUpdatedAt": "2026-11-10",
+    "originalTitle": "Silent Hill f",
+    "publisherId": "pub_pgi",
+    "publisherShortName": "PGI",
+    "slug": "silent-hill-f-novel",
+    "sources": [
+      {
+        "evidenceKind": "OFFICIAL_POST",
+        "evidenceNote": "Novel Silent Hill f dikonfirmasi terbit lewat Gramedia Stores mulai Desember 2026. ISBN belum terdaftar di Perpusnas.",
+        "id": "src_shf_pgi_official",
+        "observedAt": "2026-11-07",
+        "sourceLabel": "PGI (situs resmi phoenixgramedia.id)",
+        "tier": "TIER_1A_ISBN_WEB",
+        "url": "https://phoenixgramedia.id/",
+        "isProfileFallbackUrl": true
+      },
+      {
+        "id": "src_silenthillf_kaori_report",
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "KAORI Nusantara — Laporan Novel & Komik Baru PGI 2026",
+        "url": "https://www.kaorinusantara.or.id/newsline/246154/novel-dan-komik-baru-phoenix-gramedia-2026",
+        "observedAt": "2026-11-07",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Laporan KAORI Nusantara tentang slate novel & komik baru Phoenix Gramedia 2026, termasuk Silent Hill f (URL terverifikasi 10 Nov 2026)."
+      }
+    ],
+    "state": "OFFICIALLY_CONFIRMED",
+    "title": "Silent Hill f (Novel)"
+  },
+  {
+    "authors": [
+      "Mei Hachimoku"
+    ],
+    "category": "Light Novel",
+    "confidence": 0.86,
+    "editionKind": "TETRALOGY",
+    "eventOrCampaign": "Comifuro 23 (1 Nov 2026)",
+    "expectedReleaseWindow": "2027",
+    "firstSeenAt": "2026-11-01",
+    "id": "ann_pgi_mei-hachimoku_tetralogy",
+    "lastUpdatedAt": "2026-11-10",
+    "originalTitle": "Natsu e no Tunnel, Sayonara no Deguchi / Haru ni Nemuru, Kimi wo Matsu / Aki no Ame, Zero Byou no Tabi / Fuyu no Oni to, Mia",
+    "publisherId": "pub_pgi",
+    "publisherShortName": "PGI",
+    "slug": "tetralogi-empat-musim-mei-hachimoku",
+    "sources": [
+      {
+        "evidenceKind": "STAGE_SLIDE",
+        "evidenceNote": "Slide panggung panel PGI di Comifuro 23 menampilkan 4 novel musim Mei Hachimoku sebagai slate 2027. PGI tidak mengunggah slide ini ke akun resminya; bukti berasal dari foto peserta di lokasi.",
+        "id": "src_hachimoku_cf23_stage",
+        "observedAt": "2026-11-01",
+        "sourceLabel": "Comifuro 23 Stage — slide panel PGI (foto peserta)",
+        "tier": "TIER_3_COMMUNITY_EVENT",
+        "url": "https://www.instagram.com/phoenixgramedia/",
+        "isProfileFallbackUrl": true
+      },
+      {
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Beberapa rekap pengunjung independen menuliskan pengumuman yang sama dari panel PGI.",
+        "id": "src_hachimoku_cf23_recap",
+        "observedAt": "2026-11-02",
+        "sourceLabel": "Rekap pengunjung Comifuro 23 (X/Instagram)",
+        "tier": "TIER_3_COMMUNITY_EVENT",
+        "url": "https://www.instagram.com/phoenixgramedia/",
+        "isProfileFallbackUrl": true
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "Nippon Club — Liputan Comifuro 23 Day 1",
+        "url": "https://nipponclub.net/2026/11/08/liputan-ikuti-keseruan-comifuro-23-day-1/",
+        "observedAt": "2026-11-08",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Reportase Comifuro 23 Day 1 oleh Nippon Club (liputan acara & panel penerbit; URL terverifikasi 10 Nov 2026).",
+        "id": "src_tetralogy_nipponclub_cf23"
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "KAORI Nusantara — Liputan Utama Comifuro 23",
+        "url": "https://www.kaorinusantara.or.id/newsline/248051/comic-frontier-23-hadir-kembali-semarakkan-budaya-doujinshi-di-indonesia",
+        "observedAt": "2026-11-02",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Liputan utama KAORI Nusantara atas Comifuro 23, acara tempat panel PGI mengumumkan slate ini (URL terverifikasi 10 Nov 2026).",
+        "id": "src_tetralogy_kaori_cf23"
+      }
+    ],
+    "state": "CORROBORATED",
+    "title": "Tetralogi Empat Musim (Mei Hachimoku)"
+  },
+  {
+    "authors": [
+      "Naoki Urasawa"
+    ],
+    "category": "Manga",
+    "confidence": 0.75,
+    "editionKind": "REGULAR",
+    "eventOrCampaign": "Comifuro 23 (1 Nov 2026)",
+    "expectedReleaseWindow": "2027",
+    "firstSeenAt": "2026-11-01",
+    "id": "ann_pgi_billy-bat",
+    "lastUpdatedAt": "2026-11-10",
+    "originalTitle": "Billy Bat",
+    "publisherId": "pub_pgi",
+    "publisherShortName": "PGI",
+    "slug": "billy-bat",
+    "sources": [
+      {
+        "evidenceKind": "STAGE_SLIDE",
+        "evidenceNote": "Billy Bat muncul di slide slate manga 2027 pada panel PGI Comifuro 23; belum diunggah ke feed resmi PGI.",
+        "id": "src_billybat_cf23_stage",
+        "observedAt": "2026-11-01",
+        "sourceLabel": "Comifuro 23 Stage — slide panel PGI (foto peserta)",
+        "tier": "TIER_3_COMMUNITY_EVENT",
+        "url": "https://www.instagram.com/phoenixgramedia/",
+        "isProfileFallbackUrl": true
+      },
+      {
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Rekap pengunjung independen mengonfirmasi judul yang sama dari slide panel.",
+        "id": "src_billybat_cf23_recap",
+        "observedAt": "2026-11-02",
+        "sourceLabel": "Rekap pengunjung Comifuro 23 (X/Instagram)",
+        "tier": "TIER_3_COMMUNITY_EVENT",
+        "url": "https://www.instagram.com/phoenixgramedia/",
+        "isProfileFallbackUrl": true
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "Nippon Club — Liputan Comifuro 23 Day 1",
+        "url": "https://nipponclub.net/2026/11/08/liputan-ikuti-keseruan-comifuro-23-day-1/",
+        "observedAt": "2026-11-08",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Reportase Comifuro 23 Day 1 oleh Nippon Club (liputan acara & panel penerbit; URL terverifikasi 10 Nov 2026).",
+        "id": "src_billy-bat_nipponclub_cf23"
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "KAORI Nusantara — Liputan Utama Comifuro 23",
+        "url": "https://www.kaorinusantara.or.id/newsline/248051/comic-frontier-23-hadir-kembali-semarakkan-budaya-doujinshi-di-indonesia",
+        "observedAt": "2026-11-02",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Liputan utama KAORI Nusantara atas Comifuro 23, acara tempat panel PGI mengumumkan slate ini (URL terverifikasi 10 Nov 2026).",
+        "id": "src_billy-bat_kaori_cf23"
+      }
+    ],
+    "state": "CORROBORATED",
+    "title": "Billy Bat"
+  },
+  {
+    "authors": [],
+    "category": "Manga",
+    "confidence": 0.75,
+    "editionKind": "REGULAR",
+    "eventOrCampaign": "Comifuro 23 (1 Nov 2026)",
+    "expectedReleaseWindow": "2027",
+    "firstSeenAt": "2026-11-01",
+    "id": "ann_pgi_nippon-sangoku",
+    "lastUpdatedAt": "2026-11-10",
+    "originalTitle": "Nippon Sangoku",
+    "publisherId": "pub_pgi",
+    "publisherShortName": "PGI",
+    "slug": "nippon-sangoku",
+    "sources": [
+      {
+        "evidenceKind": "STAGE_SLIDE",
+        "evidenceNote": "Nippon Sangoku muncul di slide slate manga 2027 pada panel PGI Comifuro 23; belum diunggah ke feed resmi PGI.",
+        "id": "src_nipponsangoku_cf23_stage",
+        "observedAt": "2026-11-01",
+        "sourceLabel": "Comifuro 23 Stage — slide panel PGI (foto peserta)",
+        "tier": "TIER_3_COMMUNITY_EVENT",
+        "url": "https://www.instagram.com/phoenixgramedia/",
+        "isProfileFallbackUrl": true
+      },
+      {
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Rekap pengunjung independen mengonfirmasi judul yang sama dari slide panel.",
+        "id": "src_nipponsangoku_cf23_recap",
+        "observedAt": "2026-11-02",
+        "sourceLabel": "Rekap pengunjung Comifuro 23 (X/Instagram)",
+        "tier": "TIER_3_COMMUNITY_EVENT",
+        "url": "https://www.instagram.com/phoenixgramedia/",
+        "isProfileFallbackUrl": true
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "Nippon Club — Liputan Comifuro 23 Day 1",
+        "url": "https://nipponclub.net/2026/11/08/liputan-ikuti-keseruan-comifuro-23-day-1/",
+        "observedAt": "2026-11-08",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Reportase Comifuro 23 Day 1 oleh Nippon Club (liputan acara & panel penerbit; URL terverifikasi 10 Nov 2026).",
+        "id": "src_nippon-sangoku_nipponclub_cf23"
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "KAORI Nusantara — Liputan Utama Comifuro 23",
+        "url": "https://www.kaorinusantara.or.id/newsline/248051/comic-frontier-23-hadir-kembali-semarakkan-budaya-doujinshi-di-indonesia",
+        "observedAt": "2026-11-02",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Liputan utama KAORI Nusantara atas Comifuro 23, acara tempat panel PGI mengumumkan slate ini (URL terverifikasi 10 Nov 2026).",
+        "id": "src_nippon-sangoku_kaori_cf23"
+      }
+    ],
+    "state": "CORROBORATED",
+    "title": "Nippon Sangoku"
+  },
+  {
+    "authors": [
+      "Junji Ito"
+    ],
+    "category": "Manga",
+    "confidence": 0.84,
+    "editionKind": "REGULAR",
+    "eventOrCampaign": "PDKT m&c! 2027",
+    "expectedReleaseWindow": "2027",
+    "firstSeenAt": "2026-11-09",
+    "id": "ann_mnc_dark-colors",
+    "imprint": "Akasha",
+    "lastUpdatedAt": "2026-11-10",
+    "originalTitle": "Itou Junji Jisen Kessakushuu: Dark Colors",
+    "publisherId": "pub_mnc",
+    "publisherShortName": "m&c!",
+    "slug": "junji-ito-dark-colors",
+    "sources": [
+      {
+        "evidenceKind": "PDKT_TEASER",
+        "evidenceNote": "Teaser PDKT slate 2027 dari akun resmi m&c! menampilkan Dark Colors di antara judul Junji Ito. Edisi ini antologi cetak ulang full color tanpa cerita baru (edisi JP: Asahi Shimbun, 5 Des 2025).",
+        "id": "src_darkcolors_pdkt",
+        "observedAt": "2026-11-09",
+        "sourceLabel": "m&c! PDKT (@mncgramedia)",
+        "tier": "TIER_1B_OFFICIAL_SOCIAL",
+        "url": "https://www.instagram.com/mncgramedia/",
+        "isProfileFallbackUrl": true
+      }
+    ],
+    "state": "CORROBORATED",
+    "title": "Junji Ito: Dark Colors"
+  },
+  {
+    "authors": [
+      "Tohru Kuramori"
+    ],
+    "category": "Manga",
+    "confidence": 0.78,
+    "editionKind": "REGULAR",
+    "firstSeenAt": "2026-11-09",
+    "id": "ann_elex_centuria",
+    "lastUpdatedAt": "2026-11-10",
+    "originalTitle": "Centuria",
+    "publisherId": "pub_elex",
+    "publisherShortName": "Elex Media",
+    "slug": "centuria",
+    "sources": [
+      {
+        "evidenceKind": "PDKT_TEASER",
+        "evidenceNote": "Karya Centuria teridentifikasi dari gambar carousel Instagram Elex; belum ada pengumuman teks resmi, jadi status masih terpantau.",
+        "id": "src_centuria_elex_carousel",
+        "observedAt": "2026-11-09",
+        "sourceLabel": "Elex Media (@elexmedia) — carousel teaser",
+        "tier": "TIER_1B_OFFICIAL_SOCIAL",
+        "url": "https://www.instagram.com/elexmedia/",
+        "isProfileFallbackUrl": true
+      }
+    ],
+    "state": "SPOTTED",
+    "title": "Centuria"
+  },
+  {
+    "authors": [],
+    "category": "Manga",
+    "confidence": 0.75,
+    "editionKind": "REGULAR",
+    "firstSeenAt": "2026-11-09",
+    "id": "ann_elex_shiho-yugi",
+    "lastUpdatedAt": "2026-11-10",
+    "publisherId": "pub_elex",
+    "publisherShortName": "Elex Media",
+    "slug": "shiho-yugi",
+    "sources": [
+      {
+        "evidenceKind": "PDKT_TEASER",
+        "evidenceNote": "Judul teridentifikasi dari gambar carousel Instagram Elex yang sama dengan Centuria; belum ada pengumuman teks resmi.",
+        "id": "src_shihoyugi_elex_carousel",
+        "observedAt": "2026-11-09",
+        "sourceLabel": "Elex Media (@elexmedia) — carousel teaser",
+        "tier": "TIER_1B_OFFICIAL_SOCIAL",
+        "url": "https://www.instagram.com/elexmedia/",
+        "isProfileFallbackUrl": true
+      }
+    ],
+    "state": "SPOTTED",
+    "title": "Shiho Yugi"
+  }
+]

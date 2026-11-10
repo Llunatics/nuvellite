@@ -13,8 +13,9 @@ const sansFont = Plus_Jakarta_Sans({
 
 const editorialFont = Newsreader({
   subsets: ['latin'],
-  style: ['normal', 'italic'],
   variable: '--font-editorial',
+  style: ['normal', 'italic'],
+  weight: ['400', '500', '600'],
   display: 'swap',
 });
 
@@ -23,6 +24,11 @@ const monoFont = JetBrains_Mono({
   variable: '--font-mono',
   display: 'swap',
 });
+
+// Applies the saved mode/accent before first paint (Round 3 dual-mode):
+// dark is the default; a saved light mode or non-default accent must not
+// flash the wrong palette on load.
+const THEME_INIT_SCRIPT = `(function(){try{var m=localStorage.getItem('nuvellite_theme');if(m==='light'){document.documentElement.classList.add('light');}var a=localStorage.getItem('nuvellite_theme_accent');if(a){document.documentElement.setAttribute('data-accent',a);}}catch(e){}})();`;
 
 export const metadata: Metadata = {
   title: 'nuvellite — Official Manga & Light Novel Tracker',
@@ -56,7 +62,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${sansFont.variable} ${editorialFont.variable} ${monoFont.variable} dark`}>
+    <html lang="id" className={`${sansFont.variable} ${editorialFont.variable} ${monoFont.variable} dark`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body className="min-h-screen bg-background text-editorial-body selection:bg-accent/20 selection:text-accent flex flex-col">
         <Header />
         <main className="flex-1 pb-20 sm:pb-12">{children}</main>

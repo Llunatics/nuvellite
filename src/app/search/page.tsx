@@ -16,7 +16,7 @@ export default function SearchPage() {
     .map((s) => s.name);
 
   return (
-    <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8">
+    <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8 nuv-view-enter">
       <Suspense
         fallback={
           <div className="py-24 text-center space-y-2">

@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useDeferredValue } from 'react';
 import Link from 'next/link';
 import { CoverImage } from '../books/cover-image';
 import { Series } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
+import { loadPersistedViewState, savePersistedViewState, syncUrlQuery } from '@/lib/filter-persistence';
 import { Layers, Search, BookOpen, X, ArrowRight, ChevronDown } from 'lucide-react';
 
 const PAGE_SIZE = 60;
@@ -39,6 +40,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
   const { ownedItems, isLoaded } = useCollection();
 
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearchQuery = useDeferredValue(searchQuery);
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'MANGA' | 'LIGHT_NOVEL'>('ALL');
   const [pubFilter, setPubFilter] = useState<string>('ALL');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'COMPLETED' | 'ONGOING'>('ALL');
@@ -46,6 +48,9 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [editionFilter, setEditionFilter] = useState<'ALL' | 'ONESHOT' | 'SHORT' | 'BINDUP'>('ALL');
   const sentinelRef = useRef<HTMLDivElement>(null);
+  const hydratedRef = useRef(false);
+  const suppressResetRef = useRef(false);
+  const pendingScrollRef = useRef<number | null>(null);
 
   // Series IDs that have bind-up editions (computed server-side)
   const bindUpSeriesIdSet = useMemo(() => new Set(bindUpSeriesIds), [bindUpSeriesIds]);
@@ -132,7 +137,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
 
   // Filtered & Sorted Series
   const filteredSeries = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim();
+    const q = deferredSearchQuery.toLowerCase().trim();
     const pubIds = resolvePubFilter(pubFilter);
 
     return allSeries
@@ -165,12 +170,69 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
         }
         return a.name.localeCompare(b.name);
       });
-  }, [allSeries, formatFilter, pubFilter, statusFilter, searchQuery, sortBy, editionFilter, bindUpSeriesIdSet]);
+  }, [allSeries, formatFilter, pubFilter, statusFilter, deferredSearchQuery, sortBy, editionFilter, bindUpSeriesIdSet]);
 
-  // Reset pagination when filters change
+  // Hydrate filters from the URL and restore pagination + scroll position
+  // saved before navigating away (Block 6). Runs once on mount.
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const format = params.get('format');
+    if (format === 'MANGA' || format === 'LIGHT_NOVEL') setFormatFilter(format);
+    const publisher = params.get('publisher');
+    if (publisher) setPubFilter(publisher);
+    const status = params.get('status');
+    if (status === 'COMPLETED' || status === 'ONGOING') setStatusFilter(status);
+    const edition = params.get('edition');
+    if (edition === 'ONESHOT' || edition === 'SHORT' || edition === 'BINDUP') setEditionFilter(edition);
+    const sort = params.get('sort');
+    if (sort === 'name' || sort === 'volumes_high' || sort === 'volumes_low') setSortBy(sort);
+    const q = params.get('q');
+    if (q) setSearchQuery(q);
+
+    const persisted = loadPersistedViewState(window.location.pathname);
+    if (persisted?.visibleCount && persisted.visibleCount > PAGE_SIZE) {
+      suppressResetRef.current = true;
+      setVisibleCount(persisted.visibleCount);
+    }
+    if (persisted?.scrollY) pendingScrollRef.current = persisted.scrollY;
+    hydratedRef.current = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Sync filters back into the URL (debounced 200ms, replaceState only)
+  useEffect(() => {
+    if (!hydratedRef.current) return;
+    const timer = setTimeout(() => {
+      const params = new URLSearchParams();
+      if (formatFilter !== 'ALL') params.set('format', formatFilter);
+      if (pubFilter !== 'ALL') params.set('publisher', pubFilter);
+      if (statusFilter !== 'ALL') params.set('status', statusFilter);
+      if (editionFilter !== 'ALL') params.set('edition', editionFilter);
+      if (sortBy !== 'name') params.set('sort', sortBy);
+      const q = searchQuery.trim();
+      if (q) params.set('q', q);
+      syncUrlQuery(params);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [formatFilter, pubFilter, statusFilter, editionFilter, sortBy, searchQuery]);
+
+  // Reset pagination when filters change (skipped once after hydration restore)
+  useEffect(() => {
+    if (suppressResetRef.current) {
+      suppressResetRef.current = false;
+      return;
+    }
     setVisibleCount(PAGE_SIZE);
   }, [formatFilter, pubFilter, statusFilter, searchQuery, sortBy, editionFilter]);
+
+  // Scroll restore once the restored entries have rendered
+  useEffect(() => {
+    if (pendingScrollRef.current != null && visibleCount > PAGE_SIZE) {
+      const y = pendingScrollRef.current;
+      pendingScrollRef.current = null;
+      requestAnimationFrame(() => window.scrollTo(0, y));
+    }
+  }, [visibleCount]);
 
   // Infinite scroll: load more when sentinel enters viewport
   useEffect(() => {
@@ -188,8 +250,15 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
     return () => obs.disconnect();
   }, []);
 
+  const persistViewState = () => {
+    savePersistedViewState(window.location.pathname, {
+      visibleCount,
+      scrollY: window.scrollY,
+    });
+  };
+
   return (
-    <div className="space-y-12 pb-16">
+    <div className="space-y-12 pb-16" onClickCapture={persistViewState}>
       {/* 1. Header Banner */}
       <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
@@ -204,6 +273,15 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
         <p className="text-[13px] text-editorial-muted font-sans">
           {allSeries.length.toLocaleString('id-ID')} seri — termasuk arsip terbitan lama yang ditandai badge Arsip.
         </p>
+
+        <div className="pt-1">
+          <Link
+            href="/bind-up"
+            className="inline-flex items-center gap-1.5 border border-white/[0.08] px-2.5 py-1 font-mono text-[11px] text-editorial-muted transition-colors hover:border-accent hover:text-accent"
+          >
+            Direktori Edisi Bind-Up &amp; Omnibus →
+          </Link>
+        </div>
       </section>
 
       {/* 2. Symmetrical Search & Filter Command Bar */}
@@ -338,8 +416,8 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
       {filteredSeries.length === 0 ? (
         <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
           <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
-          <h3 className="text-sm font-medium text-editorial-title">Tidak ada seri yang sesuai kriteria</h3>
-          <p className="text-xs text-editorial-muted">Coba ubah kata kunci atau bersihkan filter pencarian.</p>
+          <h3 className="text-sm font-medium text-editorial-title">Seri yang dicari belum ketemu</h3>
+          <p className="text-xs text-editorial-muted">Coba ganti kata kunci atau reset filter.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6">
@@ -447,7 +525,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
                 {ownedCount > 0 && (
                   <div className="w-full h-1 rounded-full bg-surface-sunken overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-accent to-emerald-400 transition-all duration-300 rounded-full"
+                      className="h-full bg-accent transition-all duration-300 rounded-full"
                       style={{ width: `${percent}%` }}
                     />
                   </div>

@@ -55,6 +55,8 @@ export function getArchivePublishers(): string[] {
 
 export function archiveEntryToSeries(e: KkiArchiveEntry): Series {
   const vols = parseInt(e.volumesId || '', 10);
+  const muCover = e.mu?.status === 'ok' && e.mu.cover?.trim() ? e.mu.cover.trim() : undefined;
+  const pranalaCover = e.pranalaCover?.trim() || undefined;
   return {
     id: `arc_${e.id}`,
     slug: e.slug,
@@ -68,7 +70,7 @@ export function archiveEntryToSeries(e: KkiArchiveEntry): Series {
     totalVolumes: Number.isFinite(vols) ? vols : 0,
     latestVolume: 0,
     availableVolumes: [],
-    coverImage: e.mu?.status === 'ok' ? e.mu.cover : e.pranalaCover || undefined,
+    coverImage: muCover || pranalaCover,
     description: e.mu?.descriptionId || e.mu?.descriptionEn || undefined,
     isArchive: true,
     archiveEntry: e,

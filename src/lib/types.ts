@@ -235,3 +235,77 @@ export interface KkiArchiveEntry {
   notes?: string | null;
   mu?: KkiArchiveMu;
 }
+
+/**
+ * Publisher announcement tracker ("Radar Lisensi", Round 2 §5).
+ *
+ * Announcements live in their own store (src/data/announcements.json) and
+ * NEVER mutate catalog.json. A record only graduates into the catalog when
+ * the regular KKI / Gramedia sync matches it by ISBN-13 or by
+ * (publisherId, seriesSlug, volume).
+ */
+export type AnnouncementVerificationState =
+  | 'SPOTTED'
+  | 'CORROBORATED'
+  | 'OFFICIALLY_CONFIRMED'
+  | 'DATED_ISBN'
+  | 'RELEASED_GRADUATED'
+  | 'STALE_HOLD';
+
+export interface AnnouncementSourceEvidence {
+  id: string;
+  tier:
+    | 'TIER_1A_ISBN_WEB'
+    | 'TIER_1B_OFFICIAL_SOCIAL'
+    | 'TIER_2_MEDIA_WIKI'
+    | 'TIER_3_COMMUNITY_EVENT';
+  /** e.g. "Comifuro 23 Stage (via KAORI Nusantara)", "m&c! PDKT (@mncgramedia)" */
+  sourceLabel: string;
+  /** Mandatory verified clickable URL. */
+  url: string;
+  /**
+   * True when `url` is an account/site root rather than a direct post or
+   * article permalink (the specific post is not archived at a stable URL).
+   * The UI labels these transparently (Round 2 F-04).
+   */
+  isProfileFallbackUrl?: boolean;
+  /** YYYY-MM-DD */
+  observedAt: string;
+  evidenceKind:
+    | 'STAGE_SLIDE'
+    | 'PDKT_TEASER'
+    | 'OFFICIAL_POST'
+    | 'NEWS_REPORT'
+    | 'PERPUSNAS_ISBN';
+  evidenceNote?: string;
+}
+
+export interface PublisherAnnouncement {
+  id: string;
+  slug: string;
+  title: string;
+  originalTitle?: string;
+  authors: string[];
+  publisherId: 'pub_pgi' | 'pub_mnc' | 'pub_elex';
+  publisherShortName: 'PGI' | 'm&c!' | 'Elex Media';
+  /** e.g. "Akasha", "Clover", "Level Comics" */
+  imprint?: string;
+  category: 'Manga' | 'Light Novel';
+  editionKind: 'REGULAR' | 'BIND_UP' | 'BOX_SET' | 'TETRALOGY';
+  state: AnnouncementVerificationState;
+  /** 0.0 - 1.0 */
+  confidence: number;
+  /** e.g. "Comifuro 23 (1 Nov 2026)", "PDKT m&c! 2027" */
+  eventOrCampaign?: string;
+  /** Verbatim string only: "2027", "Desember 2026", "Segera" — never a fabricated ISO date. */
+  expectedReleaseWindow?: string;
+  isbn13?: string;
+  coverImage?: string;
+  matchedSeriesSlug?: string;
+  graduatedBookSlug?: string;
+  /** YYYY-MM-DD */
+  firstSeenAt: string;
+  /** YYYY-MM-DD */
+  lastUpdatedAt: string;
+  sources: AnnouncementSourceEvidence[];
+}

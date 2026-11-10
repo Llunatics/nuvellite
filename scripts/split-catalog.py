@@ -83,19 +83,16 @@ def split_catalog():
             print(f"ERROR: Processing failure on book {offending_id}: {err}")
             sys.exit(1)
 
-    book_ids = {b["id"] for b in listing_books if "id" in b}
-    clean_snapshots = [
-        s for s in catalog.get("priceSnapshots", [])
-        if s.get("bookId") in book_ids
-    ]
-
+    # Round 2 F-02: priceSnapshots (~90% of the old listing file) no longer
+    # ship in the client-imported listing. Price history is served from the
+    # full catalog by the server-only catalog-detail-service instead.
     listing_catalog = {
         "version": catalog.get("version", "1.1.0"),
         "lastUpdated": catalog.get("lastUpdated", ""),
         "publishers": publishers,
         "books": listing_books,
         "series": series,
-        "priceSnapshots": clean_snapshots,
+        "priceSnapshots": [],
     }
 
     with open(LISTING_PATH, "w", encoding="utf-8") as f:

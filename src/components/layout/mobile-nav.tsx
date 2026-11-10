@@ -3,28 +3,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, Calendar, Layers, BookMarked } from 'lucide-react';
-import { useCollection } from '@/hooks/use-collection';
-import { useTheme, ACCENT_THEMES } from '@/hooks/use-theme';
+import { BookOpen, Calendar, Layers, Radar } from 'lucide-react';
 
 export function MobileNav() {
   const pathname = usePathname();
-  const { ownedItems, isLoaded } = useCollection();
-  const { accent } = useTheme();
-
-  const currentThemeColor = ACCENT_THEMES.find((t) => t.id === accent)?.color || '#E11D48';
 
   const tabs = [
     { href: '/', label: 'Katalog', icon: BookOpen, active: pathname === '/' },
     { href: '/calendar', label: 'Kalender', icon: Calendar, active: pathname.startsWith('/calendar') },
-    { href: '/series', label: 'Seri', icon: Layers, active: pathname.startsWith('/series') },
-    {
-      href: '/library',
-      label: 'Koleksi',
-      icon: BookMarked,
-      active: pathname.startsWith('/library'),
-      badge: isLoaded && ownedItems.length > 0 ? ownedItems.length : undefined,
-    },
+    { href: '/series', label: 'Seri', icon: Layers, active: pathname.startsWith('/series') || pathname.startsWith('/bind-up') },
+    { href: '/radar', label: 'Radar', icon: Radar, active: pathname.startsWith('/radar') },
   ];
 
   return (
@@ -35,24 +23,14 @@ export function MobileNav() {
           <Link
             key={tab.href}
             href={tab.href}
-            className={`relative flex-1 flex flex-col items-center justify-center py-1.5 px-2 rounded-full transition-all duration-200 active:scale-95 ${
+            className={`relative flex-1 min-w-0 flex flex-col items-center justify-center py-2 px-2 rounded-full transition-all duration-150 active:scale-95 ${
               tab.active
-                ? 'bg-white/[0.08] text-editorial-title font-semibold shadow-xs'
+                ? 'bg-white/[0.09] text-editorial-title font-semibold shadow-xs'
                 : 'text-editorial-muted hover:text-editorial-title'
             }`}
           >
-            <div className="relative">
-              <Icon className="w-4 h-4 transition-transform" />
-              {tab.badge !== undefined && (
-                <span
-                  className="absolute -top-1 -right-2 min-w-3.5 h-3.5 px-0.5 rounded-full text-white text-[8px] font-mono font-bold flex items-center justify-center shadow-xs"
-                  style={{ backgroundColor: currentThemeColor }}
-                >
-                  {tab.badge}
-                </span>
-              )}
-            </div>
-            <span className="text-[10px] tracking-tight mt-0.5">
+            <Icon className="w-4 h-4 transition-transform" />
+            <span className="text-[10.5px] font-sans tracking-tight mt-0.5 max-w-full truncate">
               {tab.label}
             </span>
           </Link>

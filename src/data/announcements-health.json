@@ -1,0 +1,57 @@
+{
+  "adapters": [
+    {
+      "consecutiveFailures": 2,
+      "id": "tier1a_perpusnas_isbn",
+      "lastRunAt": "2026-11-10T06:18:46.042074+00:00",
+      "lastStatus": "offline_in_build_env",
+      "lastSightings": 0
+    },
+    {
+      "consecutiveFailures": 0,
+      "id": "tier1a_pgi_wp_rest",
+      "lastRunAt": null,
+      "lastStatus": "not_run"
+    },
+    {
+      "consecutiveFailures": 0,
+      "id": "tier1a_mnc_new_releases",
+      "lastRunAt": null,
+      "lastStatus": "not_run"
+    },
+    {
+      "consecutiveFailures": 0,
+      "id": "tier1a_elex_catalogs",
+      "lastRunAt": null,
+      "lastStatus": "not_run"
+    },
+    {
+      "consecutiveFailures": 0,
+      "id": "tier1b_official_social",
+      "lastRunAt": null,
+      "lastStatus": "not_run"
+    },
+    {
+      "consecutiveFailures": 0,
+      "id": "tier2_kaori_rss",
+      "lastRunAt": "2026-11-10T06:18:46.042074+00:00",
+      "lastStatus": "ok",
+      "lastSightings": 0
+    },
+    {
+      "consecutiveFailures": 0,
+      "id": "tier2_wikipedia_id_diff",
+      "lastRunAt": "2026-11-10T06:18:46.042074+00:00",
+      "lastStatus": "ok",
+      "lastSightings": 10
+    },
+    {
+      "consecutiveFailures": 0,
+      "id": "tier3_convention_burst",
+      "lastRunAt": null,
+      "lastStatus": "not_run"
+    }
+  ],
+  "generatedBy": "scripts/announcements (health ledger, Round 2 S5.6)",
+  "lastRunAt": "2026-11-10T06:18:46.042074+00:00"
+}

@@ -33,21 +33,14 @@ function CoverThumb({
 }) {
   return (
     <div className={`relative shrink-0 aspect-[3/4.2] rounded-xl overflow-hidden bg-surface-sunken cover-depth ${className}`}>
-      {group.coverImage ? (
-        <CoverImage
-          src={group.coverImage}
-          alt={group.displayName}
-          width={176}
-          height={234}
-          imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
-          fallbackIconClassName={iconClassName}
-        />
-      ) : (
-        <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-surface-elevated/40">
-          <BookCopy className={`${iconClassName} text-editorial-faint mb-1`} />
-          <span className="text-[9px] text-editorial-muted line-clamp-2">{group.displayName}</span>
-        </div>
-      )}
+      <CoverImage
+        src={group.coverImage}
+        alt={group.displayName}
+        width={176}
+        height={234}
+        imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
+        fallbackIconClassName={iconClassName}
+      />
     </div>
   );
 }
@@ -223,8 +216,8 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
           <span className="font-mono">omnibus</span>, <span className="font-mono">complete edition</span>,{' '}
           <span className="font-mono">ultimate</span>, <span className="font-mono">2-in-1 / 3-in-1</span>,{' '}
           <span className="font-mono">trilogi</span>, dan <span className="font-mono">edisi koleksi</span>.
-          Begitu penerbit merilis edisi bind-up baru, ia otomatis terflag dan muncul di direktori ini pada
-          sinkronisasi berikutnya. Edisi bundel biasa (complete set / box set) dan cetak ulang premium
+          Setiap ada rilisan bind-up baru dari penerbit, otomatis masuk ke daftar ini saat katalog
+          diperbarui. Edisi bundel biasa (complete set / box set) dan cetak ulang premium
           sengaja tidak dihitung sebagai bind-up.
         </p>
       </section>

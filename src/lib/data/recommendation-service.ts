@@ -13,9 +13,7 @@ export function getRelatedReleases(book: Book, allBooks: Book[], limit = 6): Boo
       const distA = Math.abs((a.volume ?? 0) - currentVol);
       const distB = Math.abs((b.volume ?? 0) - currentVol);
       if (distA !== distB) return distA - distB;
-      const dateA = a.releaseDate ? new Date(a.releaseDate).getTime() : 0;
-      const dateB = b.releaseDate ? new Date(b.releaseDate).getTime() : 0;
-      return dateB - dateA;
+      return (b.releaseDate || '').localeCompare(a.releaseDate || '');
     })
     .slice(0, limit);
 }
