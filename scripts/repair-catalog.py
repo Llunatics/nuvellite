@@ -6,6 +6,14 @@ duplicate-listing merge, edition consolidation, series reconstruction, and
 orphan snapshot pruning) to the existing catalog.json WITHOUT touching the network.
 """
 
+import sys as _sys
+
+# Round 2 S6.2 guard: this script's re-grouping is LOSSY and damages bind-up
+# groupings (Naruto, Classroom of the Elite, Detective Conan movies, Bungo
+# Stray Dogs). It is disabled permanently; catalog fixes go through the
+# sync pipeline's consistency steps instead.
+_sys.exit("FORBIDDEN: repair-catalog.py is disabled to protect bind-up groupings")
+
 import argparse
 import json
 import os
