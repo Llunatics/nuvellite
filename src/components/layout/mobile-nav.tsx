@@ -16,16 +16,16 @@ export function MobileNav() {
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-4 inset-x-4 max-w-sm mx-auto z-40 liquid-glass-pill rounded-full p-1.5 shadow-2xl border border-white/[0.08] flex items-center justify-between">
+    <nav className="md:hidden fixed bottom-4 inset-x-4 max-w-sm mx-auto z-40 liquid-glass-pill rounded-full p-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.45)] border border-white/[0.07] [.light_&]:border-black/[0.07] backdrop-blur-2xl flex items-center justify-between">
       {tabs.map((tab) => {
         const Icon = tab.icon;
         return (
           <Link
             key={tab.href}
             href={tab.href}
-            className={`relative flex-1 min-w-0 flex flex-col items-center justify-center py-2 px-2 rounded-full transition-all duration-150 active:scale-95 ${
+            className={`relative flex-1 min-w-0 flex flex-col items-center justify-center py-2 px-2 rounded-full transition-all duration-150 active:scale-95 border border-transparent ${
               tab.active
-                ? 'bg-white/[0.09] text-editorial-title font-semibold shadow-xs'
+                ? 'bg-white/[0.09] [.light_&]:bg-black/[0.07] text-editorial-title font-semibold shadow-xs'
                 : 'text-editorial-muted hover:text-editorial-title'
             }`}
           >
