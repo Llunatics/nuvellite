@@ -35,7 +35,7 @@ export default function SeriesDirectoryPage() {
   );
 
   return (
-    <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6">
+    <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 nuv-view-enter">
       <SeriesDirectoryView allSeries={allSeries} bindUpSeriesIds={bindUpSeriesIds} />
     </div>
   );

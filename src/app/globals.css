@@ -302,6 +302,25 @@
   transform: translateY(-2px);
 }
 
+/* Interactive card press/hover contract (Block 8, Section 3 table):
+   hover lifts 2px with a bolder 1px border in 140ms, press settles to
+   scale(0.99) in 90ms. No will-change at rest, no shadow animation. */
+.nuv-interactive-card {
+  transition:
+    border-color var(--motion-fast) var(--ease-out-quart),
+    transform var(--motion-fast) var(--ease-out-quart);
+}
+
+.nuv-interactive-card:hover {
+  border-color: var(--border-bold);
+  transform: translateY(-2px);
+}
+
+.nuv-interactive-card:active {
+  transform: scale(0.99);
+  transition-duration: var(--motion-instant);
+}
+
 /* Custom Refined Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
