@@ -95,28 +95,60 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     }
   };
 
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const featuredCardWrapperRef = useRef<HTMLDivElement>(null);
+  const [dismissStyle, setDismissStyle] = useState<{
+    opacity: number;
+    transform: string;
+    pointerEvents: 'auto' | 'none';
+  }>({
+    opacity: 1,
+    transform: 'translate3d(0, 0px, 0) scale(1)',
+    pointerEvents: 'auto',
+  });
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mediaQuery.matches) return;
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) return;
 
-    let ticking = false;
-    const onScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const progress = Math.min(1, Math.max(0, window.scrollY / 260));
-          setScrollProgress(progress);
-          ticking = false;
-        });
-        ticking = true;
-      }
+    let rafId = 0;
+    const updateCardDismissal = () => {
+      const el = featuredCardWrapperRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const viewportH = window.innerHeight || 844;
+        // Start dismissing smoothly as the card scrolls up toward the sticky header zone
+        const triggerTop = Math.min(360, viewportH * 0.45);
+        const travelRange = Math.max(260, viewportH * 0.35);
+        const rawProgress = (triggerTop - rect.top) / travelRange;
+        const progress = Math.min(1, Math.max(0, rawProgress));
+
+      // Smooth cubic-bezier-like easing
+      const eased = progress * progress * (3 - 2 * progress);
+      const opacity = Math.max(0, Number((1 - eased * 1.08).toFixed(3)));
+      const translateY = Number((-eased * 44).toFixed(1));
+      const scale = Number((1 - eased * 0.065).toFixed(4));
+
+      setDismissStyle({
+        opacity,
+        transform: `translate3d(0, ${translateY}px, 0) scale(${scale})`,
+        pointerEvents: opacity < 0.15 ? 'none' : 'auto',
+      });
     };
 
-    onScroll();
+    const onScroll = () => {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(updateCardDismissal);
+    };
+
+    updateCardDismissal();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
 
   // Filter States
@@ -286,17 +318,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   return (
     <div className="space-y-16 sm:space-y-24" onClickCapture={persistViewState}>
       {/* 1. HERO EDITORIAL INTRODUCTION */}
-      <section
-        className="space-y-4 pt-2 sm:pt-4 lg:pt-8 transition-transform ease-out will-change-transform"
-        style={
-          scrollProgress > 0
-            ? {
-                transform: `translate3d(0, ${scrollProgress * 18}px, 0) scale(${1 - scrollProgress * 0.035})`,
-                opacity: 1 - scrollProgress * 0.45,
-              }
-            : undefined
-        }
-      >
+      <section className="space-y-4 pt-2 sm:pt-4 lg:pt-8">
         <div className="max-w-3xl lg:max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-xs shrink-0" />
@@ -344,7 +366,10 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       {/* 2. CURATED SPOTLIGHT SHOWCASE */}
       {activeSpotlight && (
         <section
-          className="relative z-10 space-y-3"
+          ref={featuredCardWrapperRef}
+          data-testid="featured-showcase-card"
+          style={dismissStyle}
+          className="relative z-10 space-y-3 will-change-[transform,opacity] origin-top"
           onMouseEnter={() => setSpotlightPaused(true)}
           onMouseLeave={() => setSpotlightPaused(false)}
         >

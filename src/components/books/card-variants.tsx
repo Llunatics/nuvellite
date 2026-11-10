@@ -29,7 +29,7 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[260px_1fr] gap-8 lg:gap-12 items-center">
         {/* Cover column with ambient glow strictly behind cover container */}
-        <div className="relative shrink-0 z-0 mx-auto md:mx-0 w-[196px] sm:w-[220px] md:w-[240px]">
+        <div className="relative shrink-0 z-0 mx-auto md:mx-0 w-[200px] sm:w-[228px] lg:w-[256px]">
           <div
             className="absolute -inset-4 bg-cover bg-center rounded-full blur-3xl opacity-15 pointer-events-none -z-10"
             style={{ backgroundImage: book.coverImage ? `url(${book.coverImage})` : undefined }}
@@ -37,17 +37,16 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
           />
           <Link
             href={`/books/${book.slug}`}
-            className="relative z-10 aspect-[2/3] w-full bg-zinc-900 overflow-hidden rounded-2xl shadow-2xl group block"
-            tabIndex={-1}
+            className="group/cover relative block aspect-[2/3] w-full rounded-2xl overflow-hidden book-cover-elevated focus-visible:ring-2 focus-visible:ring-accent"
           >
             <CoverImage
               src={book.coverImage}
               alt={book.title}
-              width={240}
-              height={360}
-              sizes="(max-width: 640px) 196px, (max-width: 768px) 220px, 240px"
+              width={256}
+              height={384}
+              sizes="(max-width: 640px) 200px, (max-width: 1024px) 228px, 256px"
               priority
-              imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out"
+              imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/cover:scale-[1.03]"
               fallbackIconClassName="w-12 h-12 text-editorial-faint"
             />
             {/* Floating cover badges (Round 3, D.2 / S-05) */}
@@ -70,95 +69,114 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
         {/* Editorial Content */}
         <div className="flex-1 text-left w-full">
           <div>
-            {/* Meta Row */}
-            <div className="mt-5 md:mt-0 flex flex-wrap items-center gap-2 text-xs font-mono text-editorial-muted">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-accent/10 text-accent text-[9px] font-semibold tracking-wider uppercase border border-accent/20">
-                <Sparkles className="w-3 h-3" />
+            {/* Tier 1 — Eyebrow Badge (SOROTAN UTAMA) */}
+            <div className="flex items-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/12 text-accent text-[10px] font-mono font-semibold tracking-[0.12em] uppercase border border-accent/25">
+                <Sparkles className="w-3 h-3 shrink-0" />
                 <span>SOROTAN UTAMA</span>
               </span>
-              <span className="text-editorial-faint/60">•</span>
-              <span className="font-semibold text-editorial-title">{book.publisherName}</span>
+            </div>
+
+            {/* Tier 2 — Publisher & Date Line */}
+            <div
+              data-testid="featured-meta-line"
+              className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono"
+            >
+              <span className="font-semibold text-editorial-title">
+                {book.publisherName}
+              </span>
               {book.releaseDate && (
                 <>
-                  <span className="text-editorial-faint/60">•</span>
-                  <span className="text-editorial-faint">{formatDateWIB(book.releaseDate)}</span>
+                  <span className="h-3 w-px bg-white/15 shrink-0" aria-hidden="true" />
+                  <span className="text-editorial-muted">
+                    {formatDateWIB(book.releaseDate)}
+                  </span>
                 </>
               )}
             </div>
 
             {/* Title */}
-            <Link href={`/books/${book.slug}`} className="block mt-3">
-              <h2 className="font-editorial text-2xl sm:text-3xl lg:text-4xl font-normal tracking-tight text-editorial-title hover:text-accent transition-colors leading-[1.15]">
-                {book.title}
-              </h2>
-            </Link>
+            <div className="mt-2.5">
+              <Link
+                href={`/books/${book.slug}`}
+                className="group/title inline-block focus-visible:outline-none"
+              >
+                <h2 className="font-editorial text-2xl sm:text-3xl lg:text-4xl font-normal text-editorial-title group-hover/title:text-accent transition-colors duration-200 leading-[1.18] tracking-tight">
+                  {book.title}
+                </h2>
+              </Link>
+            </div>
 
             {book.authors?.length > 0 && (
-              <p className="mt-1.5 text-sm text-editorial-body font-sans">
+              <p className="mt-3 text-xs sm:text-sm text-editorial-muted">
                 Karya <span className="text-editorial-title font-medium">{book.authors.join(', ')}</span>
               </p>
             )}
           </div>
 
           {book.synopsis && (
-            <p className="mt-3 text-xs sm:text-sm text-editorial-body/90 line-clamp-3 leading-relaxed font-sans max-w-2xl">
+            <p className="mt-4 text-xs sm:text-sm text-editorial-body/90 line-clamp-3 leading-[1.65] font-sans max-w-2xl">
               {cleanStorySynopsis(book.synopsis)}
             </p>
           )}
 
-          {/* Pricing */}
-          <div className="mt-4">
-            <span className="font-mono text-[10px] uppercase tracking-widest text-editorial-muted font-medium block">
-              {book.originalPrice && book.originalPrice > book.currentPrice ? 'HARGA PROMO' : 'HARGA NORMAL'}
-            </span>
-            <div className="flex items-baseline gap-2 mt-0.5">
-              <span className="font-mono text-2xl sm:text-3xl font-bold text-editorial-title tracking-tight">
-                {formatRupiah(book.currentPrice)}
+          {/* Pricing & Actions Bar */}
+          <div className="mt-6 pt-5 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
+            {/* Pricing */}
+            <div>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-editorial-muted font-medium block">
+                {book.originalPrice && book.originalPrice > book.currentPrice ? 'HARGA PROMO' : 'HARGA NORMAL'}
               </span>
-              {book.originalPrice && book.originalPrice > book.currentPrice && (
-                <span className="text-xs font-mono text-editorial-faint line-through">
-                  {formatRupiah(book.originalPrice)}
+              <div className="flex items-baseline gap-2 mt-0.5">
+                <span className="font-mono text-2xl sm:text-3xl font-bold text-editorial-title tracking-tight">
+                  {formatRupiah(book.currentPrice)}
                 </span>
-              )}
+                {book.originalPrice && book.originalPrice > book.currentPrice && (
+                  <span className="text-xs font-mono text-editorial-faint line-through">
+                    {formatRupiah(book.originalPrice)}
+                  </span>
+                )}
+              </div>
             </div>
-          </div>
 
-          {/* Actions */}
-          <div className="mt-5 flex flex-wrap items-center gap-2.5">
-            <Link
-              href={`/books/${book.slug}`}
-              className="rounded-full bg-white text-zinc-950 font-semibold px-5 py-2.5 text-sm hover:bg-zinc-200 transition-colors inline-flex items-center gap-2 shadow-md active:scale-95"
-            >
-              <span>Detail Buku</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            {/* Actions */}
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
+                className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs sm:text-sm font-medium transition-all duration-200 active:scale-95 ${
+                  owned
+                    ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                    : 'bg-white/[0.07] hover:bg-white/[0.12] text-editorial-title border border-white/[0.09]'
+                }`}
+              >
+                {owned ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Dimiliki</span>
+                  </>
+                ) : (
+                  <>
+                    <Plus className="w-4 h-4 text-accent shrink-0" />
+                    <span>Koleksi</span>
+                  </>
+                )}
+              </button>
 
-            <button
-              type="button"
-              onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
-              className={`rounded-full px-4 py-2.5 text-sm font-medium transition-colors inline-flex items-center gap-1.5 active:scale-95 border ${
-                owned
-                  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30 font-semibold'
-                  : 'bg-white/[0.06] hover:bg-white/[0.1] text-editorial-body hover:text-editorial-title border-white/[0.08]'
-              }`}
-            >
-              {owned ? <Check className="w-4 h-4 text-emerald-400" /> : <Plus className="w-4 h-4" />}
-              <span>{owned ? 'Dimiliki' : '+ Koleksi'}</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => toggleWishlist(book.id, book.seriesId || undefined)}
-              className={`h-10 w-10 rounded-full flex items-center justify-center transition-colors active:scale-95 border ${
-                wishlisted
-                  ? 'bg-accent/20 text-accent border-accent/40 shadow-xs'
-                  : 'bg-white/[0.06] hover:bg-white/[0.1] text-editorial-muted hover:text-editorial-title border-white/[0.08]'
-              }`}
-              aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
-              title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
-            >
-              <Bookmark className={`w-4 h-4 ${wishlisted ? 'fill-current' : ''}`} />
-            </button>
+              <button
+                type="button"
+                onClick={() => toggleWishlist(book.id, book.seriesId || undefined)}
+                className={`h-10 w-10 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95 border ${
+                  wishlisted
+                    ? 'bg-accent/20 text-accent border-accent/40 shadow-xs'
+                    : 'bg-white/[0.07] hover:bg-white/[0.12] text-editorial-muted hover:text-editorial-title border-white/[0.09]'
+                }`}
+                aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+                title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+              >
+                <Bookmark className={`w-4 h-4 ${wishlisted ? 'fill-current' : ''}`} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
