@@ -70,6 +70,7 @@ def is_announcement_relevant(title: str) -> bool:
 def run() -> dict:
     sightings: list[dict] = []
     seen_urls: set[str] = set()
+    wp_error: Exception | None = None
     try:
         for term in SEARCH_TERMS:
             query = urllib.parse.urlencode({"search": term, "per_page": "5"})
@@ -79,9 +80,23 @@ def run() -> dict:
                 seen_urls.add(item["url"])
                 sightings.append(item)
     except OfflineError as exc:
-        return result(ADAPTER_ID, "offline_in_build_env", error=str(exc))
+        wp_error = exc
     except Exception as exc:  # failure isolation
         return result(ADAPTER_ID, "error", error=str(exc))
+    if wp_error is not None:
+        # WP REST is often WAF-blocked for non-browser agents while the
+        # public RSS feed stays open — fall back to the feed before
+        # declaring the source unreachable.
+        try:
+            for item in parse_rss(fetch_text(f"{BASE}/feed/")):
+                if item["url"] in seen_urls or not is_announcement_relevant(item["title"]):
+                    continue
+                seen_urls.add(item["url"])
+                sightings.append(item)
+        except OfflineError as exc:
+            return result(ADAPTER_ID, "offline_in_build_env", error=str(exc))
+        except Exception as exc:  # failure isolation
+            return result(ADAPTER_ID, "error", error=str(exc))
     return result(ADAPTER_ID, "ok", sightings)
 
 

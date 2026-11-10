@@ -54,6 +54,15 @@
         "tier": "TIER_1A_ISBN_WEB",
         "url": "https://phoenixgramedia.id/",
         "isProfileFallbackUrl": true
+      },
+      {
+        "id": "src_silenthillf_kaori_report",
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "KAORI Nusantara — Laporan Novel & Komik Baru PGI 2026",
+        "url": "https://www.kaorinusantara.or.id/newsline/246154/novel-dan-komik-baru-phoenix-gramedia-2026",
+        "observedAt": "2026-11-07",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Laporan KAORI Nusantara tentang slate novel & komik baru Phoenix Gramedia 2026, termasuk Silent Hill f (URL terverifikasi 10 Nov 2026)."
       }
     ],
     "state": "OFFICIALLY_CONFIRMED",
@@ -95,6 +104,15 @@
         "tier": "TIER_3_COMMUNITY_EVENT",
         "url": "https://www.instagram.com/phoenixgramedia/",
         "isProfileFallbackUrl": true
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "Nippon Club — Liputan Comifuro 23 Day 1",
+        "url": "https://nipponclub.net/2026/11/08/liputan-ikuti-keseruan-comifuro-23-day-1/",
+        "observedAt": "2026-11-08",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Reportase Comifuro 23 Day 1 oleh Nippon Club (liputan acara & panel penerbit; URL terverifikasi 10 Nov 2026).",
+        "id": "src_tetralogy_nipponclub_cf23"
       }
     ],
     "state": "CORROBORATED",
@@ -136,6 +154,15 @@
         "tier": "TIER_3_COMMUNITY_EVENT",
         "url": "https://www.instagram.com/phoenixgramedia/",
         "isProfileFallbackUrl": true
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "Nippon Club — Liputan Comifuro 23 Day 1",
+        "url": "https://nipponclub.net/2026/11/08/liputan-ikuti-keseruan-comifuro-23-day-1/",
+        "observedAt": "2026-11-08",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Reportase Comifuro 23 Day 1 oleh Nippon Club (liputan acara & panel penerbit; URL terverifikasi 10 Nov 2026).",
+        "id": "src_billy-bat_nipponclub_cf23"
       }
     ],
     "state": "CORROBORATED",
@@ -175,6 +202,15 @@
         "tier": "TIER_3_COMMUNITY_EVENT",
         "url": "https://www.instagram.com/phoenixgramedia/",
         "isProfileFallbackUrl": true
+      },
+      {
+        "tier": "TIER_2_MEDIA_WIKI",
+        "sourceLabel": "Nippon Club — Liputan Comifuro 23 Day 1",
+        "url": "https://nipponclub.net/2026/11/08/liputan-ikuti-keseruan-comifuro-23-day-1/",
+        "observedAt": "2026-11-08",
+        "evidenceKind": "NEWS_REPORT",
+        "evidenceNote": "Reportase Comifuro 23 Day 1 oleh Nippon Club (liputan acara & panel penerbit; URL terverifikasi 10 Nov 2026).",
+        "id": "src_nippon-sangoku_nipponclub_cf23"
       }
     ],
     "state": "CORROBORATED",
