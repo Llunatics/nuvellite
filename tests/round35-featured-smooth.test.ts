@@ -55,8 +55,8 @@ describe('Round 3.5 — Compositor-Driven 60fps Scroll Dismissal (Block R3.5-2)'
   });
 
   it('has tightened hero intro spacing and balanced section gaps', () => {
-    expect(feedCode).toContain('space-y-3 pt-1 sm:pt-2');
-    expect(feedCode).toContain('!mt-5 sm:!mt-6');
+    expect(feedCode).toContain('max-w-3xl lg:max-w-4xl space-y-2 sm:space-y-2.5');
+    expect(feedCode).toContain('!mt-5');
     expect(feedCode).toContain('!mt-10 sm:!mt-14');
   });
 });
