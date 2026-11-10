@@ -23,14 +23,14 @@ export default function RadarPage() {
 
   return (
     <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8 nuv-view-enter">
-      <header className="pt-4 pb-6">
+      <header className="pt-4 pb-8 border-b border-white/[0.06] mb-8">
         <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
           RADAR LISENSI
         </p>
-        <h1 className="mt-1.5 font-editorial text-3xl sm:text-4xl font-normal tracking-tight text-editorial-title">
+        <h1 className="mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-[1.12] text-editorial-title">
           Pengumuman Baru dari Penerbit
         </h1>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-editorial-body">
+        <p className="mt-4 sm:mt-5 max-w-2xl text-sm sm:text-base text-editorial-body leading-[1.7] font-sans">
           Lisensi manga &amp; light novel yang diumumkan PGI, m&amp;c!, dan Elex Media — dari panggung Comifuro, teaser PDKT, sampai pendaftaran ISBN, lengkap dengan tautan bukti sumbernya.
         </p>
       </header>

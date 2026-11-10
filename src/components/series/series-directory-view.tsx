@@ -314,24 +314,24 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
   return (
     <div className="space-y-8 pb-16" onClickCapture={persistViewState}>
       {/* 1. Header Banner */}
-      <section className="space-y-3 pt-2 sm:pt-4">
+      <section className="pt-2 sm:pt-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
           <Layers className="w-3 h-3 text-accent shrink-0" />
           <span>Direktori Seri</span>
         </div>
 
-        <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
+        <h1 className="mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.12]">
           Direktori Seri Manga &amp; Light Novel.
         </h1>
 
-        <p className="text-[13px] text-editorial-muted font-sans">
-          {allSeries.length.toLocaleString('id-ID')} seri — termasuk arsip terbitan lama yang ditandai badge Arsip.
+        <p className="mt-4 sm:mt-5 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
+          Daftar lengkap seri komik dan light novel dari Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia — {allSeries.length.toLocaleString('id-ID')} seri terdaftar termasuk arsip terbitan lama.
         </p>
 
-        <div>
+        <div className="mt-6 sm:mt-7">
           <Link
             href="/bind-up"
-            className="mt-3 inline-flex items-center gap-2 rounded-full bg-white/[0.05] hover:bg-white/[0.09] border border-white/[0.07] px-4 py-2 text-xs font-medium text-editorial-body hover:text-editorial-title transition-colors"
+            className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] hover:bg-white/[0.09] border border-white/[0.07] px-4 py-2 text-xs font-medium text-editorial-body hover:text-editorial-title transition-colors"
           >
             <span>Direktori Edisi Bind-Up &amp; Omnibus</span>
             <span aria-hidden="true" className="text-accent">→</span>

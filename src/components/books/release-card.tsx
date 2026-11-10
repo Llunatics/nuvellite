@@ -187,10 +187,10 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
       </div>
 
       {/* 2. Editorial Typography & Metadata (Pure hierarchy, zero boxing) */}
-      <div className="pt-3 pb-1 flex-1 flex flex-col justify-between">
+      <div className="pt-3.5 pb-1 flex-1 flex flex-col justify-between">
         <div>
           {/* Publisher & Release Date */}
-          <div className="flex items-center justify-between text-[10px] font-mono text-editorial-faint mb-1">
+          <div className="flex items-center justify-between text-[10px] font-mono text-editorial-faint mb-1.5">
             <span className="font-medium text-editorial-muted truncate">
               {book.publisherShortName}
             </span>
@@ -203,14 +203,14 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
 
           {/* Book Title */}
           <Link href={`/books/${book.slug}`} className="block group-hover:text-accent transition-colors">
-            <h3 className="text-xs sm:text-[13px] font-medium text-editorial-title line-clamp-2 leading-snug tracking-tight">
+            <h3 className="text-[13px] sm:text-sm font-medium text-editorial-title line-clamp-2 leading-[1.35] tracking-tight">
               {book.title}
             </h3>
           </Link>
         </div>
 
         {/* Price & Discount */}
-        <div className="mt-2 pt-1 flex items-baseline gap-1.5">
+        <div className="mt-2.5 pt-1 flex items-baseline gap-1.5">
           <span className="text-[12px] sm:text-[13px] font-mono font-semibold text-editorial-title tracking-tight">
             {formatRupiah(book.currentPrice)}
           </span>

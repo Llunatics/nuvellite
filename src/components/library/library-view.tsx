@@ -122,19 +122,19 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
   return (
     <div className="space-y-12 pb-16">
       {/* 1. Header Banner */}
-      <section className="space-y-4 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
+      <section className="pt-2 sm:pt-4 border-b border-white/[0.06] pb-8 mb-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="space-y-2">
+          <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
               <BookMarked className="w-3 h-3 text-accent shrink-0" />
               <span>Rak Buku Lokal{profile ? ` • ${profile.name}` : ''}</span>
             </div>
 
-            <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
+            <h1 className="mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.12]">
               Perpustakaan &amp; Koleksi Saya.
             </h1>
 
-            <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
               Koleksi tersimpan aman secara lokal di perangkat ini, tanpa perlu login.
               Cadangkan data ke format JSON dan pulihkan kapan saja.
             </p>

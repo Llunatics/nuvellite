@@ -284,7 +284,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   };
 
   return (
-    <div className="space-y-16 sm:space-y-20" onClickCapture={persistViewState}>
+    <div className="space-y-16 sm:space-y-24" onClickCapture={persistViewState}>
       {/* 1. HERO EDITORIAL INTRODUCTION */}
       <section
         className="space-y-4 pt-2 sm:pt-4 lg:pt-8 transition-transform ease-out will-change-transform"
@@ -297,26 +297,26 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
             : undefined
         }
       >
-        <div className="max-w-3xl lg:max-w-4xl space-y-3 lg:space-y-5">
+        <div className="max-w-3xl lg:max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-xs shrink-0" />
             <span>Katalog Indonesia</span>
           </div>
 
-          <h1 className="font-editorial text-3xl sm:text-5xl lg:text-7xl font-normal text-editorial-title tracking-tight leading-[1.08]">
+          <h1 className="mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.12]">
             Pelacak Manga &amp; Light Novel.
           </h1>
 
-          <p className="text-sm sm:text-base lg:text-lg text-editorial-body leading-relaxed max-w-2xl lg:max-w-3xl font-sans">
+          <p className="mt-4 sm:mt-5 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
             Katalog manga &amp; light novel terbitan resmi Elex Media, m&amp;c!, dan Phoenix Gramedia Indonesia.
             Cek jadwal terbit mingguan, edisi bind-up, dan koleksi bukumu.
           </p>
 
           {/* Archive Stats Strip */}
-          <dl className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-2 text-[11px] font-mono text-editorial-muted">
+          <dl className="mt-6 sm:mt-7 flex flex-wrap items-center gap-x-3 sm:gap-x-5 gap-y-2.5 text-xs font-mono text-editorial-muted">
             <div className="flex items-baseline gap-1.5">
               <dt className="sr-only">Judul terarsip</dt>
-              <dd className="text-sm font-semibold text-editorial-title">
+              <dd className="font-semibold text-editorial-title">
                 {archiveStats.titles.toLocaleString('id-ID')}
               </dd>
               <dd>judul terarsip</dd>
@@ -324,7 +324,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
             <span aria-hidden="true" className="text-editorial-faint/50">/</span>
             <div className="flex items-baseline gap-1.5">
               <dt className="sr-only">Seri</dt>
-              <dd className="text-sm font-semibold text-editorial-title">
+              <dd className="font-semibold text-editorial-title">
                 {archiveStats.series.toLocaleString('id-ID')}
               </dd>
               <dd>seri</dd>
@@ -332,7 +332,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
             <span aria-hidden="true" className="text-editorial-faint/50">/</span>
             <div className="flex items-baseline gap-1.5">
               <dt className="sr-only">Penerbit</dt>
-              <dd className="text-sm font-semibold text-editorial-title">
+              <dd className="font-semibold text-editorial-title">
                 {archiveStats.publishers.toLocaleString('id-ID')}
               </dd>
               <dd>penerbit</dd>
@@ -378,30 +378,32 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       {/* 3. MANGA HIGHLIGHT RAIL */}
       {mangaHighlights.length > 0 && (
         <section className="space-y-5">
-          <div className="flex items-center justify-between border-b border-white/[0.04] pb-3">
-            <div className="flex items-baseline gap-3">
-              <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight">
+          <div className="flex items-end justify-between gap-4 border-b border-white/[0.06] pb-4 mb-6">
+            <div className="min-w-0 flex-1">
+              <h2 className="font-editorial text-2xl sm:text-3xl font-normal tracking-tight text-editorial-title leading-[1.15]">
                 Rilisan Manga Terbaru
               </h2>
-              <span className="text-[11px] font-mono text-editorial-faint hidden sm:inline">
-                {mangaHighlights.length} buku terbaru
-              </span>
+              <p className="mt-1.5 text-xs font-mono text-editorial-muted">
+                {mangaHighlights.length} rilisan terkini
+              </p>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="shrink-0 flex items-center gap-3 pl-2">
               <button
                 type="button"
                 onClick={() => handleViewAll('Manga')}
-                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors inline-flex items-center gap-1"
+                className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 text-xs font-medium text-editorial-body hover:text-accent transition-colors py-1"
               >
                 <span>Semua Manga</span>
-                <ArrowRight className="w-3 h-3" />
+                <ArrowRight className="w-3.5 h-3.5 text-accent" />
               </button>
-              <div className="flex items-center gap-1">
+
+              {/* Desktop-only rail scroll arrows — hidden on mobile touch screens so heading & link never collide */}
+              <div className="hidden sm:flex items-center gap-1.5 ml-1">
                 <button
                   type="button"
                   onClick={() => scrollRail(mangaRailRef, 'left')}
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title hover:bg-white/[0.06] transition-all"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] transition-all"
                   aria-label="Geser ke kiri"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -409,7 +411,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
                 <button
                   type="button"
                   onClick={() => scrollRail(mangaRailRef, 'right')}
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title hover:bg-white/[0.06] transition-all"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] transition-all"
                   aria-label="Geser ke kanan"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -420,10 +422,10 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
 
           <div
             ref={mangaRailRef}
-            className="flex items-stretch gap-4 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory pt-1"
+            className="flex items-stretch gap-5 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory pt-1"
           >
             {mangaHighlights.map((book) => (
-              <div key={book.id} className="w-36 sm:w-44 lg:w-48 shrink-0 snap-start">
+              <div key={book.id} className="w-40 sm:w-48 lg:w-52 shrink-0 snap-start">
                 <ReleaseCard book={book} />
               </div>
             ))}
@@ -434,30 +436,32 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       {/* 4. LIGHT NOVEL HIGHLIGHT RAIL */}
       {lnHighlights.length > 0 && (
         <section className="space-y-5">
-          <div className="flex items-center justify-between border-b border-white/[0.04] pb-3">
-            <div className="flex items-baseline gap-3">
-              <h2 className="text-xl sm:text-2xl font-editorial font-normal text-editorial-title tracking-tight">
+          <div className="flex items-end justify-between gap-4 border-b border-white/[0.06] pb-4 mb-6">
+            <div className="min-w-0 flex-1">
+              <h2 className="font-editorial text-2xl sm:text-3xl font-normal tracking-tight text-editorial-title leading-[1.15]">
                 Rilisan Light Novel Terbaru
               </h2>
-              <span className="text-[11px] font-mono text-editorial-faint hidden sm:inline">
-                {lnHighlights.length} buku terbaru
-              </span>
+              <p className="mt-1.5 text-xs font-mono text-editorial-muted">
+                {lnHighlights.length} rilisan terkini
+              </p>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="shrink-0 flex items-center gap-3 pl-2">
               <button
                 type="button"
                 onClick={() => handleViewAll('Light Novel')}
-                className="text-xs font-mono text-editorial-muted hover:text-editorial-title transition-colors inline-flex items-center gap-1"
+                className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 text-xs font-medium text-editorial-body hover:text-accent transition-colors py-1"
               >
                 <span>Semua Light Novel</span>
-                <ArrowRight className="w-3 h-3" />
+                <ArrowRight className="w-3.5 h-3.5 text-accent" />
               </button>
-              <div className="flex items-center gap-1">
+
+              {/* Desktop-only rail scroll arrows — hidden on mobile touch screens so heading & link never collide */}
+              <div className="hidden sm:flex items-center gap-1.5 ml-1">
                 <button
                   type="button"
                   onClick={() => scrollRail(lnRailRef, 'left')}
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title hover:bg-white/[0.06] transition-all"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] transition-all"
                   aria-label="Geser ke kiri"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -465,7 +469,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
                 <button
                   type="button"
                   onClick={() => scrollRail(lnRailRef, 'right')}
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title hover:bg-white/[0.06] transition-all"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-editorial-muted hover:text-editorial-title bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] transition-all"
                   aria-label="Geser ke kanan"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -476,10 +480,10 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
 
           <div
             ref={lnRailRef}
-            className="flex items-stretch gap-4 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory pt-1"
+            className="flex items-stretch gap-5 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory pt-1"
           >
             {lnHighlights.map((book) => (
-              <div key={book.id} className="w-36 sm:w-44 lg:w-48 shrink-0 snap-start">
+              <div key={book.id} className="w-40 sm:w-48 lg:w-52 shrink-0 snap-start">
                 <ReleaseCard book={book} />
               </div>
             ))}
@@ -494,25 +498,27 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
       {/* 5. MAIN CATALOG ARCHIVE & COHESIVE CONTROLS */}
       <section ref={catalogRef} className="space-y-8 pt-4 scroll-mt-28">
         {/* Section Heading & Result Counter */}
-        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/[0.04] pb-4">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-editorial font-normal text-editorial-title tracking-tight">
+        <div className="flex items-end justify-between gap-4 border-b border-white/[0.06] pb-4 mb-6">
+          <div className="min-w-0 flex-1">
+            <h2 className="font-editorial text-2xl sm:text-3xl font-normal tracking-tight text-editorial-title leading-[1.15]">
               Seluruh Katalog
             </h2>
-            <p className="text-xs text-editorial-muted mt-1 font-mono">
+            <p className="mt-1.5 text-xs font-mono text-editorial-muted">
               {filteredBooks.length.toLocaleString('id-ID')} buku terdata
             </p>
           </div>
 
           {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={resetFilters}
-              className="text-xs font-mono text-accent hover:underline flex items-center gap-1.5 self-start sm:self-auto"
-            >
-              <FilterX className="w-3.5 h-3.5" />
-              <span>Bersihkan Filter</span>
-            </button>
+            <div className="shrink-0 flex items-center gap-3 pl-2">
+              <button
+                type="button"
+                onClick={resetFilters}
+                className="shrink-0 whitespace-nowrap text-xs font-mono text-accent hover:underline flex items-center gap-1.5 py-1"
+              >
+                <FilterX className="w-3.5 h-3.5" />
+                <span>Bersihkan Filter</span>
+              </button>
+            </div>
           )}
         </div>
 
@@ -628,7 +634,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-x-4 sm:gap-x-6 gap-y-9 sm:gap-y-12">
             {visibleBooks.map((book) => (
               <ReleaseCard key={book.id} book={book} />
             ))}

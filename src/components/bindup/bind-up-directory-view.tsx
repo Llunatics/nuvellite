@@ -75,24 +75,24 @@ export function BindUpDirectoryView({ groups, publishers }: BindUpDirectoryViewP
   return (
     <div className="space-y-10 sm:space-y-12 pb-16">
       {/* 1. Header */}
-      <section className="space-y-3 pt-2 sm:pt-4 border-b border-white/[0.04] pb-6">
+      <section className="pt-2 sm:pt-4 border-b border-white/[0.06] pb-8 mb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-editorial-muted text-[11px] font-mono">
           <BookCopy className="w-3 h-3 text-accent shrink-0" />
           <span>Edisi Bind-Up &amp; Omnibus</span>
         </div>
 
-        <h1 className="font-editorial text-3xl sm:text-5xl font-normal text-editorial-title tracking-tight leading-[1.1]">
+        <h1 className="mt-4 font-editorial text-3xl sm:text-5xl lg:text-6xl font-normal text-editorial-title tracking-tight leading-[1.12]">
           Bind-Up &amp; Omnibus Indonesia.
         </h1>
 
-        <p className="text-sm text-editorial-body leading-relaxed max-w-2xl font-sans">
+        <p className="mt-4 sm:mt-5 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
           Beberapa volume original digabung dalam satu buku tebal — hemat rak, hemat kantong.
           Direktori ini <span className="text-editorial-title font-medium">terdeteksi otomatis</span>: setiap ada
           rilisan bind-up baru dari Elex Media, m&amp;c!, atau Phoenix Gramedia Indonesia, ia langsung
           masuk ke sini tanpa perlu didaftarkan manual.
         </p>
 
-        <div className="flex flex-wrap gap-2 pt-1 text-[11px] font-mono text-editorial-muted">
+        <div className="mt-6 sm:mt-7 flex flex-wrap gap-2 text-[11px] font-mono text-editorial-muted">
           <span className="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
             {groups.length} seri
           </span>

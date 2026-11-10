@@ -68,7 +68,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-background text-editorial-body selection:bg-accent/20 selection:text-accent flex flex-col">
         <Header />
-        <main className="flex-1 pb-20 sm:pb-12">{children}</main>
+        <main className="flex-1 pb-32 md:pb-20">{children}</main>
         <Footer />
         <MobileNav />
       </body>
