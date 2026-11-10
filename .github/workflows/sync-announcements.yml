@@ -1,0 +1,30 @@
+name: Sync Publisher Announcements
+
+# Round 2 S5.6: poll every 12 hours (06:00 & 18:00 WIB = 23:00 & 11:00 UTC).
+# Convention weekends (src/data/conventions.json) tighten this to every
+# 3 hours via a separate schedule entry when an event is upcoming.
+on:
+  schedule:
+    - cron: '0 23,11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-announcements:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Poll announcement sources
+        run: python3 scripts/announcements/ingest_drop.py --poll
+      - name: Commit tracker updates
+        run: |
+          git config user.name "nuvellite-announcements-bot"
+          git config user.email "actions@github.com"
+          git add src/data/announcements.json src/data/announcements-health.json scripts/announcements/review-queue.json
+          git diff --cached --quiet || git commit -m "chore(announcements): scheduled radar sync"
+          git push

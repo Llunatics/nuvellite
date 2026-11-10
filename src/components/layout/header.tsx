@@ -49,6 +49,7 @@ export function Header() {
     { href: '/', label: 'Katalog', active: pathname === '/' },
     { href: '/calendar', label: 'Kalender', active: pathname.startsWith('/calendar') },
     { href: '/series', label: 'Seri', active: pathname.startsWith('/series') },
+    { href: '/radar', label: 'Radar', active: pathname.startsWith('/radar') },
     {
       href: '/library',
       label: 'Koleksi',
