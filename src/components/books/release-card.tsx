@@ -131,24 +131,23 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
           </div>
         )}
 
-        {/* Status indicator: Preorder / Out of stock */}
-        {book.status === 'PREORDER' && (
+        {/* Status indicator: Preorder (takes precedence) or Out of stock */}
+        {(book.status === 'PREORDER' || book.availability === 'OUT_OF_STOCK') && (
           <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
-              PRE-ORDER
-            </span>
-          </div>
-        )}
-        {book.availability === 'OUT_OF_STOCK' && (
-          <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-semibold uppercase tracking-wider bg-zinc-950/90 text-zinc-300 border border-white/10">
-              HABIS
-            </span>
+            {book.status === 'PREORDER' ? (
+              <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
+                PRE-ORDER
+              </span>
+            ) : (
+              <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-semibold uppercase tracking-wider bg-zinc-950/90 text-zinc-300 border border-white/10">
+                HABIS
+              </span>
+            )}
           </div>
         )}
 
-        {/* Floating Quick Action Overlays on Cover (Appear on Hover) */}
-        <div className="absolute bottom-2 right-2 z-20 flex items-center gap-1 opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-200">
+        {/* Floating Quick Action Overlays on Cover (Appear on Hover on Desktop) */}
+        <div className="absolute bottom-2 right-2 z-20 hidden sm:flex items-center gap-1 sm:opacity-0 sm:group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-200">
           <button
             type="button"
             onClick={(e) => {
