@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-12T14:50:58.000Z",
+  "lastUpdated": "2026-11-12T23:23:05.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -88060,7 +88060,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/a9py33zll5.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "currentPrice": 55000,
       "originalPrice": 55000,
       "releaseDate": "2026-11-13",

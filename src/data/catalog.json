@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-12T14:50:58.000Z",
+  "lastUpdated": "2026-11-12T23:23:05.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -102391,7 +102391,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/a9py33zll5.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-11-13",
       "isWednesdayRelease": false,
       "currentPrice": 55000,
@@ -381473,6 +381473,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_your_lie_in_april_vol_4_1794525784",
+      "bookId": "pub_your_lie_in_april_vol_4",
+      "price": 55000,
+      "currentPrice": 55000,
+      "originalPrice": 55000,
+      "previousPrice": 55000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_kiteretsu_daihyakka_03_init",
       "bookId": "pub_kiteretsu_daihyakka_03",
       "price": 45000,
@@ -381784,6 +381795,26 @@
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1794525785",
+      "startedAt": "2026-11-12T23:15:02.000Z",
+      "finishedAt": "2026-11-12T23:23:05.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 482407,
+      "success": true
+    },
     {
       "id": "sync_1794495058",
       "startedAt": "2026-11-12T14:42:36.000Z",
@@ -382162,26 +382193,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 547368,
-      "success": true
-    },
-    {
-      "id": "sync_1793921304",
-      "startedAt": "2026-11-05T23:18:39.000Z",
-      "finishedAt": "2026-11-05T23:28:24.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1522,
-      "productsAccepted": 1262,
-      "productsRejected": 449,
-      "productsUpdated": 1025,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 584816,
       "success": true
     }
   ]
