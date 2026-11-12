@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-11T13:47:44.000Z",
+  "lastUpdated": "2026-11-12T00:16:01.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -4322,7 +4322,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-08",
       "isWednesdayRelease": false,
-      "currentPrice": 88500,
+      "currentPrice": 76700,
       "authors": [
         "Hyuganatsu / Touko Shino"
       ],
@@ -4380,7 +4380,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-22",
       "isWednesdayRelease": true,
-      "currentPrice": 88500,
+      "currentPrice": 59000,
       "originalPrice": 118000,
       "authors": [
         "Hyuganatsu / Touko Shino"
@@ -4417,7 +4417,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-07-15",
       "isWednesdayRelease": true,
-      "currentPrice": 135000,
+      "currentPrice": 117000,
       "originalPrice": 180000,
       "authors": [
         "Hyuganatsu / Touko Shino"
@@ -20997,7 +20997,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-15",
       "isWednesdayRelease": true,
-      "currentPrice": 78750,
+      "currentPrice": 52500,
       "authors": [
         "Reiki Kawahara/Abec"
       ],
@@ -31529,7 +31529,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-01-09",
       "isWednesdayRelease": false,
-      "currentPrice": 127500,
+      "currentPrice": 85000,
       "authors": [
         "Hyuganatsu / Touko Shino"
       ],
@@ -31582,7 +31582,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-01-08",
       "isWednesdayRelease": false,
-      "currentPrice": 81000,
+      "currentPrice": 70200,
       "originalPrice": 108000,
       "authors": [
         "Hyuganatsu / Touko Shino"
@@ -71137,7 +71137,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-02-10",
       "isWednesdayRelease": false,
-      "currentPrice": 29250,
+      "currentPrice": 32180,
       "authors": [
         "KAZAMI SAWATARI/ATIKI/KAYA TETSUYAMA"
       ],
@@ -71154,7 +71154,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 45000,
+      "originalPrice": 49500,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -72846,7 +72846,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -85713,7 +85713,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -93666,7 +93666,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230034312_cover_Jojo_s_Bizarre_Adventure_03_Part_1_Phantom_Blood.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2022-10-06",
       "isWednesdayRelease": false,
       "currentPrice": 40000,
@@ -94389,7 +94389,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-02-13",
       "isWednesdayRelease": false,
-      "currentPrice": 93750,
+      "currentPrice": 81250,
       "originalPrice": 125000,
       "authors": [
         "Asato Asato/ Shirabii"
@@ -102666,7 +102666,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-05-06",
       "isWednesdayRelease": true,
-      "currentPrice": 90000,
+      "currentPrice": 60000,
       "authors": [
         "Nabeshiki"
       ],
@@ -102705,7 +102705,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-01-05",
       "isWednesdayRelease": false,
-      "currentPrice": 86250,
+      "currentPrice": 57500,
       "authors": [
         "Nabeshiki"
       ],
@@ -103945,7 +103945,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-07-10",
       "isWednesdayRelease": false,
-      "currentPrice": 68000,
+      "currentPrice": 63750,
       "authors": [
         "Tsukasa Abe"
       ],
@@ -104222,7 +104222,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-05-05",
       "isWednesdayRelease": false,
-      "currentPrice": 88500,
+      "currentPrice": 76700,
       "authors": [
         "Kafka Asagiri"
       ],
@@ -104300,7 +104300,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-04-27",
       "isWednesdayRelease": false,
-      "currentPrice": 63750,
+      "currentPrice": 55250,
       "authors": [
         "Fujiko F. Fujio, Manabu Wakui"
       ],
@@ -133575,6 +133575,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_light_novel_the_apothecary_diaries_vol_02_1794442560",
+      "bookId": "pub_light_novel_the_apothecary_diaries_vol_02",
+      "price": 76700,
+      "currentPrice": 76700,
+      "originalPrice": 118000,
+      "previousPrice": 88500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai_init",
       "bookId": "pub_light_novel_rascal_does_not_dream_of_bunny_girl_senpai",
       "price": 108000,
@@ -141906,6 +141917,17 @@
       "price": 68000,
       "availability": "PREORDER",
       "observedAt": "2026-07-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_frieren_after_the_end_prelude_1794442560",
+      "bookId": "pub_light_novel_frieren_after_the_end_prelude",
+      "price": 63750,
+      "currentPrice": 63750,
+      "originalPrice": 85000,
+      "previousPrice": 68000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api"
     },
     {
@@ -161975,6 +161997,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_i_parry_everything_2_1794442560",
+      "bookId": "pub_i_parry_everything_2",
+      "price": 60000,
+      "currentPrice": 60000,
+      "originalPrice": 120000,
+      "previousPrice": 90000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_level_comic_bakemonogatari_20_init",
       "bookId": "pub_level_comic_bakemonogatari_20",
       "price": 40500,
@@ -162460,6 +162493,17 @@
       "previousPrice": 94400,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_another_story_yukito_ayatsuji_vs_natsuhiko_kyogoku_1794442560",
+      "bookId": "pub_bungo_stray_dogs_another_story_yukito_ayatsuji_vs_natsuhiko_kyogoku",
+      "price": 76700,
+      "currentPrice": 76700,
+      "originalPrice": 118000,
+      "previousPrice": 88500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api"
     },
     {
@@ -163452,6 +163496,17 @@
       "previousPrice": 68000,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-24",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_light_novel_doraemon_nobitas_mermaid_legend_1794442438",
+      "bookId": "pub_light_novel_doraemon_nobitas_mermaid_legend",
+      "price": 55250,
+      "currentPrice": 55250,
+      "originalPrice": 85000,
+      "previousPrice": 63750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api_refresh"
     },
     {
@@ -164701,6 +164756,17 @@
       "previousPrice": 84000,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sword_art_online_011_alicization_running__alicization_turning_1794442560",
+      "bookId": "pub_sword_art_online_011_alicization_running__alicization_turning",
+      "price": 52500,
+      "currentPrice": 52500,
+      "originalPrice": 105000,
+      "previousPrice": 78750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api"
     },
     {
@@ -182217,6 +182283,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_light_novel_the_apothecary_diaries_vol_01__jishi_sama_premium_package_1794442560",
+      "bookId": "pub_light_novel_the_apothecary_diaries_vol_01__jishi_sama_premium_package",
+      "price": 85000,
+      "currentPrice": 85000,
+      "originalPrice": 170000,
+      "previousPrice": 127500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_soloist_in_a_cage_1_init",
       "bookId": "pub_soloist_in_a_cage_1",
       "price": 49500,
@@ -184529,6 +184606,17 @@
       "previousPrice": 74750,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-10-15",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_i_parry_everything_1_1794442560",
+      "bookId": "pub_i_parry_everything_1",
+      "price": 57500,
+      "currentPrice": 57500,
+      "originalPrice": 115000,
+      "previousPrice": 86250,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api"
     },
     {
@@ -283739,6 +283827,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_the_cold_sato_is_only_sweet_to_me_02_1794442321",
+      "bookId": "pub_the_cold_sato_is_only_sweet_to_me_02",
+      "price": 32180,
+      "currentPrice": 32180,
+      "originalPrice": 49500,
+      "previousPrice": 29250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_akasha_chainsaw_man_01_init",
       "bookId": "pub_akasha_chainsaw_man_01",
       "price": 43200,
@@ -288664,6 +288763,17 @@
       "previousPrice": 9600,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-11",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_komi_sulit_berkomunikasi_14_1794442329",
+      "bookId": "pub_komi_sulit_berkomunikasi_14",
+      "price": 16000,
+      "currentPrice": 16000,
+      "originalPrice": 32000,
+      "previousPrice": 16000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api_refresh"
     },
     {
@@ -332969,6 +333079,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_moriarty_the_patriot_4_1794442387",
+      "bookId": "pub_moriarty_the_patriot_4",
+      "price": 16000,
+      "currentPrice": 16000,
+      "originalPrice": 32000,
+      "previousPrice": 16000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_haikyu_fly_high_volleyball_16_init",
       "bookId": "pub_haikyu_fly_high_volleyball_16",
       "price": 25200,
@@ -346700,6 +346821,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_light_novel_the_apothecary_diaries_vol_02__maomao_special_package_1794442560",
+      "bookId": "pub_light_novel_the_apothecary_diaries_vol_02__maomao_special_package",
+      "price": 59000,
+      "currentPrice": 59000,
+      "originalPrice": 118000,
+      "previousPrice": 88500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_light_novel_the_apothecary_diaries_vol_02__jinshi_sama_premium_package_init",
       "bookId": "pub_light_novel_the_apothecary_diaries_vol_02__jinshi_sama_premium_package",
       "price": 135000,
@@ -346729,6 +346861,17 @@
       "previousPrice": 144000,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_apothecary_diaries_vol_02__jinshi_sama_premium_package_1794442560",
+      "bookId": "pub_light_novel_the_apothecary_diaries_vol_02__jinshi_sama_premium_package",
+      "price": 117000,
+      "currentPrice": 117000,
+      "originalPrice": 180000,
+      "previousPrice": 135000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api"
     },
     {
@@ -347011,6 +347154,17 @@
       "previousPrice": 86400,
       "availability": "AVAILABLE",
       "observedAt": "2026-10-24",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_the_apothecary_diaries_vol_01__maomao_special_package_1794442560",
+      "bookId": "pub_light_novel_the_apothecary_diaries_vol_01__maomao_special_package",
+      "price": 70200,
+      "currentPrice": 70200,
+      "originalPrice": 108000,
+      "previousPrice": 81000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api"
     },
     {
@@ -365612,6 +365766,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_03__part_1_phantom_blood_1794442412",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_03__part_1_phantom_blood",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 80000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_lc_jojos_bizarre_adventure_07_part_2_battle_tendency_init",
       "bookId": "pub_lc_jojos_bizarre_adventure_07_part_2_battle_tendency",
       "price": 55250,
@@ -367834,6 +367999,17 @@
       "availability": "AVAILABLE",
       "observedAt": "2026-02-13",
       "source": "backfill"
+    },
+    {
+      "id": "snap_pub_eighty_six_ep_5__wahai_maut_janganlah_congkak_1794442560",
+      "bookId": "pub_eighty_six_ep_5__wahai_maut_janganlah_congkak",
+      "price": 81250,
+      "currentPrice": 81250,
+      "originalPrice": 125000,
+      "previousPrice": 93750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api"
     },
     {
       "id": "snap_pub_paket_komik_naruto_vol_31_40_init",
@@ -381565,6 +381741,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1794442561",
+      "startedAt": "2026-11-12T00:06:35.000Z",
+      "finishedAt": "2026-11-12T00:16:01.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 565484,
+      "success": true
+    },
+    {
       "id": "sync_1794404864",
       "startedAt": "2026-11-11T13:38:54.000Z",
       "finishedAt": "2026-11-11T13:47:44.000Z",
@@ -381942,26 +382138,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 563072,
-      "success": true
-    },
-    {
-      "id": "sync_1793856685",
-      "startedAt": "2026-11-05T05:23:00.000Z",
-      "finishedAt": "2026-11-05T05:31:25.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1522,
-      "productsAccepted": 1262,
-      "productsRejected": 449,
-      "productsUpdated": 1021,
-      "productsInserted": 56,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 504754,
       "success": true
     }
   ]
