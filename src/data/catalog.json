@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-12T00:16:01.000Z",
+  "lastUpdated": "2026-11-12T14:50:58.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -15562,7 +15562,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 75000,
       "isBindUp": true,
       "bindUpKind": "CURATED",
@@ -81033,7 +81033,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -99628,7 +99628,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/gnutasm-2e.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-07-23",
       "isWednesdayRelease": false,
       "currentPrice": 65000,
@@ -103158,10 +103158,10 @@
       "categorySlugs": "buku/komik/manga/fantasi-1",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/tiih3c-5-9.jfif",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-25",
       "isWednesdayRelease": true,
-      "currentPrice": 98000,
+      "currentPrice": 88200,
       "originalPrice": 98000,
       "authors": [
         "Kamome Shirahama"
@@ -154468,6 +154468,17 @@
       "previousPrice": 22500,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-11",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_slam_dunk_new_edition_07_1794494681",
+      "bookId": "pub_slam_dunk_new_edition_07",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 75000,
+      "previousPrice": 37500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api_refresh"
     },
     {
@@ -316286,6 +316297,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_koloni_journal_of_terror_2_1794494881",
+      "bookId": "pub_koloni_journal_of_terror_2",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 45000,
+      "previousPrice": 22500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_level_comic_kanojo_okarishimasu_01_init",
       "bookId": "pub_level_comic_kanojo_okarishimasu_01",
       "price": 36000,
@@ -348235,6 +348257,17 @@
       "previousPrice": 65000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_12_1794495057",
+      "bookId": "pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_12",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
       "source": "gramedia_api"
     },
     {
@@ -381699,6 +381732,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_atelier_of_witch_hat_12_1794495057",
+      "bookId": "pub_atelier_of_witch_hat_12",
+      "price": 88200,
+      "currentPrice": 88200,
+      "originalPrice": 98000,
+      "previousPrice": 98000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-12",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_level_comic_choujin_x_04_init",
       "bookId": "pub_level_comic_choujin_x_04",
       "price": 75000,
@@ -381740,6 +381784,26 @@
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1794495058",
+      "startedAt": "2026-11-12T14:42:36.000Z",
+      "finishedAt": "2026-11-12T14:50:58.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 502270,
+      "success": true
+    },
     {
       "id": "sync_1794442561",
       "startedAt": "2026-11-12T00:06:35.000Z",
@@ -382118,26 +382182,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 584816,
-      "success": true
-    },
-    {
-      "id": "sync_1793888024",
-      "startedAt": "2026-11-05T14:04:21.000Z",
-      "finishedAt": "2026-11-05T14:13:44.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1522,
-      "productsAccepted": 1262,
-      "productsRejected": 449,
-      "productsUpdated": 1025,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 563072,
       "success": true
     }
   ]
