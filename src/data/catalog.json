@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-12T23:23:05.000Z",
+  "lastUpdated": "2026-11-13T05:29:17.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -34980,7 +34980,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 65000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -59780,7 +59780,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-05-29",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 29250,
       "authors": [
         "Azychika / Shinya Umemura"
       ],
@@ -103332,6 +103332,120 @@
       "bindUpLabel": null
     },
     {
+      "id": "pub_the_one_within_the_villainess_vol_1",
+      "slug": "the-one-within-the-villainess-vol-1",
+      "title": "The One Within The Villainess Vol. 1",
+      "originalTitle": "The One Within The Villainess",
+      "seriesId": "ser_the-one-within-the-villainess",
+      "seriesName": "The One Within The Villainess",
+      "volume": 1,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/tx0eeen1vs.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-13",
+      "isWednesdayRelease": false,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Makiburo "
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811615",
+      "synopsis": "“Akan kurebut kembali kebahagiaan yang Emi inginkan”\n\nSegala usaha “Emi” yang bereinkarnasi menjadi Remilia, tokoh antagonis dari suatu game otome berbasis RPG, jadi sia-sia dan dijatuhi hukuman karena “Gadis Bintang”, tokoh utama game tersebut.\n\nUntuk meluruskan tuduhan palsu pada Emi itu, Remilia asli yang selama ini mengawasinya dari dalam pun muncul…\n\nKeunggulan:\n\n•\tMengangkat tema balas dendam seorang Villainess yang dipenuhi drama.\n\n•\tMenempati posisi ke-3 pada penghargaan Web Manga General Election 10th Anniversary Edition\n\n•\tSerialisasi anime akan tayang pada tahun 2027\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/the-one-within-the-villainess-vol-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_hirayasumi_vol_1",
+      "slug": "hirayasumi-vol-1",
+      "title": "Hirayasumi Vol. 1",
+      "originalTitle": "Hirayasumi",
+      "seriesId": "ser_hirayasumi",
+      "seriesName": "Hirayasumi",
+      "volume": 1,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/8xuv9mi9s5.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-13",
+      "isWednesdayRelease": false,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Keigo Shinzo"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811554",
+      "synopsis": "Hiroto Ikuta (29 tahun) adalah pekerja lepas yang tinggal bersama Natsumi, sepupunya yang berumur 18 tahun, di rumah satu lantai yang didapatnya. Hideki adalah sahabat Hiroto yang sebentar lagi akan jadi ayah. Sementara Yomogi merupakan karyawan kantor real estat yang bekerja terlalu keras. Lalu Akari adalah teman Natsumi yang merasa tak percaya diri. Sembari memikul keresahannya masing-masing, mereka berkumpul di rumah satu lantai Hiroto… Lalu kekacauan seperti apakah yang terjadi di festival Tanabata Asagaya!?\n\nKebahagiaan di masa lalu niscaya akan berubah jadi kenangan berharga. Inilah kehidupan rumah satu lantai mereka di musim panas yang berkilauan.\n\nKeunggulan:\n\n•\tSudah diangkat jadi Live Action dan adaptasi animenya akan muncul di tahun 2027\n\n•\tPemenang 71st Shogakukan Manga Award (2026\n\n•\tCeritanya ringan dan sangat menyenangkan untuk dibaca\n\n•\tMemiliki artstyle yang bagus dan memikat\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/hirayasumi-vol-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_albus_changes_the_world_3",
+      "slug": "albus-changes-the-world-3",
+      "title": "Albus Changes the World! 3",
+      "originalTitle": "Albus Changes the World!",
+      "seriesId": "ser_albus-changes-the-world",
+      "seriesName": "Albus Changes the World!",
+      "volume": 3,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/l3g6a31sbt.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-13",
+      "isWednesdayRelease": false,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Akihisa Maki"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811585",
+      "synopsis": "Kau sama sekali tidak bisa melihat apa pun. ‘Perasaan’ di dalam diriku … Di ujung pertarungan dengan bangsa iblis, petualangan pahlawan menuju perkembangan baru. Albus bertemu pertama kali kembali dengan rekan petualangannya dulu, seorang penyihir bernama Gina. Rahasia yang dia pendam, lalu…\n\nTimeleap fantasi pahlawan yang tahu semuanya untuk menumpas raja iblis baru!\n\nKeunggulan:\n\n• Peringkat 12 dalam Next Manga Awards 2025.\n\n• Direkomendasikan oleh akun sosial media Frieren.\n\n• Direkomendasikan oleh komedian Jepang, Akira Kawashima.\n\n• Konsep cerita fantasi yang unik.\n\n• Memiliki visual yang memikat.\n\n• Pembagian alur antara momen aksi, komedi, dan plot serius berjalan secara seimbang, sehingga pembaca tidak cepat merasa bosan di setiap bab.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/albus-changes-the-world-3",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
       "id": "pub_akasha_mountain_ghost_stories",
       "slug": "akasha-mountain-ghost-stories",
       "title": "Akasha : Mountain Ghost Stories",
@@ -108603,11 +108717,12 @@
       "author": "Akihisa Maki",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 2,
-      "latestVolume": 2,
+      "totalVolumes": 3,
+      "latestVolume": 3,
       "availableVolumes": [
         1,
-        2
+        2,
+        3
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/l----1x11a.jpeg",
@@ -112915,6 +113030,25 @@
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/h0v9tv6t7a.jpeg",
       "description": "Namaku Medaka Isohara, perempuan berusia 22 tahun yang berasal dari Kota Koriyama, Prefektur Fukushima. Aku lahir dengan tubuh mungil dan tumbuh dengan tubuh mungil pula. Aku hampir tidak punya hasrat yang bisa disebut sebagai hasrat. Meski hidup sering terasa sulit karena tidak cocok dengan dunia luar, aku selalu mendapat dukungan dari keluargaku yang harmonis.\n\nSayangnya, aku harus meninggalkan rumahku yang hangat itu untuk bekerja. Namun, karena tak tahan dengan penyalahgunaan kekuasaan dari atasan tempatku bekerja, hatiku hancur dan aku pun memutuskan untuk kembali.\n\nSeolah melarikan diri, aku mulai hidup di dalam bajan mandi–bathtub–yang memberiku ketenangan. Hari-hariku berjalan dengan cukup menyenangkan. Tapi, sudah kuduga tidak akan berakhir bahagia begitu saja ….\n\nIni adalah cerita yang agak aneh tentang bagaimana diriku dilahirkan kembali.\n\nKeunggulan:\n\n- Top 5 dalam list guide book This Light Novel is Amazing tahun 2024.\n\n- Menghadirkan tokoh utama yang relate dalam kehidupan masyarakat modern.\n\n- Mengusung tema kekeluargaan yang hangat sekaligus mengharukan, serta topik sosial seperti kesehatan mental.\n\n- Memiliki gaya penceritaan yang unik sehingga membawa pembaca hanyut dan bermain dengan imajinasi di dalamnya.\n\n- Menggabungkan unsur semiotika modern dan tradisional Jepang sehingga memberikan sentuhan latar yang berbeda dari light novel lainnya.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
+    },
+    {
+      "id": "ser_hirayasumi",
+      "slug": "hirayasumi",
+      "name": "Hirayasumi",
+      "originalTitle": "Hirayasumi",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Keigo Shinzo",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [
+        1
+      ],
+      "missingVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/8xuv9mi9s5.jpeg",
+      "description": "Hiroto Ikuta (29 tahun) adalah pekerja lepas yang tinggal bersama Natsumi, sepupunya yang berumur 18 tahun, di rumah satu lantai yang didapatnya. Hideki adalah sahabat Hiroto yang sebentar lagi akan jadi ayah. Sementara Yomogi merupakan karyawan kantor real estat yang bekerja terlalu keras. Lalu Akari adalah teman Natsumi yang merasa tak percaya diri. Sembari memikul keresahannya masing-masing, mereka berkumpul di rumah satu lantai Hiroto… Lalu kekacauan seperti apakah yang terjadi di festival Tanabata Asagaya!?\n\nKebahagiaan di masa lalu niscaya akan berubah jadi kenangan berharga. Inilah kehidupan rumah satu lantai mereka di musim panas yang berkilauan.\n\nKeunggulan:\n\n•\tSudah diangkat jadi Live Action dan adaptasi animenya akan muncul di tahun 2027\n\n•\tPemenang 71st Shogakukan Manga Award (2026\n\n•\tCeritanya ringan dan sangat menyenangkan untuk dibaca\n\n•\tMemiliki artstyle yang bagus dan memikat\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_hiroshi-noharas-lunch-style",
@@ -119879,6 +120013,25 @@
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/oh1h0eha66.jpg",
       "description": "Flash Sale !!!\n\nFlash Sale !!!\n\nFlash Sale !!!\n\nThe Morose Mononokean adalah komik serial manga Jepang yang ditulis dan diilustrasikan oleh Kiri Wazawa. Komik ini telah diadaptasi televisi menjadi serial anime ditayangkan dari Juni hingga September 2016. Musim kedua ditayangkan dari Januari hingga Maret 2019. Komik ini diringkas dengan bahasa yang ringan dan alur cerita yang sederhana sehingga mudah dipahami oleh para pembaca. Komik ini sangat cocok bagi Anda yang menyukai genre fiksi dan supernatural. Sinopsis Buku Komik ini awalnya menceritakan tentang awal karir sekolah menengah Hanae Ashiya tidaklah mudah, ia telah menghabiskan seluruh minggu pertama di rumah sakit, dan kondisinya yang tidak dapat dijelaskan semakin memburuk. Penyebab siksaannya adalah makhluk kabur misterius yang telah melekat padanya sejak dia tersandung pada hari sebelum sekolah dimulai. Saat kesehatannya terus menurun dan makhluk itu bertambah besar, Hanae menemukan selebaran yang mengiklankan pengusir setan yang mengusir youkai. Putus asa dan tidak ada ruginya, dia memanggil nomor itu dan dibawa ke Mononokean, ruang teh yang tiba-tiba muncul di sebelah rumah sakit. Di volume 14 ini menceritakan tentang Ashiya yang kesulitan menerima keberadaan Sakae yang telah membunuh siluman. Tapi, lewat penuturan salah satu siluman, dia mengetahui sisi lain sang ayah yang ternyata sempat mencemaskan dan menyelamatkan siluman. Karenanya, bersama Abeno, Ashiya kembali mencoba menelusuri kisah masa lalu Sakae yang masih dipenuhi misteri… Informasi Lain: Judul Buku: The Morose Mononokean 14 Format: Soft Cover Tebal: 200 halaman Tanggal Terbit: 10 November 2021 Penerbit: Elex Media Komputindo Berat: 0.1 kg Lebar: 11.4 cm Panjang: 17.2 cm ISBN: 9786230019302"
+    },
+    {
+      "id": "ser_the-one-within-the-villainess",
+      "slug": "the-one-within-the-villainess",
+      "name": "The One Within The Villainess",
+      "originalTitle": "The One Within The Villainess",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Makiburo ",
+      "type": "MANGA",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [
+        1
+      ],
+      "missingVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/tx0eeen1vs.jpeg",
+      "description": "“Akan kurebut kembali kebahagiaan yang Emi inginkan”\n\nSegala usaha “Emi” yang bereinkarnasi menjadi Remilia, tokoh antagonis dari suatu game otome berbasis RPG, jadi sia-sia dan dijatuhi hukuman karena “Gadis Bintang”, tokoh utama game tersebut.\n\nUntuk meluruskan tuduhan palsu pada Emi itu, Remilia asli yang selama ini mengawasinya dari dalam pun muncul…\n\nKeunggulan:\n\n•\tMengangkat tema balas dendam seorang Villainess yang dipenuhi drama.\n\n•\tMenempati posisi ke-3 pada penghargaan Web Manga General Election 10th Anniversary Edition\n\n•\tSerialisasi anime akan tayang pada tahun 2027\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_the-prince-series-arena-para-juara-jiwa-juara-sejati",
@@ -191752,6 +191905,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_gokurakugai_vol_4_1794547757",
+      "bookId": "pub_gokurakugai_vol_4",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_ichi_the_witch_01_init",
       "bookId": "pub_ichi_the_witch_01",
       "price": 40500,
@@ -249871,6 +250035,17 @@
       "previousPrice": 29250,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-02",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_akasha_record_of_ragnarok_14_1794547425",
+      "bookId": "pub_akasha_record_of_ragnarok_14",
+      "price": 29250,
+      "currentPrice": 29250,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
       "source": "gramedia_api_refresh"
     },
     {
@@ -381792,9 +381967,59 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-11",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_one_within_the_villainess_vol_1_init",
+      "bookId": "pub_the_one_within_the_villainess_vol_1",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_hirayasumi_vol_1_init",
+      "bookId": "pub_hirayasumi_vol_1",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_albus_changes_the_world_3_init",
+      "bookId": "pub_albus_changes_the_world_3",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1794547757",
+      "startedAt": "2026-11-13T05:18:58.000Z",
+      "finishedAt": "2026-11-13T05:29:17.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 843,
+      "productsInserted": 5,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 619439,
+      "success": true
+    },
     {
       "id": "sync_1794525785",
       "startedAt": "2026-11-12T23:15:02.000Z",
@@ -382173,26 +382398,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 551956,
-      "success": true
-    },
-    {
-      "id": "sync_1793943068",
-      "startedAt": "2026-11-06T05:22:01.000Z",
-      "finishedAt": "2026-11-06T05:31:08.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1522,
-      "productsAccepted": 1262,
-      "productsRejected": 449,
-      "productsUpdated": 1025,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 547368,
       "success": true
     }
   ]
