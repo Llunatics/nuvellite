@@ -203,7 +203,11 @@
   "publisherJp": "Kadokawa",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/mn75au1/hack-tasogare-no-udewa-densetsu",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-13"
+  }
  },
  {
   "id": "kki_07-ghost",
@@ -362,7 +366,11 @@
   "notes": null,
   "pranalaCover": "https://media.mncgramedia.id/images/books/4065/1-3_01_1678952755.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/4065/13-vol-01",
-  "pranalaStatus": "ok"
+  "pranalaStatus": "ok",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-13"
+  }
  },
  {
   "id": "kki_16-jump",
@@ -414,7 +422,11 @@
   "notes": null,
   "pranalaCover": "https://media.mncgramedia.id/images/books/4494/100_BLOSSOMS_OF_LOVE_01_1678952829.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/4494/100-blossoms-of-love-01",
-  "pranalaStatus": "ok"
+  "pranalaStatus": "ok",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-13"
+  }
  },
  {
   "id": "kki_100-days-left",
@@ -676,7 +688,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/dcajh32/sotsugyou-180-nichimae",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-13"
+  }
  },
  {
   "id": "kki_20th-century-boys",
