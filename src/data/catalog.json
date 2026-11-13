@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-13T05:29:17.000Z",
+  "lastUpdated": "2026-11-13T14:09:25.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -495,7 +495,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-11",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 40500,
       "authors": [
         "Takeru Hokazono"
       ],
@@ -691,7 +691,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-07",
       "isWednesdayRelease": false,
-      "currentPrice": 50000,
+      "currentPrice": 40000,
       "authors": [
         "Kafka Asagiri"
       ],
@@ -2097,7 +2097,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-09-03",
       "isWednesdayRelease": false,
-      "currentPrice": 45000,
+      "currentPrice": 36000,
       "authors": [
         "Eiichiro Oda"
       ],
@@ -2788,7 +2788,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-08-27",
       "isWednesdayRelease": false,
-      "currentPrice": 59000,
+      "currentPrice": 53100,
       "authors": [
         "Saka Mikami"
       ],
@@ -5432,7 +5432,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-05-13",
       "isWednesdayRelease": false,
-      "currentPrice": 32500,
+      "currentPrice": 48750,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -5448,7 +5448,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 65000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -34980,7 +34980,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 65000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -68436,7 +68436,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-07-05",
       "isWednesdayRelease": true,
-      "currentPrice": 40000,
+      "currentPrice": 32000,
       "authors": [
         "Koyoharu Gotouge"
       ],
@@ -97463,7 +97463,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2020-11-25",
       "isWednesdayRelease": false,
       "currentPrice": 20000,
@@ -100899,7 +100899,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-07",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 36000,
       "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
@@ -101454,7 +101454,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-28",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 33750,
       "originalPrice": 45000,
       "authors": [
         "Yuki TABATA"
@@ -102820,7 +102820,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-11-04",
       "isWednesdayRelease": true,
-      "currentPrice": 45000,
+      "currentPrice": 33750,
       "originalPrice": 45000,
       "authors": [
         "Yuto Suzuki"
@@ -103345,10 +103345,10 @@
       "publisherName": "Phoenix Gramedia Indonesia",
       "publisherShortName": "PGI",
       "imprint": null,
-      "categorySlugs": "buku",
+      "categorySlugs": "buku/komik/fantasi-fiksi-ilmiah",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/tx0eeen1vs.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-13",
       "isWednesdayRelease": false,
       "currentPrice": 69500,
@@ -103383,10 +103383,10 @@
       "publisherName": "Phoenix Gramedia Indonesia",
       "publisherShortName": "PGI",
       "imprint": null,
-      "categorySlugs": "buku",
+      "categorySlugs": "buku/komik/manga/petualangan",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/8xuv9mi9s5.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-13",
       "isWednesdayRelease": false,
       "currentPrice": 69500,
@@ -103421,10 +103421,10 @@
       "publisherName": "Phoenix Gramedia Indonesia",
       "publisherShortName": "PGI",
       "imprint": null,
-      "categorySlugs": "buku",
+      "categorySlugs": "buku/komik/manga/fantasi-1",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/l3g6a31sbt.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-13",
       "isWednesdayRelease": false,
       "currentPrice": 69500,
@@ -103438,6 +103438,44 @@
       "isbn13": "9786347811585",
       "synopsis": "Kau sama sekali tidak bisa melihat apa pun. ‘Perasaan’ di dalam diriku … Di ujung pertarungan dengan bangsa iblis, petualangan pahlawan menuju perkembangan baru. Albus bertemu pertama kali kembali dengan rekan petualangannya dulu, seorang penyihir bernama Gina. Rahasia yang dia pendam, lalu…\n\nTimeleap fantasi pahlawan yang tahu semuanya untuk menumpas raja iblis baru!\n\nKeunggulan:\n\n• Peringkat 12 dalam Next Manga Awards 2025.\n\n• Direkomendasikan oleh akun sosial media Frieren.\n\n• Direkomendasikan oleh komedian Jepang, Akira Kawashima.\n\n• Konsep cerita fantasi yang unik.\n\n• Memiliki visual yang memikat.\n\n• Pembagian alur antara momen aksi, komedi, dan plot serius berjalan secara seimbang, sehingga pembaca tidak cepat merasa bosan di setiap bab.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
       "gramediaUrl": "https://www.gramedia.com/products/albus-changes-the-world-3",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_reliving_my_life_to_save_you_vol_2",
+      "slug": "reliving-my-life-to-save-you-vol-2",
+      "title": "Re-Living My Life to Save You Vol. 2",
+      "originalTitle": "Re-Living My Life to Save You",
+      "seriesId": "ser_re-living-my-life-to-save-you",
+      "seriesName": "Re-Living My Life to Save You",
+      "volume": 2,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku/komik/manga/romance-2",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/yvfleyel-v.jpeg",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "releaseDate": "2026-11-13",
+      "isWednesdayRelease": false,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Eiko Mutsuhana"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811608",
+      "synopsis": "Pada usia 17 tahun, Oriana mengalami kematian misterius bersama kekasihnya, Vincent. Oriana kembali mengulang kehidupan masa lalu dengan membawa seluruh ingatannya.\n\nDi kehidupan ini, Oriana bertekad mencegah kematian sang kekasih. Namun Vincent yang tidak mengingat apa pun terus memperlakukannya dengan dingin. Di sisi lain, tanpa sadar mata Vincent selalu memperhatikan Oriana. Sampai Vincent menyadari sesuatu bahwa yang Oriana cintai dan kejar bukanlah ‘dirinya yang sekarang’…\n\nKeunggulan:\n\n• Berasal dari web novel populer yang diadaptasi jadi light novel dan manga.\n\n• Memadukan unsur time loop, romansa, fantasi, dan sekolah sihir\n\n• Seri ini telah mencapai 2 juta kopi secara kumulatif (cetak + digital) di Jepang\n\n• Pemenang Kodansha Manga Award ke-50 – Kategori Shōjo (2026); Peringkat #3 ebookjapan Manga Award 2024; Pemenang Bookstore Award di ebookjapan Manga Award 2024; Peringkat #14 Kono Manga ga Sugoi! 2025 – kategori Onna-hen; Peringkat #7 Kadocomi Award 2025 – kategori keseluruhan\n\n***",
+      "gramediaUrl": "https://www.gramedia.com/products/reliving-my-life-to-save-you-vol-2",
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from PGI",
@@ -117577,10 +117615,11 @@
       "author": "Eiko Mutsuhana",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 1,
-      "latestVolume": 1,
+      "totalVolumes": 2,
+      "latestVolume": 2,
       "availableVolumes": [
-        1
+        1,
+        2
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/f--75ai---.jpeg",
@@ -124952,6 +124991,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_kagurabachi_07_1794578965",
+      "bookId": "pub_kagurabachi_07",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_vagabond_bind_up_vol_03_init",
       "bookId": "pub_vagabond_bind_up_vol_03",
       "price": 138000,
@@ -125209,6 +125259,17 @@
       "previousPrice": 40000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_bungo_stray_dogs_19_1794578965",
+      "bookId": "pub_level_comic_bungo_stray_dogs_19",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
       "source": "gramedia_api"
     },
     {
@@ -128382,6 +128443,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_one_piece_42_2026_1794578965",
+      "bookId": "pub_one_piece_42_2026",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_hai_miiko_38_reguler_init",
       "bookId": "pub_hai_miiko_38_reguler",
       "price": 28800,
@@ -130475,6 +130547,17 @@
       "previousPrice": 53100,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_fragrant_flower_blooms_with_dignity_kaoru_rin_16_1794578965",
+      "bookId": "pub_the_fragrant_flower_blooms_with_dignity_kaoru_rin_16",
+      "price": 53100,
+      "currentPrice": 53100,
+      "originalPrice": 59000,
+      "previousPrice": 59000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-13",
       "source": "gramedia_api"
     },
     {
@@ -136233,6 +136316,17 @@
       "previousPrice": 19500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-11",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_23_1794578487",
+      "bookId": "pub_detektif_conan_premium_23",
+      "price": 48750,
+      "currentPrice": 48750,
+      "originalPrice": 65000,
+      "previousPrice": 32500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
       "source": "gramedia_api_refresh"
     },
     {
@@ -191912,6 +192006,17 @@
       "originalPrice": 65000,
       "previousPrice": 65000,
       "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_gokurakugai_vol_4_1794578965",
+      "bookId": "pub_gokurakugai_vol_4",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-13",
       "source": "gramedia_api"
     },
@@ -275344,6 +275449,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_demon_slayer_kimetsu_no_yaiba_14_1794578684",
+      "bookId": "pub_demon_slayer_kimetsu_no_yaiba_14",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_fairy_tail_100_years_quest_11_init",
       "bookId": "pub_fairy_tail_100_years_quest_11",
       "price": 36000,
@@ -357141,6 +357257,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_one_piece_43_2026_1794578965",
+      "bookId": "pub_one_piece_43_2026",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_regarding_reincarnated_to_slime_21_init",
       "bookId": "pub_regarding_reincarnated_to_slime_21",
       "price": 35000,
@@ -376685,6 +376812,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_the_quintessential_quintuplets_07_1794578816",
+      "bookId": "pub_the_quintessential_quintuplets_07",
+      "price": 20000,
+      "currentPrice": 20000,
+      "originalPrice": 40000,
+      "previousPrice": 20000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_the_quintessential_quintuplets_vol08_init",
       "bookId": "pub_the_quintessential_quintuplets_vol08",
       "price": 26000,
@@ -380076,6 +380214,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_black_clover_29_1794578965",
+      "bookId": "pub_black_clover_29",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_the_cute_british_girl_next_door_and_her_sister_2_init",
       "bookId": "pub_the_cute_british_girl_next_door_and_her_sister_2",
       "price": 45000,
@@ -380549,6 +380698,17 @@
       "previousPrice": 33750,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-10",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_sakamoto_days_24_1794578965",
+      "bookId": "pub_sakamoto_days_24",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
       "source": "gramedia_api"
     },
     {
@@ -381979,12 +382139,34 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_the_one_within_the_villainess_vol_1_1794578965",
+      "bookId": "pub_the_one_within_the_villainess_vol_1",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "previousPrice": 69500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_hirayasumi_vol_1_init",
       "bookId": "pub_hirayasumi_vol_1",
       "price": 69500,
       "currentPrice": 69500,
       "originalPrice": 69500,
       "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_hirayasumi_vol_1_1794578965",
+      "bookId": "pub_hirayasumi_vol_1",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "previousPrice": 69500,
+      "availability": "AVAILABLE",
       "observedAt": "2026-11-13",
       "source": "gramedia_api"
     },
@@ -381997,9 +382179,50 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-13",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_albus_changes_the_world_3_1794578965",
+      "bookId": "pub_albus_changes_the_world_3",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "previousPrice": 69500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_reliving_my_life_to_save_you_vol_2_init",
+      "bookId": "pub_reliving_my_life_to_save_you_vol_2",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1794578965",
+      "startedAt": "2026-11-13T13:59:24.000Z",
+      "finishedAt": "2026-11-13T14:09:25.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 845,
+      "productsInserted": 3,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 600984,
+      "success": true
+    },
     {
       "id": "sync_1794547757",
       "startedAt": "2026-11-13T05:18:58.000Z",
@@ -382378,26 +382601,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 468398,
-      "success": true
-    },
-    {
-      "id": "sync_1793973475",
-      "startedAt": "2026-11-06T13:48:43.000Z",
-      "finishedAt": "2026-11-06T13:57:55.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1522,
-      "productsAccepted": 1262,
-      "productsRejected": 449,
-      "productsUpdated": 1025,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 551956,
       "success": true
     }
   ]
