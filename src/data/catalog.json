@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-13T14:09:25.000Z",
+  "lastUpdated": "2026-11-13T23:26:01.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -19067,7 +19067,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-10-20",
       "isWednesdayRelease": true,
-      "currentPrice": 29000,
+      "currentPrice": 32000,
       "authors": [
         "Tsukasa Hojo"
       ],
@@ -19084,7 +19084,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 58000,
+      "originalPrice": 64000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -50769,7 +50769,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 40000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -61718,7 +61718,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-03-11",
       "isWednesdayRelease": false,
-      "currentPrice": 36000,
+      "currentPrice": 37500,
       "authors": [
         "Tatsuki Fujimoto"
       ],
@@ -61736,7 +61736,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 48000,
+      "originalPrice": 50000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -70666,7 +70666,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-03-10",
       "isWednesdayRelease": false,
-      "currentPrice": 20000,
+      "currentPrice": 30000,
       "authors": [
         "Ken Wakui"
       ],
@@ -86544,7 +86544,7 @@
       "status": "RELEASED",
       "releaseDate": "2018-04-04",
       "isWednesdayRelease": true,
-      "currentPrice": 29250,
+      "currentPrice": 32500,
       "authors": [
         "Kohei Horikoshi"
       ],
@@ -86561,7 +86561,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 45000,
+      "originalPrice": 50000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -93126,11 +93126,11 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786020421773_one-punch-man-8.jpg",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2017-06-14",
       "isWednesdayRelease": false,
-      "currentPrice": 16000,
-      "originalPrice": 32000,
+      "currentPrice": 12500,
+      "originalPrice": 25000,
       "authors": [
         "One & Yusuke Murata"
       ],
@@ -93666,7 +93666,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230034312_cover_Jojo_s_Bizarre_Adventure_03_Part_1_Phantom_Blood.jpg",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-10-06",
       "isWednesdayRelease": false,
       "currentPrice": 40000,
@@ -161367,6 +161367,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_akasha__city_hunter__complete_edition_06_1794612003",
+      "bookId": "pub_akasha__city_hunter__complete_edition_06",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 64000,
+      "previousPrice": 29000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_akasha__city_hunter__complete_edition_05_init",
       "bookId": "pub_akasha__city_hunter__complete_edition_05",
       "price": 52200,
@@ -227555,6 +227566,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_teasing_master_takagi_3_1794612068",
+      "bookId": "pub_teasing_master_takagi_3",
+      "price": 20000,
+      "currentPrice": 20000,
+      "originalPrice": 40000,
+      "previousPrice": 20000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_2_init",
       "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_2",
       "price": 88200,
@@ -255858,6 +255880,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_akasha_chainsaw_man_07_1794612110",
+      "bookId": "pub_akasha_chainsaw_man_07",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 50000,
+      "previousPrice": 36000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_bocchi_the_rock_01_init",
       "bookId": "pub_bocchi_the_rock_01",
       "price": 40500,
@@ -282342,6 +282375,17 @@
       "previousPrice": 12000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-11",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_level_comic_tokyo_revengers_07_1794612145",
+      "bookId": "pub_level_comic_tokyo_revengers_07",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "previousPrice": 20000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
       "source": "gramedia_api_refresh"
     },
     {
@@ -336560,6 +336604,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_my_hero_academia_04_1794612208",
+      "bookId": "pub_my_hero_academia_04",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 50000,
+      "previousPrice": 29250,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_lc_attack_on_titan_23_init",
       "bookId": "pub_lc_attack_on_titan_23",
       "price": 27000,
@@ -364235,6 +364290,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_one_punch_man_08_1794612225",
+      "bookId": "pub_one_punch_man_08",
+      "price": 12500,
+      "currentPrice": 12500,
+      "originalPrice": 25000,
+      "previousPrice": 16000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-13",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_one_punch_man_11_init",
       "bookId": "pub_one_punch_man_11",
       "price": 24500,
@@ -366109,6 +366175,17 @@
       "previousPrice": 40000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-12",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_03__part_1_phantom_blood_1794612227",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_03__part_1_phantom_blood",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 80000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-13",
       "source": "gramedia_api_refresh"
     },
     {
@@ -382204,6 +382281,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1794612361",
+      "startedAt": "2026-11-13T23:17:48.000Z",
+      "finishedAt": "2026-11-13T23:26:01.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 493697,
+      "success": true
+    },
+    {
       "id": "sync_1794578965",
       "startedAt": "2026-11-13T13:59:24.000Z",
       "finishedAt": "2026-11-13T14:09:25.000Z",
@@ -382581,26 +382678,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 532292,
-      "success": true
-    },
-    {
-      "id": "sync_1794005592",
-      "startedAt": "2026-11-06T22:45:24.000Z",
-      "finishedAt": "2026-11-06T22:53:12.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1522,
-      "productsAccepted": 1262,
-      "productsRejected": 449,
-      "productsUpdated": 1025,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 468398,
       "success": true
     }
   ]
