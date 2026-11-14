@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-13T23:26:01.000Z",
+  "lastUpdated": "2026-11-14T05:19:31.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -10067,7 +10067,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-12-08",
       "isWednesdayRelease": true,
-      "currentPrice": 37500,
+      "currentPrice": 45000,
       "authors": [
         "Hiroyuki Takei"
       ],
@@ -10083,8 +10083,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
-      "originalPrice": 75000,
+      "availability": "AVAILABLE",
+      "originalPrice": 90000,
       "isBindUp": true,
       "bindUpKind": "COMPLETE_EDITION",
       "bindUpLabel": "Complete Edition"
@@ -55937,7 +55937,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -98183,11 +98183,11 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/7e43753d-0133-497c-a3dd-133589029590.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2021-09-08",
       "isWednesdayRelease": false,
-      "currentPrice": 37500,
-      "originalPrice": 75000,
+      "currentPrice": 45000,
+      "originalPrice": 90000,
       "authors": [
         "Hiroyuki Takei"
       ],
@@ -103310,7 +103310,7 @@
       "categorySlugs": "buku/komik/manga/petualangan",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/dzrev0xre1.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-11",
       "isWednesdayRelease": true,
       "currentPrice": 50000,
@@ -146377,6 +146377,17 @@
       "previousPrice": 22500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-11",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_shaman_king_complete_edition_02_1794633092",
+      "bookId": "pub_shaman_king_complete_edition_02",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 90000,
+      "previousPrice": 37500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-14",
       "source": "gramedia_api_refresh"
     },
     {
@@ -239501,6 +239512,17 @@
       "previousPrice": 13500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-11",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_naruto_konoha_s_story_the_steam_ninja_scrolls_02_1794633228",
+      "bookId": "pub_naruto_konoha_s_story_the_steam_ninja_scrolls_02",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 45000,
+      "previousPrice": 22500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-14",
       "source": "gramedia_api_refresh"
     },
     {
@@ -378684,6 +378706,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_shaman_king_complete_edition_01_1794633426",
+      "bookId": "pub_shaman_king_complete_edition_01",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 90000,
+      "previousPrice": 37500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-14",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_shaman_king_complete_edition_09_init",
       "bookId": "pub_shaman_king_complete_edition_09",
       "price": 52000,
@@ -382206,6 +382239,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_kindergarten_wars_03_1794633571",
+      "bookId": "pub_kindergarten_wars_03",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-14",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_the_one_within_the_villainess_vol_1_init",
       "bookId": "pub_the_one_within_the_villainess_vol_1",
       "price": 69500,
@@ -382280,6 +382324,26 @@
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1794633571",
+      "startedAt": "2026-11-14T05:09:16.000Z",
+      "finishedAt": "2026-11-14T05:19:31.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 615740,
+      "success": true
+    },
     {
       "id": "sync_1794612361",
       "startedAt": "2026-11-13T23:17:48.000Z",
@@ -382658,26 +382722,6 @@
       "duplicatesResolved": 18,
       "errors": [],
       "durationMs": 927127,
-      "success": true
-    },
-    {
-      "id": "sync_1794027575",
-      "startedAt": "2026-11-07T04:50:42.000Z",
-      "finishedAt": "2026-11-07T04:59:35.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1522,
-      "productsAccepted": 1262,
-      "productsRejected": 449,
-      "productsUpdated": 1025,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 532292,
       "success": true
     }
   ]
