@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-14T13:10:58.000Z",
+  "lastUpdated": "2026-11-14T22:07:56.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -60648,7 +60648,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -102228,7 +102228,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/z0zdre9sh0.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-12-02",
       "isWednesdayRelease": true,
       "currentPrice": 69500,
@@ -102428,7 +102428,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/5acza02kha.jfif",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-11-18",
       "isWednesdayRelease": true,
       "currentPrice": 45000,
@@ -108168,7 +108168,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/b--hribt4p.jpg",
       "status": "PREORDER",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-12-16",
       "isWednesdayRelease": true,
       "currentPrice": 118000,
@@ -252978,6 +252978,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_yotsuba_07_1794693836",
+      "bookId": "pub_yotsuba_07",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 45000,
+      "previousPrice": 22500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-14",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_lc_aku_no_hana_kembang_jahanam_05_init",
       "bookId": "pub_lc_aku_no_hana_kembang_jahanam_05",
       "price": 45000,
@@ -382038,6 +382049,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_light_novel_who_killed_the_brave_chapter_of_the_brave_1794694076",
+      "bookId": "pub_light_novel_who_killed_the_brave_chapter_of_the_brave",
+      "price": 118000,
+      "currentPrice": 118000,
+      "originalPrice": 118000,
+      "previousPrice": 118000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-14",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_the_summer_hikaru_died_9_init",
       "bookId": "pub_the_summer_hikaru_died_9",
       "price": 69500,
@@ -382219,6 +382241,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_the_summer_hikaru_died_9_1794694076",
+      "bookId": "pub_the_summer_hikaru_died_9",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "previousPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-14",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_one_piece_44_2026_init",
       "bookId": "pub_one_piece_44_2026",
       "price": 45000,
@@ -382332,6 +382365,17 @@
       "previousPrice": 45000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-05",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kiteretsu_daihyakka_03_1794694076",
+      "bookId": "pub_kiteretsu_daihyakka_03",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-14",
       "source": "gramedia_api"
     },
     {
@@ -382710,6 +382754,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1794694076",
+      "startedAt": "2026-11-14T22:00:08.000Z",
+      "finishedAt": "2026-11-14T22:07:56.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 468642,
+      "success": true
+    },
+    {
       "id": "sync_1794661858",
       "startedAt": "2026-11-14T13:01:36.000Z",
       "finishedAt": "2026-11-14T13:10:58.000Z",
@@ -383087,26 +383151,6 @@
       "duplicatesResolved": 12,
       "errors": [],
       "durationMs": 748303,
-      "success": true
-    },
-    {
-      "id": "sync_1794055200",
-      "startedAt": "2026-11-07T12:32:12.000Z",
-      "finishedAt": "2026-11-07T12:40:00.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1522,
-      "productsAccepted": 1262,
-      "productsRejected": 446,
-      "productsUpdated": 1028,
-      "productsInserted": 52,
-      "duplicatesResolved": 18,
-      "errors": [],
-      "durationMs": 467816,
       "success": true
     }
   ]
