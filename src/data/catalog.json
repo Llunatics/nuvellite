@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-15T05:11:36.000Z",
+  "lastUpdated": "2026-11-15T13:38:52.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -5432,7 +5432,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-05-13",
       "isWednesdayRelease": false,
-      "currentPrice": 48750,
+      "currentPrice": 32500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -101602,7 +101602,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
-      "currentPrice": 70000,
+      "currentPrice": 52500,
       "originalPrice": 70000,
       "authors": [
         "Masami Kurumada"
@@ -136481,6 +136481,17 @@
       "previousPrice": 32500,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-13",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_23_1794749497",
+      "bookId": "pub_detektif_conan_premium_23",
+      "price": 32500,
+      "currentPrice": 32500,
+      "originalPrice": 65000,
+      "previousPrice": 48750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-15",
       "source": "gramedia_api_refresh"
     },
     {
@@ -381022,6 +381033,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_saint_seiya_final_edition_01_1794749932",
+      "bookId": "pub_saint_seiya_final_edition_01",
+      "price": 52500,
+      "currentPrice": 52500,
+      "originalPrice": 70000,
+      "previousPrice": 70000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-15",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_yuru_camp_kemah_santai_gadis_sma_vol_1_init",
       "bookId": "pub_yuru_camp_kemah_santai_gadis_sma_vol_1",
       "price": 55000,
@@ -382765,6 +382787,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1794749932",
+      "startedAt": "2026-11-15T13:29:36.000Z",
+      "finishedAt": "2026-11-15T13:38:52.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 556549,
+      "success": true
+    },
+    {
       "id": "sync_1794719496",
       "startedAt": "2026-11-15T05:01:24.000Z",
       "finishedAt": "2026-11-15T05:11:36.000Z",
@@ -383142,26 +383184,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 557477,
-      "success": true
-    },
-    {
-      "id": "sync_1794113417",
-      "startedAt": "2026-11-08T04:42:21.000Z",
-      "finishedAt": "2026-11-08T04:50:17.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1516,
-      "productsAccepted": 1316,
-      "productsRejected": 618,
-      "productsUpdated": 846,
-      "productsInserted": 6,
-      "duplicatesResolved": 1,
-      "errors": [],
-      "durationMs": 475864,
       "success": true
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-15T05:11:36.000Z",
+  "lastUpdated": "2026-11-15T13:38:52.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -4672,7 +4672,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/a534rkf8iu.jpg",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 48750,
+      "currentPrice": 32500,
       "originalPrice": 65000,
       "releaseDate": "2025-05-13",
       "isWednesdayRelease": false,
@@ -87368,7 +87368,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/nia-i806ee.jpg",
       "status": "PUBLISHED",
       "availability": "AVAILABLE",
-      "currentPrice": 70000,
+      "currentPrice": 52500,
       "originalPrice": 70000,
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
