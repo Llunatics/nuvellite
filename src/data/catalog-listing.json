@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-14T22:07:56.000Z",
+  "lastUpdated": "2026-11-15T05:11:36.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -59654,7 +59654,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2023/3/29/agz6otucbyb7izqsqxbks8.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 22500,
       "originalPrice": 45000,
       "releaseDate": "2023-03-29",
