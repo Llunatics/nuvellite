@@ -7,6 +7,8 @@ import { CoverImage } from './cover-image';
 import { Book } from '@/lib/types';
 import { formatRupiah, formatDateWIB } from '@/lib/formatters';
 import { useCollection } from '@/hooks/use-collection';
+import { Tilt } from '@/components/bencho/tilt';
+import { Badge } from '@/components/arc/badge/badge';
 
 interface ReleaseCardProps {
   book: Book;
@@ -98,92 +100,93 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
   // Standard Editorial Bookshelf Card
   return (
     <div className="group flex flex-col transition-all duration-200">
-      {/* 1. Physical Book Cover Frame with specular lighting and hover lift */}
-      <div className="relative aspect-[3/4.2] w-full rounded-2xl overflow-hidden bg-surface-sunken book-cover-elevated">
-        <Link href={`/books/${book.slug}`} className="block w-full h-full" tabIndex={-1} aria-hidden="true">
-          <CoverImage
-            src={book.coverImage}
-            alt={book.title}
-            width={184}
-            height={258}
-            sizes="(max-width: 640px) 160px, (max-width: 1024px) 190px, 220px"
-            imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-          />
-        </Link>
+      {/* 1. Physical Book Cover Frame with Bencho Tilt on catalog covers */}
+      <Tilt tilt={10} shade={60} corner={20} className="w-full">
+        <div className="relative aspect-[3/4.2] w-full rounded-[20px] overflow-hidden bg-surface-sunken book-cover-elevated">
+          <Link href={`/books/${book.slug}`} className="block w-full h-full" tabIndex={-1} aria-hidden="true">
+            <CoverImage
+              src={book.coverImage}
+              alt={book.title}
+              width={184}
+              height={258}
+              sizes="(max-width: 640px) 160px, (max-width: 1024px) 190px, 220px"
+              imgClassName="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+            />
+          </Link>
 
-        {/* Floating Top Left: Format Capsule Badge */}
-        <div className="absolute top-2 left-2 z-10 pointer-events-none">
-          <span
-            className={`px-2 py-0.5 rounded-full text-[8.5px] font-mono font-medium tracking-wide uppercase border border-white/10 bg-black/75 ${
-              book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
-            }`}
-          >
-            {book.category}
-          </span>
-        </div>
-
-        {/* Floating Top Right: Volume Capsule Badge */}
-        {book.volume !== null && book.volume !== undefined && (
-          <div className="absolute top-2 right-2 z-10 pointer-events-none">
-            <span className="px-2 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/75 border border-white/10 text-zinc-100">
-              Vol. {book.volume}
+          {/* Floating Top Left: Format Capsule Badge */}
+          <div className="absolute top-2 left-2 z-10 pointer-events-none">
+            <span
+              className={`px-2 py-0.5 rounded-full text-[8.5px] font-mono font-medium tracking-wide uppercase border border-white/10 bg-black/75 ${
+                book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
+              }`}
+            >
+              {book.category}
             </span>
           </div>
-        )}
 
-        {/* Status indicator: Preorder (takes precedence) or Out of stock */}
-        {(book.status === 'PREORDER' || book.availability === 'OUT_OF_STOCK') && (
-          <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
-            {book.status === 'PREORDER' ? (
-              <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-bold uppercase tracking-wider bg-accent text-white">
-                PRE-ORDER
+          {/* Floating Top Right: Volume Capsule Badge */}
+          {book.volume !== null && book.volume !== undefined && (
+            <div className="absolute top-2 right-2 z-10 pointer-events-none">
+              <span className="px-2 py-0.5 rounded-full text-[9px] font-mono font-medium tracking-wider bg-black/75 border border-white/10 text-zinc-100">
+                Vol. {book.volume}
               </span>
-            ) : (
-              <span className="px-2 py-0.5 rounded-full text-[7.5px] font-mono font-semibold uppercase tracking-wider bg-zinc-950/90 text-zinc-300 border border-white/10">
-                HABIS
-              </span>
-            )}
+            </div>
+          )}
+
+          {/* Status indicator: Preorder (takes precedence) or Out of stock */}
+          {(book.status === 'PREORDER' || book.availability === 'OUT_OF_STOCK') && (
+            <div className="absolute bottom-2 left-2 z-10 pointer-events-none">
+              <Badge
+                tone={book.status === 'PREORDER' ? 'info' : 'neutral'}
+                size="sm"
+                pill
+                className={book.status === 'PREORDER' ? 'bg-accent text-white font-mono text-[7.5px]' : 'bg-zinc-950/90 text-zinc-300 border border-white/10 font-mono text-[7.5px]'}
+              >
+                {book.status === 'PREORDER' ? 'PRE-ORDER' : 'HABIS'}
+              </Badge>
+            </div>
+          )}
+
+          {/* Floating Quick Action Overlays on Cover (Appear on Hover on Desktop) */}
+          <div className="absolute bottom-2 right-2 z-20 hidden sm:flex items-center gap-1 sm:opacity-0 sm:group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-200">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleWishlist(book.id, book.seriesId || undefined);
+              }}
+              className={`w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all active:scale-90 ${
+                wishlisted
+                  ? 'bg-accent text-white shadow-md'
+                  : 'bg-black/60 hover:bg-black/80 text-white/80 hover:text-white border border-white/15'
+              }`}
+              aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+              title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
+            >
+              <Bookmark className={`w-3.5 h-3.5 ${wishlisted ? 'fill-current' : ''}`} />
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleOwned(book.id, book.seriesId || undefined);
+              }}
+              className={`w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all active:scale-90 ${
+                owned
+                  ? 'bg-accent text-white shadow-md'
+                  : 'bg-black/60 hover:bg-black/80 text-white/80 hover:text-white border border-white/15'
+              }`}
+              aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
+              title={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
+            >
+              {owned ? <Check className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
+            </button>
           </div>
-        )}
-
-        {/* Floating Quick Action Overlays on Cover (Appear on Hover on Desktop) */}
-        <div className="absolute bottom-2 right-2 z-20 hidden sm:flex items-center gap-1 sm:opacity-0 sm:group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-200">
-          <button
-            type="button"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              toggleWishlist(book.id, book.seriesId || undefined);
-            }}
-            className={`w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all active:scale-90 ${
-              wishlisted
-                ? 'bg-accent text-white shadow-md'
-                : 'bg-black/60 hover:bg-black/80 text-white/80 hover:text-white border border-white/15'
-            }`}
-            aria-label={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
-            title={wishlisted ? 'Hapus dari Wishlist' : 'Tambah ke Wishlist'}
-          >
-            <Bookmark className={`w-3.5 h-3.5 ${wishlisted ? 'fill-current' : ''}`} />
-          </button>
-          <button
-            type="button"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              toggleOwned(book.id, book.seriesId || undefined);
-            }}
-            className={`w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-all active:scale-90 ${
-              owned
-                ? 'bg-accent text-white shadow-md'
-                : 'bg-black/60 hover:bg-black/80 text-white/80 hover:text-white border border-white/15'
-            }`}
-            aria-label={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
-            title={owned ? 'Sudah Dimiliki' : 'Tambah ke Koleksi'}
-          >
-            {owned ? <Check className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
-          </button>
         </div>
-      </div>
+      </Tilt>
 
       {/* 2. Editorial Typography & Metadata (Pure hierarchy, zero boxing) */}
       <div className="pt-3.5 pb-1 flex-1 flex flex-col justify-between">

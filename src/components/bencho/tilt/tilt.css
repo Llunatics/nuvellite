@@ -1,0 +1,36 @@
+.tlt {
+  position: relative;
+  display: block;
+}
+
+@media (hover: hover) {
+  .tlt {
+    perspective: 800px;
+  }
+}
+
+.tlt-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+}
+
+.tlt-sheen {
+  border-radius: inherit;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tlt-card {
+    transform: none !important;
+  }
+  .tlt-sheen {
+    display: none !important;
+  }
+}

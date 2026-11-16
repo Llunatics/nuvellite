@@ -17,7 +17,13 @@ import {
   Sparkles,
   BookOpen,
   ArrowRight,
+  Table as TableIcon,
+  LayoutGrid,
 } from 'lucide-react';
+import { EmptyState } from '@/components/arc/empty-state/empty-state';
+import { SortableDataTable, type DataColumn } from '@/components/arc/sortable-data-table/sortable-data-table';
+import { Button } from '@/components/arc/button/button';
+import { formatRupiah } from '@/lib/formatters';
 
 interface LibraryViewProps {
   allBooks: Book[];
@@ -38,7 +44,78 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
 
   const [activeTab, setActiveTab] = useState<'OWNED' | 'WISHLIST' | 'SERIES' | 'MISSING'>('OWNED');
   const [formatFilter, setFormatFilter] = useState<'ALL' | 'Manga' | 'Light Novel'>('ALL');
+  const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
   const [importStatus, setImportStatus] = useState<string | null>(null);
+
+  interface LibraryTableRow extends Record<string, unknown> {
+    id: string;
+    slug: string;
+    title: string;
+    publisher: string;
+    category: string;
+    volume: string;
+    price: number;
+    priceFormatted: string;
+  }
+
+  const tableColumns: DataColumn<LibraryTableRow>[] = useMemo(
+    () => [
+      {
+        key: 'title',
+        label: 'Judul Buku',
+        sortable: true,
+        render: (_val, row) => (
+          <Link href={`/books/${row.slug}`} className="hover:text-accent font-medium text-editorial-title block truncate">
+            {row.title}
+          </Link>
+        ),
+      },
+      {
+        key: 'publisher',
+        label: 'Penerbit',
+        sortable: true,
+        width: 140,
+        render: (_val, row) => <span className="font-mono text-xs text-editorial-muted">{row.publisher}</span>,
+      },
+      {
+        key: 'category',
+        label: 'Kategori',
+        sortable: true,
+        width: 130,
+        render: (_val, row) => <span className="text-xs text-editorial-muted">{row.category}</span>,
+      },
+      {
+        key: 'volume',
+        label: 'Vol',
+        sortable: true,
+        width: 90,
+        render: (_val, row) => <span className="font-mono text-xs text-editorial-title">{row.volume}</span>,
+      },
+      {
+        key: 'price',
+        label: 'Harga',
+        numeric: true,
+        sortable: true,
+        width: 130,
+        render: (_val, row) => (
+          <span className="font-mono text-xs font-semibold text-editorial-title">{row.priceFormatted}</span>
+        ),
+      },
+    ],
+    [],
+  );
+
+  const getTableRows = (books: Book[]): LibraryTableRow[] =>
+    books.map((b) => ({
+      id: b.id,
+      slug: b.slug,
+      title: b.title,
+      publisher: b.publisherShortName || 'Penerbit',
+      category: b.category,
+      volume: b.volume != null ? `Vol. ${b.volume}` : '—',
+      price: b.currentPrice,
+      priceFormatted: formatRupiah(b.currentPrice),
+    }));
 
   // Map book IDs to Book objects
   const bookMap = useMemo(() => {
@@ -280,22 +357,49 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
           )}
         </div>
 
-        {/* Format Filter — full width, equal columns */}
-        <div className="grid grid-cols-3 gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
-          {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
+        {/* Format Filter & View Mode Toggle */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+          <div className="grid grid-cols-3 gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.06] flex-1">
+            {(['ALL', 'Manga', 'Light Novel'] as const).map((fmt) => (
+              <button
+                key={fmt}
+                type="button"
+                onClick={() => setFormatFilter(fmt)}
+                className={`py-2 rounded-full font-medium transition-all text-center truncate ${
+                  formatFilter === fmt
+                    ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
+                    : 'text-editorial-muted hover:text-editorial-title'
+                }`}
+              >
+                {fmt === 'ALL' ? 'Semua' : fmt}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-1 p-1 rounded-full bg-white/[0.03] border border-white/[0.06] self-end sm:self-auto shrink-0">
             <button
-              key={fmt}
               type="button"
-              onClick={() => setFormatFilter(fmt)}
-              className={`py-2 rounded-full font-medium transition-all text-center truncate ${
-                formatFilter === fmt
-                  ? 'bg-white/[0.1] text-editorial-title font-semibold shadow-xs'
-                  : 'text-editorial-muted hover:text-editorial-title'
+              onClick={() => setViewMode('grid')}
+              className={`p-1.5 rounded-full transition-all ${
+                viewMode === 'grid' ? 'bg-white/[0.12] text-editorial-title' : 'text-editorial-muted hover:text-editorial-title'
               }`}
+              title="Tampilan Grid"
+              aria-label="Tampilan Grid"
             >
-              {fmt === 'ALL' ? 'Semua' : fmt}
+              <LayoutGrid className="w-4 h-4" />
             </button>
-          ))}
+            <button
+              type="button"
+              onClick={() => setViewMode('table')}
+              className={`p-1.5 rounded-full transition-all ${
+                viewMode === 'table' ? 'bg-white/[0.12] text-editorial-title' : 'text-editorial-muted hover:text-editorial-title'
+              }`}
+              title="Tampilan Tabel (Arc)"
+              aria-label="Tampilan Tabel"
+            >
+              <TableIcon className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -303,19 +407,27 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
       {activeTab === 'OWNED' && (
         <div>
           {ownedBooks.length === 0 ? (
-            <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
-              <BookOpen className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
-              <h3 className="text-sm font-medium text-editorial-title">Belum ada buku di koleksi</h3>
-              <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-                Tekan tombol (+) di kartu buku untuk menandai volume yang sudah dimiliki.
-              </p>
-              <Link
-                href="/"
-                className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-white text-black text-xs font-medium hover:bg-slate-100 transition-all mt-2"
-              >
-                <span>Jelajahi Katalog</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+            <EmptyState
+              title="Belum Ada Buku di Koleksi"
+              description="Tekan tombol (+) di kartu buku untuk menandai volume yang sudah dimiliki."
+              icon={<BookOpen className="w-8 h-8 text-editorial-muted" />}
+              action={
+                <Link href="/">
+                  <Button variant="primary" size="md">
+                    Jelajahi Katalog
+                  </Button>
+                </Link>
+              }
+            />
+          ) : viewMode === 'table' ? (
+            <div className="w-full overflow-x-auto min-w-0 rounded-2xl border border-white/[0.06] bg-surface-sunken/40">
+              <SortableDataTable<LibraryTableRow>
+                rows={getTableRows(ownedBooks)}
+                columns={tableColumns}
+                rowKey="id"
+                defaultSort={{ key: 'title', direction: 'asc' }}
+                caption="Daftar Koleksi Buku Dimiliki"
+              />
             </div>
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
@@ -330,12 +442,27 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
       {activeTab === 'WISHLIST' && (
         <div>
           {wishlistBooks.length === 0 ? (
-            <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
-              <Bookmark className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
-              <h3 className="text-sm font-medium text-editorial-title">Belum ada buku di wishlist</h3>
-              <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-                Tekan ikon bookmark di kartu buku untuk menyimpan judul incaran.
-              </p>
+            <EmptyState
+              title="Belum Ada Buku di Wishlist"
+              description="Tekan ikon bookmark di kartu buku untuk menyimpan judul incaran."
+              icon={<Bookmark className="w-8 h-8 text-editorial-muted" />}
+              action={
+                <Link href="/">
+                  <Button variant="primary" size="md">
+                    Cari Buku Incaran
+                  </Button>
+                </Link>
+              }
+            />
+          ) : viewMode === 'table' ? (
+            <div className="w-full overflow-x-auto min-w-0 rounded-2xl border border-white/[0.06] bg-surface-sunken/40">
+              <SortableDataTable<LibraryTableRow>
+                rows={getTableRows(wishlistBooks)}
+                columns={tableColumns}
+                rowKey="id"
+                defaultSort={{ key: 'title', direction: 'asc' }}
+                caption="Daftar Wishlist Buku"
+              />
             </div>
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
@@ -350,13 +477,18 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
       {activeTab === 'SERIES' && (
         <div>
           {trackedSeries.length === 0 ? (
-            <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
-              <Layers className="w-10 h-10 text-editorial-faint mx-auto stroke-1" />
-              <h3 className="text-sm font-medium text-editorial-title">Belum ada seri yang terlacak</h3>
-              <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-                Seri muncul di sini setelah ada volume yang ditandai dimiliki.
-              </p>
-            </div>
+            <EmptyState
+              title="Belum Ada Seri Terlacak"
+              description="Seri muncul di sini setelah ada volume yang ditandai dimiliki."
+              icon={<Layers className="w-8 h-8 text-editorial-muted" />}
+              action={
+                <Link href="/series">
+                  <Button variant="primary" size="md">
+                    Buka Direktori Seri
+                  </Button>
+                </Link>
+              }
+            />
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {trackedSeries.map((series) => {
@@ -377,12 +509,27 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
       {activeTab === 'MISSING' && (
         <div>
           {missingBooks.length === 0 ? (
-            <div className="py-24 text-center rounded-3xl bg-white/[0.02] border border-white/[0.04] space-y-3">
-              <Sparkles className="w-10 h-10 text-emerald-400 mx-auto stroke-1" />
-              <h3 className="text-sm font-medium text-editorial-title">Koleksi serimu lengkap!</h3>
-              <p className="text-xs text-editorial-muted max-w-sm mx-auto">
-                Tidak ada volume yang terlewat dari seri yang kamu ikuti.
-              </p>
+            <EmptyState
+              title="Koleksi Serimu Lengkap!"
+              description="Tidak ada volume yang terlewat dari seri yang kamu ikuti."
+              icon={<Sparkles className="w-8 h-8 text-emerald-400" />}
+              action={
+                <Link href="/">
+                  <Button variant="primary" size="md">
+                    Jelajahi Rilisan Baru
+                  </Button>
+                </Link>
+              }
+            />
+          ) : viewMode === 'table' ? (
+            <div className="w-full overflow-x-auto min-w-0 rounded-2xl border border-white/[0.06] bg-surface-sunken/40">
+              <SortableDataTable<LibraryTableRow>
+                rows={getTableRows(missingBooks)}
+                columns={tableColumns}
+                rowKey="id"
+                defaultSort={{ key: 'title', direction: 'asc' }}
+                caption="Daftar Volume Terlewat"
+              />
             </div>
           ) : (
             <div className="space-y-6">

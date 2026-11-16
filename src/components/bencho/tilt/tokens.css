@@ -1,0 +1,5 @@
+:root {
+  --bencho-perspective: 800px;
+  --bencho-tilt-max: 10deg;
+  --bencho-sink: 14px;
+}

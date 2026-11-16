@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { Search, X, BookOpen, ArrowLeft, ChevronDown } from 'lucide-react';
 import { Book } from '@/lib/types';
 import { ReleaseCard } from '@/components/books/release-card';
+import { SearchField } from '@/components/arc/search-field/search-field';
+import { Button } from '@/components/arc/button/button';
 
 const PAGE_SIZE = 36;
 
@@ -163,37 +165,23 @@ export function SearchResultsView({ allBooks, popularTags }: SearchResultsViewPr
         </div>
 
         {/* Search Bar Form */}
-        <form onSubmit={handleSubmit} className="relative flex items-center gap-2">
-          <div className="relative flex-1">
-            <Search className="w-4 h-4 text-editorial-muted absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
-            <input
-              type="text"
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <div className="flex-1 min-w-0">
+            <SearchField
+              label="Pencarian Katalog"
               value={inputVal}
-              onChange={(e) => setInputVal(e.target.value)}
+              onValueChange={(val) => setInputVal(val)}
               placeholder="Ketik judul komik, light novel, pengarang, ISBN..."
-              className="w-full pl-11 pr-10 py-3 rounded-full bg-white/[0.03] hover:bg-white/[0.05] focus:bg-white/[0.07] border border-white/[0.08] focus:border-white/[0.18] text-xs sm:text-sm text-editorial-title placeholder:text-editorial-faint focus:outline-none transition-all shadow-inner font-sans"
-              autoFocus={!activeQuery}
             />
-            {inputVal && (
-              <button
-                type="button"
-                onClick={() => {
-                  setInputVal('');
-                  updateUrlParams('', formatFilter, pubFilter, sortBy);
-                }}
-                className="p-1 rounded-full text-editorial-faint hover:text-editorial-title absolute right-3.5 top-1/2 -translate-y-1/2"
-                aria-label="Bersihkan pencarian"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            )}
           </div>
-          <button
+          <Button
             type="submit"
-            className="px-6 py-3 rounded-full bg-white text-black font-medium text-xs shadow-sm hover:bg-slate-100 transition-all shrink-0 active:scale-95"
+            variant="primary"
+            size="md"
+            className="shrink-0"
           >
             Cari
-          </button>
+          </Button>
         </form>
 
         {/* Popular Tags */}

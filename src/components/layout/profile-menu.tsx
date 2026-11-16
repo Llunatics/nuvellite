@@ -69,6 +69,40 @@ export function ProfileMenu() {
   const activeAccentLabel =
     ACCENT_THEMES.find((t) => t.id === accent)?.label ?? '';
 
+  // Theme switch with §4 View Transition circle reveal pattern
+  const handleThemeSwitch = (nextTheme: 'dark' | 'light', event?: React.MouseEvent) => {
+    if (theme === nextTheme) return;
+    const isReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (typeof document === 'undefined' || !('startViewTransition' in document) || isReducedMotion) {
+      setTheme(nextTheme);
+      return;
+    }
+
+    const x = event?.clientX ?? window.innerWidth / 2;
+    const y = event?.clientY ?? window.innerHeight / 2;
+    const endRadius = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+
+    const transition = (document as any).startViewTransition(() => {
+      setTheme(nextTheme);
+    });
+
+    transition.ready?.then(() => {
+      document.documentElement.animate(
+        {
+          clipPath: [
+            `circle(0% at ${x}px ${y}px)`,
+            `circle(${endRadius * 1.5}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration: 700,
+          easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          pseudoElement: '::view-transition-new(root)',
+        }
+      );
+    });
+  };
+
   return (
     <div ref={rootRef} className="relative">
       {/* Avatar trigger */}
@@ -249,7 +283,7 @@ export function ProfileMenu() {
                   <div className="grid grid-cols-2 p-1 rounded-full bg-surface-sunken border border-white/[0.06] mt-1.5">
                     <button
                       type="button"
-                      onClick={() => setTheme('dark')}
+                      onClick={(e) => handleThemeSwitch('dark', e)}
                       className={`flex items-center justify-center gap-1.5 py-1.5 rounded-full text-xs transition-all ${
                         mounted && theme === 'dark'
                           ? 'bg-white/[0.09] text-editorial-title font-semibold'
@@ -260,7 +294,7 @@ export function ProfileMenu() {
                     </button>
                     <button
                       type="button"
-                      onClick={() => setTheme('light')}
+                      onClick={(e) => handleThemeSwitch('light', e)}
                       className={`flex items-center justify-center gap-1.5 py-1.5 rounded-full text-xs transition-all ${
                         mounted && theme === 'light'
                           ? 'bg-white/[0.09] text-editorial-title font-semibold'

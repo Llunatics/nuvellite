@@ -8,6 +8,7 @@ import { Series } from '@/lib/types';
 import { useCollection } from '@/hooks/use-collection';
 import { loadPersistedViewState, savePersistedViewState, syncUrlQuery } from '@/lib/filter-persistence';
 import { Layers, Search, BookOpen, X, ArrowRight, ChevronDown, ChevronLeft, ChevronRight, SlidersHorizontal, Check } from 'lucide-react';
+import { DigitSwap } from '@/components/motion/digit-swap';
 
 function getSeriesMonogram(name: string): string {
   const clean = name.replace(/^[^a-zA-Z0-9]+/, '');
@@ -456,7 +457,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
         </h1>
 
         <p className="mt-4 sm:mt-5 text-sm sm:text-base text-editorial-body leading-[1.7] max-w-2xl font-sans">
-          Daftar lengkap seri komik dan light novel dari Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia — {allSeries.length.toLocaleString('id-ID')} seri terdaftar termasuk arsip terbitan lama.
+          Daftar lengkap seri komik dan light novel dari Elex Media Komputindo, m&amp;c!, dan Phoenix Gramedia Indonesia — <span className="font-semibold text-editorial-title"><DigitSwap value={allSeries.length.toLocaleString('id-ID')} /></span> seri terdaftar termasuk arsip terbitan lama.
         </p>
 
         <div className="pt-2">

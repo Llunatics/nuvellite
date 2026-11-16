@@ -46,6 +46,7 @@ const listeners = new Set<() => void>();
 function applyToDocument(next: ThemeState) {
   if (typeof document === 'undefined') return;
   document.documentElement.classList.toggle('light', next.theme === 'light');
+  document.documentElement.setAttribute('data-theme', next.theme);
   document.documentElement.setAttribute('data-accent', next.accent);
 }
 

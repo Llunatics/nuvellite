@@ -17,6 +17,7 @@ import { loadPersistedViewState, savePersistedViewState, syncUrlQuery } from '@/
 import { ReleaseCard } from '@/components/books/release-card';
 import { FeaturedReleaseCard } from '@/components/books/card-variants';
 import { useCollection } from '@/hooks/use-collection';
+import { DigitSwap } from '@/components/motion/digit-swap';
 
 const PAGE_SIZE = 36;
 
@@ -403,7 +404,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
             <div className="flex items-baseline gap-1.5">
               <dt className="sr-only">Judul terarsip</dt>
               <dd className="font-semibold text-editorial-title">
-                {archiveStats.titles.toLocaleString('id-ID')}
+                <DigitSwap value={archiveStats.titles.toLocaleString('id-ID')} />
               </dd>
               <dd>judul terarsip</dd>
             </div>
@@ -411,7 +412,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
             <div className="flex items-baseline gap-1.5">
               <dt className="sr-only">Seri</dt>
               <dd className="font-semibold text-editorial-title">
-                {archiveStats.series.toLocaleString('id-ID')}
+                <DigitSwap value={archiveStats.series.toLocaleString('id-ID')} />
               </dd>
               <dd>seri</dd>
             </div>
@@ -419,7 +420,7 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
             <div className="flex items-baseline gap-1.5">
               <dt className="sr-only">Penerbit</dt>
               <dd className="font-semibold text-editorial-title">
-                {archiveStats.publishers.toLocaleString('id-ID')}
+                <DigitSwap value={archiveStats.publishers.toLocaleString('id-ID')} />
               </dd>
               <dd>penerbit</dd>
             </div>
