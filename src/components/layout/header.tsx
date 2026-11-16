@@ -60,10 +60,10 @@ export function Header() {
         <div
           data-testid="header-bar"
           data-scrolled={isScrolled ? 'true' : 'false'}
-          className="max-w-6xl mx-auto w-full grid grid-cols-[1fr_auto_1fr] md:grid-cols-[auto_1fr_auto_auto] items-center gap-3 sm:gap-4 md:gap-2.5"
+          className="max-w-6xl mx-auto w-full flex items-center justify-center md:grid md:grid-cols-[auto_1fr_auto] gap-3 sm:gap-4 md:gap-8"
         >
           {/* Brand Identity */}
-          <div className="order-2 md:order-1 flex items-center shrink-0 justify-self-center md:justify-self-start">
+          <div className="flex items-center shrink-0 md:justify-self-start">
             <Link
               href="/"
               className="inline-flex items-center gap-2 group focus:outline-none"
@@ -77,7 +77,7 @@ export function Header() {
           </div>
 
           {/* Desktop Center Floating Pill Navigation */}
-          <nav className="hidden md:flex md:order-2 items-center justify-self-center gap-1 p-1 rounded-full bg-surface-sunken/40 border border-white/[0.04] [.light_&]:border-black/[0.04]">
+          <nav className="hidden md:flex items-center justify-self-center gap-1 p-1 rounded-full bg-surface-sunken/40 border border-white/[0.04] [.light_&]:border-black/[0.04]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -93,8 +93,8 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Mobile left zone: search (brand stays dead-center in the middle column) */}
-          <div className="order-1 md:order-3 flex items-center justify-self-start md:justify-self-end">
+          {/* Right Action Controls / Mobile Centered Sibling */}
+          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0 md:justify-self-end">
             {/* Minimal Command Palette Trigger */}
             <button
               type="button"
@@ -117,11 +117,9 @@ export function Header() {
                 ⌘K
               </kbd>
             </button>
-          </div>
 
-          {/* Mobile right zone: profile */}
-          <div className="order-3 md:order-4 flex items-center justify-self-end">
             <ProfileMenu />
+
           </div>
         </div>
       </header>
