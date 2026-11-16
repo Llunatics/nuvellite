@@ -51,11 +51,11 @@
        6 selectable accents, whisper borders, pill/squircle radii, serif
        display type. Round 2's locked lime wireframe is superseded (S-01..S-03). */
     --bg-rgb: 9 10 14;
-    --surface-rgb: 15 17 23;
-    --surface-elevated-rgb: 22 25 34;
-    --surface-raised-rgb: 22 25 34;
-    --surface-sunken-rgb: 6 7 10;
-    --surface-overlay-rgb: 17 20 28;
+    --surface-rgb: 13 20 32;
+    --surface-elevated-rgb: 19 28 43;
+    --surface-raised-rgb: 19 28 43;
+    --surface-sunken-rgb: 5 8 14;
+    --surface-overlay-rgb: 15 23 36;
 
     /* 1px architectural borders */
     --border-subtle: rgba(255, 255, 255, 0.05);
@@ -69,14 +69,14 @@
     --editorial-faint: #475569;
 
     /* Material Level B: Soft Glass */
-    --soft-glass-bg: rgba(15, 18, 25, 0.62);
+    --soft-glass-bg: rgba(13, 20, 32, 0.62);
     --soft-glass-border: rgba(255, 255, 255, 0.06);
     --soft-glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
     --soft-glass-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
 
     /* Material Level C: Liquid Glass */
-    --liquid-glass-bg: rgba(14, 17, 24, 0.78);
-    --liquid-glass-bg-hover: rgba(20, 24, 34, 0.88);
+    --liquid-glass-bg: rgba(13, 20, 32, 0.78);
+    --liquid-glass-bg-hover: rgba(19, 28, 43, 0.88);
     --liquid-glass-border: rgba(255, 255, 255, 0.07);
     --liquid-glass-border-hover: rgba(255, 255, 255, 0.12);
     --liquid-glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.10);
@@ -98,9 +98,9 @@
 
     /* Arc Dual-Mode Tokens (Dark Default: Azure) */
     --background: #090a0e;
-    --surface: #0f1117;
-    --surface-raised: #161922;
-    --surface-muted: #1a1d26;
+    --surface: #0d1420;
+    --surface-raised: #131c2b;
+    --surface-muted: #162032;
     --foreground: #f8fafc;
     --text-secondary: #94a3b8;
     --text-muted: #64748b;

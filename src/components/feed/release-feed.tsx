@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { Book, Publisher } from '@/lib/types';
 import { loadPersistedViewState, savePersistedViewState, syncUrlQuery } from '@/lib/filter-persistence';
+import { AnimatePresence, MotionConfig, motion } from 'motion/react';
 import { ReleaseCard } from '@/components/books/release-card';
 import { FeaturedReleaseCard } from '@/components/books/card-variants';
 import { useCollection } from '@/hooks/use-collection';
@@ -444,7 +445,28 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           onMouseLeave={() => setSpotlightPaused(false)}
         >
           <div ref={featuredInnerRef} className="space-y-3 origin-top will-change-[transform,opacity]">
-            <FeaturedReleaseCard key={activeSpotlight.id} book={activeSpotlight} />
+            {/* Spotlight swap: true crossfade — the outgoing card glides out while
+                the incoming one rises in (Arc enter easing [.16,1,.3,1], 0.6s).
+                popLayout keeps the layout stable mid-swap so the page below never
+                jumps; MotionConfig honors prefers-reduced-motion. */}
+            <MotionConfig reducedMotion="user">
+              <AnimatePresence mode="popLayout" initial={false}>
+                <motion.div
+                  key={activeSpotlight.id}
+                  initial={{ opacity: 0, y: 32, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{
+                    opacity: 0,
+                    y: -20,
+                    scale: 0.98,
+                    transition: { duration: 0.32, ease: [0.4, 0, 1, 1] },
+                  }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <FeaturedReleaseCard book={activeSpotlight} />
+                </motion.div>
+              </AnimatePresence>
+            </MotionConfig>
 
             {/* Minimal Spotlight Pagination */}
             {spotlightBooks.length > 1 && (

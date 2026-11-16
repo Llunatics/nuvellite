@@ -110,17 +110,17 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --background: oklch(19% 0 0);
-  --surface: oklch(21.5% 0 0);
-  --surface-raised: oklch(24% 0 0);
+  --background: oklch(19% 0.014 255);
+  --surface: oklch(21.5% 0.025 252);
+  --surface-raised: oklch(24% 0.025 252);
   /* Keep muted surfaces and hover states distinct from the base surface in dark mode. */
-  --surface-muted: oklch(26% 0 0);
+  --surface-muted: oklch(26% 0.025 252);
   --foreground: oklch(96% 0 0);
   --text-secondary: oklch(77% 0 0);
   --text-muted: oklch(64% 0 0);
-  --border: oklch(29% 0 0);
-  --border-subtle: oklch(25% 0 0);
-  --border-strong: oklch(40% 0 0);
+  --border: oklch(29% 0.012 252);
+  --border-subtle: oklch(25% 0.012 252);
+  --border-strong: oklch(40% 0.012 252);
   --focus-ring: transparent;
   --accent: oklch(80% 0 0);
   --accent-strong: oklch(91% 0 0);
