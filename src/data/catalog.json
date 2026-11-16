@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-16T05:07:52.000Z",
+  "lastUpdated": "2026-11-16T15:06:13.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -47850,7 +47850,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-02-19",
       "isWednesdayRelease": true,
-      "currentPrice": 22500,
+      "currentPrice": 38250,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -47866,7 +47866,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -97139,7 +97139,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2019-04-03",
       "isWednesdayRelease": false,
       "currentPrice": 26000,
@@ -103497,7 +103497,7 @@
       "publisherName": "Phoenix Gramedia Indonesia",
       "publisherShortName": "PGI",
       "imprint": null,
-      "categorySlugs": "buku",
+      "categorySlugs": "buku/komik/manga/komedi",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ctcmhz-4e-.jpg",
       "status": "PREORDER",
       "availability": "AVAILABLE",
@@ -108406,7 +108406,7 @@
       "publisherName": "Phoenix Gramedia Indonesia",
       "publisherShortName": "PGI",
       "imprint": null,
-      "categorySlugs": "buku",
+      "categorySlugs": "buku/komik/manga/fantasi-1",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/aae56aemez.jpg",
       "status": "PREORDER",
       "availability": "AVAILABLE",
@@ -225795,6 +225795,17 @@
       "previousPrice": 13500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_spesial_48_1794841573",
+      "bookId": "pub_detektif_conan_spesial_48",
+      "price": 38250,
+      "currentPrice": 38250,
+      "originalPrice": 45000,
+      "previousPrice": 22500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-16",
       "source": "gramedia_api"
     },
     {
@@ -381337,6 +381348,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_dragon_ball_super_volume_2_1794841420",
+      "bookId": "pub_dragon_ball_super_volume_2",
+      "price": 26000,
+      "currentPrice": 26000,
+      "originalPrice": 40000,
+      "previousPrice": 26000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-16",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_dragon_ball_super_vol_3_init",
       "bookId": "pub_dragon_ball_super_vol_3",
       "price": 30000,
@@ -388038,6 +388060,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1794841573",
+      "startedAt": "2026-11-16T14:56:04.000Z",
+      "finishedAt": "2026-11-16T15:06:13.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1518,
+      "productsAccepted": 1318,
+      "productsRejected": 621,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 608886,
+      "success": true
+    },
+    {
       "id": "sync_1794805672",
       "startedAt": "2026-11-16T04:59:03.000Z",
       "finishedAt": "2026-11-16T05:07:52.000Z",
@@ -388415,26 +388457,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 548393,
-      "success": true
-    },
-    {
-      "id": "sync_1794200518",
-      "startedAt": "2026-11-09T04:52:19.000Z",
-      "finishedAt": "2026-11-09T05:01:58.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1516,
-      "productsAccepted": 1316,
-      "productsRejected": 618,
-      "productsUpdated": 849,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 579316,
       "success": true
     }
   ]
