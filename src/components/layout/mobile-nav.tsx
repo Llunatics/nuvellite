@@ -23,11 +23,11 @@ export function MobileNav() {
     <>
       <div
         aria-hidden="true"
-        className="md:hidden pointer-events-none fixed inset-x-0 bottom-0 z-30 h-20 bg-gradient-to-t from-background via-background/70 to-transparent"
+        className="md:hidden pointer-events-none fixed inset-x-0 bottom-0 z-30 h-[calc(5.5rem+env(safe-area-inset-bottom,0px))] bg-gradient-to-t from-background via-background/70 to-transparent"
       />
       <nav
         aria-label="Navigasi Bawah"
-        className="md:hidden fixed bottom-4 inset-x-5 max-w-[min(344px,calc(100%-2.5rem))] mx-auto z-40 h-[56px] rounded-full p-1 liquid-glass-dock [touch-action:pan-y]"
+        className="md:hidden fixed bottom-[calc(1rem+env(safe-area-inset-bottom,0px))] inset-x-5 max-w-[min(344px,calc(100%-2.5rem))] mx-auto z-40 h-[56px] rounded-full p-1 liquid-glass-dock [touch-action:pan-y]"
       >
         <div className="relative grid grid-cols-4 h-full w-full items-center">
           <motion.span

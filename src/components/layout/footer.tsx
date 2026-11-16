@@ -16,7 +16,7 @@ const NAV = [
 export function Footer() {
   return (
     <footer className="border-t border-white/[0.06] bg-background text-editorial-muted mt-auto">
-      <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-10 pb-28 sm:pb-10">
+      <div className="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-10 pb-[calc(8.5rem+env(safe-area-inset-bottom,0px))] sm:pb-10">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           {/* Brand */}
           <div className="space-y-1.5 text-center lg:text-left">

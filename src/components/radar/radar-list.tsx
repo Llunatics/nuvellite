@@ -217,7 +217,7 @@ export function RadarList({
       </div>
 
       {/* 2. KPI Row: Arc MetricCard x 4 */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <MetricCard
           label="Sinyal Aktif"
           value={active.length}

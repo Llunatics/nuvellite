@@ -30,7 +30,7 @@ const monoFont = JetBrains_Mono({
 // Applies the saved mode/accent before first paint (Round 3 dual-mode):
 // dark is the default; a saved light mode or non-default accent must not
 // flash the wrong palette on load.
-const THEME_INIT_SCRIPT = `(function(){try{var m=localStorage.getItem('nuvellite_theme');if(m==='light'){document.documentElement.classList.add('light');document.documentElement.setAttribute('data-theme','light');}else{document.documentElement.setAttribute('data-theme','dark');}var a=localStorage.getItem('nuvellite_theme_accent');if(a){document.documentElement.setAttribute('data-accent',a);}}catch(e){}})();`;
+const THEME_INIT_SCRIPT = `(function(){try{var m=localStorage.getItem('nuvellite_theme');if(m==='light'){document.documentElement.classList.remove('dark');document.documentElement.classList.add('light');document.documentElement.setAttribute('data-theme','light');}else{document.documentElement.classList.remove('light');document.documentElement.classList.add('dark');document.documentElement.setAttribute('data-theme','dark');}var a=localStorage.getItem('nuvellite_theme_accent');if(a){document.documentElement.setAttribute('data-accent',a);}}catch(e){}})();`;
 
 export const metadata: Metadata = {
   title: 'nuvellite — Official Manga & Light Novel Tracker',
