@@ -470,30 +470,30 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           onMouseLeave={() => setSpotlightPaused(false)}
         >
           <div ref={featuredInnerRef} className="space-y-3 origin-top will-change-[transform,opacity]">
-            {/* Spotlight swap: true crossfade — the outgoing card glides out while
-                the incoming one rises in (Arc enter easing [.16,1,.3,1], 0.6s).
-                Cards differ in height by up to ~56px: the wrapper tweens to the
-                measured card height (0.5s) so the content below glides instead of
-                jumping. MotionConfig honors prefers-reduced-motion. */}
+            {/* Spotlight swap: pure opacity crossfade — no y/scale motion, so the
+                swap is one calm dissolve instead of three competing movements.
+                Enter 0.9s / exit 0.5s on the Arc enter easing [.16,1,.3,1]; the
+                wrapper height tween runs the SAME 0.9s so card and page breathe
+                as one motion. Cards differ in height by up to ~56px: the wrapper
+                tweens to the measured card height so the content below glides
+                instead of jumping. MotionConfig honors prefers-reduced-motion. */}
             <MotionConfig reducedMotion="user">
               <motion.div
                 initial={false}
                 animate={{ height: spotlightH ?? 'auto' }}
-                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               >
                 <AnimatePresence mode="popLayout" initial={false}>
                   <motion.div
                     key={activeSpotlight.id}
                     ref={measureCardRef}
-                    initial={{ opacity: 0, y: 32, scale: 0.98 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     exit={{
                       opacity: 0,
-                      y: -20,
-                      scale: 0.98,
-                      transition: { duration: 0.32, ease: [0.4, 0, 1, 1] },
+                      transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
                     }}
-                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                   >
                     <FeaturedReleaseCard book={activeSpotlight} />
                   </motion.div>

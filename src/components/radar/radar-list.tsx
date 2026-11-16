@@ -200,6 +200,7 @@ export function RadarList({
           value={timeRange}
           onValueChange={setTimeRange}
           label="Rentang Waktu Radar"
+          fullWidth
         />
 
         <div className="flex items-center gap-2.5">
