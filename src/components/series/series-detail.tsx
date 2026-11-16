@@ -280,7 +280,7 @@ export const SeriesDetail = React.memo(function SeriesDetail({ series, books, kk
               {/* Minimal Progress Bar */}
               <div className="w-full h-1.5 rounded-full bg-surface-sunken overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-accent to-emerald-400 transition-all duration-500 rounded-full"
+                  className="h-full bg-accent transition-all duration-500 rounded-full"
                   style={{ width: `${progressPercent}%` }}
                 />
               </div>

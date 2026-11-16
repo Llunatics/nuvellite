@@ -282,7 +282,7 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
             <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
               Seri Diikuti
             </span>
-            <span className="text-xl sm:text-2xl font-mono font-bold text-sky-400 mt-1 block">
+            <span className="text-xl sm:text-2xl font-mono font-bold text-editorial-title mt-1 block">
               {trackedSeries.length}
             </span>
           </div>
@@ -291,7 +291,7 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
             <span className="text-[10px] font-mono uppercase tracking-wider text-editorial-faint block">
               Volume Terlewat
             </span>
-            <span className="text-xl sm:text-2xl font-mono font-bold text-amber-400 mt-1 block">
+            <span className="text-xl sm:text-2xl font-mono font-bold text-editorial-title mt-1 block">
               {missingBooks.length}
             </span>
           </div>
@@ -512,7 +512,7 @@ export const LibraryView = React.memo(function LibraryView({ allBooks, allSeries
             <EmptyState
               title="Koleksi Serimu Lengkap!"
               description="Tidak ada volume yang terlewat dari seri yang kamu ikuti."
-              icon={<Sparkles className="w-8 h-8 text-emerald-400" />}
+              icon={<Sparkles className="w-8 h-8 text-accent" />}
               action={
                 <Link href="/">
                   <Button variant="primary" size="md">

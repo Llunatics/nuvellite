@@ -11,3 +11,7 @@
 .symbol { display: inline-block; overflow-x: clip; }
 .suffix { display: inline-block; margin-left: 0.35rem; font-family: var(--font-body); font-size: 0.55em; font-weight: 500; color: var(--text-secondary); letter-spacing: normal; vertical-align: baseline; }
 .srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 640px) {
+  .counter { font-size: 1.25rem; }
+  .suffix { margin-left: 0.3rem; }
+}

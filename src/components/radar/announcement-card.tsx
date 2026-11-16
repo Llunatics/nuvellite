@@ -66,39 +66,39 @@ export function getStatusBadgeStyle(state: AnnouncementVerificationState) {
     case 'OFFICIALLY_CONFIRMED':
       return {
         label: 'Resmi Penerbit',
-        className: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
-        dotClassName: 'bg-emerald-400',
+        className: 'bg-accent/12 text-accent border border-accent/25',
+        dotClassName: 'bg-accent',
       };
     case 'DATED_ISBN':
       return {
         label: 'Terdaftar ISBN',
-        className: 'bg-accent/10 text-accent border border-accent/20',
+        className: 'bg-accent/15 text-accent border border-accent/30',
         dotClassName: 'bg-accent',
       };
     case 'CORROBORATED':
       return {
         label: 'Terkonfirmasi',
-        className: 'bg-amber-500/10 text-amber-400 border border-amber-500/20',
-        dotClassName: 'bg-amber-400',
+        className: 'bg-white/[0.05] text-editorial-body border border-white/10 [.light_&]:bg-black/[0.04] [.light_&]:border-black/10',
+        dotClassName: 'bg-editorial-body',
       };
     case 'SPOTTED':
       return {
         label: 'Pantauan Awal',
-        className: 'bg-white/[0.06] text-editorial-muted border border-dashed border-white/15',
-        dotClassName: 'bg-zinc-400',
+        className: 'bg-white/[0.03] text-editorial-muted border border-dashed border-white/10 [.light_&]:bg-black/[0.02] [.light_&]:border-black/10',
+        dotClassName: 'bg-editorial-muted',
       };
     case 'RELEASED_GRADUATED':
       return {
         label: 'Sudah Terbit',
-        className: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
-        dotClassName: 'bg-emerald-400',
+        className: 'bg-white/[0.05] text-editorial-body border border-white/10 [.light_&]:bg-black/[0.04] [.light_&]:border-black/10',
+        dotClassName: 'bg-editorial-body',
       };
     case 'STALE_HOLD':
     default:
       return {
         label: 'Belum Ada Kabar',
-        className: 'bg-white/[0.04] text-editorial-faint border border-white/10',
-        dotClassName: 'bg-zinc-500',
+        className: 'bg-white/[0.03] text-editorial-faint border border-white/10 [.light_&]:bg-black/[0.02] [.light_&]:border-black/10',
+        dotClassName: 'bg-editorial-faint',
       };
   }
 }

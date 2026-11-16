@@ -117,9 +117,7 @@ export const ReleaseCard = React.memo(function ReleaseCard({ book, variant = 'st
           {/* Floating Top Left: Format Capsule Badge */}
           <div className="absolute top-2 left-2 z-10 pointer-events-none">
             <span
-              className={`px-2 py-0.5 rounded-full text-[8.5px] font-mono font-medium tracking-wide uppercase border border-white/10 bg-black/75 ${
-                book.category === 'Light Novel' ? 'text-amber-300' : 'text-sky-300'
-              }`}
+              className="px-2 py-0.5 rounded-full text-[8.5px] font-mono font-medium tracking-wide uppercase border border-white/10 bg-black/75 text-zinc-200"
             >
               {book.category}
             </span>
