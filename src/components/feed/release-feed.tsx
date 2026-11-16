@@ -226,6 +226,18 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [spotlightPaused, setSpotlightPaused] = useState(false);
+  // Measured height of the active spotlight card. Cards differ by up to
+  // ~56px, so the wrapper tweens to the measured value instead of snapping.
+  const [spotlightH, setSpotlightH] = useState<number | null>(null);
+  const measureCardRef = useCallback((el: HTMLDivElement | null) => {
+    if (!el) return;
+    const ro = new ResizeObserver(() => {
+      const h = el.offsetHeight;
+      if (h > 0) setSpotlightH((prev) => (prev === h ? prev : h));
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
   const hydratedRef = useRef(false);
   const suppressFilterResetRef = useRef(false);
   const pendingScrollRef = useRef<number | null>(null);
@@ -291,6 +303,19 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     }, 6000);
     return () => clearInterval(timer);
   }, [spotlightBooks.length, spotlightPaused]);
+
+  // Preload the NEXT spotlight cover so a swap never fetches + decodes
+  // mid-animation (the stutter on real phones). Warming the cache also
+  // covers the two CSS background-image glows, which share the same URL.
+  useEffect(() => {
+    if (spotlightBooks.length <= 1) return;
+    const next = spotlightBooks[(activeSpotlightIdx + 1) % spotlightBooks.length];
+    const src = next?.coverImage;
+    if (!src) return;
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = src;
+  }, [activeSpotlightIdx, spotlightBooks]);
 
   const handleViewAll = (format: 'Manga' | 'Light Novel') => {
     setFormatFilter(format);
@@ -447,25 +472,33 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           <div ref={featuredInnerRef} className="space-y-3 origin-top will-change-[transform,opacity]">
             {/* Spotlight swap: true crossfade — the outgoing card glides out while
                 the incoming one rises in (Arc enter easing [.16,1,.3,1], 0.6s).
-                popLayout keeps the layout stable mid-swap so the page below never
-                jumps; MotionConfig honors prefers-reduced-motion. */}
+                Cards differ in height by up to ~56px: the wrapper tweens to the
+                measured card height (0.5s) so the content below glides instead of
+                jumping. MotionConfig honors prefers-reduced-motion. */}
             <MotionConfig reducedMotion="user">
-              <AnimatePresence mode="popLayout" initial={false}>
-                <motion.div
-                  key={activeSpotlight.id}
-                  initial={{ opacity: 0, y: 32, scale: 0.98 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{
-                    opacity: 0,
-                    y: -20,
-                    scale: 0.98,
-                    transition: { duration: 0.32, ease: [0.4, 0, 1, 1] },
-                  }}
-                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <FeaturedReleaseCard book={activeSpotlight} />
-                </motion.div>
-              </AnimatePresence>
+              <motion.div
+                initial={false}
+                animate={{ height: spotlightH ?? 'auto' }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <AnimatePresence mode="popLayout" initial={false}>
+                  <motion.div
+                    key={activeSpotlight.id}
+                    ref={measureCardRef}
+                    initial={{ opacity: 0, y: 32, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{
+                      opacity: 0,
+                      y: -20,
+                      scale: 0.98,
+                      transition: { duration: 0.32, ease: [0.4, 0, 1, 1] },
+                    }}
+                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    <FeaturedReleaseCard book={activeSpotlight} />
+                  </motion.div>
+                </AnimatePresence>
+              </motion.div>
             </MotionConfig>
 
             {/* Minimal Spotlight Pagination */}

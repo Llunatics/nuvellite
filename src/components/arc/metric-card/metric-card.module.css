@@ -22,3 +22,6 @@
 .top small[data-trend] { border-color: transparent; transition: color var(--duration-fast) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard); }
 .top small[data-trend="up"] { background: color-mix(in oklab, var(--accent) 12%, transparent); color: var(--accent); border-color: color-mix(in oklab, var(--accent) 24%, transparent); }
 .top small[data-trend="down"] { background: color-mix(in oklab, var(--text-muted) 12%, transparent); color: var(--text-secondary); border-color: color-mix(in oklab, var(--text-muted) 24%, transparent); }
+
+/* Dark: match the Radar chart section (bg-surface/50) — full var(--surface) reads as a grey box against the near-black page. Light mode untouched. */
+:global(:root[data-theme="dark"]) .card { background: color-mix(in oklab, rgb(var(--surface-rgb)) 50%, transparent); }

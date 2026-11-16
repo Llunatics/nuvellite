@@ -16,3 +16,6 @@
 .root[data-full-width] .button { flex: 1 1 0; min-width: max-content; }
 @media (max-width: 380px) { .button { padding: 0 10px; } }
 @media (prefers-reduced-motion: reduce) { .button { transition: none; } }
+
+/* Dark: match the Radar chart section (bg-surface/50) — the full muted surface reads as a grey bar. The selection pill keeps full var(--surface) so the active segment still pops. Light mode untouched. */
+:global(:root[data-theme="dark"]) .root { background: color-mix(in oklab, rgb(var(--surface-rgb)) 50%, transparent); }
