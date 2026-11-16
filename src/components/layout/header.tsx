@@ -55,65 +55,66 @@ export function Header() {
   return (
     <>
       <header
-        className="sticky top-0 z-40 w-full transition-colors duration-200 bg-background border-b border-white/[0.06] [.light_&]:border-black/[0.06] shadow-xs px-4 sm:px-6 py-2.5 sm:py-3 before:content-[''] before:block before:pointer-events-none before:fixed before:inset-x-0 before:top-0 before:h-3 before:bg-background before:z-[-1]"
+        className={`sticky top-0 z-40 w-full transition-all duration-300 pointer-events-none ${
+          isScrolled
+            ? "px-3 sm:px-6 pt-2.5 pb-1.5 bg-gradient-to-b from-background via-background/85 to-transparent before:content-[''] before:block before:pointer-events-none before:fixed before:inset-x-0 before:top-0 before:h-3 before:bg-background before:z-[-1]"
+            : 'px-4 sm:px-6 pt-3 pb-2 bg-transparent'
+        }`}
       >
         <div
           data-testid="header-bar"
           data-scrolled={isScrolled ? 'true' : 'false'}
-          className="max-w-6xl mx-auto w-full flex items-center justify-center md:grid md:grid-cols-[auto_1fr_auto] gap-3 sm:gap-4 md:gap-8"
+          className={`max-w-6xl mx-auto w-full flex items-center justify-between gap-3 pointer-events-auto nav-surface-transition transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            isScrolled
+              ? 'liquid-glass-pill rounded-full px-4 sm:px-5 py-2'
+              : 'bg-transparent border border-transparent shadow-none backdrop-blur-none rounded-none px-1 py-2'
+          }`}
         >
           {/* Brand Identity */}
-          <div className="flex items-center shrink-0 md:justify-self-start">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 group focus:outline-none"
-              aria-label="Nuvellite Beranda"
-            >
-              <span className="font-editorial text-[22px] sm:text-2xl md:text-3xl font-semibold tracking-tight text-editorial-title group-hover:text-accent transition-colors leading-none">
+          <div className="flex items-center gap-7 shrink-0">
+            <Link href="/" className="inline-flex items-center gap-2.5 group focus:outline-none" aria-label="Nuvellite Beranda">
+              <span className="font-editorial text-[26px] sm:text-3xl font-semibold tracking-tight text-editorial-title group-hover:text-accent transition-colors leading-none">
                 nuvellite
               </span>
-              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full shadow-xs transition-transform group-hover:scale-125 bg-accent" />
+              <span className="w-2 h-2 rounded-full shadow-xs transition-transform group-hover:scale-125 bg-accent" />
             </Link>
+
+            {/* Desktop Center Floating Pill Navigation */}
+            <nav className="hidden md:flex items-center gap-1 p-1 rounded-full bg-surface-sunken/40 border border-white/[0.04]">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-4 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 flex items-center gap-1.5 ${
+                    link.active
+                      ? 'text-editorial-title bg-white/[0.08] shadow-xs font-semibold'
+                      : 'text-editorial-muted hover:text-editorial-title hover:bg-white/[0.03]'
+                  }`}
+                >
+                  <span>{link.label}</span>
+                </Link>
+              ))}
+            </nav>
           </div>
 
-          {/* Desktop Center Floating Pill Navigation */}
-          <nav className="hidden md:flex items-center justify-self-center gap-1 p-1 rounded-full bg-surface-sunken/40 border border-white/[0.04] [.light_&]:border-black/[0.04]">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`relative px-4 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 flex items-center gap-1.5 ${
-                  link.active
-                    ? 'text-editorial-title bg-white/[0.08] [.light_&]:bg-black/[0.05] shadow-xs font-semibold'
-                    : 'text-editorial-muted hover:text-editorial-title hover:bg-white/[0.03] [.light_&]:hover:bg-black/[0.02]'
-                }`}
-              >
-                <span>{link.label}</span>
-              </Link>
-            ))}
-          </nav>
-
-          {/* Right Action Controls / Mobile Centered Sibling */}
-          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0 md:justify-self-end">
+          {/* Right Action Controls */}
+          <div className="flex items-center gap-2.5 shrink-0">
             {/* Minimal Command Palette Trigger */}
             <button
               type="button"
               onClick={() => setIsSearchOpen(true)}
-              className={`flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border transition-all text-xs group active:scale-95 text-editorial-muted hover:text-editorial-title ${
+              className={`flex items-center gap-2.5 px-4 py-2 rounded-full border transition-all text-xs group active:scale-95 text-editorial-muted hover:text-editorial-title ${
                 isScrolled
-                  ? 'soft-glass hover:bg-white/[0.06] border-white/[0.06] [.light_&]:border-black/[0.06] hover:border-white/[0.12]'
+                  ? 'soft-glass hover:bg-white/[0.06] border-white/[0.06] hover:border-white/[0.12]'
                   : 'bg-white/[0.03] border-white/[0.06] [.light_&]:bg-black/[0.03] [.light_&]:border-black/[0.06] hover:bg-white/[0.06]'
               }`}
               aria-label="Cari judul, ISBN, pengarang, seri"
             >
-              <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-editorial-muted group-hover:text-accent transition-colors" />
-              <span className="text-xs font-normal text-editorial-muted group-hover:text-editorial-title sm:hidden">
-                Cari
-              </span>
+              <Search className="w-4 h-4 text-editorial-muted group-hover:text-editorial-title transition-colors" />
               <span className="hidden sm:inline-block text-xs font-normal text-editorial-muted group-hover:text-editorial-title">
                 Cari judul, seri, ISBN...
               </span>
-              <kbd className="hidden sm:inline-flex items-center ml-1 px-1.5 py-0.5 text-[9px] font-mono text-editorial-faint bg-white/[0.04] [.light_&]:bg-black/[0.04] border border-white/[0.06] [.light_&]:border-black/[0.06] rounded-md">
+              <kbd className="hidden sm:inline-flex items-center ml-1 px-1.5 py-0.5 text-[9px] font-mono text-editorial-faint bg-white/[0.04] border border-white/[0.06] rounded-md">
                 ⌘K
               </kbd>
             </button>
