@@ -146,13 +146,13 @@ export const FeaturedReleaseCard = React.memo(function FeaturedReleaseCard({ boo
                 onClick={() => toggleOwned(book.id, book.seriesId || undefined)}
                 className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs sm:text-sm font-medium transition-all duration-200 active:scale-95 ${
                   owned
-                    ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                    ? 'bg-accent/15 text-accent border border-accent/30'
                     : 'bg-white/[0.07] hover:bg-white/[0.12] text-editorial-title border border-white/[0.09]'
                 }`}
               >
                 {owned ? (
                   <>
-                    <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <Check className="w-4 h-4 text-accent shrink-0" />
                     <span>Dimiliki</span>
                   </>
                 ) : (

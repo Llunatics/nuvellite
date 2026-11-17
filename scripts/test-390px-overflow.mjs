@@ -25,11 +25,12 @@ async function main() {
   console.log('Testing 390px Viewport Horizontal Overflow on All 9 Routes...\n');
   let allClean = true;
 
-  for (const route of routes) {
-    const url = `http://localhost:3001${route.path}`;
-    try {
-      await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
-      await page.waitForTimeout(500);
+    for (const route of routes) {
+      const url = `http://localhost:3001${route.path}`;
+      try {
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
+        await page.waitForTimeout(500);
 
       const overflowResult = await page.evaluate(() => {
         const docWidth = document.documentElement.clientWidth;

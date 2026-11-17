@@ -71,8 +71,9 @@ export function AnimatedCounter({ value, label, prefix = "", suffix = "", decima
   const [previous, setPrevious] = useState(value);
   const [direction, setDirection] = useState(1);
   if (value !== previous) { setPrevious(value); setDirection(value > previous ? 1 : -1); }
+  const trimmedSuffix = suffix ? suffix.trim() : "";
   const parts = partsFor(value, decimals, locale);
-  const text = `${prefix}${parts.map(part => "text" in part ? part.text : part.digit).join("")}${suffix}`;
+  const text = `${prefix}${parts.map(part => "text" in part ? part.text : part.digit).join("")}${trimmedSuffix ? ` ${trimmedSuffix}` : ""}`;
   const armed = animateOnView && !inView;
   return <span ref={ref} className={styles.counter}>
     {label && <span className={styles.label}><span className={styles.labelSwap}><AnimatePresence mode="popLayout" initial={false}><motion.span key={label} className={styles.labelText} variants={reduceMotion ? fade : rise} initial="hidden" animate="shown" exit="gone">{label}</motion.span></AnimatePresence></span></span>}
@@ -84,7 +85,7 @@ export function AnimatedCounter({ value, label, prefix = "", suffix = "", decima
           ? <Column key={part.key} digit={part.digit} direction={direction} armed={armed} delay={Math.min(part.order * motionTokens.stagger.item, .25)} reduceMotion={reduceMotion} />
           : <motion.span key={part.key} className={styles.symbol} {...presence} transition={reduceMotion ? { duration: 0 } : motionTokens.spring.morph}>{part.text}</motion.span>)}
       </AnimatePresence>
-      {suffix && <span className={styles.symbol}>{suffix}</span>}
+      {trimmedSuffix && <span className={styles.suffix}>{trimmedSuffix}</span>}
     </span>
   </span>;
 }

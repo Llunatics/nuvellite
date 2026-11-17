@@ -15,7 +15,7 @@ interface BindUpDirectoryViewProps {
 function LabelPill({ label, className = '' }: { label: string; className?: string }) {
   return (
     <span
-      className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono uppercase whitespace-nowrap border border-white/[0.08] bg-white/[0.03] text-lime-300/90 ${className}`}
+      className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono uppercase whitespace-nowrap border border-white/[0.08] bg-white/[0.03] text-accent ${className}`}
     >
       {label}
     </span>

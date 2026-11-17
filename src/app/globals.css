@@ -51,11 +51,11 @@
        6 selectable accents, whisper borders, pill/squircle radii, serif
        display type. Round 2's locked lime wireframe is superseded (S-01..S-03). */
     --bg-rgb: 9 10 14;
-    --surface-rgb: 15 17 23;
-    --surface-elevated-rgb: 22 25 34;
-    --surface-raised-rgb: 22 25 34;
-    --surface-sunken-rgb: 6 7 10;
-    --surface-overlay-rgb: 17 20 28;
+    --surface-rgb: 13 20 32;
+    --surface-elevated-rgb: 19 28 43;
+    --surface-raised-rgb: 19 28 43;
+    --surface-sunken-rgb: 5 8 14;
+    --surface-overlay-rgb: 15 23 36;
 
     /* 1px architectural borders */
     --border-subtle: rgba(255, 255, 255, 0.05);
@@ -69,14 +69,14 @@
     --editorial-faint: #475569;
 
     /* Material Level B: Soft Glass */
-    --soft-glass-bg: rgba(15, 18, 25, 0.62);
+    --soft-glass-bg: rgba(13, 20, 32, 0.62);
     --soft-glass-border: rgba(255, 255, 255, 0.06);
     --soft-glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
     --soft-glass-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
 
     /* Material Level C: Liquid Glass */
-    --liquid-glass-bg: rgba(14, 17, 24, 0.78);
-    --liquid-glass-bg-hover: rgba(20, 24, 34, 0.88);
+    --liquid-glass-bg: rgba(13, 20, 32, 0.78);
+    --liquid-glass-bg-hover: rgba(19, 28, 43, 0.88);
     --liquid-glass-border: rgba(255, 255, 255, 0.07);
     --liquid-glass-border-hover: rgba(255, 255, 255, 0.12);
     --liquid-glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.10);
@@ -98,9 +98,9 @@
 
     /* Arc Dual-Mode Tokens (Dark Default: Azure) */
     --background: #090a0e;
-    --surface: #0f1117;
-    --surface-raised: #161922;
-    --surface-muted: #1a1d26;
+    --surface: #0d1420;
+    --surface-raised: #131c2b;
+    --surface-muted: #162032;
     --foreground: #f8fafc;
     --text-secondary: #94a3b8;
     --text-muted: #64748b;
@@ -196,35 +196,35 @@
     --series-1: #f43f5e;
   }
 
-  /* Complete Semantic Light Mode Environment */
+  /* Complete Semantic Light Mode Environment — Warm Paper White (Round 2 Polish) */
   .light {
-    --bg-rgb: 248 249 252;
-    --surface-rgb: 255 255 255;
-    --surface-elevated-rgb: 241 245 249;
-    --surface-raised-rgb: 241 245 249;
-    --surface-sunken-rgb: 238 242 246;
-    --surface-overlay-rgb: 255 255 255;
+    --bg-rgb: 250 249 246; /* baseline compatibility: --bg-rgb: 248 249 252; */
+    --surface-rgb: 254 253 251;
+    --surface-elevated-rgb: 245 244 239;
+    --surface-raised-rgb: 245 244 239;
+    --surface-sunken-rgb: 240 238 233;
+    --surface-overlay-rgb: 254 253 251;
 
-    --border-subtle: rgba(0, 0, 0, 0.07);
-    --border-medium: rgba(0, 0, 0, 0.12);
-    --border-bold: rgba(0, 0, 0, 0.20);
+    --border-subtle: rgba(28, 25, 23, 0.05);
+    --border-medium: rgba(28, 25, 23, 0.08);
+    --border-bold: rgba(28, 25, 23, 0.14);
 
-    --editorial-title: #0f172a;
-    --editorial-body: #334155;
-    --editorial-muted: #64748b;
-    --editorial-faint: #94a3b8;
+    --editorial-title: #1c1917;
+    --editorial-body: #44403c;
+    --editorial-muted: #78716c;
+    --editorial-faint: #a8a29e;
 
     /* Arc Dual-Mode Tokens (Light Default: Azure) */
-    --background: #ffffff;
-    --surface: #f8fafc;
-    --surface-raised: #ffffff;
-    --surface-muted: #f1f5f9;
-    --foreground: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --border: rgba(15, 23, 42, 0.09);
-    --border-subtle: rgba(15, 23, 42, 0.05);
-    --border-strong: rgba(15, 23, 42, 0.16);
+    --background: #faf9f6;
+    --surface: #fefdfb;
+    --surface-raised: #f5f4ef;
+    --surface-muted: #f0eee9;
+    --foreground: #1c1917;
+    --text-secondary: #57534e;
+    --text-muted: #78716c;
+    --border: rgba(28, 25, 23, 0.07);
+    --border-subtle: rgba(28, 25, 23, 0.045);
+    --border-strong: rgba(28, 25, 23, 0.14);
     --accent: #0284c7;
     --accent-strong: #0369a1;
     --accent-subtle: rgb(2 132 199 / 0.10);
@@ -234,28 +234,28 @@
     --series-1: #0284c7;
 
     /* Material Level B: Soft Glass Light */
-    --soft-glass-bg: rgba(255, 255, 255, 0.70);
-    --soft-glass-border: rgba(0, 0, 0, 0.07);
+    --soft-glass-bg: rgba(254, 253, 251, 0.72);
+    --soft-glass-border: rgba(28, 25, 23, 0.06);
     --soft-glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
-    --soft-glass-shadow: 0 8px 24px -6px rgba(15, 23, 42, 0.06);
+    --soft-glass-shadow: 0 6px 20px -4px rgba(28, 25, 23, 0.04);
 
     /* Material Level C: Premium Liquid Glass Light */
-    --liquid-glass-bg: rgba(255, 255, 255, 0.82);
-    --liquid-glass-bg-hover: rgba(255, 255, 255, 0.92);
-    --liquid-glass-border: rgba(0, 0, 0, 0.08);
-    --liquid-glass-border-hover: rgba(0, 0, 0, 0.14);
+    --liquid-glass-bg: rgba(254, 253, 251, 0.85);
+    --liquid-glass-bg-hover: rgba(254, 253, 251, 0.94);
+    --liquid-glass-border: rgba(28, 25, 23, 0.07);
+    --liquid-glass-border-hover: rgba(28, 25, 23, 0.12);
     --liquid-glass-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 1);
-    --liquid-glass-rim: rgba(0, 0, 0, 0.03);
-    --liquid-glass-shadow: 0 20px 44px -12px rgba(15, 23, 42, 0.10), 0 8px 16px -6px rgba(15, 23, 42, 0.06);
+    --liquid-glass-rim: rgba(28, 25, 23, 0.02);
+    --liquid-glass-shadow: 0 16px 36px -10px rgba(28, 25, 23, 0.06), 0 6px 14px -4px rgba(28, 25, 23, 0.03);
 
     --semantic-red-rgb: 220 38 38;
-    --scrollbar-thumb: rgba(0, 0, 0, 0.15);
-    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.25);
+    --scrollbar-thumb: rgba(28, 25, 23, 0.14);
+    --scrollbar-thumb-hover: rgba(28, 25, 23, 0.22);
 
     /* Light Mode Default Accent (Round 3: azure) */
     --accent-rgb: 2 132 199;
     --accent-strong-rgb: 3 105 161;
-    --accent-glow: rgba(2, 132, 199, 0.20);
+    --accent-glow: rgba(2 132 199 / 0.18);
     --gold-rgb: 180 130 30;
     --gold-glow: rgba(180, 130, 30, 0.18);
   }
@@ -549,12 +549,12 @@
 .light .liquid-glass-dock,
 .light .liquid-glass-pill,
 .light .floating-nav {
-  background-color: rgba(255, 255, 255, 0.80);
+  background-color: rgba(254, 253, 251, 0.85);
   background-image: none;
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid rgba(15, 23, 42, 0.07);
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(28, 25, 23, 0.07);
+  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.06);
 }
 
 /* Opaque Frosted Popovers (Round 3.3) */
@@ -662,66 +662,66 @@
 
 /* Light-mode remap: hardcoded white/[n] overlays are designed for dark
    backgrounds and turn invisible on light surfaces. These overrides swap
-   them to subtle dark tints so outlines and surfaces stay visible. */
-.light .bg-white\/\[0\.01\] { background-color: rgb(15 23 42 / 0.02); }
-.light .bg-white\/\[0\.015\] { background-color: rgb(15 23 42 / 0.025); }
-.light .bg-white\/\[0\.02\] { background-color: rgb(15 23 42 / 0.035); }
-.light .bg-white\/\[0\.03\] { background-color: rgb(15 23 42 / 0.045); }
-.light .bg-white\/\[0\.04\] { background-color: rgb(15 23 42 / 0.055); }
-.light .bg-white\/\[0\.05\] { background-color: rgb(15 23 42 / 0.065); }
-.light .bg-white\/\[0\.06\] { background-color: rgb(15 23 42 / 0.075); }
-.light .bg-white\/\[0\.07\] { background-color: rgb(15 23 42 / 0.085); }
-.light .bg-white\/\[0\.08\] { background-color: rgb(15 23 42 / 0.095); }
-.light .bg-white\/\[0\.1\] { background-color: rgb(15 23 42 / 0.12); }
-.light .bg-white\/\[0\.12\] { background-color: rgb(15 23 42 / 0.14); }
-.light .bg-white\/\[0\.14\] { background-color: rgb(15 23 42 / 0.16); }
-.light .bg-white\/\[0\.15\] { background-color: rgb(15 23 42 / 0.17); }
-.light .bg-white\/\[0\.16\] { background-color: rgb(15 23 42 / 0.18); }
-.light .bg-white\/\[0\.18\] { background-color: rgb(15 23 42 / 0.20); }
-.light .border-white\/\[0\.01\] { border-color: rgb(15 23 42 / 0.06); }
-.light .border-white\/\[0\.015\] { border-color: rgb(15 23 42 / 0.07); }
-.light .border-white\/\[0\.02\] { border-color: rgb(15 23 42 / 0.08); }
-.light .border-white\/\[0\.03\] { border-color: rgb(15 23 42 / 0.09); }
-.light .border-white\/\[0\.04\] { border-color: rgb(15 23 42 / 0.10); }
-.light .border-white\/\[0\.05\] { border-color: rgb(15 23 42 / 0.11); }
-.light .border-white\/\[0\.06\] { border-color: rgb(15 23 42 / 0.12); }
-.light .border-white\/\[0\.07\] { border-color: rgb(15 23 42 / 0.13); }
-.light .border-white\/\[0\.08\] { border-color: rgb(15 23 42 / 0.14); }
-.light .border-white\/\[0\.1\] { border-color: rgb(15 23 42 / 0.16); }
-.light .border-white\/\[0\.12\] { border-color: rgb(15 23 42 / 0.18); }
-.light .border-white\/\[0\.14\] { border-color: rgb(15 23 42 / 0.20); }
-.light .border-white\/\[0\.15\] { border-color: rgb(15 23 42 / 0.21); }
-.light .border-white\/\[0\.16\] { border-color: rgb(15 23 42 / 0.22); }
-.light .border-white\/\[0\.18\] { border-color: rgb(15 23 42 / 0.24); }
-.light .hover\:bg-white\/\[0\.03\]:hover { background-color: rgb(15 23 42 / 0.045); }
-.light .hover\:bg-white\/\[0\.04\]:hover { background-color: rgb(15 23 42 / 0.055); }
-.light .hover\:bg-white\/\[0\.05\]:hover { background-color: rgb(15 23 42 / 0.065); }
-.light .hover\:bg-white\/\[0\.06\]:hover { background-color: rgb(15 23 42 / 0.075); }
-.light .hover\:bg-white\/\[0\.08\]:hover { background-color: rgb(15 23 42 / 0.095); }
-.light .hover\:bg-white\/\[0\.1\]:hover { background-color: rgb(15 23 42 / 0.12); }
-.light .hover\:bg-white\/\[0\.12\]:hover { background-color: rgb(15 23 42 / 0.14); }
-.light .hover\:bg-white\/\[0\.14\]:hover { background-color: rgb(15 23 42 / 0.16); }
-.light .hover\:border-white\/\[0\.06\]:hover { border-color: rgb(15 23 42 / 0.12); }
-.light .hover\:border-white\/\[0\.08\]:hover { border-color: rgb(15 23 42 / 0.14); }
-.light .hover\:border-white\/\[0\.1\]:hover { border-color: rgb(15 23 42 / 0.16); }
-.light .hover\:border-white\/\[0\.12\]:hover { border-color: rgb(15 23 42 / 0.18); }
-.light .hover\:border-white\/\[0\.16\]:hover { border-color: rgb(15 23 42 / 0.22); }
-.light .focus\:bg-white\/\[0\.06\]:focus { background-color: rgb(15 23 42 / 0.075); }
-.light .focus\:bg-white\/\[0\.07\]:focus { background-color: rgb(15 23 42 / 0.085); }
-.light .focus\:border-white\/\[0\.15\]:focus { border-color: rgb(15 23 42 / 0.21); }
-.light .focus\:border-white\/\[0\.18\]:focus { border-color: rgb(15 23 42 / 0.24); }
-.light .divide-white\/\[0\.04\] > :not([hidden]) ~ :not([hidden]) { border-color: rgb(15 23 42 / 0.10); }
-.light .border-black\/\[0\.07\] { border-color: rgba(0, 0, 0, 0.07); }
-.light .border-black\/\[0\.06\] { border-color: rgba(0, 0, 0, 0.06); }
-.light .bg-black\/\[0\.07\] { background-color: rgba(0, 0, 0, 0.07); }
-.light .bg-black\/\[0\.03\] { background-color: rgba(0, 0, 0, 0.03); }
-.light .from-white\/\[0\.06\] { --tw-gradient-from: rgb(15 23 42 / 0.06) var(--tw-gradient-from-position); --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-from-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
-.light .to-white\/\[0\.01\] { --tw-gradient-to: rgb(15 23 42 / 0.02) var(--tw-gradient-to-position); }
-.light .to-white\/\[0\.02\] { --tw-gradient-to: rgb(15 23 42 / 0.03) var(--tw-gradient-to-position); }
-.light .via-white\/\[0\.04\] { --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), rgb(15 23 42 / 0.05) var(--tw-gradient-via-position), var(--tw-gradient-to); }
+   them to subtle warm dark tints so outlines and surfaces stay visible. */
+.light .bg-white\/\[0\.01\] { background-color: rgb(28 25 23 / 0.02); }
+.light .bg-white\/\[0\.015\] { background-color: rgb(28 25 23 / 0.025); }
+.light .bg-white\/\[0\.02\] { background-color: rgb(28 25 23 / 0.035); }
+.light .bg-white\/\[0\.03\] { background-color: rgb(28 25 23 / 0.045); }
+.light .bg-white\/\[0\.04\] { background-color: rgb(28 25 23 / 0.055); }
+.light .bg-white\/\[0\.05\] { background-color: rgb(28 25 23 / 0.065); }
+.light .bg-white\/\[0\.06\] { background-color: rgb(28 25 23 / 0.075); }
+.light .bg-white\/\[0\.07\] { background-color: rgb(28 25 23 / 0.085); }
+.light .bg-white\/\[0\.08\] { background-color: rgb(28 25 23 / 0.095); }
+.light .bg-white\/\[0\.1\] { background-color: rgb(28 25 23 / 0.12); }
+.light .bg-white\/\[0\.12\] { background-color: rgb(28 25 23 / 0.14); }
+.light .bg-white\/\[0\.14\] { background-color: rgb(28 25 23 / 0.16); }
+.light .bg-white\/\[0\.15\] { background-color: rgb(28 25 23 / 0.17); }
+.light .bg-white\/\[0\.16\] { background-color: rgb(28 25 23 / 0.18); }
+.light .bg-white\/\[0\.18\] { background-color: rgb(28 25 23 / 0.20); }
+.light .border-white\/\[0\.01\] { border-color: rgb(28 25 23 / 0.06); }
+.light .border-white\/\[0\.015\] { border-color: rgb(28 25 23 / 0.07); }
+.light .border-white\/\[0\.02\] { border-color: rgb(28 25 23 / 0.08); }
+.light .border-white\/\[0\.03\] { border-color: rgb(28 25 23 / 0.09); }
+.light .border-white\/\[0\.04\] { border-color: rgb(28 25 23 / 0.10); }
+.light .border-white\/\[0\.05\] { border-color: rgb(28 25 23 / 0.11); }
+.light .border-white\/\[0\.06\] { border-color: rgb(28 25 23 / 0.12); }
+.light .border-white\/\[0\.07\] { border-color: rgb(28 25 23 / 0.13); }
+.light .border-white\/\[0\.08\] { border-color: rgb(28 25 23 / 0.14); }
+.light .border-white\/\[0\.1\] { border-color: rgb(28 25 23 / 0.16); }
+.light .border-white\/\[0\.12\] { border-color: rgb(28 25 23 / 0.18); }
+.light .border-white\/\[0\.14\] { border-color: rgb(28 25 23 / 0.20); }
+.light .border-white\/\[0\.15\] { border-color: rgb(28 25 23 / 0.21); }
+.light .border-white\/\[0\.16\] { border-color: rgb(28 25 23 / 0.22); }
+.light .border-white\/\[0\.18\] { border-color: rgb(28 25 23 / 0.24); }
+.light .hover\:bg-white\/\[0\.03\]:hover { background-color: rgb(28 25 23 / 0.045); }
+.light .hover\:bg-white\/\[0\.04\]:hover { background-color: rgb(28 25 23 / 0.055); }
+.light .hover\:bg-white\/\[0\.05\]:hover { background-color: rgb(28 25 23 / 0.065); }
+.light .hover\:bg-white\/\[0\.06\]:hover { background-color: rgb(28 25 23 / 0.075); }
+.light .hover\:bg-white\/\[0\.08\]:hover { background-color: rgb(28 25 23 / 0.095); }
+.light .hover\:bg-white\/\[0\.1\]:hover { background-color: rgb(28 25 23 / 0.12); }
+.light .hover\:bg-white\/\[0\.12\]:hover { background-color: rgb(28 25 23 / 0.14); }
+.light .hover\:bg-white\/\[0\.14\]:hover { background-color: rgb(28 25 23 / 0.16); }
+.light .hover\:border-white\/\[0\.06\]:hover { border-color: rgb(28 25 23 / 0.12); }
+.light .hover\:border-white\/\[0\.08\]:hover { border-color: rgb(28 25 23 / 0.14); }
+.light .hover\:border-white\/\[0\.1\]:hover { border-color: rgb(28 25 23 / 0.16); }
+.light .hover\:border-white\/\[0\.12\]:hover { border-color: rgb(28 25 23 / 0.18); }
+.light .hover\:border-white\/\[0\.16\]:hover { border-color: rgb(28 25 23 / 0.22); }
+.light .focus\:bg-white\/\[0\.06\]:focus { background-color: rgb(28 25 23 / 0.075); }
+.light .focus\:bg-white\/\[0\.07\]:focus { background-color: rgb(28 25 23 / 0.085); }
+.light .focus\:border-white\/\[0\.15\]:focus { border-color: rgb(28 25 23 / 0.21); }
+.light .focus\:border-white\/\[0\.18\]:focus { border-color: rgb(28 25 23 / 0.24); }
+.light .divide-white\/\[0\.04\] > :not([hidden]) ~ :not([hidden]) { border-color: rgb(28 25 23 / 0.10); }
+.light .border-black\/\[0\.07\] { border-color: rgba(28, 25, 23, 0.07); }
+.light .border-black\/\[0\.06\] { border-color: rgba(28, 25, 23, 0.06); }
+.light .bg-black\/\[0\.07\] { background-color: rgba(28, 25, 23, 0.07); }
+.light .bg-black\/\[0\.03\] { background-color: rgba(28, 25, 23, 0.03); }
+.light .from-white\/\[0\.06\] { --tw-gradient-from: rgb(28 25 23 / 0.06) var(--tw-gradient-from-position); --tw-gradient-to: rgb(28 25 23 / 0) var(--tw-gradient-from-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.light .to-white\/\[0\.01\] { --tw-gradient-to: rgb(28 25 23 / 0.02) var(--tw-gradient-to-position); }
+.light .to-white\/\[0\.02\] { --tw-gradient-to: rgb(28 25 23 / 0.03) var(--tw-gradient-to-position); }
+.light .via-white\/\[0\.04\] { --tw-gradient-to: rgb(28 25 23 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), rgb(28 25 23 / 0.05) var(--tw-gradient-via-position), var(--tw-gradient-to); }
 
 .light .cover-depth {
-  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 24px -6px rgba(28, 25, 23, 0.09), 0 3px 8px -2px rgba(28, 25, 23, 0.04), inset 0 1px 0 0 rgba(255, 255, 255, 0.85);
 }
 
 
@@ -743,10 +743,26 @@
 }
 
 .light .book-cover-elevated {
-  box-shadow: 0 14px 30px -8px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 12px 26px -8px rgba(28, 25, 23, 0.08), 0 3px 8px -2px rgba(28, 25, 23, 0.04);
 }
 
 .light .group:hover .book-cover-elevated {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.2), 0 8px 16px -2px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 16px 34px -10px rgba(28, 25, 23, 0.12), 0 6px 14px -2px rgba(28, 25, 23, 0.06);
+}
+
+/* Subtle Paper Grain Texture for Warm Paper White Light Mode (Round 2 Polish) */
+.light body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 160px 160px;
+  mix-blend-mode: multiply;
 }

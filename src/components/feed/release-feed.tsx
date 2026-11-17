@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { Book, Publisher } from '@/lib/types';
 import { loadPersistedViewState, savePersistedViewState, syncUrlQuery } from '@/lib/filter-persistence';
+import { AnimatePresence, MotionConfig, motion } from 'motion/react';
 import { ReleaseCard } from '@/components/books/release-card';
 import { FeaturedReleaseCard } from '@/components/books/card-variants';
 import { useCollection } from '@/hooks/use-collection';
@@ -225,6 +226,18 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
   const [sortBy, setSortBy] = useState<'latest' | 'title' | 'price_low' | 'price_high'>('latest');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [spotlightPaused, setSpotlightPaused] = useState(false);
+  // Measured height of the active spotlight card. Cards differ by up to
+  // ~56px, so the wrapper tweens to the measured value instead of snapping.
+  const [spotlightH, setSpotlightH] = useState<number | null>(null);
+  const measureCardRef = useCallback((el: HTMLDivElement | null) => {
+    if (!el) return;
+    const ro = new ResizeObserver(() => {
+      const h = el.offsetHeight;
+      if (h > 0) setSpotlightH((prev) => (prev === h ? prev : h));
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
   const hydratedRef = useRef(false);
   const suppressFilterResetRef = useRef(false);
   const pendingScrollRef = useRef<number | null>(null);
@@ -290,6 +303,19 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
     }, 6000);
     return () => clearInterval(timer);
   }, [spotlightBooks.length, spotlightPaused]);
+
+  // Preload the NEXT spotlight cover so a swap never fetches + decodes
+  // mid-animation (the stutter on real phones). Warming the cache also
+  // covers the two CSS background-image glows, which share the same URL.
+  useEffect(() => {
+    if (spotlightBooks.length <= 1) return;
+    const next = spotlightBooks[(activeSpotlightIdx + 1) % spotlightBooks.length];
+    const src = next?.coverImage;
+    if (!src) return;
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = src;
+  }, [activeSpotlightIdx, spotlightBooks]);
 
   const handleViewAll = (format: 'Manga' | 'Light Novel') => {
     setFormatFilter(format);
@@ -444,7 +470,36 @@ export const ReleaseFeed = React.memo(function ReleaseFeed({ initialBooks, publi
           onMouseLeave={() => setSpotlightPaused(false)}
         >
           <div ref={featuredInnerRef} className="space-y-3 origin-top will-change-[transform,opacity]">
-            <FeaturedReleaseCard key={activeSpotlight.id} book={activeSpotlight} />
+            {/* Spotlight swap: pure opacity crossfade — no y/scale motion, so the
+                swap is one calm dissolve instead of three competing movements.
+                Enter 0.9s / exit 0.5s on the Arc enter easing [.16,1,.3,1]; the
+                wrapper height tween runs the SAME 0.9s so card and page breathe
+                as one motion. Cards differ in height by up to ~56px: the wrapper
+                tweens to the measured card height so the content below glides
+                instead of jumping. MotionConfig honors prefers-reduced-motion. */}
+            <MotionConfig reducedMotion="user">
+              <motion.div
+                initial={false}
+                animate={{ height: spotlightH ?? 'auto' }}
+                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <AnimatePresence mode="popLayout" initial={false}>
+                  <motion.div
+                    key={activeSpotlight.id}
+                    ref={measureCardRef}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{
+                      opacity: 0,
+                      transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+                    }}
+                    transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    <FeaturedReleaseCard book={activeSpotlight} />
+                  </motion.div>
+                </AnimatePresence>
+              </motion.div>
+            </MotionConfig>
 
             {/* Minimal Spotlight Pagination */}
             {spotlightBooks.length > 1 && (

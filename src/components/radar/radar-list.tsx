@@ -80,8 +80,8 @@ export function RadarList({
   // Trend Chart Data
   const chartSeries: LineChartSeries[] = useMemo(
     () => [
-      { key: 'signals', label: 'Sinyal Baru', area: true },
-      { key: 'graduated', label: 'Lulus Terbit', dashed: true },
+      { key: 'signals', label: 'Sinyal Baru', area: true, color: 'var(--accent)' },
+      { key: 'graduated', label: 'Lulus Terbit', dashed: true, color: 'var(--text-muted)' },
     ],
     [],
   );
@@ -146,9 +146,7 @@ export function RadarList({
             row.state === 'DATED_ISBN'
               ? 'info'
               : row.state === 'OFFICIALLY_CONFIRMED'
-              ? 'success'
-              : row.state === 'CORROBORATED'
-              ? 'warning'
+              ? 'info'
               : 'neutral';
           return (
             <Badge tone={tone} size="sm" pill>
@@ -190,9 +188,9 @@ export function RadarList({
   };
 
   return (
-    <div className="flex flex-col space-y-10 mt-6" aria-busy={false}>
+    <div className="flex flex-col space-y-8 sm:space-y-10 mt-6" aria-busy={false}>
       {/* 1. Arc Dashboard Controls: Time Range + Export */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/[0.06]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-white/[0.06] [.light_&]:border-black/[0.06]">
         <SegmentedControl
           options={[
             { value: '30d', label: '30 Hari' },
@@ -202,22 +200,24 @@ export function RadarList({
           value={timeRange}
           onValueChange={setTimeRange}
           label="Rentang Waktu Radar"
+          fullWidth
         />
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           <Button
             variant="primary"
             size="sm"
             loading={isExporting}
             onClick={handleExport}
           >
-            {exportSaved ? 'Tersimpan!' : 'Export Laporan'}
+            <Download className="w-3.5 h-3.5" />
+            <span>{exportSaved ? 'Tersimpan!' : 'Export Laporan'}</span>
           </Button>
         </div>
       </div>
 
-      {/* 2. KPI Row: Arc MetricCard x 4 */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* 2. KPI Row: Arc MetricCard x 4 - Clean Minimal 2x2 on mobile, 4-col on desktop */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
         <MetricCard
           label="Sinyal Aktif"
           value={active.length}
@@ -248,10 +248,10 @@ export function RadarList({
       </div>
 
       {/* 3. Trend Section: Arc LineChart */}
-      <section className="p-5 sm:p-7 rounded-3xl bg-surface-elevated/40 border border-white/[0.06] shadow-xl space-y-4">
+      <section className="p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-surface/50 [.light_&]:bg-surface border border-white/[0.06] [.light_&]:border-black/[0.06] space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-base sm:text-lg font-medium text-editorial-title">
+            <h2 className="text-sm sm:text-base font-medium text-editorial-title">
               Tren Aktivitas Lisensi
             </h2>
             <p className="text-xs text-editorial-muted">
@@ -286,10 +286,10 @@ export function RadarList({
       </section>
 
       {/* 4. Sources Section: Arc SortableDataTable */}
-      <section className="p-5 sm:p-7 rounded-3xl bg-surface-elevated/40 border border-white/[0.06] shadow-xl space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <section className="p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-surface/50 [.light_&]:bg-surface border border-white/[0.06] [.light_&]:border-black/[0.06] space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
           <div>
-            <h2 className="text-base sm:text-lg font-medium text-editorial-title">
+            <h2 className="text-sm sm:text-base font-medium text-editorial-title">
               Database Sumber &amp; Bukti Lisensi
             </h2>
             <p className="text-xs text-editorial-muted">
@@ -308,7 +308,7 @@ export function RadarList({
             icon={<Layers className="w-6 h-6 text-editorial-muted" />}
           />
         ) : (
-          <div className="w-full overflow-x-auto min-w-0 rounded-2xl border border-white/[0.06] bg-surface-sunken/40">
+          <div className="w-full overflow-x-auto min-w-0 rounded-2xl border border-white/[0.06] [.light_&]:border-black/[0.06] bg-surface-sunken/40">
             <SortableDataTable<SourceTableRow>
               rows={tableRows}
               columns={tableColumns}

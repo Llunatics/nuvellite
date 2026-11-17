@@ -832,7 +832,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
                       {bindUpSeriesIdSet.has(series.id) && (
                         <>
                           <span>•</span>
-                          <span className="text-emerald-400">Bind-Up</span>
+                          <span className="text-accent">Bind-Up</span>
                         </>
                       )}
                     </div>
@@ -850,7 +850,7 @@ export function SeriesDirectoryView({ allSeries, bindUpSeriesIds }: SeriesDirect
                     <div className="mt-2.5 flex items-baseline justify-between text-[11px] font-mono text-editorial-muted">
                       <span>{series.totalVolumes} Volume</span>
                       {ownedCount > 0 && (
-                        <span className="text-emerald-400 font-medium">
+                        <span className="text-accent font-medium">
                           {ownedCount} Milik ({percent}%)
                         </span>
                       )}
