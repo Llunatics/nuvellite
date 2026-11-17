@@ -2939,6 +2939,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_magic-knight-rayearth": {
+  "demographic": "Shojo",
+  "publisherJp": "Kodansha",
+  "volumesJp": "3",
+  "statusJp": "End",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/3hg5qxz/mahou-kishi-rayearth",
+  "priceMin": null,
+  "priceMax": null,
+  "paperType": "Koran",
+  "yearFirstVol": "1996",
+  "kkiTitle": "Magic Knight Rayearth",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
  "ser_makeine-heroine-yang-patah-hati-ternyata-banyak-manga": {
   "demographic": "Shounen",
   "publisherJp": "Shogakukan",

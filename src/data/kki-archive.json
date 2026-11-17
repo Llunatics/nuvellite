@@ -364,13 +364,13 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/bfj1a4n/1-3-chiba-kozue",
   "pranala": "https://www.mncgramedia.id/books/4065/13-vol-01",
   "notes": null,
-  "pranalaCover": "https://media.mncgramedia.id/images/books/4065/1-3_01_1678952755.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/4065/13-vol-01",
-  "pranalaStatus": "ok",
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-11-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/4065/1-3_01_1678952755.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/4065/13-vol-01",
+  "pranalaStatus": "ok"
  },
  {
   "id": "kki_16-jump",
@@ -420,13 +420,13 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/1wozk2b/100-mankai-no-suki-o-ageru",
   "pranala": "https://www.mncgramedia.id/books/4494/100-blossoms-of-love-01",
   "notes": null,
-  "pranalaCover": "https://media.mncgramedia.id/images/books/4494/100_BLOSSOMS_OF_LOVE_01_1678952829.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/4494/100-blossoms-of-love-01",
-  "pranalaStatus": "ok",
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-11-13"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/4494/100_BLOSSOMS_OF_LOVE_01_1678952829.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/4494/100-blossoms-of-love-01",
+  "pranalaStatus": "ok"
  },
  {
   "id": "kki_100-days-left",
@@ -714,7 +714,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/ktr1ti2/20-seiki-shounen",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-17"
+  }
  },
  {
   "id": "kki_21-emon",
@@ -840,7 +844,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/ur44nr4/30-debut",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-17"
+  }
  },
  {
   "id": "kki_37-c-boyfriend",
@@ -891,7 +899,11 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/x86gk1e/heinetsu-37-2oc",
   "pranala": "https://www.mncgramedia.id/books/2138/372-the-warmth-of-your-love",
   "notes": null,
-  "pranalaStatus": "miss"
+  "pranalaStatus": "miss",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-17"
+  }
  },
  {
   "id": "kki_375-c-tears",
@@ -1304,7 +1316,11 @@
   "publisherJp": "Hakusensha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/qp2zm7n/nemurenu-kishi-ni-hanataba-o",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-17"
+  }
  },
  {
   "id": "kki_a-breathtaking-love",
@@ -7589,9 +7605,9 @@
   "notes": null
  },
  {
-  "id": "kki_blue-lock-elex",
-  "slug": "blue-lock-elex",
-  "title": "Blue Lock (Elex)",
+  "id": "kki_blue-lock-pgi",
+  "slug": "blue-lock-pgi",
+  "title": "Blue Lock (PGI)",
   "author": "Cerita: Muneyuki Kaneshiro; Gambar: Yusuke Nomura",
   "illustrator": null,
   "medium": "MANGA",
@@ -7608,29 +7624,7 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/joxc7wz/blue-lock",
   "pranala": null,
-  "notes": "Mulai Vol.20 diterbitkan oleh Phoenix Gramedia Indonesia."
- },
- {
-  "id": "kki_blue-lock-pgi",
-  "slug": "blue-lock-pgi",
-  "title": "Blue Lock (PGI)",
-  "author": "Cerita: Muneyuki Kaneshiro; Gambar: Yusuke Nomura",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shounen",
-  "volumesId": "33",
-  "statusId": "Ongoing",
-  "publisherId": "Phoenix",
-  "yearFirstVol": "2025",
-  "priceMin": "Rp60.000",
-  "priceMax": "Rp60.000",
-  "paperType": "Bookpaper",
-  "volumesJp": "32",
-  "statusJp": "Ongoing",
-  "publisherJp": "Kodansha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/joxc7wz/blue-lock",
-  "pranala": "https://phoenixgramedia.id/books/blue-lock-vol-20/",
-  "notes": "Penata Letak: Tim S. Nila. Mulai Vol.20 diterbitkan oleh Phoenix Gramedia Indonesia.",
+  "notes": "Mulai Vol.20 diterbitkan oleh Phoenix Gramedia Indonesia.",
   "pranalaStatus": "miss"
  },
  {
@@ -34160,28 +34154,6 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/nh84iir/magic-kaito",
   "pranala": null,
   "notes": null
- },
- {
-  "id": "kki_magic-knight-rayearth",
-  "slug": "magic-knight-rayearth",
-  "title": "Magic Knight Rayearth",
-  "author": "CLAMP",
-  "illustrator": null,
-  "medium": "MANGA",
-  "demographic": "Shojo",
-  "volumesId": "4",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "1996",
-  "priceMin": null,
-  "priceMax": null,
-  "paperType": "Koran",
-  "volumesJp": "3",
-  "statusJp": "End",
-  "publisherJp": "Kodansha",
-  "mangaupdatesUrl": "https://www.mangaupdates.com/series/3hg5qxz/mahou-kishi-rayearth",
-  "pranala": null,
-  "notes": "Lanjut Ke Magic Knight Rayearth 2. Volume akhir terbitan Elex adalah volume satu dari MKR 2"
  },
  {
   "id": "kki_magic-knight-rayearth-2",
