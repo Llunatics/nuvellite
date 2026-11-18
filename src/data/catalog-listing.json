@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-17T15:43:14.000Z",
+  "lastUpdated": "2026-11-18T00:44:45.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -49368,8 +49368,8 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2024/6/23/zmwxxabdens2j6ncm6u6zf.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "currentPrice": 33750,
+      "availability": "AVAILABLE",
+      "currentPrice": 40500,
       "originalPrice": 45000,
       "releaseDate": "2024-06-23",
       "isWednesdayRelease": false,
@@ -84103,8 +84103,8 @@
       "publisherShortName": "Elex Media",
       "coverImage": "",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
-      "currentPrice": 30000,
+      "availability": "AVAILABLE",
+      "currentPrice": 36000,
       "originalPrice": 40000,
       "releaseDate": "2021-10-13",
       "isWednesdayRelease": false,
@@ -88195,7 +88195,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/5acza02kha.jfif",
       "status": "PREORDER",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 45000,
       "originalPrice": 45000,
       "releaseDate": "2026-11-18",
