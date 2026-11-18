@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-18T00:44:45.000Z",
+  "lastUpdated": "2026-11-18T15:22:07.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -5912,7 +5912,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-04-08",
       "isWednesdayRelease": true,
-      "currentPrice": 52000,
+      "currentPrice": 58500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -5940,7 +5940,7 @@
           "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-secret-archives-02-shuichi-akai--toru-amuro"
         }
       ],
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 65000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -9007,7 +9007,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-24",
       "isWednesdayRelease": true,
-      "currentPrice": 76500,
+      "currentPrice": 68000,
       "authors": [
         "Hirohiko Araki"
       ],
@@ -38547,7 +38547,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 50000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -94320,7 +94320,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/rr-litrc8v.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2025-11-17",
       "isWednesdayRelease": false,
       "currentPrice": 68000,
@@ -99742,7 +99742,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/gnutasm-2e.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-07-23",
       "isWednesdayRelease": false,
       "currentPrice": 58500,
@@ -140236,6 +140236,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_detektif_conan_premium_02_1795015327",
+      "bookId": "pub_detektif_conan_premium_02",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 52000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-18",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_akasha_chiruran_shinsengumi_15_init",
       "bookId": "pub_akasha_chiruran_shinsengumi_15",
       "price": 45000,
@@ -147675,6 +147686,17 @@
       "previousPrice": 55250,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_19__part_4_diamond_is_unbreakable_1795015327",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_19__part_4_diamond_is_unbreakable",
+      "price": 68000,
+      "currentPrice": 68000,
+      "originalPrice": 85000,
+      "previousPrice": 76500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-18",
       "source": "gramedia_api"
     },
     {
@@ -210430,6 +210452,17 @@
       "previousPrice": 32500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_yotsuba_16_1795014915",
+      "bookId": "pub_yotsuba_16",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 50000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-18",
       "source": "gramedia_api_refresh"
     },
     {
@@ -376993,6 +377026,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_12_1795015327",
+      "bookId": "pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_12",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-18",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_11_init",
       "bookId": "pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_11",
       "price": 58500,
@@ -398598,6 +398642,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_17__part_3_stardust_crusaders_1795015161",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_17__part_3_stardust_crusaders",
+      "price": 68000,
+      "currentPrice": 68000,
+      "originalPrice": 85000,
+      "previousPrice": 68000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-18",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_level_comic_jojos_bizarre_adventure_18__part_4_diamond_is_unbreakable_init",
       "bookId": "pub_level_comic_jojos_bizarre_adventure_18__part_4_diamond_is_unbreakable",
       "price": 63750,
@@ -414618,6 +414673,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795015327",
+      "startedAt": "2026-11-18T15:11:53.000Z",
+      "finishedAt": "2026-11-18T15:22:07.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1519,
+      "productsAccepted": 1319,
+      "productsRejected": 620,
+      "productsUpdated": 848,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 613943,
+      "success": true
+    },
+    {
       "id": "sync_1794962685",
       "startedAt": "2026-11-18T00:36:25.000Z",
       "finishedAt": "2026-11-18T00:44:45.000Z",
@@ -414995,26 +415070,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 555000,
-      "success": true
-    },
-    {
-      "id": "sync_1794351761",
-      "startedAt": "2026-11-10T22:53:00.000Z",
-      "finishedAt": "2026-11-10T23:02:41.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 622,
-      "productsUpdated": 845,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 581347,
       "success": true
     }
   ]
