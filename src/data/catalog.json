@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-18T15:22:07.000Z",
+  "lastUpdated": "2026-11-19T00:04:04.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -5912,7 +5912,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-04-08",
       "isWednesdayRelease": true,
-      "currentPrice": 58500,
+      "currentPrice": 52000,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -5940,7 +5940,7 @@
           "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-secret-archives-02-shuichi-akai--toru-amuro"
         }
       ],
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 65000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -9007,7 +9007,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-06-24",
       "isWednesdayRelease": true,
-      "currentPrice": 68000,
+      "currentPrice": 76500,
       "authors": [
         "Hirohiko Araki"
       ],
@@ -11280,7 +11280,7 @@
       "status": "RELEASED",
       "releaseDate": "2026-05-30",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 38250,
       "authors": [
         "Takeru Hokazono"
       ],
@@ -34980,7 +34980,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 65000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -42147,7 +42147,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 55000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -45803,7 +45803,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -47850,7 +47850,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-02-19",
       "isWednesdayRelease": true,
-      "currentPrice": 33750,
+      "currentPrice": 40500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -47866,7 +47866,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -51451,7 +51451,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-01-10",
       "isWednesdayRelease": false,
-      "currentPrice": 33750,
+      "currentPrice": 40500,
       "authors": [
         "One & Yusuke Murata"
       ],
@@ -51467,7 +51467,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -78441,7 +78441,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-09-22",
       "isWednesdayRelease": true,
-      "currentPrice": 31500,
+      "currentPrice": 37800,
       "authors": [
         "Seimaru Amagi & Fumiya Sato"
       ],
@@ -78457,7 +78457,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 42000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -94320,7 +94320,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/rr-litrc8v.jpg",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2025-11-17",
       "isWednesdayRelease": false,
       "currentPrice": 68000,
@@ -99742,7 +99742,7 @@
       "publisherShortName": "PGI",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/gnutasm-2e.jpeg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-07-23",
       "isWednesdayRelease": false,
       "currentPrice": 58500,
@@ -108513,8 +108513,8 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-12-16",
       "isWednesdayRelease": true,
-      "currentPrice": 118000,
-      "originalPrice": 118000,
+      "currentPrice": 108000,
+      "originalPrice": 108000,
       "authors": [
         "Daken "
       ],
@@ -140247,6 +140247,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_detektif_conan_premium_02_1795046644",
+      "bookId": "pub_detektif_conan_premium_02",
+      "price": 52000,
+      "currentPrice": 52000,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_akasha_chiruran_shinsengumi_15_init",
       "bookId": "pub_akasha_chiruran_shinsengumi_15",
       "price": 45000,
@@ -147700,6 +147711,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_19__part_4_diamond_is_unbreakable_1795046644",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_19__part_4_diamond_is_unbreakable",
+      "price": 76500,
+      "currentPrice": 76500,
+      "originalPrice": 85000,
+      "previousPrice": 68000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_wind_breaker_vol_21_init",
       "bookId": "pub_wind_breaker_vol_21",
       "price": 58500,
@@ -153070,6 +153092,17 @@
       "previousPrice": 33750,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_kagurabachi_06_1795046644",
+      "bookId": "pub_kagurabachi_06",
+      "price": 38250,
+      "currentPrice": 38250,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-19",
       "source": "gramedia_api"
     },
     {
@@ -201730,6 +201763,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_gokurakugai_vol_4_1795046644",
+      "bookId": "pub_gokurakugai_vol_4",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_ichi_the_witch_01_init",
       "bookId": "pub_ichi_the_witch_01",
       "price": 40500,
@@ -222837,6 +222881,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_tokyo_aliens_03_1795046323",
+      "bookId": "pub_tokyo_aliens_03",
+      "price": 44000,
+      "currentPrice": 44000,
+      "originalPrice": 55000,
+      "previousPrice": 44000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-18",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_akasha__city_hunter_rebirth_12_init",
       "bookId": "pub_akasha__city_hunter_rebirth_12",
       "price": 40500,
@@ -231345,6 +231400,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_one_punch_man_29_1795046333",
+      "bookId": "pub_one_punch_man_29",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-18",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_wind_breaker_vol_9_init",
       "bookId": "pub_wind_breaker_vol_9",
       "price": 58500,
@@ -236499,6 +236565,17 @@
       "previousPrice": 38250,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_spesial_48_1795046644",
+      "bookId": "pub_detektif_conan_spesial_48",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-19",
       "source": "gramedia_api"
     },
     {
@@ -245354,6 +245431,17 @@
       "previousPrice": 22500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_one_punch_man_28_1795046351",
+      "bookId": "pub_one_punch_man_28",
+      "price": 40500,
+      "currentPrice": 40500,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-18",
       "source": "gramedia_api_refresh"
     },
     {
@@ -332405,6 +332493,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_kindaichi_37_tahun_06_1795046456",
+      "bookId": "pub_kindaichi_37_tahun_06",
+      "price": 37800,
+      "currentPrice": 37800,
+      "originalPrice": 42000,
+      "previousPrice": 31500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_lc_attack_on_titan_06_1_init",
       "bookId": "pub_lc_attack_on_titan_06_1",
       "price": 27000,
@@ -377037,6 +377136,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_12_1795046644",
+      "bookId": "pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_12",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_11_init",
       "bookId": "pub_100_pacar_yang_sangat_sangat_sangat_sangat_sangat_mencintaimu_11",
       "price": 58500,
@@ -398653,6 +398763,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_17__part_3_stardust_crusaders_1795046511",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_17__part_3_stardust_crusaders",
+      "price": 68000,
+      "currentPrice": 68000,
+      "originalPrice": 85000,
+      "previousPrice": 68000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_level_comic_jojos_bizarre_adventure_18__part_4_diamond_is_unbreakable_init",
       "bookId": "pub_level_comic_jojos_bizarre_adventure_18__part_4_diamond_is_unbreakable",
       "price": 63750,
@@ -413725,6 +413846,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_light_novel_who_killed_the_brave_chapter_of_the_brave_1795046644",
+      "bookId": "pub_light_novel_who_killed_the_brave_chapter_of_the_brave",
+      "price": 108000,
+      "currentPrice": 108000,
+      "originalPrice": 108000,
+      "previousPrice": 118000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_the_summer_hikaru_died_9_init",
       "bookId": "pub_the_summer_hikaru_died_9",
       "price": 69500,
@@ -414673,6 +414805,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795046644",
+      "startedAt": "2026-11-18T23:55:45.000Z",
+      "finishedAt": "2026-11-19T00:04:04.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1519,
+      "productsAccepted": 1319,
+      "productsRejected": 620,
+      "productsUpdated": 848,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 498439,
+      "success": true
+    },
+    {
       "id": "sync_1795015327",
       "startedAt": "2026-11-18T15:11:53.000Z",
       "finishedAt": "2026-11-18T15:22:07.000Z",
@@ -415050,26 +415202,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 529962,
-      "success": true
-    },
-    {
-      "id": "sync_1794373423",
-      "startedAt": "2026-11-11T04:54:28.000Z",
-      "finishedAt": "2026-11-11T05:03:43.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 622,
-      "productsUpdated": 845,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 555000,
       "success": true
     }
   ]
