@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-19T06:28:27.000Z",
+  "lastUpdated": "2026-11-19T20:08:31.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -5912,7 +5912,7 @@
       "status": "RELEASED",
       "releaseDate": "2020-04-08",
       "isWednesdayRelease": true,
-      "currentPrice": 52000,
+      "currentPrice": 58500,
       "authors": [
         "Aoyama Gosho"
       ],
@@ -5940,7 +5940,7 @@
           "gramediaUrl": "https://www.gramedia.com/products/detektif-conan-secret-archives-02-shuichi-akai--toru-amuro"
         }
       ],
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 65000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -7301,6 +7301,44 @@
       "bindUpKind": null,
       "bindUpLabel": null,
       "categorySlugs": "buku/komik/fantasi-fiksi-ilmiah"
+    },
+    {
+      "id": "pub_light_novel_secrets_of_the_silent_witch_vol_1",
+      "slug": "light-novel-secrets-of-the-silent-witch-vol-1",
+      "title": "Light Novel: Secrets of The Silent Witch Vol. 1",
+      "originalTitle": "Secrets of The Silent Witch",
+      "seriesId": "ser_secrets-of-the-silent-witch",
+      "seriesName": "Secrets of The Silent Witch",
+      "volume": 1,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku/komik/fantasi-fiksi-ilmiah",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/26zzleh1ec.jpg",
+      "status": "PUBLISHED",
+      "availability": "AVAILABLE",
+      "releaseDate": "2026-07-23",
+      "isWednesdayRelease": false,
+      "currentPrice": 103500,
+      "originalPrice": 115000,
+      "authors": [
+        "Matsuri Isora"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "isbn13": "9786347574626",
+      "synopsis": "Monica Everett—alias Silent Witch—adalah satu-satunya penyihir di dunia yang mampu menggunakan sihir tanpa mengucapkan mantra. Ia juga dikenal sebagai pahlawan muda yang berhasil mengalahkan naga hitam seorang diri.\n\nNamun, di balik reputasinya yang gemilang … sebenarnya Monica sangat pemalu! Agar tidak perlu berbicara di depan umum, ia berlatih dengan keras sampai dirinya mampu menggunakan sihir tanpa mantra.\n\nTanpa menyadari kejeniusan dan keistimewaan bakatnya sendiri, Monica terpilih menjadi salah satu anggota Tujuh Penyihir Agung. Kini, ia dipaksa untuk menjalankan misi rahasia, yaitu melindungi sang pangeran kedua!\n\nNamun, demi menjalankan misi tersebut, penyihir genius yang biasanya mengurung diri di rumah itu harus menyembunyikan identitasnya.\n\nInilah kisah fantasi mendebarkan tentang penyihir pemalu yang diam-diam menjalani misi rahasia demi menumpas ancaman yang mengintai sang pangeran!\n\nKeunggulan Buku:\n\n•\tMengangkat kisah fantasi yang memiliki unsur politik dan misteri, tapi dikemas dengan ringan\n\n•\tBaik karakter utama maupun karakter pendukungnya memiliki kepribadian dan ciri khas yang kuat\n\n•\tSalah satu serial yang dinanti oleh para pembaca\n\n•\tMendapatkan peringkat 5 besar dalam penghargaan Kono Light Novel ga Sugoi! pada 2022, 2023, dan 2026\n\n•\tMemiliki seri anime 1 musim yang rilis di tahun 2025\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/light-novel-secrets-of-the-silent-witch-vol-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Light Novel from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
     },
     {
       "id": "pub_level_comic_the_drops_of_god_39_1",
@@ -39655,7 +39693,8 @@
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
-      "bindUpLabel": null
+      "bindUpLabel": null,
+      "categorySlugs": "buku/komik/manga/olahraga-1"
     },
     {
       "id": "pub_hai_miiko_21__bookpaper",
@@ -50751,7 +50790,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-01-15",
       "isWednesdayRelease": true,
-      "currentPrice": 30000,
+      "currentPrice": 40000,
       "authors": [
         "YAMAMOTO SOUICHIROU"
       ],
@@ -50769,7 +50808,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 40000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -51451,7 +51490,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-01-10",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 33750,
       "authors": [
         "One & Yusuke Murata"
       ],
@@ -51467,7 +51506,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -55576,7 +55615,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-09-23",
       "isWednesdayRelease": false,
-      "currentPrice": 28800,
+      "currentPrice": 24000,
       "authors": [
         "One & Yusuke Murata"
       ],
@@ -55592,7 +55631,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -76761,7 +76800,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-02-02",
       "isWednesdayRelease": true,
-      "currentPrice": 37800,
+      "currentPrice": 42000,
       "authors": [
         "Seimaru Amagi & Fumiya Sato"
       ],
@@ -76777,7 +76816,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 42000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -79717,7 +79756,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-06-02",
       "isWednesdayRelease": true,
-      "currentPrice": 28800,
+      "currentPrice": 32000,
       "authors": [
         "HAKURI"
       ],
@@ -79733,7 +79772,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -94320,10 +94359,10 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/rr-litrc8v.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2025-11-17",
       "isWednesdayRelease": false,
-      "currentPrice": 68000,
+      "currentPrice": 76500,
       "originalPrice": 85000,
       "authors": [
         "Hirohiko Araki"
@@ -103275,7 +103314,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2026-11-25",
       "isWednesdayRelease": true,
-      "currentPrice": 88200,
+      "currentPrice": 98000,
       "originalPrice": 98000,
       "authors": [
         "Kamome Shirahama"
@@ -103821,6 +103860,196 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from m&c!",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_light_novel_secrets_of_the_silent_witch_vol_2",
+      "slug": "light-novel-secrets-of-the-silent-witch-vol-2",
+      "title": "Light Novel: Secrets of The Silent Witch Vol. 2",
+      "originalTitle": "Secrets of The Silent Witch",
+      "seriesId": "ser_secrets-of-the-silent-witch",
+      "seriesName": "Secrets of The Silent Witch",
+      "volume": 2,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku/komik/fantasi-fiksi-ilmiah",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ih0wfc-o-o.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-19",
+      "isWednesdayRelease": false,
+      "currentPrice": 119000,
+      "originalPrice": 119000,
+      "authors": [
+        "Matsuri Isora"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "isbn13": "9786347811653",
+      "synopsis": "Setelah berhasil “menangani” musuh yang mengancam Pangeran Kedua, Monica Everett—alias Silent Witch—terpilih menjadi bendahara OSIS. Ia mengira, misinya akan berjalan mulus.\n\nNamun, tiba-tiba guru lamanya pindah ke Akademi Serendia! Monica, yang memiliki kapasitas mana cukup besar hingga diterima menjadi Penyihir Agung, kini harus berhadapan dengan alat pengukur mana!\n\nTidak hanya itu. Berbeda dari murid lain, Monica juga kewalahan ketika berdansa dan melakukan rangkaian pesta minum teh. Menghadapi kehidupan sekolah yang biasa saja sudah membuat penyihir terkuat itu hampir pingsan. Ditambah lagi, bahaya masih terus mengintai Pangeran Kedua!\n\nInilah volume kedua dari kisah seorang pengguna sihir tanpa mantra dalam menjalankan misi rahasianya!\n\nKeunggulan Buku:\n\n•\tMengangkat kisah fantasi yang memiliki unsur politik dan misteri, tapi dikemas dengan ringan.\n\n•\tBaik karakter utama maupun karakter pendukungnya memiliki kepribadian dan ciri khas yang kuat\n\n•\tSalah satu serial yang dinanti oleh para pembaca.\n\n•\tMendapatkan peringkat 5 besar dalam penghargaan Kono Light Novel ga Sugoi! pada 2022, 2023, dan 2026.\n\n•\tMemiliki seri anime 1 musim yang rilis di tahun 2025.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/light-novel-secrets-of-the-silent-witch-vol-2",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Light Novel from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_light_novel_meski_terlambat_aku_telah_jatuh_cinta_pada_teman_masa_kecilku_vol_1",
+      "slug": "light-novel-meski-terlambat-aku-telah-jatuh-cinta-pada-teman-masa-kecilku-vol-1",
+      "title": "Light Novel: Meski Terlambat, Aku Telah Jatuh Cinta Pada Teman Masa Kecilku Vol. 1",
+      "originalTitle": "Meski Terlambat, Aku Telah Jatuh Cinta Pada Teman Masa Kecilku",
+      "seriesId": "ser_meski-terlambat-aku-telah-jatuh-cinta-pada-teman-masa-kecilku",
+      "seriesName": "Meski Terlambat, Aku Telah Jatuh Cinta Pada Teman Masa Kecilku",
+      "volume": 1,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku/komik/romansa",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/lhetnl7-k-.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-19",
+      "isWednesdayRelease": false,
+      "currentPrice": 98000,
+      "originalPrice": 98000,
+      "authors": [
+        "Fumiaki Maruto"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "isbn13": "9786347811578",
+      "synopsis": "Meski terlambat, kisah cinta yang paling dekat sekaligus paling jauh ini pun dimulai!\n\nTa-kun adalah teman masa kecilku selama 10 tahun. Perasaan kami begitu dekat, dan jarak di antara kami begitu rapat sehingga mustahil untuk salah mengartikannya, tapi anehnya kami tidak pernah benar-benar bersinggungan–pertemanan masa kecil yang begitu unik …. Tunggu, mana mungkin begitu~!\n\nMeski di kamarnya aku diam-diam menempelkan punggungku padanya, atau sengaja menyesuaikan waktu berangkat sekolah untuk berpura-pura bertemu secara kebetulan, tapi perasaannya jadi tumpul karena kami sudah terlalu lama bersama, dan apa pun pendekatan yang kulakukan terasa sia-sia! Apa yang sebaiknya kulakukan?! Ah, tapi ia baru saja bilang belum ada yang pernah menyatakan perasaan padanya. Artinya, masih ada harapan, kan? Aku masih bisa menjadi pacar Ta-kun, kan …?\n\nHikari Shirasaka, 16 tahun.\n\nMeski Terlambat, aku telah jatuh cinta pada teman masa kecilku.\n\nKeunggulan:\n\n•\tMengusung genre romansa komedi yang fresh.\n\n•\tMenceritakan romansa teman masa kecil dengan cerita yang manis.\n\n•\tKonflik yang romantis dan relatable.\n\n•\tMemakai teknik narasi breaking the fourth wall, sehingga narasi yang disampaikan interaktif.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/light-novel-meski-terlambat-aku-telah-jatuh-cinta-pada-teman-masa-kecilku-vol-1",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Light Novel from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_jugatsudo_tempat_buku_dan_takdir_bertemu_vol_2",
+      "slug": "jugatsudo-tempat-buku-dan-takdir-bertemu-vol-2",
+      "title": "Jugatsudo - Tempat Buku dan Takdir Bertemu Vol. 2",
+      "originalTitle": "Jugatsudo - Tempat Buku dan Takdir Bertemu",
+      "seriesId": "ser_jugatsudo-tempat-buku-dan-takdir-bertemu",
+      "seriesName": "Jugatsudo - Tempat Buku dan Takdir Bertemu",
+      "volume": 2,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku/komik/manga",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/50-3778ovo.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-19",
+      "isWednesdayRelease": false,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Ao Kojima"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811707",
+      "synopsis": "Pekerja kantoran yang hobi bertualang dari satu toko buku ke toko buku lainnya, komikus yang mulai jenuh membaca novel, pengelola pegadaian yang datang untuk menjual barang gadai... Hari ini pun Toko Buku Bekas Jugatsudo dikunjungi oleh berbagai macam orang yang mendambakan \"pertemuan\" dengan \"sebuah buku istimewa\".\n\nInilah jilid kedua dari serial pendek mengenai buku dan kehidupan...\n\nKeunggulan:\n\n•\tDinominasikan dalam Next Manga Award 2025 kategori cetak.\n\n•\tSerial ini juga menempati peringkat pertama dalam daftar komik terbaik untuk pembaca pria di Kono Manga ga Sugoi! terbitan Takarajimasha edisi 2026.\n\n•\tSerial ini meraih peringkat ke-2 dalam Komik Rekomendasi Karyawan Toko Buku Seluruh Negeri dan menempati peringkat pertama dalam daftar Komik Rekomendasi Penerbit Seluruh Negeri tahun 2026.\n\n•\tSerial ini memenangkan Manga Taisho ke-19 tahun 2026.\n\n•\tSerial ini memenangkan penghargaan utama dalam Tezuka Osamu Cultural Prize ke-30 tahun 2026.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/jugatsudo-tempat-buku-dan-takdir-bertemu-vol-2",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_makeine_heroine_yang_patah_hati_ternyata_banyak_vol_3",
+      "slug": "makeine-heroine-yang-patah-hati-ternyata-banyak-vol-3",
+      "title": "Makeine - Heroine yang Patah Hati Ternyata Banyak! Vol. 3",
+      "originalTitle": "Makeine - Heroine yang Patah Hati Ternyata Banyak!",
+      "seriesId": "ser_makeine-heroine-yang-patah-hati-ternyata-banyak-manga",
+      "seriesName": "Makeine - Heroine yang Patah Hati Ternyata Banyak!",
+      "volume": 3,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku/komik/manga/romance-2",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/21ri3gy-bh.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-19",
+      "isWednesdayRelease": false,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Takibi Amamori"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811691",
+      "synopsis": "Semester baru, Kazuhiko Nukumizu pergi makan siang bersama dengan Anna Yanami setelah sekian lama. Di perjalanan, ia tanpa sengaja mendengar suatu rumor...\n\nNukumizu mencoba mengakhiri hubungan mereka, Sementara yanami terkejut dengan perubahan mendadak tersebut. Akankah hubungan mereka berubah?\n\nKisah rom-com konyol penuh kekalahan sedang di puncak!!! Tawa, kehangatan, serta kilau masa muda–- semuanya untukmu.\n\nKeunggulan:\n\n• Menghadirkan romcom dengan konsep “heroine yang patah hati” yang menarik dan berbeda dari kisah cinta sekolah pada umumnya.\n\n• Menampilkan karakter-karakter heroine dengan kepribadian, masalah, dan kisah cinta mereka masing-masing.\n\n• Animenya mendapatkan sangat banyak penghargaan dan akan mendapat Season 2.\n\n• Ceritanya yang manis sekaligus pahit dapat membuat pembaca semakin tertarik.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/makeine-heroine-yang-patah-hati-ternyata-banyak-vol-3",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_abang_siscon_yang_menyebalkan_vol_3",
+      "slug": "abang-siscon-yang-menyebalkan-vol-3",
+      "title": "Abang Siscon yang Menyebalkan Vol. 3",
+      "originalTitle": "Abang Siscon yang Menyebalkan",
+      "seriesId": "ser_abang-siscon-yang-menyebalkan",
+      "seriesName": "Abang Siscon yang Menyebalkan",
+      "volume": 3,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku/komik/manga/komedi",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/aa-an84vaa.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-18",
+      "isWednesdayRelease": true,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Yoshimizu "
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811684",
+      "synopsis": "“Kak Hasegawa ternyata mesum, ya…”\n\nSiswa paling keren di sekolah, Yu Hasegawa, adalah seorang siscon akut yang sangat menyayangi adik perempuannya, Yui. Yui sudah berusaha keras menyembunyikan fakta bahwa abangnya yang sangat keren adalah seorang siscon, tapi “rahasia” tersebut akhirnya terbongkar oleh Koyuri. Setelah mengetahui “masalah” dan “perasaan” Koyuri, Yui bekerja sama dengan Yu dan Mahiro untuk menjalankan suatu rencana, tapi…\n\nSeorang kakak dengan gap sangat kontras dan adik yang dingin. Jangan-jangan, mereka berdua sebenarnya akrab!?\n\nKeunggulan:\n\n• Viral di TikTok dengan sekitar 8 juta views, kemudian dijadikan serialisasi.\n\n• Nominasi Next Manga Awards 2024 kategori Web Manga.\n\n• Komedi kuat dengan premis kakak siscon yang absurd dan adik yang cuek.\n\n• Character gap menarik: kakak populer dan sempurna di sekolah, tapi berubah total di depan adiknya.\n\n• Cocok untuk penggemar school comedy, slice of life, sibling comedy, dan gap moe.\n\n• Mendapat respons pembaca positif, dengan rating sekitar 4,5/5 di Comic Cmoa.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/abang-siscon-yang-menyebalkan-vol-3",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -109008,11 +109237,12 @@
       "author": "Yoshimizu ",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 2,
-      "latestVolume": 2,
+      "totalVolumes": 3,
+      "latestVolume": 3,
       "availableVolumes": [
         1,
-        2
+        2,
+        3
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/94yc3ogn0i.jpeg",
@@ -114109,10 +114339,11 @@
       "author": "Ao Kojima",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 1,
-      "latestVolume": 1,
+      "totalVolumes": 2,
+      "latestVolume": 2,
       "availableVolumes": [
-        1
+        1,
+        2
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/uat-9bger-.jpeg",
@@ -115692,11 +115923,12 @@
       "author": "Takibi Amamori",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 2,
-      "latestVolume": 2,
+      "totalVolumes": 3,
+      "latestVolume": 3,
       "availableVolumes": [
         1,
-        2
+        2,
+        3
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/0-h4tihl7a.jpeg",
@@ -115860,6 +116092,25 @@
       ],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/s--6v1v-54.jpg",
       "description": "Cerita tentang buku sihir yang bekerja secara mekanis, yang menyebarkan kutukan pada para vampir. Apa kau pernah mendengarnya? Sekarang, dipandu oleh “Buku Vanitas”, roda gigi cerita ini mulai berputar.\n\nVanitas mengunjungi tempat tinggal para vampir di Paris yang satunya lagi. Di sana, kutukan merajalela sehingga para vampir tak dapat menahan dorongan untuk mengisap darah. Di sana, hari-hari yang telah hilang yang selama ini tersimpan dalam ingatan terdalam terkuak. Bulan biru pun muncul di pesta topeng para vampir yang penuh tipu muslihat.\n\nWalau pesta topeng telah berakhir, tapi irama konspirasi masih menggema di pemakaman bawah tanah. Panggung sekali lagi kembali ke Paris dan sekarang tirai perang terangkat. Vampir dan manusia, mana yang harus diburu?\n\nVanitas dan Noé berhadapan dengan ancaman yang telah menanti di pemakaman bawah tanah, pasukan pemburu vampir “Chasseur” serta “pemikul kutukan bayangan” yang mengerikan. Tapi, untuk apa mereka bertarung? Untuk menyelamatkan siapa…? Mereka saling menjaga punggung masing-masing, sekalipun taring itu suatu hari nanti akan menyakiti satu sama lain.\n\n***\n\nJun Mochizuki (Mochizuki Jun Mochizuki Jun) adalah seorang komikus Jepang (manga-ka), terkenal karena serial shounen fantasi Pandora Hearts.\n\nDetail\n\nPenulis\n\nJun Mochizuki\n\nJumlah Halaman\n\n240\n\nPenerbit\n\nElex Media Komputindo\n\nTanggal Terbit\n\n28 Feb 2022\n\nFormat\n\nSoft Cover\n\nBerat\n\n0.125 kg\n\nISBN\n\n9786020455495\n\nLebar\n\n11.4 cm\n\nBahasa\n\nIndonesia\n\nPanjang\n\n17.2cm"
+    },
+    {
+      "id": "ser_meski-terlambat-aku-telah-jatuh-cinta-pada-teman-masa-kecilku",
+      "slug": "meski-terlambat-aku-telah-jatuh-cinta-pada-teman-masa-kecilku",
+      "name": "Meski Terlambat, Aku Telah Jatuh Cinta Pada Teman Masa Kecilku",
+      "originalTitle": "Meski Terlambat, Aku Telah Jatuh Cinta Pada Teman Masa Kecilku",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Fumiaki Maruto",
+      "type": "LIGHT_NOVEL",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [
+        1
+      ],
+      "missingVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/lhetnl7-k-.jpeg",
+      "description": "Meski terlambat, kisah cinta yang paling dekat sekaligus paling jauh ini pun dimulai!\n\nTa-kun adalah teman masa kecilku selama 10 tahun. Perasaan kami begitu dekat, dan jarak di antara kami begitu rapat sehingga mustahil untuk salah mengartikannya, tapi anehnya kami tidak pernah benar-benar bersinggungan–pertemanan masa kecil yang begitu unik …. Tunggu, mana mungkin begitu~!\n\nMeski di kamarnya aku diam-diam menempelkan punggungku padanya, atau sengaja menyesuaikan waktu berangkat sekolah untuk berpura-pura bertemu secara kebetulan, tapi perasaannya jadi tumpul karena kami sudah terlalu lama bersama, dan apa pun pendekatan yang kulakukan terasa sia-sia! Apa yang sebaiknya kulakukan?! Ah, tapi ia baru saja bilang belum ada yang pernah menyatakan perasaan padanya. Artinya, masih ada harapan, kan? Aku masih bisa menjadi pacar Ta-kun, kan …?\n\nHikari Shirasaka, 16 tahun.\n\nMeski Terlambat, aku telah jatuh cinta pada teman masa kecilku.\n\nKeunggulan:\n\n•\tMengusung genre romansa komedi yang fresh.\n\n•\tMenceritakan romansa teman masa kecil dengan cerita yang manis.\n\n•\tKonflik yang romantis dan relatable.\n\n•\tMemakai teknik narasi breaking the fourth wall, sehingga narasi yang disampaikan interaktif.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_mieruko-chan-the-girl-that-sees",
@@ -118752,10 +119003,11 @@
       "author": "Matsuri Isora",
       "type": "LIGHT_NOVEL",
       "status": "ONGOING",
-      "totalVolumes": 1,
-      "latestVolume": 1,
+      "totalVolumes": 2,
+      "latestVolume": 2,
       "availableVolumes": [
-        1
+        1,
+        2
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/26zzleh1ec.jpg",
@@ -140298,6 +140550,17 @@
       "originalPrice": 65000,
       "previousPrice": 58500,
       "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_detektif_conan_premium_02_1795118911",
+      "bookId": "pub_detektif_conan_premium_02",
+      "price": 58500,
+      "currentPrice": 58500,
+      "originalPrice": 65000,
+      "previousPrice": 52000,
+      "availability": "AVAILABLE",
       "observedAt": "2026-11-19",
       "source": "gramedia_api"
     },
@@ -243754,6 +244017,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_teasing_master_takagi_3_1795118614",
+      "bookId": "pub_teasing_master_takagi_3",
+      "price": 40000,
+      "currentPrice": 40000,
+      "originalPrice": 40000,
+      "previousPrice": 30000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_2_init",
       "bookId": "pub_light_novel_alya_sometimes_hides_her_feeling_in_russian_2",
       "price": 88200,
@@ -245948,6 +246222,17 @@
       "previousPrice": 33750,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-18",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_one_punch_man_28_1795118617",
+      "bookId": "pub_one_punch_man_28",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
       "source": "gramedia_api_refresh"
     },
     {
@@ -256228,6 +256513,17 @@
       "previousPrice": 27200,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_one_punch_man_27_1795118633",
+      "bookId": "pub_one_punch_man_27",
+      "price": 24000,
+      "currentPrice": 24000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
       "source": "gramedia_api_refresh"
     },
     {
@@ -326941,6 +327237,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_kindaichi_37_07_1795118715",
+      "bookId": "pub_kindaichi_37_07",
+      "price": 42000,
+      "currentPrice": 42000,
+      "originalPrice": 42000,
+      "previousPrice": 37800,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_memoir_of_vanitas_08_init",
       "bookId": "pub_memoir_of_vanitas_08",
       "price": 31500,
@@ -337773,6 +338080,17 @@
       "previousPrice": 16000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_one_room_of_happiness_02_1795118728",
+      "bookId": "pub_one_room_of_happiness_02",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 28800,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-19",
       "source": "gramedia_api_refresh"
     },
     {
@@ -399599,6 +399917,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_level_comic_jojos_bizarre_adventure_17__part_3_stardust_crusaders_1795118778",
+      "bookId": "pub_level_comic_jojos_bizarre_adventure_17__part_3_stardust_crusaders",
+      "price": 76500,
+      "currentPrice": 76500,
+      "originalPrice": 85000,
+      "previousPrice": 68000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_level_comic_jojos_bizarre_adventure_18__part_4_diamond_is_unbreakable_init",
       "bookId": "pub_level_comic_jojos_bizarre_adventure_18__part_4_diamond_is_unbreakable",
       "price": 63750,
@@ -415415,6 +415744,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_atelier_of_witch_hat_12_1795118911",
+      "bookId": "pub_atelier_of_witch_hat_12",
+      "price": 98000,
+      "currentPrice": 98000,
+      "originalPrice": 98000,
+      "previousPrice": 88200,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_level_comic_choujin_x_04_init",
       "bookId": "pub_level_comic_choujin_x_04",
       "price": 75000,
@@ -415637,9 +415977,89 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-17",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_secrets_of_the_silent_witch_vol_2_init",
+      "bookId": "pub_light_novel_secrets_of_the_silent_witch_vol_2",
+      "price": 119000,
+      "currentPrice": 119000,
+      "originalPrice": 119000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_meski_terlambat_aku_telah_jatuh_cinta_pada_teman_masa_kecilku_vol_1_init",
+      "bookId": "pub_light_novel_meski_terlambat_aku_telah_jatuh_cinta_pada_teman_masa_kecilku_vol_1",
+      "price": 98000,
+      "currentPrice": 98000,
+      "originalPrice": 98000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_jugatsudo_tempat_buku_dan_takdir_bertemu_vol_2_init",
+      "bookId": "pub_jugatsudo_tempat_buku_dan_takdir_bertemu_vol_2",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_makeine_heroine_yang_patah_hati_ternyata_banyak_vol_3_init",
+      "bookId": "pub_makeine_heroine_yang_patah_hati_ternyata_banyak_vol_3",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_abang_siscon_yang_menyebalkan_vol_3_init",
+      "bookId": "pub_abang_siscon_yang_menyebalkan_vol_3",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_secrets_of_the_silent_witch_vol_1_init",
+      "bookId": "pub_light_novel_secrets_of_the_silent_witch_vol_1",
+      "price": 103500,
+      "currentPrice": 103500,
+      "originalPrice": 115000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-07-23",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1795118911",
+      "startedAt": "2026-11-19T20:00:08.000Z",
+      "finishedAt": "2026-11-19T20:08:31.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1519,
+      "productsAccepted": 1319,
+      "productsRejected": 621,
+      "productsUpdated": 841,
+      "productsInserted": 8,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 503326,
+      "success": true
+    },
     {
       "id": "sync_1795069707",
       "startedAt": "2026-11-19T06:19:11.000Z",
@@ -416018,26 +416438,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 502270,
-      "success": true
-    },
-    {
-      "id": "sync_1794442561",
-      "startedAt": "2026-11-12T00:06:35.000Z",
-      "finishedAt": "2026-11-12T00:16:01.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 846,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 565484,
       "success": true
     }
   ]
