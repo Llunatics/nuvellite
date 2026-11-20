@@ -899,11 +899,11 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/x86gk1e/heinetsu-37-2oc",
   "pranala": "https://www.mncgramedia.id/books/2138/372-the-warmth-of-your-love",
   "notes": null,
-  "pranalaStatus": "miss",
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-11-17"
-  }
+  },
+  "pranalaStatus": "miss"
  },
  {
   "id": "kki_375-c-tears",
@@ -928,7 +928,11 @@
   "notes": null,
   "pranalaCover": "https://media.mncgramedia.id/images/books/2796/2921_37.5_C_Tears_01_1678952526.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/2796/375-c-tears-01",
-  "pranalaStatus": "ok"
+  "pranalaStatus": "ok",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-20"
+  }
  },
  {
   "id": "kki_3x3-eyes",
@@ -1240,7 +1244,11 @@
   "notes": null,
   "pranalaCover": "https://media.mncgramedia.id/images/books/947/9786022107364_1678952100.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/947/a-bad-cinderella-2",
-  "pranalaStatus": "ok"
+  "pranalaStatus": "ok",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-20"
+  }
  },
  {
   "id": "kki_a-beautiful-girls-secret",
@@ -1396,7 +1404,11 @@
   "publisherJp": "Mag Garden",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/ke4mjkw/asatte-no-houkou",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-20"
+  }
  },
  {
   "id": "kki_a-dream-in-march",
@@ -2167,7 +2179,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/lta5jmu/taiyou-no-mokushiroku-dai-2-bu-kenkoku-hen",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-20"
+  }
  },
  {
   "id": "kki_a-springtime-with-ninjas",
@@ -33071,8 +33087,8 @@
   "illustrator": null,
   "medium": "MANGA",
   "demographic": "Shojo",
-  "volumesId": null,
-  "statusId": "Unpublished",
+  "volumesId": "1",
+  "statusId": "End",
   "publisherId": "Elex",
   "yearFirstVol": "Sudah Masuk ISBN",
   "priceMin": null,
