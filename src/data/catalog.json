@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-19T20:08:31.000Z",
+  "lastUpdated": "2026-11-20T06:02:37.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -1824,7 +1824,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-04-07",
       "isWednesdayRelease": false,
-      "currentPrice": 89100,
+      "currentPrice": 79200,
       "authors": [
         "Masashi Kishimoto"
       ],
@@ -38569,7 +38569,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-09-12",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 45000,
       "authors": [
         "Kiyohiko Azuma"
       ],
@@ -40152,7 +40152,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-08-11",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 36000,
       "authors": [
         "Fujiko F. Fujio"
       ],
@@ -45842,7 +45842,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -51506,7 +51506,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -63982,7 +63982,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-12-21",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 36000,
       "authors": [
         "Endo Tatsuya"
       ],
@@ -86083,7 +86083,7 @@
       "categorySlugs": "buku/komik/manga/misteri",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/tkr-on2tlo.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-17",
       "isWednesdayRelease": false,
       "currentPrice": 45000,
@@ -90897,7 +90897,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2024-03-31",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 36000,
       "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
@@ -90934,7 +90934,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2024-04-28",
       "isWednesdayRelease": false,
-      "currentPrice": 40500,
+      "currentPrice": 33750,
       "originalPrice": 45000,
       "authors": [
         "Eiichiro Oda"
@@ -92918,7 +92918,7 @@
       "categorySlugs": "buku/komik/manga/petualangan",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/xc0t0o10uv.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-17",
       "isWednesdayRelease": false,
       "currentPrice": 45000,
@@ -103387,7 +103387,7 @@
       "categorySlugs": "buku/komik/manga/misteri",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-a7l-e36zz.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-11",
       "isWednesdayRelease": true,
       "currentPrice": 138000,
@@ -103425,7 +103425,7 @@
       "categorySlugs": "buku/komik/manga/horor-1",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/458rets4zz.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-11",
       "isWednesdayRelease": true,
       "currentPrice": 60000,
@@ -103691,7 +103691,7 @@
       "categorySlugs": "buku/komik/manga/romance-2",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-z18rmd--a.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-17",
       "isWednesdayRelease": false,
       "currentPrice": 45000,
@@ -103729,7 +103729,7 @@
       "categorySlugs": "buku/komik/manga/olahraga-1",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/-v2o630ld-.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-17",
       "isWednesdayRelease": false,
       "currentPrice": 45000,
@@ -103767,7 +103767,7 @@
       "categorySlugs": "buku/komik/manga/misteri",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/6i6xf6-mi-.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-17",
       "isWednesdayRelease": false,
       "currentPrice": 65000,
@@ -103805,7 +103805,7 @@
       "categorySlugs": "buku/komik/fantasi-fiksi-ilmiah",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ne5ooo60tn.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-17",
       "isWednesdayRelease": false,
       "currentPrice": 50000,
@@ -103843,7 +103843,7 @@
       "categorySlugs": "buku/komik/manga/romance-2",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/wvz6-g9-ye.jpg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-17",
       "isWednesdayRelease": false,
       "currentPrice": 48000,
@@ -103881,7 +103881,7 @@
       "categorySlugs": "buku/komik/fantasi-fiksi-ilmiah",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ih0wfc-o-o.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-19",
       "isWednesdayRelease": false,
       "currentPrice": 119000,
@@ -103919,7 +103919,7 @@
       "categorySlugs": "buku/komik/romansa",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/lhetnl7-k-.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-19",
       "isWednesdayRelease": false,
       "currentPrice": 98000,
@@ -103995,7 +103995,7 @@
       "categorySlugs": "buku/komik/manga/romance-2",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/21ri3gy-bh.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-19",
       "isWednesdayRelease": false,
       "currentPrice": 69500,
@@ -104033,7 +104033,7 @@
       "categorySlugs": "buku/komik/manga/komedi",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/aa-an84vaa.jpeg",
       "status": "PUBLISHED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2026-11-18",
       "isWednesdayRelease": true,
       "currentPrice": 69500,
@@ -105885,7 +105885,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-04-22",
       "isWednesdayRelease": false,
-      "currentPrice": 58500,
+      "currentPrice": 48750,
       "authors": [
         "Fujiko F. Fujio"
       ],
@@ -128874,6 +128874,17 @@
       "previousPrice": 64350,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_naruto_bind_up_edition_05_1795154165",
+      "bookId": "pub_naruto_bind_up_edition_05",
+      "price": 79200,
+      "currentPrice": 79200,
+      "originalPrice": 99000,
+      "previousPrice": 89100,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api_refresh"
     },
     {
@@ -211114,6 +211125,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_yotsuba_16_1795154227",
+      "bookId": "pub_yotsuba_16",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 50000,
+      "previousPrice": 40000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_overlord_vol_10_init",
       "bookId": "pub_overlord_vol_10",
       "price": 58500,
@@ -216108,6 +216130,17 @@
       "previousPrice": 29250,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_doraemon_12_2025_1795154229",
+      "bookId": "pub_doraemon_12_2025",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api_refresh"
     },
     {
@@ -231738,6 +231771,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_doraemon_movie_stand_by_me_doraemon_1795154446",
+      "bookId": "pub_doraemon_movie_stand_by_me_doraemon",
+      "price": 48750,
+      "currentPrice": 48750,
+      "originalPrice": 65000,
+      "previousPrice": 58500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_black_clover_165__official_guidebook_init",
       "bookId": "pub_black_clover_165__official_guidebook",
       "price": 67500,
@@ -232111,6 +232155,17 @@
       "previousPrice": 33750,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-18",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_one_punch_man_29_1795154243",
+      "bookId": "pub_one_punch_man_29",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api_refresh"
     },
     {
@@ -246233,6 +246288,17 @@
       "previousPrice": 40500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-19",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_one_punch_man_28_1795154262",
+      "bookId": "pub_one_punch_man_28",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 33750,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api_refresh"
     },
     {
@@ -283014,6 +283080,17 @@
       "previousPrice": 29250,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_spy_x_family_11_1795154311",
+      "bookId": "pub_spy_x_family_11",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api_refresh"
     },
     {
@@ -383312,6 +383389,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_one_piece_15_2024_1795154556",
+      "bookId": "pub_one_piece_15_2024",
+      "price": 33750,
+      "currentPrice": 33750,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_giant_killing_29_lc_1790885551",
       "bookId": "pub_giant_killing_29_lc",
       "price": 22000,
@@ -390327,6 +390415,17 @@
       "previousPrice": 29250,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_one_piece_14_2024_1795154556",
+      "bookId": "pub_one_piece_14_2024",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 45000,
+      "previousPrice": 40500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api"
     },
     {
@@ -415775,6 +415874,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_master_keaton_special_edition_03_1795154556",
+      "bookId": "pub_master_keaton_special_edition_03",
+      "price": 138000,
+      "currentPrice": 138000,
+      "originalPrice": 138000,
+      "previousPrice": 138000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_insect_girl_03_init",
       "bookId": "pub_insect_girl_03",
       "price": 60000,
@@ -415782,6 +415892,17 @@
       "originalPrice": 60000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-11",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_insect_girl_03_1795154556",
+      "bookId": "pub_insect_girl_03",
+      "price": 60000,
+      "currentPrice": 60000,
+      "originalPrice": 60000,
+      "previousPrice": 60000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api"
     },
     {
@@ -415909,6 +416030,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_one_punch_man_02_cetak_ulang_1795154556",
+      "bookId": "pub_one_punch_man_02_cetak_ulang",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_moriarty_the_patriot_02_cetak_ulang_init",
       "bookId": "pub_moriarty_the_patriot_02_cetak_ulang",
       "price": 45000,
@@ -415916,6 +416048,17 @@
       "originalPrice": 45000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_moriarty_the_patriot_02_cetak_ulang_1795154556",
+      "bookId": "pub_moriarty_the_patriot_02_cetak_ulang",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api"
     },
     {
@@ -415929,6 +416072,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_the_fragrant_flower_blooms_with_dignity_kaoru_rin_17_1795154556",
+      "bookId": "pub_the_fragrant_flower_blooms_with_dignity_kaoru_rin_17",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_blue_lock_episode_nagi_vol_06_init",
       "bookId": "pub_blue_lock_episode_nagi_vol_06",
       "price": 45000,
@@ -415936,6 +416090,17 @@
       "originalPrice": 45000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_blue_lock_episode_nagi_vol_06_1795154556",
+      "bookId": "pub_blue_lock_episode_nagi_vol_06",
+      "price": 45000,
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "previousPrice": 45000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api"
     },
     {
@@ -415949,6 +416114,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_detektif_conan_premium_36_1795154556",
+      "bookId": "pub_detektif_conan_premium_36",
+      "price": 65000,
+      "currentPrice": 65000,
+      "originalPrice": 65000,
+      "previousPrice": 65000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_the_morose_mononokean_16_init",
       "bookId": "pub_the_morose_mononokean_16",
       "price": 50000,
@@ -415956,6 +416132,17 @@
       "originalPrice": 50000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-17",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_the_morose_mononokean_16_1795154556",
+      "bookId": "pub_the_morose_mononokean_16",
+      "price": 50000,
+      "currentPrice": 50000,
+      "originalPrice": 50000,
+      "previousPrice": 50000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api"
     },
     {
@@ -415979,6 +416166,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_kaguyasama_love_is_war_19_1795154556",
+      "bookId": "pub_kaguyasama_love_is_war_19",
+      "price": 48000,
+      "currentPrice": 48000,
+      "originalPrice": 48000,
+      "previousPrice": 48000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_light_novel_secrets_of_the_silent_witch_vol_2_init",
       "bookId": "pub_light_novel_secrets_of_the_silent_witch_vol_2",
       "price": 119000,
@@ -415989,6 +416187,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_light_novel_secrets_of_the_silent_witch_vol_2_1795154556",
+      "bookId": "pub_light_novel_secrets_of_the_silent_witch_vol_2",
+      "price": 119000,
+      "currentPrice": 119000,
+      "originalPrice": 119000,
+      "previousPrice": 119000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_light_novel_meski_terlambat_aku_telah_jatuh_cinta_pada_teman_masa_kecilku_vol_1_init",
       "bookId": "pub_light_novel_meski_terlambat_aku_telah_jatuh_cinta_pada_teman_masa_kecilku_vol_1",
       "price": 98000,
@@ -415996,6 +416205,17 @@
       "originalPrice": 98000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-19",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_light_novel_meski_terlambat_aku_telah_jatuh_cinta_pada_teman_masa_kecilku_vol_1_1795154556",
+      "bookId": "pub_light_novel_meski_terlambat_aku_telah_jatuh_cinta_pada_teman_masa_kecilku_vol_1",
+      "price": 98000,
+      "currentPrice": 98000,
+      "originalPrice": 98000,
+      "previousPrice": 98000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api"
     },
     {
@@ -416019,6 +416239,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_makeine_heroine_yang_patah_hati_ternyata_banyak_vol_3_1795154556",
+      "bookId": "pub_makeine_heroine_yang_patah_hati_ternyata_banyak_vol_3",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "previousPrice": 69500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_abang_siscon_yang_menyebalkan_vol_3_init",
       "bookId": "pub_abang_siscon_yang_menyebalkan_vol_3",
       "price": 69500,
@@ -416026,6 +416257,17 @@
       "originalPrice": 69500,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-18",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_abang_siscon_yang_menyebalkan_vol_3_1795154556",
+      "bookId": "pub_abang_siscon_yang_menyebalkan_vol_3",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "previousPrice": 69500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-20",
       "source": "gramedia_api"
     },
     {
@@ -416040,6 +416282,26 @@
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1795154557",
+      "startedAt": "2026-11-20T05:54:21.000Z",
+      "finishedAt": "2026-11-20T06:02:37.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1519,
+      "productsAccepted": 1319,
+      "productsRejected": 621,
+      "productsUpdated": 847,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 495112,
+      "success": true
+    },
     {
       "id": "sync_1795118911",
       "startedAt": "2026-11-19T20:00:08.000Z",
@@ -416418,26 +416680,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 482407,
-      "success": true
-    },
-    {
-      "id": "sync_1794495058",
-      "startedAt": "2026-11-12T14:42:36.000Z",
-      "finishedAt": "2026-11-12T14:50:58.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 846,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 502270,
       "success": true
     }
   ]
