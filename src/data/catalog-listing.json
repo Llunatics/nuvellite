@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-20T06:02:37.000Z",
+  "lastUpdated": "2026-11-20T15:06:54.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -90120,7 +90120,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/items/722010329_LN_One_Piece_-_Loguetown_Arc.jpg",
       "status": "PUBLISHED",
       "availability": "OUT_OF_STOCK",
-      "currentPrice": 67500,
+      "currentPrice": 56250,
       "originalPrice": 75000,
       "releaseDate": "2022-06-05",
       "isWednesdayRelease": false,

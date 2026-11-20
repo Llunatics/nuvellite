@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-20T06:02:37.000Z",
+  "lastUpdated": "2026-11-20T15:06:54.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -104860,7 +104860,7 @@
       "availability": "OUT_OF_STOCK",
       "releaseDate": "2022-06-05",
       "isWednesdayRelease": false,
-      "currentPrice": 67500,
+      "currentPrice": 56250,
       "originalPrice": 75000,
       "authors": [
         "Eiichiro Oda"
@@ -382740,6 +382740,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_light_novel_one_piece_loguetown_arc_1795187214",
+      "bookId": "pub_light_novel_one_piece_loguetown_arc",
+      "price": 56250,
+      "currentPrice": 56250,
+      "originalPrice": 75000,
+      "previousPrice": 67500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-20",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_one_piece_104_1790885551",
       "bookId": "pub_one_piece_104",
       "price": 36000,
@@ -416283,6 +416294,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795187214",
+      "startedAt": "2026-11-20T14:57:44.000Z",
+      "finishedAt": "2026-11-20T15:06:54.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1519,
+      "productsAccepted": 1319,
+      "productsRejected": 621,
+      "productsUpdated": 847,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 550456,
+      "success": true
+    },
+    {
       "id": "sync_1795154557",
       "startedAt": "2026-11-20T05:54:21.000Z",
       "finishedAt": "2026-11-20T06:02:37.000Z",
@@ -416660,26 +416691,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 619439,
-      "success": true
-    },
-    {
-      "id": "sync_1794525785",
-      "startedAt": "2026-11-12T23:15:02.000Z",
-      "finishedAt": "2026-11-12T23:23:05.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 846,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 482407,
       "success": true
     }
   ]
