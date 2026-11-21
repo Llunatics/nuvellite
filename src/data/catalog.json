@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-20T23:51:16.000Z",
+  "lastUpdated": "2026-11-21T05:57:25.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -97796,10 +97796,10 @@
       "publisherShortName": "Elex Media",
       "coverImage": "",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2021-10-13",
       "isWednesdayRelease": false,
-      "currentPrice": 40000,
+      "currentPrice": 30000,
       "originalPrice": 40000,
       "authors": [
         "Negi Haruba"
@@ -425290,6 +425290,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_the_quintessential_quintuplets_12_1795240533",
+      "bookId": "pub_the_quintessential_quintuplets_12",
+      "price": 30000,
+      "currentPrice": 30000,
+      "originalPrice": 40000,
+      "previousPrice": 40000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-21",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_the_quintessential_quintuplets_13_init",
       "bookId": "pub_the_quintessential_quintuplets_13",
       "price": 26000,
@@ -431364,6 +431375,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795240645",
+      "startedAt": "2026-11-21T05:49:22.000Z",
+      "finishedAt": "2026-11-21T05:57:25.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1519,
+      "productsAccepted": 1319,
+      "productsRejected": 621,
+      "productsUpdated": 847,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 483116,
+      "success": true
+    },
+    {
       "id": "sync_1795218676",
       "startedAt": "2026-11-20T23:43:13.000Z",
       "finishedAt": "2026-11-20T23:51:16.000Z",
@@ -431741,26 +431772,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 493697,
-      "success": true
-    },
-    {
-      "id": "sync_1794578965",
-      "startedAt": "2026-11-13T13:59:24.000Z",
-      "finishedAt": "2026-11-13T14:09:25.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 845,
-      "productsInserted": 3,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 600984,
       "success": true
     }
   ]
