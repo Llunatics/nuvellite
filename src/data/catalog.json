@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-22T14:18:18.000Z",
+  "lastUpdated": "2026-11-22T23:31:32.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -431518,6 +431518,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795390292",
+      "startedAt": "2026-11-22T23:17:23.000Z",
+      "finishedAt": "2026-11-22T23:31:32.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1454,
+      "productsAccepted": 1254,
+      "productsRejected": 595,
+      "productsUpdated": 806,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 848947,
+      "success": true
+    },
+    {
       "id": "sync_1795357098",
       "startedAt": "2026-11-22T14:08:05.000Z",
       "finishedAt": "2026-11-22T14:18:18.000Z",
@@ -431895,26 +431915,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 556549,
-      "success": true
-    },
-    {
-      "id": "sync_1794719496",
-      "startedAt": "2026-11-15T05:01:24.000Z",
-      "finishedAt": "2026-11-15T05:11:36.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 846,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 612366,
       "success": true
     }
   ]
