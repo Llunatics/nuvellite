@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-22T05:29:38.000Z",
+  "lastUpdated": "2026-11-22T14:18:18.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -75678,7 +75678,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -85598,7 +85598,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 28000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -332464,6 +332464,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_haikyu_fly_high_volleyball_28_1795356851",
+      "bookId": "pub_haikyu_fly_high_volleyball_28",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "previousPrice": 22400,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-22",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_akasha__record_of_ragnarok_07_init",
       "bookId": "pub_akasha__record_of_ragnarok_07",
       "price": 40500,
@@ -372775,6 +372786,17 @@
       "originalPrice": 28000,
       "previousPrice": 19600,
       "availability": "AVAILABLE",
+      "observedAt": "2026-11-22",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_17_1795356901",
+      "bookId": "pub_haikyu_fly_high_volleyball_17",
+      "price": 19600,
+      "currentPrice": 19600,
+      "originalPrice": 28000,
+      "previousPrice": 19600,
+      "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-22",
       "source": "gramedia_api_refresh"
     },
@@ -431496,6 +431518,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795357098",
+      "startedAt": "2026-11-22T14:08:05.000Z",
+      "finishedAt": "2026-11-22T14:18:18.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1519,
+      "productsAccepted": 1319,
+      "productsRejected": 621,
+      "productsUpdated": 847,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 613340,
+      "success": true
+    },
+    {
       "id": "sync_1795325378",
       "startedAt": "2026-11-22T05:21:08.000Z",
       "finishedAt": "2026-11-22T05:29:38.000Z",
@@ -431873,26 +431915,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 612366,
-      "success": true
-    },
-    {
-      "id": "sync_1794694076",
-      "startedAt": "2026-11-14T22:00:08.000Z",
-      "finishedAt": "2026-11-14T22:07:56.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 846,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 468642,
       "success": true
     }
   ]
