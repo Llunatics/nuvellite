@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-21T22:56:44.000Z",
+  "lastUpdated": "2026-11-22T05:29:38.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -40369,7 +40369,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-08-11",
       "isWednesdayRelease": false,
-      "currentPrice": 97200,
+      "currentPrice": 88200,
       "authors": [
         "Tappei Nagatsuki"
       ],
@@ -40386,7 +40386,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 108000,
+      "originalPrice": 98000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null,
@@ -68338,7 +68338,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 58000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -75201,7 +75201,7 @@
       "status": "RELEASED",
       "releaseDate": "2022-05-11",
       "isWednesdayRelease": true,
-      "currentPrice": 32000,
+      "currentPrice": 28000,
       "authors": [
         "Tomohito ODA"
       ],
@@ -75217,8 +75217,8 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
-      "originalPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "originalPrice": 28000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -75678,7 +75678,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -82759,7 +82759,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -85598,7 +85598,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 28000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -219088,6 +219088,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_rezero__starting_life_in_another_world_04_1795325377",
+      "bookId": "pub_rezero__starting_life_in_another_world_04",
+      "price": 88200,
+      "currentPrice": 88200,
+      "originalPrice": 98000,
+      "previousPrice": 97200,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-22",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_akasha__pluto_04_init",
       "bookId": "pub_akasha__pluto_04",
       "price": 67500,
@@ -304925,6 +304936,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_akasha_fatetype_redline_strange_story_of_the_imperial_capital_holy_grail_02_1795325145",
+      "bookId": "pub_akasha_fatetype_redline_strange_story_of_the_imperial_capital_holy_grail_02",
+      "price": 40600,
+      "currentPrice": 40600,
+      "originalPrice": 58000,
+      "previousPrice": 40600,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-22",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_akasha_monster_01_init",
       "bookId": "pub_akasha_monster_01",
       "price": 142200,
@@ -330619,6 +330641,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_komi_sulit_berkomunikasi_12_1795325174",
+      "bookId": "pub_komi_sulit_berkomunikasi_12",
+      "price": 28000,
+      "currentPrice": 28000,
+      "originalPrice": 28000,
+      "previousPrice": 32000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-22",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_kaguya_sama_love_is_war_08_init",
       "bookId": "pub_kaguya_sama_love_is_war_08",
       "price": 40500,
@@ -332417,6 +332450,17 @@
       "previousPrice": 28800,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-20",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_28_1795325176",
+      "bookId": "pub_haikyu_fly_high_volleyball_28",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "previousPrice": 22400,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-22",
       "source": "gramedia_api_refresh"
     },
     {
@@ -360720,6 +360764,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_my_hero_academia_15_1795325206",
+      "bookId": "pub_my_hero_academia_15",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 45000,
+      "previousPrice": 31500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-22",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_boruto_naruto_next_generation_vol_6_init",
       "bookId": "pub_boruto_naruto_next_generation_vol_6",
       "price": 36000,
@@ -372710,6 +372765,17 @@
       "previousPrice": 21000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-20",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_haikyu_fly_high_volleyball_17_1795325217",
+      "bookId": "pub_haikyu_fly_high_volleyball_17",
+      "price": 19600,
+      "currentPrice": 19600,
+      "originalPrice": 28000,
+      "previousPrice": 19600,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-22",
       "source": "gramedia_api_refresh"
     },
     {
@@ -431430,6 +431496,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795325378",
+      "startedAt": "2026-11-22T05:21:08.000Z",
+      "finishedAt": "2026-11-22T05:29:38.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1519,
+      "productsAccepted": 1319,
+      "productsRejected": 621,
+      "productsUpdated": 847,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 509994,
+      "success": true
+    },
+    {
       "id": "sync_1795301804",
       "startedAt": "2026-11-21T22:48:37.000Z",
       "finishedAt": "2026-11-21T22:56:44.000Z",
@@ -431807,26 +431893,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 468642,
-      "success": true
-    },
-    {
-      "id": "sync_1794661858",
-      "startedAt": "2026-11-14T13:01:36.000Z",
-      "finishedAt": "2026-11-14T13:10:58.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 846,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 562125,
       "success": true
     }
   ]
