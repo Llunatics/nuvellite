@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-22T23:31:32.000Z",
+  "lastUpdated": "2026-11-23T06:08:13.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -40369,7 +40369,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-08-11",
       "isWednesdayRelease": false,
-      "currentPrice": 88200,
+      "currentPrice": 97200,
       "authors": [
         "Tappei Nagatsuki"
       ],
@@ -40386,7 +40386,7 @@
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
       "availability": "AVAILABLE",
-      "originalPrice": 98000,
+      "originalPrice": 108000,
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null,
@@ -101755,7 +101755,7 @@
       "availability": "AVAILABLE",
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
-      "currentPrice": 70000,
+      "currentPrice": 52500,
       "originalPrice": 70000,
       "authors": [
         "Masami Kurumada"
@@ -219096,6 +219096,17 @@
       "previousPrice": 97200,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-22",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_rezero__starting_life_in_another_world_04_1795414092",
+      "bookId": "pub_rezero__starting_life_in_another_world_04",
+      "price": 97200,
+      "currentPrice": 97200,
+      "originalPrice": 108000,
+      "previousPrice": 88200,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-23",
       "source": "gramedia_api"
     },
     {
@@ -429241,6 +429252,17 @@
       "source": "gramedia_api"
     },
     {
+      "id": "snap_pub_saint_seiya_final_edition_01_1795414092",
+      "bookId": "pub_saint_seiya_final_edition_01",
+      "price": 52500,
+      "currentPrice": 52500,
+      "originalPrice": 70000,
+      "previousPrice": 70000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-23",
+      "source": "gramedia_api"
+    },
+    {
       "id": "snap_pub_yuru_camp_kemah_santai_gadis_sma_vol_1_init",
       "bookId": "pub_yuru_camp_kemah_santai_gadis_sma_vol_1",
       "price": 55000,
@@ -431518,6 +431540,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795414093",
+      "startedAt": "2026-11-23T05:58:26.000Z",
+      "finishedAt": "2026-11-23T06:08:13.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1519,
+      "productsAccepted": 1319,
+      "productsRejected": 621,
+      "productsUpdated": 847,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 586567,
+      "success": true
+    },
+    {
       "id": "sync_1795390292",
       "startedAt": "2026-11-22T23:17:23.000Z",
       "finishedAt": "2026-11-22T23:31:32.000Z",
@@ -431895,26 +431937,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 514486,
-      "success": true
-    },
-    {
-      "id": "sync_1794749932",
-      "startedAt": "2026-11-15T13:29:36.000Z",
-      "finishedAt": "2026-11-15T13:38:52.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 846,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 556549,
       "success": true
     }
   ]

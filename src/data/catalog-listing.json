@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-22T23:31:32.000Z",
+  "lastUpdated": "2026-11-23T06:08:13.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -33669,8 +33669,8 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/---ir2eo5r.png",
       "status": "RELEASED",
       "availability": "AVAILABLE",
-      "currentPrice": 88200,
-      "originalPrice": 98000,
+      "currentPrice": 97200,
+      "originalPrice": 108000,
       "releaseDate": "2025-08-11",
       "isWednesdayRelease": false,
       "seriesId": "ser_rezero---starting-life-in-another-world",
@@ -87504,7 +87504,7 @@
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/nia-i806ee.jpg",
       "status": "PUBLISHED",
       "availability": "AVAILABLE",
-      "currentPrice": 70000,
+      "currentPrice": 52500,
       "originalPrice": 70000,
       "releaseDate": "2026-10-21",
       "isWednesdayRelease": true,
