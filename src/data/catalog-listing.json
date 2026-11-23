@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-23T06:08:13.000Z",
+  "lastUpdated": "2026-11-23T18:04:20.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -76413,6 +76413,40 @@
       "gramediaUrl": "https://www.gramedia.com/products/doraemon-30-terbit-ulang"
     },
     {
+      "id": "pub_doraemon_30_2026",
+      "slug": "doraemon-30-2026",
+      "title": "Doraemon 30 (2026)",
+      "originalTitle": "Doraemon",
+      "isbn13": "9786020232034",
+      "volume": 30,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "imprint": null,
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/v039r0d2-7.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "releaseDate": "2026-11-23",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_doraemon",
+      "seriesName": "Doraemon",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Fujiko F. Fujio"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/doraemon-30-2026"
+    },
+    {
       "id": "pub_doraemon_35_terbit_ulang",
       "slug": "doraemon-35-terbit-ulang",
       "title": "Doraemon 35 (Terbit Ulang)",
@@ -89533,6 +89567,74 @@
       "gramediaUrl": "https://www.gramedia.com/products/abang-siscon-yang-menyebalkan-vol-3"
     },
     {
+      "id": "pub_level_comic_tokyo_revengers_30",
+      "slug": "level-comic-tokyo-revengers-30",
+      "title": "Level Comic: Tokyo Revengers 30",
+      "originalTitle": "Tokyo Revengers",
+      "isbn13": "9786230080913",
+      "volume": 30,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "imprint": null,
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/rlvm10se5z.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "releaseDate": "2026-11-23",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_tokyo-revengers",
+      "seriesName": "Tokyo Revengers",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Ken Wakui"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/level-comic-tokyo-revengers-30"
+    },
+    {
+      "id": "pub_ichi_the_witch_05",
+      "slug": "ichi-the-witch-05",
+      "title": "Ichi the Witch 05",
+      "originalTitle": "Ichi the Witch",
+      "isbn13": "9786230080968",
+      "volume": 5,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_elex",
+      "publisherName": "Elex Media Komputindo",
+      "publisherShortName": "Elex Media",
+      "imprint": null,
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/z5v--x2hhw.jpg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 45000,
+      "originalPrice": 45000,
+      "releaseDate": "2026-11-23",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_ichi-the-witch",
+      "seriesName": "Ichi the Witch",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Osamu Nishi, Shiro Usazaki"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/ichi-the-witch-05"
+    },
+    {
       "id": "pub_akasha_mountain_ghost_stories",
       "slug": "akasha-mountain-ghost-stories",
       "title": "Akasha : Mountain Ghost Stories",
@@ -98659,13 +98761,14 @@
       "author": "Osamu Nishi, Shiro Usazaki",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 4,
-      "latestVolume": 4,
+      "totalVolumes": 5,
+      "latestVolume": 5,
       "availableVolumes": [
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/ve345ihi87.jpg",
@@ -105812,8 +105915,8 @@
       "author": "Ken Wakui",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 29,
-      "latestVolume": 29,
+      "totalVolumes": 30,
+      "latestVolume": 30,
       "availableVolumes": [
         1,
         2,
@@ -105843,7 +105946,8 @@
         26,
         27,
         28,
-        29
+        29,
+        30
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/t2v3y88zcl.jpg",
