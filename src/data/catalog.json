@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-23T18:04:20.000Z",
+  "lastUpdated": "2026-11-24T04:00:24.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -70340,7 +70340,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -93749,10 +93749,10 @@
       "publisherShortName": "Elex Media",
       "coverImage": "",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "releaseDate": "2021-09-08",
       "isWednesdayRelease": false,
-      "currentPrice": 24000,
+      "currentPrice": 32000,
       "originalPrice": 32000,
       "authors": [
         "One & Yusuke Murata"
@@ -312362,6 +312362,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_akasha_record_of_ragnarok_11_1795492570",
+      "bookId": "pub_akasha_record_of_ragnarok_11",
+      "price": 31500,
+      "currentPrice": 31500,
+      "originalPrice": 45000,
+      "previousPrice": 31500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-24",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_koloni_kill_starter_vol_2_init",
       "bookId": "pub_koloni_kill_starter_vol_2",
       "price": 55800,
@@ -411733,6 +411744,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_one_punch_man_22_1795492666",
+      "bookId": "pub_one_punch_man_22",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 24000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-24",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_one_punch_man_23_init",
       "bookId": "pub_one_punch_man_23",
       "price": 22750,
@@ -431686,6 +431708,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795492824",
+      "startedAt": "2026-11-24T03:51:01.000Z",
+      "finishedAt": "2026-11-24T04:00:24.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1520,
+      "productsAccepted": 1320,
+      "productsRejected": 621,
+      "productsUpdated": 848,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 562902,
+      "success": true
+    },
+    {
       "id": "sync_1795457060",
       "startedAt": "2026-11-23T17:55:12.000Z",
       "finishedAt": "2026-11-23T18:04:20.000Z",
@@ -432063,26 +432105,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 608886,
-      "success": true
-    },
-    {
-      "id": "sync_1794805672",
-      "startedAt": "2026-11-16T04:59:03.000Z",
-      "finishedAt": "2026-11-16T05:07:52.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 844,
-      "productsInserted": 4,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 528125,
       "success": true
     }
   ]
