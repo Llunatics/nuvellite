@@ -599,6 +599,21 @@
   "matchScore": 100.0,
   "matchMethod": "auto"
  },
+ "ser_blue-lock": {
+  "demographic": "Shounen",
+  "publisherJp": "Kodansha",
+  "volumesJp": "32",
+  "statusJp": "Ongoing",
+  "mangaupdatesUrl": "https://www.mangaupdates.com/series/joxc7wz/blue-lock",
+  "priceMin": "Rp45.000",
+  "priceMax": "Rp45.000",
+  "paperType": "Bookpaper",
+  "yearFirstVol": "2022",
+  "kkiTitle": "Blue Lock",
+  "kkiPublisher": "Elex",
+  "matchScore": 100.0,
+  "matchMethod": "auto"
+ },
  "ser_blue-lock-episode-nagi": {
   "demographic": "Shounen",
   "publisherJp": "Kodansha",

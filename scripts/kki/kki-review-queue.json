@@ -140,20 +140,6 @@
   "reason": "score-below-auto"
  },
  {
-  "nuvelliteSeriesId": "ser_blue-lock",
-  "nuvelliteTitle": "Blue Lock",
-  "nuvelliteType": "MANGA",
-  "nuvelliteAuthor": "Muneyuki Kaneshiro",
-  "kkiTitle": "Blue Lock (PGI)",
-  "kkiMedium": "MANGA",
-  "kkiAuthor": "Cerita: Muneyuki Kaneshiro; Gambar: Yusuke Nomura",
-  "kkiPublisher": "Elex",
-  "score": 89.2,
-  "authorScore": 90.0,
-  "crossMedium": false,
-  "reason": "score-below-auto"
- },
- {
   "nuvelliteSeriesId": "ser_tokyo-ghoul-re-1-limited",
   "nuvelliteTitle": "Tokyo Ghoul: Re 1 Limited",
   "nuvelliteType": "MANGA",

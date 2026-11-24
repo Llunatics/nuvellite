@@ -926,13 +926,13 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/emu4dj1/37-5-c-no-namida",
   "pranala": "https://www.mncgramedia.id/books/2796/375-c-tears-01",
   "notes": null,
-  "pranalaCover": "https://media.mncgramedia.id/images/books/2796/2921_37.5_C_Tears_01_1678952526.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/2796/375-c-tears-01",
-  "pranalaStatus": "ok",
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-11-20"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/2796/2921_37.5_C_Tears_01_1678952526.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/2796/375-c-tears-01",
+  "pranalaStatus": "ok"
  },
  {
   "id": "kki_3x3-eyes",
@@ -1242,13 +1242,13 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/svaeviw/delinquent-cinderella",
   "pranala": "https://www.mncgramedia.id/books/947/a-bad-cinderella-2",
   "notes": null,
-  "pranalaCover": "https://media.mncgramedia.id/images/books/947/9786022107364_1678952100.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/947/a-bad-cinderella-2",
-  "pranalaStatus": "ok",
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-11-20"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/947/9786022107364_1678952100.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/947/a-bad-cinderella-2",
+  "pranalaStatus": "ok"
  },
  {
   "id": "kki_a-beautiful-girls-secret",
@@ -1780,7 +1780,11 @@
   "notes": null,
   "pranalaCover": "https://media.mncgramedia.id/images/books/1548/9786022662068_1678952219.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/1548/a-magical-cat-store",
-  "pranalaStatus": "ok"
+  "pranalaStatus": "ok",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-24"
+  }
  },
  {
   "id": "kki_a-meal-make-her-forget",
@@ -2205,7 +2209,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/7dzcktt/hana-to-shinobi",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-24"
+  }
  },
  {
   "id": "kki_a-tale-for-you",
@@ -2339,7 +2347,11 @@
   "notes": null,
   "pranalaCover": "https://media.mncgramedia.id/images/books/2305/9786023390366_1678952339.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/2305/a-ticket-to-heaven",
-  "pranalaStatus": "ok"
+  "pranalaStatus": "ok",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-24"
+  }
  },
  {
   "id": "kki_a-town-where-you-live",
@@ -2725,7 +2737,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/yqdq72n/akogare-boukensha",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-24"
+  }
  },
  {
   "id": "kki_adventure-2",
@@ -7628,19 +7644,19 @@
   "illustrator": null,
   "medium": "MANGA",
   "demographic": "Shounen",
-  "volumesId": "19",
-  "statusId": "End",
-  "publisherId": "Elex",
-  "yearFirstVol": "2022",
-  "priceMin": "Rp45.000",
-  "priceMax": "Rp45.000",
+  "volumesId": "33",
+  "statusId": "Ongoing",
+  "publisherId": "Phoenix",
+  "yearFirstVol": "2025",
+  "priceMin": "Rp60.000",
+  "priceMax": "Rp60.000",
   "paperType": "Bookpaper",
   "volumesJp": "32",
   "statusJp": "Ongoing",
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/joxc7wz/blue-lock",
-  "pranala": null,
-  "notes": "Mulai Vol.20 diterbitkan oleh Phoenix Gramedia Indonesia.",
+  "pranala": "https://phoenixgramedia.id/books/blue-lock-vol-20/",
+  "notes": "Penata Letak: Tim S. Nila. Mulai Vol.20 diterbitkan oleh Phoenix Gramedia Indonesia.",
   "pranalaStatus": "miss"
  },
  {
@@ -14951,7 +14967,7 @@
   "publisherId": "Elex",
   "yearFirstVol": "2022",
   "priceMin": "Rp55.000",
-  "priceMax": "Rp5.500",
+  "priceMax": "Rp55.000",
   "paperType": "Bookpaper",
   "volumesJp": "1",
   "statusJp": "End",
