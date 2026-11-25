@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-25T02:07:31.000Z",
+  "lastUpdated": "2026-11-25T17:01:44.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -48430,7 +48430,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-02-12",
       "isWednesdayRelease": true,
-      "currentPrice": 32400,
+      "currentPrice": 75600,
       "authors": [
         "Narita Ryohgo"
       ],
@@ -50571,7 +50571,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -51261,7 +51261,7 @@
       "status": "RELEASED",
       "releaseDate": "2025-01-15",
       "isWednesdayRelease": true,
-      "currentPrice": 29400,
+      "currentPrice": 68600,
       "authors": [
         "Kafka Asagiri"
       ],
@@ -52211,7 +52211,7 @@
       "status": "RELEASED",
       "releaseDate": "2024-12-27",
       "isWednesdayRelease": false,
-      "currentPrice": 31500,
+      "currentPrice": 73500,
       "authors": [
         "Reiki Kawahara/Abec"
       ],
@@ -67098,7 +67098,7 @@
       "status": "RELEASED",
       "releaseDate": "2023-08-30",
       "isWednesdayRelease": true,
-      "currentPrice": 29400,
+      "currentPrice": 68600,
       "authors": [
         "Reiki Kawahara/Abec"
       ],
@@ -78442,7 +78442,7 @@
       "status": "RELEASED",
       "releaseDate": "2021-09-29",
       "isWednesdayRelease": true,
-      "currentPrice": 29400,
+      "currentPrice": 68600,
       "authors": [
         "Reiki Kawahara/Abec"
       ],
@@ -83372,7 +83372,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 30000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -106801,7 +106801,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 240000,
       "isBindUp": true,
       "bindUpKind": "OMNIBUS",
@@ -246310,6 +246310,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_fatestrange_fake_8_1795625731",
+      "bookId": "pub_fatestrange_fake_8",
+      "price": 75600,
+      "currentPrice": 75600,
+      "originalPrice": 108000,
+      "previousPrice": 32400,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_hai_miiko_15__bookpaper_init",
       "bookId": "pub_hai_miiko_15__bookpaper",
       "price": 40500,
@@ -252096,6 +252107,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_doraemon_petualangan_05_terbit_ulang_1795625741",
+      "bookId": "pub_doraemon_petualangan_05_terbit_ulang",
+      "price": 9600,
+      "currentPrice": 9600,
+      "originalPrice": 32000,
+      "previousPrice": 9600,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_level_comic_bungo_stray_dogs_04_init",
       "bookId": "pub_level_comic_bungo_stray_dogs_04",
       "price": 35000,
@@ -253863,6 +253885,17 @@
       "currentPrice": 29400,
       "originalPrice": 98000,
       "previousPrice": 73500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_bungo_stray_dogs_1_1795625744",
+      "bookId": "pub_bungo_stray_dogs_1",
+      "price": 68600,
+      "currentPrice": 68600,
+      "originalPrice": 98000,
+      "previousPrice": 29400,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-25",
       "source": "gramedia_api_refresh"
@@ -257414,6 +257447,17 @@
       "currentPrice": 31500,
       "originalPrice": 105000,
       "previousPrice": 52500,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_sword_art_online_008_early_and_late_1795625748",
+      "bookId": "pub_sword_art_online_008_early_and_late",
+      "price": 73500,
+      "currentPrice": 73500,
+      "originalPrice": 105000,
+      "previousPrice": 31500,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-25",
       "source": "gramedia_api_refresh"
@@ -282946,6 +282990,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_koloni_h2o_reborn_trilogy_omnibus_1795625974",
+      "bookId": "pub_koloni_h2o_reborn_trilogy_omnibus",
+      "price": 168000,
+      "currentPrice": 168000,
+      "originalPrice": 240000,
+      "previousPrice": 168000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_teasing_master_takagi_17_init",
       "bookId": "pub_teasing_master_takagi_17",
       "price": 36000,
@@ -307959,6 +308014,17 @@
       "currentPrice": 29400,
       "originalPrice": 98000,
       "previousPrice": 49000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_sword_art_online_005_phantom_bullet_1795625820",
+      "bookId": "pub_sword_art_online_005_phantom_bullet",
+      "price": 68600,
+      "currentPrice": 68600,
+      "originalPrice": 98000,
+      "previousPrice": 29400,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-25",
       "source": "gramedia_api_refresh"
@@ -352568,6 +352634,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_sword_art_online_001_aincrad_1795625875",
+      "bookId": "pub_sword_art_online_001_aincrad",
+      "price": 68600,
+      "currentPrice": 68600,
+      "originalPrice": 98000,
+      "previousPrice": 29400,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_black_clover_16_init",
       "bookId": "pub_black_clover_16",
       "price": 36000,
@@ -373379,6 +373456,17 @@
       "originalPrice": 30000,
       "previousPrice": 22500,
       "availability": "AVAILABLE",
+      "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_lc_attack_on_titan_28_1795625900",
+      "bookId": "pub_lc_attack_on_titan_28",
+      "price": 9000,
+      "currentPrice": 9000,
+      "originalPrice": 30000,
+      "previousPrice": 9000,
+      "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-25",
       "source": "gramedia_api_refresh"
     },
@@ -445667,6 +445755,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795626104",
+      "startedAt": "2026-11-25T16:51:49.000Z",
+      "finishedAt": "2026-11-25T17:01:44.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1520,
+      "productsAccepted": 1320,
+      "productsRejected": 621,
+      "productsUpdated": 848,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 595651,
+      "success": true
+    },
+    {
       "id": "sync_1795572451",
       "startedAt": "2026-11-25T01:57:01.000Z",
       "finishedAt": "2026-11-25T02:07:31.000Z",
@@ -446044,26 +446152,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 553817,
-      "success": true
-    },
-    {
-      "id": "sync_1794879978",
-      "startedAt": "2026-11-17T01:38:23.000Z",
-      "finishedAt": "2026-11-17T01:46:18.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1518,
-      "productsAccepted": 1318,
-      "productsRejected": 621,
-      "productsUpdated": 846,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 475591,
       "success": true
     }
   ]
