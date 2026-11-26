@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-26T01:46:21.000Z",
+  "lastUpdated": "2026-11-26T16:38:28.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -15561,7 +15561,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 75000,
       "isBindUp": true,
       "bindUpKind": "CURATED",
@@ -47369,7 +47369,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 48000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -56281,7 +56281,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 45000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -104169,6 +104169,44 @@
       "bindUpLabel": null
     },
     {
+      "id": "pub_in_the_clear_moonlit_dusk_7",
+      "slug": "in-the-clear-moonlit-dusk-7",
+      "title": "In the Clear Moonlit Dusk 7",
+      "originalTitle": "In the Clear Moonlit Dusk",
+      "seriesId": "ser_in-the-clear-moonlit-dusk",
+      "seriesName": "In the Clear Moonlit Dusk",
+      "volume": 7,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku/komik/manga/romance-2",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/e67xk1-lst.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-23",
+      "isWednesdayRelease": false,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "authors": [
+        "Mika Yamamori"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "isbn13": "9786347811660",
+      "synopsis": "“Aku ingin dia merasakan hal yang sama seperti yang kurasakan”\n\nYoi Takiguchi adalah seorang gadis yang dijuluki pangeran karena parasnya yang rupawan dan sikapnya yang elegan. Di sekolah, dia bertemu dengan Ichimura, seniornya yang juga dijuluki pangeran. Karena suatu hal tak terduga, mereka memutuskan untuk mulai melakukan percobaan pacaran. Perasaan Yoi yang awalnya bersikap waspada pun perlahan berubah dan hari-harinya pun dipenuhi kebingungan. Meski sempat bertengkar, mereka akhirnya mengungkapkan perasaan masing-masing dengan jujur dan resmi berpacaran.\n\nHubungan keduanya semakin dekat lewat perjalanan ke Kobe bersama teman-temannya saat libur musim panas. Tapi mereka jadi bertengkar setelah Yoi mendapat pernyataan cinta dari Oji, rekan kerja paruh waktunya. Bagaimana nasib hubungan Yoi dan Kohaku?\n\nKeunggulan:\n\n• Mengangkat tema romance slow-burn antara protagonis wanita berpenampilan androgini dengan protagonis pria yang juga tampan.\n\n• Ilustrasinya yang sangat detail dan memanjakan mata.\n\n• Peringkat ke-1 untuk kategori komik shojo dalam Recommended Shojo Manga of 2022 Selected by Booksellers Nationwide.\n\n• Serialisasi animenya ditayangkan pada 11 Januari 2026.\n\n• Memiliki adaptasi live-action yang akan tayang pada 23 Oktober 2026.\n\n***\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/in-the-clear-moonlit-dusk-7",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Manga from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
       "id": "pub_akasha_mountain_ghost_stories",
       "slug": "akasha-mountain-ghost-stories",
       "title": "Akasha : Mountain Ghost Stories",
@@ -109073,6 +109111,44 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Verified Manga from PGI",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null
+    },
+    {
+      "id": "pub_silent_hill_f",
+      "slug": "silent-hill-f",
+      "title": "Silent Hill F",
+      "originalTitle": "Silent Hill F",
+      "seriesId": "ser_silent-hill-f",
+      "seriesName": "Silent Hill F",
+      "volume": null,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "categorySlugs": "buku/fiksi-sastra/horor",
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/61ll96clnf.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "releaseDate": "2026-11-23",
+      "isWednesdayRelease": false,
+      "currentPrice": 108000,
+      "originalPrice": 108000,
+      "authors": [
+        "Kuro Shirou"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "isbn13": "9786347811677",
+      "synopsis": "Di sebuah kota kecil bernama Ebisugaoka yang dikelilingi pegunungan, Shimizu Hinako selalu menjalani hari-harinya dengan memendam perasaan yang tak dapat diungkapkan.\n\nSuatu pagi, seperti biasa ia berkumpul dengan teman-temannya di sebuah toko manisan langganan dan menghabiskan waktu bersama. Namun, keseharian yang membosankan itu berakhir ketika sesosok monster tiba-tiba muncul ….\n\nInilah novelisasi dari gim horor psikologis populer berlatar Jepang yang telah lama dinantikan!\n\nKeunggulan:\n\n•\tAdaptasi novel dari gim Silent Hill f yang populer, terutama di kalangan gamers.\n\n•\tGaya penulisan yang mudah dipahami namun mendetail, membuat karya ini memberikan sensasi yang berbeda dalam memahami ceritanya.\n\n•\tBerbeda dengan serial gim Silent Hill yang berlatar di Amerika Serikat, karya ini mengambil lokasi di sebuah daerah fiktif di Jepang dan sangat kental dengan budaya Jepang.\n\n•\tAlurnya tidak terikat dengan plot gim Silent Hill sebelum-sebelumnya.\n\n•\tMengangkat isu sosial yang sering ditemui dalam masyarakat sehingga membuat pembaca mampu merasa relate dengan ceritanya.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.",
+      "gramediaUrl": "https://www.gramedia.com/products/silent-hill-f",
+      "classificationStatus": "ACCEPTED",
+      "classificationConfidence": 0.95,
+      "classificationReason": "Verified Light Novel from PGI",
       "isBindUp": false,
       "bindUpKind": null,
       "bindUpLabel": null
@@ -114150,15 +114226,16 @@
       "author": "Mika Yamamori",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 6,
-      "latestVolume": 6,
+      "totalVolumes": 7,
+      "latestVolume": 7,
       "availableVolumes": [
         1,
         2,
         3,
         4,
         5,
-        6
+        6,
+        7
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/705vdkotxe.jpeg",
@@ -119406,6 +119483,23 @@
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/86icxa2c7-.png",
       "description": "Rilisan resmi Si Juki X Black Jack terbitan Elex Media Komputindo."
+    },
+    {
+      "id": "ser_silent-hill-f",
+      "slug": "silent-hill-f",
+      "name": "Silent Hill F",
+      "originalTitle": "Silent Hill F",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Kuro Shirou",
+      "type": "LIGHT_NOVEL",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [],
+      "missingVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/61ll96clnf.jpeg",
+      "description": "Di sebuah kota kecil bernama Ebisugaoka yang dikelilingi pegunungan, Shimizu Hinako selalu menjalani hari-harinya dengan memendam perasaan yang tak dapat diungkapkan.\n\nSuatu pagi, seperti biasa ia berkumpul dengan teman-temannya di sebuah toko manisan langganan dan menghabiskan waktu bersama. Namun, keseharian yang membosankan itu berakhir ketika sesosok monster tiba-tiba muncul ….\n\nInilah novelisasi dari gim horor psikologis populer berlatar Jepang yang telah lama dinantikan!\n\nKeunggulan:\n\n•\tAdaptasi novel dari gim Silent Hill f yang populer, terutama di kalangan gamers.\n\n•\tGaya penulisan yang mudah dipahami namun mendetail, membuat karya ini memberikan sensasi yang berbeda dalam memahami ceritanya.\n\n•\tBerbeda dengan serial gim Silent Hill yang berlatar di Amerika Serikat, karya ini mengambil lokasi di sebuah daerah fiktif di Jepang dan sangat kental dengan budaya Jepang.\n\n•\tAlurnya tidak terikat dengan plot gim Silent Hill sebelum-sebelumnya.\n\n•\tMengangkat isu sosial yang sering ditemui dalam masyarakat sehingga membuat pembaca mampu merasa relate dengan ceritanya.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_silver-spoon",
@@ -162419,6 +162513,17 @@
       "previousPrice": 56250,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_slam_dunk_new_edition_08_1795710688",
+      "bookId": "pub_slam_dunk_new_edition_08",
+      "price": 37500,
+      "currentPrice": 37500,
+      "originalPrice": 75000,
+      "previousPrice": 37500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-26",
       "source": "gramedia_api_refresh"
     },
     {
@@ -243446,6 +243551,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_i_sold_my_life_for_ten_thousand_yen_per_year_01__bookpaper_1795710761",
+      "bookId": "pub_i_sold_my_life_for_ten_thousand_yen_per_year_01__bookpaper",
+      "price": 36000,
+      "currentPrice": 36000,
+      "originalPrice": 48000,
+      "previousPrice": 36000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-26",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_delicious_in_dungeon_08_init",
       "bookId": "pub_delicious_in_dungeon_08",
       "price": 40500,
@@ -269328,6 +269444,17 @@
       "originalPrice": 45000,
       "previousPrice": 22500,
       "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-26",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_delicious_in_dungeon_05_1795710799",
+      "bookId": "pub_delicious_in_dungeon_05",
+      "price": 22500,
+      "currentPrice": 22500,
+      "originalPrice": 45000,
+      "previousPrice": 22500,
+      "availability": "AVAILABLE",
       "observedAt": "2026-11-26",
       "source": "gramedia_api_refresh"
     },
@@ -446422,9 +446549,49 @@
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-23",
       "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_silent_hill_f_init",
+      "bookId": "pub_silent_hill_f",
+      "price": 108000,
+      "currentPrice": 108000,
+      "originalPrice": 108000,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-23",
+      "source": "gramedia_api"
+    },
+    {
+      "id": "snap_pub_in_the_clear_moonlit_dusk_7_init",
+      "bookId": "pub_in_the_clear_moonlit_dusk_7",
+      "price": 69500,
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-23",
+      "source": "gramedia_api"
     }
   ],
   "syncRuns": [
+    {
+      "id": "sync_1795711108",
+      "startedAt": "2026-11-26T16:29:06.000Z",
+      "finishedAt": "2026-11-26T16:38:28.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1520,
+      "productsAccepted": 1320,
+      "productsRejected": 624,
+      "productsUpdated": 843,
+      "productsInserted": 4,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 562615,
+      "success": true
+    },
     {
       "id": "sync_1795657581",
       "startedAt": "2026-11-26T01:37:34.000Z",
@@ -446803,26 +446970,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 613943,
-      "success": true
-    },
-    {
-      "id": "sync_1794962685",
-      "startedAt": "2026-11-18T00:36:25.000Z",
-      "finishedAt": "2026-11-18T00:44:45.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1519,
-      "productsAccepted": 1319,
-      "productsRejected": 620,
-      "productsUpdated": 848,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 500191,
       "success": true
     }
   ]

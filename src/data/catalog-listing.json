@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-26T01:46:21.000Z",
+  "lastUpdated": "2026-11-26T16:38:28.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -13041,7 +13041,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/products/7d58sw4o0n.jpg",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "currentPrice": 37500,
       "originalPrice": 75000,
       "releaseDate": "2024-10-29",
@@ -39656,7 +39656,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/7od6eez1p-.JPG",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 36000,
       "originalPrice": 48000,
       "releaseDate": "2025-03-10",
@@ -47349,7 +47349,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/products/e2xic06ni5.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 22500,
       "originalPrice": 45000,
       "releaseDate": "2024-09-02",
@@ -89635,6 +89635,40 @@
       "gramediaUrl": "https://www.gramedia.com/products/ichi-the-witch-05"
     },
     {
+      "id": "pub_in_the_clear_moonlit_dusk_7",
+      "slug": "in-the-clear-moonlit-dusk-7",
+      "title": "In the Clear Moonlit Dusk 7",
+      "originalTitle": "In the Clear Moonlit Dusk",
+      "isbn13": "9786347811660",
+      "volume": 7,
+      "category": "Manga",
+      "format": "MANGA",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/e67xk1-lst.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 69500,
+      "originalPrice": 69500,
+      "releaseDate": "2026-11-23",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_in-the-clear-moonlit-dusk",
+      "seriesName": "In the Clear Moonlit Dusk",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Mika Yamamori"
+      ],
+      "genres": [
+        "Manga"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/in-the-clear-moonlit-dusk-7"
+    },
+    {
       "id": "pub_akasha_mountain_ghost_stories",
       "slug": "akasha-mountain-ghost-stories",
       "title": "Akasha : Mountain Ghost Stories",
@@ -93710,6 +93744,40 @@
       ],
       "classificationStatus": "ACCEPTED",
       "gramediaUrl": "https://www.gramedia.com/products/magic-knight-rayearth-box-set"
+    },
+    {
+      "id": "pub_silent_hill_f",
+      "slug": "silent-hill-f",
+      "title": "Silent Hill F",
+      "originalTitle": "Silent Hill F",
+      "isbn13": "9786347811677",
+      "volume": null,
+      "category": "Light Novel",
+      "format": "LIGHT_NOVEL",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "publisherShortName": "PGI",
+      "imprint": null,
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/61ll96clnf.jpeg",
+      "status": "PUBLISHED",
+      "availability": "OUT_OF_STOCK",
+      "currentPrice": 108000,
+      "originalPrice": 108000,
+      "releaseDate": "2026-11-23",
+      "isWednesdayRelease": false,
+      "seriesId": "ser_silent-hill-f",
+      "seriesName": "Silent Hill F",
+      "isBindUp": false,
+      "bindUpKind": null,
+      "bindUpLabel": null,
+      "authors": [
+        "Kuro Shirou"
+      ],
+      "genres": [
+        "Light Novel"
+      ],
+      "classificationStatus": "ACCEPTED",
+      "gramediaUrl": "https://www.gramedia.com/products/silent-hill-f"
     }
   ],
   "series": [
@@ -98784,15 +98852,16 @@
       "author": "Mika Yamamori",
       "type": "MANGA",
       "status": "ONGOING",
-      "totalVolumes": 6,
-      "latestVolume": 6,
+      "totalVolumes": 7,
+      "latestVolume": 7,
       "availableVolumes": [
         1,
         2,
         3,
         4,
         5,
-        6
+        6,
+        7
       ],
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/705vdkotxe.jpeg",
@@ -104040,6 +104109,23 @@
       "missingVolumes": [],
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/86icxa2c7-.png",
       "description": "Rilisan resmi Si Juki X Black Jack terbitan Elex Media Komputindo."
+    },
+    {
+      "id": "ser_silent-hill-f",
+      "slug": "silent-hill-f",
+      "name": "Silent Hill F",
+      "originalTitle": "Silent Hill F",
+      "publisherId": "pub_pgi",
+      "publisherName": "Phoenix Gramedia Indonesia",
+      "author": "Kuro Shirou",
+      "type": "LIGHT_NOVEL",
+      "status": "ONGOING",
+      "totalVolumes": 1,
+      "latestVolume": 1,
+      "availableVolumes": [],
+      "missingVolumes": [],
+      "coverImage": "https://cdn.gramedia.com/uploads/product-metas/61ll96clnf.jpeg",
+      "description": "Di sebuah kota kecil bernama Ebisugaoka yang dikelilingi pegunungan, Shimizu Hinako selalu menjalani hari-harinya dengan memendam perasaan yang tak dapat diungkapkan.\n\nSuatu pagi, seperti biasa ia berkumpul dengan teman-temannya di sebuah toko manisan langganan dan menghabiskan waktu bersama. Namun, keseharian yang membosankan itu berakhir ketika sesosok monster tiba-tiba muncul ….\n\nInilah novelisasi dari gim horor psikologis populer berlatar Jepang yang telah lama dinantikan!\n\nKeunggulan:\n\n•\tAdaptasi novel dari gim Silent Hill f yang populer, terutama di kalangan gamers.\n\n•\tGaya penulisan yang mudah dipahami namun mendetail, membuat karya ini memberikan sensasi yang berbeda dalam memahami ceritanya.\n\n•\tBerbeda dengan serial gim Silent Hill yang berlatar di Amerika Serikat, karya ini mengambil lokasi di sebuah daerah fiktif di Jepang dan sangat kental dengan budaya Jepang.\n\n•\tAlurnya tidak terikat dengan plot gim Silent Hill sebelum-sebelumnya.\n\n•\tMengangkat isu sosial yang sering ditemui dalam masyarakat sehingga membuat pembaca mampu merasa relate dengan ceritanya.\n\n***\n\nPernahkah Anda terpikir betapa menariknya dunia yang terbuka lebar melalui lembaran buku? Membaca bukan sekadar kegiatan rutin, melainkan sebuah petualangan tanpa batas ke dalam imajinasi dan pengetahuan. Aktivitas ini mampu mengasah pikiran, membuka wawasan, serta memperkaya kosakata. Membaca adalah pintu menuju dunia luas di luar diri kita.\n\nUntuk membangun kebiasaan membaca, tetapkan waktu khusus setiap hari. Anda bisa memulainya dengan membaca sebelum tidur atau menyempatkan waktu di pagi hari. Konsistensi adalah kunci utama.\n\nPilihlah buku yang sesuai dengan minat dan tingkat literasi Anda. Mulailah dari bacaan yang terasa nyaman dan menyenangkan agar kebiasaan ini dapat bertahan lama.\n\nDi antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\n\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca."
     },
     {
       "id": "ser_silver-spoon",
