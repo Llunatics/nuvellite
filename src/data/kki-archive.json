@@ -1778,13 +1778,13 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/920d4pa/gekkou-kuroneko-ya",
   "pranala": "https://www.mncgramedia.id/books/1548/a-magical-cat-store",
   "notes": null,
-  "pranalaCover": "https://media.mncgramedia.id/images/books/1548/9786022662068_1678952219.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/1548/a-magical-cat-store",
-  "pranalaStatus": "ok",
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-11-24"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/1548/9786022662068_1678952219.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/1548/a-magical-cat-store",
+  "pranalaStatus": "ok"
  },
  {
   "id": "kki_a-meal-make-her-forget",
@@ -2345,13 +2345,13 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/z5tipwi/tengoku-no-kippu",
   "pranala": "https://www.mncgramedia.id/books/2305/a-ticket-to-heaven",
   "notes": null,
-  "pranalaCover": "https://media.mncgramedia.id/images/books/2305/9786023390366_1678952339.jpg",
-  "pranalaCoverSource": "https://www.mncgramedia.id/books/2305/a-ticket-to-heaven",
-  "pranalaStatus": "ok",
   "mu": {
    "status": "blocked",
    "fetchedAt": "2026-11-24"
-  }
+  },
+  "pranalaCover": "https://media.mncgramedia.id/images/books/2305/9786023390366_1678952339.jpg",
+  "pranalaCoverSource": "https://www.mncgramedia.id/books/2305/a-ticket-to-heaven",
+  "pranalaStatus": "ok"
  },
  {
   "id": "kki_a-town-where-you-live",
@@ -2533,7 +2533,11 @@
   "notes": null,
   "pranalaCover": "https://media.mncgramedia.id/images/books/1696/9786022663386_1678952237.jpg",
   "pranalaCoverSource": "https://www.mncgramedia.id/books/1696/absolute-love-program-1",
-  "pranalaStatus": "ok"
+  "pranalaStatus": "ok",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-27"
+  }
  },
  {
   "id": "kki_absolute-peace-strategy",
@@ -2763,7 +2767,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/yqdq72n/akogare-boukensha",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-24"
+  }
  },
  {
   "id": "kki_adventure-boy",
@@ -3024,7 +3032,11 @@
   "publisherJp": "Kodansha",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/1kjeeg9/aa-megami-sama",
   "pranala": null,
-  "notes": "Judul Jepangnya Aa Megami-sama"
+  "notes": "Judul Jepangnya Aa Megami-sama",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-27"
+  }
  },
  {
   "id": "kki_ah-dear-banchou",
@@ -3073,7 +3085,11 @@
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/p0o8d06/ai-hime-ai-to-himegoto",
   "pranala": "https://www.mncgramedia.id/books/575/ai-hime-love-and-secret-01",
   "notes": null,
-  "pranalaStatus": "miss"
+  "pranalaStatus": "miss",
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-27"
+  }
  },
  {
   "id": "kki_air-gear",
@@ -4195,7 +4211,11 @@
   "publisherJp": "Shogakukan",
   "mangaupdatesUrl": "https://www.mangaupdates.com/series/lsrtnsm/tenshi-no-hapinesu",
   "pranala": null,
-  "notes": null
+  "notes": null,
+  "mu": {
+   "status": "blocked",
+   "fetchedAt": "2026-11-27"
+  }
  },
  {
   "id": "kki_angelic-layer",
