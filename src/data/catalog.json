@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-27T01:39:40.000Z",
+  "lastUpdated": "2026-11-27T16:24:47.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -18001,7 +18001,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -77235,7 +77235,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "originalPrice": 32000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -106839,7 +106839,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 240000,
       "isBindUp": true,
       "bindUpKind": "OMNIBUS",
@@ -166936,6 +166936,17 @@
       "previousPrice": 32000,
       "availability": "OUT_OF_STOCK",
       "observedAt": "2026-11-26",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_moriarty_the_patriot_20_1795796220",
+      "bookId": "pub_moriarty_the_patriot_20",
+      "price": 32000,
+      "currentPrice": 32000,
+      "originalPrice": 32000,
+      "previousPrice": 32000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-27",
       "source": "gramedia_api_refresh"
     },
     {
@@ -283238,6 +283249,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_koloni_h2o_reborn_trilogy_omnibus_1795796556",
+      "bookId": "pub_koloni_h2o_reborn_trilogy_omnibus",
+      "price": 168000,
+      "currentPrice": 168000,
+      "originalPrice": 240000,
+      "previousPrice": 168000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-27",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_teasing_master_takagi_17_init",
       "bookId": "pub_teasing_master_takagi_17",
       "price": 36000,
@@ -348069,6 +348091,17 @@
       "previousPrice": 32000,
       "availability": "AVAILABLE",
       "observedAt": "2026-11-25",
+      "source": "gramedia_api_refresh"
+    },
+    {
+      "id": "snap_pub_komi_sulit_berkomunikasi_11_1795796449",
+      "bookId": "pub_komi_sulit_berkomunikasi_11",
+      "price": 9600,
+      "currentPrice": 9600,
+      "originalPrice": 32000,
+      "previousPrice": 9600,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-27",
       "source": "gramedia_api_refresh"
     },
     {
@@ -446727,6 +446760,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795796687",
+      "startedAt": "2026-11-27T16:14:17.000Z",
+      "finishedAt": "2026-11-27T16:24:47.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1520,
+      "productsAccepted": 1320,
+      "productsRejected": 624,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 629053,
+      "success": true
+    },
+    {
       "id": "sync_1795743580",
       "startedAt": "2026-11-27T01:31:28.000Z",
       "finishedAt": "2026-11-27T01:39:40.000Z",
@@ -447104,26 +447157,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 555530,
-      "success": true
-    },
-    {
-      "id": "sync_1795046644",
-      "startedAt": "2026-11-18T23:55:45.000Z",
-      "finishedAt": "2026-11-19T00:04:04.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1519,
-      "productsAccepted": 1319,
-      "productsRejected": 620,
-      "productsUpdated": 848,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 498439,
       "success": true
     }
   ]

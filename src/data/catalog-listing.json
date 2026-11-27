@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-27T01:39:40.000Z",
+  "lastUpdated": "2026-11-27T16:24:47.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -14991,7 +14991,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/product-metas/vr5m903tx0.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 32000,
       "originalPrice": 32000,
       "releaseDate": "2026-05-12",
@@ -65813,7 +65813,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230029769_Komi_Sulit_Berkomunikasi_11_1.jpg",
       "status": "RELEASED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "currentPrice": 9600,
       "originalPrice": 32000,
       "releaseDate": "2022-01-05",
@@ -91745,7 +91745,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/picture_meta/2024/5/16/amkwjfbkesjo7zeqduuf5b.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 168000,
       "originalPrice": 240000,
       "releaseDate": "2024-05-16",
