@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-27T16:24:47.000Z",
+  "lastUpdated": "2026-11-28T01:17:56.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -67424,7 +67424,7 @@
       "publisherShortName": "Elex Media",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786230027390_cover_bakemonogatari_6.jpg",
       "status": "RELEASED",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "currentPrice": 12000,
       "originalPrice": 40000,
       "releaseDate": "2021-07-07",
@@ -86745,7 +86745,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786024287801_Haikyu-Fly-high-Volleyball-11.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "currentPrice": 22400,
       "originalPrice": 32000,
       "releaseDate": "2018-03-14",

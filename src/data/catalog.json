@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "lastUpdated": "2026-11-27T16:24:47.000Z",
+  "lastUpdated": "2026-11-28T01:17:56.000Z",
   "publishers": [
     {
       "id": "pub_elex",
@@ -79058,7 +79058,7 @@
       "classificationStatus": "ACCEPTED",
       "classificationConfidence": 0.95,
       "classificationReason": "Official Manga release verified",
-      "availability": "OUT_OF_STOCK",
+      "availability": "AVAILABLE",
       "originalPrice": 40000,
       "isBindUp": false,
       "bindUpKind": null,
@@ -100846,7 +100846,7 @@
       "publisherShortName": "m&c!",
       "coverImage": "https://cdn.gramedia.com/uploads/items/9786024287801_Haikyu-Fly-high-Volleyball-11.jpg",
       "status": "PUBLISHED",
-      "availability": "AVAILABLE",
+      "availability": "OUT_OF_STOCK",
       "releaseDate": "2018-03-14",
       "isWednesdayRelease": true,
       "currentPrice": 22400,
@@ -355738,6 +355738,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_level_comic_bakemonogatari_06_1795828499",
+      "bookId": "pub_level_comic_bakemonogatari_06",
+      "price": 12000,
+      "currentPrice": 12000,
+      "originalPrice": 40000,
+      "previousPrice": 12000,
+      "availability": "AVAILABLE",
+      "observedAt": "2026-11-28",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_one_room_of_happiness_03_init",
       "bookId": "pub_one_room_of_happiness_03",
       "price": 25200,
@@ -413832,6 +413843,17 @@
       "source": "gramedia_api_refresh"
     },
     {
+      "id": "snap_pub_haikyu_fly_high_volleyball_11_1795828570",
+      "bookId": "pub_haikyu_fly_high_volleyball_11",
+      "price": 22400,
+      "currentPrice": 22400,
+      "originalPrice": 32000,
+      "previousPrice": 22400,
+      "availability": "OUT_OF_STOCK",
+      "observedAt": "2026-11-28",
+      "source": "gramedia_api_refresh"
+    },
+    {
       "id": "snap_pub_haikyu_fly_high_volleyball_34_init",
       "bookId": "pub_haikyu_fly_high_volleyball_34",
       "price": 24000,
@@ -446760,6 +446782,26 @@
   ],
   "syncRuns": [
     {
+      "id": "sync_1795828676",
+      "startedAt": "2026-11-28T01:09:54.000Z",
+      "finishedAt": "2026-11-28T01:17:56.000Z",
+      "sources": [
+        "Elex Media",
+        "m&c!",
+        "PGI"
+      ],
+      "pagesFetched": 24,
+      "productsFetched": 1520,
+      "productsAccepted": 1320,
+      "productsRejected": 624,
+      "productsUpdated": 846,
+      "productsInserted": 2,
+      "duplicatesResolved": 0,
+      "errors": [],
+      "durationMs": 481927,
+      "success": true
+    },
+    {
       "id": "sync_1795796687",
       "startedAt": "2026-11-27T16:14:17.000Z",
       "finishedAt": "2026-11-27T16:24:47.000Z",
@@ -447137,26 +447179,6 @@
       "duplicatesResolved": 0,
       "errors": [],
       "durationMs": 503326,
-      "success": true
-    },
-    {
-      "id": "sync_1795069707",
-      "startedAt": "2026-11-19T06:19:11.000Z",
-      "finishedAt": "2026-11-19T06:28:27.000Z",
-      "sources": [
-        "Elex Media",
-        "m&c!",
-        "PGI"
-      ],
-      "pagesFetched": 24,
-      "productsFetched": 1519,
-      "productsAccepted": 1319,
-      "productsRejected": 621,
-      "productsUpdated": 847,
-      "productsInserted": 2,
-      "duplicatesResolved": 0,
-      "errors": [],
-      "durationMs": 555530,
       "success": true
     }
   ]
